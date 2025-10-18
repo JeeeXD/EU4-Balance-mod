@@ -1,0 +1,132 @@
+country_decisions = {
+	dev_sum_clicks_decision = {
+		major = yes
+		potential = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = dev_sum_clicks_decision_tooltip
+				always = no
+			}
+		}
+		effect = {
+		}
+	}
+	# PR decision to check if critical events have fired
+	PR_critical_events = {
+		major = yes
+		potential = {
+			ai = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = PR_radical_reform_decision
+				NOT = { has_country_flag = radical_mercantilist_reforms }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_military_reform_decision
+				NOT = { has_country_flag = military_reform }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_commandant_decision
+				NOT = { has_country_flag = commandant }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_grand_captain_decision
+				NOT = { has_country_flag = grand_captain }
+			}
+			always = no
+		}
+		effect = {
+		}
+	}
+
+	PR_parliament_seats = {
+		major = yes
+		potential = {
+			ai = no
+			has_parliament = yes 
+		}
+		allow = {
+			any_owned_province = {
+				AND = {
+					has_seat_in_parliament = no
+				    is_state = yes
+				}
+				
+			}
+		}
+		effect = {
+			custom_tooltip = PR_parliament_seats_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_seat_in_parliament = no
+						is_state = yes
+					}
+					set_seat_in_parliament = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sea_clear_specific_building_decision = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = sea_clear_specific_building_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = sea_clear_specific_building_flag
+			country_event = { id = sealand_events.29 }
+			custom_tooltip = sea_clear_specific_building_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	sea_state_edicts_decision = {
+		major = yes
+		provinces_to_highlight = {
+
+		}
+		potential = {
+			ai = no
+			NOT = { has_country_flag = sea_state_edicts_flag }
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = sea_state_edicts_flag
+			country_event = { id = sealand_events.28 }
+			custom_tooltip = sea_state_edicts_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+    

@@ -1,0 +1,1215 @@
+mnd_khmer_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		tag = KHM
+		has_dlc = "Leviathan"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	
+
+	eu_generic_increase_the_production = {
+		icon = mission_have_manufactories
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			owned_by = ROOT 
+			NOT = { has_production_building_trigger = yes }
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_production_building_trigger = yes
+				value = 10
+			}
+		}
+		
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 2
+				trigger = {
+					always = yes
+				}
+				custom_tooltip = eu_from_2_years_of_prod_income
+			}
+			country_event = { id = eu_generic.2 }
+			custom_tooltip = eu_generic2_insight
+		}
+	}
+
+	eu_generic_a_worthy_capital = {
+		icon = mission_eastern_european_city
+		required_missions = { eu_generic_increase_the_production }
+		position = 2
+		
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		
+		trigger = {
+			capital_scope = {
+				development = 30
+			}
+			capital_scope = {
+				num_of_buildings_in_province = 3
+			}
+		}
+		
+		effect = {
+			capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			capital_scope = {
+				add_province_modifier = {
+					name = "eu_worthy_capital"
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+				}
+				custom_tooltip = capital_gains_cot_yes
+			}
+			else = {
+				custom_tooltip = capital_gains_cot_no
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						capital_scope = {
+							NOT = {
+								province_has_center_of_trade_of_level = 1
+							}
+						}
+					}
+					capital_scope = {
+						center_of_trade = 1
+					}
+				}
+			}
+		}
+	}
+
+	eu_generic_envy_of_the_world = {
+		icon = appease_the_estates
+		required_missions = { eu_generic_a_worthy_capital }
+		position = 3
+		
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		
+		trigger = {
+			capital_scope = {
+				development = 50
+			}
+			capital_scope = {
+				num_of_buildings_in_province = 7
+			}
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				capital_scope = {
+					prosperity = 100
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = eu_empower_worthy_capital
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							any_province = {
+								continent = europe
+								higher_development_than = PREV
+							}
+						}
+					}
+				}
+				custom_tooltip = capital_most_developed_yes
+				tooltip = {
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+			}
+			else = {
+				custom_tooltip = capital_most_developed_no
+				tooltip = {
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						capital_scope = {
+							NOT = {
+								any_province = {
+									continent = europe
+									higher_development_than = PREV
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							has_province_modifier = eu_worthy_capital
+						}
+					}
+					capital_scope = {
+						remove_province_modifier = eu_worthy_capital
+						add_province_modifier = {
+							name = "eu_worthy_capital2"
+							duration = -1
+						}    
+					}
+				}
+			}
+		}
+	}
+
+	mnd_khm_invade_burma = {
+		icon = mission_unite_home_region
+		required_missions = { mnd_khm_restored_empire }
+		position = 4
+		provinces_to_highlight = {
+			area = lower_burma_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lower_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "khm_burma_campaign"
+				duration = -1
+			}
+		}
+	}
+
+	mnd_khm_infiltrate_burma = {
+		icon = mission_conquer_lower_burma_ori
+		required_missions = { mnd_khm_invade_burma }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+			area = central_burma_area
+			area = upper_burma_area
+			}
+
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = commandant
+				skill = 3
+				discount = yes
+				cost_multiplier = 0.1
+				age = 21
+			}
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+	}
+
+	mnd_khm_upper_burma = {
+		icon = mnd_maj_sunda_relations
+		required_missions = { mnd_khm_infiltrate_burma }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+			area = chindwin_area
+			area = kachin_area
+			area = shan_hill_area
+			area = karenni_area
+			}
+
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chindwin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kachin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shan_hill_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karenni_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = khmer_burmese_campaign
+				duration = 1825
+			}
+			add_ruler_personality = conqueror_personality
+		}
+	}
+
+	mnd_khm_burma_united = {
+		icon = mission_tribute_tax
+		required_missions = { mnd_khm_upper_burma }
+		position = 7
+		provinces_to_highlight = {
+			region = burma_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			burma_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = khmer_burmese_unification
+				duration = 36525
+			}
+		}
+	}
+}
+
+mnd_khmer_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		tag = KHM
+		has_dlc = "Leviathan"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	mnd_khm_avenge_angkor = {
+		icon = mission_mnd_khm_avenge_angkor
+		required_missions = {  }
+		provinces_to_highlight = {
+			owned_by = AYU
+			area = central_thai_area
+		}
+		trigger = {
+			AND = {
+				central_thai_area = {
+					type = ALL
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = AYU
+					AYU = {
+						is_free_or_tributary_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					target = AYU
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			    north_tenasserim_area = {
+					add_permanent_claim = ROOT
+				}
+				central_thai_area = {
+					add_permanent_claim = ROOT
+				}
+				sukhothai_area = {
+					add_permanent_claim = ROOT
+				}
+				tenasserim_area = {
+					add_permanent_claim = ROOT
+				}
+			add_country_modifier = {
+				name = khmer_ayyuthaya_win
+				duration = 3650
+			}
+		}
+	}
+	mnd_khm_subjugate_ayu = {
+		icon = mission_mnd_siam_royal_duel
+		required_missions = { mnd_khm_avenge_angkor }
+		provinces_to_highlight = {
+			OR = {
+			area = central_thai_area
+			area = khorat_area
+			area = sukhothai_area
+			}
+			
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khorat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sukhothai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "subjugation_of_ayu"
+				duration = -1
+			}
+			change_government_reform_progress = 50
+		}
+	}
+
+	eu_generic_build_a_treasury = {
+		icon = mission_war_chest
+		required_missions = { eu_generic_a_worthy_capital }
+		position = 3
+		
+		trigger = {
+			treasury = 1000
+			is_in_deficit = no
+			NOT = { num_of_loans = 1 }
+		}
+		
+		effect = {
+			add_corruption = -3
+			add_country_modifier = {
+				name = eu_stable_economy
+				duration = 9125
+			}
+		}
+	}
+
+	mnd_khm_restore_angkor = {
+		icon = mission_mnd_khm_restore_angkor
+		required_missions = {  }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 609
+			OR = {
+				NOT = { development = 15 }
+			}
+		}
+		trigger = {
+			609 = {
+				development = 15
+				OR = { 
+					has_great_project = {
+						type = angkor_wat
+						tier = 1
+					}
+					has_great_project = {
+						type = angkor_wat
+						tier = 2
+					}
+					has_great_project = {
+						type = angkor_wat
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			609 = {
+				move_capital_effect = yes
+			}
+			add_country_modifier = {
+				name = "angkor_restoration"
+				duration = 7300
+			}
+		}
+	}
+	mnd_khm_city_of_temples = {
+		icon = mission_mnd_khm_city_of_temples
+		required_missions = { mnd_khm_restore_angkor }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 609
+			OR = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+		trigger = {
+			609 = {
+				has_great_project = {
+					type = angkor_wat
+					tier = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "angkor_complete"
+				duration = -1
+			}
+		}
+	}
+	mnd_khm_overseas_adventures = {
+		icon = mission_mnd_maj_rein_in_brunei
+		required_missions = { mnd_khm_infiltrate_burma }
+		provinces_to_highlight = {
+			culture = malayan
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 10
+				all_province = {
+					culture = malayan
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "khm_navy"
+				duration = -1
+			}
+		}
+	}
+}
+
+mnd_khmer_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		tag = KHM
+		has_dlc = "Leviathan"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	mnd_khm_reclaim_the_north = {
+		icon = mission_mnd_maj_subjugate_makassar
+		required_missions = {  }
+		provinces_to_highlight = {
+			area = champasak_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			champasak_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						is_free_or_tributary_trigger = yes
+						primary_culture = lao
+					}
+				}
+				every_country = {
+					limit = {
+						is_free_or_tributary_trigger = yes
+						primary_culture = lao
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 120
+					}
+				}
+			}
+			north_laos_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+		    vientiane_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+			}
+		}
+	}
+	mnd_khm_subjugate_laos = {
+		icon = mission_kowtow
+		required_missions = { mnd_khm_reclaim_the_north }
+		provinces_to_highlight = {
+			OR = {
+				area = north_laos_area
+				area = champasak_area
+				area = vientiane_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 12
+				all_province = {
+					OR = {
+						area = north_laos_area
+						area = champasak_area
+						area = vientiane_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 200
+			add_country_modifier = {
+				name = khmer_conquest_of_north
+				duration = 3650
+			}
+		}
+	}
+	mnd_khm_restored_empire = {
+		icon = mission_mnd_khm_restored_empire
+		required_missions = { mnd_khm_subjugate_ayu mnd_khm_subjugate_laos mnd_khm_subjugate_dia_viet }
+		provinces_to_highlight = {
+			region = indo_china_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						nationalism = 1
+						unrest = 1
+						controlled_by = REB
+					}
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 40
+				all_province = {
+					region = indo_china_region
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { controlled_by = REB }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			burma_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			west_guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			guangxi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			yun_gui_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			
+			add_country_modifier = {
+				name = khmer_restore_the_empire
+				duration = -1
+			}
+		}
+	}
+
+	mnd_khm_religion = {
+		icon = mission_mnd_dai_temples
+		required_missions = {  }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				temple = 5
+				religious_unity = 1
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 55
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = khmer.3
+			}
+		}
+	}
+	mnd_khm_resurgence = {
+		icon = mission_mnd_maj_end_disaster
+		required_missions = { mnd_khm_religion mnd_khm_restore_angkor mnd_khm_rebuild }
+		position = 5
+		provinces_to_highlight = {
+		}
+		trigger = {
+			stability = 2
+			legitimacy_equivalent = 90
+		}
+		effect = {
+			custom_tooltip = khmer_end_dark_age_tt
+			if = {
+				limit = {
+					any_province = {
+						region = indo_china_region
+						culture = khmer
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+				}
+				every_province = {
+					limit = {
+						region = indo_china_region
+						culture = khmer
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			else = {
+				add_adm_power = 100
+				end_disaster = dark_age_of_cambodia
+			}
+		}
+	}
+	mnd_khm_golden_age = {
+		icon = mission_mnd_siam_subjugate_vietnam
+		required_missions = { mnd_khm_resurgence }
+		position = 6
+		provinces_to_highlight = {
+			region = indo_china_region
+			culture = khmer
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			total_own_and_non_tributary_subject_development = 400
+			vassal = 2
+			NOT = {
+				any_province = {
+					region = indo_china_region
+					culture = khmer
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = new_khmer_golden_age
+				duration = 7300
+			}
+		}
+	}
+	mnd_khm_enlightened_rule = {
+		icon = mission_mnd_khm_resurgence
+		required_missions = { mnd_khm_golden_age }
+		position = 7
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				absolutism = 50
+			}
+			total_own_and_non_tributary_subject_development = 600
+			OR = {
+				num_of_times_used_transfer_development = 2
+				capital_scope = { num_of_times_improved = 5 }
+			}
+		}
+		effect = {
+			set_country_flag = siam_royal_absolutism
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				country_event = {
+					id = flavor_lna.3
+				}
+			}
+		}
+	}
+	mnd_khm_imperial_ambitions = {
+		icon = mission_emperor_of_hindusthan
+		required_missions = { mnd_khm_burma_united mnd_khm_take_the_mandate mnd_khm_enlightened_rule }
+		position = 8
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_own_and_non_tributary_subject_development = 1000
+		}
+		effect = {
+			override_country_name = KHMER_EMPIRE
+			add_country_modifier = {
+				name = khmer_empire_formation
+				duration = -1
+			}
+			custom_tooltip = khmer_culture_group_tooltip 
+			create_new_culture_group = {
+				culture_group = indochina
+				culture = khmer
+				culture2 = chin
+				culture3 = karen
+				culture4 = kachin
+				culture5 = arakanese
+				culture6 = burmese
+				culture7 = shan
+				culture8 = mon
+				culture9 = lao
+				culture10 = central_thai
+				culture12 = northern_thai
+				culture13 = vietnamese
+				culture14 = zhuang
+			}
+		}
+	}
+	
+}
+
+mnd_khmer_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		tag = KHM
+		has_dlc = "Leviathan"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	mnd_khm_protect_the_cham = {
+		icon = mission_mnd_khm_protect_the_cham
+		required_missions = {  }
+		provinces_to_highlight = {
+			culture = cham
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 3
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = cham
+				}
+			}
+		}
+		effect = {
+			if  = {
+				limit = {
+					any_country = {
+						is_free_or_tributary_trigger = yes
+						OR = {
+							primary_culture = vietnamese
+							primary_culture = vietnamese_new
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						is_free_or_tributary_trigger = yes
+						OR = {
+							primary_culture = vietnamese
+							primary_culture = vietnamese_new
+						}
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 120
+					}
+				}
+			}
+			vietnam_area = {
+				add_permanent_claim = ROOT
+			}
+			red_river_delta_area = {
+				add_permanent_claim = ROOT
+			}
+			champa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mnd_khm_subjugate_dia_viet = {
+		icon = mission_mnd_dai_imperial_citadel
+		required_missions = { mnd_khm_protect_the_cham }
+		provinces_to_highlight = {
+			OR = {
+				area = vietnam_area
+				area = red_river_delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			red_river_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if  = {
+				limit = {
+					any_country = {
+						is_free_or_tributary_trigger = yes
+						primary_culture = bornean
+					}
+				}
+				every_country = {
+					limit = {
+						is_free_or_tributary_trigger = yes
+						primary_culture = bornean
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 120
+					}
+				}
+			}
+			else = {
+				brunei_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_stability = 2
+			add_army_tradition = 25
+			add_army_professionalism = 0.05
+		}
+	}
+	mnd_khm_rebuild = {
+		icon = mission_mnd_maj_prepare_eastern_campaigns
+		required_missions = {  }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = cambodia_area
+				area = mekong_area
+				area = angkor_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 7 }
+			}
+		}
+		trigger = {
+			cambodia_area = {
+				type = all
+				owned_by = ROOT
+				development = 7
+			}
+			mekong_area = {
+				type = all
+				owned_by = ROOT
+				development = 7
+			}
+			angkor_area = {
+				type = all
+				owned_by = ROOT
+				development = 7
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = rebuilding_the_towns
+				duration = 7300
+			}
+		}
+	}
+	mnd_khm_irrigation = {
+		icon = mission_rice_field
+		required_missions = { mnd_khm_rebuild }
+		position = 5
+		provinces_to_highlight = {
+			region = indo_china_region
+			trade_goods = grain
+			OR = {
+				NOT = { has_building = farm_estate }
+				NOT = { owned_by = ROOT }
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = indo_china_region
+				has_building = farm_estate
+				trade_goods = grain
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_estate = estate_vaisyas
+				}
+				set_estate_privilege = estate_vaisyas_khmer_irrigation
+			}
+			else_if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				set_estate_privilege = estate_burghers_khmer_irrigation
+			}
+			else = {
+				add_dip_power = 100
+				every_owned_province = {
+					limit = {
+						region = indo_china_region
+						has_building = farm_estate
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = grain_production_improved
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+}
+
+mnd_khmer_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		tag = KHM
+		has_dlc = "Leviathan"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	mnd_khm_defy_china = {
+		icon = mission_great_wall
+		required_missions = { mnd_khm_restored_empire }
+		provinces_to_highlight = {
+			superregion = china_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		position = 4
+		trigger = {
+			calc_true_if = {
+				amount = 15
+				all_province = {
+					superregion = china_superregion
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			china_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mnd_khm_push_to_yangzhe = {
+		icon = mng_heavens_will
+		required_missions = { mnd_khm_defy_china }
+		provinces_to_highlight = {
+			area = south_jiangsu_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		position = 5
+		trigger = {
+			south_jiangsu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_power_projection = { 
+	            type = 25_permanent_power_projection
+	            amount = 25 
+            }
+		}
+	}
+
+	mnd_khm_control_china_trade = {
+		icon = mng_tame_china_sorrow
+		required_missions = { mnd_khm_push_to_yangzhe }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 679
+				province_id = 667
+			}
+		}
+		position = 6
+		trigger = {
+			679 = {
+				is_strongest_trade_power = ROOT
+			}
+			667 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = khmer_chinese_trade
+				duration = -1
+			}
+		}
+	}
+
+	mnd_khm_take_the_mandate = {
+		icon = mission_scholar_officials
+		required_missions = { mnd_khm_control_china_trade }
+		provinces_to_highlight = {
+			superregion = china_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+					is_emperor_of_china = yes
+				}
+			}
+			calc_true_if = {
+				amount = 50
+				all_province = {
+					superregion = china_superregion
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_mandate = 20
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
+		}
+	}
+}

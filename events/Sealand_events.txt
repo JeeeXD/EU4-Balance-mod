@@ -1,0 +1,526 @@
+namespace = sealand_events
+namespace = funny
+
+country_event = { 
+	id = funny.1 
+	title = funny.1.t 
+	desc = funny.1.d 
+	picture = BANKRUPTCY_eventPicture 
+	is_triggered_only = yes 
+	trigger = { 
+		NOT = { has_country_flag = funny_eco_dev } 
+	} 
+	immediate = { set_country_flag = funny_eco_dev } 
+	option = { name = funny.1.1 random_owned_province = { add_base_tax = 1 } } 
+}
+
+country_event = { 
+	id = funny.2 
+	title = funny.2.t 
+	desc = funny.2.d 
+	picture = east_slavic_ANGRY_MOB_eventPicture 
+	is_triggered_only = yes 
+	trigger = { 
+		NOT = { has_country_flag = funny_eco_dev_1 } 
+		is_variable_equal = {
+			which = dev_adm_clicks
+			value = 500
+		}
+	} 
+	immediate = { set_country_flag = funny_eco_dev_1 } 
+	option = { 
+	    name = funny.2.1 
+		custom_tooltip = funny_2_million_rebels
+		play_sound = revolt
+    } 
+}
+
+country_event = { # buildings delete
+	id = sealand_events.29
+	title = sealand_events.29.t
+	desc = sealand_events.29.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.28.0
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_tax_building_trigger = yes } }
+		name = sealand_events.29.1
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_tax_building_trigger = yes }
+				remove_building = temple
+				remove_building = cathedral
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_trade_building_trigger = yes } }
+		name = sealand_events.29.2
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_trade_building_trigger = yes }
+				remove_building = marketplace
+				remove_building = trade_depot
+				remove_building = stock_exchange
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_production_building_trigger = yes } }
+		name = sealand_events.29.3
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_production_building_trigger = yes }
+				remove_building = workshop
+				remove_building = counting_house
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_dock_building_trigger = yes } }
+		name = sealand_events.29.4
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_dock_building_trigger = yes }
+				remove_building = dock
+				remove_building = drydock
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_shipyard_building_trigger = yes } }
+		name = sealand_events.29.5
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_shipyard_building_trigger = yes }
+				remove_building = shipyard
+				remove_building = grand_shipyard
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_manpower_building_trigger = yes } }
+		name = sealand_events.29.6
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_manpower_building_trigger = yes }
+				remove_building = barracks
+				remove_building = training_fields
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_forcelimit_building_trigger = yes } }
+		name = sealand_events.29.7
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_forcelimit_building_trigger = yes }
+				remove_building = regimental_camp
+				remove_building = conscription_center
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_fort_building_trigger = yes } }
+		name = sealand_events.29.8
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_fort_building_trigger = yes }
+				remove_building = fort_15th
+				remove_building = fort3
+				remove_building = fort_16th
+				remove_building = fort5
+				remove_building = fort_17th
+				remove_building = fort7
+				remove_building = fort_18th
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_coast_defense_building_trigger = yes } }
+		name = sealand_events.29.9
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_coast_defense_building_trigger = yes }
+				remove_building = coastal_defence
+				remove_building = naval_battery
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = impressment_offices } }
+		name = sealand_events.29.10
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = impressment_offices }
+				remove_building = impressment_offices
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = state_house } }
+		name = sealand_events.29.11
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = state_house }
+				remove_building = state_house
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = soldier_households } }
+		name = sealand_events.29.12
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = soldier_households }
+				remove_building = soldier_households
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = furnace } }
+		name = sealand_events.29.13
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = furnace }
+				remove_building = furnace
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } } }
+		name = sealand_events.29.15
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT OR = { has_building = wharf has_building = weapons has_building = textile has_building = plantations has_building = tradecompany has_building = farm_estate has_building =  mills } }
+				remove_building = wharf
+				remove_building = weapons
+				remove_building = textile
+				remove_building = plantations
+				remove_building = tradecompany
+				remove_building = farm_estate
+				remove_building = mills
+			}
+		}
+		custom_tooltip = sealand_events.29.15.tt
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = wharf } }
+		name = sealand_events.29.16
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = wharf }
+				remove_building = wharf
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = weapons } }
+		name = sealand_events.29.17
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = weapons }
+				remove_building = weapons
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = textile } }
+		name = sealand_events.29.18
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = textile }
+				remove_building = textile
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = plantations } }
+		name = sealand_events.29.19
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = plantations }
+				remove_building = plantations
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = tradecompany } }
+		name = sealand_events.29.20
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = tradecompany }
+				remove_building = tradecompany
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = farm_estate } }
+		name = sealand_events.29.21
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = farm_estate }
+				remove_building = farm_estate
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+	option = {
+		trigger = { any_owned_province = { controlled_by = ROOT has_building = mills } }
+		name = sealand_events.29.22
+		hidden_effect = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT has_building = mills }
+				remove_building = mills
+			}
+		}
+		clr_country_flag = sea_clear_specific_building_flag
+	}
+}
+
+country_event = { # state edicts
+	id = sealand_events.28
+	title = sealand_events.28.t
+	desc = sealand_events.28.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.28.0
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.00
+		set_country_flag = sea_state_edicts_clear_flag
+		clr_country_flag = sea_state_edicts_flag
+		custom_tooltip = sealand_events.28.00.tt
+	}
+	option = {
+		name = sealand_events.28.1
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_advancement_effort
+		}
+		set_country_flag = sea_state_edicts_decision_edict_advancement_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.2
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_centralization_effort
+		}
+		set_country_flag = sea_state_edicts_decision_edict_centralization_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.3
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_defensive_edict
+		}
+		set_country_flag = sea_state_edicts_decision_edict_defensive_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.4
+		trigger = {
+			current_age = age_of_absolutism
+			has_country_flag = edict_of_absolutism
+		}
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_of_absolutism
+		}
+		set_country_flag = sea_state_edicts_decision_edict_of_absolutism_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { has_country_flag = hab_prosperity_edict }
+		name = sealand_events.28.5
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_of_governance
+		}
+		set_country_flag = sea_state_edicts_decision_edict_of_governance_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.6
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_encourage_development
+		}
+		set_country_flag = sea_state_edicts_decision_edict_encourage_development_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { 
+			current_age = age_of_discovery 
+			has_country_flag = feudal_de_jure_law 
+		}
+		name = sealand_events.28.7
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_feudal_de_jure_law
+		}
+		set_country_flag = sea_state_edicts_decision_edict_feudal_de_jure_law_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { has_country_flag = fra_enable_infrastructure_network_flag }
+		name = sealand_events.28.8
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = french_infrastructure_network
+		}
+		set_country_flag = sea_state_edicts_decision_french_infrastructure_network_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.9
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_promote_military_recruitment
+		}
+		set_country_flag = sea_state_edicts_decision_edict_promote_military_recruitment_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { NOT = { has_country_flag = fra_improve_trade_power_state_edict_flag } }
+		name = sealand_events.28.10
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_protect_trade
+		}
+		set_country_flag = sea_state_edicts_decision_edict_protect_trade_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { has_country_flag = fra_improve_trade_power_state_edict_flag }
+		name = sealand_events.28.11
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = protect_trade_empowered
+		}
+		set_country_flag = sea_state_edicts_decision_protect_trade_empowered_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_reformation
+			has_country_flag = religion_enforced_edict
+		}
+		name = sealand_events.28.12
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_religion_enforced
+		}
+		set_country_flag = sea_state_edicts_decision_edict_religion_enforced_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.13
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = edict_religious_unity
+		}
+		set_country_flag = sea_state_edicts_decision_edict_religious_unity_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = { has_country_flag = enable_industrialisation_flag }
+		name = sealand_events.28.14
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = chinese_industrialization
+		}
+		set_country_flag = sea_state_edicts_decision_chinese_industrialization_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_discovery
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.15
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = feudal_taxes_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_feudal_taxes_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_reformation
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.16
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = religious_tolerance_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_religious_tolerance_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_absolutism
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.17
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = state_integration_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_state_integration_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_revolutions
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.18
+		every_owned_province = { 
+			limit = { is_state = yes }
+			set_state_edict = urbanization_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_urbanization_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+}
+
+country_event = {
+	id = sealand_events.30
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	mean_time_to_happen = { months = 2400 } 
+	trigger = { ai = no NOT = { has_country_flag = get_war_declare_flag } }
+	immediate = { set_country_flag = get_war_declare_flag play_sound = declarewar_onus }
+	option = { }
+}

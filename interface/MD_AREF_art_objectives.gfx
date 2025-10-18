@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_obj_competent_court"
+		texturefile = "gfx/interface/ages/obj_competent_court.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_defender_of_faith"
+		texturefile = "gfx/interface/ages/obj_defender_of_faith.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_50dev_province"
+		texturefile = "gfx/interface/ages/obj_50dev_province.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_artillery_number"
+		texturefile = "gfx/interface/ages/obj_artillery_number.dds"
+	}
+
+}

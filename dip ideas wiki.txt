@@ -1,0 +1,236 @@
+===Maritime===
+<div style="display:flex;flex-wrap:wrap;align-items:stretch;"><!-- begin box wrapper -->{{idea group
+|version=1.36
+|name=Court
+|idea1=Long Echo
+|idea1icon=Power projection from insults
+|idea1effect={{green|+100%|b}} Power projection from insults
+:{{green|+15|b}} Vassalization Acceptance
+|idea2=Recognized Hierarchy
+|idea2icon=all estates loyalty equilibrium
+|idea2effect={{green|+10%|b}} All estates' loyalty equilibrium
+:{{green|+5%|b}} Estate loyalty change on privilege revoked
+|idea3=Welcoming Ceremonies
+|idea3icon=yearly prestige
+|idea3effect={{green|+1|b}} Yearly prestige
+:{{green|+0.1|b}} Monthly Persian Influence
+|idea4=Tranquil Coordination
+|idea4icon=Reform progress growth
+|idea4effect={{green|+20%|b}} Reform progress growth
+|idea5=Respected Authority
+|idea5icon=All estate possible privileges
+|idea5effect={{green|+1|b}} Max privileges per estate
+:Estate privileges have {{green|100%|b}} less impact on maximum absolutism
+|idea6=Palace of Splendor
+|idea6icon=monthly splendor
+|idea6effect={{green|+2|b}} Monthly splendor
+:{{green|−20%|b}} Estate interaction cooldown modifier
+|idea7=Court Embassies
+|idea7icon=Possible policies
+|idea7effect={{green|+1|b}} {{DLC-only|Possible policies}}
+:{{green|+1|b}} Monarch diplomatic skill
+|bonus={{green|+0.5|b}} Yearly legitimacy
+:{{green|+0.2|b}} Yearly republican tradition
+:{{green|+0.5|b}} {{DLC-only|Yearly devotion}}
+:{{green|+0.5|b}} {{DLC-only|Yearly horde unity}}
+:{{green|+0.25|b}} {{DLC-only|Yearly meritocracy}}
+:{{green|+0.1|b}} {{DLC-only|Mandate growth modifier}}
+:{{green|+5%|b}} Imperial authority growth modifier
+|events=[[Court idea group events]]
+}}
+
+{{idea group
+|version=1.35
+|name=Diplomatic
+|idea1=Grand Banquets
+|idea1effect={{green|+1|b}} Diplomat
+|idea1icon=Diplomats
+|idea2=Foreign Embassies
+|idea2effect={{green|−25%|b}} Diplomatic advisor cost
+|idea2icon=diplomatic advisor cost
+|idea3=Cabinet
+|idea3effect={{green|+1|b}} Diplomatic relation
+|idea3icon=Diplomatic relations
+|idea4=Benign Diplomats
+|idea4effect={{green|+25%|b}} Improve relations
+:{{green|+1|b}} Diplomat
+|idea4icon=improve relation modifier
+|idea5=Experienced Diplomats
+|idea5effect={{green|+2|b}} Diplomatic reputation
+|idea5icon=Diplomatic reputation
+|idea6=Flexible Negotiations
+|idea6effect={{green|−20%|b}} Province warscore cost
+|idea6icon=Province warscore cost
+|idea7=Diplomatic Corps
+|idea7effect={{green|−10%|b}} Diplomatic technology cost
+|idea7icon=dip tech cost modifier
+|bonus=Lowered impact on stability from diplomatic actions
+|events=[[Diplomatic idea group events]]
+}}
+
+<section begin="Espionage" />{{idea group
+|version=1.35
+|name=Espionage
+|idea1=Claim Fabrication
+|idea1effect=Allows 'Transfer Vassal' Peace Treaty at half cost
+:Can claim entire states
+|idea1icon=May fabricate claims for subjects
+|idea2=State Propaganda
+|idea2effect={{green|−20%|b}} Aggressive expansion impact
+|idea2icon=ae impact
+|idea3=Efficient Spies
+|idea3effect={{green|+50%|b}} Spy network construction
+:{{green|+10%|b}} Siege ability
+|idea3icon=spy network construction
+|idea4=Agent Training
+|idea4effect={{green|+1|b}} Diplomat
+:{{green|−15%|b}} Advisor cost
+|idea4icon=Diplomats
+|idea5=Vetting
+|idea5effect={{green|+33%|b}} Foreign spy detection
+:{{green|−0.2|b}} Yearly corruption
+|idea5icon=Foreign spy detection
+|idea6=Privateers
+|idea6effect={{green|+33%|b}} {{DLC-only|Privateer efficiency}}
+:{{green|+25%|b}} Chance to capture enemy ships
+|idea6icon=Privateer efficiency
+|idea7=Blackmailing
+|idea7effect={{green|+15|b}} Vassalization acceptance 
+:{{green|+33%|b}} Monthly favor gain modifier
+:{{green|+1|b}} Number of possible Pronoias
+|idea7icon=Vassalization acceptance 
+|bonus={{green|+100%|b}} Rebel support efficiency
+:{{green|−20%|b}} Covert actions cost
+|events=[[Espionage idea group events]]
+}}<section end="Espionage" />
+
+{{idea group
+|version=1.35
+|name=Exploration
+|idea1=Quest for the New World
+|idea1effect=Allows recruitment of explorers & conquistadors
+:{{green|−10%|b}} Naval attrition
+|idea1icon=May explore
+|idea2=Colonial Ventures
+|idea2effect={{green|+1|b}} Colonist
+|idea2icon=Colonists
+|idea3=Overseas Exploration
+|idea3effect={{green|+50%|b}} Colonial range
+|idea3icon=Range
+|idea4=Land of Opportunity
+|idea4effect={{green|+10|b}} Global settler increase
+|idea4icon=Global settler increase
+|idea5=Factories
+|idea5effect={{green|−10%|b}} Trade company provinces governing cost
+:{{green|−10%|b}} Trade company investment cost
+|idea5icon=Global tariffs
+|idea6=Free Colonies
+|idea6effect= {{green|+10%|b}} Settler chance
+|idea6icon=Settler chance
+|idea7=Global Empire
+|idea7effect={{green|+25%|b}} Naval force limit modifier
+:{{green|+25%|b}} Treasure fleet income
+|idea7icon=Naval force limit modifier
+|bonus=Can fabricate claim overseas in colonial regions
+|events=[[Exploration idea group events]]
+}}
+
+{{idea group
+|version=1.35
+|name=Influence
+|idea1=Tribute System
+|idea1effect={{green|+25%|b}} Income from vassals
+|idea1icon=vassal income
+|idea2=Additional Loyalist Recruitment
+|idea2effect={{green|−15%|b}} Liberty desire in subjects
+:{{green|+10%|b}} Vassal naval force limit contribution
+|idea2icon=Liberty desire in subjects
+|idea3=Integrated Elites
+|idea3effect={{green|−25%|b}} Diplomatic annexation cost
+|idea3icon=diplomatic annexation cost
+|idea4=Buffer States
+|idea4effect={{green|+1|b}} Diplomatic relation
+|idea4icon=Diplomatic relations
+|idea5=Diplomatic Influence
+|idea5effect={{green|+2|b}} Diplomatic reputation
+|idea5icon=Diplomatic reputation
+|idea6=Postal Service
+|idea6effect={{green|−25%|b}} Envoy travel time
+:{{green|−10%|b}} Liberty desire from subject development
+|idea6icon=Envoy travel time
+|idea7=Marcher Lords
+|idea7effect={{green|+100%|b}} Vassal force limit contribution
+|idea7icon=vassal forcelimit bonus
+|bonus={{green|−50%|b}} Unjustified demands
+|events=[[Influence idea group events]]
+}}
+
+{{idea group
+|version=1.35
+|name=Maritime
+|notes=Not available for [[primitives]].
+|idea1=Merchant Traditions
+|idea1effect={{green|+25%|b}} Trade range
+:{{green|+100%|b}} Naval tradition from protecting trade
+|idea1icon=Trade range
+|idea2=Merchant Marine
+|idea2effect={{green|+50%|b}} National sailors modifier
+:{{DLC-only|Marines force limit|+25|b}}
+|idea2icon=National sailors modifier
+|idea3=Sheltered Ports
+|idea3effect={{green|+10%|b}} Global ship repair
+:{{green|−10%|b}} Sailor maintenance
+|idea3icon=global ship repair
+|idea4=Grand Navy
+|idea4effect={{green|+50%|b}} Naval force limit modifier
+:{{green|+25%|b}} Ship tradepower propagation
+|idea4icon=Naval force limit modifier
+|idea5=Ship's Penny
+|idea5effect={{green|−10%|b}} Ship costs
+|idea5icon=Ship costs
+|idea6=Seahawks
+|idea6effect={{green|+10%|b}} Global naval engagement
+:{{green|−25%|b}} Admiral cost
+|idea6icon=Leader(s) without upkeep
+|idea7=Naval Fighting Instruction
+|idea7effect={{green|+50%|b}} Blockade efficiency
+:{{green|+25%|b}} {{DLC-only|Privateer efficiency}}
+|idea7icon=Blockade efficiency
+|bonus=Ships can repair when in coastal sea zones
+:{{green|+1|b}} Fleet movement speed
+|events=[[Maritime idea group events]]
+}}
+
+{{idea group
+|version=1.35
+|name=Trade
+|idea1=Shrewd Commerce Practice
+|idea1effect={{green|+20%|b}} Global trade power
+|idea1icon=Global trade power
+|idea2=Free Trade
+|idea2effect={{green|+1|b}} Merchant
+|idea2icon=Merchants
+|idea3=Merchant Adventures
+|idea3effect={{green|+25%|b}} Trade range
+|idea3icon=Trade range modifier
+|idea4=National Trade Policy
+|idea4effect={{green|+10%|b}} Trade efficiency
+:{{green|-25%|b}} Cost to promote Mercantilism
+|idea4icon=Trade efficiency
+|idea5=Overseas Merchants
+|idea5effect={{green|+15|b}} Placed merchant power
+|idea5icon=merchant trade power
+|idea6=Trade Manipulation
+|idea6effect={{green|+25%|b}} Trade steering
+|idea6icon=Trade steering
+|idea7=Fast Negotiations
+|idea7effect={{green|+25%|b}} {{DLC-only|Caravan power}}
+|idea7icon=Caravan power
+|bonus={{green|+1|b}} Merchant
+:{{green|+10%|b}} Burghers loyalty equilibrium
+:{{green|+10%|b}} Jains loyalty equilibrium
+:{{green|+10%|b}} Vaisyas loyalty equilibrium
+|events=[[Trade idea group events]]
+}}
+</div><!-- end box wrapper -->
+*For Exploration note the hidden bonuses when using explorers: each terra incognita sea zone revealed through naval exploration grants {{green|+1}} naval tradition.

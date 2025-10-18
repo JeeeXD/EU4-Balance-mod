@@ -1,0 +1,19 @@
+can_colonize_province = {
+	condition = {
+		tooltip = colonial_cannot_colonize
+		potential = {
+			FROM = {
+				is_colonial_nation = yes
+			}
+		}
+		allow = {
+			FROM = {
+				capital_scope = {
+					ROOT = {
+						colonial_region = PREV
+					}
+				}
+			}
+		}
+	}
+}

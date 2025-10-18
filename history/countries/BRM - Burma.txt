@@ -1,0 +1,5 @@
+government = monarchy
+primary_culture = burmese
+religion = buddhism
+technology_group = chinese
+capital = 585

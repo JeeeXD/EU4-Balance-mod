@@ -1,0 +1,76 @@
+country_decisions = {
+
+	berber_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_berber_nation_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = FAT }
+			NOT = { tag = TAM }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			primary_culture = berber
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = maghreb_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TAM }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			num_of_owned_provinces_with = {
+				value = 50
+				region = maghreb_region
+			}
+			adm_tech = 10
+		}
+		effect = {
+			change_tag = TAM
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 50
+			if = {
+				limit = { NOT = { has_reform = celestial_empire } }
+				change_government = monarchy
+				#set_legacy_government = despotic_monarchy
+			}
+			set_country_flag = formed_berber_nation_flag
+			country_event = { id = ideagroups.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

@@ -1,0 +1,191 @@
+defensive_hostile_movespeed = {
+	local_hostile_movement_speed = 0.1
+}
+maritime_ideas_shock_disc = {
+	discipline = 0.05
+	shock_damage_received = -0.10
+	is_marine_modifier = yes
+}
+PR_manpower_edict_province = {
+	local_manpower_modifier = 0.25
+	local_sailors_modifier = 0.25
+	local_state_maintenance_modifier = 2.0
+}
+PR_dev_edict_province = {
+	local_development_cost = -0.1 
+	local_state_maintenance_modifier = 2.0
+}
+subject_goods_bonus_mp_15 = {
+	global_trade_goods_size_modifier = 0.15
+}
+subject_military_bonus_mp_5 = {
+	discipline = 0.05
+}
+subject_tax_bonus_mp_25 = {
+	global_tax_modifier = 0.25
+}
+subject_movement_bonus_mp_15 = {
+	movement_speed = 0.15
+}
+subject_development_bonus_mp_10 = {
+	development_cost = -0.1
+}
+
+################################### KHMER ########################
+khmer_ayyuthaya_win = {
+	land_morale = 0.1
+}
+khmer_conquest_of_north = {
+	missionaries = 1
+	global_missionary_strength = 0.02
+}
+khmer_restore_the_empire = {
+	infantry_power = 0.10
+	infantry_cost = -0.2
+}
+khmer_chinese_trade = {
+	global_trade_power = 0.15
+	trade_steering = 0.25
+}
+khmer_burmese_campaign = {
+	discipline = 0.05
+	morale_damage_received = -0.05
+}
+khmer_burmese_unification = {
+	global_unrest = -2
+}
+khmer_empire_formation = {
+	land_forcelimit_modifier = 0.25
+	land_maintenance_modifier = -0.15
+}
+
+############################### BAVARIA ##################################
+beer_trade_imports_modifier = {
+	global_unrest = -2
+	production_efficiency = 0.1
+}
+
+############################### RP Rewards ###############################
+
+cav_ratio_reward = {
+	cav_to_inf_ratio = 0.10
+}
+
+interest_reward = {
+	interest = -0.25
+}
+
+manpower_reward = {
+	manpower_recovery_speed = 0.10
+}
+
+naval_reward = {
+	heavy_ship_cost = -0.1
+}
+
+diplo_subject_reward = {
+	diplomatic_annexation_cost = -0.2
+}
+
+colonist_reward = {
+	colony_development_boost = 1
+}
+
+########## Advisor Events #########
+
+loyal_friend_boost = {
+	advisor_cost = -0.2
+}
+
+missionary_boost = {
+	no_religion_penalty = yes
+}
+
+governor_boost = {
+	global_autonomy = -0.05
+}
+
+state_theorist_boost = {
+	yearly_absolutism = 1
+}
+
+magistrate_boost = {
+	yearly_corruption = -1
+}
+
+chancellor_boost = {
+	no_stability_loss_on_monarch_death = yes
+    monarch_admin_power = 2
+	monarch_diplomatic_power = 2
+	monarch_military_power = 2
+}
+
+herald_boost = {
+	war_exhaustion = -0.3
+}
+
+naval_tactician_boost = {
+	navy_tradition = 2
+}
+
+visionary_boost = {
+	monthly_splendor = 2
+}
+
+reformist_boost = {
+	monthly_reform_progress_modifier = 0.2
+}
+
+overseer_boost = {
+	vassal_income = 0.25
+	vassal_forcelimit_bonus = 0.5
+}
+
+jester_boost = {
+	all_estate_loyalty_equilibrium = 0.1
+	allow_free_estate_privilege_revocation = yes
+}
+
+harbor_master_boost = {
+	sailors_recovery_speed = 0.33
+}
+
+customs_officer_boost = {
+	trade_steering = 0.25
+}
+
+imperial_councilor_boost = {
+	imperial_authority_value = 0.2
+}
+
+imperial_bureaucrat_boost = {
+	imperial_mandate = 0.1
+}
+
+landsknecht_boost = {
+	infantry_power = 0.15
+}
+
+dragoon_boost = {
+	cavalry_power = 0.15
+}
+
+howitzer_boost = {
+	artillery_power = 0.15
+}
+
+tactician_boost = {
+	army_tradition = 1
+}
+
+drill_master_boost = {
+	drill_decay_modifier = -0.33
+}
+
+siege_engineer_boost = {
+	artillery_levels_available_vs_fort = 2
+}
+
+contractor_boost = {
+	mercenary_discipline = 0.10
+}

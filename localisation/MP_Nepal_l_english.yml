@@ -1,0 +1,34 @@
+﻿l_english:
+
+estate_jains_nepal_himalayas: "Himalayan Adaptiation"
+estate_jains_nepal_himalayas_tooltip: "Remove the Development Cost Reduction of every owned §YMountains§!, §YGlacial§!, §YHighlands§! and §YHills§! province."
+nep_mountain_expansion_flag_tooltip: "Unlocks §YHimalayan Adaptiation§! privilege for the §YJains§!."
+nep_use_monument_tooltip: "This will allow us to use the monument in this province regardless of its requirements."
+nep_convert_to_cloth_tooltip: "Converts 5 random §YWool§! to §YCloth§!."
+nep_keep_wool_tooltip: "All of our provinces that produce §YWool§! will gain till the end of the game:\n§G+0.5§! Goods Produced"
+nep_arctic_adaptation_tooltip: "Every owned province with §YArctic§! Climate will gain §G-50%§! Development Cost till the end of the game."
+############ MODIFIERS ##############
+
+############### MISSIONS ###########
+nep_ready_to_unify_title: "Time has Come"
+nep_ready_to_unify_desc: "The petty hill states have long fought each other, leaving our people divided and weak. But now, the time h
+nep_conquest_of_nepal_title: "Conquest of Nepal"
+nep_conquest_of_nepal_desc: "To truly unite the Himalayas, we must bring every valley and fortress under our command. By conquering the lands of Nepal, we shall end the age of division and forge a single, unbreakable kingdom in the mountains."
+nep_nepalis_in_india_title: "Nepalis in India"
+nep_nepalis_in_india_desc: "The fertile plains of the Ganges have long tempted our mountain warriors. By carrying our banners beyond the Himalayas and settling Nepali rule in India, we secure wealth, influence, and a lasting place among the great powers of the subcontinent."
+nep_our_himalayas_title: "Our Himalayas"
+nep_our_himalayas_desc: "The towering Himalayas are our homeland and shield, yet for too long they have been divided among petty rulers. By bringing every valley, pass, and peak under our banner, we shall claim the mountains as the heartland of a united Nepali realm."
+nep_impenetrable_title: "Impenetrable"
+nep_impenetrable_desc: "The Himalayas are a fortress granted by nature itself. With our mountain strongholds secured and our warriors trained to fight among the peaks, no invader shall breach our defenses. Nepal shall stand impenetrable against all who dare challenge us."
+nep_the_borderlands_title: "The Borderlands"
+nep_the_borderlands_desc: "Perched between the riches of India and the mysteries of Tibet, our realm guards the passes and valleys of the borderlands. By securing these frontiers, we shall control the flow of trade and armies alike, turning Nepal into the true gateway of the Himalayas."
+nep_brothers_in_bhutan_title: "Brothers in Bhutan"
+nep_brothers_in_bhutan_desc: "The people of Bhutan share our mountains, our struggles, and our destiny. By strengthening our bonds—whether through alliance or unification—we shall ensure that the Himalayas are not divided, but stand together as one family of mountain kingdoms."
+nep_mountains_north_title: "The Northern Mountains"
+nep_mountains_north_desc: "Beyond our valleys lie the high plateaus and passes of Tibet. To secure the roof of the world, we must extend our reach into the northern mountains, guarding every path and peak under the Nepali banner."
+
+############ EVENTS ###############
+flavor_nepal.1.T: "Monopoly on Wool"
+flavor_nepal.1.D: "The highland pastures of Nepal are filled with hardy sheep and yak, whose wool has become a prized commodity in India and Tibet. Merchants now petition the court to grant them exclusive rights over the wool trade, promising great revenues for the state. Yet such a monopoly risks angering local herders and smaller traders who depend on this vital livelihood. Others, however, suggest that Nepal should not rely on wool alone, and instead invest in developing cloth production, giving our markets a wider variety of goods to sell."
+flavor_nepal.1.OPT1: "Encourage cloth production to diversify our markets."
+flavor_nepal.1.OPT2: "Tighten the monopoly and focus solely on wool.`"

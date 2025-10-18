@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = moroccan
+religion = shiite
+technology_group = muslim
+capital = 225	# Cordoba

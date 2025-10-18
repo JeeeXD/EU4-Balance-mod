@@ -1,0 +1,620 @@
+nepal_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_ready_to_unify = {
+		icon = mission_order_in_the_domain
+		required_missions = {  } #None
+		provinces_to_highlight = {
+	
+		}
+		trigger = {
+			army_size_percentage = 1
+			monthly_mil = 6
+		}
+		effect = {
+			add_country_modifier = {
+				name = thriving_arms_industry
+				duration = 3650
+			}
+			nepal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4484 = {
+				add_permanent_claim = ROOT
+			}
+			4482 = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_conquest_of_nepal = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_ready_to_unify } #None
+		provinces_to_highlight = {
+			area = nepal_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nepal_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			baisi_rajya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_adm_power = 150
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_nepalis_in_india = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_conquest_of_nepal } #None
+		provinces_to_highlight = {
+			area = baisi_rajya_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baisi_rajya_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			4492 = {
+				add_base_manpower = 3
+				add_base_production = 3
+				add_base_tax = 3
+			}
+			554 = {
+				add_base_manpower = 3
+				add_base_production = 3
+				add_base_tax = 3
+			}
+			4491 = {
+				add_base_manpower = 3
+				add_base_production = 3
+				add_base_tax = 3
+			}
+			ngari_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_our_himalayas = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_nepalis_in_india } #None
+		position = 5
+		provinces_to_highlight = {
+			area = ngari_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ngari_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			4520 = {
+				add_building = fort_16th
+				add_province_modifier = {
+					name = mer_mountian_defense
+					duration = -1
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_impenetrable = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_our_himalayas nep_mountains_north } #None
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+					area = ngari_area
+					area = tsang_area
+					area = utsang_area
+					area = bhutan_area
+					area = nepal_area
+					area = baisi_rajya_area
+					province_id = 4484
+				}
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				OR = {
+					area = ngari_area
+					area = tsang_area
+					area = utsang_area
+					area = bhutan_area
+					area = nepal_area
+					area = baisi_rajya_area
+					province_id = 4484
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_winning
+				duration = -1
+			}
+			custom_tooltip = nep_mountain_expansion_flag_tooltip
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+
+
+}
+nepal_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_the_borderlands = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_conquest_of_nepal } #None
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4482
+				province_id = 4484
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 4484
+			owns = 4482
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_unification_of_nepal
+				duration = 9125
+			}
+			4481 = {
+				add_permanent_claim = ROOT
+			}
+			565 = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_brothers_in_bhutan = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_the_borderlands } #None
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 565
+				province_id = 4481
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 565
+			owns = 4481
+		}
+		effect = {
+			define_advisor = {
+				type = army_reformer
+				skill = 3
+				discount = yes
+				cost_multiplier = 0.1
+			}
+			add_stability = 1
+			tsang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			utsang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_mountains_north = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_brothers_in_bhutan } #None
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = utsang_area
+				area = tsang_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tsang_area = {
+				type = all
+				owned_by = ROOT
+			}
+			utsang_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_man_of_mountians
+				duration = -1
+			}
+			4205 = {
+				add_building = fort_16th
+				add_province_modifier = {
+					name = mer_mountian_defense
+					duration = -1
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+
+
+}
+nepal_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_monopoly_on_wool = {
+		icon = mission_order_in_the_domain
+		required_missions = {  } #None
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				trade_goods = wool
+				development = 10
+				has_production_building_trigger = yes
+				value = 10
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_nepal.1
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_gold_mountain = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_monopoly_on_wool } #None
+		provinces_to_highlight = {
+			province_id = 2128
+		}
+		trigger = {
+			2128 = {
+				has_production_building_trigger = yes
+				base_production = 10
+				num_free_building_slots = 0
+			}
+		}
+		effect = {
+			2128 = {
+				add_province_modifier = {
+					name = nep_gold_goods
+					duration = -1 
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_arctic_adaptation = {
+		icon = mission_order_in_the_domain
+		required_missions = {  } #None
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = ngari_area
+				area = utsang_area
+				province_id = 4519
+				province_id = 4205 
+			}
+	
+		}
+		trigger = {
+			ngari_area = {
+				type = all
+				num_of_times_improved_by_owner = 2
+			}
+			utsang_area = {
+				type = all
+				num_of_times_improved_by_owner = 2
+			}
+			4519 = {
+				num_of_times_improved_by_owner = 2
+			}
+			4205 = {
+				num_of_times_improved_by_owner = 2
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = { climate = arctic }
+				add_province_modifier = {
+					name = nep_arctic_adaptation
+					duration = -1
+				}
+			}
+			custom_tooltip = nep_arctic_adaptation_tooltip
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+}
+nepal_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_incense_production = {
+		icon = mission_order_in_the_domain
+		position = 3
+		required_missions = { nep_katmandu nep_gold_mountain } #None
+		provinces_to_highlight = {
+		}
+		trigger = {
+			557 = {
+				base_production = 10
+				has_manufactory_trigger = yes
+			}
+			676 = {
+				base_production = 10
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = nep_produce_incense
+				duration = 3650
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+}
+nepal_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_develop_nepal = {
+		icon = mission_order_in_the_domain
+		required_missions = {  } #None
+		provinces_to_highlight = {
+	
+		}
+		trigger = {
+			development_in_provinces = {
+				area = nepal_area	
+				value = 50
+			}
+			owns = 557
+		}
+		effect = {
+			set_capital = 557
+			557 = {
+				add_province_modifier = {
+					name = nep_new_capital
+					duration = -1
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+	nep_katmandu = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_develop_nepal } #None
+		provinces_to_highlight = {
+			province_id = 557
+	
+		}
+		trigger = {
+			557 = {
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_trade_building_trigger = yes
+				development = 25
+			}
+			owns = 557
+		}
+		effect = {
+			add_country_modifier = {
+				name = city_of_the_people
+				duration = 3650
+			}
+			add_great_project_tier = {
+				type = swayambhunath
+				tier = 1
+			}
+			custom_tooltip = nep_use_monument_tooltip
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+	nep_lhasa = {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_katmandu } #None
+		provinces_to_highlight = {
+			province_id = 677
+	
+		}
+		trigger = {
+			677 = {
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_trade_building_trigger = yes
+				development = 25
+			}
+			owns = 677
+		}
+		effect = {
+			set_capital = 677
+			677 = {
+				add_province_modifier = {
+					name = nep_new_capital
+					duration = -1
+				}
+			}
+			add_great_project_tier = {
+				type = jokhang_temple
+				tier = 1
+			}
+			custom_tooltip = nep_use_monument_tooltip
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_barracks= {
+		icon = mission_order_in_the_domain
+		required_missions = { nep_katmandu } #None
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manpower_building_trigger = yes }
+		}
+		trigger = {
+			every_owned_province = {
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_military_discipline1
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_request_occupation_button"
+		texturefile = "gfx/interface/request_occupation_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

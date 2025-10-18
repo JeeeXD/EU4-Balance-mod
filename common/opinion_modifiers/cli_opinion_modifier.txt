@@ -1,0 +1,3 @@
+engaged_in_beer_trade_modifier = {
+	opinion = 25
+}

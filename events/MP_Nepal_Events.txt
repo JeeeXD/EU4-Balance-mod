@@ -1,0 +1,58 @@
+namespace = flavor_nepal
+
+#Seven Iakh
+country_event = {
+	id = flavor_nepal.1
+	title = flavor_nepal.1.T
+	desc = flavor_nepal.1.D
+	picture = 2_Brahmin_Estate_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = flavor_nepal.1.OPT1
+		ai_chance = { factor = 1 }
+		custom_tooltip = nep_convert_to_cloth_tooltip
+
+		hidden_effect = {
+			random_owned_province = {
+				limit = { trade_goods = wool}
+				change_trade_goods = cloth
+			}
+			random_owned_province = {
+				limit = { trade_goods = wool}
+				change_trade_goods = cloth
+			}
+			random_owned_province = {
+				limit = { trade_goods = wool}
+				change_trade_goods = cloth
+			}
+			random_owned_province = {
+				limit = { trade_goods = wool}
+				change_trade_goods = cloth
+			}
+			random_owned_province = {
+				limit = { trade_goods = wool}
+				change_trade_goods = cloth
+			}
+		}
+
+	}
+
+	option = {
+		name = flavor_nepal.1.OPT2
+
+		ai_chance = { factor = 10 }
+        custom_tooltip = nep_keep_wool_tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = { trade_goods = wool }
+				add_province_modifier = {
+					name = nep_monopoly_on_wool_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}

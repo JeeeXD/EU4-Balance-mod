@@ -1,0 +1,90 @@
+country_decisions = {
+
+	form_south_germany = {
+		major = yes
+		potential = {
+			NOT = {
+				OR = {
+					primary_culture = dutch
+					primary_culture = flemish
+					primary_culture = frisian
+					tag = NED
+					tag = GER
+					tag = HAB
+					tag = PAP
+					tag = NGR
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_south_germany_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_reform = celestial_empire } 
+			culture_group = germanic
+			capital_scope = {
+				region = south_german_region
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 65	# Munich
+				province_id = 1872	# Ulm
+				province_id = 134	# Wien
+				province_id = 74	# Baden
+				province_id = 1869	# Zurich
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SGR }
+			adm_tech = 10
+			religion = catholic
+			owns_core_province = 65		
+			owns_core_province = 1872	
+			owns_core_province = 134	
+			owns_core_province = 74	
+			owns_core_province = 1869
+			is_free_or_tributary_trigger = yes
+			num_of_owned_provinces_with = {
+				value = 50
+				region = south_german_region
+			}
+			is_at_war = no
+		}
+		effect = {
+			change_tag = SGR
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			country_event = { id = ideagroups.1 }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 5
+			set_country_flag = formed_south_germany_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		ai_importance = 1000
+	}
+
+}

@@ -1,0 +1,65 @@
+estate_jains_nepal_himalayas_mountains = {
+	local_development_cost = -0.35
+}
+estate_jains_nepal_himalayas_hills = {
+	local_development_cost = -0.25
+}
+estate_jains_nepal_himalayas_highlands = {
+	local_development_cost = -0.2
+}
+estate_jains_nepal_himalayas_glacier = {
+	local_development_cost = -0.5
+}
+nep_unification_of_nepal = {
+	build_cost = -0.15
+	build_time = -0.25
+}
+nep_man_of_mountians = {
+	defensiveness = 0.33
+	fort_maintenance_modifier = -0.33
+}
+nep_winning = {
+	infantry_power = 0.15
+}
+nep_new_capital = {
+	local_build_cost = -0.25
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_development_cost = -0.15
+	allowed_num_of_buildings = 1
+}
+city_of_the_people = {
+	global_unrest = -2
+	global_autonomy = -0.1
+}
+nep_monopoly_on_wool_modifier = {
+	trade_goods_size = 0.5
+}
+nep_produce_incense = {
+	global_trade_goods_size_modifier = 0.1
+}
+nep_gold_goods = {
+	trade_goods_size = 1
+}
+nep_military_discipline1 = {
+	morale_damage_received = -0.05
+}
+nep_military_discipline2 = {
+	morale_damage_received = -0.05
+	recover_army_morale_speed = 0.10
+}
+nep_military_discipline3 = {
+	morale_damage_received = -0.15
+	recover_army_morale_speed = 0.10
+}
+nep_military_discipline4 = {
+	morale_damage_received = -0.15
+	recover_army_morale_speed = 0.10
+	backrow_artillery_damage = 0.10
+}
+nep_military_discipline5 = {
+	morale_damage_received = -0.15
+	recover_army_morale_speed = 0.10
+	backrow_artillery_damage = 0.10
+	discipline = 0.05
+}

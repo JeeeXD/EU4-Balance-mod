@@ -1,0 +1,126 @@
+custom_button = {
+	name = transfer_occupation_from_ally_button
+	potential = {
+		ROOT = {
+			owner = {
+				war_with = FROM
+			}
+			ai = no
+		}
+		FROM = {
+			any_ally = {
+				OR = {
+					is_in_war = {
+						attackers = FROM
+					}
+					is_in_war = {
+						defenders = FROM
+					}
+				}
+				ROOT = { controlled_by = PREV }
+			}
+		}
+	}
+	trigger = {
+		controller = {
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have a core on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 10 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 10
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_claim = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have a claim on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 5 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					always = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have no claim on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 2 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 2
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		controller = {
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 10 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+			else_if = {
+				limit = {
+					is_claim = ROOT
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 5 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+			else_if = {
+				limit = {
+					always = yes
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 2 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+		}
+		hidden_effect = {
+			controller = {
+				if = {
+					limit = {
+						is_core = ROOT
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -10
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_claim = ROOT
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						always = yes
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -2
+						}
+					}
+				}
+			}
+		}
+		change_controller = FROM
+	}
+	tooltip = transfer_occupation_from_ally_button_tooltip
+}
+

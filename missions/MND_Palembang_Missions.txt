@@ -1,0 +1,856 @@
+PLB_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_tarumanagara = {
+		icon = mnd_maj_sunda_relations
+		required_missions = { PLB_legacy_of_srivijaya }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = central_java_area
+				area = west_java_area
+				area = banten_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = central_java_area
+					area = west_java_area
+					area = banten_area
+				}
+				value = 6
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_heirs_of_tarumanagara_defeated
+				duration = -1
+			}
+			east_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			surabaya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	PLB_majapahit_kneels = {
+		icon = mission_mnd_maj_end_disaster
+		required_missions = { PLB_tarumanagara }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = central_java_area
+				area = west_java_area
+				area = banten_area
+				area = surabaya_area
+				area = east_java_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = central_java_area
+				    area = west_java_area
+				    area = banten_area
+				    area = surabaya_area
+				    area = east_java_area
+				}
+				value = 18
+			}
+		}
+		effect = {
+			add_army_tradition_or_mil_power = { amount = 10 }
+			add_country_modifier = {
+				name = PLB_defeated_the_empire
+				duration = 7300
+			}
+			sulawesi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			makassar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_sulawesi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	PLB_sri_tri_buana = {
+		icon = mission_invade_island
+		required_missions = { PLB_majapahit_kneels PLB_langkasuka }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = malacca_area
+				area = malaya_area
+				area = north_malaya_area
+				area = johor_area
+				area = east_java_area
+				area = central_java_area
+				area = west_java_area
+				area = surabaya_area
+				area = banten_area
+				area = central_sumatra_area
+				area = jambi_area
+				area = minangkabau_area
+				area = north_sumatra_area
+				area = south_sumatra_area
+				area = batak_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = PLB_owns_all_of_highlighted
+				malacca_area = {
+					type = all
+					owned_by = ROOT
+				}
+				malaya_area = {
+					type = all
+					owned_by = ROOT
+				}
+				north_malaya_area = {
+					type = all
+					owned_by = ROOT
+				}
+				johor_area = {
+					type = all
+					owned_by = ROOT
+				}
+				east_java_area = {
+					type = all
+					owned_by = ROOT
+				}
+				central_java_area = {
+					type = all
+					owned_by = ROOT
+				}
+				west_java_area = {
+					type = all
+					owned_by = ROOT
+				}
+				surabaya_area = {
+					type = all
+					owned_by = ROOT
+				}
+				banten_area = {
+					type = all
+					owned_by = ROOT
+				}
+				central_sumatra_area = {
+					type = all
+					owned_by = ROOT
+				}
+				jambi_area = {
+					type = all
+					owned_by = ROOT
+				}
+				minangkabau_area = {
+					type = all
+					owned_by = ROOT
+				}
+				north_sumatra_area = {
+					type = all
+					owned_by = ROOT
+				}
+				south_sumatra_area = {
+					type = all
+					owned_by = ROOT
+				}
+				batak_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_lord_of_three_worlds_global
+				duration = -1
+			}
+		}
+	}
+
+	PLB_eastern_peripheries = {
+		icon = mission_mnd_maj_cloves
+		required_missions = { PLB_sri_tri_buana }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+					area = makassar_area
+					area = south_sulawesi_area
+					area = sulawesi_area				
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = makassar_area
+					area = south_sulawesi_area
+					area = sulawesi_area
+				}
+				value = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_the_spice_does_flow
+				duration = 7300
+			}
+			641 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 15
+					key = PLB_the_spice_does_flow
+				}
+			}
+		}
+	}
+}
+
+PLB_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_legacy_of_srivijaya = {
+		icon = mission_mnd_khm_resurgence
+		required_missions = { PLB_privateer_problem }
+		position = 2
+		trigger = {
+			OR = {
+				is_at_war = yes
+				num_of_generals = 2
+				army_size_percentage = 0.9
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			west_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			banten_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_sumatra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			jambi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			minangkabau_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_sumatra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_sumatra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			batak_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	PLB_malayu = {
+		icon = mission_unite_home_region
+		required_missions = { PLB_legacy_of_srivijaya }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2677
+				area = central_sumatra_area
+				area = jambi_area
+				area = south_sumatra_area
+				area = minangkabau_area
+				area = batak_area
+				area = north_sumatra_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			2677 = {
+				owned_by = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = central_sumatra_area
+					area = jambi_area
+					area = south_sumatra_area
+					area = minangkabau_area
+					area = batak_area
+					area = north_sumatra_area
+				}
+				value = 18
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_heirs_of_malayu_defeated
+				duration = -1
+			}
+		}
+	}
+
+	PLB_langkasuka = {
+		icon = mission_asian_cannon
+		required_missions = { PLB_malayu }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = malacca_area
+				area = johor_area
+				area = malaya_area
+				area = north_malaya_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				area = malacca_area
+				area = johor_area
+				area = malaya_area
+				area = north_malaya_area
+				value = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_heirs_of_langkasuka_defeated
+				duration = -1
+			}
+		}
+	}
+}
+
+PLB_missions_3_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_privateer_problem = {
+		icon = mission_to_the_south_china_sea
+		required_missions = { }
+		position = 1
+		trigger = {
+			OR = {
+				has_reform = pirate_republic_reform
+				AND = {
+					is_year = 1446
+					stability = 1
+				}
+			}
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = PLB_return_of_the_pirates
+			    duration = 9125
+			}
+		}
+	}
+}
+
+PLB_missions_3_pirate = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = PLB
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_plunder_china = {
+		icon = mission_open_up_china
+		required_missions = { PLB_privateer_problem }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				region = north_china_region
+				region = south_china_region
+			}
+			has_port = yes
+			NOT = { owned_by = ROOT }
+			NOT = { has_province_modifier = slaves_raided }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						region = south_china_region
+						region = north_china_region
+					}
+					OR = {
+						owned_by = ROOT
+						has_province_modifier = slaves_raided
+					}
+				}
+				amount = 25
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 40
+			}
+			add_years_of_income = 0.5
+		}
+	}
+}
+
+PLB_missions_3_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = PLB
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_seas_never_conquered = {
+		icon = mission_mnd_maj_rein_in_brunei
+		required_missions = { PLB_malayu }
+		position = 5
+		provinces_to_highlight = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				area = brunei_area
+				area = sabah_area
+				area = kutai_area
+				area = banjar_area
+				area = kalimantan_area
+				value = 12
+			}
+		}
+		effect = {
+			create_general = {
+				tradition = 100
+			}
+		}
+	}
+
+	PLB_srivijaya = {
+		icon = mission_sail_to_the_east_indies
+		required_missions = { PLB_seas_never_conquered PLB_langkasuka }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+				value = 70
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_ruler_the_waves
+				duration = -1
+			}
+		}
+	}
+}
+
+PLB_missions_4_pirate = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_wokou_piracy = {
+		icon = mission_to_the_south_china_sea
+		required_missions = { PLB_privateer_problem PLB_ryukyu }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 1015
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { exists = RYU }
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = RYU
+				}
+				alliance_with = RYU
+			}
+			else = {
+				1015 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_japanese_piracy
+				duration = -1
+			}
+		}
+	}
+
+	PLB_naval_superiority = {
+		icon = mission_dharma_mission_arabian_trade
+		required_missions = { }
+		position = 5
+		trigger = {
+			navy_size = MLC
+			navy_size = MAJ
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_unrestricted_raiding
+				duration = 10950
+			}
+			create_admiral = { tradition = 40 }
+			add_dip_power = 50
+		}
+	}
+
+	PLB_raid_foreign_ships = {
+		icon = mission_follow_the_brahmaputra
+		required_missions = { PLB_naval_superiority }
+		position = 6
+		trigger = {
+			#privateer trigger
+			any_active_trade_node = {
+				has_privateer_share_in_trade_node = {
+					who = ROOT
+					share = 0.25
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_issue_shipping_permits
+				duration = 10950
+			}
+			add_years_of_income = 1
+			custom_tooltip = BEI_if_we_have_galleys
+			tooltip = {
+				add_country_modifier = {
+					name = PLB_supreme_control
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						num_of_galley = 20
+					}
+					add_country_modifier = {
+						name = PLB_supreme_control
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+}
+
+PLB_missions_5_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_ryukyu = {
+		icon = mission_the_chola_campaigns
+		required_missions = { }
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					exists = RYU
+				}
+				reverse_has_opinion = {
+					who = RYU
+					value = 75
+				}
+			}
+			else = {
+				1015 = {
+					has_merchant = ROOT
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = PLB_ryukyu_palembang_spice_agreement
+					duration = -1
+				}
+			}
+			add_dip_power = 50
+		}
+	}
+}
+
+PLB_missions_5_pirate = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = PLB
+			AND = {
+				tag = MSA
+				was_tag = PLB
+			}
+		}
+	}
+	has_country_shield = yes
+
+	PLB_hub_of_piracy = {
+		icon = mission_growth_of_surat
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			OR = {
+				NOT = { num_of_times_improved_by_owner = 10 }
+				NOT = { num_of_buildings_in_province = 2 }
+				NOT = { has_shipyard_building_trigger = yes }
+			}
+		}
+		trigger = {
+			capital_scope = {
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 2
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_or_upgrade_shipyard_building = yes
+				add_province_modifier = {
+					name = PLB_major_pirate_haven
+					duration = -1
+				}
+			}
+		}
+	}
+
+	PLB_a_pirate_haven = {
+		icon = mission_konkani_pirates
+		required_missions = { PLB_hub_of_piracy }
+		position = 4
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			OR = {
+				NOT = { has_shipyard_building_trigger = yes }
+				NOT = { has_dock_building_trigger = yes }
+				NOT = { development = 25 }
+			}
+		}
+		trigger = {
+			num_of_total_ports = 10
+			capital_scope = {
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+				development = 25
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = PLB_pirate
+					duration = -1
+				}
+				add_or_upgrade_dock_building = yes
+			}
+		}
+	}
+
+	PLB_plunder	= {
+		icon = mission_dominate_gujarati_trade
+		required_missions = { PLB_naval_superiority }
+		position = 6
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region_for_scope_province = {
+						is_capital_of = ROOT
+					}
+					OR = {
+						has_province_modifier = slaves_raided
+						owned_by = ROOT
+					}
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			add_republican_tradition = 5
+			custom_tooltip = PLB_every_province_within_certain_distance
+			hidden_effect = {
+				capital_scope = {
+					region = {
+						remove_province_modifier = slaves_raided
+					}
+				}
+			}
+		}
+	}
+
+	PLB_pirate_king = {
+		icon = mission_end_the_shan_domination
+		required_missions = { PLB_raid_foreign_ships PLB_plunder }
+		position = 7
+		trigger = {
+			treasury = 300
+			calc_true_if = {
+				all_trade_node = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.50
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PLB_king_of_all_pirates
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+influence_subject_reform = {
+	icon = "soldiers_5"
+	potential = {
+		always = yes
+	}
+	trigger = {
+		full_idea_group = influence_ideas
+		OR = {
+			full_idea_group = aristocracy_ideas
+			full_idea_group = plutocracy_ideas
+			full_idea_group = theocracy_gov_ideas
+			full_idea_group = horde_gov_ideas
+			full_idea_group = indigenous_ideas
+		}
+	}
+	
+	modifiers = {
+		reduced_liberty_desire = 15
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				full_idea_group = plutocracy_ideas
+			}
+			set_country_flag = subject_goods_bonus_mp
+		}
+		if = {
+			limit = {
+				full_idea_group = aristocracy_ideas
+			}
+			set_country_flag = subject_military_bonus_mp
+		}
+		if = {
+			limit = {
+				full_idea_group = theocracy_gov_ideas
+			}
+			set_country_flag = subject_tax_bonus_mp
+		}
+		if = {
+			limit = {
+				full_idea_group = horde_gov_ideas
+			}
+			set_country_flag = subject_movement_bonus_mp
+		}
+		if = {
+			limit = {
+				full_idea_group = indigenous_ideas
+			}
+			set_country_flag = subject_development_bonus_mp
+		}
+	}
+	
+	removed_effect = {
+		clr_country_flag = subject_goods_bonus
+		clr_country_flag = subject_military_bonus_mp
+		clr_country_flag = subject_tax_bonus_mp
+	}
+}
+
+berber_maghreb_reform = {
+	icon = "horde_riding"
+	potential = {
+		is_or_was_tag = { tag = TAM }
+	}
+	trigger = { }
+	
+	custom_attributes = {
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+
+	modifiers = {
+		loot_amount = 0.5
+		available_province_loot = 0.33
+	}
+	
+	effect = { }
+	removed_effect = { }
+}
+
+fatimid_maghreb_reform = {
+	icon = "diwan_al_khass_reform"
+	potential = {
+		is_or_was_tag = { tag = FAT }
+	}
+	trigger = { }
+	
+	custom_attributes = {
+
+	}
+
+	modifiers = {
+		global_tax_modifier = 0.33
+		merc_leader_army_tradition = 0.5
+	}
+	
+	effect = { }
+	removed_effect = { }
+}
+
+north_german_reform = {
+	icon = "reformer"
+	potential = {
+		is_or_was_tag = { tag = NGR }
+	}
+	trigger = { }
+	
+	custom_attributes = {
+
+	}
+
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.15
+		enforce_religion_cost = -0.33
+	}
+	
+	effect = { }
+	removed_effect = { }
+}
+
+south_german_reform = {
+	icon = "holy_state_reform"
+	potential = {
+		is_or_was_tag = { tag = SGR }
+	}
+	trigger = { }
+	
+	custom_attributes = {
+	
+	}
+
+	modifiers = {
+		warscore_from_battles_modifier = 0.1
+		leader_cost = -0.10
+	}
+	
+	effect = { custom_tooltip = south_german_holy_order_tooltip }
+	removed_effect = { }
+}
+
+ilkhanate_government_reform = {
+	icon = "maratha_rider"
+	allow_normal_conversion = yes
+    lock_level_when_selected = yes
+	potential = {
+		tag = ILK
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	raze_province = yes
+	modifiers = {
+        raze_power_gain = -0.75
+		nomadic_tribes_influence_modifier = 0.05
+		cav_to_inf_ratio = 0.10
+	}
+	custom_attributes = {
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = yes
+		enables_estate_nomadic_tribes = yes
+    }
+  	ai = {
+		factor = 1
+	}
+}

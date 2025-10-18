@@ -1,0 +1,24 @@
+namespace = mp_misc
+
+#Seven Iakh
+
+country_event = {
+	id = mp_misc.1
+	title = mp_misc.1.t
+	desc = mp_misc.1.d
+	picture = COURT_eventPicture
+
+	trigger = {
+		jester = 3
+		has_country_flag = jester
+	}
+
+	mean_time_to_happen = {
+		months = 3000
+	}
+
+	option = {
+		name = mp_misc.opt1
+		add_prestige = -5
+	}
+}

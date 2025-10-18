@@ -1,0 +1,78 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ase_kilwan_interest"
+		texturefile = "gfx/interface/ages/ase_kilwan_interest.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_florence_renaissance"
+		texturefile = "gfx/interface/ages/ase_florence_renaissance.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_ethiopian_local_warlords"
+		texturefile = "gfx/interface/ages/ase_ethiopian_local_warlords.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_malacca_spices"
+		texturefile = "gfx/interface/ages/ase_malacca_spices.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_ming_grand_imperial_projects"
+		texturefile = "gfx/interface/ages/ase_ming_grand_imperial_projects.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_korean_policies"
+		texturefile = "gfx/interface/ages/ab_korean_policies.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_songhai_timbuktu_university"
+		texturefile = "gfx/interface/ages/ase_songhai_timbuktu_university.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_ayutthaya_venice_east"
+		texturefile = "gfx/interface/ages/ase_ayutthaya_venice_east.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_japan_prosperity"
+		texturefile = "gfx/interface/ages/ase_japan_prosperity.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_maghrebi_piracy"
+		texturefile = "gfx/interface/ages/ase_maghrebi_piracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_enlightened_governance"
+		texturefile = "gfx/interface/ages/ase_enlightened_governance.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_nationalistic_fervor"
+		texturefile = "gfx/interface/ages/ase_nationalistic_fervor.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_uniform_education"
+		texturefile = "gfx/interface/ages/ase_uniform_education.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_universal_literacy"
+		texturefile = "gfx/interface/ages/ase_universal_literacy.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_germany_industrialisation"
+		texturefile = "gfx/interface/ages/ase_germany_industrialisation.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_horde_conquests"
+		texturefile = "gfx/interface/ages/ase_horde_conquests.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_italian_hegemony"
+		texturefile = "gfx/interface/ages/ase_italian_hegemony.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_marathas_horsemen"
+		texturefile = "gfx/interface/ages/ase_marathas_horsemen.dds"
+	}
+	spriteType = {
+		name = "GFX_ase_united_states"
+		texturefile = "gfx/interface/ages/ase_united_states.dds"
+	}
+}

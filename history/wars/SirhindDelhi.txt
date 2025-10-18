@@ -1,0 +1,18 @@
+name = "Sirhindi Reconquest of Delhi"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 522 # Delhi
+}
+
+1444.1.1 = {
+	add_attacker = SRH
+	add_defender = DLH
+	add_defender = JAN
+}
+
+1449.1.1 = {
+	rem_attacker = SRH
+	rem_defender = DLH
+	rem_defender = JAN
+}
