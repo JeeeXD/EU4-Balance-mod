@@ -1,0 +1,239 @@
+ubi_slot_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        OR = {
+            AND = {
+                tag = SHY
+                has_country_flag = bukhara_yes
+            }
+            AND = {
+                tag = BUK
+                has_country_flag = bukhara_yes
+            }
+            tag = ILK
+        }
+    }
+}
+ubi_slot_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        OR = {
+            AND = {
+                tag = SHY
+                has_country_flag = bukhara_yes
+            }
+            AND = {
+                tag = BUK
+                has_country_flag = bukhara_yes
+            }
+            tag = ILK
+        }
+    }
+    ubi_build_to_fl = {
+        icon = mission_central_asian_steppes
+        position = 1
+
+        trigger = {
+            army_size_percentage = 0.95
+        }
+
+        effect = {
+            khiva_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           transcaspia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           merv_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           transoxiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           arys_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           ferghana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+           termez_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            kama_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            bashkiria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            volga_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            nogai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            lower_yik_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            kazakhstan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            ob_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            yrtesh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            tannu_uriankhai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            north_zungaria = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            south_zungaria = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+            jetysuu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+        }
+    }
+}
+ubi_slot_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        OR = {
+            AND = {
+                tag = SHY
+                has_country_flag = bukhara_yes
+            }
+            AND = {
+                tag = BUK
+                has_country_flag = bukhara_yes
+            }
+            tag = ILK
+        }
+    }
+}
+ubi_slot_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        OR = {
+            AND = {
+                tag = SHY
+                has_country_flag = bukhara_yes
+            }
+            AND = {
+                tag = BUK
+                has_country_flag = bukhara_yes
+            }
+            tag = ILK
+        }
+    }
+}
+ubi_slot_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        OR = {
+            AND = {
+                tag = SHY
+                has_country_flag = bukhara_yes
+            }
+            AND = {
+                tag = BUK
+                has_country_flag = bukhara_yes
+            }
+            tag = ILK
+        }
+    }
+}

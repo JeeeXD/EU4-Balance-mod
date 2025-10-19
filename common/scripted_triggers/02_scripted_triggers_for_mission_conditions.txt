@@ -669,8 +669,14 @@ is_moghulistan_nation = {
 	OR = {
 		tag = KAS
 		tag = CHG
-		tag = SHY #Technically not Moghulistan, but part of Central Asia
-		tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+		AND = {
+			tag = SHY #Technically not Moghulistan, but part of Central Asia
+			has_country_flag = bukhara_no
+		}
+		AND ={ 
+			tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+			has_country_flag = bukhara_no
+		}
 		tag = KZH
 		tag = KOK
 		tag = KHI
@@ -681,8 +687,14 @@ was_moghulistan_nation = {
 	OR = {
 		was_tag = KAS
 		was_tag = CHG
-		was_tag = SHY #Technically not Moghulistan, but part of Central Asia
-		was_tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+		AND = {
+			was_tag = SHY #Technically not Moghulistan, but part of Central Asia
+			has_country_flag = bukhara_no
+		}
+		AND = { 
+			was_tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+			has_country_flag = bukhara_no
+		}
 		was_tag = KZH
 		was_tag = KOK
 		was_tag = KHI

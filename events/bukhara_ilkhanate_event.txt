@@ -1,0 +1,31 @@
+namespace = bukhara_ilkhanate_events
+country_event = {
+    id = bukhara_ilkhanate_events.1
+    title = bukhara_ilkhanate_events.1.t
+    desc = bukhara_ilkhanate_events.1.d
+    picture = CROSSROAD_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = SHY
+    }
+
+    is_triggered_only = yes
+    goto = 442
+
+    option = {
+        name = bukhara_ilkhanate_events.1.a
+        set_country_flag = bukhara_yes
+        swap_non_generic_missions = yes
+    }
+
+    option = {
+        name = bukhara_ilkhanate_events.1.b
+        add_country_modifier = {
+            name = bukhara_no_modifier
+            duration = 5475
+        }
+        add_manpower = -0.001
+        set_country_flag = bukhara_no
+        swap_non_generic_missions = yes
+    }
+}

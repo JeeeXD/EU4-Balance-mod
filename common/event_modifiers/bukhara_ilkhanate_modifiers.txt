@@ -1,0 +1,5 @@
+bukhara_no_modifier = {
+    raze_power_gain = 0.13
+    prestige = -0.13
+    horde_unity = 0.13
+}
