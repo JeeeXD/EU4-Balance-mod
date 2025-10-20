@@ -9,9 +9,9 @@ nepal_1 = {
 		primary_culture = nepali
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
-		NOT = { tag = BNG }
-		NOT = { tag = JNP }
-		NOT = { tag = DLH }
+		NOT = {  is_or_was_tag = { tag = BNG } }
+		NOT = {  is_or_was_tag = { tag = JNP } }
+		NOT = {  is_or_was_tag = { tag = DLH } }
 	}
 	has_country_shield = yes
 
@@ -50,7 +50,7 @@ nepal_1 = {
 	}
 
 	nep_conquest_of_nepal = {
-		icon = mission_order_in_the_domain
+		icon = mission_indian_stateman
 		required_missions = { nep_ready_to_unify } #None
 		provinces_to_highlight = {
 			area = nepal_area
@@ -78,7 +78,7 @@ nepal_1 = {
 	}
 
 	nep_nepalis_in_india = {
-		icon = mission_order_in_the_domain
+		icon = mission_indian_soldier_elephant
 		required_missions = { nep_conquest_of_nepal } #None
 		provinces_to_highlight = {
 			area = baisi_rajya_area
@@ -120,7 +120,7 @@ nepal_1 = {
 	}
 
 	nep_our_himalayas = {
-		icon = mission_order_in_the_domain
+		icon = mission_hills_of_gondwana
 		required_missions = { nep_nepalis_in_india } #None
 		position = 5
 		provinces_to_highlight = {
@@ -148,7 +148,7 @@ nepal_1 = {
 	}
 
 	nep_impenetrable = {
-		icon = mission_order_in_the_domain
+		icon = the_alpine_wall
 		required_missions = { nep_our_himalayas nep_mountains_north } #None
 		position = 6
 		provinces_to_highlight = {
@@ -202,14 +202,14 @@ nepal_2 = {
 		primary_culture = nepali
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
-		NOT = { tag = BNG }
-		NOT = { tag = JNP }
-		NOT = { tag = DLH }
+		NOT = {  is_or_was_tag = { tag = BNG } }
+		NOT = {  is_or_was_tag = { tag = JNP } }
+		NOT = {  is_or_was_tag = { tag = DLH } }
 	}
 	has_country_shield = yes
 
 	nep_the_borderlands = {
-		icon = mission_order_in_the_domain
+		icon = mission_bijapur_karnatak
 		required_missions = { nep_conquest_of_nepal } #None
 		position = 3
 		provinces_to_highlight = {
@@ -241,7 +241,7 @@ nepal_2 = {
 	}
 
 	nep_brothers_in_bhutan = {
-		icon = mission_order_in_the_domain
+		icon = mission_rein_in_the_velamas
 		required_missions = { nep_the_borderlands } #None
 		position = 4
 		provinces_to_highlight = {
@@ -285,7 +285,7 @@ nepal_2 = {
 	}
 
 	nep_mountains_north = {
-		icon = mission_order_in_the_domain
+		icon = mission_crush_delhi
 		required_missions = { nep_brothers_in_bhutan } #None
 		position = 5
 		provinces_to_highlight = {
@@ -323,79 +323,10 @@ nepal_2 = {
 		}
 	}
 
-
-
-}
-nepal_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Dharma"
-	}
-	potential = {
-		primary_culture = nepali
-		has_dlc = "Dharma"
-		NOT = { map_setup = map_setup_random }
-		NOT = { tag = BNG }
-		NOT = { tag = JNP }
-		NOT = { tag = DLH }
-	}
-	has_country_shield = yes
-
-	nep_monopoly_on_wool = {
-		icon = mission_order_in_the_domain
-		required_missions = {  } #None
-		provinces_to_highlight = {
-		}
-		trigger = {
-			num_of_owned_provinces_with = {
-				trade_goods = wool
-				development = 10
-				has_production_building_trigger = yes
-				value = 10
-			}
-		}
-		effect = {
-			country_event = {
-				id = flavor_nepal.1
-			}
-		}
-		ai_weight = {
-			factor = 500	#Vassal integration
-		}
-	}
-
-	nep_gold_mountain = {
-		icon = mission_order_in_the_domain
-		required_missions = { nep_monopoly_on_wool } #None
-		provinces_to_highlight = {
-			province_id = 2128
-		}
-		trigger = {
-			2128 = {
-				has_production_building_trigger = yes
-				base_production = 10
-				num_free_building_slots = 0
-			}
-		}
-		effect = {
-			2128 = {
-				add_province_modifier = {
-					name = nep_gold_goods
-					duration = -1 
-				}
-			}
-		}
-		ai_weight = {
-			factor = 500	#Vassal integration
-		}
-	}
-
 	nep_arctic_adaptation = {
-		icon = mission_order_in_the_domain
-		required_missions = {  } #None
-		position = 4
+		icon = mission_expand_great_wall
+		required_missions = { nep_mountains_north } #None
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				area = ngari_area
@@ -422,14 +353,85 @@ nepal_3 = {
 			}
 		}
 		effect = {
-			every_owned_province = {
-				limit = { climate = arctic }
+			hidden_effect = {
+				every_owned_province = {
+				limit = { has_climate  = arctic }
 				add_province_modifier = {
 					name = nep_arctic_adaptation
 					duration = -1
 				}
+			    }
 			}
 			custom_tooltip = nep_arctic_adaptation_tooltip
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+
+
+}
+nepal_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		primary_culture = nepali
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+		NOT = { tag = BNG }
+		NOT = { tag = JNP }
+		NOT = { tag = DLH }
+	}
+	has_country_shield = yes
+
+	nep_monopoly_on_wool = {
+		icon = mission_general_land_assessment
+		required_missions = {  } #None
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				trade_goods = wool
+				development = 10
+				has_production_building_trigger = yes
+				value = 10
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_nepal.1
+			}
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_gold_mountain = {
+		icon = mission_zambezi_gold
+		required_missions = { nep_monopoly_on_wool } #None
+		provinces_to_highlight = {
+			province_id = 2128
+		}
+		trigger = {
+			2128 = {
+				has_production_building_trigger = yes
+				base_production = 10
+				num_free_building_slots = 0
+			}
+		}
+		effect = {
+			2128 = {
+				add_province_modifier = {
+					name = nep_gold_goods
+					duration = -1 
+				}
+			}
 		}
 		ai_weight = {
 			factor = 500	#Vassal integration
@@ -448,14 +450,14 @@ nepal_4 = {
 		primary_culture = nepali
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
-		NOT = { tag = BNG }
-		NOT = { tag = JNP }
-		NOT = { tag = DLH }
+		NOT = {  is_or_was_tag = { tag = BNG } }
+		NOT = {  is_or_was_tag = { tag = JNP } }
+		NOT = {  is_or_was_tag = { tag = DLH } }
 	}
 	has_country_shield = yes
 
 	nep_incense_production = {
-		icon = mission_order_in_the_domain
+		icon = ned_cloth_trading
 		position = 3
 		required_missions = { nep_katmandu nep_gold_mountain } #None
 		provinces_to_highlight = {
@@ -482,7 +484,86 @@ nepal_4 = {
 		}
 	}
 
+	nep_fl_buildings = {
+		icon = mission_ottoman_early_army
+		required_missions = {  } #None
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_forcelimit_building_trigger = yes }
+		}
+		trigger = {
+			all_owned_province = {
+				has_forcelimit_building_trigger = yes
+			}
+		}
+		effect = {
+			add_army_tradition = 20
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_good_army = {
+		icon = mission_new_army
+		required_missions = { nep_barracks nep_fl_buildings } #None
+		position = 5
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size = 50
+			manpower_percentage = 0.95
+			OR = {
+				army_tradition = 75
+				army_professionalism = 0.75
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_military_discipline2
+				duration = -1
+			}
+			remove_country_modifier = nep_military_discipline1
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
+
+	nep_based_army = {
+		icon = mission_modern_knight_army
+		required_missions = { nep_good_army } 
+		position = 6
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_tradition = 75
+			army_professionalism = 1
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.3
+				extra_shortcut = yes
+			}
+			OR = {
+				NOT = {
+					num_of_cities = 30
+				}
+				is_subject = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nep_military_discipline3
+				duration = -1
+			}
+			remove_country_modifier = nep_military_discipline2
+		}
+		ai_weight = {
+			factor = 500	#Vassal integration
+		}
+	}
 }
+
 nepal_5 = {
 	slot = 5
 	generic = no
@@ -494,14 +575,14 @@ nepal_5 = {
 		primary_culture = nepali
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
-		NOT = { tag = BNG }
-		NOT = { tag = JNP }
-		NOT = { tag = DLH }
+		NOT = {  is_or_was_tag = { tag = BNG } }
+		NOT = {  is_or_was_tag = { tag = JNP } }
+		NOT = {  is_or_was_tag = { tag = DLH } }
 	}
 	has_country_shield = yes
 
 	nep_develop_nepal = {
-		icon = mission_order_in_the_domain
+		icon = mission_che_principal_peole
 		required_missions = {  } #None
 		provinces_to_highlight = {
 	
@@ -527,7 +608,7 @@ nepal_5 = {
 		}
 	}
 	nep_katmandu = {
-		icon = mission_order_in_the_domain
+		icon = mission_develop_cordoba
 		required_missions = { nep_develop_nepal } #None
 		provinces_to_highlight = {
 			province_id = 557
@@ -559,7 +640,7 @@ nepal_5 = {
 		}
 	}
 	nep_lhasa = {
-		icon = mission_order_in_the_domain
+		icon = mission_develop_the_capital
 		required_missions = { nep_katmandu } #None
 		provinces_to_highlight = {
 			province_id = 677
@@ -594,15 +675,15 @@ nepal_5 = {
 		}
 	}
 
-	nep_barracks= {
-		icon = mission_order_in_the_domain
-		required_missions = { nep_katmandu } #None
+	nep_barracks = {
+		icon = ven_mercenary_army_mission_2
+		required_missions = {  } #None
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = { has_manpower_building_trigger = yes }
 		}
 		trigger = {
-			every_owned_province = {
+			all_owned_province = {
 				has_manpower_building_trigger = yes
 			}
 		}

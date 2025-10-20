@@ -2108,8 +2108,8 @@ MUG_ideas = {
 		global_tax_modifier = 0.15
 	}
 	control_of_the_ulema = {
-		rajupt_loyalty_modifier = 0.1
-		rajupt_influence_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
+		rajput_influence_modifier = 0.1
 		maratha_loyalty_modifier = 0.1
 		maratha_influence_modifier = 0.1
 		maratha_privilege_slots = 1
@@ -18214,10 +18214,10 @@ ARB_ideas = {
 		trade_steering = 0.2	
 	}
 	ARB_conversion = {
-		global_missionary_strength = 0.03
+		development_cost = 0.1
 	}
 	ARB_jihad = {
-		warscore_cost_vs_other_religion = -0.1
+		land_morale = 0.1
 	}
 	ARB_new_caliphate_rising = {
 		missionaries = 2

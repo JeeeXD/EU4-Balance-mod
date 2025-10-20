@@ -140,37 +140,6 @@ the_importation_act = {
 	}
 }
 
-colonial_expansions = {
-
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = expansion_ideas
-		has_idea_group = exploration_ideas
-	}
-	
-	allow = {
-		full_idea_group = expansion_ideas
-		full_idea_group = exploration_ideas
-	}		
-
-	global_colonial_growth = 15
-	native_uprising_chance = -0.5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
 
 beneficial_neglect = {
 	monarch_power = DIP
@@ -290,50 +259,6 @@ restrictions_for_colonies = {
 	}
 }
 
-naval_infrastructure_act = {
-	monarch_power = DIP
-
-
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = expansion_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = expansion_ideas
-	}
-
-
-	naval_forcelimit_modifier = 0.33
-
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size_percentage = 0.9 }
-		}			
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2.5
-		}				
-	}
-}
 
 trade_connection_policy = {
 	monarch_power = DIP
@@ -460,86 +385,6 @@ production_quota_act = {
 	}
 }
 
-encouragement_of_merchant_navy = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = trade_ideas
-		has_idea_group = expansion_ideas
-	}
-	
-	allow = {
-		full_idea_group = trade_ideas
-		full_idea_group = expansion_ideas
-	}
-	
-	trade_efficiency = 0.1
-	trade_steering = 0.2
- 
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}		
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
-commercial_embassies = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = expansion_ideas
-	}
-	
-	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = expansion_ideas
-	}
-	
-	global_trade_power = 0.1
-	diplomatic_reputation = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8		
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
 
 mandatory_service = {
 	monarch_power = DIP
@@ -1398,27 +1243,6 @@ solidarity_policy = { #change name
 	}
 }
 
-appeal_to_old_powers_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = diplomatic_ideas
-	}
-	
-	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = diplomatic_ideas
-	}
-	
-	discipline = 0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-	}
-}
 
 indirect_approach_policy = {
 	monarch_power = DIP
@@ -1697,7 +1521,7 @@ diplomatic_arms_act = {
 		full_idea_group = diplomatic_ideas 
 	}
 	
-	mercenary_discipline = 0.05
+	merc_leader_army_tradition = 0.5
 	
 	effect = {}
 	removed_effect = {}

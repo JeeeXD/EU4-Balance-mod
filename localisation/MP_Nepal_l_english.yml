@@ -8,6 +8,23 @@ nep_convert_to_cloth_tooltip: "Converts 5 random §YWool§! to §YCloth§!."
 nep_keep_wool_tooltip: "All of our provinces that produce §YWool§! will gain till the end of the game:\n§G+0.5§! Goods Produced"
 nep_arctic_adaptation_tooltip: "Every owned province with §YArctic§! Climate will gain §G-50%§! Development Cost till the end of the game."
 ############ MODIFIERS ##############
+estate_jains_nepal_himalayas_mountains: "Himalayan Adaptation"
+estate_jains_nepal_himalayas_hills: "Himalayan Adaptation"
+estate_jains_nepal_himalayas_highlands: "Himalayan Adaptation"
+estate_jains_nepal_himalayas_glacier: "Himalayan Adaptation"
+
+nep_unification_of_nepal: "Unified Realm of Nepal"
+nep_man_of_mountians: "Man of the Mountains"
+nep_winning: "Spirit of Victory"
+nep_new_capital: "Rebirth of the Capital"
+city_of_the_people: "City of the People"
+nep_monopoly_on_wool_modifier: "Wool Trade Monopoly"
+nep_produce_incense: "Fragrance of the Hills"
+nep_gold_goods: "Golden Prosperity"
+nep_arctic_adaptation: "Adapted to the Cold Peaks"
+nep_military_discipline1: "Trained Warriors"
+nep_military_discipline2: "Hardened Soldiers"
+nep_military_discipline3: "Masters of Discipline"
 
 ############### MISSIONS ###########
 nep_ready_to_unify_title: "Time has Come"
@@ -26,6 +43,37 @@ nep_brothers_in_bhutan_title: "Brothers in Bhutan"
 nep_brothers_in_bhutan_desc: "The people of Bhutan share our mountains, our struggles, and our destiny. By strengthening our bonds—whether through alliance or unification—we shall ensure that the Himalayas are not divided, but stand together as one family of mountain kingdoms."
 nep_mountains_north_title: "The Northern Mountains"
 nep_mountains_north_desc: "Beyond our valleys lie the high plateaus and passes of Tibet. To secure the roof of the world, we must extend our reach into the northern mountains, guarding every path and peak under the Nepali banner."
+nep_monopoly_on_wool_title: "Monopoly on Wool"
+nep_monopoly_on_wool_desc: "For generations, the highlands of Nepal have provided some of the finest wool in the Himalayas. Our traders now control the flow of this precious resource, ensuring that every thread passes through Nepali hands. Yet some whisper that our future may lie not in raw goods, but in the looms and dyes of a new age of craftsmanship."
+nep_gold_mountain_title: "The Gold Mountain"
+nep_gold_mountain_desc: "Legends speak of a golden mountain hidden among the Himalayas — a symbol of divine favor and untold riches. While perhaps only a tale, our miners and merchants have uncovered veins of precious metals that could rival the myths themselves. To master these riches is to ensure that Nepal shines brighter than any kingdom beyond the peaks."
+nep_incense_production_title: "Incense of the Himalayas"
+nep_incense_production_desc: "From the temples of Kathmandu to the shrines of distant lands, the scent of our incense carries the spirit of Nepal. By refining our craft and expanding production in the mountain valleys, we can turn this sacred tradition into a flourishing trade — one that blesses both the gods and the treasury."
+nep_fl_buildings_title: "Expand the Army"
+nep_fl_buildings_desc: "To defend our mountain realm and project strength beyond its borders, we must expand our capacity for war. New armories, barracks, and drill yards will ensure that every Nepali soldier is well-equipped and ready to serve under the banner of the king."
+
+nep_good_army_title: "A Worthy Army"
+nep_good_army_desc: "Our soldiers are forged by the harsh terrain and the biting winds of the Himalayas. Through training, discipline, and courage, the Nepali army shall become a force to rival the greatest powers of the plains."
+
+nep_based_army_title: "Highland Army"
+nep_based_army_desc: "The mountains are both shield and weapon. Our warriors know every pass and valley, striking swiftly where others stumble. By organizing an army suited to our land, we can ensure that Nepal remains unconquered."
+
+nep_develop_nepal_title: "Develop Nepal"
+nep_develop_nepal_desc: "The strength of the realm lies in its heartlands. By developing the fertile valleys and mountain towns, we can transform Nepal from a rugged kingdom into a center of trade and culture."
+
+nep_katmandu_title: "Kathmandu"
+nep_katmandu_desc: "Kathmandu stands as the soul of Nepal — a city of kings, merchants, and monasteries. By investing in its growth and splendor, we secure not only our capital’s prosperity, but the prestige of our entire realm."
+
+nep_lhasa_title: "To Lhasa"
+nep_lhasa_desc: "Beyond the passes lies the sacred city of Lhasa — the heart of Tibetan faith and power. Control of this route would bring both spiritual prestige and valuable trade, binding the highlands under Nepali influence."
+
+nep_barracks_title: "Strongholds"
+nep_barracks_desc: "Our realm’s strength lies in its defenders. By raising new barracks and strongholds across Nepal, we will ensure that every soldier stands ready and every mountain pass remains secure against invasion."
+
+nep_arctic_adaptation_title: "Arctic Adaptation"
+nep_arctic_adaptation_desc: "The cold of the high Himalayas rivals even the northernmost reaches of the world. Our soldiers and settlers have learned to endure the biting winds and frozen peaks, turning the harshness of the land into a weapon against our enemies. No blizzard can break the spirit of Nepal."
+
+
 
 ############ EVENTS ###############
 flavor_nepal.1.T: "Monopoly on Wool"

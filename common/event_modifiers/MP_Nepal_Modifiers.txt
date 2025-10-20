@@ -41,25 +41,16 @@ nep_produce_incense = {
 nep_gold_goods = {
 	trade_goods_size = 1
 }
+nep_arctic_adaptation = {
+	local_development_cost = -0.5
+}
 nep_military_discipline1 = {
 	morale_damage_received = -0.05
 }
 nep_military_discipline2 = {
-	morale_damage_received = -0.05
-	recover_army_morale_speed = 0.10
+	morale_damage_received = -0.1
 }
 nep_military_discipline3 = {
 	morale_damage_received = -0.15
-	recover_army_morale_speed = 0.10
-}
-nep_military_discipline4 = {
-	morale_damage_received = -0.15
-	recover_army_morale_speed = 0.10
-	backrow_artillery_damage = 0.10
-}
-nep_military_discipline5 = {
-	morale_damage_received = -0.15
-	recover_army_morale_speed = 0.10
-	backrow_artillery_damage = 0.10
 	discipline = 0.05
 }
