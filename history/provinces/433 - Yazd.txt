@@ -1,7 +1,7 @@
 #433 - Yadz
 
-owner = FRS
-controller = FRS
+owner = YZD
+controller = YZD
 culture = persian
 religion = zoroastrian
 capital = "Yazd"

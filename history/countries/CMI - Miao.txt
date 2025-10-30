@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = miao
+religion = animism
+technology_group = chinese
+capital = 2174	# Umung
+
+1444.1.1 = {
+	monarch = {
+		name = "Miao"
+		dynasty = "Miao"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}

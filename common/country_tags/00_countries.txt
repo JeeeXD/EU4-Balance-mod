@@ -1104,8 +1104,14 @@ ISR = "countries/Israel.txt"
 #TEM = countries/KnightsTemplar.txt
 #TRL = countries/Trapalanda.txt
 
+#Mod Tags
+JIG = "countries/Jiangsu.txt"
+AHU = "countries/Anhui.txt"
+LIU = "countries/Liaoning.txt"
+
 #Mod Formables
 FAT = "countries/Fatimids.txt"
 TAM = "countries/Tamazgha.txt"
 NGR = "countries/North German Confederation.txt"
 SGR = "countries/South German Confederation.txt"
+MDG = "countries/Madagascar.txt"

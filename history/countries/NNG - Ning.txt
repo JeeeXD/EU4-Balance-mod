@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = gan
+capital = 683	#Nanchang
+
+1444.1.1 = {
+	monarch = {
+		name = "Ma"
+		dynasty = "Cao"
+		adm = 1
+		dip = 0
+		mil = 6
+	}
+}

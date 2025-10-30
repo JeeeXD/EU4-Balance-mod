@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = iqta
+government_rank = 1
+primary_culture = persian
+religion = zoroastrian
+technology_group = muslim
+capital = 433 # Kerman
+
+1444.1.1 = {
+	monarch = {
+		name = "Turmush"
+		dynasty = "Qoli"
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}

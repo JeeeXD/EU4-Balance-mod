@@ -332,6 +332,20 @@ roleplay_event.4.D: "Because of good roleplay, have this as a gift from the EU4 
 roleplay_event.4.OPT1: "Enjoy"
 colonist_reward: "Roleplay Reward"
 
+# EXTRA TAGS #
+
+AHU: "Anhui"
+AHU_ADJ: "Anhui"
+AHU_ADJ2: "Anhui"
+
+JIG: "Jiangsu"
+JIG_ADJ: "Jiangsu"
+JIG_ADJ2: "Jiangsu"
+
+LIU: "Liaoning"
+LIU_ADJ: "Liaoning"
+LIU_ADJ2: "Liaoning"
+
 ############# FATIMIDS ######################
 
 FAT: "Fatimids"

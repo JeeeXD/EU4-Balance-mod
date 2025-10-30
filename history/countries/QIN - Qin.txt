@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = xibei
+
+
+1444.1.1 = {
+	monarch = {
+		name = "Yuljian"
+		culture = xibei
+		dynasty = "Li"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}

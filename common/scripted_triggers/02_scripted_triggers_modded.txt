@@ -1,0 +1,8 @@
+is_madagascar_province = {
+	OR = {
+    area = madagascar_highlands_area
+	area = southern_madagascar
+	area = sakalava_area
+	area = betsimasaraka_area
+	}	
+}

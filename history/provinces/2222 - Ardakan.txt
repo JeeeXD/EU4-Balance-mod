@@ -1,7 +1,7 @@
 #2222 - Ardakan
 
-owner = KHO
-controller = KHO
+owner = YZD
+controller = YZD
 culture = persian
 religion = sunni
 capital = "Ardakan"

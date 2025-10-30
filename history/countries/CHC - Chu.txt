@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = xiang
+capital = 682	#Wuchang
+
+1444.1.1 = {
+	monarch = {
+		name = "Ayung"
+		dynasty = "Chu"
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}

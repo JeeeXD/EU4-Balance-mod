@@ -1,7 +1,7 @@
 #2224 - Ferah
 
-owner = KHO
-controller = KHO
+owner = SIS
+controller = SIS
 culture = khorasani
 religion = sunni
 capital = "Ferah"

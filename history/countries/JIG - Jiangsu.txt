@@ -1,0 +1,15 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = confucianism
+primary_culture = jianghuai
+
+1444.1.1 = {
+	monarch = {
+		name = "Bai"
+		dynasty = "Liuao"
+		adm = 0
+		dip = 5
+		mil = 0
+	}
+}
