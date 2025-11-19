@@ -1,13 +1,10 @@
 # No previous file for Napochi
 
-owner = ABI
-controller = ABI
-add_core = ABI
-is_city = yes
+
 culture = creek
 religion = totemism
 capital = "Napochi"
-trade_goods = tobacco
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

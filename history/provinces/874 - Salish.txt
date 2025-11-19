@@ -1,13 +1,10 @@
 #874 - Salish
 
-owner = SAL
-controller = SAL
-add_core = SAL
-is_city = yes
+
 culture = salish
 religion = totemism
 capital = "Salish"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 2 
 base_production = 2

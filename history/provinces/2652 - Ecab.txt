@@ -1,13 +1,11 @@
 # No previous file for Ecab
 
 culture = yucatec
-owner = COC
-controller = COC
-add_core = COC
-is_city = yes
+
+
 religion = mesoamerican_religion
 capital = "Ecab"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 3 
 base_production = 3

@@ -4,8 +4,12 @@ madagascar_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		tag = MDG
-
+		OR = {
+			tag = MDG
+			tag = MDD
+			tag = MDC
+			tag = MDP
+		}
 	}
 
 	mdg_kilwa = {
@@ -14,9 +18,26 @@ madagascar_1 = {
 		required_missions = {
 			mdg_unity_of_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			owned_by = ZAN
+		}
+		trigger = { 
+			NOT = { exists = ZAN}
+		}
+		effect = { 
+			1194 = {
+				center_of_trade = 1
+			}
+			4029 = {
+				center_of_trade = 1
+			}
+			4021 = {
+				center_of_trade = 1
+			}
+			1792 = {
+				center_of_trade = 1
+			}
+		}
 	}
 
 	mdg_kongo = {
@@ -25,9 +46,22 @@ madagascar_1 = {
 		required_missions = {
 			mdg_kilwa mdg_south_africa
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			region = kongo_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		trigger = { 
+			kongo_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_kongo_secured
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_african_power = {
@@ -36,18 +70,62 @@ madagascar_1 = {
 		required_missions = {
 			mdg_kongo
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+			superregion = southern_africa_superregion
+		}
+		trigger = { 
+			southern_africa_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_african_bigboi
+				duration = -1
+			}
+		}
 	}
 
 	mdg_workshops = {
 		icon = public_works
 		position = 8
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = workshop }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = workshop
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_prod1
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_prod1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_workshops2 = {
@@ -56,27 +134,123 @@ madagascar_1 = {
 		required_missions = {
 			mdg_workshops
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = counting_house }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = counting_house
+				value = 15
+			}
+		 }
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_prod2
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_prod2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_prod1
+				}
+			}
+		}
 	}
 
 	mdg_fl = {
 		icon = confront_the_lombards
 		position = 10
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = regimental_camp }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = regimental_camp
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_fl_extra1
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_fl_extra1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_courthouses = {
 		icon = a_strong_government
 		position = 11
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = courthouse }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = courthouse
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_courthouse_modifier1
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_courthouse_modifier1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_townhalls = {
@@ -85,9 +259,43 @@ madagascar_1 = {
 		required_missions = {
 			mdg_courthouses
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = town_hall }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = town_hall
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_courthouse_modifier2
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_courthouse_modifier2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_courthouse_modifier1
+				}
+			}
+		}
 	}
 
 	mdg_trade_navy = {
@@ -95,8 +303,15 @@ madagascar_1 = {
 		position = 14
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_light_ship = 20
+			mission_completed = mdg_penguins_of_madagascar
+		}
+		effect = { 
+			country_event = {
+				id = flavor_mdg.3
+			}
+		}
 	}
 
 	mdg_pirate_india = {
@@ -105,9 +320,35 @@ madagascar_1 = {
 		required_missions = {
 			mdg_trade_navy mdg_big_value_node
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+		
+		}
+		trigger = { 
+			calc_true_if = {
+				1340 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				1337 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				1343 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = { 
+			add_mercantilism = 10
+		}
 	}
 
 	mdg_pirate_malaya = {
@@ -117,8 +358,23 @@ madagascar_1 = {
 			mdg_pirate_india
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1361 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.25
+					}
+				}
+				1357 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+		}
+		effect = { 
+			set_government_rank = 3
+		}
 	}
 }
 madagascar_2 = {
@@ -127,17 +383,51 @@ madagascar_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		tag = MDG
-
+		OR = {
+			tag = MDG
+			tag = MDD
+			tag = MDC
+			tag = MDP
+		}
 	}
 
 	mdg_north_madagascar = {
 		icon = mission_rb_take_gibraltar
 		position = 1
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 4021
+				province_id = 4023
+				province_id = 4022
+				province_id = 4024
+				province_id = 1194
+			} 
+			NOT = {
+				nationalism = 1
+			}
+		}
+		trigger = { 
+			4021 = {
+				NOT = { nationalism = 1 }
+			}
+			4023 = {
+				NOT = { nationalism = 1 }
+			}
+			4022 = {
+				NOT = { nationalism = 1 }
+			}
+			4024 = {
+				NOT = { nationalism = 1 }
+			}
+			1194 = {
+				NOT = { nationalism = 1 }
+			}
+		}
+		effect = { 
+			add_prestige = 25
+			add_dip_power = 50
+		}
 	}
 
 	mdg_south_africa = {
@@ -146,18 +436,72 @@ madagascar_2 = {
 		required_missions = {
 			mdg_unity_of_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			region = south_africa_region
+		}
+		trigger = { 
+			owns_all_provinces = {
+				region = south_africa_region
+			}
+		}
+		effect = { 
+			117 = {
+				add_province_modifier = {
+					name = mdg_cape_town
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+				    custom_trigger_tooltip = {
+					    is_madagascar_province = yes
+					    tooltip = is_madagascar_province_tooltip
+				    }
+			    }
+				add_base_production = 1
+			}
+		}
 	}
 
 	mdg_dev_north_madagascar = {
 		icon = mission_pol_develop_countryside
 		position = 7
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 4021
+				province_id = 4023
+				province_id = 4022
+				province_id = 4024
+				province_id = 1194
+			} 
+			NOT = {
+				num_of_times_improved = 2
+			}
+		}
+		trigger = { 
+			4021 = {
+				num_of_times_improved = 2
+			}
+			4023 = {
+				num_of_times_improved = 2
+			}
+			4022 = {
+				num_of_times_improved = 2
+			}
+			4024 = {
+				num_of_times_improved = 2
+			}
+			1194 = {
+				num_of_times_improved = 2
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_build
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_manus = {
@@ -166,9 +510,40 @@ madagascar_2 = {
 		required_missions = {
 			mdg_dev_madagascar mdg_workshops
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			is_madagascar_province = yes
+			has_manufactory_trigger = no
+		}
+		trigger = { 
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_manufactory_trigger = yes
+				amount = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_manu_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_manu_modifier
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_fl2 = {
@@ -177,9 +552,43 @@ madagascar_2 = {
 		required_missions = {
 			mdg_fl
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = conscription_center }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = conscription_center
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_fl_extra2
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_fl_extra2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_fl_extra1
+				}
+			}
+		}
 	}
 
 	mdg_households = {
@@ -188,9 +597,40 @@ madagascar_2 = {
 		required_missions = {
 			mdg_fl2
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = soldier_households }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = soldier_households
+				value = 15
+			}
+		 }
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_houshold_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_houshold_modifier
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_fighting_navy = {
@@ -200,8 +640,16 @@ madagascar_2 = {
 			mdg_trade_navy
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_heavy_ship = 5
+			num_of_galley = 20
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_naval_buildup
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_pirate_china = {
@@ -211,8 +659,32 @@ madagascar_2 = {
 			mdg_pirate_malaya
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			calc_true_if = {
+				667 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				684 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				1816 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = { 
+			add_mil_power = 200
+		}
 	}
 }
 madagascar_3 = {
@@ -221,17 +693,51 @@ madagascar_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		tag = MDG
-
+		OR = {
+			tag = MDG
+			tag = MDD
+			tag = MDC
+			tag = MDP
+		}
 	}
 
 	mdg_central_madagascar = {
 		icon = mission_mal_subjugate_zaf
 		position = 1
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1792
+				province_id = 4031
+				province_id = 4025
+				province_id = 4027
+				province_id = 1193
+			} 
+			NOT = {
+				nationalism = 1
+			}
+		}
+		trigger = { 
+			1792 = {
+				NOT = { nationalism = 1 }
+			}
+			4031 = {
+				NOT = { nationalism = 1 }
+			}
+			4025 = {
+				NOT = { nationalism = 1 }
+			}
+			4027 = {
+				NOT = { nationalism = 1 }
+			}
+			1193 = {
+				NOT = { nationalism = 1 }
+			}
+		}
+		effect = { 
+			add_prestige = 25
+			add_adm_power = 50
+		}
 	}
 
 	mdg_unity_of_madagascar = {
@@ -241,8 +747,23 @@ madagascar_3 = {
 			mdg_central_madagascar mdg_north_madagascar mdg_south_madagascar
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			stability = 3
+			army_size_percentage = 0.9
+			navy_size_percentage = 0.9
+		}
+		effect = { 
+			set_government_rank = 2
+			add_government_reform = autocracy_reform
+			define_ruler = {
+				name = "Julien XIII"
+				adm = 6
+				dip = 6
+				mil = 6
+				age = 24
+				claim = 100
+			}
+		}
 	}
 
 	mdg_ceylon = {
@@ -251,9 +772,29 @@ madagascar_3 = {
 		required_missions = {
 			mdg_unity_of_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = south_lanka_area
+				area = lanka_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		trigger = { 
+			south_lanka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lanka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_two_islands
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_islands_galore = {
@@ -262,18 +803,62 @@ madagascar_3 = {
 		required_missions = {
 			mdg_islands_ruler mdg_ceylon
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			province_is_on_an_island = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		trigger = { 
+			owns_all_provinces = {
+				province_is_on_an_island = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = unifier_of_islands
+				duration = -1
+			}
+		}
 	}
 
 	mdg_dev_central_madagascar = {
 		icon = develop_provence
 		position = 7
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1792
+				province_id = 4031
+				province_id = 4025
+				province_id = 4027
+				province_id = 1193
+			} 
+			NOT = {
+				num_of_times_improved = 2
+			}
+		}
+		trigger = { 
+			1792 = {
+				num_of_times_improved = 2
+			}
+			4031 = {
+				num_of_times_improved = 2
+			}
+			4025 = {
+				num_of_times_improved = 2
+			}
+			4027 = {
+				num_of_times_improved = 2
+			}
+			1193 = {
+				num_of_times_improved = 2
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_dev
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_dev_madagascar = {
@@ -282,9 +867,25 @@ madagascar_3 = {
 		required_missions = {
 			mdg_dev_north_madagascar mdg_dev_central_madagascar mdg_dev_south_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { base_production = 5 } 
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				base_production = 5
+				value = 15
+			}
+		}
+		effect = { 
+			country_event = {
+				id = flavor_mdg.2
+			}
+		}
 	}
 
 	mdg_marketplaces = {
@@ -293,9 +894,40 @@ madagascar_3 = {
 		required_missions = {
 			mdg_dev_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = marketplace }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = marketplace
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_prv_trade
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_prv_trade
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_marketplaces2 = {
@@ -304,9 +936,43 @@ madagascar_3 = {
 		required_missions = {
 			mdg_marketplaces
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = trade_depot }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = trade_depot
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_prv_trade2
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_prv_trade2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_prv_trade
+				}
+			}
+		}
 	}
 
 	mdg_unis = {
@@ -315,9 +981,40 @@ madagascar_3 = {
 		required_missions = {
 			mdg_households mdg_marketplaces2 mdg_shipyards2 mdg_impressements mdg_townhalls
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = university }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = university
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_unis_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_unis_modifier
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_own_trade = {
@@ -325,8 +1022,14 @@ madagascar_3 = {
 		position = 14
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			capital_scope = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = { 
+			add_dip_power = 200
+		}
 	}
 
 	mdg_big_value_node = {
@@ -336,8 +1039,14 @@ madagascar_3 = {
 			mdg_own_trade
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			capital_scope = {
+				trade_node_value = 50
+			}
+		}
+		effect = { 
+			add_splendor = 800
+		}
 	}
 
 	mdg_pirate_arabs = {
@@ -347,8 +1056,38 @@ madagascar_3 = {
 			mdg_pirate_india
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			calc_true_if = {
+				4346 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				1334 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				1335 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				358 = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.2
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = { 
+			add_dip_tech = 1
+		}
 	}
 }
 madagascar_4 = {
@@ -357,17 +1096,51 @@ madagascar_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		tag = MDG
-
+		OR = {
+			tag = MDG
+			tag = MDD
+			tag = MDC
+			tag = MDP
+		}
 	}
 
 	mdg_south_madagascar = {
 		icon = mission_sio_camp_circles
 		position = 1
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4032
+				province_id = 4030
+				province_id = 4029
+				province_id = 4028
+				province_id = 4026
+			} 
+			NOT = {
+				nationalism = 1
+			}
+		}
+		trigger = { 
+			4032 = {
+				NOT = { nationalism = 1 }
+			}
+			4030 = {
+				NOT = { nationalism = 1 }
+			}
+			4029 = {
+				NOT = { nationalism = 1 }
+			}
+			4028 = {
+				NOT = { nationalism = 1 }
+			}
+			4026 = {
+				NOT = { nationalism = 1 }
+			}
+		}
+		effect = { 
+			add_prestige = 25
+			add_mil_power = 50
+		}
 	}
 
 	mdg_indian_islands = {
@@ -376,9 +1149,45 @@ madagascar_4 = {
 		required_missions = {
 			mdg_unity_of_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 1100
+				province_id = 4020
+				province_id = 1102
+				province_id = 1103
+				province_id = 1101
+				province_id = 1248
+				province_id = 1999
+				province_id = 1998
+			}
+		}
+		trigger = { 
+			owns = 1100
+			owns = 4020
+			owns = 1102
+			owns = 1103
+			owns = 1101
+			owns = 1248
+			owns = 1999
+			owns = 1998
+		}
+		effect = { 
+			create_unit_forcelimit_percentage = {
+				type = light_ship
+				special_unit_category = voc_indiamen
+				force_limit_percentage = 0.5
+			}
+			create_unit_forcelimit_percentage = {
+				type = heavy_ship
+				special_unit_category = man_of_war
+				force_limit_percentage = 0.25
+			}
+			create_unit_forcelimit_percentage = {
+				type = galley
+				special_unit_category = galleass
+				force_limit_percentage = 0.25
+			}
+		}
 	}
 
 	mdg_islands_ruler = {
@@ -387,18 +1196,63 @@ madagascar_4 = {
 		required_missions = {
 			mdg_malaya mdg_ceylon
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			province_is_on_an_island = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 50
+				province_is_on_an_island = yes
+			}
+		}
+		effect = { 
+			every_province = {
+				limit = { province_is_on_an_island = yes }
+				add_claim = ROOT
+			}
+		}
 	}
 
 	mdg_dev_south_madagascar = {
 		icon = mission_native_dev_capital
 		position = 7
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4032
+				province_id = 4030
+				province_id = 4029
+				province_id = 4028
+				province_id = 4026
+			} 
+			NOT = {
+				num_of_times_improved = 2
+			}
+		}
+		trigger = { 
+			4032 = {
+				num_of_times_improved = 2
+			}
+			4030 = {
+				num_of_times_improved = 2
+			}
+			4029 = {
+				num_of_times_improved = 2
+			}
+			4028 = {
+				num_of_times_improved = 2
+			}
+			4026 = {
+				num_of_times_improved = 2
+			}
+		}
+		effect = { 
+			1194 = { change_trade_goods = slaves }
+			4032 = { change_trade_goods = slaves }
+			1792 = { change_trade_goods = slaves }
+			4030 = { change_trade_goods = slaves }
+		}
 	}
 
 	mdg_expand_infra = {
@@ -407,9 +1261,40 @@ madagascar_4 = {
 		required_missions = {
 			mdg_dev_madagascar mdg_churches
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { num_of_times_expanded_infrastructure = 1 }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				num_of_times_expanded_infrastructure = 1
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_expand_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_expand_modifier
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_dockyards2 = {
@@ -418,9 +1303,43 @@ madagascar_4 = {
 		required_missions = {
 			mdg_dockyards
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = drydock }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = drydock
+				value = 11
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_dockyards_modifier2
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_dockyards_modifier2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_dockyards_modifier1
+				}
+			}
+		}
 	}
 
 	mdg_shipyards2 = {
@@ -429,9 +1348,40 @@ madagascar_4 = {
 		required_missions = {
 			mdg_shipyards
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = grand_shipyard }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = grand_shipyard
+				value = 11
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_shipyards_modifier2
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_shipyards_modifier2
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_forts = {
@@ -440,9 +1390,45 @@ madagascar_4 = {
 		required_missions = {
 			mdg_defense_army
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			has_influencing_fort = no
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				value = 5
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_fort_modifiers
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_fort_modifiers
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 }
 madagascar_5 = {
@@ -451,8 +1437,12 @@ madagascar_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		tag = MDG
-
+		OR = {
+			tag = MDG
+			tag = MDD
+			tag = MDC
+			tag = MDP
+		}
 	}
 
 	mdg_australia = {
@@ -461,9 +1451,22 @@ madagascar_5 = {
 		required_missions = {
 			mdg_unity_of_madagascar
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			region = australia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = australia_region
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mdg_australia_company
+				duration = -1
+			}
+		}
 	}
 
 	mdg_malaya = {
@@ -472,9 +1475,31 @@ madagascar_5 = {
 		required_missions = {
 			mdg_indian_islands mdg_australia
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+					region = indonesia_region
+					region = malaya_region
+					region = moluccas_region
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				OR = {
+					region = indonesia_region
+					region = malaya_region
+					region = moluccas_region
+				}
+			}
+		}
+		effect = { 
+			add_power_projection = {
+				type = zim_african_great_power
+				amount = 25
+			}
+		}
 	}
 
 	mdg_churches = {
@@ -482,8 +1507,36 @@ madagascar_5 = {
 		position = 8
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = temple
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_tax_modifier1
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_tax_modifier1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_cathedrals = {
@@ -493,17 +1546,79 @@ madagascar_5 = {
 			mdg_churches
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = cathedral
+				value = 15
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_tax_modifier2
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_tax_modifier2
+					    duration = -1
+				    }
+			    }
+				every_owned_province = {
+					remove_province_modifier = mdg_tax_modifier1
+				}
+			}
+		}
 	}
 
 	mdg_dockyards = {
 		icon = mission_dominate_gujarati_trade
 		position = 10
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			NOT = { has_building = dock }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = dock
+				value = 11
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_dockyards_modifier1
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_dockyards_modifier1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_shipyards = {
@@ -512,9 +1627,40 @@ madagascar_5 = {
 		required_missions = {
 			mdg_dockyards
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_madagascar_province = yes
+			has_building = shipyard
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = shipyard
+				value = 11
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_shipyards_modifier1
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_shipyards_modifier1
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_impressements = {
@@ -524,8 +1670,36 @@ madagascar_5 = {
 			mdg_shipyards
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					is_madagascar_province = yes
+					tooltip = is_madagascar_province_tooltip
+				}
+				has_building = impressment_offices
+				value = 11
+			}
+		}
+		effect = { 
+			custom_tooltip = mdg_gain_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = mdg_impressement_modifier
+					duration = -1
+				}	
+			}
+			hidden_effect = {
+				every_owned_province = {
+				    limit = {
+					    is_madagascar_province = yes
+				    }
+				    add_province_modifier = {
+					    name = mdg_impressement_modifier
+					    duration = -1
+				    }
+			    }
+			}
+		}
 	}
 
 	mdg_defense_army = {
@@ -533,8 +1707,15 @@ madagascar_5 = {
 		position = 14
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			army_size_percentage = 1
+		}
+		effect = { 
+			add_country_modifier = {
+				name = thriving_arms_industry
+				duration = 3650
+			}
+		}
 	}
 
 	mdg_penguins_of_madagascar = {
@@ -544,8 +1725,15 @@ madagascar_5 = {
 			mdg_forts mdg_defense_army
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			stability = 1
+			prestige = 50
+		}
+		effect = { 
+			country_event = {
+				id = flavor_mdg.1
+			}
+		}
 	}
 
 	mdg_pirate_spain = {
@@ -555,8 +1743,17 @@ madagascar_5 = {
 			mdg_pirate_india
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1293 = {
+				has_privateer_share_in_trade_node = {
+					who = ROOT
+					share = 0.5
+				}
+			}
+		}
+		effect = { 
+			add_treasury = 500
+		}
 	}
 
 	mdg_pirate_england = {
@@ -566,7 +1763,16 @@ madagascar_5 = {
 			mdg_pirate_spain
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1269 = {
+				has_privateer_share_in_trade_node = {
+					who = ROOT
+					share = 0.5
+				}
+			}
+		}
+		effect = { 
+			add_navy_tradition = 50
+		}
 	}
 }

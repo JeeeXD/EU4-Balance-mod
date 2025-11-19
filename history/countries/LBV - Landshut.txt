@@ -6,6 +6,7 @@ government_rank = 1
 technology_group = western
 primary_culture = bavarian
 religion = catholic
+elector = yes
 capital = 64	# Landshut
 
 1347.1.1 = {

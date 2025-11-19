@@ -1,14 +1,11 @@
 #825 - Bogota
 
-owner = MCA
-controller = MCA
 culture = muisca
 discovered_by = south_american
 discovered_by = andean
 religion = inti
 capital = "Bogotá"
-is_city = yes
-trade_goods = gems
+trade_goods = unknown
 hre = no
 base_tax = 6 
 base_production = 6

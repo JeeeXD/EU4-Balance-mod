@@ -1,13 +1,10 @@
 # No previous file for Tizapan
 
 culture = tepic
-owner = TON
-controller = TON
-add_core = TON
-is_city = yes
+
 religion = nahuatl
 capital = "Tizapan"
-trade_goods = grain
+trade_goods = unknown
 hre = no
 base_tax = 3 
 base_production = 3

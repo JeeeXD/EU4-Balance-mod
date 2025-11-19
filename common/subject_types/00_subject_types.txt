@@ -629,7 +629,7 @@ colony = {
 	has_colonial_parent = yes
 	overlord_can_attack = no
 	overlord_can_be_subject = yes
-	takes_diplo_slot = no
+	takes_diplo_slot = yes
 	can_release_in_peace = no
 	dynamically_created_during_history = yes
 	overlord_enforce_peace_attacking = yes
@@ -639,9 +639,9 @@ colony = {
 	can_concentrate_development = no
 	extend_trading_range = yes
 
-	liberty_desire_development_ratio = 0.1
+	liberty_desire_development_ratio = 0.001
 	opinion_on_subject_integration = 0
-	max_government_rank = 1
+	max_government_rank = 3
 	cities_required_for_bonuses = 10
 
 	relative_power_class = 0
@@ -676,12 +676,6 @@ colony = {
 	enforce_culture = yes
 
 	# Modifiers:
-	modifier_overlord = {
-		modifier = large_colonial_nation
-		trigger = {
-			num_of_cities = 10
-		}
-	}
 	modifier_subject = {
 		modifier = new_world_exploitation_modifier
 		trigger = {
@@ -722,8 +716,8 @@ crown_colony = {
 	can_send_missionary_to_subject = yes	
 	count = colony
 
-	forcelimit_to_overlord = 0.3
-	manpower_to_overlord = 0.3
+	forcelimit_to_overlord = 0.1
+	manpower_to_overlord = 0.1
 	naval_forcelimit_to_overlord = 0.01
 	sailors_to_overlord = 0.01
 
@@ -763,8 +757,8 @@ private_enterprise = {
 
 	forcelimit_to_overlord = 0.0
 	manpower_to_overlord = 0.0
-	naval_forcelimit_to_overlord = 0.3
-	sailors_to_overlord = 0.3
+	naval_forcelimit_to_overlord = 0.15
+	sailors_to_overlord = 0.15
 
 	# Subject Interactions:
 	replace_governor = no

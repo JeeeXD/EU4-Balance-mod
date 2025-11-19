@@ -1,12 +1,9 @@
 # No previous file for Moniquira
 
-owner = MCA
-controller = MCA
 culture = muisca
 religion = inti
 capital = "Moniquira"
-is_city = yes
-trade_goods = salt
+trade_goods = unknown
 hre = no
 base_tax = 5 
 base_production = 5

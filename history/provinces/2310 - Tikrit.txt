@@ -1,7 +1,5 @@
 #2310 - Tikrit
 
-owner = TIM
-controller = TIM
 culture = al_iraqiya_arabic
 religion = sunni
 capital = "Tikrit"

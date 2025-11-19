@@ -629,9 +629,12 @@ nepal_5 = {
 				name = city_of_the_people
 				duration = 3650
 			}
-			add_great_project_tier = {
+			557 = {
+				add_great_project_tier = {
 				type = swayambhunath
 				tier = 1
+			    }
+				set_province_flag = nep_katmandu_use
 			}
 			custom_tooltip = nep_use_monument_tooltip
 		}
@@ -663,10 +666,11 @@ nepal_5 = {
 					name = nep_new_capital
 					duration = -1
 				}
-			}
-			add_great_project_tier = {
+				add_great_project_tier = {
 				type = jokhang_temple
 				tier = 1
+			    }
+				set_province_flag = nep_lhasa_use
 			}
 			custom_tooltip = nep_use_monument_tooltip
 		}

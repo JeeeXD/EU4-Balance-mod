@@ -1,23 +1,173 @@
-CLI_free_city = {
+canada_colony = {
 	potential = {
-		NOT = {
-			tag = CLI
-		}
-		CLI = {
-			has_country_flag = opm_cilli
-		}
+		colony = 1
 	}
 	trigger = {
-		is_emperor = yes
-		CLI = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
 			OR = {
-				is_elector = yes
-				has_reform = free_city
+				region = canada_region
+				region = hudson_bay_region
 			}
 		}
 	}
 
-	imperial_authority_value = 0.1
-	
+	merchants = 1
 }
+america_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			OR = {
+				region = north_east_pacific_region
+				region = south_east_pacific_region
+			}
+		}
+	}
 
+	merchants = 1
+}
+louisiana_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			OR = {
+				region = great_plains_region
+				region = great_lakes_region
+				region = mississippi_region
+			}
+		}
+	}
+
+	merchants = 1
+}
+mexico_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			OR = {
+				region = mexico_region
+				region = rio_grande_region
+				region = central_america_region
+			}
+		}
+	}
+
+	merchants = 1
+}
+california_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = california_region
+		}
+	}
+
+	merchants = 1
+}
+cascadia_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = cascadia_region
+		}
+	}
+
+	merchants = 1
+}
+caribbean_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = carribeans_region
+		}
+	}
+
+	merchants = 1
+}
+colombia_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = colombia_region
+		}
+	}
+
+	merchants = 1
+}
+brazil_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = brazil_region
+		}
+	}
+
+	merchants = 1
+}
+argentina_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			OR = {
+				region = la_plata_region
+				region = upper_peru_region
+			}
+		}
+	}
+
+	merchants = 1
+}
+peru_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = peru_region
+		}
+	}
+
+	merchants = 1
+}
+australia_colony = {
+	potential = {
+		colony = 1
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			region = australia_region
+		}
+	}
+
+	merchants = 1
+}

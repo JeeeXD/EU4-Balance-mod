@@ -2,7 +2,7 @@ estate_dhimmi_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
@@ -200,7 +200,7 @@ estate_dhimmi_land_rights = {
 estate_dhimmi_lighter_dhimmi_taxes = {
 	icon = privilege_lighten_dhimmi_tax_burden
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.05
 	is_valid = {
 		any_owned_province = {
@@ -265,7 +265,7 @@ estate_dhimmi_lighter_dhimmi_taxes = {
 estate_dhimmi_dhimmi_nobles = {
 	icon = privilege_promoto_dhimmi_nobles
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.05
 	penalties = {
@@ -288,7 +288,7 @@ estate_dhimmi_manpower = {
 	icon = privilege_demand_more_troops
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = -0.05
 	influence = 0.05
 	is_valid = {
@@ -357,7 +357,7 @@ estate_dhimmi_manpower = {
 estate_dhimmi_tolerance = {
 	icon = privilege_promoto_dhimmi_nobles
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.1
 	is_valid = {
 		any_owned_province = {
@@ -406,7 +406,7 @@ estate_dhimmi_tolerance = {
 estate_dhimmi_guaranteed_autonomy = {
 	icon = privilege_grant_autonomy
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
@@ -506,7 +506,7 @@ estate_dhimmi_administrative_privileges = {
 	icon = privilege_land_rights
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
@@ -544,7 +544,7 @@ estate_dhimmi_administrative_privileges = {
 estate_dhimmi_guarantee_of_traditions = {
 	icon = privilege_promoto_dhimmi_nobles
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.1
 	loyalty = 0.1
 	is_valid = {
@@ -658,7 +658,7 @@ estate_dhimmi_guarantee_of_traditions = {
 estate_dhimmi_grant_liberties = {
 	icon = privilege_tolerance_heathen
 	max_absolutism = -10
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 10 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.1
 	loyalty = 0.1
 	is_valid = {
@@ -679,7 +679,7 @@ estate_dhimmi_grant_liberties = {
 estate_dhimmi_millet_system = {
 	icon = privilege_dev_cost
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.1
 	loyalty = 0.05
 	is_valid = {
@@ -764,7 +764,7 @@ estate_dhimmi_development_of_communities = {
 	loyalty = 0.05
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -821,7 +821,7 @@ estate_dhimmi_grant_trading_privileges = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -859,7 +859,7 @@ estate_dhimmi_dhimmi_education = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -937,7 +937,7 @@ estate_dhimmi_promote_dhimmi_nobility = {
 	loyalty = 0.0
 	influence = 0.1
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -974,7 +974,7 @@ estate_dhimmi_promote_dhimmi_nobility = {
 #	loyalty = -0.05
 #	influence = 0.05
 #	max_absolutism = -5
-#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 #	is_valid = {
 #		has_dlc = "Domination"
 #	}
@@ -1002,7 +1002,7 @@ estate_dhimmi_protected_communities = {
 	loyalty = 0.0
 	influence = 0.1
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 		NOT = {
@@ -1047,7 +1047,7 @@ estate_dhimmi_contribution_demand = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -1079,7 +1079,7 @@ estate_dhimmi_technology_fatimids = {
 	icon = privilege_land_rights
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {

@@ -1,13 +1,9 @@
 #994 - Stadacona
 
-owner = STA
-controller = STA
-add_core = STA
-is_city = yes
 culture = laurentian
 religion = totemism
 capital = "Stadacona"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 4
 base_production = 4

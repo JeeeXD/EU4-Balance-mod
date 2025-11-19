@@ -1,9 +1,5 @@
 # No previous file for Saone
 
-add_core = WCY
-owner = WCY
-controller = WCY
-is_city = yes
 culture = dakota
 religion = totemism
 capital = "Saone"

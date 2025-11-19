@@ -1,13 +1,9 @@
 #838 - Mosquito
 
-owner = MIS
-controller = MIS
-add_core = MIS
-is_city = yes
 culture = miskito 
 religion = animism 
 capital = "Mosquito" 
-trade_goods = coffee
+trade_goods = unknown
 hre = no 
 base_tax = 1 
 base_production = 1

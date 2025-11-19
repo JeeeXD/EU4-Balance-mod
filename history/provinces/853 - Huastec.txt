@@ -1,17 +1,14 @@
 #853 - Huastec
 
-owner = AZT
-controller = AZT
-add_core = AZT
+
 culture = aztek 
 religion = nahuatl
 capital = "Tlapacoyan"
-trade_goods = cotton 
+trade_goods = unknown 
 hre = no 
 base_tax = 3 
 base_production = 3
 base_manpower = 1 
-is_city = yes
 
 add_province_triggered_modifier = MAY_obsidian_source
 

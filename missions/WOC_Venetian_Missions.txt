@@ -981,7 +981,6 @@ venice_missions_slot_1_continued = {
 					has_country_flag = circumnavigation_done
 				}
 				full_idea_group = exploration_ideas
-				full_idea_group = expansion_ideas
 			}
 		}
 		effect = {

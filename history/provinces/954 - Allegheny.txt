@@ -1,13 +1,10 @@
 #954 - Allegheny
 
-owner = ERI
-controller = ERI
-add_core = ERI
-is_city = yes
+
 culture = tionontate
 religion = totemism
 capital = "Allegheny"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 2

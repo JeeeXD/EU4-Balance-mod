@@ -1,13 +1,11 @@
 #802 - Chuquiabo
 
-owner = CLA
-controller = CLA
-add_core = CLA
+
 is_city = yes
 culture = aimara
 religion = inti
 capital = "Chuquiabo"
-trade_goods = cloth
+trade_goods = unknown
 hre = no
 base_tax = 4 
 base_production = 4

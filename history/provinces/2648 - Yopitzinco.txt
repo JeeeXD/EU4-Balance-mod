@@ -1,13 +1,10 @@
 # No previous file for Yopitzinco
 
 culture = tlapanec
-owner = TLA
-controller = TLA
-add_core = TLA
-is_city = yes
+
 religion = nahuatl
 capital = "Yopi"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 3 
 base_production = 3

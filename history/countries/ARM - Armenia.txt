@@ -14,6 +14,17 @@ capital = 419	# Yerevan
 	discover_province = 4172
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Mehdi"
+		dynasty = "Qasemlu"
+		birth_date  = 1421.1.1
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+
 1745.1.1 = {
 	monarch = {
 		name = "Mehdi"

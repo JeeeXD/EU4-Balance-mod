@@ -1,7 +1,7 @@
 #2305 - Erzincan
 
-owner = TIM
-controller = TIM
+
+
 culture = armenian
 religion = coptic
 capital = "Erzindjan"

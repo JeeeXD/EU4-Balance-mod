@@ -1,13 +1,9 @@
 #879 - Apache
 
-owner = APA
-controller = APA
-is_city = yes
-add_core = APA 
 culture = apache 
 religion = totemism
 capital = "Apache" 
-trade_goods = salt 
+trade_goods = unknown 
 hre = no 
 base_tax = 1 
 base_production = 1 

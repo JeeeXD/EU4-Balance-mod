@@ -1,9 +1,8 @@
 #1763 - Niederlausitz
 
-owner = BOH
-controller = BOH
+owner = SOR
+controller = SOR
 add_core = SOR
-add_core = BOH
 capital = "Chotebuz"
 culture = sorbian
 religion = catholic

@@ -1,13 +1,10 @@
 # No previous file for Kesagami
 
-add_core = WCR
-owner = WCR
-controller = WCR
-is_city = yes
+
 culture = cree
 religion = totemism
 capital = "Kesagami"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

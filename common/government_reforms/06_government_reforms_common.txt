@@ -967,7 +967,7 @@ public_hindu_practices_reform = {
 		church_loyalty_modifier = 0.1
 		brahmins_hindu_influence_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.1
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 	conditional = {
 		allow = { has_dlc = "Wealth of Nations" }
@@ -1079,7 +1079,7 @@ strengthen_the_dhimmi_reform = {
 		dhimmi_loyalty_modifier = 0.1
 		church_influence_modifier = -0.1
 		church_loyalty_modifier = -0.1
-		tolerance_of_heathens_capacity = 1
+		tolerance_of_heathens_capacity = 2
 	}
 	custom_attributes = {
 		free_guarantee_dhimmi_autonomy = yes
@@ -1270,6 +1270,7 @@ maintain_clergy_balance_of_power_reform = {
 	}
 	modifiers = {
 		all_estate_loyalty_equilibrium = 0.05
+		church_privilege_slots = 1
 		diplomats = 1
 	}
 	
@@ -1302,6 +1303,7 @@ separate_clergy_from_state_affairs_reform = {
 		tolerance_of_heathens_capacity = 1
 		tolerance_of_heretics_capacity = 1
 		innovativeness_gain = 0.25
+		idea_cost = -0.1
 	}
 	custom_attributes = {
 		disables_estate_church = yes
@@ -1758,7 +1760,7 @@ military_engineering_reform = {
 		}
 	}
 	modifiers = {
-		artillery_barrage_cost = -0.25
+		artillery_barrage_cost = -0.5
 		artillery_cost = -0.1
 	}
 	
@@ -1789,7 +1791,7 @@ defensive_stance_reform = {
 		NOT = { is_subject_of_type = client_march }
 	}
 	modifiers = {
-		defensiveness = 0.15
+		defensiveness = 0.2
 		garrison_size = 0.2
 		max_hostile_attrition = 1
 	}
@@ -1932,7 +1934,7 @@ mercenary_leadership_reform = {
 	}
 	modifiers = {
 		mercenary_cost = -0.1
-		possible_condottieri = 0.5
+		possible_condottieri = 1
 	}
 	
 	ai = {
@@ -3713,8 +3715,8 @@ empower_the_burghers_reform = {
 		}
 	}
 	modifiers = {
-		global_trade_power = 0.05
-		trade_efficiency = 0.05
+		global_trade_power = 0.1
+		trade_efficiency = 0.1
 		burghers_loyalty_modifier = 0.05
 		burghers_influence_modifier = 0.1
 		vaisyas_loyalty_modifier = 0.05
@@ -3738,8 +3740,8 @@ curtail_the_burghers_reform = {
 		}
 	}
 	modifiers = {
-		trade_company_governing_cost = -0.1
-		trade_steering = 0.15
+		trade_company_governing_cost = -0.33
+		trade_steering = 0.25
 		burghers_influence_modifier = -0.1
 	}
 	custom_attributes = {
@@ -3778,14 +3780,10 @@ new_world_exploitation_reform = {
 			NOT = { continent = north_america }
 			NOT = { continent = south_america }
 			NOT = { continent = new_world }
-			NOT = { colonial_region = colonial_australia }
 		}
 	}
 	trigger = {
-		OR = {
-			full_idea_group = expansion_ideas
-			full_idea_group = exploration_ideas
-		}
+		full_idea_group = exploration_ideas
 		if = {
 			limit = {
 				is_revolutionary = yes
@@ -3827,9 +3825,9 @@ mercantilistic_approach_reform = {
 		}
 	}
 	modifiers = {
-		mercantilism_cost = -0.1
-		global_own_trade_power = 0.15
-		placed_merchant_power = 5
+		mercantilism_cost = -0.25
+		global_own_trade_power = 0.25
+		placed_merchant_power = 15
 	}
 	custom_attributes = {
 		no_mercantilism_loss_from_privilege = yes
@@ -3943,8 +3941,8 @@ war_economy_reform = {
 	}
 	modifiers = {
 		war_taxes_cost_modifier = -0.5
-		global_regiment_cost = -0.1
-		global_ship_cost = -0.1
+		global_regiment_cost = -0.15
+		global_ship_cost = -0.15
 	}
 	ai = {
 		factor = 1
@@ -4366,7 +4364,7 @@ superiority_of_the_state_reform = {
 	}
 	modifiers = {
 		all_estate_influence_modifier = -0.1
-		max_absolutism = 5
+		max_absolutism = 20
 	}
 	custom_attributes = {
 		can_sell_crownland_to_single_estates = yes

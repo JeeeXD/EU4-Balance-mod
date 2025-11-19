@@ -1,13 +1,9 @@
 # No previous file for Yamasee
 
-owner = ALT
-controller = ALT
-add_core = ALT
-is_city = yes
 culture = yamasee
 religion = totemism
 capital = "Yamasee"
-trade_goods = cotton
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

@@ -1,0 +1,75 @@
+﻿l_english:
+
+# SGR
+
+
+SGR: "South German Confederation"
+SGR_ADJ: "German"
+SGR_ADJ2: "German"
+form_south_germany_title: "Form South German Confederation"
+form_south_germany_desc: "The lands of Swabia, Bavaria, Franconia, and the Alpine passes have long stood divided, their princes vying for influence within the Holy Roman Empire. By uniting these realms under one banner, we can forge a powerful South German state, strong enough to rival both Austria and Prussia. A new chapter in German history shall begin, with our banner flying over the heart of Central Europe."
+teutonic_holy_order: "Order of the Teutons"
+teutonic_holy_order_desc: "The Catholic princes of the south have long relied on knightly orders to defend their faith and uphold the authority of the Church. From Bavarian castles to Swabian strongholds, these orders combined the devotion of the monk with the discipline of the soldier. By entrusting them with land and privilege, we bind our realm to the sword of Christ, standing as guardians of the old faith in an age of heresy and reform."
+south_german_reform: "Order of the Teutons"
+south_german_reform_desc: "The Catholic princes of the south have long sheltered holy orders within their lands, granting them castles, estates, and authority to root out heresy. By binding ourselves to these knightly institutions, we unite piety with discipline. The sword and the cross shall march together, and our enemies will know us as the heirs of the Teutonic knights and defenders of the Catholic faith."
+south_german_holy_order_tooltip: "Unlock a unique §YHoly Order§! for the §YSouth German Confederation§!"
+SGR_ideas: "South German Ideas"
+SGR_ideas_start: "South German Traditions"
+SGR_ideas_bonus: "South German Ambition"
+
+SGR_1: "Fortresses of the Mountains"
+SGR_1_desc: "From the Alps to the Rhine, the South German lands are dotted with strongholds that have withstood countless invasions. Our cities are fortresses, our fortresses are citadels."
+
+SGR_2: "Spirit of the Landsknechte"
+SGR_2_desc: "Our armies inherit the legacy of the proud Landsknechte — soldiers of fortune whose bravery and discipline carved a place for the German name across Europe."
+
+SGR_3: "Faith of the True Church"
+SGR_3_desc: "Loyal to the Holy See, our rulers safeguard the Catholic faith. Our piety brings us favor in Rome, and divine blessing upon our rule."
+
+SGR_4: "Masters of the Siege"
+SGR_4_desc: "South German engineers are masters of artillery and siegecraft. No fortress can resist our cannons for long, and no enemy wall can hold our might."
+
+SGR_5: "Banks and Burghers"
+SGR_5_desc: "From Augsburg to Nuremberg, the merchant families and financiers of the South fuel the economy of Christendom. Through prudent loans and clever investments, our wealth multiplies."
+
+SGR_6: "Unity Through Inheritance"
+SGR_6_desc: "Dynasties rise and fall, but wisdom ensures our house endures. Through diplomacy, inheritance, and faith, we unite the patchwork of German states under one banner."
+
+SGR_7: "Order and Discipline"
+SGR_7_desc: "The South German soldier is renowned for precision and obedience. In the field, our regiments fight as one — disciplined, unyielding, and victorious in God’s name."
+
+NGR_ideas: "North German Ideas"
+NGR_ideas_start: "North German Traditions"
+NGR_ideas_bonus: "North German Ambition"
+
+
+# NGR
+
+NGR: "North German Confederation"
+NGR_ADJ: "German"
+NGR_ADJ2: "German"
+form_north_germany_title: "Form North German Confederation"
+form_north_germany_desc: "The northern plains of Germany, from Saxony to the Hanseatic ports, have long been a patchwork of dukes, bishops, and free cities. By bringing these lands together, we can form a powerful North German realm—commanding the trade of the Baltic and North Sea, and standing as a counterweight to the empires of the south."
+north_german_reform: "Reformation of the North"
+north_german_reform_desc: "The lands of Northern Germany have long been fertile ground for religious change, from the Hanseatic cities questioning Rome’s authority to the princes embracing reformist doctrines. By harnessing this spirit of defiance and conviction, we can strengthen our state by"
+
+NGR_1: "Drilled and Ready"
+NGR_1_desc: "Our armies are the product of discipline and method. Every man knows his place, every commander his duty — the mark of true North German precision."
+
+NGR_2: "Iron and Conviction"
+NGR_2_desc: "Whether guided by Protestant faith or civic duty, our soldiers march with conviction. Courage and devotion are the iron that binds our ranks."
+
+NGR_3: "Masters of the Baltic Trade"
+NGR_3_desc: "The harbors of Hamburg, Lübeck, and Bremen are alive with commerce. Our fleets dominate northern waters, ensuring that no coin changes hands without our knowledge."
+
+NGR_4: "Merchants and Monopolies"
+NGR_4_desc: "The art of trade is our inheritance. By fostering guilds and expanding market privileges, we ensure our merchants remain unmatched in Europe."
+
+NGR_5: "Builders of Industry"
+NGR_5_desc: "Brick by brick, we raise cities of stone and steel. Our builders and craftsmen transform the North German plain into a landscape of prosperity and progress."
+
+NGR_6: "Fleet of the Hanse"
+NGR_6_desc: "Our navy is the lifeblood of our trade. With disciplined sailors and sturdy ships, we project power across the seas and protect our growing mercantile empire."
+
+NGR_7: "Fire and Iron"
+NGR_7_desc: "Our soldiers are trained to endure the fiercest volleys and return them tenfold. Through innovation and resolve, we master the firepower that defines modern war."

@@ -2982,7 +2982,6 @@ defined_text = {
 				trade_goods = grain
 				trade_goods = livestock
 				trade_goods = wine
-				trade_goods = grain_livestock
 			}
 		}
 	}

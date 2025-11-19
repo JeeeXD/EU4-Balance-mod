@@ -4,13 +4,6 @@ ming_missions_1 = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		culture_group = east_asian
-		NOT = { primary_culture = manchu_new }
-		NOT = { primary_culture = tibetan_new }
-		NOT = { primary_culture = altaic_new }
-		NOT = { primary_culture = vietnamese_new }
-		NOT = { primary_culture = korean_new }
-		NOT = { map_setup = map_setup_random }
 		tag = MNG
 	}
 	has_country_shield = yes 
@@ -447,6 +440,9 @@ chinese_kingdoms_1 = {
 			tag = CGS
 			tag = SHU 
 			tag = FRM
+			tag = AHU
+			tag = JIG
+			tag = LIU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -638,7 +634,10 @@ ming_missions_1_b = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
+		OR = {
+			tag = MNG
+			tag = QNG
+		}
 		#OR = { 
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag
@@ -822,7 +821,6 @@ ming_missions_1_c = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
 		tag = MNG
 	}
 	has_country_shield = yes 
@@ -834,39 +832,7 @@ ming_missions_1_c = {
 		
 		trigger = {
 			reform_level = 10 
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = mng_has_had_crisis_disaster_tt
-					has_country_flag = ming_crisis_happened
-				}
-				AND = {
-					NOT = { current_age = age_of_discovery }
-					NOT = { current_age = age_of_reformation }
-					imperial_mandate = 95 
-				}
-			}
-			OR = {
-				AND = { 
-					empire_of_china_num_reforms_passed = 6 
-					absolutism = 50 
-				}
-				if = {
-					limit = { has_dlc = "Mandate of Heaven" }
-					AND = {
-						crown_land_share = 95
-						imperial_mandate = 90  
-						meritocracy = 90 
-						stability = 3 
-					}
-				}
-				else = {
-					AND = {
-						crown_land_share = 95 
-						legitimacy_equivalent = 90
-						stability = 3 
-					}
-				}
-			}
+			absolutism = 80
 		}
 		
 		effect = {
@@ -1031,12 +997,6 @@ ming_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		# culture_group = east_asian
-		# NOT = { primary_culture = manchu_new }
-		# NOT = { primary_culture = tibetan_new }
-		# NOT = { primary_culture = altaic_new }
-		# NOT = { primary_culture = vietnamese_new }
-		# NOT = { primary_culture = korean_new }
 		has_dlc = "Domination"
 		NOT = { map_setup = map_setup_random }
 		tag = MNG
@@ -1651,6 +1611,9 @@ chinese_kingdoms_2 = {
 			tag = CGS
 			tag = SHU 
 			tag = FRM
+			tag = AHU
+			tag = JIG
+			tag = LIU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1816,7 +1779,10 @@ ming_missions_2_b = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
+		OR = {
+			tag = MNG
+			tag = QNG
+		}
 		#OR = {
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag
@@ -2443,6 +2409,9 @@ chinese_kingdoms_3 = {
 			tag = CGS
 			tag = SHU 
 			tag = FRM
+			tag = AHU
+			tag = JIG
+			tag = LIU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -3746,7 +3715,10 @@ ming_missions_3_b = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
+		OR = {
+			tag = MNG
+			tag = QNG
+		}
 		#OR = {
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag
@@ -4386,6 +4358,9 @@ chinese_kingdoms_4 = {
 			tag = CGS
 			tag = SHU 
 			tag = FRM
+			tag = AHU
+			tag = JIG
+			tag = LIU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -5018,7 +4993,10 @@ ming_missions_4_b = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
+		OR = {
+			tag = MNG
+			tag = QNG
+		}
 		#OR = {
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag
@@ -5315,7 +5293,6 @@ ming_missions_4_moh = {
 	potential = {
 		has_dlc = "Domination"
 		has_dlc = "Mandate of Heaven"
-		is_emperor_of_china = yes 
 		#OR = {
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag
@@ -5360,8 +5337,6 @@ ming_missions_4_moh = {
 		position = 9 
 		
 		trigger = { 
-			empire_of_china_num_reforms_passed = 15 
-			is_emperor_of_china = yes 
 			stability = 3 
 			if = { 
 				limit = { has_dlc = "Emperor" }
@@ -5524,6 +5499,9 @@ chinese_kingdoms_5 = {
 			tag = CGS
 			tag = SHU 
 			tag = FRM
+			tag = AHU
+			tag = JIG
+			tag = LIU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -6252,7 +6230,10 @@ ming_missions_5_b = {
 	ai = yes
 	potential = {
 		has_dlc = "Domination"
-		is_emperor_of_china = yes 
+		OR = {
+			tag = MNG
+			tag = QNG
+		}
 		#OR = {  
 		#	culture_group = east_asian
 		#	has_country_flag = enable_emperor_of_china_missions_flag

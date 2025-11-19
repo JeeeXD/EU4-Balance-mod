@@ -38,7 +38,6 @@ charter_colonies = {
 
 	allow = {
 		OR = {
-			full_idea_group = expansion_ideas
 			full_idea_group = exploration_ideas
 		}
 	}
@@ -108,7 +107,6 @@ charter_trade_companies = {
 			factor = 2
 			OR = {
 				has_idea_group = plutocracy_ideas
-				has_idea_group = expansion_ideas
 			}
 		}
 	}
@@ -750,7 +748,6 @@ reduce_trade_regulations = {
 			factor = 2
 			OR = {
 				has_idea_group = plutocracy_ideas
-				has_idea_group = expansion_ideas
 			}
 		}
 	}

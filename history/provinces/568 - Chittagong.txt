@@ -1,7 +1,7 @@
 #568 - Chittagong
 
-owner = BNG
-controller = BNG
+owner = ARK
+controller = ARK
 culture = bengali
 religion = hinduism #A good case could be made that this province was atleast 50% buddhist
 capital = "Chittagong"

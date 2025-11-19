@@ -1,13 +1,9 @@
 #916 - Kaskaskia
 
-owner = KSK
-controller = KSK
-add_core = KSK
-is_city = yes
 culture = illini
 religion = totemism
 capital = "Kaskaskia"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 2
 base_production = 2

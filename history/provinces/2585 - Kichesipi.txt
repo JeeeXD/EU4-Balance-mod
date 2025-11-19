@@ -1,13 +1,10 @@
 # No previous file for Kichesipi
 
-owner = ARN
-controller = ARN
-add_core = ARN
-is_city = yes
+
 culture = huron
 religion = totemism
 capital = "Arendaronon"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 2
 base_production = 2

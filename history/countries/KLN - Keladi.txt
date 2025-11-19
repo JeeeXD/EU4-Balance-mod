@@ -6,7 +6,7 @@ religion = hinduism
 technology_group = indian
 capital = 2032	# Ikkeri 
 
-1499.1.1 = {
+1444.1.1 = {
 	monarch = {
 		name = "Chaudappa Nayaka"
 		dynasty = "Keladi"

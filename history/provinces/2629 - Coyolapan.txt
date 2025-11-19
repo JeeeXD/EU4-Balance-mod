@@ -1,13 +1,10 @@
 # No previous file for Coyolapan
 
 culture = mixtec
-owner = MIX
-controller = MIX
-add_core = MIX
-is_city = yes
+
 religion = nahuatl
 capital = "Coyolapan"
-trade_goods = gold
+trade_goods = unknown
 hre = no
 base_tax = 2 
 base_production = 2

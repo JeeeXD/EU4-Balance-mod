@@ -1,11 +1,9 @@
 #808 - Cuzco
 
-owner = CSU
-controller = CSU
 culture = inca
 religion = inti
 capital = "Cuzco"
-trade_goods = gold
+trade_goods = unknown
 hre = no
 base_tax = 6 
 base_production = 6

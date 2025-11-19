@@ -1,13 +1,9 @@
 #937 - Tuscarora
 
-owner = TSC
-controller = TSC
-add_core = TSC
-is_city = yes
 culture = iroquois
 religion = totemism
 capital = "Tuscarora"
-trade_goods = tobacco
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 2

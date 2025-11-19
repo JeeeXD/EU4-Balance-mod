@@ -1,0 +1,268 @@
+namespace = flavor_mdg
+
+country_event = {
+	id = flavor_mdg.1
+	title = flavor_mdg.1.T
+	desc = flavor_mdg.1.D
+	picture = LAKE_TREASURE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+
+	option = {
+		name = flavor_mdg.1.OPT1
+		ai_chance = { factor = 1 }
+		add_manpower = 70
+		set_country_flag = penguin_madagascar
+		country_event = {
+			id = ideagroups.1
+		}
+	}
+}
+
+# Slave Trade
+country_event = {
+	id = flavor_mdg.2
+	title = flavor_mdg.2.T
+	desc = flavor_mdg.2.D
+	picture = AFRICAN_EUROPEAN_PURCHASE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+
+	option = {
+		name = flavor_mdg.2.OPT1
+		ai_chance = { factor = 1 }
+		change_price = {
+			trade_goods = slaves
+			key = mdg_slave_trade
+			value = 0.5
+			duration = -1
+		}
+
+	}
+}
+
+# Pirate Republic
+country_event = {
+	id = flavor_mdg.3
+	title = flavor_mdg.3.T
+	desc = flavor_mdg.3.D
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+
+	option = {
+		name = flavor_mdg.3.OPT1
+		ai_chance = { factor = 1 }
+
+		change_government = republic
+		add_government_reform = pirate_republic_reform
+		add_republican_tradition = 90
+		change_tag = MDP
+		country_event = {
+			id = ideagroups.1
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavor_mdg.4
+				days = 18250
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mdg.3.OPT2
+		ai_chance = { factor = 1 }
+
+		change_government_reform_progress = 100
+		hidden_effect = {
+			country_event = {
+				id = flavor_mdg.4
+				days = 18250
+			}
+		}
+	}
+}
+
+# Communism or Capitalism
+country_event = {
+	id = flavor_mdg.4
+	title = flavor_mdg.4.T
+	desc = flavor_mdg.4.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+
+	option = {
+		name = flavor_mdg.4.OPT1
+		ai_chance = { factor = 1 }
+
+		change_government = republic
+		add_government_reform = penguin_communist_reform
+		add_republican_tradition = 100
+		set_country_flag = penguin_communist
+		change_tag = MDC
+		country_event = {
+			id = ideagroups.1
+		}
+
+		define_ruler = {
+			name = "Flappimir Lenin"
+			adm = 6
+			dip = 6
+			mil = 4
+			age = 47
+		}
+	}
+
+	option = {
+		name = flavor_mdg.4.OPT2
+		ai_chance = { factor = 1 }
+
+		change_government = republic
+		add_government_reform = penguin_democracy_reform
+		add_republican_tradition = 100
+		set_country_flag = penguin_capitalist
+		change_tag = MDD
+		country_event = {
+			id = ideagroups.1
+		}
+
+		define_ruler = {
+			name = "Waddack Obamna"
+			adm = 5
+			dip = 6
+			mil = 5
+			age = 47
+		}
+	}
+
+	option = {
+		name = flavor_mdg.4.OPT3
+		ai_chance = { factor = 1 }
+
+		change_government_reform_progress = 100
+	}
+}
+
+# Stalin or Trotsky
+country_event = {
+	id = flavor_mdg.5
+	title = flavor_mdg.5.T
+	desc = flavor_mdg.5.D
+	picture = KING_SICK_IN_BED_eventPicture
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = MDC
+		NOT = {
+			has_ruler = "Flappimir Lenin"
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = flavor_mdg.5.OPT1
+		ai_chance = { factor = 1 }
+
+		define_ruler = {
+			name = "Joseph Splatlin"
+			adm = 4
+			dip = 3
+			mil = 4
+			age = 45
+		}
+	}
+
+	option = {
+		name = flavor_mdg.5.OPT2
+		ai_chance = { factor = 1 }
+
+		define_ruler = {
+			name = "Leon Trotskice"
+			adm = 2
+			dip = 4
+			mil = 5
+			age = 45
+		}
+	}
+
+	option = {
+		name = flavor_mdg.5.OPT3
+		ai_chance = { factor = 1 }
+
+		add_republican_tradition = 25
+	}
+
+	
+}
+
+# Democratic Election
+country_event = {
+	id = flavor_mdg.6
+	title = flavor_mdg.6.T
+	desc = flavor_mdg.6.D
+	picture = LIBERUM_VETO_eventPicture
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = MDD
+		NOT = {
+			has_ruler = "Waddack Obamna"
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = flavor_mdg.6.OPT1
+		ai_chance = { factor = 1 }
+
+		define_ruler = {
+			name = "Duckold Stump"
+			adm = 1
+			dip = 2
+			mil = 3
+			age = 70
+		}
+	}
+
+	option = {
+		name = flavor_mdg.6.OPT2
+		ai_chance = { factor = 1 }
+
+		define_ruler = {
+			name = "Joe Trident"
+			adm = 2
+			dip = 4
+			mil = 2
+			age = 78
+		}
+	}
+
+	option = {
+		name = flavor_mdg.6.OPT3
+		ai_chance = { factor = 1 }
+
+		define_ruler = {
+			name = "Bernie Sandals"
+			adm = 5
+			dip = 5
+			mil = 2
+			age = 79
+		}
+	}
+
+	
+}

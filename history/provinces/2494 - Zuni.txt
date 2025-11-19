@@ -1,13 +1,9 @@
 # No previous file for Zuni
 
-owner = ZNI
-controller = ZNI
-add_core = ZNI
-is_city = yes
 culture = pueblo
 religion = totemism
 capital = "Zuni"
-trade_goods = wool
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

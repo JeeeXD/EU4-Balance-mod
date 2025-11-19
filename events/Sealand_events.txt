@@ -520,7 +520,7 @@ country_event = {
 	picture = none
 	hidden = yes
 	mean_time_to_happen = { months = 2400 } 
-	trigger = { ai = no NOT = { has_country_flag = get_war_declare_flag } }
+	trigger = { NOT = { has_country_flag = get_war_declare_flag } }
 	immediate = { set_country_flag = get_war_declare_flag play_sound = declarewar_onus }
 	option = { }
 }

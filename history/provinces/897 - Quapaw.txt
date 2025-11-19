@@ -1,9 +1,6 @@
 #897 - Quapaw
 
-owner = CAQ
-controller = CAQ
-add_core = CAQ
-is_city = yes
+
 culture = yoron
 religion = totemism
 capital = "Quapaw"

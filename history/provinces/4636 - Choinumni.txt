@@ -1,17 +1,13 @@
 # No previous file for Choinumni
 
-owner = YKT
-controller = YKT
-add_core = YKT
 culture = yokuts
 religion = totemism
 capital = "Choinumni"
-trade_goods = grain
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
 native_size = 6
 native_ferocity = 2
 native_hostileness = 8

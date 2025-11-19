@@ -1,13 +1,10 @@
 # No previous file for Coweta
 
-owner = ETO
-controller = ETO
-add_core = ETO
-is_city = yes
+
 culture = creek
 religion = totemism
 capital = "Coweta"
-trade_goods = tobacco
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1

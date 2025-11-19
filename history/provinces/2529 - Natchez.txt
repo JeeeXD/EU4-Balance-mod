@@ -1,13 +1,8 @@
-# No previous file for Natchez
-
-owner = NTZ
-controller = NTZ
-add_core = NTZ
-is_city = yes
+# No previ
 culture = natchez
 religion = totemism
 capital = "Natchez"
-trade_goods = cotton
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1

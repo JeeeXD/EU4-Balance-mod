@@ -43,9 +43,9 @@ add_historical_rival = ETH
 	monarch = {
 		name = "Badlay"
 		dynasty = "Walashma"
-		adm = 2
-		dip = 2
-		mil = 1
+		adm = 6
+		dip = 5
+		mil = 5
 	}
 }
 

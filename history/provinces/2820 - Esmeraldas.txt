@@ -1,12 +1,11 @@
 # - Esmeraldas
 
-owner = QTO
-controller = QTO
+
 culture = cara
 religion = inti
 capital = "Esmeraldas"
-is_city = yes
-trade_goods = fish
+
+trade_goods = unknown
 hre = no
 base_tax = 3 
 base_production = 3

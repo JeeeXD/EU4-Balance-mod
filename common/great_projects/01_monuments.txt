@@ -6012,7 +6012,7 @@ jokhang_temple = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			mission_completed = nep_lhasa
+			has_province_flag = nep_lhasa_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -6030,7 +6030,7 @@ jokhang_temple = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			mission_completed = nep_lhasa
+			has_province_flag = nep_lhasa_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -6038,7 +6038,7 @@ jokhang_temple = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			mission_completed = nep_lhasa
+			has_province_flag = nep_lhasa_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -16073,7 +16073,7 @@ swayambhunath = {
 
 	build_trigger = {
 		OR = {
-			mission_completed = nep_katmandu
+			has_province_flag = nep_katmandu_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -16086,14 +16086,14 @@ swayambhunath = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			mission_completed = nep_katmandu
+			has_province_flag = nep_katmandu_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			mission_completed = nep_katmandu
+			has_province_flag = nep_katmandu_use
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}

@@ -83,30 +83,15 @@ PR_radical_reform_decision: "Radical Reforms (200 §W£adm£ and 200 §W£dip£)
 PR_military_reform_decision: "Military Reforms (200 §W£mil£ and 20% Morale)"
 PR_commandant_decision: "Inspirational Leader (10% Discipline)\nCan't fire until §Y1460§!"
 PR_grand_captain_decision: "Grand Captain (20% Morale)\nCan't fire until §Y1460§!"
-PR_manpower_edict_title: "£icon_manpower_in_text£ National Manpower Edict"
-PR_manpower_edict_desc: "Activate a manpower edict modifier in all states without an activated edict. No edicts can be applied to states with this modifier. Can be removed in 1 year."
-PR_manpower_edict_tooltip: "+§G25%§! Manpower, +§G25%§! Sailors and +§R200%§! State Maintenance in all states without an active edict"
-PR_manpower_edict_removal_title: "£icon_manpower_in_text£ Deactivate National Manpower Edict"
-PR_manpower_edict_removal_desc: "Removes manpower edict modifier from all provinces."
-PR_manpower_edict_cooldown: "£icon_manpower_in_text£ Provincial Manpower Edict"
-PR_manpower_edict_removal_tooltip: "Has been 1 year since activating National Manpower Edict."
-PR_manpower_edict_province: "Provincial Manpower Edict"
 PR_parliament_seats_title: "£add_parliament_icon£ Add Parliament Seats"
 PR_parliament_seats_desc: "Adds all eligable provinces to the parliament."
 PR_parliament_seats_tooltip: "£add_parliament_icon£ Adds all eligable provinces to the parliament."
-PR_dev_edict_title: "£building_dev_cost£ National Development Edict"
-PR_dev_edict_desc: "Activate a Development edict modifier in all states without an activated edict. No edicts can be applied to states with this modifier. Can be removed in 1 year."
-PR_dev_edict_tooltip: "-§G10%§! Development cost and +§R200%§! State Maintenance in all states without an active edict"
-PR_dev_edict_removal_title: "£building_dev_cost£ Deactivate National Development Edict"
-PR_dev_edict_removal_desc: "Removes Development edict modifier from all provinces."
-PR_dev_edict_cooldown: "£building_dev_cost£ Provincial Development Edict"
-PR_dev_edict_removal_tooltip: "Has been 1 year since activating National Development Edict."
-PR_dev_edict_province: "Provincial Development Edict"
 subject_goods_bonus_15: "Production investments"
 subject_military_bonus_5: "Military Investments"
 subject_tax_bonus_25: "Tax Investments"
 tooltip_subject_military_bonus_mp: "Subjects will get +§G5%§! Discipline."
 colonial_cannot_colonize: "We are forbidden from expansion outside our §YColonial Region§!."
+# Ages
 ase_ethiopian_local_warlords: "Ethiopian Warlords"
 ase_florence_renaissance: "Tuscan Renaissance"
 ase_malacca_spices: "Malaccan Spices"
@@ -140,6 +125,7 @@ ase_horde_conquests: "Horde Razing"
 ase_kilwan_interest: "Kilwan Gold"
 ab_colonies: "Colonial Treasure Fleets"
 ab_korean_policies: "Korean Policies"
+ab_ava_reduced_lib_desire: "Burmese Subjects"
 obj_artillery_number: "Modern Weaponry"
 obj_artillery_number_desc: "Have 200k units of artillery in your army."
 obj_50dev_province: "City of the World's Desire"
@@ -157,7 +143,7 @@ ilkhanate_government_reform: "Diwan of the Ilkhans"
 ilkhanate_government_reform_desc: "Born from the thunder of Mongol conquest, the Ilkhanate forged a new style of governance — a fusion of steppe authority and Persian bureaucracy. The Khans ruled not merely as conquerors, but as heirs to ancient kings, commanding both the loyalty of the riders of the plains and the scribes of the cities. In this union of sword and pen, the Ilkhanate found its strength and legitimacy."
 
 
-#### 
+#### Bavaria
 beer_trade_imports_modifier: "Bavarian Beer Imports"
 bav_export_beer_title: "Export Beer"
 bav_export_beer_tooltip: "Export Beer to this nation"
@@ -203,7 +189,7 @@ sealand_events.29.22: "Remove §YMill Manufactory§! Buildings."
 sea_clear_specific_building_decision_title: "£sea_building_logo£Remove Specific Buildings"
 sea_clear_specific_building_decision_desc: "This allows you to have option to delete all the specific buildings you want."
 sea_clear_specific_building_decision_tt: "Gives event with a list of buildings to delete on all of our owned provinces."
-
+# Edicts Event #
 sea_remove_state_edicts_flag_tt: "Wait for a month tick to enact State Edict."
 sea_state_edicts_decision_title: "£sea_edict_logo£ State Edict: §Y[SeaStateEdictName]§!"
 sea_state_edicts_decision_desc: "Choose which edict to set for all states."
@@ -251,6 +237,7 @@ sealand_events.28.15: "Enable §YFeudal Taxes Edict§! State Edict."
 sealand_events.28.16: "Enable §YReligious Tolerance Edict§! State Edict."
 sealand_events.28.17: "Enable §YState Integration Edict§! State Edict."
 sealand_events.28.18: "Enable §YUrbanization Edict§! State Edict."
+# Tax Event #
 funny.1.t: "Please Don't"
 funny.1.d: "John Universalis would tell you not to dev admin, make use of your points in a better way, like expanding infrastructure or increasing stability. Developming mil or dip is much much better, if you do this again..."
 funny.1.1: "Now you can think about your life choices"
@@ -259,7 +246,7 @@ funny.2.d: "Seems like you continued deving admin anyway and completely ignored 
 funny.2.1: "This should make you learn your lesson."
 funny_2_million_rebels: "§R986§! §YPretender§! regiment(s) rise up in revolt in §Y[Root.Capital.GetCapitalName]§!"
 
-############## ADVISORS ####################
+############## ADVISORS ####################################################################################################################################################################################
 
 loyal_friend: "Loyal Friend"
 missionary: "Missionary"
@@ -313,93 +300,16 @@ drill_master_desc: "A relentless trainer who transforms raw recruits into a disc
 siege_engineer_desc: "A genius in siegecraft who designs engines of war to breach even the strongest fortifications."
 contractor_desc: "A shrewd organizer of armies and supply lines, ensuring that soldiers and mercenaries alike are well-equipped and well-paid."
 
-
-############## ROLEPLAY ####################
-roleplay_event.1.T: "You did good!"
-roleplay_event.1.D: "Because of good roleplay, have this as a gift from the EU4 gods :D"
-roleplay_event.1.OPT1: "Enjoy"
-cav_ratio_reward: "Roleplay Reward"
-roleplay_event.2.T: "You did good!"
-roleplay_event.2.D: "Because of good roleplay, have this as a gift from the EU4 gods :D"
-roleplay_event.2.OPT1: "Enjoy"
-interest_reward: "Roleplay Reward"
-roleplay_event.3.T: "You did good!"
-roleplay_event.3.D: "Because of good roleplay, have this as a gift from the EU4 gods :D"
-roleplay_event.3.OPT1: "Enjoy"
-naval_reward: "Roleplay Reward"
-roleplay_event.4.T: "You did good!"
-roleplay_event.4.D: "Because of good roleplay, have this as a gift from the EU4 gods :D"
-roleplay_event.4.OPT1: "Enjoy"
-colonist_reward: "Roleplay Reward"
-
-# EXTRA TAGS #
-
-AHU: "Anhui"
-AHU_ADJ: "Anhui"
-AHU_ADJ2: "Anhui"
-
-JIG: "Jiangsu"
-JIG_ADJ: "Jiangsu"
-JIG_ADJ2: "Jiangsu"
-
-LIU: "Liaoning"
-LIU_ADJ: "Liaoning"
-LIU_ADJ2: "Liaoning"
-
-############# FATIMIDS ######################
-
-FAT: "Fatimids"
-FAT_ADJ: "Fatimid"
-FAT_ADJ2: "Fatimid"
-fatimid_maghreb_reform: "Reorganization of the Diwan"
-fatimid_maghreb_reform_desc: "In the Maghreb, revenue has long been squandered by corrupt officials and uneven levies. To uphold the Fatimid Caliphate, we must impose order upon this chaos. By regulating the zakat and jizya, ensuring fair burdens on both believer and dhimmi alike, and curbing the greed of tax-farmers, we shall restore justice while securing the wealth needed to sustain our armies and the da‘wa of the Imam."
-estate_dhimmi_technology_fatimids: "Fatimid Scholars and Engineers"
-estate_dhimmi_technology_fatimids_desc: "The dhimmi communities of the Fatimid Caliphate—Jews, Christians, and others under our protection—possess knowledge in science, administration, and engineering that can strengthen our realm. By granting them patronage and a measure of autonomy, we may harness their talents to advance our state’s learning and technology, though some among the faithful may resent such reliance."
-fatimid_nation_title: "Form the Fatimid Caliphate"
-fatimid_nation_desc: "From the shores of the Maghreb, the Fatimids once rose as the rightful heirs of the Prophet’s family, establishing a mighty caliphate that stretched across North Africa and into the heart of the Middle East. By reviving their legacy, we declare ourselves not merely a kingdom, but the Caliphate itself — a beacon of Shi’a faith, a rival to Abbasid pretenders, and a power destined to rule from Cairo to the farthest frontiers of Islam."
-
-
-
-############# Tamazgha ######################
-
-TAM: "Tamazgha"
-TAM_ADJ: "Amazigh"
-TAM_ADJ2: "Amazigh"
-berber_maghreb_reform: "Raids of Fire"
-berber_maghreb_reform_desc: "The strength of the Berbers lies in their swift horsemen, who strike across desert and mountain with unmatched speed. Loot and plunder have long sustained our tribes, and by embracing this way of war, we ensure that conquest enriches our warriors and fills our coffers. Where our horses ride, fire and spoils shall follow."
-berber_nation_title: "Form Tamazgha"
-berber_nation_desc: "From the rugged Atlas Mountains to the endless sands of the Sahara, the Berber tribes have endured the march of empires and the rule of foreign dynasties. Yet our spirit has never been broken. By uniting our clans under one nation, we cast off division and proclaim a state rooted in our own traditions, language, and strength. No longer fragmented, the Berbers shall stand as masters of the Maghreb and guardians of the desert."
-
-
-############# North German Confed ######################
-
-NGR: "North German Confederation"
-NGR_ADJ: "German"
-NGR_ADJ2: "German"
-form_north_germany_title: "Form North German Confederation"
-form_north_germany_desc: "The northern plains of Germany, from Saxony to the Hanseatic ports, have long been a patchwork of dukes, bishops, and free cities. By bringing these lands together, we can form a powerful North German realm—commanding the trade of the Baltic and North Sea, and standing as a counterweight to the empires of the south."
-north_german_reform: "Reformation of the North"
-north_german_reform_desc: "The lands of Northern Germany have long been fertile ground for religious change, from the Hanseatic cities questioning Rome’s authority to the princes embracing reformist doctrines. By harnessing this spirit of defiance and conviction, we can strengthen our state by"
-
-
-############# South German Confed ######################
-
-
-SGR: "South German Confederation"
-SGR_ADJ: "German"
-SGR_ADJ2: "German"
-form_south_germany_title: "Form South German Confederation"
-form_south_germany_desc: "The lands of Swabia, Bavaria, Franconia, and the Alpine passes have long stood divided, their princes vying for influence within the Holy Roman Empire. By uniting these realms under one banner, we can forge a powerful South German state, strong enough to rival both Austria and Prussia. A new chapter in German history shall begin, with our banner flying over the heart of Central Europe."
-teutonic_holy_order: "Order of the Teutons"
-teutonic_holy_order_desc: "The Catholic princes of the south have long relied on knightly orders to defend their faith and uphold the authority of the Church. From Bavarian castles to Swabian strongholds, these orders combined the devotion of the monk with the discipline of the soldier. By entrusting them with land and privilege, we bind our realm to the sword of Christ, standing as guardians of the old faith in an age of heresy and reform."
-south_german_reform: "Order of the Teutons"
-south_german_reform_desc: "The Catholic princes of the south have long sheltered holy orders within their lands, granting them castles, estates, and authority to root out heresy. By binding ourselves to these knightly institutions, we unite piety with discipline. The sword and the cross shall march together, and our enemies will know us as the heirs of the Teutonic knights and defenders of the Catholic faith."
-south_german_holy_order_tooltip: "Unlock a unique §YHoly Order§! for the §YSouth German Confederation§!"
-
-
-############ Burma ######################################
-
-BRM: "Burma"
-BRM_ADJ: "Burmese"
-BRM_ADJ2: "Burmese"
-
+# Trig Colonies
+canada_colony: "Canada Colony"
+america_colony: "America Colony"
+louisiana_colony: "Lousiana Colony"
+mexico_colony: "Mexico Colony"
+california_colony: "California Colony"
+cascadia_colony: "Cascadia Colony"
+caribbean_colony: "Caribbean Colony"
+colombia_colony: "Colombia Colony"
+brazil_colony: "Brazil Colony"
+argentina_colony: "Argentina Colony"
+peru_colony: "Peru Colony"
+australia_colony: "Australia Colony"

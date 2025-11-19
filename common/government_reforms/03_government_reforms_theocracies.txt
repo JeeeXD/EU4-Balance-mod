@@ -965,6 +965,7 @@ internal_mission_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		tolerance_own = 2
+		stability_cost_modifier = -0.1
 	}
 	custom_attributes = {
 		on_church_built_clergy_loyalty = yes
@@ -986,7 +987,6 @@ mission_to_civilize_reform = {
 		OR = {
 			num_of_colonists = 1
 			has_idea_group = exploration_ideas
-			has_idea_group = expansion_ideas
 		}
 	}
 	modifiers = {
@@ -1013,7 +1013,7 @@ balanced_mission_reform = {
 	icon = "generic_people"
 	allow_normal_conversion = yes
 	modifiers = {
-		devotion = 0.5
+		devotion = 1
 		national_focus_years = -10
 	}
 	custom_attributes = {
@@ -1034,7 +1034,7 @@ mission_to_protect_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
 	modifiers = {
-		defensiveness = 0.1
+		defensiveness = 0.2
 		missionaries = 1
 		prestige_per_development_from_conversion = 0.2
 	}
@@ -1130,7 +1130,7 @@ education_of_the_missionaries_reform = {
 		global_missionary_strength = 0.02
 		#power_points_per_development_from_conversion = 0.25	#For 1.36
 		missionary_maintenance_cost = -0.5
-		max_absolutism = 5
+		max_absolutism = 15
 	}
 }
 
@@ -1149,8 +1149,8 @@ subservient_administrators_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	modifiers = {
-		yearly_corruption = -0.1
-		all_estate_influence_modifier = -0.05
+		yearly_corruption = -0.15
+		all_estate_influence_modifier = -0.1
 	}
 }
 
@@ -1467,7 +1467,7 @@ expel_heathens_reform = {
 	icon = "landscape"
 	allow_normal_conversion = yes
 	modifiers = {
-		development_cost = -0.05
+		development_cost = -0.1
 		culture_conversion_cost = -0.15
 	}
 	#custom_attributes = {
@@ -1507,7 +1507,7 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = 15
+		max_absolutism = 25
 	}
 	
 	ai = {
@@ -1596,7 +1596,7 @@ constitional_theocracy_reform = {
 	allow_normal_conversion = yes
 	fixed_rank = 0
 	modifiers = {
-		years_of_nationalism = -10
+		years_of_nationalism = -2
 	}
 	
 	ai = {
@@ -1609,7 +1609,7 @@ regionally_elected_commanders = {
 	allow_normal_conversion = yes
 	fixed_rank = 0
 	modifiers = {
-		global_unrest = -1
+		global_unrest = -2
 	}
 	
 	potential = {
@@ -2000,8 +2000,7 @@ many_fingers_of_god_reform = {
 		full_idea_group = humanist_ideas
 	}
 	modifiers = {
-		tolerance_heretic = 2	
-		tolerance_heathen = 2
+		all_power_cost = -0.02
 	}
 	ai = {
 		factor = 3
@@ -2025,7 +2024,7 @@ state_of_theologians_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		advisor_pool = 2
+		advisor_pool = 4
 		advisor_cost = -0.2
 	}
 	ai = {

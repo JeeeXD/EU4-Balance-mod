@@ -1,16 +1,15 @@
 #846 - Yucatan
 
-owner = COC 
-controller = COC
+
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Sotuta" 
-trade_goods = fish 
+trade_goods = unknown 
 hre = no 
 base_tax = 4 
 base_production = 4 
 base_manpower = 1 
-is_city = yes
+
 add_core = COC
 
 

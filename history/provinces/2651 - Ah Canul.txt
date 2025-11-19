@@ -1,13 +1,10 @@
 # No previous file for Ah Canul
 
 culture = yucatec
-owner = XIU
-controller = XIU
-add_core = XIU
-is_city = yes
+
 religion = mesoamerican_religion
 capital = "Ah Canul"
-trade_goods = cocoa
+trade_goods = unknown
 hre = no
 base_tax = 3 
 base_production = 3

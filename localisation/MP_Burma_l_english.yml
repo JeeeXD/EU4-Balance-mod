@@ -1,12 +1,10 @@
 ﻿l_english:
 
-estate_jains_nepal_himalayas: "Himalayan Adaptiation"
-estate_jains_nepal_himalayas_tooltip: "Remove the Development Cost Reduction of every owned §YMountains§!, §YGlacial§!, §YHighlands§! and §YHills§! province."
-nep_mountain_expansion_flag_tooltip: "Unlocks §YHimalayan Adaptiation§! privilege for the §YJains§!."
-nep_use_monument_tooltip: "This will allow us to use the monument in this province regardless of its requirements."
-nep_convert_to_cloth_tooltip: "Converts 5 random §YWool§! to §YCloth§!."
-nep_keep_wool_tooltip: "All of our provinces that produce §YWool§! will gain till the end of the game:\n§G+0.5§! Goods Produced"
-nep_arctic_adaptation_tooltip: "Every owned province with §YArctic§! Climate will gain §G-50%§! Development Cost till the end of the game."
+BRM: "Burma"
+BRM_ADJ: "Burmese"
+BRM_ADJ2: "Burmese"
+
+
 ############ MODIFIERS ##############
 
 ############### MISSIONS ###########
@@ -52,8 +50,28 @@ ava_dragon_throne_title: "Seize the Dragon Throne"
 ava_dragon_throne_desc: "We shall be the greatest empire the world has ever seen. Even mighty China shall know our rule. We must seize the Dragon Throne and proclaim a new imperial dynasty."
 ava_dragon_throne_fake_mandate: "Gain §G10.00§! Mandate."
 
-############ EVENTS ###############
-flavor_nepal.1.T: "Monopoly on Wool"
-flavor_nepal.1.D: "The highland pastures of Nepal are filled with hardy sheep and yak, whose wool has become a prized commodity in India and Tibet. Merchants now petition the court to grant them exclusive rights over the wool trade, promising great revenues for the state. Yet such a monopoly risks angering local herders and smaller traders who depend on this vital livelihood. Others, however, suggest that Nepal should not rely on wool alone, and instead invest in developing cloth production, giving our markets a wider variety of goods to sell."
-flavor_nepal.1.OPT1: "Encourage cloth production to diversify our markets."
-flavor_nepal.1.OPT2: "Tighten the monopoly and focus solely on wool.`"
+############ IDEAS ###############
+BRM_ideas: "Burmese Ideas"
+BRM_ideas_start: "Burmese Traditions"
+BRM_ideas_bonus: "Burmese Ambition"
+
+BRM_legacy_of_the_pagan_dynasty: "Legacy of the Pagan Dynasty"
+BRM_legacy_of_the_pagan_dynasty_desc: "The Pagan kings laid the foundation of Burmese civilization, a realm bound by Theravada Buddhism, great pagodas, and royal might. Their legacy endures, guiding our kings to rule with wisdom and devotion."
+
+BRM_rajadhiraja: "Rajadhiraja – King of Kings"
+BRM_rajadhiraja_desc: "As heirs to the ancient monarchs of the Irrawaddy Valley, our kings claim the title ‘Rajadhiraja’ — ruler of rulers. Such divine authority commands the loyalty of men and magnifies our power."
+
+BRM_manu_kye_dhammathat: "The Manu Kye Dhammathat"
+BRM_manu_kye_dhammathat_desc: "Our realm is governed by the *Dhammathat*, the sacred code of law blending Buddhist ethics and royal decree. Justice strengthens the throne, and prosperity flows from righteousness."
+
+BRM_bamar_literature: "Flourishing of Bamar Literature"
+BRM_bamar_literature_desc: "Poets, monks, and scholars have long enriched the Burmese tongue with chronicles and verse. Their works immortalize our triumphs and ensure that wisdom and culture thrive across the kingdom."
+
+BRM_hill_tribes: "The Hill Tribes of the Frontier"
+BRM_hill_tribes_desc: "From the Chin hills to the Shan highlands, the frontier peoples are fierce and loyal when respected. Through diplomacy and shared purpose, we draw their strength into our armies."
+
+BRM_shan_in_line: "The Shan Brought to Heel"
+BRM_shan_in_line_desc: "Once a constant thorn in the side of kings, the Shan states have been subdued and brought into the fold. Their warriors now march beneath our banner, adding their might to our legions."
+
+BRM_provincial_governors: "System of Provincial Governors"
+BRM_provincial_governors_desc: "To rule such vast lands, we empower governors loyal to the crown. Their watchful administration keeps order, curbs corruption, and ensures the King’s will is carried to every province."

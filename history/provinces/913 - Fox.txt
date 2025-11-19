@@ -1,12 +1,9 @@
 #913 - Fox
 
-owner = OEO
-controller = OEO
-add_core = OEO
 culture = chiwere
 religion = totemism
 capital = "Fox"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 2
 base_production = 2

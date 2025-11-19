@@ -1,7 +1,6 @@
 #4394 - Sulimaniyeh
 
-owner = TIM
-controller = TIM
+
 culture = kurdish
 religion = sunni
 capital = "Sulimaniyeh"

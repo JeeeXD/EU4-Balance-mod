@@ -25,26 +25,6 @@ on_expanded_infrastructure = {
 	}
 }
 
-on_war_won = {
-	if = {
-		limit = {
-			ROOT = {
-				mission_completed = eu_generic_a_grand_alliance
-			}
-			FROM = {
-				OR = {
-					is_rival = ROOT
-					is_enemy = ROOT
-				}
-			}
-		}
-		add_power_projection = {
-			type = mission_rewards_power_projection
-			amount = 10
-		}
-	}
-}
-
 on_adm_development = {
 	if = {
 		limit = {
@@ -84,15 +64,6 @@ on_mil_development = {
 			10 = { add_base_manpower = 1 } 
 			90 = {  } 
 		}
-	}
-}
-
-ab_on_admiral_recruited_effect = {
-	if = {
-		limit = {
-			has_country_flag = eu_admiral_navy_tradition
-		}
-		add_navy_tradition = 1
 	}
 }
 

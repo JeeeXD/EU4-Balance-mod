@@ -1,7 +1,7 @@
 #2096 - Damin
 
-owner = BNG
-controller = BNG
+owner = NGP
+controller = NGP
 culture = jharkhandi
 religion = hinduism
 capital = "Deogarh"

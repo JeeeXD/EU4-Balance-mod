@@ -1,16 +1,15 @@
 # - Tucume
 
-owner = CHM
-controller = CHM
+
 culture = chimuan
 religion = inti
 capital = "Tucume"
-trade_goods = cloth
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
+
 add_core = CHM
 
 

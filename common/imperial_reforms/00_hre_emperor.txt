@@ -4,7 +4,7 @@ emperor_reichsreform = {
 		has_dlc = "Emperor"
 	}
 	province = {
-		local_build_cost = -0.1
+		local_build_cost = -0.05
 		local_development_cost = -0.05
 	}
 	on_effect = {
@@ -76,10 +76,6 @@ emperor_perpetual_diet = {
 	all = {
 		stability_cost_modifier = -0.15
 	}
-	
-	emperor = {
-		free_city_imperial_authority = 0.5
-	}
 	on_effect = {
 		custom_tooltip = "PERPETUAL_DIET_ESTABLISHED"
 		hidden_effect = {
@@ -138,7 +134,7 @@ emperor_landfriede = {
 		has_dlc = "Emperor"
 	}
 	all = {
-		technology_cost = -0.15
+		technology_cost = -0.05
 	}
 	emperor = {
 		prestige = 0.5
@@ -147,10 +143,8 @@ emperor_landfriede = {
 		local_institution_spread = 0.3
 	}
 	on_effect = {
-		internal_hre_cb = no
 	}
 	off_effect = {
-		internal_hre_cb = yes
 	}
 	required_reform = emperor_landsknechtswesen
 	gui_container = mainline
@@ -167,7 +161,7 @@ emperor_reichstag_collegia = {
 		has_dlc = "Emperor"
 	}
 	emperor = {
-		max_free_cities = 3
+		envoy_travel_time = -0.2
 	}
 }
 
@@ -187,7 +181,7 @@ emperor_expand_gemeiner_pfennig = {
 		global_manpower_modifier = 0.0075
 	}
 	province = {
-		local_friendly_movement_speed = 0.15
+		local_friendly_movement_speed = 0.1
 	}
 }
 
@@ -239,7 +233,7 @@ emperor_reichskrieg = {
 		has_dlc = "Emperor"
 	}
 	all = {
-		land_morale = 0.1
+		land_morale = 0.05
 	}
 	on_effect = {
 		enable_imperial_realm_war = yes
@@ -291,10 +285,10 @@ emperor_erbkaisertum = {
 		has_dlc = "Emperor"
 	}
 	emperor = {
-		imperial_authority = 0.25
+		land_forcelimit_modifier = 0.1
 	}
 	province = {
-		local_manpower_modifier = 0.25
+		local_manpower_modifier = 0.05
 	}
 	on_effect = {
 		if = {
@@ -323,10 +317,6 @@ emperor_privilegia_de_non_appelando = {
 	}
 	member = {
 		discipline = 0.025
-	}
-	
-	emperor = {
-		imperial_authority = 0.25
 	}
 	on_effect = {
 	

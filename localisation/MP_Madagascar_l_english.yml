@@ -1,7 +1,354 @@
 ﻿l_english:
 
-############ MODIFIERS ##############
 
+MDG: "Madagascar"
+MDG_ADJ: "Malagasay"
+MDG_ADJ2: "Malagasay"
+
+MDC: "Penguin Socialist Sliding Republics"
+MDC_ADJ: "Penguin"
+MDC_ADJ2: "Penguin"
+MDD: "United Penguins of Madagascar"
+MDD_ADJ: "Penguin"
+MDD_ADJ2: "Penguin"
+MDP: "Madagascar"
+MDP_ADJ: "Penguin"
+MDP_ADJ2: "Penguin"
+
+is_madagascar_province_tooltip: "Is a province on Madagascar Island"
+mdg_gain_tooltip: "Every owned province on Madagascar Island will gain the following modifer:"
+mdg_slave_trade: "Madagascar Slave Trade"
+madagascar_nation_title: "Form Madagascar"
+
+penguin_democracy_reform: "Democratic Penguin Republic"
+penguin_communist_reform: "Communion of Penguins"
+############ MODIFIERS ##############
+mdg_kongo_secured: "Supermacy over the Kongo"
+mdg_african_bigboi: "African Hegemon"
+the_two_islands: "Two Islands"
+unifier_of_islands: "Unifier of Islands"
+mdg_australia_company: "Australian Trade Posts"
+mdg_build: "Paid Labour"
+mdg_dev: "Increase Development"
+mdg_prv_trade: "Local Traders"
+mdg_prv_trade2: "Foreign Traders"
+mdg_prod1: "Industrialization"
+mdg_prod2: "Increased Industrialization"
+mdg_fl_extra1: "Recruits"
+mdg_fl_extra2: "Extra Recruits"
+mdg_manu_modifier: "Land Expansion"
+mdg_houshold_modifier: "Slave Soldiers"
+mdg_expand_modifier: "Infrastructure Improvments"
+mdg_dockyards_modifier1: "Seafarers"
+mdg_dockyards_modifier2: "More Seafarers"
+mdg_shipyards_modifier1: "Stolen Ships"
+mdg_shipyards_modifier2: "Captured Ships"
+mdg_impressement_modifier: "Coastal Cannons"
+mdg_tax_modifier1: "Increased Taxation"
+mdg_tax_modifier2: "Excessive Taxation"
+mdg_courthouse_modifier1: "Foreign Innovators"
+mdg_courthouse_modifier2: "European Innovaters"
+mdg_unis_modifier: "Educated People"
+mdg_fort_modifiers: "Defensive Positions"
+mdg_naval_buildup: "Naval Buildup"
+mdg_cape_town: "Cape Town"
 ############### MISSIONS ###########
+mdg_kilwa_title: "Rivalry with Kilwa"
+mdg_kilwa_desc: "Across the channel, the merchants of Kilwa grow rich from gold, ivory, and the flow of Indian Ocean trade. If Madagascar is to rise as a power of the seas, we must challenge their dominance, seize their ports, and claim the riches of the Swahili Coast for ourselves."
+mdg_kongo_title: "Reach the Kongo"
+mdg_kongo_desc: "Beyond the western seas lies the vast and fertile land of the Kongo. Its rivers teem with life, its forests conceal wealth beyond measure, and its kings command great power. By sending expeditions across the ocean, we can bring Madagascar’s influence to Africa’s western shores and forge a new realm that spans both land and sea."
+mdg_african_power_title: "An African Power"
+mdg_african_power_desc: "From the shores of Madagascar, our warriors have crossed seas and conquered coasts, uniting islands and mainland under one banner. Now, our might is recognized across the continent — a true African power, forged in salt, sand, and blood."
+mdg_north_madagascar_title: "Secure the North"
+mdg_north_madagascar_desc: "The rugged highlands and coastal cities of northern Madagascar hold great strategic importance. To unite the island, we must first bring the north under our rule and secure our dominance over every valley and bay."
+mdg_south_africa_title: "Step onto the Mainland"
+mdg_south_africa_desc: "Our warriors have crossed the sea and set foot upon the vast lands of southern Africa. By establishing a foothold there, we proclaim Madagascar’s destiny as a power beyond the island."
+mdg_central_madagascar_title: "Subdue the Highlands"
+mdg_central_madagascar_desc: "The central clans and mountain fortresses stand between us and full control of the island. Their loyalty — or their surrender — will decide who truly rules Madagascar."
+mdg_ceylon_title: "Pearl of the Indian Ocean"
+mdg_ceylon_desc: "Ceylon lies at the crossroads of the Indian Ocean trade routes. Controlling this jewel will secure our access to spices, wealth, and prestige, marking our entry into the great currents of global commerce."
+mdg_south_madagascar_title: "Southern Reaches"
+mdg_south_madagascar_desc: "The southern lands of Madagascar are sparsely settled yet vital for control of the whole island. Bringing them firmly under our authority will complete our dominion over the Red Island."
+mdg_indian_islands_title: "Indian Ocean Islands"
+mdg_indian_islands_desc: "The scattered islands of the Indian Ocean — from the Comoros to the Maldives — beckon with riches and strategic importance. By seizing them, we will weave a web of ports and fortresses across the seas."
+mdg_islands_ruler_title: "Ruler of the Islands"
+mdg_islands_ruler_desc: "Our flag flies above countless islands, each one a stepping stone in our growing maritime empire. From Madagascar, we have become the lords of the waves, masters of the scattered lands of the ocean."
+mdg_islands_galore_title: "Islands Galore"
+mdg_islands_galore_desc: "Every island, from the tiniest atoll to the grandest archipelago, bows to our rule. The seas themselves seem to bear our colors — a vast island empire unrivaled in history or legend."
+mdg_australia_title: "The Southern Continent"
+mdg_australia_desc: "Beyond the endless seas lies a vast and mysterious land — the southern continent. Settling its coasts will grant us untold resources and prove that Madagascar’s reach knows no bounds."
+
+mdg_malaya_title: "Gateway to the East"
+mdg_malaya_desc: "The rich ports of Malaya are the beating heart of the spice trade. To command these waters is to command the wealth of the East itself, and to secure our place among the great maritime powers of the world."
+mdg_workshops_title: "Crafts of the Island"
+mdg_workshops_desc: "Our artisans and craftsmen are the lifeblood of Madagascar’s economy. Establishing workshops across the island will turn raw goods into finished wares, enriching our markets."
+
+mdg_workshops2_title: "Industry of Madagascar"
+mdg_workshops2_desc: "As our craftsmen multiply, the island begins to hum with industry. We must expand our workshops and foster new trades to strengthen our economic foundation."
+
+mdg_fl_title: "Strengthen the Forces"
+mdg_fl_desc: "Our growing realm needs an army worthy of its size. Expanding our force limit ensures we can defend our lands and project power across the seas."
+
+mdg_courthouses_title: "Law and Order"
+mdg_courthouses_desc: "To govern an island as vast and diverse as ours, justice must reach every village and port. Building courthouses will secure fair rule and reduce corruption."
+
+mdg_townhalls_title: "Administrative Reforms"
+mdg_townhalls_desc: "By erecting town halls across Madagascar, we can centralize authority and improve governance, binding the island’s regions closer under our rule."
+
+mdg_dev_north_madagascar_title: "Prosperity in the North"
+mdg_dev_north_madagascar_desc: "The northern lands, once rugged and wild, now stand ready for growth. Through careful planning and investment, we can transform them into centers of trade and culture."
+
+mdg_manus_title: "Manufacturing Power"
+mdg_manus_desc: "Madagascar’s resources are abundant — we need only the means to harness them. By building manufactories, we ensure the island thrives as a center of production and innovation."
+
+mdg_fl2_title: "Army of the Red Island"
+mdg_fl2_desc: "Our growing army now stands as a symbol of Malagasy strength. We must continue to expand and professionalize our forces to defend our empire’s ambitions."
+
+mdg_households_title: "Soldiers’ Households"
+mdg_households_desc: "By granting land and homes to our veterans, we reward loyalty and encourage the growth of a permanent warrior class devoted to the defense of Madagascar."
+
+mdg_dev_central_madagascar_title: "Highland Prosperity"
+mdg_dev_central_madagascar_desc: "The central highlands are the heart of our island. Investing in their development will ensure stability, prosperity, and lasting unity."
+
+mdg_dev_madagascar_title: "Develop the Island"
+mdg_dev_madagascar_desc: "From north to south, from coast to highland, every part of Madagascar must flourish. Let our cities rise and our people prosper beneath one banner."
+
+mdg_marketplaces_title: "Marketplaces of Madagascar"
+mdg_marketplaces_desc: "Trade is the lifeblood of our realm. Building new marketplaces will connect the villages and ports of Madagascar, ensuring goods and wealth flow freely."
+
+mdg_marketplaces2_title: "Island Trade Network"
+mdg_marketplaces2_desc: "Our markets now span the island. By improving infrastructure and expanding our merchant presence, we can dominate commerce both at home and abroad."
+
+mdg_unis_title: "Centers of Learning"
+mdg_unis_desc: "Knowledge is the foundation of progress. Establishing universities will nurture scholars and statesmen capable of guiding Madagascar toward greatness."
+
+mdg_dev_south_madagascar_title: "Southern Growth"
+mdg_dev_south_madagascar_desc: "The southern reaches of Madagascar are ready for renewal. With careful investment, we will transform these lands into fertile and thriving communities."
+
+mdg_expand_infra_title: "Expand Infrastructure"
+mdg_expand_infra_desc: "Roads, ports, and fortifications — all must grow to match our ambitions. A unified, developed island requires the infrastructure to sustain it."
+
+mdg_dockyards2_title: "Modern Dockyards"
+mdg_dockyards2_desc: "Our shipyards must evolve to build greater fleets. With modern facilities, Madagascar can maintain and expand its navy to project power across the oceans."
+
+mdg_shipyards2_title: "Master Shipwrights"
+mdg_shipyards2_desc: "Our shipbuilders are now among the best in the world. By expanding their facilities, we ensure a steady stream of warships ready to defend our island empire."
+
+mdg_forts_title: "Fortify the Island"
+mdg_forts_desc: "Madagascar must never fall to foreign invasion. Strong fortresses will guard our coasts and highlands, making the island an impregnable bastion."
+
+mdg_churches_title: "Temples of the People"
+mdg_churches_desc: "Faith binds our people together. Building temples will strengthen devotion and ensure the spiritual unity of our growing kingdom."
+
+mdg_cathedrals_title: "Grand Temples"
+mdg_cathedrals_desc: "Majestic temples rising across the island proclaim our piety and power. Let them stand as eternal symbols of Madagascar’s divine favor and royal authority."
+
+mdg_dockyards_title: "Expand the Docks"
+mdg_dockyards_desc: "Our coasts teem with life and trade. Expanding our dockyards will let us build ships faster and strengthen our maritime foundation."
+
+mdg_shipyards_title: "Shipyards of the East"
+mdg_shipyards_desc: "With new shipyards lining our shores, Madagascar is poised to become a naval power — its fleets ready to rule the Indian Ocean."
+
+mdg_impressements_title: "Impressment Offices"
+mdg_impressements_desc: "A great navy requires sailors in abundance. By establishing impressment offices, we can ensure our fleets are always fully manned and ready for war."
+
+mdg_defense_army_title: "Defenders of the Island"
+mdg_defense_army_desc: "Our people stand united behind their army. Trained, disciplined, and devoted, our forces form an unbreakable shield around the Red Island."
+mdg_trade_navy_title: "Navy of Merchants"
+mdg_trade_navy_desc: "Trade follows the flag. To control the riches of the seas, we must build a fleet capable of protecting our merchants and securing the trade routes that feed our island’s prosperity."
+
+mdg_pirate_india_title: "Privateeer India"
+mdg_pirate_india_desc: "The coasts of India overflow with wealth, their harbors ripe for plunder. Our daring sailors shall strike swiftly and vanish into the waves, leaving fear — and profit — in their wake."
+
+mdg_pirate_malaya_title: "Privateeer Malaya"
+mdg_pirate_malaya_desc: "From Sumatra to Borneo, the merchants of Malaya grow rich beyond measure. It is only fair that Madagascar takes its share of their gold, by force if necessary."
+
+mdg_fighting_navy_title: "Fleet of War"
+mdg_fighting_navy_desc: "Our fleets must not only carry goods, but command the seas. A strong, disciplined navy will ensure Madagascar’s supremacy against pirates, rivals, and empires alike."
+
+mdg_pirate_china_title: "Privateeer China"
+mdg_pirate_china_desc: "The great fleets of the East sail heavy with silk and porcelain. With daring raids along the Chinese coasts, we will seize wealth that few in the West can even imagine."
+
+mdg_unity_of_madagascar_title: "Unity of Madagascar"
+mdg_unity_of_madagascar_desc: "For too long, the tribes and kingdoms of Madagascar stood divided. Now, united under one crown, we stand as a single people — strong, proud, and ready to face the world together."
+
+mdg_own_trade_title: "Claim Our Trade"
+mdg_own_trade_desc: "No longer shall foreign merchants drain our riches. Madagascar’s traders will dominate the markets of the Indian Ocean, ensuring that the wealth of the sea flows through our ports."
+
+mdg_big_value_node_title: "Wealth of the World"
+mdg_big_value_node_desc: "Trade is power, and power is trade. To master the Indian Ocean, we must command one of its great trade nodes, ensuring that every ship pays tribute to our might."
+
+mdg_pirate_arabs_title: "Privateeer the Arabs"
+mdg_pirate_arabs_desc: "For centuries, the merchants of Arabia have ruled the waves between Africa and India. Our corsairs shall teach them to fear the black sails of Madagascar!"
+
+mdg_penguins_of_madagascar_title: "Penguins of Madagascar"
+mdg_penguins_of_madagascar_desc: "Among our sailors, a band of fearless penguins have risen to fame, cunning, coordinated, and utterly unpredictable. Their exploits have become legend across the seas."
+
+mdg_pirate_spain_title: "Privateeer Iberia"
+mdg_pirate_spain_desc: "The Spanish fleets carry gold from the New World. With courage and guile, we will strike their galleons and return laden with treasures fit for kings."
+
+mdg_pirate_england_title: "Privateeer the Channel"
+mdg_pirate_england_desc: "Even the English, proud masters of the waves, shall tremble before the pirates of Madagascar. Their coasts will learn what it means to challenge the true rulers of the sea."
 
 ############ EVENTS ###############
+
+flavor_mdg.1.T: "Arrival of Penguins?"
+flavor_mdg.1.D: "Apparently this morning, a group of penguins armed with heavy weaponry that we have never seen before came to the island taking control of most villages very quickly. There is a state of panic now as the chief and all his advisors don't know what to do to stop these penguins. It seems the only option is to surrender to them and allow them to control the island."
+flavor_mdg.1.OPT1: "Those damn penguins!"
+
+flavor_mdg.2.T: "East African Slave Trade"
+flavor_mdg.2.D: "The increased development of the island has made the slave trade in Madagscar even larger than it already was. Traders from around Africa and the Indian Ocean now come to madagscar to trade in slaves. This increase in demand has forced us to increase production and prices to counter this high demand."
+flavor_mdg.2.OPT1: "The slave trade shall continue!"
+
+flavor_mdg.3.T: "Pirates of Madagascar"
+flavor_mdg.3.D: "As the penguins settled in, more and more penguins began migrating from the ocean it seems over to out island. The penguins were unable to find a sustainable source of income for the state so they turned towards the waters. Piracy had began with the penguins leading it. Is this really the only way to find gold?"
+flavor_mdg.3.OPT1: "The Pirates of Madagascar will be feared!"
+flavor_mdg.3.OPT2: "Eh, piracy won't help our situation."
+
+flavor_mdg.4.T: "Demands for Change"
+flavor_mdg.4.D: "The penguins living in madagascar have not been enjoying their current way of living it seems, piracy didn't work as it was expected and the economy is failing once more. We don't have enough fish for our population and change is needed. A famous penguin has risen as a local leader, he goes by the name of Flappimir Lenin. He preaches some sort of way of governance called communism. Another popular leader now is Waddack Obamna, it seems on of them will lead this nation."
+flavor_mdg.4.OPT1: "The Penguins follow Flappimir Lenin!"
+flavor_mdg.4.OPT2: "Waddack Obamna knows how to make money!"
+flavor_mdg.4.OPT3: "The pirates will fix this."
+
+flavor_mdg.5.T: "Successor of Flappimir"
+flavor_mdg.5.D: "Our great leader Flappimir Lenin has passed away, resting peacefully now in the ocean. The question now rises however, who is to lead the union after him."
+flavor_mdg.5.OPT1: "Joseph Splatlin shall lead us!"
+flavor_mdg.5.OPT2: "Leon Trotskice is the right choice!"
+flavor_mdg.5.OPT3: "The penguins should decide who to lead the union."
+flavor_mdg.6.T: "Waddack Obamna's term is now over and the new elections are undergoing. Three promising candidates are being nominated to lead the penguins. All three are great leaders but who is the one to take charge?"
+flavor_mdg.6.OPT1: "Duckold Stump barely wins the election."
+flavor_mdg.6.OPT2: "Joe Trident is the successor."
+flavor_mdg.6.OPT2: "The reign of Bernie Sandals will be legendary."
+############ IDEAS ################
+
+### --- Madagascar (Normal) ---
+MDG_ideas: "Madagascar Ideas"
+MDG_ideas_start: "Madagascar Traditions"
+
+MDG_1: "Guardians of the Sea"
+MDG_1_desc: "The waters surrounding our island are both our lifeline and our shield. By mastering naval warfare, we ensure that no invader sets foot upon our sacred shores."
+
+MDG_2: "Masters of the Trade Winds"
+MDG_2_desc: "Our merchants have learned to ride the monsoon winds, connecting the markets of India, Africa, and Arabia. Wherever the breeze blows, so too flows Malagasy silver."
+
+MDG_3: "Legacy of the Highlands"
+MDG_3_desc: "The rugged heartlands of Madagascar have bred a proud and resilient people. United under strong rule, our prestige rises among the nations of the world."
+
+MDG_4: "The Island’s Bounty"
+MDG_4_desc: "From the spices of the coast to the gold of the interior, the wealth of our island is vast. By investing in our lands, we turn natural riches into lasting prosperity."
+
+MDG_5: "The Strength of the People"
+MDG_5_desc: "Every village, every clan, every warrior contributes to the defense of the realm. When our homeland calls, all rise as one to protect it."
+
+MDG_6: "Faith of the Ancestors"
+MDG_6_desc: "The traditions and faith of our ancestors bind our people together. With tolerance and reverence, we maintain harmony among the diverse tribes of our island."
+
+MDG_7: "Walls of Stone and Will"
+MDG_7_desc: "Our forts are not mere walls but symbols of endurance. Against storm or steel, Madagascar stands firm, defended by both stone and spirit."
+
+
+###  Penguins of Madagascar  
+MDG_penguins_ideas: "Penguins of Madagascar Ideas"
+MDG_penguins_ideas_start: "Penguins of Madagascar Traditions"
+
+MDG_penguins_1: "Penguin Command"
+MDG_penguins_1_desc: "Under Skipper’s fearless leadership, the team moves with unity, confidence, and impeccable morale."
+
+MDG_penguins_2: "Kowalski, Analysis!"
+MDG_penguins_2_desc: "Kowalski's intellect has allowed him to take up positions such as being the team's medic as well as head of R&D. He has described himself as a 'slightly mad scientist', but thanks to the trouble his inventions cause, his fellow penguins might say this is an understatement. "
+
+MDG_penguins_3: "Kaboom"
+MDG_penguins_3_desc: "Rico is the ultimate loose cannon and has internalized his role as a demolitions expert. He has an entire munitions department in his gut and the remarkable ability to retrieve on-demand the appropriate bomb or any number of useful items. Can opener? Fishing pole? 10,000 ball bearings? Bass guitar? Got it. KABOOM? KABOOM? KABOOM?"
+
+MDG_penguins_4: "Private’s Charm"
+MDG_penguins_4_desc: "Private’s disarming sweetness opens doors, wins allies, and melts even the coldest of hearts. (get it, cold, haha)"
+
+MDG_penguins_5: "Operation Penguin Slide"
+MDG_penguins_5_desc: "Sliding through the ice and surf at high speed, our penguins slide to battle."
+
+MDG_penguins_6: "Underwater HQ"
+MDG_penguins_6_desc: "Our secret underwater headquarters keeps us ready for any mission, anywhere, anytime."
+
+MDG_penguins_7: "Operation World Domination"
+MDG_penguins_7_desc: "Every plan, every gadget, every mission leads us closer to our goal: global penguin domination—peacefully, of course."
+
+
+
+###  Communist Penguins of Madagascar 
+MDC_ideas: "Penguin Socialist Sliding Republics Ideas"
+MDC_start_ideas: "Penguin Socialist Sliding Republics Traditions"
+
+MDC_1: "The People’s Ice Commune"
+MDC_1_desc: "All penguins work for the good of all penguins. Shared labor, shared reward, shared fish."
+
+MDC_2: "Collective Nest Building"
+MDC_2_desc: "Together, we build stronger, faster, and better. Every wing contributes to the collective."
+
+MDC_3: "March of the Penguins"
+MDC_3_desc: "I wonder what happens when humans see an army of penguins marching with no fear, sliding on ice, going full speed ahead for the glory of Supreme Penguin, Flappimir Lenin. I'll tell you, the all run away"
+
+MDC_4: "Five-Fish Plan"
+MDC_4_desc: "Our economic plan focuses on increasing production and efficiency across all sectors—fish for every beak!"
+
+MDC_5: "Comrade Kowalski’s Calculations"
+MDC_5_desc: "The ability for people to think freely invites penguin innovation like the recently invented fish-o-matic. Comrade Kowalski currently leading out innovation department allows our penguins to develop advanced weapons and mechanisms to store inside of General Rico's gut."
+
+MDC_6: "The Penguin's Factories"
+MDC_6_desc: "You would be suprised at how good penguins are at building factories but they're actually great. The Factories of madagascar work day and night, arming the revolution."
+
+MDC_7: "Penguin International"
+MDC_7_desc: "We stand not alone, but united with all oppressed penguins of the world. King Julien must never rule over madagscar. NEVER!"
+
+
+
+###  Capitalist Penguins of Madagascar 
+MDD_ideas: "United Penguins of Madagascar Ideas"
+MDD_start_ideas: "United Penguins of Madagascar Traditions"
+
+MDD_1: "PenguinCo Holdings"
+MDD_1_desc: "Our corporate empire expands across oceans. You'll now find penguin merchants every where in the world, each port if it contains fish then a penguin will be there. Subsidiaries in every port, profits in every pouch."
+
+MDD_2: "Monopolize the Fish Market"
+MDD_2_desc: "Control the flow of fish, and you control the economy. The market belongs to PenguinCo."
+
+MDD_3: "Penguin Intelligence Agency"
+MDD_3_desc: "The establishment of the PIA has enabled our great natino of Madagascar to always be one step ahead. Why compete fairly when you can buy, bribe, or ‘borrow’ your rivals’ secrets? Certainly that pesky lemur will stay away now."
+
+MDD_4: "Media Control"
+MDD_4_desc: "The illusion of free speech allows our penguins to feel happy that they can voice their opinion but in reality we can just completely brainwash them with ideas that fit out agenda, like the hatred of lemurs."
+
+MDD_5: "Operation Buyout"
+MDD_5_desc: "Why conquer when you can acquire? Our investments bring the ice under our banner."
+
+MDD_6: "Economic Forecasting"
+MDD_6_desc: "What's Inflation? Penguin don't understand that word."
+
+MDD_7: "Penguin Trade Center"
+MDD_7_desc: "Trade never stops in our icy marketplace. Wealth flows like cold, delicious water. Certainly these two great towers will not cause any future harm......"
+
+
+###  Pirate Penguins of Madagascar 
+MDP_ideas: "Pirate Penguins Ideas"
+MDP_ideas_start: "Pirate Penguins Traditions"
+
+MDP_1: "Feathers of Fortune"
+MDP_1_desc: "To the daring go the spoils! Every raid strengthens our fleets and fills our holds with treasure."
+
+MDP_2: "Rico’s Boomsticks"
+MDP_2_desc: "Rico arms every ship with explosive surprises—sometimes intentionally."
+
+MDP_3: "The Black Ice Fleet"
+MDP_3_desc: "Our ships glide like shadows across the sea, swift and silent until the penguins roar."
+
+MDP_4: "Calculated Raids"
+MDP_4_desc: "Every plunder is meticulously planned by Captain Kowalski and executed with mathematical precision."
+
+MDP_5: "Pirate Charm"
+MDP_5_desc: "Private’s polite manner makes even our enemies second-guess whether they’ve just been robbed."
+
+MDP_6: "Treasure Coves of Madagascar"
+MDP_6_desc: "Hidden bays filled with plundered wealth fund our next great adventures."
+
+MDP_7: "The Winged Penguins"
+MDP_7_desc: " A cry for help in time of need, await relief from holy league. 60 days of siege, outnumbered and weak. Sent a message on the ice, wounded penguins left to die. Will they hold the wall or will the city fall? … Dedication, Dedication. They're outnumbered 15 to one, and the battle's begun … Then the winged penguins arrived, coming down the glacierside. Then the winged penguins arrived, coming down they turned the tide"

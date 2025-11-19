@@ -11,10 +11,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/hint_objectivebonus.dds"
 	}
 	spriteType = {
-		name = "GFX_achievement_empty_entry_bg"
-		texturefile = "gfx/interface/achievements_entry_bg.dds"
-	}
-	spriteType = {
 		name = "GFX_icon_age_of_revolutions_g"
 		texturefile = "gfx/interface/ages/icon_age_of_revolutions_g.dds"
 	}

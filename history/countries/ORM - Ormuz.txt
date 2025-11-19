@@ -16,7 +16,7 @@ religious_school = maliki_school
 		mil = 2
 		adm = 2
 	}
-	add_piety = 0.1
+	add_piety = -0.5
 }
 
 1465.1.1 = {

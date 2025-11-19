@@ -1109,6 +1109,11 @@ JIG = "countries/Jiangsu.txt"
 AHU = "countries/Anhui.txt"
 LIU = "countries/Liaoning.txt"
 
+#Funny
+MDP = "countries/MadagascarP.txt"
+MDC = "countries/MadagascarC.txt"
+MDD = "countries/MadagascarD.txt"
+
 #Mod Formables
 FAT = "countries/Fatimids.txt"
 TAM = "countries/Tamazgha.txt"

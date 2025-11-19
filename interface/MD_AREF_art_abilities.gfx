@@ -462,8 +462,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/ab_md_embrace_national_pride.dds"
 	}
 	spriteType = {
-		name = "GFX_ab_md_1800s_subject_integration"
-		texturefile = "gfx/interface/ages/ab_md_subject_integration.dds"
+		name = "GFX_ab_ava_reduced_lib_desire"
+		texturefile = "gfx/interface/ages/ab_ava_reduced_lib_desire.dds"
 	}
 	spriteType = {
 		name = "GFX_ab_md_1800s_prestigious_court"

@@ -1,13 +1,10 @@
 # 2022 - Haida
 
-owner = HDA
-controller = HDA
-add_core = HDA
-is_city = yes
+
 culture = haida
 religion = totemism 
 capital = "Haida"
-trade_goods = fish
+trade_goods = unknown
 hre = no 
 base_tax = 1 
 base_production = 1 

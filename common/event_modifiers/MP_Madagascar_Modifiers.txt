@@ -1,0 +1,121 @@
+mdg_kongo_secured = {
+	core_creation = -0.25
+	ae_impact = -0.33
+}
+
+mdg_african_bigboi = {
+	infantry_fire = 0.5
+}
+
+the_two_islands = {
+	global_naval_engagement_modifier = 0.2
+	naval_morale = 0.1
+}
+
+unifier_of_islands = {
+	development_cost_modifier = -0.1
+}
+
+mdg_australia_company = {
+	merchants = 1
+}
+
+mdg_build = {
+	build_cost = -0.1
+	build_time = -0.5
+}
+
+mdg_dev = {
+	development_cost = -0.2
+}
+
+mdg_prv_trade = {
+	province_trade_power_modifier = 0.25
+}
+
+mdg_prv_trade2 = {
+	province_trade_power_modifier = 0.5
+}
+
+mdg_prod1 = {
+	trade_goods_size = 0.5
+}
+
+mdg_prod2 = {
+	trade_goods_size = 1
+}
+
+mdg_fl_extra1 = {
+	local_manpower = 750
+}
+
+mdg_fl_extra2 = {
+	local_manpower = 1500
+}
+
+mdg_manu_modifier = {
+	allowed_num_of_manufactories = 1
+}
+
+mdg_houshold_modifier = {
+	local_regiment_cost = -0.25
+}
+
+mdg_expand_modifier = {
+	allowed_num_of_buildings = 1
+}
+
+mdg_dockyards_modifier1 = {
+	local_sailors_modifier = 0.33
+}
+
+mdg_dockyards_modifier2 = {
+	local_sailors_modifier = 0.75
+}
+
+mdg_shipyards_modifier1 = {
+	global_ship_cost = -0.15
+}
+
+mdg_shipyards_modifier2 = {
+	global_ship_cost  = -0.25
+}
+
+mdg_impressement_modifier = {
+	block_slave_raid = yes
+	local_own_coast_naval_combat_bonus = 1
+}
+
+mdg_tax_modifier1 = {
+	tax_income = 12
+}
+
+mdg_tax_modifier2 = {
+	tax_income = 24
+}
+
+mdg_courthouse_modifier1 = {
+	institution_growth = 1
+}
+
+mdg_courthouse_modifier2 = {
+	institution_growth = 2
+	local_centralize_state_cost = -0.25
+}
+
+mdg_unis_modifier = {
+	local_development_cost_modifier = -0.05
+}
+
+mdg_fort_modifiers = {
+	defensiveness = 0.15
+}
+
+mdg_naval_buildup = {
+	global_ship_cost = -0.1
+	global_ship_recruit_speed = -0.25
+}
+
+mdg_cape_town = {
+	province_trade_power_modifier = 0.2
+}

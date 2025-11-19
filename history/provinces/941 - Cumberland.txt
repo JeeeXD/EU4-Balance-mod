@@ -1,13 +1,9 @@
 #941 - Cumberland
 
-owner = CCA
-controller = CCA
-add_core = CCA
-is_city = yes
 culture = yuchi
 religion = totemism
 capital = "Ouasioto"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1

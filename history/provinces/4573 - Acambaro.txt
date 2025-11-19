@@ -2,9 +2,7 @@
 
 culture = otomi
 religion = nahuatl
-owner = OTO
-controller = OTO
-add_core = OTO
+
 capital = "Acambaro"
 trade_goods = wool
 hre = no

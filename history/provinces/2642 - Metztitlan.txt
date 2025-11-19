@@ -1,13 +1,10 @@
 # No previous file for Metztitlan
 
-owner = OTO
-controller = OTO
-add_core = OTO
-is_city = yes
+
 culture = otomi
 religion = nahuatl
 capital = "Metztitlan"
-trade_goods = grain
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

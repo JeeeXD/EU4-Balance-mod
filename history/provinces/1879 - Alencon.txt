@@ -13,7 +13,6 @@ trade_goods = livestock
 base_manpower = 3
 add_core = ALE
 add_core = ENG
-add_core = FRA
 add_local_autonomy = 80
 discovered_by = eastern
 discovered_by = western

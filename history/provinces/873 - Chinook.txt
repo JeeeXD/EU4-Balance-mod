@@ -1,13 +1,10 @@
 #873 - Chinook
 
-owner = CNK
-controller = CNK
-add_core = CNK
-is_city = yes
+
 culture = chinook
 religion = totemism
 capital = "Chinook" 
-trade_goods = fur 
+trade_goods = unknown 
 hre = no 
 base_tax = 2 
 base_production = 2

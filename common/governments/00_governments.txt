@@ -131,6 +131,8 @@ monarchy = {
 				gothic_monarchy_reform
 				# MOD
 				ilkhanate_government_reform
+
+				polynesian_kingdom
 			}
 		}
 		hereditary_vs_nobility = {
@@ -343,7 +345,6 @@ monarchy = {
 				vozove_hradby_reform
 				russian_mercenary_guard_reform 
 
-				CLI_militarist
 			}
 		}
 		deliberative_assembly = {
@@ -676,6 +677,9 @@ republic = {
 				egyptian_government_reform
 				city_alliance_reform
 				turkoman_ottoman_institutions
+
+				penguin_democracy_reform
+				penguin_communist_reform
 			}
 		}
 		republican_virtues = {
