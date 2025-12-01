@@ -1371,7 +1371,7 @@ age_of_revolutions = {
 				on_age_ability_taken = { age = age_of_revolutions }
 			}
 			allow = {
-				tag = PRU
+				is_or_was_tag = { tag = PRU }
 			}
 			modifier = {
 				fire_damage_received = -0.2
@@ -1458,7 +1458,7 @@ age_of_revolutions = {
 				on_age_ability_taken = { age = age_of_revolutions }
 			}
 			modifier = {
-				administrative_efficiency = 0.05
+				land_forcelimit_modifier = 0.15
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
