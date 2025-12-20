@@ -55,6 +55,8 @@ influence_subject_reform = {
 		clr_country_flag = subject_goods_bonus
 		clr_country_flag = subject_military_bonus_mp
 		clr_country_flag = subject_tax_bonus_mp
+		clr_country_flag = subject_development_bonus_mp
+		clr_country_flag = subject_movement_bonus_mp
 	}
 }
 

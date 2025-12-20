@@ -465,7 +465,6 @@ celestial_empire = {
 	icon = "celestial_empire"
 	allow_normal_conversion = no
 	potential = {
-		always = no
 		if = {
 			limit = {
 				has_dlc = "Mandate of Heaven"
@@ -643,7 +642,6 @@ chinese_warlord = {
 	modifiers = {
 		manpower_recovery_speed = 0.25
 		governing_capacity = 500
-		liberty_desire = 50
 	}
 	
 	ai = {
@@ -2264,12 +2262,18 @@ al_andalusia_government = {
 		idea_cost = -0.1
 		tolerance_of_heathens_capacity = 2
 		tolerance_heathen = 1
+		vassal_income = 0.33
 	}
+	has_pashas = yes
+	has_janissaries = yes
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		custom_attributes = {
 			allow_piety_switch_decision = yes	#Enables a decision which gives 1 stabhit, but turns your piety 180�
 		}
+	}
+	government_abilities = {
+		feudal_theocracy_mechanic
 	}
 }
 
@@ -3148,8 +3152,8 @@ mandala_reform = {
 	}
 	legacy_equivalent = despotic_monarchy
 	modifiers = {
-		vassal_income = 0.15
-		vassal_forcelimit_bonus = 1
+		vassal_income = 0.33
+		vassal_forcelimit_bonus = 2
 	}
 	free_concentrate_development = yes
 }
@@ -3910,7 +3914,9 @@ livonian_naval_monarchy = {
 		development_cost = -0.1
 		allowed_marine_fraction = 0.5
 		monarch_diplomatic_power = 2
-		burghers_loyalty_modifier = 0.1		
+		burghers_loyalty_modifier = 0.1	
+		global_naval_engagement_modifier = 0.1
+			
 	}
 	
 	removed_effect = {
@@ -4217,8 +4223,8 @@ livonian_diplomatic_monarchy = {
 		diplomatic_reputation = 2
 		vassal_forcelimit_bonus = 0.5
 		vassal_income = 0.5
-		global_manpower_modifier = -0.33
-		land_forcelimit_modifier = -0.33
+		global_manpower_modifier = -0.15
+		land_forcelimit_modifier = -0.15
 	}
 
 	conditional = {
@@ -4351,7 +4357,6 @@ livonian_admiral_monarchy = {
 
 	modifiers = {
 		allowed_marine_fraction = 0.25
-		governing_capacity_modifier = -0.25
 		naval_forcelimit_modifier = 0.33
 		global_sailors_modifier = 0.25
 		ship_durability = 0.05
@@ -4828,8 +4833,11 @@ grant_noble_castle_rights_reform = {
 			num_of_owned_provinces_with = {
 				OR = {
 					has_building = fort_15th
+					#has_building = fort3
 					has_building = fort_16th
+					#has_building = fort5
 					has_building = fort_17th
+					#has_building = fort7
 					has_building = fort_18th
 				}
 				value = 5

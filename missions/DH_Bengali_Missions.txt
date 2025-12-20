@@ -1,0 +1,2320 @@
+bng_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		OR = {
+			tag = BNG
+			AND = {
+				was_tag = BNG
+				OR = {
+					tag = BHA
+					tag = HIN
+				}
+			}
+		}
+		has_dlc = "Dharma"
+
+	}
+
+	bng_conquer_orissa = {
+		icon = mission_conquer_cuttack
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+			area = orissa_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			orissa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bng_orissa_conquest"
+				duration = 7300
+			}
+			jharkhand_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_mahanadi_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			garjat_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_garjat_fealty = {
+		icon = mission_demand_garjat_fealty
+		position = 2
+		required_missions = {
+			bng_conquer_orissa
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = jharkhand_area
+				area = upper_mahanadi_area
+				area = garjat_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			jharkhand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_mahanadi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			garjat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "garjat_fealty"
+				duration = 7300
+			}
+			baghelkhand_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			gondwana_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_malwa = {
+		icon = mission_conquer_malwa_bng
+		position = 3
+		required_missions = {
+			bng_conquer_jaunpur bng_garjat_fealty
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = gird_area
+				area = bundelkhand_area
+				area = malwa_area
+				area = baghelkhand_area
+				area = gondwana_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			gird_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bundelkhand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			malwa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baghelkhand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gondwana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_prestige = 20
+			add_estate_influence_modifier = {
+				estate = estate_rajput
+				influence = -10
+				desc = EST_VAL_BNG_RAJPUTS_WEAKENED
+				duration = -1
+			}
+
+		}
+	}
+
+	bng_conquer_multan = {
+		icon = mission_advance_to_the_arabian_sea
+		position = 5
+		required_missions = {
+			bng_conquer_delhi
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = multan_area
+				area = sindh_area
+				area = northern_sindh_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			multan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = "bng_arabian_sea_trade"
+				duration = 7300
+			}
+
+		}
+	}
+
+	bng_mint_towns = {
+		icon = mission_establish_mint_towns
+		position = 7
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			treasury = 1000
+			workshop = 10
+
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "mint_towns_bng"
+				duration = 7300
+			}
+
+		}
+	}
+
+	bng_manufactories = {
+		icon = mission_modernize_production
+		position = 8
+		required_missions = {
+			bng_mint_towns bng_textile_trade
+		}
+		provinces_to_highlight = { }
+		trigger = {
+			textile = 5
+			plantations = 5
+
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = "bng_textiles"
+				duration = 7300
+			}
+
+		}
+	}
+
+	bng_colonial_endevours = {
+		icon = mission_colonial
+		position = 9
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_malaya_colonies = {
+		icon = mission_colonize_the_west
+		position = 10
+		required_missions = {
+			bng_colonial_endevours
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_malayan_trade = {
+		icon = mission_mnd_maj_rein_in_brunei
+		position = 11
+		required_missions = {
+			bng_malaya_colonies
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_shipyards = {
+		icon = mission_grand_bengali_shipyards
+		position = 12
+		required_missions = {
+			bng_ships1
+		}
+		provinces_to_highlight = { }
+		trigger = {
+			grand_shipyard = 10
+			num_of_heavy_ship = 50
+
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				add_innovativeness_big_effect = yes
+			}
+			add_country_modifier = {
+				name = "bng_proto_industrial_shipyards"
+				duration = -1
+			}
+
+		}
+	}
+
+	bng_barracks = {
+		icon = mission_recruit_streltsy
+		position = 15
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_admirals = {
+		icon = mission_raid_on_iceland
+		position = 16
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_naval_supplies = {
+		icon = mam_highway_empire
+		position = 17
+		required_missions = {
+			bng_fair_balance bng_admirals
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_forcelimit = {
+		icon = mission_ottoman_early_army
+		position = 18
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_trad_and_prof = {
+		icon = professional_army
+		position = 19
+		required_missions = {
+			bng_forcelimit
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+bng_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BNG
+			AND = {
+				was_tag = BNG
+				OR = {
+					tag = BHA
+					tag = HIN
+				}
+			}
+		}
+
+	}
+
+	bng_conquer_jaunpur = {
+		icon = mission_the_ganges_campaign
+		position = 2
+		required_missions = {
+			bng_army
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bihar_area
+				area = oudh_area
+				area = purvanchal_area
+				area = lower_doab_area
+				area = katehar_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			bihar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oudh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			purvanchal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_doab_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			katehar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			upper_doab_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sirhind_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lahore_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			gird_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			bundelkhand_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			malwa_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_delhi = {
+		icon = mission_onward_to_lahore
+		position = 4
+		required_missions = {
+			bng_conquer_jaunpur
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = upper_doab_area
+				area = sirhind_area
+				area = lahore_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			upper_doab_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sirhind_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lahore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_army_tradition = 20
+			multan_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sindh_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_sindh_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_grand_trunk_road = {
+		icon = mission_the_grand_trunk_road_bng
+		position = 5
+		required_missions = {
+			bng_conquer_delhi
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lahore_area
+				area = sirhind_area
+				area = upper_doab_area
+				area = lower_doab_area
+				area = purvanchal_area
+				area = bihar_area
+				area = gaur_area
+				area = east_bengal_area
+				province_id = 524
+				province_id = 507
+				province_id = 1343
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				province_id = 507
+				province_id = 524
+				province_id = 1343
+			}
+
+		}
+		trigger = {
+			507 = {
+				is_strongest_trade_power = ROOT
+			}
+			524 = {
+				is_strongest_trade_power = ROOT
+			}
+			1343 = {
+				is_strongest_trade_power = ROOT
+			}
+			lahore_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			sirhind_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			upper_doab_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			lower_doab_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			purvanchal_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			bihar_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			gaur_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+			east_bengal_area = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					devastation = 1
+				}
+			}
+
+		}
+		effect = {
+			custom_tooltip = dlh_grand_trunk_road.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = lahore_area
+							area = sirhind_area
+							area = upper_doab_area
+							area = lower_doab_area
+							area = purvanchal_area
+							area = bihar_area
+							area = gaur_area
+							area = east_bengal_area
+						}
+					}
+					add_province_modifier = {
+						name = "dlh_grand_trunk_road_modifier"
+						duration = -1
+					}
+				}
+			}
+			bengal_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			hindusthan_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_textile_trade = {
+		icon = mission_gujarati_textiles
+		position = 7
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_colonise_australia = {
+		icon = settle_austrialasia
+		position = 10
+		required_missions = {
+			bng_colonial_endevours
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_ships1 = {
+		icon = mission_launch_a_flagship
+		position = 11
+		required_missions = {
+			bng_start_naval_production bng_clear_delta
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_sailors = {
+		icon = mission_sailor_boat
+		position = 12
+		required_missions = {
+			bng_ships1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_more_estate = {
+		icon = mission_noble_council
+		position = 13
+		required_missions = {
+			bng_estate_love_you
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_rivers_on_both_sides = {
+		icon = mission_fortify_mandu
+		position = 14
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_generals = {
+		icon = mission_end_tamil_insurgency
+		position = 15
+		required_missions = {
+			bng_rivers_on_both_sides
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_siege = {
+		icon = mission_unite_home_region
+		position = 19
+		required_missions = {
+			bng_forcelimit
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+bng_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BNG
+			AND = {
+				was_tag = BNG
+				OR = {
+					tag = BHA
+					tag = HIN
+				}
+			}
+		}
+
+	}
+
+	bng_army = {
+		icon = mission_gunpowder_warfare
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			mil_tech = 4
+			army_size_percentage = 1
+			total_development = 200
+
+		}
+		effect = {
+			bihar_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			oudh_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			purvanchal_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_doab_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			katehar_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_tiger_mission = {
+		icon = mission_the_tiger_triumphant
+		position = 6
+		required_missions = {
+			bng_grand_trunk_road bng_conquer_china
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = hindusthan_region
+				region = bengal_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			stability = 2
+			hindusthan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bengal_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = flavor_bng.12
+				}
+			}
+			tooltip = {
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+						}
+					}
+					set_government_rank = 3
+				}
+				add_prestige = 20
+				capital_scope = {
+					add_base_tax = 4
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				add_country_modifier = {
+					name = "tiger_triumphant"
+					duration = 18250
+				}
+			}
+
+		}
+	}
+
+	bng_control_trade = {
+		icon = mission_mal_riches_of_trade
+		position = 8
+		required_missions = {
+			bng_own_local_trade
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_foreign_immigrants = {
+		icon = immaculate_government
+		position = 9
+		required_missions = {
+			bng_control_trade
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_persian_literature = {
+		icon = per_sino_persians_relations
+		position = 10
+		required_missions = {
+			bng_foreign_immigrants
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_estate_love_you = {
+		icon = balance_the_estates
+		position = 12
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_crownland_or_no_crownland = {
+		icon = mission_prosperity_in_bengal
+		position = 13
+		required_missions = {
+			bng_estate_love_you
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_resist_outsiders = {
+		icon = per_create_the_ghulams
+		position = 17
+		required_missions = {
+			bng_fair_balance
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_ethiopian_wanderers = {
+		icon = mission_envoy_to_ethiopia
+		position = 18
+		required_missions = {
+			bng_resist_outsiders
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+bng_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BNG
+			AND = {
+				was_tag = BNG
+				OR = {
+					tag = BHA
+					tag = HIN
+				}
+			}
+		}
+
+	}
+
+	bng_conquer_arakan = {
+		icon = mission_end_arakan_piracy
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+			area = arakan_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			arakan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_light_ship = 10
+			navy_size_percentage = 1
+
+		}
+		effect = {
+			add_navy_tradition = 25
+			upper_burma_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_burma_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_burma_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_burma = {
+		icon = mission_conquer_burma
+		position = 3
+		required_missions = {
+			bng_conquer_arakan bng_conquer_assam
+		}
+		provinces_to_highlight = {
+			region = burma_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			burma_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			custom_tooltip = bng_burma.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = burma_region
+					}
+					add_province_modifier = {
+						name = "bng_conquest_burma"
+						duration = 7300
+					}
+				}
+			}
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_china = {
+		icon = mission_defy_the_dragon
+		position = 5
+		required_missions = {
+			bng_conquer_burma
+		}
+		provinces_to_highlight = {
+			area = yun_gui_borderland_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			yun_gui_borderland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				is_subject_of_type = tributary_state
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bng_defied_china"
+				duration = -1
+			}
+
+		}
+	}
+
+	bng_own_local_trade = {
+		icon = mission_arabian_ports
+		position = 7
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_silver_taka = {
+		icon = mission_iron_and_copper
+		position = 8
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_china_trade = {
+		icon = mission_open_up_china
+		position = 9
+		required_missions = {
+			bng_silver_taka bng_control_trade
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_start_naval_production = {
+		icon = mission_longships
+		position = 10
+		required_missions = {
+			bng_china_trade
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_mosque_expansion = {
+		icon = mission_mosque
+		position = 11
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_artillery = {
+		icon = mission_cannons_firing
+		position = 14
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_fair_balance = {
+		icon = mission_mnd_dai_control_the_army
+		position = 16
+		required_missions = {
+			bng_war_elephants bng_artillery bng_barracks bng_generals
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_cohesive_army = {
+		icon = per_butcher_black_sheep
+		position = 18
+		required_missions = {
+			bng_resist_outsiders bng_expansion_of_arty
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+bng_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BNG
+			AND = {
+				was_tag = BNG
+				OR = {
+					tag = BHA
+					tag = HIN
+				}
+			}
+		}
+
+	}
+
+	bng_conquer_koch = {
+		icon = mission_conquer_koch
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 562
+				province_id = 2042
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			562 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2042 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			assam_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tripura_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			naga_hills_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_assam = {
+		icon = mission_conquer_assam
+		position = 2
+		required_missions = {
+			bng_conquer_koch
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_bengal_area
+				area = assam_area
+				area = tripura_area
+				area = naga_hills_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			north_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			assam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripura_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			naga_hills_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_yearly_manpower = 1
+			kachin_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			chindwin_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			karenni_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			shan_hill_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+
+		}
+	}
+
+	bng_conquer_nepal = {
+		icon = mission_se_platform_mounds
+		position = 4
+		required_missions = {
+			bng_conquer_burma
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_sufis = {
+		icon = mission_patronize_sufi_scholars
+		position = 9
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			NOT = {
+				piety = -0.33
+			}
+			temple = 5
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bng_sufi_mystic_settlers"
+				duration = 7300
+			}
+
+		}
+	}
+
+	bng_clear_delta = {
+		icon = mission_clear_the_delta
+		position = 10
+		required_missions = {
+			bng_sufis
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2039
+				province_id = 561
+				province_id = 564
+				province_id = 568
+				province_id = 2046
+				province_id = 4474
+				province_id = 4475
+			}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+
+		}
+		trigger = {
+			2039 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			561 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			564 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			568 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			2046 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			4475 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			4474 = {
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = clear_delta_tooltip
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+
+		}
+		effect = {
+			set_country_flag = bng_delta_flag
+			hidden_effect = {
+				country_event = {
+					id = flavor_bng.4
+				}
+			}
+			tooltip = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 2039
+							province_id = 561
+							province_id = 564
+							province_id = 568
+							province_id = 2046
+							province_id = 4474
+							province_id = 4475
+						}
+					}
+					add_base_production = 1
+					add_province_modifier = {
+						name = "bng_delta_reclaimed"
+						duration = -1
+					}
+				}
+			}
+
+		}
+	}
+
+	bng_conversion = {
+		icon = mission_convert_bengal
+		position = 12
+		required_missions = {
+			bng_clear_delta bng_mosque_expansion
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_bengal_area
+				area = gaur_area
+				area = west_bengal_area
+				province_id = 2046
+			}
+			NOT = {
+				religion = ROOT
+			}
+
+		}
+		trigger = {
+			east_bengal_area = {
+				type = all
+				religion = ROOT
+			}
+			gaur_area = {
+				type = all
+				religion = ROOT
+			}
+			west_bengal_area = {
+				type = all
+				religion = ROOT
+			}
+			2046 = {
+				religion = ROOT
+			}
+
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "converted_bengal"
+				duration = 7300
+			}
+
+		}
+	}
+
+	bng_all_muslims = {
+		icon = mission_islamic_golden_age
+		position = 13
+		required_missions = {
+			bng_conversion
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_river_transporters = {
+		icon = mission_polynesian_navy_build
+		position = 14
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_war_elephants = {
+		icon = mission_a_million_elephants
+		position = 15
+		required_missions = {
+			bng_river_transporters
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_expansion_of_arty = {
+		icon = per_create_the_tupchi
+		position = 17
+		required_missions = {
+			bng_fair_balance
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	bng_own_all_iron = {
+		icon = saxon_manufacturing
+		position = 19
+		required_missions = {
+			bng_expansion_of_arty
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+
+hin_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = HIN
+			tag = BHA
+		}
+		was_tag = BNG
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	hin_west_india = {
+		icon = mission_unite_west_india
+		required_missions = {  }
+		position = 20
+		provinces_to_highlight = {
+			region = west_india_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_india_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			country_event = { id = india_mission_events.1 }
+			khorasan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_khorasan = {
+		icon = mission_into_the_west
+		required_missions = { hin_west_india }
+		position = 21
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			khorasan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			persia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_persia = {
+		icon = mission_conquer_persia
+		required_missions = { hin_khorasan }
+		position = 22
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "akk_persia"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+}
+
+hin_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = HIN
+			tag = BHA
+		}
+		was_tag = BNG
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	hin_hindustan = {
+		icon = mission_unite_hindustan
+		required_missions = {  }
+		position = 20
+		provinces_to_highlight = {
+			region = hindusthan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hindusthan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = hinduism
+				}
+				country_event = { id = india_mission_events.4 }
+			}
+			if = {
+				limit = {
+					religion_group = muslim
+				}
+				country_event = { id = india_mission_events.3 }
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = hinduism
+					}
+					NOT = {
+						religion_group = muslim
+					}
+				}
+				add_prestige = 20
+				add_yearly_manpower = 5
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_arabian_trade = {
+		icon = mission_dharma_mission_arabian_trade
+		required_missions = { hin_west_india }
+		position = 21
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1334
+				province_id = 4346
+			}
+		}
+		trigger = {
+			1334 = {
+				is_strongest_trade_power = ROOT
+			}
+			4346 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bng_arabian_sea_trade"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_riches = {
+		icon = mission_dharma_mission_the_riches_of_india
+		required_missions = { hin_india }
+		position = 22
+		provinces_to_highlight = {
+		}
+		trigger = {
+			production_leader = {
+				trade_goods = spices
+			}
+			trading_bonus = {
+				trade_goods = spices
+				value = yes
+			}
+			production_leader = {
+				trade_goods = silk
+			}
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
+			}
+			production_leader = {
+				trade_goods = gems
+			}
+			trading_bonus = {
+				trade_goods = gems
+				value = yes
+			}
+			OR = {
+				AND = {
+					production_leader = {
+						trade_goods = cotton
+					}
+					trading_bonus = {
+						trade_goods = cotton
+						value = yes
+					}
+				}
+				AND = {
+					production_leader = {
+						trade_goods = cloth
+					}
+					trading_bonus = {
+						trade_goods = cloth
+						value = yes
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hin_riches_modifier"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_industrial = {
+		icon = mission_industrialize_bengal
+		required_missions = { hin_riches }
+		position = 23
+		provinces_to_highlight = {
+			region = bengal_region
+		}
+		trigger = {
+			2081 = {
+				owned_by = ROOT
+				development = 20
+				OR = {
+					has_building = furnace
+					has_building = wharf
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = bengal_region
+				has_building = grand_shipyard
+			}
+			bengal_region = {
+				type = all
+				has_manufactory_trigger = yes
+			}
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				add_innovativeness_big_effect = yes
+			}
+			add_country_modifier = {
+				name = "industrialized_bengal"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+}
+
+hin_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = HIN
+			tag = BHA
+		}
+		was_tag = BNG
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	hin_deccan = {
+		icon = mission_unite_the_deccan
+		required_missions = {  }
+		position = 20
+		provinces_to_highlight = {
+			region = deccan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			deccan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			country_event = { id = india_mission_events.2 }
+			add_prestige = 20
+			add_army_tradition = 15
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_india = {
+		icon = mission_indian_empire
+		required_missions = { hin_deccan  hin_hindustan hin_west_india hin_bengal hin_south_india }
+		position = 21
+		provinces_to_highlight = {
+			superregion = india_superregion
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			stability = 2
+			india_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_unity = {
+		icon = mission_dharma_mission_religious_harmony
+		required_missions = { hin_india  }
+		position = 22
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "dharma_modifier"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+}
+
+hin_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = HIN
+			tag = BHA
+		}
+		was_tag = BNG
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	hin_south_india = {
+		icon = mission_unite_coromandel
+		required_missions = {  }
+		position = 20
+		provinces_to_highlight = {
+			region = coromandel_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			coromandel_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			malaya_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	
+	hin_indochina = {
+		icon = mission_to_the_south_china_sea
+		required_missions = { hin_burma }
+		position = 22
+		provinces_to_highlight = {
+			region = indo_china_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			indo_china_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_army_tradition = 33
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+}
+
+hin_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = HIN
+			tag = BHA
+		}
+		was_tag = BNG
+		has_dlc = "Dharma"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	hin_bengal = {
+		icon = mission_unite_bengal
+		required_missions = {  }
+		position = 20
+		provinces_to_highlight = {
+			region = bengal_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bengal_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			bengal_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "united_bengal"
+					duration = 7300
+				}
+			}
+			burma_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	hin_burma = {
+		icon = mission_invade_burma
+		required_missions = { hin_bengal }
+		position = 21
+		provinces_to_highlight = {
+			region = burma_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			burma_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 7300
+			}
+			indo_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+	
+	hin_malaya = {
+		icon = mission_the_chola_campaigns
+		required_missions = {  hin_burma }
+		position = 22
+		provinces_to_highlight = {
+			region = malaya_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			malaya_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+		ai_weight = {
+			factor = 500	#If Bharat / Hindustand EVER forms, than it should crazy with its missions
+		}
+	}
+}
+

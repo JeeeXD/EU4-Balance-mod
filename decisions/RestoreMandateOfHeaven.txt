@@ -1,0 +1,34 @@
+country_decisions = {
+
+	restore_mandate = {
+		major = yes
+		potential = {
+			OR = {
+				tag = QNG
+				tag = MNG
+			}
+			NOT = {
+				has_global_flag = mandate_created
+			}
+		}
+		provinces_to_highlight = {
+			
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		effect = {
+			set_emperor_of_china = ROOT
+			add_prestige = 100
+			add_meritocracy = 100
+			set_global_flag = mandate_created
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

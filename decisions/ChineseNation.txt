@@ -1,6 +1,6 @@
 country_decisions = {
 
-	chinese_nation = {
+	chinese_nation_formable = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes

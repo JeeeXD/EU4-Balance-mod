@@ -1253,61 +1253,45 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_fort7"
-		texturefile = "gfx//interface//buildings//latin_fort7.tga"
+		texturefile = "gfx//interface//buildings//latin_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_easterngfx"
-		texturefile = "gfx//interface//buildings//eastern_fort7.tga"
+		texturefile = "gfx//interface//buildings//eastern_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_asiangfx"
-		texturefile = "gfx//interface//buildings//chinese_fort7.tga"
+		texturefile = "gfx//interface//buildings//chinese_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_africangfx"
-		texturefile = "gfx//interface//buildings//african_fort7.tga"
+		texturefile = "gfx//interface//buildings//african_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_indiangfx"
-		texturefile = "gfx//interface//buildings//indian_fort7.tga"
+		texturefile = "gfx//interface//buildings//indian_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_muslimgfx"
-		texturefile = "gfx//interface//buildings//muslim_fort7.tga"
+		texturefile = "gfx//interface//buildings//muslim_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_northamericagfx"
-		texturefile = "gfx//interface//buildings//northamerica_fort7.tga"
+		texturefile = "gfx//interface//buildings//northamerica_fort7.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_fort7_southamericagfx"
-		texturefile = "gfx//interface//buildings//southamerica_fort7.tga"
+		texturefile = "gfx//interface//buildings//southamerica_fort7.dds"
 		loadType = "INGAME"
 	}
 	
-	spriteType = {
-		name = "GFX_gen_marketplace"
-		texturefile = "gfx//interface//buildings//latin_gen_marketplace.tga"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_gen_trade_depot"
-		texturefile = "gfx//interface//buildings//latin_gen_trade_depot.tga"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_gen_stock_exchange"
-		texturefile = "gfx//interface//buildings//latin_gen_stock_exchange.tga"
-		loadType = "INGAME"
-	}
-
 ##############
 #### PRIVILEGE
 

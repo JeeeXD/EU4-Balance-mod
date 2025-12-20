@@ -2730,13 +2730,13 @@ rus_great_power_of_the_east = {	#Permanent
 }
 
 rus_ensured_regular_payment = {
-	shock_damage_received = -0.05
+	shock_damage_received = -0.0025
 	land_maintenance_modifier = 0.05
 	is_streltsy_modifier = yes
 }
 
 rus_extra_high_payment = {
-	shock_damage = 0.1
+	shock_damage = 0.05
 	shock_damage_received = -0.05
 	land_maintenance_modifier = 0.2
 	is_streltsy_modifier = yes
@@ -2764,7 +2764,7 @@ rus_standarized_military = {	#Permanent
 }
 
 rus_state_investment = {	#Permanent
-	global_allowed_num_of_buildings = 1
+	build_cost = -0.1
 	build_time = -0.1
 }
 
@@ -2801,7 +2801,7 @@ rus_religious_zeal = {	#Permanent
 }
 
 rus_western_military_tactics = {	#Permanent
-	discipline = 0.05
+	discipline = 0.0025
 }
 
 rus_bureaucratic_adm_focus = {

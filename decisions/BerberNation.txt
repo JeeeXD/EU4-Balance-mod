@@ -18,7 +18,7 @@ country_decisions = {
 			NOT = { tag = TAM }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
-			primary_culture = berber
+			culture_group = maghrebi
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -42,6 +42,7 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			primary_culture = berber
 			num_of_owned_provinces_with = {
 				value = 50
 				region = maghreb_region

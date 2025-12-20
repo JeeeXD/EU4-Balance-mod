@@ -1964,7 +1964,7 @@ CHI_ideas = {
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.33
 	}
 	
 	trigger = {
@@ -1981,7 +1981,7 @@ CHI_ideas = {
 		fire_damage_received = -0.10
 	}
 	inward_perfection = {
-		global_tax_modifier = 0.10
+		global_tax_modifier = 0.15
 	}
 	yellow_river_dykes = {
 		production_efficiency = 0.15
@@ -3247,8 +3247,8 @@ QNG_ideas = {
 		amount_of_banners = 0.3
 	}
 	the_green_standard_army = {
-		manpower_recovery_speed = 0.15
-		global_manpower_modifier = 0.15
+		manpower_recovery_speed = 0.2
+		global_manpower_modifier = 0.2
 	}
 	pigtail_or_death = {
 		global_unrest = -2
@@ -3270,7 +3270,7 @@ QNG_ideas = {
 	}
 	the_ten_great_campaigns = {
 		land_morale = 0.15
-		prestige_from_land = 0.5
+		morale_damage_received = -0.1
 	}
 }
 
@@ -14878,7 +14878,7 @@ BHA_ideas = {
 		horde_unity = 1
 	}
 	hin_gunpowder_empire = {
-		fire_damage = 0.1
+		land_morale = 0.1
 	}
 	hin_sufism = {
 		global_missionary_strength = 0.02
@@ -14918,7 +14918,7 @@ HIN_ideas = {
 		horde_unity = 1
 	}
 	hin_gunpowder_empire = {
-		fire_damage = 0.1
+		land_morale = 0.1
 	}
 	hin_sufism = {
 		global_missionary_strength = 0.02
@@ -15489,7 +15489,7 @@ MOR_ideas = {
 	}
 	free = yes
 	mor_powerful_viziers = {
-		same_culture_advisor_cost = -0.2
+		morale_damage = 0.1
 	}
 	mor_marabouts = {
 		idea_cost = -0.1
@@ -15501,13 +15501,15 @@ MOR_ideas = {
 	}
 	mor_fleet = {
 		galley_power = 0.2
+		privateer_efficiency = 0.15
 	}
 	mor_pirate_republics = {
-		privateer_efficiency = 0.15
+		loot_amount = 0.50
+		available_province_loot = 0.33
 	}
 	mor_slave_soldiers = {
 		land_maintenance_modifier = -0.05
-		cavalry_power = 0.1
+		infantry_power = 0.1
 	}
 	mor_curb_power_of_the_tribes = {
 		global_autonomy = -0.05
@@ -15528,7 +15530,7 @@ TUN_ideas = {
 	free = yes
 	tun_catalan_guard = {
 		mercenary_discipline = 0.05
-		infantry_power = 0.05
+		infantry_power = 0.1
 	}
 	dual_diplomacy = {
 		diplomatic_upkeep = 1
@@ -15542,6 +15544,7 @@ TUN_ideas = {
 	}
 	tun_board_of_captains = {
 		leader_naval_fire = 1
+		fire_damage_received = -0.1
 	}
 	tun_export_monopolies = {
 		global_own_trade_power = 0.2
@@ -15896,7 +15899,7 @@ ASU_ideas = {
 ADU_ideas = {
 	start = {
 		land_morale = 0.15 
-		global_ship_trade_power = 0.25 
+		global_regiment_cost = -0.1
 	}
 
 	bonus = {
@@ -18186,11 +18189,11 @@ UKR_ideas = {
 ARB_ideas = {
 	start = {
 		tolerance_own = 2
-		years_of_nationalism = -10
+		shock_damage = 0.1
 	}
 
 	bonus = {
-		siege_ability = 0.15
+		siege_ability = 0.25
 	}
 
 	trigger = {
@@ -18210,7 +18213,7 @@ ARB_ideas = {
 		trade_steering = 0.2	
 	}
 	ARB_conversion = {
-		development_cost = 0.1
+		development_cost = -0.1
 	}
 	ARB_jihad = {
 		land_morale = 0.1
@@ -18545,7 +18548,7 @@ WUU_ideas = {
 		development_cost = -0.05
 	}
 	WUU_4 = {
-		land_morale_constant = 0.2	
+		land_morale_constant = 0.5
 	}
 	WUU_5 = {
 		harmonization_speed = 0.2
@@ -18670,7 +18673,7 @@ SGR_ideas = {
 		defensiveness = 0.33
 	}
 	SGR_2 = {
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	SGR_3 = {
 		papal_influence = 4
@@ -18718,9 +18721,11 @@ FAT_ideas = {
 	}
 	FAT_4 = {
 		land_morale = 0.10
+		shock_damage_received = -0.05
 	}
 	FAT_5 = {
 		merc_maintenance_modifier = -0.15
+		mercenary_discipline = 0.05
 	}
 	FAT_6 = {
 		monthly_splendor = 2
@@ -18754,7 +18759,7 @@ TAM_ideas = {
 		reinforce_cost_modifier = -0.25
 	}
 	TAM_2 = {
-		cavalry_power = 0.10
+		cavalry_power = 0.20
 	}
 	TAM_3 = {
 		naval_morale = 0.1
@@ -18810,7 +18815,7 @@ BRM_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	BRM_shan_in_line = {
-		infantry_power = 0.10
+		infantry_power = 0.15
 	}
 	BRM_provincial_governors = {
 		global_autonomy = -0.1

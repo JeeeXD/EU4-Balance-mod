@@ -682,11 +682,9 @@ negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mand
 	meritocracy = -1
 	reduced_liberty_desire = -15
 	global_trade_goods_size_modifier = -0.2
-	fire_damage_received = 0.2
-	shock_damage_received = 0.2
 	global_unrest = 2
 	mercenary_manpower = -0.2
-	global_manpower_modifier = -0.2
+	global_manpower_modifier = -0.33
 	envoy_travel_time = 0.5
 	rival_border_fort_maintenance = 0.33
 }
@@ -695,12 +693,10 @@ lost_mandate_of_heaven = {
 	stability_cost_modifier = 0.25
 	global_unrest = 2
 	global_trade_goods_size_modifier = -0.2
-	fire_damage_received = 0.2
-	shock_damage_received = 0.2
 	reduced_liberty_desire = -25
 	legitimacy = -0.5
 	mercenary_manpower = -0.2
-	global_manpower_modifier = -0.2
+	global_manpower_modifier = -0.33
 }
 
 cancelled_loan = {

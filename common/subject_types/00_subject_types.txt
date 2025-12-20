@@ -328,6 +328,47 @@ vassal = {
 		}
 	}
 
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_goods_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_country_flag = subject_military_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_country_flag = subject_tax_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_movement_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_country_flag = subject_development_bonus_mp
+			}
+		}
+	}
+
 	overlord_opinion_modifier = is_vassal
 	subject_opinion_modifier = is_vassal
 }
@@ -862,7 +903,7 @@ tributary_state = {
 	can_send_tribute = yes
 	can_have_subjects_of_other_types = yes
 	uses_military_focus = no
-	overlord_protects_external = yes
+	overlord_protects_external = no
 	counts_for_borders = no
 	can_use_claims = no
 	share_rebel_popup = no
@@ -1031,6 +1072,46 @@ eyalet = {
 	}
 	modifier_subject = {
 		modifier = eyalet_modifier
+	}
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_goods_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_country_flag = subject_military_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_country_flag = subject_tax_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_movement_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_country_flag = subject_development_bonus_mp
+			}
+		}
 	}
 
 	overlord_opinion_modifier = is_eyalet

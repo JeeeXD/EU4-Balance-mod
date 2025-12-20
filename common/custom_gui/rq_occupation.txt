@@ -5,7 +5,7 @@ custom_button = {
 			owner = {
 				war_with = FROM
 			}
-			ai = no
+			ai = yes
 		}
 		FROM = {
 			any_ally = {
@@ -19,6 +19,7 @@ custom_button = {
 				}
 				ROOT = { controlled_by = PREV }
 			}
+			ai = yes
 		}
 	}
 	trigger = {

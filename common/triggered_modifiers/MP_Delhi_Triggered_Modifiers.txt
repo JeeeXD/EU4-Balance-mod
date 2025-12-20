@@ -1,0 +1,13 @@
+dlh_cloth_leader_trig = {
+	potential = {
+		mission_completed = dlh_cloth_exports
+	}
+	trigger = {
+		production_leader = {
+			trade_goods = cloth
+		}
+	}
+
+	production_efficiency = 0.2
+
+}

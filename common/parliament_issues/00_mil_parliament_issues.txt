@@ -320,8 +320,11 @@ fortification_tax = {
 			value = 3
 			OR = {
 				has_building = fort_15th
+				#has_building = fort3
 				has_building = fort_16th
+				#has_building = fort5
 				has_building = fort_17th
+				#has_building = fort7
 				has_building = fort_18th
 			}
 		}
@@ -338,8 +341,11 @@ fortification_tax = {
 		modifier = {
 			factor = 0
 			NOT = { fort_15th = 2 }
+			#NOT = { fort3 = 2 }
 			NOT = { fort_16th = 2 }
+			#NOT = { fort5 = 2 }
 			NOT = { fort_17th = 2 }
+			#NOT = { fort7 = 2 }
 			NOT = { fort_18th = 2 }
 		}
 	}

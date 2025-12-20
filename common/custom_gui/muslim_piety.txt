@@ -1,0 +1,108 @@
+# Muslim:
+custom_button = {
+	name = sea_low_piety_action
+	potential = { uses_piety = yes ai = no }
+	trigger = {
+		hidden_trigger = {
+			OR = {
+				NOT = { has_country_flag = sea_low_piety_action_flag }
+				had_country_flag = { flag = sea_low_piety_action_flag days = 1825 }
+			}
+			NOT = { piety = -0.76 }
+		}
+		if = {
+			limit = { has_country_modifier = slackening_modifier }
+			NOT = { has_country_modifier = slackening_modifier }
+		}
+	}
+	effect = {
+		tooltip = { add_yearly_manpower = 1 }
+		if = {
+			limit = { NOT = { has_country_flag = sea_piety_action_confirm_flag } }
+			set_country_flag = sea_piety_action_confirm_flag
+			if = {
+				limit = { has_country_flag = sea_low_piety_action_flag NOT = { had_country_flag = { flag = sea_low_piety_action_flag days = 1825 } } }
+				custom_tooltip = sea_low_piety_action_cooldown_tt
+			}
+		}
+	}
+	tooltip = sea_low_piety_action_tt
+}
+custom_button = {
+	name = sea_high_piety_action
+	potential = { uses_piety = yes ai = no }
+	trigger = {
+		hidden_trigger = {
+			OR = {
+				NOT = { has_country_flag = sea_high_piety_action_flag }
+				had_country_flag = { flag = sea_high_piety_action_flag days = 1825 }
+			}
+			piety = 0.75
+		}
+	}
+	effect = {
+		tooltip = { add_corruption = -2 }
+		if = {
+			limit = { NOT = { has_country_flag = sea_piety_action_confirm_flag } }
+			set_country_flag = sea_piety_action_confirm_flag
+			if = {
+				limit = { has_country_flag = sea_high_piety_action_flag NOT = { had_country_flag = { flag = sea_high_piety_action_flag days = 1825 } } }
+				custom_tooltip = sea_high_piety_action_cooldown_tt
+			}
+		}
+	}
+	tooltip = sea_high_piety_action_tt
+}
+
+custom_icon = {
+	name = sea_piety_action_confirm_background
+	potential = { has_country_flag = sea_piety_action_confirm_flag }
+}
+custom_button = {
+	name = sea_piety_action_not_confirm
+	potential = { has_country_flag = sea_piety_action_confirm_flag }
+	effect = { clr_country_flag = sea_piety_action_confirm_flag }
+}
+custom_button = {
+	name = sea_piety_action_confirm
+	potential = { has_country_flag = sea_piety_action_confirm_flag }
+	effect = {
+		clr_country_flag = sea_piety_action_confirm_flag
+		if = {
+			limit = {
+				NOT = { piety = -0.76 }
+				NOT = { has_country_modifier = slackening_modifier }
+			}
+			add_yearly_manpower = 1
+			hidden_effect = { add_piety = 0.5 }
+			set_country_flag = sea_low_piety_action_flag
+			hidden_effect = {
+				export_to_variable = { which = sea_low_piety_action_was_set_year value = trigger_value:is_year }
+				export_to_variable = { which = sea_low_piety_action_was_set_month value = trigger_value:is_month }
+				set_variable = { which = sea_low_piety_action_length value = 5 }
+				change_variable = { which = sea_low_piety_action_length which = sea_low_piety_action_was_set_year }
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { piety = -0.76 }
+				has_country_modifier = slackening_modifier
+			}
+			custom_tooltip = sea_piety_action_confirm_tt
+		}
+		if = {
+			limit = {
+				piety = 0.75
+			}
+			add_corruption = -2
+			hidden_effect = { add_piety = -0.5 }
+			set_country_flag = sea_high_piety_action_flag
+			hidden_effect = {
+				export_to_variable = { which = sea_high_piety_action_was_set_year value = trigger_value:is_year }
+				export_to_variable = { which = sea_high_piety_action_was_set_month value = trigger_value:is_month }
+				set_variable = { which = sea_high_piety_action_length value = 5 }
+				change_variable = { which = sea_high_piety_action_length which = sea_high_piety_action_was_set_year }
+			}
+		}
+	}
+}

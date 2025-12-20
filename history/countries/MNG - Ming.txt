@@ -1,5 +1,4 @@
 government = monarchy
-add_government_reform = celestial_empire
 government_rank = 3
 technology_group = chinese
 religion = confucianism

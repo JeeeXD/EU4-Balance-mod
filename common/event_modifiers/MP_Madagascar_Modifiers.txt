@@ -46,11 +46,11 @@ mdg_prod2 = {
 }
 
 mdg_fl_extra1 = {
-	local_manpower = 750
+	local_manpower = 0.75
 }
 
 mdg_fl_extra2 = {
-	local_manpower = 1500
+	local_manpower = 1.25
 }
 
 mdg_manu_modifier = {

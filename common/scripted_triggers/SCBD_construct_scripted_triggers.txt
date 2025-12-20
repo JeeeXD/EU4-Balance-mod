@@ -1,0 +1,461 @@
+SBCD_no_ongoing_construction_triggers = {
+    NOT = { has_construction = core }
+    NOT = { has_construction = culture }
+    NOT = { has_construction = building }
+    NOT = { has_construction = missionary }
+    NOT = { has_construction = great_project }
+    NOT = { has_construction = canal }
+}
+SCBD_available_manufactory_slot_triggers = {
+    check_variable = { 
+        which = SBCD_allowed_num_of_manufactory_var 
+        which = SBCD_num_of_manufactory_var 
+    }
+    NOT = { 
+        is_variable_equal = { 
+            which = SBCD_allowed_num_of_manufactory_var 
+            which = SBCD_num_of_manufactory_var
+        }
+    }
+}
+SBCD_can_build_triggers = {
+    check_variable = {
+        which = SBCD_num_of_potential_$BUILDING$_var
+        value = 1
+    }
+}
+####
+SBCD_courthouse_req_triggers = {
+    NOT = { has_building = courthouse }
+    NOT = { has_building = town_hall }
+    ROOT = {
+        adm_tech = 8
+    }
+}
+SBCD_town_hall_req_triggers = {
+    NOT = { has_building = town_hall }
+    ROOT = {
+        adm_tech = 22
+    }
+}
+SBCD_university_req_triggers = {
+    NOT = { has_building = university }
+    ROOT = {
+        adm_tech = 17
+    }
+}
+SBCD_workshop_req_triggers = {
+    NOT = { has_building = workshop }
+    NOT = { has_building = counting_house }
+    ROOT = {
+        adm_tech = 6
+    }
+    num_free_building_slots = 1
+    NOT = { trade_goods = gold }
+}
+SBCD_counting_house_req_triggers = {
+    NOT = { has_building = counting_house }
+    ROOT = {
+        adm_tech = 24
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = workshop
+    }
+    NOT = { trade_goods = gold }
+}
+SBCD_temple_req_triggers = {
+    NOT = { has_building = temple }
+    NOT = { has_building = cathedral }
+    ROOT = {
+        adm_tech = 4
+    }
+    num_free_building_slots = 1
+}
+SBCD_cathedral_req_triggers = {
+    NOT = { has_building = cathedral }
+    ROOT = {
+        adm_tech = 19
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = temple
+    }
+}
+SBCD_shipyard_req_triggers = {
+    NOT = { has_building = shipyard }
+    NOT = { has_building = grand_shipyard }
+    ROOT = {
+        dip_tech = 8
+    }
+    has_port = yes
+    num_free_building_slots = 1
+}
+SBCD_grand_shipyard_req_triggers = {
+    NOT = { has_building = grand_shipyard }
+    ROOT = {
+        dip_tech = 24
+    }
+    has_port = yes
+    OR = {
+        num_free_building_slots = 1
+        has_building = shipyard
+    }
+}
+SBCD_dock_req_triggers = {
+    NOT = { has_building = dock }
+    NOT = { has_building = drydock }
+    ROOT = {
+        dip_tech = 6
+    }
+    has_port = yes
+    num_free_building_slots = 1
+}
+SBCD_drydock_req_triggers = {
+    NOT = { has_building = drydock }
+    ROOT = {
+        dip_tech = 19
+    }
+    has_port = yes
+    OR = {
+        num_free_building_slots = 1
+        has_building = dock
+    }
+}
+SBCD_marketplace_req_triggers = {
+    NOT = { has_building = marketplace }
+    NOT = { has_building = trade_depot }
+    NOT = { has_building = stock_exchange }
+    ROOT = {
+        dip_tech = 4
+    }
+    num_free_building_slots = 1
+}
+SBCD_trade_depot_req_triggers = {
+    NOT = { has_building = trade_depot }
+    NOT = { has_building = stock_exchange }
+    ROOT = {
+        dip_tech = 17
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = marketplace
+    }
+}
+SBCD_stock_exchange_req_triggers = {
+    NOT = { has_building = stock_exchange }
+    ROOT = {
+        dip_tech = 22
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = marketplace
+        has_building = trade_depot
+    }
+}
+SBCD_coastal_defence_req_triggers = {
+    NOT = { has_building = coastal_defence }
+    NOT = { has_building = naval_battery }
+    ROOT = {
+        dip_tech = 5
+    }
+    has_port = yes
+    num_free_building_slots = 1
+}
+SBCD_naval_battery_req_triggers = {
+    NOT = { has_building = naval_battery }
+    ROOT = {
+        dip_tech = 12
+    }
+    has_port = yes
+    OR = {
+        num_free_building_slots = 1
+        has_building = coastal_defence
+    }
+}
+SBCD_barracks_req_triggers = {
+    NOT = { has_building = barracks }
+    NOT = { has_building = training_fields }
+    ROOT = {
+        mil_tech = 6
+    }
+    num_free_building_slots = 1
+}
+SBCD_training_fields_req_triggers = {
+    NOT = { has_building = training_fields }
+    ROOT = {
+        mil_tech = 16
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = barracks
+    }
+}
+SBCD_regimental_camp_req_triggers = {
+    NOT = { has_building = regimental_camp }
+    NOT = { has_building = conscription_center }
+    ROOT = {
+        mil_tech = 8
+    }
+    num_free_building_slots = 1
+}
+SBCD_conscription_center_req_triggers = {
+    NOT = { has_building = conscription_center }
+    ROOT = {
+        mil_tech = 22
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = regimental_camp
+    }
+}
+SBCD_fort_15th_req_triggers = {
+    NOT = { has_building = fort_15th }
+    NOT = { has_building = fort_16th }
+    NOT = { has_building = fort_17th }
+    NOT = { has_building = fort_18th }
+    ROOT = {
+        mil_tech = 1
+    }
+    num_free_building_slots = 1
+}
+SBCD_fort_16th_req_triggers = {
+    NOT = { has_building = fort_16th }
+    NOT = { has_building = fort_17th }
+    NOT = { has_building = fort_18th }
+    ROOT = {
+        mil_tech = 14
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = fort_15th
+    }
+}
+SBCD_fort_17th_req_triggers = {
+    NOT = { has_building = fort_17th }
+    NOT = { has_building = fort_18th }
+    ROOT = {
+        mil_tech = 19
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = fort_15th
+        has_building = fort_16th
+    }
+}
+SBCD_fort_18th_req_triggers = {
+    NOT = { has_building = fort_18th }
+    ROOT = {
+        mil_tech = 24
+    }
+    OR = {
+        num_free_building_slots = 1
+        has_building = fort_15th
+        has_building = fort_16th
+        has_building = fort_17th
+    }
+}
+SBCD_farm_estate_req_triggers = {
+    NOT = { has_building = farm_estate }
+    ROOT = {
+        adm_tech = 6
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = grain
+        trade_goods = livestock
+        trade_goods = wine
+    }
+}
+SBCD_ramparts_req_triggers = {
+    NOT = { has_building = ramparts }
+    ROOT = {
+        adm_tech = 6
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+}
+SBCD_impressment_offices_req_triggers = {
+    NOT = { has_building = impressment_offices }
+    ROOT = {
+        dip_tech = 7
+    }
+    num_free_building_slots = 1
+    has_port = yes
+    SCBD_available_manufactory_slot_triggers = yes
+}
+SBCD_wharf_req_triggers = {
+    NOT = { has_building = wharf }
+    ROOT = {
+        dip_tech = 11
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = salt
+        trade_goods = fish
+        trade_goods = naval_supplies
+    }
+}
+SBCD_textile_req_triggers = {
+    NOT = { has_building = textile }
+    ROOT = {
+        adm_tech = 11
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = cloth
+        trade_goods = dyes
+        trade_goods = silk
+        trade_goods = wool
+    }
+}
+SBCD_weapons_req_triggers = {
+    NOT = { has_building = weapons }
+    ROOT = {
+        mil_tech = 11
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = copper
+        trade_goods = iron
+    }
+}
+SBCD_state_house_req_triggers = {
+    NOT = { has_building = state_house }
+    ROOT = {
+        adm_tech = 12
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+}
+SBCD_plantations_req_triggers = {
+    NOT = { has_building = plantations }
+    ROOT = {
+        adm_tech = 14
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = cocoa
+        trade_goods = coffee
+        trade_goods = sugar
+        trade_goods = tea
+        trade_goods = tobacco
+    }
+}
+SBCD_tradecompany_req_triggers = {
+    NOT = { has_building = tradecompany }
+    ROOT = {
+        dip_tech = 14
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = cloves
+        trade_goods = fur
+        trade_goods = incense
+        trade_goods = ivory
+        trade_goods = slaves
+        trade_goods = spices
+    }
+}
+SBCD_soldier_households_req_triggers = {
+    NOT = { has_building = soldier_households }
+    ROOT = {
+        adm_tech = 15
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+}
+SBCD_mills_req_triggers = {
+    NOT = { has_building = mills }
+    ROOT = {
+        adm_tech = 16
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    OR = {
+        trade_goods = chinaware
+        trade_goods = gems
+        trade_goods = glass
+        trade_goods = paper
+        trade_goods = tropical_wood
+    }
+}
+SBCD_furnace_req_triggers = {
+    NOT = { has_building = furnace }
+    ROOT = {
+        adm_tech = 21
+    }
+    num_free_building_slots = 1
+    SCBD_available_manufactory_slot_triggers = yes
+    trade_goods = coal
+}
+####
+SBCD_native_earthwork_req_triggers = {
+    NOT = { has_building = native_earthwork }
+}
+SBCD_native_great_trail_req_triggers = {
+    NOT = { has_building = native_great_trail }
+}
+SBCD_native_irrigation_req_triggers = {
+    NOT = { has_building = native_irrigation }
+}
+SBCD_native_palisade_req_triggers = {
+    NOT = { has_building = native_palisade }
+}
+SBCD_native_storehouse_req_triggers = {
+    NOT = { has_building = native_storehouse }
+}
+SBCD_native_three_sisters_field_req_triggers = {
+    NOT = { has_building = native_three_sisters_field }
+}
+SBCD_native_longhouse_req_triggers = {
+    NOT = { has_building = native_longhouse }
+}
+SBCD_native_ceremonial_fire_pit_req_triggers = {
+    NOT = { has_building = native_ceremonial_fire_pit }
+    event_target:SBCD_selected_country_target = {
+        NOT = {
+            any_owned_province = {
+                OR = {
+                    has_building = native_ceremonial_fire_pit
+                    has_building = native_fortified_house
+                    has_building = native_sweat_lodge
+                }
+            }
+        }
+    }
+}
+SBCD_native_fortified_house_req_triggers = {
+    NOT = { has_building = native_fortified_house }
+    event_target:SBCD_selected_country_target = {
+        NOT = {
+            any_owned_province = {
+                OR = {
+                    has_building = native_ceremonial_fire_pit
+                    has_building = native_fortified_house
+                    has_building = native_sweat_lodge
+                }
+            }
+        }
+    }
+}
+SBCD_native_sweat_lodge_req_triggers = {
+    NOT = { has_building = native_sweat_lodge }
+    event_target:SBCD_selected_country_target = {
+        NOT = {
+            any_owned_province = {
+                OR = {
+                    has_building = native_ceremonial_fire_pit
+                    has_building = native_fortified_house
+                    has_building = native_sweat_lodge
+                }
+            }
+        }
+    }
+}

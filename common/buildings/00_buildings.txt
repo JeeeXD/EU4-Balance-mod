@@ -423,6 +423,13 @@ fort_15th = {
 	modifier = {
 		fort_level = 2
 	}
+	build_trigger = {
+		can_build_fort_trigger = yes
+	}
+
+	keep_trigger = {
+		can_keep_fort_trigger = yes
+	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
@@ -921,6 +928,13 @@ fort_16th = {
 	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
+	}
+	build_trigger = {
+		can_build_fort_trigger = yes
+	}
+
+	keep_trigger = {
+		can_keep_fort_trigger = yes
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -1534,10 +1548,17 @@ fort_17th = {
 	cost = 600
 	time = 30
 
-	make_obsolete = fort_16th
+	make_obsolete = fort_16th 
 
 	modifier = {
 		fort_level = 6
+	}
+	build_trigger = {
+		can_build_fort_trigger = yes
+	}
+
+	keep_trigger = {
+		can_keep_fort_trigger = yes
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -2069,6 +2090,13 @@ fort_18th = {
 	modifier = {
 		fort_level = 8
 	}
+	build_trigger = {
+		can_build_fort_trigger = yes
+	}
+
+	keep_trigger = {
+		can_keep_fort_trigger = yes
+	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
@@ -2579,17 +2607,38 @@ furnace = {
 }
 
 ramparts = {
-	manufactory = {
-		all
-	}
-
-	#build_trigger = {
-	#	is_flatland = yes
+	#manufactory = {
+	#	all
 	#}
+	cost = 200
+	time = 24
+
+	build_trigger = {
+		OR = {
+			has_building = fort_15th
+			has_building = fort3
+			has_building = fort_16th
+			has_building = fort5
+			has_building = fort_17th
+			has_building = fort7
+			has_building = fort_18th
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_15th
+			has_building = fort3
+			has_building = fort_16th
+			has_building = fort5
+			has_building = fort_17th
+			has_building = fort7
+			has_building = fort_18th
+		}
+	}
 	modifier = {
-		local_hostile_attrition = 1
-		local_defensiveness = 0.15
-		local_defender_dice_roll_bonus = 1
+		max_attrition = 2
+		local_hostile_attrition = 3
+		local_defensiveness = 0.25
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -2855,3 +2904,4 @@ state_house = {
 	}
 }
 
+############## NEW BUILDINGs ############

@@ -599,8 +599,6 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { was_tag = GZI }
 				NOT = { was_tag = RZI }
 				NOT = { was_tag = SCA }
-				NOT = { was_tag = TAM }
-				NOT = { was_tag = FAT }
 				NOT = { tag = FRA }
 				NOT = { tag = MUG }
 				NOT = { tag = PER }
@@ -639,8 +637,6 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = GZI }
 				NOT = { tag = RZI }
 				NOT = { tag = SCA }
-				NOT = { tag = TAM }
-				NOT = { tag = FAT }
 			}
 		}
 	}
@@ -658,6 +654,8 @@ was_never_german_regional_tag_trigger = {	#Country Scope
 	NOT = { was_tag = FKN }
 	NOT = { was_tag = WES }
 	NOT = { was_tag = HAN }
+	NOT = { was_tag = NGR }
+	NOT = { was_tag = SGR }
 	
 	NOT = { tag = BRA }
 	NOT = { tag = PRU }
@@ -669,6 +667,8 @@ was_never_german_regional_tag_trigger = {	#Country Scope
 	NOT = { tag = FKN }
 	NOT = { tag = WES }
 	NOT = { tag = HAN }
+	NOT = { tag = NGR }
+	NOT = { tag = SGR }
 }
 
 
@@ -1279,8 +1279,11 @@ has_fort_building_trigger = {
 		tooltip = has_fort_building_trigger_tt
 		OR = {
 			has_building = fort_15th
+			has_building = fort3
 			has_building = fort_16th
+			has_building = fort5
 			has_building = fort_17th
+			has_building = fort7
 			has_building = fort_18th
 		}
 	}

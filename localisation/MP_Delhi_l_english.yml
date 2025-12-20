@@ -1,0 +1,121 @@
+﻿l_english:
+
+dlh_ganges_dev_tooltip: "All provinces on the §YGanges River§! gain the following modifier:"
+dlh_silk_monopoly_tooltip: "Every owned province which produces §YSilk§! gains the following modifier:"
+dlh_build_grain_tooltip: "§YFive§! random produces which produce §YGrain§! gain the following:"
+dlh_perma_ganges_tooltip: "If all provinces on the §YGanges River§! still have the §YHeartland of the Empire§! modifer, they gain the following modifer:"
+dlh_highest_dev_tooltip: "No country in §YIndia§! has more development than §YDelhi§!"
+dlh_biggest_army_tooltip: "No country in §YIndia§! has a larger army than §YDelhi§!"
+dlh_cloth_leader_tooltip: "As long as we are the production leader in §YCloth§!, we gain the following modifier:"
+
+dlh_cotton_price_1: "Excess Cotton Harvests"
+dlh_cotton_price_2: "Short Term Investments"
+dlh_cotton_price_3: "Long Term Investments"
+############ MODIFIERS ##############
+dlh_cloth_leader_trig: "Cloth Production"
+dlh_cloth_leader: "Cloth Production"
+dlh_nepal_modifier: "Mountains of Nepal"
+dlh_central_market: "Centralized Market"
+dlh_regulated_prices: "Regulation of Prices"
+dlh_silk_monopoly: "Monopoly on Silk"
+dlh_mercenaries_from_foreigners: "Foreign Mercenaries"
+dlh_rajputs_learned: "Outsider Education"
+dlh_coming_back: "Restoration of the Sultanate"
+dlh_fabric_goods: "Fabric Industry"
+dlh_gujarat_trade_posts: "Trade Capital of India"
+dlh_dev_early: "Rise of the Sultanate"
+dlh_develop_ganges: "Heartland of the Empire"
+dlh_develop_ganges_improved: "Nadee Bhoomi"
+dlh_cheap_regiments: "Sastee Sena"
+dlh_copper_production: "Expanded Copper Mines"
+dlh_low_gold: "Scarse Gold Deposits"
+dlh_imperial_capital: "Imperial Capital of India"
+dlh_cav_start: "Lessons from the Hordes"
+dlh_production: "Early Industrialization"
+dlh_manpower_recovery: "Fresh Recruits"
+dlh_supply_army_units: "Supplied Armies"
+############### MISSIONS ###########
+dlh_industrial_revolution_of_delhi_title: "Industrial Awakening"
+dlh_industrial_revolution_of_delhi_desc: "Delhi stands at the dawn of a new era. With growing workshops and an increasingly urban economy, we can ignite an industrial transformation to rival any power of the world."
+
+dlh_cotton_gin_title: "Introduce the Cotton Gin"
+dlh_cotton_gin_desc: "Innovations in cotton processing promise to multiply our output. By adopting improved ginning techniques, Delhi can dominate textile production."
+
+dlh_cloth_exports_title: "Expand Cloth Exports"
+dlh_cloth_exports_desc: "Our cloth is prized across the world. Strengthening our export networks will secure new partners and bring wealth to our markets."
+
+dlh_recruitable_men_title: "Recruit the People"
+dlh_recruitable_men_desc: "A vast realm demands a vast army. Establishing new recruitment systems will ensure a steady supply of willing soldiers."
+
+dlh_supply_army_title: "Supplied Lands"
+dlh_supply_army_desc: "To maintain an army worthy of Delhi, we must strengthen our supply lines, granaries, and logistical support."
+
+dlh_copper_extraction_title: "Copper of Jaipur"
+dlh_copper_extraction_desc: "Copper veins within our lands can be refined and exploited. Investment into deeper mining will boost both military and economic strength."
+
+dlh_qutb_minar_title: "Qutb Minar"
+dlh_qutb_minar_desc: "The Qutb Minar, a symbol of our heritage, requires restoration. Honoring our past will reinforce our legitimacy and cultural prestige."
+
+dlh_war_elephants_title: "War Elephants"
+dlh_war_elephants_desc: "The mighty war elephant has long been the terror of battlefields. Reviving elephant corps will remind our enemies of Delhi’s ancient strength."
+
+dlh_restore_the_economy_title: "Restore the Economy"
+dlh_restore_the_economy_desc: "After years of turmoil, our economy needs stability. By rebuilding core industries, revenue will once again flow through the capital."
+
+dlh_nationalize_grain_title: "Nationalization of Grain"
+dlh_nationalize_grain_desc: "To prevent famine and stabilize prices, we must bring grain distribution under state oversight and secure supplies for our people."
+
+dlh_advanced_agriculture_title: "Advanced Agriculture"
+dlh_advanced_agriculture_desc: "Improved irrigation, new crops, and better tools can transform our fields and feed our growing population."
+
+dlh_ganges_focus_title: "Heartland of the Empire"
+dlh_ganges_focus_desc: "The fertile Ganges basin is the lifeblood of our realm. Concentrating development in this region will ensure lasting prosperity."
+
+dlh_quantity_title: "Sacrifices of Men"
+dlh_quantity_desc: "A wise man once said: "I LOVE DELHI, I WILL SACRIFICE MY LIFE FOR DELHI, I LOVE DELHI" "
+
+dlh_fabric_for_the_rich_title: "Fabrics for the Rich"
+dlh_fabric_for_the_rich_desc: "Silks, brocades, and fine textiles enrich the nobles and merchants alike. Expanding this high-value market strengthens state finances."
+
+dlh_hindi_language_title: "Promote the Hindi Language"
+dlh_hindi_language_desc: "In a diverse realm, the spread of Hindi can unify administration and culture, giving Delhi a stronger internal identity."
+
+dlh_indian_astronomy_title: "Indian Astronomy"
+dlh_indian_astronomy_desc: "Building upon ancient knowledge, scholars can advance astronomy and mathematics, reinforcing Delhi’s intellectual prestige."
+
+dlh_raise_mamluks_title: "Raise the Mamluks"
+dlh_raise_mamluks_desc: "Skilled warrior-slaves have long served Delhi’s sultans. Recruiting new mamluk units will strengthen our elite forces."
+
+dlh_resistors_of_the_mongols_title: "Forts of the North"
+dlh_resistors_of_the_mongols_desc: "Delhi survived the Mongol storms of the past. Reviving this legacy instills discipline and courage in our soldiers."
+
+dlh_invade_nepal_title: "Northern Neighbors"
+dlh_invade_nepal_desc: "Conquering the rugged lands of Nepal will secure the northern frontier and open new opportunities for trade and tribute."
+
+dlh_centralized_market_title: "Centralized Market"
+dlh_centralized_market_desc: "Regulating trade, weights, and pricing from the capital will ensure consistent revenue and limit corruption."
+
+dlh_price_regulations_title: "Price Regulations"
+dlh_price_regulations_desc: "To protect both merchants and commoners, the state must control inflation and stabilize the cost of essential goods."
+
+dlh_monopolize_silk_title: "Monopolize Silk Production"
+dlh_monopolize_silk_desc: "By controlling silk cultivation and trade, Delhi can dominate one of the most profitable industries of the known world."
+
+dlh_turco_afghans_title: "Turco-Afghan Education"
+dlh_turco_afghans_desc: "The diverse Turco-Afghan military aristocracy forms the backbone of our state. Bringing them together strengthens stability and loyalty."
+
+dlh_merge_with_rajputs_title: "Integrate the Rajput Clans"
+dlh_merge_with_rajputs_desc: "The Rajputs are famed for bravery and military tradition. Integrating their clans will enhance our armies and stabilize the frontier."
+
+############ EVENTS ###############
+flavor_delhi.1.T: "Gold Among the Copper"
+flavor_delhi.1.D: "Surveyors inspecting our copper mines have uncovered small traces of gold embedded within the deeper veins. The discovery has stirred debate among our officials and miners alike.\n\nWhile the gold deposits appear modest, they could be expanded with additional investment. Yet the copper output from these mines remains far more reliable and profitable in the short term. The question now is whether we should double down on proven copper production or pursue the uncertain promise of gold."
+flavor_delhi.1.OPT1: "Expand copper production; steady gains are better than speculation."
+flavor_delhi.1.OPT2: "Focus on extracting the gold, even if it proves difficult."
+
+flavor_delhi.2.T: "A Surge in Cotton Production"
+flavor_delhi.2.D: "Exceptional harvests and improved weaving techniques have caused cotton production to surge across our realms. Merchants and officials bring forward different proposals: seize the profits immediately, invest modestly for short-term gains, or commit to large-scale, long-lasting expansion of the cotton industry."
+flavor_delhi.2.OPT1: "Take the profits now. A full treasury is worth more than promises."
+flavor_delhi.2.OPT2: "Invest modestly. Profit for a while, but don’t overextend."
+flavor_delhi.2.OPT3: "Develop the cotton fields for the long term. Slower gains, lasting wealth."
+

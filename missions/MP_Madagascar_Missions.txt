@@ -304,8 +304,9 @@ madagascar_1 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
-			num_of_light_ship = 20
-			mission_completed = mdg_penguins_of_madagascar
+			num_of_light_ship = 40
+			navy_size_percentage = 1
+			
 		}
 		effect = { 
 			country_event = {
@@ -324,6 +325,7 @@ madagascar_1 = {
 		
 		}
 		trigger = { 
+			mission_completed = mdg_penguins_of_madagascar
 			calc_true_if = {
 				1340 = {
 					has_privateer_share_in_trade_node = {
@@ -331,7 +333,7 @@ madagascar_1 = {
 						share = 0.2
 					}
 				}
-				1337 = {
+				504 = {
 					has_privateer_share_in_trade_node = {
 						who = ROOT
 						share = 0.2
@@ -445,7 +447,7 @@ madagascar_2 = {
 			}
 		}
 		effect = { 
-			117 = {
+			1177 = {
 				add_province_modifier = {
 					name = mdg_cape_town
 					duration = -1
@@ -1728,6 +1730,9 @@ madagascar_5 = {
 		trigger = { 
 			stability = 1
 			prestige = 50
+			NOT = {
+				current_age = age_of_discovery
+			}
 		}
 		effect = { 
 			country_event = {

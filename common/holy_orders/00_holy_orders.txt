@@ -412,6 +412,7 @@ avis_order = {
 calatrava_order = {
     icon = GFX_holy_order_calatrava
     trigger = {
+        always = no
     	OR = { 
 			AND = { 
 				culture_group = iberian
@@ -426,8 +427,8 @@ calatrava_order = {
 			is_or_was_tag = { tag = NAV }
 			has_country_flag = enable_holy_orders_flag 
 		}
-    }
-    color = { 106 147 116 } 
+   }
+   color = { 106 147 116 } 
     cost = 50
     cost_type = mil_power
     per_province_effect = {

@@ -1,0 +1,70 @@
+dlh_nepal_modifier = {
+	defensiveness = 0.2
+}
+dlh_central_market = {
+	trade_efficiency = 0.15
+}
+dlh_regulated_prices = {
+	trade_value_modifier = 0.5
+	local_center_of_trade_upgrade_cost = -0.75
+}
+dlh_silk_monopoly = {
+	trade_goods_size_modifier = 0.25
+}
+dlh_mercenaries_from_foreigners = {
+	mercenary_discipline = 0.05
+}
+dlh_rajputs_learned = {
+	regiment_manpower_usage = -0.1
+	is_rajput_modifier = yes
+}
+dlh_coming_back = {
+	core_creation = -0.1
+}
+dlh_fabric_goods = {
+	global_trade_goods_size_modifier = 0.1
+}
+dlh_gujarat_trade_posts = {
+	province_trade_power_modifier = 0.25
+	development_cost = -0.1
+}
+dlh_dev_early = {
+	development_cost = -0.1
+}
+dlh_develop_ganges = {
+	local_production_efficiency = 0.15
+	local_development_cost_modifier = -0.05
+}
+dlh_develop_ganges_improved = {
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+}
+dlh_cheap_regiments = {
+	global_regiment_cost = -0.1
+}
+dlh_copper_production = {
+	trade_goods_size = 2
+}
+dlh_low_gold = {
+	gold_depletion_chance_modifier = 2
+}
+dlh_imperial_capital = {
+	institution_growth = 10
+}
+dlh_cav_start = {
+	cavalry_cost = -0.1
+	cavalry_flanking = 0.5
+}
+dlh_production = {
+	production_efficiency = 0.1
+}
+dlh_cloth_leader = {
+	production_efficiency = 0.2
+}
+dlh_manpower_recovery = {
+	manpower_recovery_speed = 0.1
+}
+dlh_supply_army_units = {
+	land_attrition = -0.25
+	global_supply_limit_modifier = 0.33
+}

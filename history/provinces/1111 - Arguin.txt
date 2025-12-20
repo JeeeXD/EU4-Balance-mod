@@ -1,6 +1,6 @@
 #1111 - Arguin
 
-culture = berber
+culture = senegambian
 religion = sunni
 capital = "Arguin"
 trade_goods = unknown
