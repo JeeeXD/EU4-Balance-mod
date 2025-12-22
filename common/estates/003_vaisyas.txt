@@ -14,6 +14,7 @@ estate_vaisyas = {
 			has_government_attribute = enables_estate_vaisyas
 			has_enabled_estate = { estate = estate_vaisyas }
 			has_unlocked_estate = { estate = estate_vaisyas }
+			has_country_flag = bng_unlock_vaisyas
 			AND = {
 				technology_group = indian
 				religion = hinduism

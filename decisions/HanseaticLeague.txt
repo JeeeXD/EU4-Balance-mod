@@ -16,6 +16,7 @@ country_decisions = {
 			NOT = { tag = HSA }
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
+			NOT = { tag = GER }
 			NOT = { tag = GBR }
 			NOT = { tag = AUH }
 			OR = {

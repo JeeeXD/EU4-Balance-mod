@@ -268,9 +268,35 @@ bng_slot_1 = {
 		}
 		provinces_to_highlight = { }
 		trigger = {
-			textile = 5
-			plantations = 5
-
+			OR = {
+				trading_bonus = {
+					trade_goods = silk
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = cloth
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = wool
+					value = yes
+				}
+			}
+			calc_true_if = {
+				amount = 2
+				trade_goods_produced_amount = {
+					trade_goods = silk
+					amount = 20
+				}
+				trade_goods_produced_amount = {
+					trade_goods = cloth
+					amount = 20
+				}
+				trade_goods_produced_amount = {
+					trade_goods = wool
+					amount = 20
+				}
+			}
 		}
 		effect = {
 			add_dip_power = 50
@@ -287,8 +313,24 @@ bng_slot_1 = {
 		position = 9
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				has_idea = colonial_ventures
+				has_age_ability = ab_colonies
+			}
+			num_of_light_ship = 20
+		}
+		effect = { 
+			define_explorer = {
+				shock = 2
+				fire = 3
+				manuever = 5
+			}
+			add_country_modifier = {
+				name = bng_colony_starts
+				duration = 9125
+			}
+		}
 	}
 
 	bng_malaya_colonies = {
@@ -297,9 +339,47 @@ bng_slot_1 = {
 		required_missions = {
 			bng_colonial_endevours
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				region = malaya_region
+				region = moluccas_region
+				region = indonesia_region
+			}
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+			    OR = {
+				    region = malaya_region
+				    region = moluccas_region
+				    region = indonesia_region
+			    }
+			}
+		}
+		effect = { 
+			define_admiral = {
+				shock = 1
+				fire = 3
+				manuever = 6
+			}
+			1361 = {
+				add_trade_modifier = {
+				    who = ROOT
+				    duration = 9125
+				    power = 25
+				    key = STRONG_MERCHANTS
+			    }
+			}
+			1357 = {
+				add_trade_modifier = {
+				    who = ROOT
+				    duration = 9125
+				    power = 25
+				    key = STRONG_MERCHANTS
+			    }
+			}
+
+		}
 	}
 
 	bng_malayan_trade = {
@@ -308,9 +388,42 @@ bng_slot_1 = {
 		required_missions = {
 			bng_malaya_colonies
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				trade_goods = cloves
+				province_id = 1361
+				province_id = 1357
+			}
+		}
+		trigger = { 
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 60
+				}
+			}
+			1357 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			OR = {
+				any_owned_province = {
+					trade_goods = cloves
+				}
+				trading_bonus = {
+					trade_goods = cloves
+					value = yes
+				}
+			}
+		}
+		effect = { 
+			capital = {
+				change_trade_goods = cloves
+			}
+			add_years_of_income = 1
+		}
 	}
 
 	bng_shipyards = {
@@ -322,8 +435,9 @@ bng_slot_1 = {
 		provinces_to_highlight = { }
 		trigger = {
 			grand_shipyard = 10
-			num_of_heavy_ship = 50
-
+			num_of_heavy_ship = 100
+			num_of_galley = 100
+		    navy_size_percentage = 1
 		}
 		effect = {
 			if = {
@@ -344,9 +458,24 @@ bng_slot_1 = {
 		icon = mission_recruit_streltsy
 		position = 15
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_manpower_building_trigger = no
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = { 
+			add_years_of_owned_provinces_manpower = {
+				years = 1
+				trigger = { 
+					has_manpower_building_trigger = yes
+				}
+			}
+		}
 	}
 
 	bng_admirals = {
@@ -354,8 +483,20 @@ bng_slot_1 = {
 		position = 16
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_admirals = 6
+			num_of_admirals_with_traits = 2
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = impressment_offices
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bng_naval_academy
+				duration = -1
+			}
+		}
 	}
 
 	bng_naval_supplies = {
@@ -365,8 +506,20 @@ bng_slot_1 = {
 			bng_fair_balance bng_admirals
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 3
+				trade_goods = naval_supplies
+				has_manufactory_trigger = yes
+				development = 15
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bng_naval_arnmanent
+				duration = 10950
+			}
+		}
 	}
 
 	bng_forcelimit = {
@@ -374,8 +527,28 @@ bng_slot_1 = {
 		position = 18
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			army_size_percentage = 1
+			monthly_mil = 12
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 15
+					has_forcelimit_building_trigger = yes
+				}
+				has_estate_privilege = estate_nobles_force_conscription
+			}
+		}
+		effect = { 
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			capital_scope = {
+				add_building = conscription_center
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
 	}
 
 	bng_trad_and_prof = {
@@ -385,8 +558,107 @@ bng_slot_1 = {
 			bng_forcelimit
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			army_professionalism = 0.6
+			army_tradition = 80
+			OR= {
+				full_idea_group = quality_ideas
+				full_idea_group = offensive_ideas
+				full_idea_group = defensive_ideas
+				full_idea_group = aristocracy_ideas
+				full_idea_group = quantity_ideas
+				full_idea_group = theocracy_gov_ideas
+			}
+		}
+		effect = {
+			custom_tooltip = bng_quality_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_quality_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_defensive_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_defensive_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_aristo_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_aristo_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_divine_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_divine_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_offensive_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_offensive_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_quantity_ideas_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_quantity_ideas_reward
+					duration = -1 
+				}
+			}
+			custom_tooltip = bng_idea_explain_tt
+			hidden_effect = {#
+				if = {
+					limit = { full_idea_group = quality_ideas }
+					add_country_modifier = {
+						name = bng_quality_ideas_reward
+						duration = -1 
+					}
+				}
+				else_if = {#
+					limit = { full_idea_group = defensive_ideas }
+					add_country_modifier = {
+						name = bng_defensive_ideas_reward
+						duration = -1 
+					}
+				}
+				else_if = {#
+					limit = { full_idea_group = aristocracy_ideas }
+					add_country_modifier = {
+						name = bng_aristo_ideas_reward
+						duration = -1 
+					}
+				}
+				else_if = {#
+					limit = { full_idea_group = theocracy_gov_ideas }
+					add_country_modifier = {
+						name = bng_divine_ideas_reward
+						duration = -1 
+					}
+				}
+				else_if = {#
+					limit = { full_idea_group = offensive_ideas }
+					add_country_modifier = {
+						name = bng_offensive_ideas_reward
+						duration = -1 
+					}
+				}
+				else_if = {#
+					limit = { full_idea_group = quantity_ideas }
+					add_country_modifier = {
+						name = bng_quantity_ideas_reward
+						duration = -1 
+					}
+				}
+			}
+		}
 	}
 }
 bng_slot_2 = {
@@ -451,6 +723,10 @@ bng_slot_2 = {
 
 		}
 		effect = {
+			add_country_modifier = {
+				name = bng_jaunpuri_campaign
+				duration = 3650
+			}
 			upper_doab_area = {
 				limit = {
 					NOT = {
@@ -743,7 +1019,17 @@ bng_slot_2 = {
 		position = 7
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					trade_goods = silk
+					trade_goods = cloth
+					trade_goods = wool
+				}
+				has_production_building_trigger = yes
+			}
+		}
 		effect = { }
 	}
 
@@ -754,8 +1040,15 @@ bng_slot_2 = {
 			bng_colonial_endevours
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			has_subject_of_type = colony
+		}
+		effect = { 
+			add_country_modifier_for_age = {
+				name = bng_colonize_brrr
+				age = age_of_reformation
+			}
+		}
 	}
 
 	bng_ships1 = {
@@ -765,8 +1058,18 @@ bng_slot_2 = {
 			bng_start_naval_production bng_clear_delta
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = { 
+			create_unit_forcelimit_percentage = {
+				type = heavy_ship
+				special_unit_category = man_of_war
+			}
+		}
 	}
 
 	bng_sailors = {
@@ -776,8 +1079,16 @@ bng_slot_2 = {
 			bng_ships1
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = { 
+			add_navy_tradition = 25
+			add_mercantilism = 5
+		}
 	}
 
 	bng_more_estate = {
@@ -795,9 +1106,69 @@ bng_slot_2 = {
 		icon = mission_fortify_mandu
 		position = 14
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = lahore_area
+				area = sirhind_area
+				area = upper_doab_area
+				area = lower_doab_area
+				area = purvanchal_area
+				area = bihar_area
+				area = gaur_area
+				area = east_bengal_area
+				province_id = 524
+				province_id = 507
+				province_id = 1343
+			}
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+				area = lahore_area
+				area = sirhind_area
+				area = upper_doab_area
+				area = lower_doab_area
+				area = purvanchal_area
+				area = bihar_area
+				area = gaur_area
+				area = east_bengal_area
+				province_id = 524
+				province_id = 507
+				province_id = 1343
+			    }
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = { 
+			custom_tooltip = bng_ganges_forts_tt
+			tooltip = {
+				add_province_modifier = {
+						name = bng_fort_ganges
+						duration = -1
+					}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = lahore_area
+							area = sirhind_area
+							area = upper_doab_area
+							area = lower_doab_area
+							area = purvanchal_area
+							area = bihar_area
+							area = gaur_area
+							area = east_bengal_area
+						}
+					}
+					add_province_modifier = {
+						name = bng_fort_ganges
+						duration = -1
+					}
+				}
+			}
+		}
 	}
 
 	bng_generals = {
@@ -807,8 +1178,18 @@ bng_slot_2 = {
 			bng_rivers_on_both_sides
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_generals = 4
+			num_of_generals_with_traits = 2
+		}
+		effect = { 
+			define_general = {
+				shock = 4
+				fire = 5
+				manuever = 3
+				siege = 4
+			}
+		}
 	}
 
 	bng_siege = {
@@ -818,8 +1199,19 @@ bng_slot_2 = {
 			bng_forcelimit
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+		    has_global_modifier_value = {
+				which = siege_ability
+				value = 0.25
+			}
+			artillery_fraction = 0.25
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bng_siegeing
+				duration = -1
+			}
+		}
 	}
 }
 bng_slot_3 = {
@@ -977,8 +1369,18 @@ bng_slot_3 = {
 			bng_own_local_trade
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			calc_true_if = {
+				amount = 3
+				any_trade_node = {
+				    is_strongest_trade_power = ROOT
+			    }
+			}
+		}
+		effect = { 
+			add_mercantilism = 5
+			add_dip_power = 75
+		}
 	}
 
 	bng_foreign_immigrants = {
@@ -988,8 +1390,41 @@ bng_slot_3 = {
 			bng_control_trade
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			564 = {
+				development = 20
+				has_trade_building_trigger = yes
+			}
+			561 = {
+				development = 20
+				has_trade_building_trigger = yes
+			}
+			568 = {
+				owned_by = BNG
+				development = 20
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = { 
+			564 = {
+				add_province_modifier = {
+					name = bng_immigrants
+					duration = 18250
+				}
+			}
+			561 = {
+				add_province_modifier = {
+					name = bng_immigrants
+					duration = 18250
+				}
+			}
+			568 = {
+				add_province_modifier = {
+					name = bng_immigrants
+					duration = 18250
+				}
+			}
+		}
 	}
 
 	bng_persian_literature = {
@@ -999,8 +1434,27 @@ bng_slot_3 = {
 			bng_foreign_immigrants
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				any_ally = {
+					culture_group = iranian
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				any_owned_province = {
+					culture_group = iranian
+					has_building = university
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bng_persian_advances
+				duration = 3650
+			}
+		}
 	}
 
 	bng_estate_love_you = {
@@ -1008,8 +1462,37 @@ bng_slot_3 = {
 		position = 12
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			calc_true_if = {
+				amount = 3
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+				estate_loyalty = {
+					estate = estate_jains
+					loyalty = 60
+				}
+				estate_loyalty = {
+					estate = estate_rajput
+					loyalty = 60
+				}
+				estate_loyalty = {
+					estate = estate_brahmins
+					loyalty = 60
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bng_estates_yay
+				duration = 3650
+			}
+		}
 	}
 
 	bng_crownland_or_no_crownland = {
@@ -1019,8 +1502,56 @@ bng_slot_3 = {
 			bng_estate_love_you
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				AND = {
+					crown_land_share = 60
+					absolutism = 80
+				}
+				AND = {
+					full_idea_group = court_ideas
+					employed_advisor = {
+						type = jester
+					}
+					NOT = {
+						crown_land_share = 30
+					}
+					NOT = {
+						absolutism = 20
+					}
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = bng_abs_tt
+			tooltip = {
+				add_country_modifier = {
+					name = bng_abs_nation
+					duration = -1
+				}
+			}
+			custom_tooltip = bng_new_estate_tt
+			tooltip = {
+				unlock_estate = {
+					estate = estate_vaisyas
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						crown_land_share = 60
+					}
+					add_country_modifier = {
+						name = bng_abs_nation
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { NOT = { crown_land_share = 30} }
+					set_country_flag = bng_unlock_vaisyas
+				}
+			}
+		}
 	}
 
 	bng_resist_outsiders = {

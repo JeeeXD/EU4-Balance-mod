@@ -137,11 +137,11 @@ country_event = { # buildings delete
 			every_owned_province = {
 				limit = { controlled_by = ROOT has_fort_building_trigger = yes }
 				remove_building = fort_15th
-				remove_building = fort3
+				#remove_building = fort3
 				remove_building = fort_16th
-				remove_building = fort5
+				#remove_building = fort5
 				remove_building = fort_17th
-				remove_building = fort7
+				#remove_building = fort7
 				remove_building = fort_18th
 			}
 		}

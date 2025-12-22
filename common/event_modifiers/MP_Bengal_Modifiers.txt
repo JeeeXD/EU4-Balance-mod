@@ -1,0 +1,54 @@
+bng_jaunpuri_campaign = {
+	manpower_recovery_speed = 0.1
+}
+bng_colony_starts = {
+	range = 0.33
+}
+bng_naval_academy = {
+	max_admiral_maneuver = 1
+}
+bng_naval_arnmanent = {
+	global_ship_cost = -0.2
+	naval_maintenance_modifier = -0.15
+}
+bng_quality_ideas_reward = {
+	discipline = 0.025
+}
+bng_defensive_ideas_reward = {
+	shock_damage_received = -0.05
+}
+bng_aristo_ideas_reward = {
+	cavalry_cost = -0.2
+}
+bng_divine_ideas_reward = {
+	land_morale_constant = 0.5
+}
+bng_offensive_ideas_reward = {
+	artillery_levels_available_vs_fort = 1
+}
+bng_quantity_ideas_reward = {
+	global_regiment_cost = -0.1
+}
+bng_colonize_brrr = {
+	colonists = 1
+}
+bng_fort_ganges = {
+	local_defensiveness = 0.15
+}
+bng_siegeing = {
+	max_admiral_siege = 1
+}
+bng_immigrants = {
+	province_trade_power_modifier = 0.25
+	local_manpower_modifier = 0.5
+}
+bng_persian_advances = {
+	technology_cost = -0.05
+	advisor_cost = -0.15
+}
+bng_estates_yay = {
+	all_estate_loyalty_equilibrium = 0.1
+}
+bng_abs_nation = {
+	max_absolutism_effect = 0.1
+}

@@ -1,0 +1,31 @@
+﻿l_english:
+bng_quality_ideas_tt: "§YQuality Ideas§!:"
+bng_quantity_ideas_tt: "§YQuantity Ideas§!:"
+bng_aristo_ideas_tt: "§YAristocratic Ideas§!:"
+bng_divine_ideas_tt: "§YDivine Ideas§!:"
+bng_defensive_ideas_tt: "§YDefensive Ideas§!:"
+bng_offensive_ideas_tt: "§YOffensive Ideas§!:"
+bng_idea_explain_tt: "§GOnly one bonus applies, priorotising top to bottom§!"
+bng_ganges_forts_tt: "All provinces in the required areas gain the following:"
+bng_abs_tt: "If we complete the mission by having §YCrownland§! and §YAbsolutism§!, we get the following:"
+bng_new_estate_tt: "If we complete the mission by completing §YCourt Ideas§! and employing a §YJester§!, we get the following:"
+############ MODIFIERS ##############
+bng_jaunpuri_campaign: "Successful Campaign"
+bng_colony_starts: "Indian Expeditions"
+bng_naval_arnmanent: "Bengali Naval Arms"
+bng_quality_ideas_reward: "Disciplined Army"
+bng_defensive_ideas_reward: "Shieldwall"
+bng_aristo_ideas_reward: "Horse Breeding"
+bng_divine_ideas_reward: "Holy Army"
+bng_offensive_ideas_reward: "Siege Academy"
+bng_quantity_ideas_reward: "Patriotic Recruits"
+bng_colonize_brrr: "Expedition 69"
+bng_fort_ganges: "The Two Sides"
+bng_siegeing: "Cannonatronics"
+bng_immigrants: "Immigrants from All Sides"
+bng_persian_advances: "Persian Influences"
+bng_estates_yay: "Loyal Estates"
+bng_abs_nation: "Sultan of Bengal"
+############### MISSIONS ###########
+
+############ EVENTS ###############

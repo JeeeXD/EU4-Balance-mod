@@ -1279,11 +1279,11 @@ has_fort_building_trigger = {
 		tooltip = has_fort_building_trigger_tt
 		OR = {
 			has_building = fort_15th
-			has_building = fort3
+			#has_building = fort3
 			has_building = fort_16th
-			has_building = fort5
+			#has_building = fort5
 			has_building = fort_17th
-			has_building = fort7
+			#has_building = fort7
 			has_building = fort_18th
 		}
 	}

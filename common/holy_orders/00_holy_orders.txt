@@ -412,7 +412,6 @@ avis_order = {
 calatrava_order = {
     icon = GFX_holy_order_calatrava
     trigger = {
-        always = no
     	OR = { 
 			AND = { 
 				culture_group = iberian
