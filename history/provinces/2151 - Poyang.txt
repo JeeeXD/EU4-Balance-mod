@@ -2,7 +2,7 @@
 
 owner = NNG
 controller = NNG
-add_core = MNG
+
 culture = gan
 religion = confucianism
 capital = "Poyang"

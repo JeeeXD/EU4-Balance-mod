@@ -2,7 +2,7 @@
 
 owner = MIN
 controller = MIN
-add_core = MNG
+
 culture = chimin
 religion = confucianism
 capital = "Quanzhou"

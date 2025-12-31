@@ -1,0 +1,138 @@
+maghreb_into_italy = {
+	core_creation = -0.25
+	ae_impact = -0.15
+}
+maghrebi_conquest_of_rome = {
+	interest = -0.25
+}
+maghreb_rivals_defeated = {
+	global_trade_power = 0.25
+}
+maghreb_venetian_merchants = {
+	merchants = 1
+}
+MOR_marrakesh_growing = {
+	local_tax_modifier = 0.25
+	local_prosperity_growth = 2.34
+	trade_goods_size_modifier = 0.25
+}
+
+MOR_el_badi_palace = {
+	monthly_splendor = 1
+}
+
+MOR_mosque_of_ben_youssef = {
+	local_tax_modifier = 0.5
+	tax_income = 6
+}
+MOR_gunpowder_warfare = {
+	artillery_power = 0.1
+	mil_advisor_cost = -0.2
+}
+MOR_local_guich_tribes_stationed = {
+	local_manpower = 0.5
+	allowed_num_of_buildings = 2
+}
+
+MOR_garrison_tribes = {
+	garrison_size = 0.1
+}
+MOR_mosque_of_al_qarawiyyin = {
+	tax_income = 12
+	advisor_pool = 1
+}
+MOR_fez_growing_city = {
+	local_tax_modifier = 0.25
+	local_prosperity_growth = 2.34
+	trade_goods_size_modifier = 0.25
+}
+GRA_spread_of_faith = {
+	tolerance_own = 1
+	improve_relation_modifier = 0.2
+}
+
+GRA_settlers_flocking_south = {
+	global_colonial_growth = 20
+}
+
+GRA_influx_of_gold_from_peru = {
+	global_tax_income = 60
+}
+
+GRA_cash_crop_imports = {
+	trade_efficiency = 0.15
+}
+GRA_crossing_the_high_oceans = {
+	naval_attrition = -0.25
+	leader_naval_manuever = 1
+}
+
+GRA_mission_to_caribbean = {
+	global_colonial_growth = 25
+	trade_range_modifier = 0.25
+}
+
+GRA_wealth_awaits = {
+	colonist_placement_chance = 0.1
+	trade_efficiency = 0.1
+}
+
+GRA_dev_cost_caribbean = {
+	development_cost = -0.1
+}
+
+GRA_to_protect_the_treasure_fleets = {
+	heavy_ship_power = 0.1
+}
+
+GRA_treasure_fleets = {
+	treasure_fleet_income = 0.1
+}
+
+GRA_mission_to_brazil = {
+	establish_order_cost = -0.2
+}
+
+GRA_sugar_empire = {
+	trade_efficiency = 0.1
+	global_tariffs = 0.25
+}
+
+GRA_andalusian_colonialism = {
+	native_uprising_chance = -0.5
+}
+GRA_trade_company_investment = {
+	trade_company_investment_cost = -0.1
+}
+
+GRA_cape_colony = {
+	province_trade_power_value = 5
+	local_build_cost = -0.5
+}
+
+GRA_influx_of_gold_from_mexico = {
+	global_prosperity_growth = 0.25
+}
+
+GRA_almeria_mercury_mine = {
+	local_gold_depletion_chance_modifier = -1
+	trade_goods_size_modifier = 0.05
+}
+GRA_trade_center = {
+	local_development_cost = -0.25
+	local_prosperity_growth = 2
+	trade_value_modifier = 0.5
+}
+berber_cav_start = {
+	cavalry_flanking = 0.5
+	cavalry_cost = -0.15
+}
+berber_cav_finish = {
+	cavalry_power = 0.1
+}
+fatimid_merc_start = {
+	mercenary_cost = -0.33
+}
+fatimid_inf_finish = {
+	infantry_power = 0.1
+}

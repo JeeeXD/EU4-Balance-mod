@@ -8,6 +8,7 @@ ava_slot_1 = {
 	potential = {
 		OR = {
 			tag = AVA
+			tag = BRM
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -305,6 +306,7 @@ ava_slot_2 = {
 	potential = {
 		OR = {
 			tag = AVA
+			tag = BRM
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -564,6 +566,7 @@ ava_slot_3 = {
 	potential = {
 		OR = {
 			tag = AVA
+			tag = BRM
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -789,6 +792,7 @@ ava_slot_4 = {
 	potential = {
 		OR = {
 			tag = AVA
+			tag = BRM
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
@@ -997,6 +1001,7 @@ ava_slot_5 = {
 	potential = {
 		OR = {
 			tag = AVA
+			tag = BRM
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }

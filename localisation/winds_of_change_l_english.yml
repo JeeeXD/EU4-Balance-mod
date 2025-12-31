@@ -754,7 +754,7 @@
  arabic_plutocracy_reform_desc:0 "Whilst other Arabian nations rule with faith or power backing them up, we rule by the most important thing this world has seen: money. This form of government focuses on monetary expansion, as well as overseas influence in order to further strengthen its reliance on trade."
  
  ability_arabic_trade_influence:0 "Arabian Mercantilism"
- arabic_trade_influence_power_desc:1 "§YArabian Mercantilism§! represents our Overseas trade connections.\n\nIt is gained by the following:\n   -High §YNavy Tradition§![Root.GetArabicTradeDescMOH][Root.GetArabicTradeDescWONDHA]\n   -Ruler's §YDiplomatic§! Skill\n   -Being at §YPeace§!\n\nIt is lost by the following:\n   -High §YCorruption§!\n   -Low §YTrade Income Fraction§!\n   -High §YWar Exhaustion§!\n   -Being at §YWar§!\n\n"
+ arabic_trade_influence_power_desc:1 "§YArabian Mercantilism§! represents our Overseas trade connections.\n\nIt is gained by the following:\n   -High §YNavy Tradition§![Root.GetArabicTradeDescMOH][Root.GetArabicTradeDescWONDHA]\n   -Ruler's §YDiplomatic§! Skill\n   \nIt is lost by the following:\n   -High §YCorruption§!\n   -Low §YTrade Income Fraction§!\n   -High §YWar Exhaustion§!\n   \n"
  arabic_trade_influence_power_desc_MOH:0 "\n   -Being in a §YGolden Era§!"
  arabic_trade_influence_power_desc_WON_DHA:0 "\n   -§YTrade Companies§! with at least §Y51%§! of the §YNode's Provincial Trade Power§!"
  arabic_trade_influence_power:1 "Arabian Mercantilism"

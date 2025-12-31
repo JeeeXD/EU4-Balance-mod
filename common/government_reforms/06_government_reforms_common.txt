@@ -1874,7 +1874,7 @@ amphibious_specialization_reform = {
 	modifiers = {
 		regiment_disembark_speed = 0.25
 		transport_attrition = -0.25
-		allowed_marine_fraction = 0.1
+		allowed_marine_fraction = 0.25
 	}
 	effect = {
 		hidden_effect = {
@@ -2135,7 +2135,7 @@ mansure_army_reform = {
 	modifiers = {
 		drill_decay_modifier = -0.5
 		drill_gain_modifier = 0.5
-		infantry_power = 0.1
+		infantry_power = 0.15
 		army_tradition_decay = -0.01
 	}
 
@@ -2222,7 +2222,7 @@ wei_suo_system_reform = {
 		}
 	}
 	modifiers = {
-		global_regiment_cost = -0.15
+		reinforce_speed = 0.33
 	}
 	custom_attributes = {
 		improved_military_buildings = yes	#Barracks, Regimental Camps and Soldier Househols are buffed 
@@ -2447,7 +2447,7 @@ the_righteous_army_reform = {
 		}
 	}
 	modifiers = {
-		recover_army_morale_speed = 0.15
+		discipline = 0.025
 		defensiveness = 0.25
 	}
 	custom_attributes = {
@@ -2550,7 +2550,7 @@ rajput_military_leadership_reform = {
 		rajput_loyalty_modifier = 0.1
 		rajput_influence_modifier = 0.1
 		rajput_privilege_slots = 1
-		allowed_rajput_fraction = 0.1
+		allowed_rajput_fraction = 0.15
 	}
 	
 	ai = {
@@ -3013,10 +3013,8 @@ compagnie_dordonnance_reform = {
 		}
 	}
 	modifiers = {
-		drill_decay_modifier = -0.33
-		army_tradition_decay = -0.005
-		cav_to_inf_ratio = 0.1
-		global_regiment_cost = -0.05
+		cav_to_inf_ratio = 0.25
+		cavalry_cost = 0.33
 	}
 	
 	ai = {
@@ -3144,7 +3142,6 @@ swiss_mercenary_reform = {
 		}
 	}
 	modifiers = {
-		mercenary_cost = -0.25
 		possible_condottieri = 0.5
 		merc_leader_army_tradition = 0.33
 		mercenary_discipline = 0.05
@@ -3176,7 +3173,7 @@ expanded_black_army_reform = {
 		primary_culture = hungarian
 	}
 	modifiers = {
-		mercenary_manpower = 1
+		mercenary_manpower = 0.25
 		war_taxes_cost_modifier = -0.5
 		army_tradition_from_battle = 1
 		allow_mercenary_drill = yes
@@ -3528,7 +3525,7 @@ cossacks_registry_reform = {
 		}
 	}
 	modifiers = {
-		special_unit_forcelimit = 0.1
+		special_unit_forcelimit = 0.15
 		cossacks_loyalty_modifier = 0.15
 		cossacks_influence_modifier = 0.1
 		cossacks_privilege_slots = 1
@@ -3598,9 +3595,6 @@ boyars_army_reform = {
 		}
 	}
 	modifiers = {
-		land_maintenance_modifier = -0.05
-		nobles_influence_modifier = 0.1
-		nobles_privilege_slots = 1
 	}
 	custom_attributes = {
 		unlock_boyars_military_privileges = yes
@@ -5121,6 +5115,17 @@ integrated_ottoman_officials = {
 		}
 		has_pashas = yes
 		custom_attributes = { reveal_ruler_skills_for_mamluks = yes }
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Cradle of Civilization"
+				has_dlc = "Domination"
+			}
+		}
+		custom_attributes = {
+			pasha_extra_bonuses = yes
+		}
 	}
 
 	ai = {

@@ -30,6 +30,9 @@ subject_movement_bonus_mp_15 = {
 subject_development_bonus_mp_10 = {
 	development_cost = -0.1
 }
+draft_cooldown = {
+	
+}
 
 ################################### KHMER ########################
 khmer_ayyuthaya_win = {

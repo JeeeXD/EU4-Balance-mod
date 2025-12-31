@@ -2,7 +2,7 @@
 
 owner = CHC
 controller = CHC
-add_core = MNG
+
 culture = xiang
 religion = confucianism
 capital = "Wulin"
@@ -34,7 +34,7 @@ extra_cost = 8
 }
 1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
 1659.1.1 = { controller = QNG } 
-1662.1.1 = { remove_core = MNG }
+1662.1.1 = {  }
 1673.12.1 = { controller = CZH } # Three Feudatories revolt
 1679.1.1 = { controller = QNG }
 1795.1.1 = { revolt_risk = 6 } # Miao rebellion

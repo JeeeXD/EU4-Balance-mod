@@ -1,0 +1,8 @@
+﻿l_english:
+is_ahead_of_time_in_tech_tt_all: "Is ahead of time in §YAll§! technologies"
+is_ahead_of_time_in_tech_tt_any: "Is ahead of time in §YAny§! technology"
+is_ahead_of_time_in_tech_tt_none: "Is NOT ahead of time in §YAny§! technology"
+is_ahead_of_time_in_tech_tt_adm: "Is ahead of time in the £adm£ §YAdministrative§! technology"
+is_ahead_of_time_in_tech_tt_dip: "Is ahead of time in the £dip£ §YDiplomatic§! technology"
+is_ahead_of_time_in_tech_tt_mil: "Is ahead of time in the £mil£ §YMilitary§! technology"
+HAS_BETTER_TECH_THAN_TT: "§Y[Prev.GetName]§! is at least §Y[Trigger.num_of_cities]§! technologies ahead"

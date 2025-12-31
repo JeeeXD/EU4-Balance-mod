@@ -2,7 +2,7 @@
 
 owner = CHC
 controller = CHC
-add_core = MNG
+
 culture = hubei
 religion = confucianism
 capital = "Wuchang"
@@ -28,4 +28,4 @@ center_of_trade = 1
 	controller = QNG
 	add_core = QNG
 }
-1662.1.1 = { remove_core = MNG }
+1662.1.1 = {  }

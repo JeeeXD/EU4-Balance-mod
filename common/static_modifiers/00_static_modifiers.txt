@@ -762,7 +762,6 @@ bankruptcy = {
 war = {
 	monthly_militarized_society = 0.1
 	rr_girondists_influence = 0.15
-	monthly_arabic_trade_influence_power = -0.5
 	monthly_blood = 0.3
 	monthly_authority_power = -0.05
 }
@@ -777,7 +776,6 @@ peace = {
 	monthly_militarized_society = -0.1
 	monthly_ottoman_decadence = 0.1
 	monthly_asha_vahishta = 0.25
-	monthly_arabic_trade_influence_power = 0.1
 	monthly_cultural_unity = 0.1
 	monthly_blood = -0.05
 	monthly_authority_power = 0.1
@@ -790,7 +788,7 @@ unconditional_surrender = {
 }
 
 call_for_peace = {
-	war_exhaustion = 0.001
+	war_exhaustion = 0.0005
 }
 
 war_exhaustion = {
@@ -1921,7 +1919,6 @@ new_order_regiment_mobilized_modifier = {
 inward_focus_modifier = {
 	core_creation = 0.33
 	province_warscore_cost = 1
-	stability_cost_to_declare_war = 1
 	ae_impact = 0.33
 	development_cost_modifier = -0.05
 	defensiveness = 0.15
@@ -1936,20 +1933,18 @@ outward_focus_modifier = {
 	land_forcelimit_modifier = -0.1
 	trade_efficiency = 0.1
 	diplomatic_reputation = 1
-	global_colonial_growth = 20
-	range = 0.25
+	global_colonial_growth = 40
+	range = 0.33
 	burghers_loyalty_modifier = 0.05
 	harmonization_speed = 0.25
 }
 
 expansion_focus_modifier = {
-	development_cost_modifier = 0.1
 	all_estate_loyalty_equilibrium = -0.1
 	global_unrest = 2
-	diplomatic_reputation = -1
 	core_creation = -0.1
-	land_morale = 0.05
-	naval_morale = 0.05
+	land_morale = 0.1
+	naval_morale = 0.1
 	manpower_recovery_speed = 0.1
 	ae_impact = -0.1
 }
@@ -2195,7 +2190,7 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_2 = -1
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
-	monthly_ottoman_decadence = 2
+	monthly_ottoman_decadence = 5
 	monthly_authority_power = 0.5
 }
 

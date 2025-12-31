@@ -2112,18 +2112,17 @@ MUG_ideas = {
 		idea_cost = -0.1
 	}
 	an_indian_padshah = {
-		free_policy = 1
+		possible_policy = 1
 	}
 	mansabdari_system = {
 		discipline = 0.05
 	}
 	mughal_architecture = {
 		prestige = 1
-		great_project_upgrade_time = -0.25
+		great_project_upgrade_cost = -0.25
 	}
 	fatawa_e_alamgiri = {
-		yearly_absolutism = 1
-		max_absolutism = 15
+		global_manpower_modifier = 0.33
 	}
 }
 
@@ -15552,7 +15551,7 @@ TUN_ideas = {
 	}
 	tun_caliphate = {
 		tolerance_own = 1
-		monthly_piety = 0.001
+		monthly_piety_accelerator = 0.001
 	}
 }
 

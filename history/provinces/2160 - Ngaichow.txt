@@ -2,7 +2,7 @@
 
 owner = YUE
 controller = YUE
-add_core = MNG
+
 add_core = YUE
 culture = chimin
 religion = confucianism

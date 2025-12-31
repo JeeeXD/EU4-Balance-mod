@@ -2,7 +2,7 @@
 
 owner = CDL
 controller = CDL
-add_core = MNG
+
 add_core = CYI
 culture = yi
 religion = animism

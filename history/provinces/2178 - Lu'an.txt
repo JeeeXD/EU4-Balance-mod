@@ -2,7 +2,7 @@
 
 owner = JIN
 controller = JIN
-add_core = MNG
+
 culture = jin
 religion = confucianism
 capital = "Lu'an"

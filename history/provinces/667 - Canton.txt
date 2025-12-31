@@ -2,7 +2,7 @@
 
 owner = YUE
 controller = YUE
-add_core = MNG
+
 culture = cantonese
 religion = confucianism
 capital = "Canton"

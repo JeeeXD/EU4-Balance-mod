@@ -2,7 +2,7 @@
 
 owner = CMI
 controller = CMI
-add_core = MNG
+
 culture = miao
 religion = animism
 capital = "Tongren"

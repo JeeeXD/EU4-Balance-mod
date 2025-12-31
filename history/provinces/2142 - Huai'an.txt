@@ -2,7 +2,7 @@
 
 owner = JIG
 controller = JIG
-add_core = MNG
+
 add_core = JIG
 culture = jianghuai
 religion = confucianism

@@ -49,7 +49,7 @@ country_decisions = {
 			is_nomad = no
 			num_of_owned_provinces_with = {
 				value = 75
-				is_core = yes
+				is_core = ROOT
 				superregion = china_superregion
 			}
 		}

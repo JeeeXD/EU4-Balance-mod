@@ -2,7 +2,7 @@
 
 owner = MIN
 controller = MIN
-add_core = MNG
+
 culture = hakka
 religion = confucianism
 capital = "Tingzhou"

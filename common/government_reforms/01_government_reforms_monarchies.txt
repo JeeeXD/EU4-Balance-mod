@@ -157,6 +157,8 @@ austrian_archduchy_reform = {
 	nation_designer_cost = 0
 	modifiers = {
 		liberty_desire_from_subject_development = -0.33
+		unjustified_demands = -0.1
+		vassal_income = 0.1
 		nobles_influence_modifier = 0.05
 		maratha_exclusive_influence_modifier = 0.05
 		rajput_exclusive_influence_modifier = 0.05
@@ -514,6 +516,7 @@ celestial_empire = {
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
 		governing_capacity = 500
+		manpower_in_culture_group_provinces = 0.1
 	}
 	
 	ai = {
@@ -707,9 +710,9 @@ danish_archkingdom = {
 	valid_for_nation_designer = no
 	modifiers = {
 		diplomatic_upkeep = 2
-		advisor_pool = 1
-		max_absolutism = 10
-		nobles_influence_modifier = -0.1
+		advisor_pool = 2
+		vassal_income = 0.2
+		vassal_forcelimit_bonus = 0.5
 		years_to_integrate_personal_union = -40
 	}
 	custom_attributes = {
@@ -1032,6 +1035,7 @@ ottoman_government = {
 		custom_attributes = {
 			has_harem_events = yes
 			enables_estate_janissaries = yes
+			has_eyalets = yes
 		}
 		government_abilities = {
 			ottoman_decadence_mechanic
@@ -1228,6 +1232,12 @@ tanistry_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+		}
 	}
 	nation_designer_trigger = {
 		primary_culture = irish
@@ -1235,7 +1245,7 @@ tanistry_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
 	modifiers = {
-		morale_damage = 0.05
+		morale_damage = 0.1
 		same_culture_advisor_cost = -0.1
 		nobles_loyalty_modifier = 0.05
 	}
@@ -1261,6 +1271,12 @@ irish_highkingdom_reform = {
 			has_unlocked_government_reform = { government_reform = irish_highkingdom_reform }
 			have_had_reform = irish_highkingdom_reform
 		}
+		NOT = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+		}
 	}
 	trigger = {
 		primary_culture = irish
@@ -1272,7 +1288,7 @@ irish_highkingdom_reform = {
 	nation_designer_cost = 15
 	modifiers = {
 		all_estate_loyalty_equilibrium = 0.05
-		morale_damage = 0.05
+		morale_damage = 0.15
 		same_culture_advisor_cost = -0.15
 		global_manpower_modifier = 0.15
 	}
@@ -1989,6 +2005,7 @@ modernized_ottoman_government = {
 		has_harem = yes
 		custom_attributes = {
 			has_harem_events = yes
+			has_eyalets = yes
 		}
 	}
 }
@@ -2024,6 +2041,7 @@ reorganized_ottoman_government = {
 
 	custom_attributes = {
 		locked_government_type = yes
+		has_eyalets = yes
 	}
 
 	conditional = {
@@ -2444,6 +2462,7 @@ austrian_dual_monarchy = {
 	}
 
 	modifiers = {
+		manpower_in_accepted_culture_provinces = 0.1
 		num_accepted_cultures = 2
 		global_unrest = -2
 		monarch_diplomatic_power = 2
@@ -2750,7 +2769,7 @@ feudal_theocracy = {
 		missionaries = 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
-		governing_capacity = 50
+		governing_capacity = 150
 		brahmins_hindu_loyalty_modifier = 0.05
 		church_loyalty_modifier = 0.05
 	}
@@ -3241,7 +3260,7 @@ rajput_kingdom = {
 	}
 	legacy_equivalent = feudal_monarchy
 	modifiers = {
-		army_tradition = 0.25
+		army_tradition = 0.5
 	}
 }
 
@@ -4565,6 +4584,7 @@ austrian_absolute_monarchy = {
 	}
 
 	modifiers = {
+		development_cost_in_primary_culture = -0.1
 		culture_conversion_cost = -0.25
 		culture_conversion_time = -0.2
 		monarch_diplomatic_power = 2
@@ -5126,8 +5146,7 @@ black_army_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		merc_maintenance_modifier = -0.15
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 		nobles_loyalty_modifier = -0.1
 	}
 	custom_attributes = {
@@ -5355,7 +5374,7 @@ ministerialis_promotion_reform = {
 	}
 	modifiers = {
 		nobles_privilege_slots = 1
-		advisor_cost = -0.1
+		advisor_cost = -0.15
 		monthly_favor_modifier = 0.1
 	}
 	ai = {
@@ -5750,8 +5769,9 @@ examination_system_reform = {
 		}
 	}
 	modifiers = {
-		advisor_pool = 2
+		advisor_pool = 4
 		nobles_influence_modifier = -0.1
+		development_cost = -0.05
 	}
 	ai = {
 		factor = 10
@@ -5771,7 +5791,7 @@ corvee_reform = {
 		}
 	}
 	modifiers = {
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.05
 		build_cost = -0.1
 	}
 	custom_attributes = {
@@ -6108,7 +6128,7 @@ zabt_reform = {
 		tag = MUG
 	}
 	modifiers = {
-		governing_capacity = 150
+		development_cost = -0.05
 	}
 	ai = {
 		factor = 5
@@ -6549,7 +6569,7 @@ great_council_of_mechelen_reform = {
 		}
 	}
 	modifiers = {
-		diplomatic_annexation_cost = -0.1
+		diplomatic_annexation_cost = -0.15
 		reduced_liberty_desire = 10
 		governing_capacity = 150
 	}
@@ -7292,7 +7312,7 @@ egyptian_government_reform = {
 	modifiers = {
 		yearly_innovativeness = 0.1
 		yearly_government_power = 0.5
-		
+		special_unit_forcelimit = 0.15
 	}
 
 	government_abilities = {

@@ -3,7 +3,7 @@
 owner = AHU
 controller = AHU
 add_core = AHU
-add_core = MNG
+
 culture = wu
 religion = confucianism
 capital = "Huizhou"

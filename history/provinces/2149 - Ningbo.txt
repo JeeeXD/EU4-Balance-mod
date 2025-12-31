@@ -2,7 +2,7 @@
 
 owner = WUU
 controller = WUU
-add_core = MNG
+
 culture = wu
 religion = confucianism
 capital = "Ningbo"

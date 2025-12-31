@@ -6,7 +6,7 @@ latent_trade_goods = {
 
 owner = QIN
 controller = QIN
-add_core = MNG
+
 add_core = QIN
 culture = mongol
 religion = vajrayana

@@ -3,7 +3,7 @@
 owner = JIG
 controller = JIG
 add_core = JIG
-add_core = MNG
+
 culture = jianghuai
 religion = confucianism
 capital = "Haizhou"

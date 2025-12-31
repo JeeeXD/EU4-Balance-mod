@@ -2,7 +2,7 @@
 
 owner = CDL
 controller = CDL
-add_core = MNG
+
 culture = zhuang
 religion = confucianism
 capital = "Lingyun"

@@ -14320,8 +14320,7 @@ TIM_india_conquest = {
 }
 
 TIM_caucasia_modifier = {
-	global_heathen_missionary_strength = 0.01
-	land_morale = 0.05
+	global_heathen_missionary_strength = 0.02
 }
 
 TIM_fresh_blood_modifier = {
@@ -14423,8 +14422,7 @@ TIM_gunpowder_empire = {
 }
 
 TIM_horsemen_of_apocalypse_modifier = {
-	cavalry_flanking = 0.5
-	cavalry_power = 0.2
+	cavalry_power = 0.1
 }
 
 TIM_great_power = {
@@ -14481,7 +14479,6 @@ TIM_dev_cost_until_persia_formation = {
 }
 
 TIM_great_architects = {
-	build_cost = -0.05
 	build_time = -0.25
 }
 
@@ -14721,7 +14718,7 @@ MUG_cavalry_tactics = {
 }
 
 MUG_focus_on_elephants = {
-	cavalry_shock = 0.15
+	cavalry_power = 0.15
 }
 
 MUG_decision_viceroyalty_of_the_deccan = {

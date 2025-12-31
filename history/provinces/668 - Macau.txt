@@ -2,7 +2,7 @@
 
 owner = YUE
 controller = YUE
-add_core = MNG
+
 culture = cantonese
 religion = confucianism
 capital = "Macau"
@@ -27,7 +27,7 @@ center_of_trade = 1
 	owner = CZH
 	controller = CZH
 	add_core = CZH
-	remove_core = MNG
+	
 } # The Three Feudatories
 1670.1.1 = {	owner = POR
 	controller = POR

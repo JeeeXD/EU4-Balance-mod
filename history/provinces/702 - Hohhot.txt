@@ -2,7 +2,7 @@
 
 owner = QIN
 controller = QIN
-add_core = MNG
+
 culture = mongol
 religion = vajrayana
 capital = "Hohhot"

@@ -1,0 +1,3941 @@
+maghreb_common_1a = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+			tag = TUN
+			tag = MOR
+		}
+	}
+	has_country_shield = yes
+	gc_tun_genoa = {
+		icon = mission_raid_on_genoa
+		required_missions = { gc_tun_med_islands }
+		position = 3
+		
+		provinces_to_highlight = {
+			province_id = 101
+		}
+		
+		trigger = {
+			101 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						controlled_by = ROOT
+						NOT = { owned_by = ROOT }
+						devastation = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_treasury = 500
+			add_yearly_sailors = 5
+		}
+	}	
+	gc_tun_valencia = {
+		icon = mission_raid_on_valencia
+		required_missions = { gc_tun_genoa }
+		
+		provinces_to_highlight = {
+			province_id = 220
+		}
+		
+		trigger = {
+			220 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						controlled_by = ROOT
+						NOT = { owned_by = ROOT }
+						devastation = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_treasury = 500
+			add_yearly_sailors = 5
+		}
+	}
+}
+andalusia_specific_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		tag = ADU
+	}
+	has_country_shield = yes
+	
+	gra_own_iberia = {
+		icon = mission_tear_down_spanish_strongholds
+		required_missions = { gra_restore_caliphate_cordoba }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = galicia_area
+				area = asturias_area
+				area = leon_area
+				area = extremadura_area
+				area = basque_country
+				area = catalonia_area
+				area = alentejo_area
+				area = beieras_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			galicia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			asturias_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			leon_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			extremadura_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			basque_country = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			catalonia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = adu_white_phoenix
+				duration = 7300
+			}
+			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		
+	}
+	
+	gra_into_france = {
+		icon = mission_the_french_menace
+		required_missions = { gra_own_iberia }
+		position = 8
+		
+		provinces_to_highlight = {
+			OR = {
+				area = languedoc_area
+				area = provence_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			languedoc_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			provence_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		
+		effect = {
+			add_yearly_manpower = 1
+			liguria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+		
+	}
+	
+}
+maghreb_common_1b = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+		}
+	}
+	has_country_shield = yes
+
+	maghrebi_conquest_genoa = {
+		icon = end_genoese_competition
+		required_missions = { maghrebi_into_naples }
+		position = 10
+		
+		provinces_to_highlight = {
+			OR = {
+				area = liguria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			1298 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = maghreb_rivals_defeated
+				duration = 3650
+			}
+		}
+	}
+	GRA_outposts_in_the_gold_coast = {
+		icon = mission_trade_in_gold_coast
+		required_missions = { GRA_iberian_discoveries }
+		position = 13
+		provinces_to_highlight = {
+			region = guinea_region
+			is_empty = yes 
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = guinea_region
+				value = 3
+			}
+		}
+		effect = {
+			custom_tooltip = " "
+			
+			1466 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 14600
+					power = 30
+					key = GRA_new_arrivals
+				}
+			}
+		}
+	}
+	GRA_onto_the_cape = {
+		icon = mission_portuguese_malacca
+		required_missions = { GRA_outposts_in_the_gold_coast }
+		position = 15
+		provinces_to_highlight = {
+			region = south_africa_region
+			is_empty = yes 
+		}
+		trigger = {
+			1460 = {
+				is_strongest_trade_power = ROOT
+			}
+			num_of_owned_provinces_with = {
+				region = south_africa_region
+				value = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_trade_company_investment
+				duration = -1
+			}
+			1177 = {
+				add_province_modifier = {
+					name = GRA_cape_colony
+					duration = -1
+				}
+				add_or_upgrade_trade_building = yes
+			}
+		}
+	}
+	GRA_kilwa = {
+		icon = mission_son_own_develop_clothes_and_salt
+		required_missions = { GRA_onto_the_cape }
+		position = 17
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 1448
+						province_id = 4346
+					}
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 5
+						}
+					}
+				}
+				AND = {
+					province_id = 387
+					NOT = { range = ROOT }
+				}
+				AND = {
+					owner = {
+						1448 = { has_most_province_trade_power = PREV }
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+				AND = {
+					owner = {
+						4346 = { has_most_province_trade_power = PREV }
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			1448 = { #zanzibar
+				trade_share = {
+					country = ROOT
+					share = 5
+				}
+			}
+			4346 = { #gulf of aden
+				trade_share = {
+					country = ROOT
+					share = 5
+				}
+			}
+			387 = {
+				range = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = GRA_zanzibar_opinion_with_trade_power
+				1448 = {
+					all_trade_node_member_country = {
+						OR = {
+							1448 = {
+								NOT = { has_most_province_trade_power = PREV }
+							}
+							has_opinion = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = GRA_gulf_of_aden_opinion_with_trade_power
+				4346 = {
+					all_trade_node_member_country = {
+						OR = {
+							4346 = {
+								NOT = { has_most_province_trade_power = PREV }
+							}
+							has_opinion = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = " "
+			
+			add_mercantilism = 5 
+		}
+	}
+	GRA_workshops = {
+		icon = chater_the_voc
+		required_missions = { }
+		position = 18
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_production_building_trigger = yes }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_production_building_trigger = yes
+				value = 5
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+	GRA_new_silk = {
+		icon = mission_valencian_silk
+		required_missions = { GRA_workshops }
+		position = 20
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = iberia_region
+			num_of_times_improved = 1
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				num_of_times_improved = 15
+				region = iberia_region
+				value = 3
+			}
+		}
+		effect = {
+			4546 = {
+				change_trade_goods = silk
+			}
+			222 = {
+				change_trade_goods = silk
+			}
+		}
+	}
+	GRA_manus = {
+		icon = mission_industria_sedera
+		required_missions = { GRA_new_silk GRA_funduqs }
+		position = 21
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manufactory_trigger = yes }
+		}
+		trigger = {
+			
+			num_of_owned_provinces_with = {
+				has_manufactory_trigger = yes
+				value = 20
+			}
+		}
+		effect = {
+			custom_tooltip = ARB_unlock_oasis_development
+			add_years_of_income = 1
+			
+			custom_tooltip = " "
+			change_estate_land_share = {
+				estate = all
+				share = -5
+			}
+			custom_tooltip = GRA_distribute_10_production
+			hidden_effect = {
+				for = {
+					amount = 10
+					effect = "
+						random_owned_province = {
+							limit = {
+								has_manufactory_trigger = yes
+							}
+							add_base_production = 1 
+						}
+					"
+				}
+				set_country_flag = ARB_unlock_oasis_development_flag
+			}
+		}
+	}
+	gra_refugees_flock_to_us = {
+		icon = mission_cope_with_refugees
+		required_missions = { }
+		position = 22
+		
+		trigger = {
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 65 #starting: 48 
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 100
+					}
+				}
+			}
+			else = {
+				religious_unity = 0.90
+			}
+			stability = 2
+		}
+		
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_manpower = 4
+			}
+		}
+	}
+	gra_palace_of_alhambra = {
+		icon = mission_develop_alhambra
+		required_missions = { gra_refugees_flock_to_us }
+		position = 23
+		
+		provinces_to_highlight = {
+			province_id = 223
+		}
+		trigger = {
+			223 = {
+				owned_by = ROOT
+				development = 20
+				has_building = temple
+			}
+		}
+		
+		effect = {
+			223 = {
+				add_province_modifier = {
+					name = "renovated_palace_of_alhambra"
+					duration = -1
+				}
+			}
+		}
+	}
+	
+}
+maghreb_common_2a = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+			tag = TUN
+			tag = MOR
+		}
+	}
+	has_country_shield = yes
+	gc_tun_fleet = {
+		icon = mission_construct_a_corsair_fleet
+		required_missions = { }
+		
+		trigger = {
+			naval_forcelimit = 20
+			num_of_light_ship = 5
+		}
+		effect = {
+			sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baleares_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			barbary_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			algiers_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hautes_plaines_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_tun_med_islands = {
+		icon = mission_seize_the_isles
+		required_missions = { gc_tun_fleet }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = corsica_sardinia_area
+				area = baleares_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tun_med_conquest"
+				duration = 7300
+			}
+			163 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			320 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			321 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	gc_tun_east_med_islands = {
+		icon = mission_dominate_the_mediterranean
+		required_missions = { gc_tun_med_islands }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 163
+				province_id = 320
+				province_id = 321
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			163 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			320 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			321 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tun_med_conquest_east"
+				duration = 7300
+			}
+			112 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	gc_tun_venice = {
+		icon = mission_raid_on_venice
+		required_missions = { gc_tun_east_med_islands }
+		
+		provinces_to_highlight = {
+			province_id = 112
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						controlled_by = ROOT
+						NOT = { owned_by = ROOT }
+						devastation = 25
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			112 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						controlled_by = ROOT
+						NOT = { owned_by = ROOT }
+						devastation = 25
+					}
+				}
+			}			
+		}
+		effect = {
+			add_treasury = 500
+			add_yearly_sailors = 5
+		}
+	}
+	gra_restore_the_andalusian_caliphate = { #art
+		icon = mission_al_andalus
+		required_missions = { gra_reconquer_sevilla }
+		position = 5
+		
+		provinces_to_highlight = {
+			area = lower_andalucia_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { religion_group = muslim	}
+			}
+		}
+		
+		trigger = {
+			lower_andalucia_area = {
+				type = all
+				owned_by = ROOT
+				religion_group = muslim
+			}
+			tag = ADU
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "adu_righteous_conquest"
+				duration = 7300
+			}
+			toledo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			castille_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aragon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			valencia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		
+	}
+}
+andalusia_specific_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		tag = ADU
+	}
+	has_country_shield = yes
+	gra_restore_caliphate_cordoba = {
+		icon = mission_restore_caliphate_of_cordoba
+		required_missions = { gra_restore_the_andalusian_caliphate }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = toledo_area
+				area = castille_area
+				area = aragon_area
+				province_id = 218
+				province_id = 1747
+				province_id = 216
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			toledo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			castille_area = {
+				type = all
+				owned_by = ROOT
+			}
+			aragon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			218 = {
+				owned_by = ROOT
+			}
+			1747 = {
+				owned_by = ROOT
+			}
+			216 = {
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			add_adm_power = 200
+			galicia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			asturias_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			leon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			basque_country = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		
+	}
+	
+	adu_conquer_portugal = {
+		icon = mission_portuguese_interference
+		required_missions = { gra_restore_caliphate_cordoba }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = alentejo_area
+				area = beieras_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					is_random_new_world = no
+					ceara_area = {
+						NOT = {
+							has_discovered = ROOT
+						}
+					}
+				}
+				ceara_area = {
+					discover_country = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = "adu_new_world_discoveries"
+				duration = 7300
+			}
+		}
+		
+	}
+	
+}
+maghreb_common_2b = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+		}
+	}
+	has_country_shield = yes
+
+	maghrebi_into_naples = {
+		icon = king_of_naples
+		required_missions = {  }
+		position = 9
+		
+		provinces_to_highlight = {
+			OR = {
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = maghreb_into_italy
+				duration = 9125
+			}
+		}
+	}
+	maghrebi_muslim_pope = {
+		icon = sway_the_pope
+		required_missions = { maghrebi_into_naples }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = lazio_area
+				area = central_italy_area
+				area = tuscany_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			lazio_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			central_italy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			country_event = {
+				id = flavor_maghrebi.1
+			}
+			add_country_modifier = {
+				name = maghrebi_conquest_of_rome
+				duration = 3650
+			}
+		}
+	}
+	maghrebi_italian_hegemony = {
+		icon = mission_rule_italy
+		required_missions = { maghrebi_muslim_pope maghrebi_conquest_genoa maghrebi_venice_deleted }
+		
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			if = { 
+				limit = { has_estate = estate_burghers } 
+				set_country_flag = fra_enable_italian_bookkeeping_privilege_flag
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					custom_tooltip = fra_enable_italian_bookkeeping_privilege_tt
+				}
+				add_estate_loyalty = { 
+					estate = estate_burghers 
+					loyalty = 15
+				}
+			}
+			add_mercantilism = 3
+		}
+	}
+	GRA_iberian_discoveries = {
+		icon = mission_look_west
+		required_missions = { }
+		position = 12
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				226 = { owned_by = ROOT }
+				1749 = { owned_by = ROOT }
+			}
+			num_of_explorers = 1
+		}
+		effect = {
+			define_advisor = {
+				type = navigator
+				skill = 3
+				culture = ROOT
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			
+			custom_tooltip = " "
+			
+			add_navy_tradition = 20
+		}
+	}
+	GRA_islamize_local_peoples = {
+		icon = mission_mal_jihad_upon_own_population
+		required_missions = { GRA_outposts_in_the_gold_coast }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				region = guinea_region
+				region = kongo_region
+				region = niger_region
+			}
+			NOT = {
+				owner = {
+					religion_group = ROOT
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					guinea_region = {
+						type = all
+						owner = {
+							religion_group = ROOT
+						}
+					}
+					kongo_region = {
+						type = all
+						owner = {
+							religion_group = ROOT
+						}
+					}
+					niger_region = {
+						type = all
+						owner = {
+							religion_group = ROOT
+						}
+					}
+					amount = 60
+				}
+			}
+			
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	GRA_mexico = {
+		icon = mission_mayan_conquest
+		required_missions = { GRA_caribbean }
+		position = 15
+		provinces_to_highlight = {
+			OR = {
+				region = mexico_region
+				region = central_america_region
+			}
+			is_city = yes
+			NOT = {
+				owner = {
+					religion_group = ROOT
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				mexico_region = {
+					type = all
+					owner = {
+						religion_group = ROOT
+					}
+				}
+				central_america_region = {
+					type = all
+					owner = {
+						religion_group = ROOT
+					}
+				}
+				amount = 25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_influx_of_gold_from_mexico
+				duration = -1
+			}
+			
+			add_years_of_income = 1 
+		}
+	}
+	GRA_new_granada = {
+		icon = mission_new_kingdom_of_granada
+		required_missions = { GRA_colony_caribbean }
+		position = 17
+		provinces_to_highlight = {
+			region = colombia_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { is_city = yes }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = colombia_region
+				is_city = yes
+				value = 5 
+			}
+		}
+		effect = {
+			add_mercantilism = 5 
+			
+			custom_tooltip = " "
+		}
+	}
+	GRA_almeria = {
+		icon = mission_jawal_silver_mine
+		required_missions = { GRA_workshops }
+		position = 19
+		provinces_to_highlight = {
+			province_id = 2754
+			OR = { 
+				NOT = { owned_by = ROOT }
+				NOT = { base_production = 5 }
+				NOT = { num_of_buildings_in_province = 3 }
+			}
+		}
+		trigger = {
+			2754 = {
+				owned_by = ROOT
+				base_production = 5
+				num_of_buildings_in_province = 3
+			}
+			OR = {
+				master_of_mint = 1
+				treasurer = 1
+			}
+			monthly_adm = 8
+		}
+		effect = {
+			2754 = {
+				add_province_modifier = {
+					name = GRA_almeria_mercury_mine
+					duration = -1
+				}
+			}
+			
+			add_inflation = -0.5
+		}
+	}
+	GRA_funduqs = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { }
+		position = 20
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 1293
+					NOT = {
+						has_most_province_trade_power = ROOT
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+						trade_node_value = 25
+					}
+				}
+				AND = {
+					OR = {
+						area = northern_morocco_area
+						area = upper_andalucia_area
+						area = lower_andalucia_area
+						area = castille_area
+						area = toledo_area
+						area = asturias_area
+						area = leon_area
+						area = alentejo_area
+						area = beieras_area
+						area = extremadura_area
+						area = galicia_area
+					}
+				}
+			}
+		}
+		trigger = {
+			1293 = {
+				has_most_province_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+				trade_node_value = 150
+			}
+		}
+		effect = {
+			4563 = {
+					create_or_add_center_of_trade_level = { level = 3 }
+					add_province_modifier = {
+						name = GRA_trade_center
+						duration = -1
+					}
+					add_base_tax = 1
+					add_base_production = 1 
+				}
+			
+		}
+	}
+	adu_develop_cordoba = {
+		icon = mission_develop_cordoba
+		required_missions = { gra_refugees_flock_to_us }
+		position = 23
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = lower_andalucia_area
+						area = upper_andalucia_area
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { religion = ROOT }
+					}
+				}
+				province_id = 225
+			}
+		}
+		
+		trigger = {
+			225 = {
+				owned_by = ROOT
+				OR = {
+					development = 15
+					has_building = temple
+				}
+			}
+			lower_andalucia_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			upper_andalucia_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+		}
+		
+		effect = {
+			custom_tooltip = alandalus_returns_tooltip
+			225 = {
+				add_province_triggered_modifier = alandalus_returns
+			}
+		}
+	}
+}
+maghreb_common_3a = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+			tag = TUN
+			tag = MOR
+		}
+	}
+	has_country_shield = yes
+
+	gc_tun_barbary_coast = {
+		icon = mission_control_the_barbary_coast
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = barbary_coast_area
+				area = algiers_area
+				area = hautes_plaines_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			barbary_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			algiers_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hautes_plaines_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_yearly_sailors = 3
+			add_country_modifier = {
+				name = "tun_barbary_pirates"
+				duration = 7300
+			}
+		}
+	}
+	gc_tun_privateer = {
+		icon = mission_sponsor_piracy
+		required_missions = { gc_tun_barbary_coast gc_tun_ottomans }
+		position = 2
+		
+		provinces_to_highlight = {	
+			OR = {
+				province_id = 1298
+				AND = {
+					province_id = 338
+					NOT = {
+						owned_by = ROOT
+						OR = {
+							has_building = shipyard
+							has_building = grand_shipyard
+						}
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			1298 = {
+				privateer_power = {
+					country = ROOT
+					share = 25
+				}
+			}
+			338 = { 
+				owned_by = ROOT 
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			# Barbarossa event, make Algiers a pirate march
+			country_event = {
+				id = flavor_tun.1
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			marrekesh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_mor_pirates = {
+		icon = mission_pirate_havens
+		required_missions = { gc_tun_privateer }
+		
+		provinces_to_highlight = {
+			province_id = 1298
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+			}
+			OR = {
+				any_subject_country = {
+					has_reform = pirate_republic_reform
+				}
+				1298 = {
+					privateer_power = {
+						country = ROOT
+						share = 25
+					}
+				}
+			}
+		}
+		
+		effect = {
+			north_atlantic_region = {
+				discover_country = ROOT
+			}
+			kabylia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			djerba_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			370 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+					discover_country = ROOT
+				}
+			}
+			371 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+	gc_mor_iceland = {
+		icon = mission_raid_on_iceland
+		required_missions = { gc_mor_pirates }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 370
+				province_id = 371
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			OR = {
+				370 = {
+					devastation = 25
+					owner = {
+						war_with = ROOT
+					}
+				}
+				AND = {
+					owns_or_non_sovereign_subject_of = 370
+					owns_or_non_sovereign_subject_of = 371
+				}
+			}
+		}
+		
+		effect = {
+			add_yearly_sailors = 20
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			subarctic_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+		}
+	}
+	gc_mor_north_sea = {
+		icon = mission_corsairs_of_the_north_sea
+		required_missions = { gc_mor_iceland }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = kingdom_of_the_isles_area
+				area = subarctic_islands_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			1975 = {
+				privateer_power = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1269 = {
+				privateer_power = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "mor_north_sea_corsairs"
+				duration = -1
+			}
+		}
+	}
+	gc_tun_sahara = {
+		icon = mission_traverse_the_sahara
+		required_missions = {  }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 341
+					NOT = { is_strongest_trade_power = ROOT }
+				}
+				AND = {
+					province_id = 354
+					OR = {
+						NOT = {	owned_by = ROOT }
+						NOT = { has_building = marketplace }
+					}
+				}
+				AND = {
+					province_id = 2448
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			354 = {
+				has_building = marketplace
+				owned_by = ROOT
+			}
+			owns_core_province = 2448
+			341 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					2474 = {
+						is_empty = yes
+					}
+				}
+				2474 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			if = {
+				limit = {
+					2475 = {
+						is_empty = yes
+					}
+				}
+				2475 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			azbin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				discover_country = ROOT	
+				add_permanent_claim = ROOT
+			}
+			east_azbin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT				
+			}
+			katsina_area = {
+				discover_country = ROOT
+			}
+		}
+	}
+	gc_tun_air = {
+		icon = mission_conquer_air
+		required_missions = { gc_tun_sahara }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = azbin_area
+				area = east_azbin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			azbin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_azbin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "conquest_of_air"
+				duration = 7300
+			}
+			katsina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kanem_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			bornu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_tun_kanem = {
+		icon = mission_conquer_kanem_bornu
+		required_missions = { gc_tun_air }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = katsina_area
+				area = kanem_area
+				area = bornu_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			katsina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kanem_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bornu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tun_conquest_of_kanem"
+				duration = 7300
+			}
+		}
+	}
+}
+formables_common_3b = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+		}
+	}
+	has_country_shield = yes
+
+	maghrebi_venice_deleted = {
+		icon = ven_of_wealth_and_power
+		required_missions = { maghrebi_into_naples }
+		position = 10
+		
+		provinces_to_highlight = {
+			OR = {
+				area = venetia_area
+				area = emilia_romagna_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			venetia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			emilia_romagna_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			1308 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = maghreb_venetian_merchants
+				duration = -1
+			}
+		}
+	}
+	GRA_high_seas_navy = {
+		icon = mission_launch_a_flagship
+		required_missions = { GRA_iberian_discoveries }
+		position = 13
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_heavy_ship = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_crossing_the_high_oceans
+				duration = 10950
+			}
+		}
+	}
+	
+	GRA_caribbean = {
+		icon = mission_colonize_the_caribbean
+		required_missions = { GRA_high_seas_navy }
+		position = 14
+		provinces_to_highlight = {
+			region = carribeans_region
+		}
+		trigger = {
+			carribeans_region = {	
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			
+			custom_tooltip = " "
+			
+			ME_give_claims = { region = mexico_region }
+			
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = GRA_mission_to_caribbean
+				duration = 7300
+			}
+		}
+	}
+	
+	GRA_colony_caribbean = {
+		icon = mission_caribbean_cn
+		required_missions = { GRA_caribbean }
+		position = 16
+		provinces_to_highlight = {
+			region = carribeans_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { is_city = yes }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = carribeans_region
+				is_city = yes
+				value = 8 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_wealth_awaits
+				duration = 10950
+			}
+			
+		}
+	}
+	gc_mor_new_world = {
+		icon = mission_new_world_power
+		required_missions = { GRA_colony_caribbean }
+		position = 17
+		
+		provinces_to_highlight = {
+			OR = {
+				region = carribeans_region
+				region = colombia_region
+			}
+			OR = {
+				is_city = no
+				NOT = { owned_by = ROOT }
+			}
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			if = {
+				limit = {
+					is_random_new_world = no
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					region = carribeans_region
+					is_city = yes
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					region = colombia_region
+					is_city = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = mor_big_colony.tooltip
+					any_country = {
+						is_subject_of = ROOT
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
+						num_of_cities = 25
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mor_big_colony.tooltip
+					any_country = {
+						is_subject_of = ROOT
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
+						num_of_cities = 25
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "mor_new_world_power"
+				duration = -1
+			}
+		}
+	}
+	MOR_expand_marrakesh = {
+		icon = mission_found_havana
+		required_missions = { }
+		position = 19
+		provinces_to_highlight = {
+			province_id = 344
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { num_of_buildings_in_province = 3 }
+				NOT = { development = 20 }
+			}
+		}
+		trigger = {
+			344 = {
+				owned_by = ROOT
+				num_of_buildings_in_province = 3
+				development = 20
+			}
+		}
+		effect = {
+			344 = {
+				add_province_modifier = {
+					name = MOR_marrakesh_growing
+					duration = -1
+				}
+			}
+			
+			344 = {
+				add_prosperity = 100
+			}
+		}
+	}
+	
+	MOR_el_badi = {
+		icon = mission_el_badi_palace
+		required_missions = { MOR_expand_marrakesh }
+		position = 20
+		provinces_to_highlight = {
+			province_id = 344
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 35 }
+			}
+		}
+		trigger = {
+			344 = {
+				owned_by = ROOT
+				development = 35
+			}
+			
+			legitimacy = 90
+		}
+		effect = {
+			344 = {
+				add_province_modifier = {
+					name = MOR_el_badi_palace
+					duration = -1
+				}
+			}
+			
+		}
+	}
+	maghrebi_starter_mil = {
+		icon = mission_ottoman_early_army
+		required_missions = {  }
+		position = 21
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			monthly_mil = 12
+			army_size_percentage = 1
+			manpower_percentage = 0.9
+		}
+		effect = {
+			add_mil_power = 50
+			add_army_tradition = 60
+		}
+	}
+	
+}
+berber_3c = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		is_or_was_tag = { tag = TAM }
+	}
+	has_country_shield = yes
+
+	berber_cavalry_hosts = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = {  maghrebi_starter_mil }
+		position = 22
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			OR = {
+				cavalry_fraction = 0.5
+				num_of_cavalry = 50
+			}
+			OR = {
+				full_idea_group = aristocracy_ideas
+				full_idea_group = horde_gov_ideas
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = berber_cav_start
+				duration = 3650
+			}
+		}
+	}
+	berber_elite_cav = {
+		icon = mission_cossack_cavalry
+		required_missions = {  berber_cavalry_hosts }
+		position = 23
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			cavalry_fraction = 1
+			army_size = 200
+			development_in_provinces = {
+				value = 300
+				trade_goods = livestock
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = berber_cav_finish
+				duration = -1
+			}
+		}
+	}
+	
+}
+fatimid_3c = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		is_or_was_tag = { tag = FAT }
+	}
+	has_country_shield = yes
+
+	fatimid_merc_expansions = {
+		icon = mission_el_badi_palace
+		required_missions = {  maghrebi_starter_mil }
+		position = 22
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			mercenary_fraction = 0.2
+			OR = {
+				full_idea_group = mercenary_ideas
+				num_of_mercenaries = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fatimid_merc_start
+				duration = 3650
+			}
+		}
+	}
+	fatimid_infantry = {
+		icon = mission_el_badi_palace
+		required_missions = {  fatimid_merc_expansions }
+		position = 23
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			is_ahead_of_time_in_tech_mil = yes
+			army_size = 200
+			development_in_provinces = {
+				value = 100
+				trade_goods = iron
+			}
+			development_in_provinces = {
+				value = 200
+				trade_goods = salt
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fatimid_inf_finish
+				duration = -1
+			}
+		}
+	}
+	
+}
+maghreb_common_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+			tag = MOR
+			tag = TUN
+		}
+	}
+	has_country_shield = yes
+
+	gc_tun_ottomans = {
+		icon = mission_ottoman_diplomacy
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			owned_by = TUR
+			is_capital = yes
+		}
+		
+		trigger = {	
+			OR = {
+				alliance_with = TUR
+				is_rival = TUR
+				NOT = { exists = TUR }
+			}
+		}
+		effect = {
+			358 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_tun_alexandria = {
+		icon = mission_conquer_alexandria
+		required_missions = { gc_tun_ottomans }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = cyrenaica_area
+				province_id = 358
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			358 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+					358 = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+				}
+				358 = {
+					add_center_of_trade_level = 1
+				}
+			}
+			else = {
+				358 = {
+					add_province_modifier = {
+						name = "tun_restoration_of_alexandra"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	gc_tun_art_religion = {
+		icon = mission_patronize_art_and_religion
+		required_missions = { gc_tun_privateer }
+		
+		provinces_to_highlight = {
+			province_id = 4566
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				NOT = { has_building = university }
+			}
+		}
+		
+		trigger = {
+			4566 = {
+				owned_by = ROOT
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				has_building = university
+			}
+			religious_unity = 1
+			num_accepted_cultures = 3
+		}
+		effect = {
+			add_prestige = 20
+			if = {
+				limit = {
+					religion_group = muslim
+					piety = 1
+				}
+				add_piety = 0.75
+			}
+			else_if = {
+				limit = {
+					religion_group = muslim
+					NOT = { piety = 1 }
+				}
+				add_piety = -0.75
+			}
+		}
+	}
+	adu_reclaim_mecca = {
+		icon = mission_into_arabia
+		required_missions = { adu_fatimid_lands }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = gulf_of_arabia_area
+				area = tabuk_area
+				area = medina_area
+				area = mecca_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			gulf_of_arabia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tabuk_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			medina_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mecca_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "adu_tolerance_heretics_mod"
+				duration = 7300
+			}
+		}
+	}
+	adu_down_tigris = {
+		icon = mission_into_persia_1
+		required_missions = { adu_levantine_restoration }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = iraq_arabi_area
+				area = basra_area
+				area = khuzestan_area
+				area = luristan_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			iraq_arabi_area = {
+				type = all
+				owned_by = ROOT
+			}
+			basra_area = {
+				type = all
+				owned_by = ROOT
+			}
+			khuzestan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			luristan_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			add_adm_power = 300
+			408 = {
+				set_center_level_3_center_of_trade = yes
+			}
+			persian_gulf_coast = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			farsistan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			kerman_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			mogostan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	gc_mor_black_guard = {
+		icon = mission_establish_the_black_guard
+		required_missions = { gc_tun_kanem gc_mor_timbuktu }
+		position = 9
+		
+		provinces_to_highlight = {
+			province_id = 1132
+			NOT = { is_strongest_trade_power = ROOT }
+		}
+		
+		trigger = {
+			1132 = {
+				is_strongest_trade_power = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "mor_black_guard"
+				duration = -1
+			}
+		}
+	}
+}
+formables_common_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+		}
+	}
+	has_country_shield = yes
+
+	GRA_treasure_fleet_en_route = {
+		icon = mission_african_gold
+		required_missions = { GRA_colonialism }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			trade_goods = gold
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				trade_goods = gold 
+				value = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_to_protect_the_treasure_fleets
+				duration = 9125
+			}
+			
+			add_years_of_income = 0.5
+			
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = GRA_treasure_fleets
+				duration = -1
+			}
+		}
+	}
+	GRA_rival_navies = {
+		icon = mission_rb_empire
+		required_missions = { GRA_treasure_fleet_en_route GRA_high_seas_navy }
+		position = 14
+		provinces_to_highlight = {
+			owner = {
+				navy_size = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GRA_bigger_navy_than_ours
+				NOT = {
+					any_country = {
+						navy_size = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = 10_permanent_power_projection
+				amount = 10
+			}
+			
+			custom_tooltip = " "
+			
+			create_admiral = { tradition = 80 }
+		}
+	}
+	GRA_sail_south = {
+		icon = mission_raid_christian_trade
+		required_missions = { GRA_caribbean }
+		position = 15
+		provinces_to_highlight = {
+			OR = {
+				province_id = 755
+				province_id = 763
+				province_id = 778
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		trigger = {
+			755 = { has_discovered = ROOT }
+			763 = { has_discovered = ROOT }
+			778 = { has_discovered = ROOT }
+		}
+		effect = {
+			if = {
+				limit = {
+					owns = 224
+				}
+				224 = {
+					add_institution_embracement = {
+						which = new_world_i
+						value = 50
+					}
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					add_institution_embracement = {
+						which = new_world_i
+						value = 50
+					}
+				}
+			}
+			
+			custom_tooltip = " "
+			
+			add_navy_tradition = 15
+		}
+	}
+	GRA_brazil = {
+		icon = mission_colonise_brazil
+		required_missions = { GRA_sail_south }
+		position = 16
+		provinces_to_highlight = {
+			region = brazil_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { is_city = yes }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = brazil_region
+				is_city = yes
+				value = 5 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_mission_to_brazil
+				duration = -1
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+		}
+	}
+	GRA_sugar = {
+		icon = mission_the_triangle_trade
+		required_missions = { GRA_colony_caribbean GRA_brazil }
+		position = 17
+		provinces_to_highlight = {
+			owner = {
+				is_colonial_nation_of = ROOT
+			}
+			trade_goods = sugar
+			NOT = { has_manufactory_trigger = yes }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				owner = {
+					is_colonial_nation_of = ROOT
+				}
+				trade_goods = sugar
+				has_manufactory_trigger = yes 
+				value = 5 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_sugar_empire
+				duration = 18250
+			}
+		}
+	}
+	MOR_fezzian_funduqs = {
+		icon = mission_valencian_silk
+		required_missions = { MOR_expand_fez }
+		position = 19
+		provinces_to_highlight = {
+			province_id = 343
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_trade_building_trigger = yes }
+			}
+		}
+		trigger = {
+			343 = {
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			343 = {
+				add_or_upgrade_trade_building = yes
+				custom_tooltip = " "
+				create_or_add_center_of_trade_level = { level = 1 }
+			}
+			
+			custom_tooltip = " "
+			
+			home_trade_node_effect_scope = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 5475
+					power = 15
+					key = MOR_funduqs_expanded
+				}
+			}
+		}
+	}
+	MOR_ben_youssef = {
+		icon = mission_growth_of_golcond
+		required_missions = { MOR_expand_marrakesh }
+		position = 20
+		provinces_to_highlight = {
+			province_id = 344
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { has_production_building_trigger = yes }
+			}
+		}
+		trigger = {
+			344 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes #no, it is not fitting but I wanted to make it more unique
+			}
+		}
+		effect = {
+			344 = {
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_production_building = yes 
+				add_province_modifier = {
+					name = MOR_mosque_of_ben_youssef
+					duration = -1
+				}
+			}
+		}
+	}
+	MOR_military_reforms = {
+		icon = mission_conquer_sindh_mer
+		required_missions = { }
+		position = 21
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_mil_advisor = yes
+			army_tradition = 40
+			army_size_percentage = 0.8
+			
+			num_of_generals = 2 
+		}
+		effect = {
+			add_mil_power = 100
+			add_army_professionalism = 0.05
+			
+			custom_tooltip = " "
+			
+			custom_tooltip = MOR_if_we_have_at_least_60_noble_loyalty
+			tooltip = {
+				add_yearly_manpower = 0.5
+			}
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 60
+						}
+					}
+					add_yearly_manpower = 0.5
+				}
+			}
+		}
+	}
+	MOR_adopt_gunpowder = {
+		icon = mission_gunpowder_warfare
+		required_missions = { MOR_military_reforms }
+		position = 22
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.2
+			}
+			is_ahead_of_time_in_specific_tech = { type = mil }
+			num_of_artillery = 10
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.05
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MOR_gunpowder_warfare
+				duration = 7300
+			}
+			
+			define_advisor = {
+				type = army_reformer
+				skill = 3
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.33
+			}
+		}
+	}
+}
+maghreb_common_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+			tag = TUN
+			tag = MOR
+		}
+	}
+	has_country_shield = yes
+	
+	adu_fatimid_lands = {
+		icon = mission_fatimid_caliphate
+		required_missions = { gc_tun_alexandria }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = delta_area
+				area = bahari_area
+				area = vostani_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bahari_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vostani_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			country_event = {
+				id = flavor_gra.3
+			}
+			said_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			palestine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aleppo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			gulf_of_arabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tabuk_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			medina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mecca_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	adu_levantine_restoration = {
+		icon = mission_levantine_restoration
+		required_missions = { adu_fatimid_lands }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = palestine_area
+				area = syria_area
+				area = aleppo_area
+				area = al_jazira_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			palestine_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			syria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			aleppo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			al_jazira_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		
+		effect = {
+			382 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_province_modifier = {
+					name = "adu_summer_capital"
+					duration = -1
+				}
+			}
+			syrian_desert_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			trans_jordan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			khuzestan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luristan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tabriz_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			azerbaijan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			armenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	adu_persian_conquest = {
+		icon = mission_into_persia_2
+		required_missions = { adu_levantine_restoration }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = shahrizor_area
+				area = tabriz_area
+				area = azerbaijan_area
+				area = armenia_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		trigger = {
+			shahrizor_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tabriz_area = {
+				type = all
+				owned_by = ROOT
+			}
+			azerbaijan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			armenia_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			add_adm_power = 300
+			add_country_modifier = {
+				name = "adu_greater_than_alexander"
+				duration = 7300
+			}
+			iraq_e_ajam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			isfahan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			shirvan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			tabarestan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			kartli_kakheti_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+		
+	}
+	gc_mor_imperial_cities = {
+		icon = mission_imperial_cities
+		required_missions = { }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343
+				province_id = 344
+				province_id = 342
+				province_id = 2467
+			}
+			NOT = {
+				OR = {
+					has_building = temple
+					development = 15
+				}
+			}
+		}
+		
+		trigger = {
+			343 = {
+				owned_by = ROOT
+				OR = {
+					has_building = temple
+					development = 15
+				}
+			}
+			344 = {
+				owned_by = ROOT
+				OR = {
+					has_building = temple
+					development = 15
+				}
+			}
+			2467 = {
+				owned_by = ROOT
+				OR = {
+					has_building = temple
+					development = 15
+				}
+			}
+			342 = {
+				owned_by = ROOT
+				OR = {
+					has_building = temple
+					development = 15
+				}
+			}
+		}
+		
+		effect = {
+			country_event = {
+				id = flavor_mor.12
+			}
+		}
+	}
+	gc_mor_saharan_route = {
+		icon = mission_saharan_route
+		required_missions = { gc_mor_imperial_cities }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2466
+				province_id = 1110
+			}
+		}
+		
+		trigger = {
+			1110 = {
+				is_strongest_trade_power = ROOT
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				2466 = {
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						has_building = marketplace
+					}
+				}
+			}
+			else = {
+				2466 = {
+					has_building = marketplace
+				}
+			}
+		}		
+		effect = {
+			if = {
+				limit = {
+					1127 = {
+						is_empty = yes
+						any_neighbor_province = {
+							owned_by = ROOT
+						}
+					}
+				}
+				set_country_flag = mor_sudanese_expedition
+				country_event = { id = flavor_mor.9 }
+			}
+			add_country_modifier = {
+				name = mor_saharan_trade
+				duration = 7300
+			}
+		}
+	}
+	gc_mor_timbuktu = {
+		icon = mission_conquer_timbuktu
+		required_missions = { gc_mor_saharan_route }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1128
+				province_id = 1129
+				province_id = 1132
+				province_id = 2247
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			1128 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1129 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1132 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2247 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			sahel_region = {
+				discover_country = ROOT
+			}
+			guinea_region = {
+				discover_country = ROOT
+			}
+			niger_region = {
+				discover_country = ROOT
+			}
+			niger_bend_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sahara_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			dendi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_mor_songhai = {
+		icon = mission_the_songhai_campaign
+		required_missions = { gc_mor_timbuktu }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = niger_bend_area
+				area = western_sahara_area
+				area = dendi_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			niger_bend_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			western_sahara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			dendi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			azbin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			zazzau_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			katsina_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			hausa_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			bornu_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kanem_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			jenne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			massina_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_volta_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kong_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			manding_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			baghena_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			futa_jallon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+	gc_mor_mali = {
+		icon = mission_invade_mali
+		required_missions = { gc_mor_songhai }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = jenne_area
+				area = massina_area
+				area = upper_volta_area
+				area = kong_area
+				area = manding_area
+				area = baghena_area
+				area = futa_jallon_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			jenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			massina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			upper_volta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			kong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			manding_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			baghena_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			futa_jallon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			add_treasury = 1000
+			atacora_oueme_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_niger_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			benin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gc_mor_benin = {
+		icon = mission_conquer_benin
+		required_missions = { gc_mor_mali }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = atacora_oueme_area
+				area = lower_niger_area
+				area = benin_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		trigger = {
+			atacora_oueme_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lower_niger_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			benin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = conquest_of_benin_mor
+				duration = 7300
+			}
+		}
+	}
+}
+formables_common_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Dharma"
+	}
+	potential = {
+		OR = {
+			tag = FAT
+			tag = TAM
+			tag = ADU
+		}
+	}
+	has_country_shield = yes
+
+	GRA_colonialism = {
+		icon = mission_taula_de_canvi
+		required_missions = { }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			has_institution = new_world_i
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				value = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_andalusian_colonialism
+				duration = -1
+			}
+		}
+	}
+	GRA_spread_our_faith = {
+		icon = mission_mosque
+		required_missions = { GRA_colonialism }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { religion_group = muslim }
+		}
+		trigger = {
+			calc_true_if = {
+				north_america = {
+					type = all 
+					religion_group = muslim
+				}
+				south_america = {
+					type = all 
+					religion_group = muslim
+				}
+				amount = 30
+			}
+		}
+		effect = {
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = GRA_spread_of_faith
+				duration = 9125
+			}
+		}
+	}
+	GRA_cash_crops = {
+		icon = dominant_economy
+		required_missions = { GRA_treasure_fleet_en_route }
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1293
+				province_id = 1466
+				province_id = 1531
+				province_id = 1516
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 33
+				}
+			}
+		}
+		trigger = {
+			1293 = { 
+				trade_share = { country = ROOT share = 33 }
+			}
+			1466 = { 
+				trade_share = { country = ROOT share = 33 } 
+			}
+			1531 = { 
+				trade_share = { country = ROOT share = 33 } 
+			}
+			1516 = { 
+				trade_share = { country = ROOT share = 33 }
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = GRA_cash_crop_imports
+				duration = 5475
+			}
+		}
+	}
+	GRA_argentina = {
+		icon = mission_cope_with_refugees
+		required_missions = { GRA_sail_south }
+		position = 16
+		provinces_to_highlight = {
+			region = la_plata_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { is_city = yes }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = la_plata_region
+				is_city = yes
+				value = 5 
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = GRA_settlers_flocking_south
+				duration = 9125
+			}
+			
+			ME_give_claims = { region = upper_peru_region }
+		}
+	}
+	GRA_andeans = {
+		icon = mission_potosi_silver
+		required_missions = { GRA_argentina }
+		position = 17
+		provinces_to_highlight = {
+			region = peru_region 
+			is_city = yes
+			NOT = {
+				owner = {
+					religion_group = ROOT
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				peru_region = {
+					type = all
+					owner = {
+						religion_group = ROOT
+					}
+				}
+				amount = 25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = GRA_influx_of_gold_from_peru
+				duration = -1
+			}
+			
+			add_years_of_income = 1
+		}
+	}
+	MOR_expand_fez = {
+		icon = mission_imperial_cities
+		required_missions = { }
+		position = 18
+		provinces_to_highlight = {
+			province_id = 343
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 20 }
+			}
+		}
+		trigger = {
+			343 = {
+				owned_by = ROOT
+				development = 20
+			}
+		}
+		effect = {	
+			343 = {
+				add_province_modifier = {
+					name = MOR_fez_growing_city
+					duration = -1
+				}
+			}
+			
+			add_years_of_income = 0.25
+		}
+	}
+	MOR_kasbah_mosque = { #this is in marrakesh, what was I thinking!? I renamed this in loc
+		icon = mission_conquer_rewakantha
+		required_missions = { MOR_expand_fez }
+		position = 20
+		provinces_to_highlight = {
+			province_id = 343
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { development = 30 }
+			}
+		}
+		trigger = {
+			343 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+				development = 30
+			}
+		}
+		effect = {
+			343 = {
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_university_building = yes 
+				add_province_modifier = {
+					name = MOR_mosque_of_al_qarawiyyin
+					duration = -1
+				}
+			}
+		}
+	}
+	MOR_guich = {
+		icon = mission_arabian_fort
+		required_missions = { MOR_military_reforms }
+		position = 22
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343
+				province_id = 344
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_manpower_building_trigger = yes }
+				NOT = { has_forcelimit_building_trigger = yes }
+			}
+		}
+		trigger = {
+			343 = {
+				owned_by = ROOT
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			344 = {
+				owned_by = ROOT
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			
+			has_mil_advisor_2 = yes 
+		}
+		effect = {
+			343 = {
+				add_or_upgrade_manpower_building = yes
+				add_or_upgrade_forcelimit_building = yes
+				add_province_modifier = {
+					name = MOR_local_guich_tribes_stationed
+					duration = -1 
+				}
+			}
+			344 = {
+				add_or_upgrade_manpower_building = yes
+				add_or_upgrade_forcelimit_building = yes
+				add_province_modifier = {
+					name = MOR_local_guich_tribes_stationed
+					duration = -1 
+				}
+			}
+			
+			add_country_modifier = {
+				name = MOR_garrison_tribes
+				duration = 10950
+			}
+		}
+	}
+}

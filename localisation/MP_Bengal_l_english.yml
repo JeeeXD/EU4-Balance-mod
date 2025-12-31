@@ -9,10 +9,13 @@ bng_idea_explain_tt: "§GOnly one bonus applies, priorotising top to bottom§!"
 bng_ganges_forts_tt: "All provinces in the required areas gain the following:"
 bng_abs_tt: "If we complete the mission by having §YCrownland§! and §YAbsolutism§!, we get the following:"
 bng_new_estate_tt: "If we complete the mission by completing §YCourt Ideas§! and employing a §YJester§!, we get the following:"
+merc_bengal_ethiopians: "Ethiopian Wanderers"
+bng_unlock_merc_tt: "Unlocks the §YEthiopian Wanderers§! mercenary company."
 ############ MODIFIERS ##############
 bng_jaunpuri_campaign: "Successful Campaign"
 bng_colony_starts: "Indian Expeditions"
 bng_naval_arnmanent: "Bengali Naval Arms"
+bng_naval_academy: "Dhaka Naval Academy"
 bng_quality_ideas_reward: "Disciplined Army"
 bng_defensive_ideas_reward: "Shieldwall"
 bng_aristo_ideas_reward: "Horse Breeding"
@@ -26,6 +29,132 @@ bng_immigrants: "Immigrants from All Sides"
 bng_persian_advances: "Persian Influences"
 bng_estates_yay: "Loyal Estates"
 bng_abs_nation: "Sultan of Bengal"
+bng_silver_coins: "Silver Taka"
+bng_chinese_trade_modif: "Chinese Trade Networks"
+bng_tax_help: "Taxation Heaven"
+bng_arty_building: "Artillery Startup"
+bng_infantry_supreme: "Supreme Infantry"
+bng_estate_freedoms: "Bribe the Estates"
+bng_river_transports: "River Transports"
+bng_horse_breeding: "Horse Breeding"
+bng_cheap_arty: "Plentiful of Iron"
+bng_silk_productions: "Silk Expansion"
+bng_siege_brr: "Advanced Cannonatronics"
 ############### MISSIONS ###########
+
+
+bng_colonial_endevours_title: "Colonial Endeavours"
+bng_colonial_endevours_desc: "Bengal’s wealth and shipbuilding allow us to look beyond the subcontinent and establish footholds overseas."
+
+bng_malaya_colonies_title: "Malayan Colonies"
+bng_malaya_colonies_desc: "The spice-rich lands of Malaya offer immense opportunity for Bengali merchants and settlers alike."
+
+bng_malayan_trade_title: "Malayan Trade Routes"
+bng_malayan_trade_desc: "By securing trade in Malaya, we connect Bengal directly to the lucrative commerce of Southeast Asia."
+
+bng_shipyards_title: "Expand the Shipyards"
+bng_shipyards_desc: "Our rivers and coasts demand a strong naval industry to support trade, transport, and defense."
+
+bng_barracks_title: "Raise the Barracks"
+bng_barracks_desc: "A prosperous realm must be defended by a well-trained and numerous army."
+
+bng_admirals_title: "Dhaka Academy"
+bng_admirals_desc: "Experienced commanders are essential to protect Bengal’s interests at sea."
+
+bng_naval_supplies_title: "Secure Naval Supplies"
+bng_naval_supplies_desc: "Timber, rope, and sails must flow steadily to sustain our fleets."
+
+bng_forcelimit_title: "Expand the Army Ranks"
+bng_forcelimit_desc: "Bengal’s population provides the manpower needed to field a great army."
+
+bng_trad_and_prof_title: "Professional Army"
+bng_trad_and_prof_desc: "Balancing old martial traditions with disciplined training strengthens our forces."
+
+bng_textile_trade_title: "Textile Trade of Bengal"
+bng_textile_trade_desc: "Bengali cloth is prized across the world for its quality and craftsmanship."
+
+bng_colonise_australia_title: "Distant Shores"
+bng_colonise_australia_desc: "Even the farthest lands may be reached by those who command the seas."
+
+bng_ships1_title: "Expand the Fleet"
+bng_ships1_desc: "A greater number of ships ensures both security and commercial dominance."
+
+bng_sailors_title: "Recruit Sailors"
+bng_sailors_desc: "Our rivers and ports provide a steady supply of skilled sailors."
+
+bng_more_estate_title: "Empower the Estates"
+bng_more_estate_desc: "Balancing the interests of nobles, merchants, and clergy strengthens the state."
+
+bng_rivers_on_both_sides_title: "Rivers on All Sides"
+bng_rivers_on_both_sides_desc: "Bengal’s river network binds the land together and enables unmatched internal trade."
+
+bng_generals_title: "Seasoned Generals"
+bng_generals_desc: "Experience in war forges commanders capable of leading Bengal to victory."
+
+bng_siege_title: "Masters of Siege"
+bng_siege_desc: "Strong fortresses fall when discipline and artillery are properly employed."
+
+bng_control_trade_title: "Control the Trade"
+bng_control_trade_desc: "Dominance over regional trade ensures Bengal’s continued prosperity."
+
+bng_foreign_immigrants_title: "Foreign Immigrants"
+bng_foreign_immigrants_desc: "Scholars, merchants, and craftsmen from abroad bring new skills and ideas to Bengal."
+
+bng_persian_literature_title: "Persian Literature"
+bng_persian_literature_desc: "Persian culture and learning flourish at our court, enriching administration and art."
+
+bng_estate_love_you_title: "Harmony of the Estates"
+bng_estate_love_you_desc: "Careful governance ensures loyalty from all segments of society."
+
+bng_crownland_or_no_crownland_title: "Power of the Crown"
+bng_crownland_or_no_crownland_desc: "The balance between royal authority and delegated power shapes the future of Bengal."
+
+bng_resist_outsiders_title: "Resist Outsiders"
+bng_resist_outsiders_desc: "Foreign ambitions must be checked to preserve Bengal’s independence."
+
+bng_ethiopian_wanderers_title: "Ethiopian Wanderers"
+bng_ethiopian_wanderers_desc: "Abyssinian soldiers and travelers have long served in Indian courts, including our own."
+
+bng_own_local_trade_title: "Local Trade Networks"
+bng_own_local_trade_desc: "Strengthening local markets ensures wealth remains within Bengal."
+
+bng_silver_taka_title: "The Silver Taka"
+bng_silver_taka_desc: "A stable and trusted currency underpins commerce and taxation alike."
+
+bng_china_trade_title: "Trade with China"
+bng_china_trade_desc: "Direct links with China promise immense commercial rewards."
+
+bng_start_naval_production_title: "Naval Production"
+bng_start_naval_production_desc: "Expanding naval workshops supports both trade and warfare."
+
+bng_mosque_expansion_title: "Expand the Mosques"
+bng_mosque_expansion_desc: "Religious patronage strengthens legitimacy and unity within the realm."
+
+bng_fair_balance_title: "A Fair Balance"
+bng_fair_balance_desc: "Careful economic management prevents unrest and ensures long-term stability."
+
+bng_artillery_title: "Modern Artillery"
+bng_artillery_desc: "Gunpowder weapons reshape warfare, and Bengal must not fall behind."
+
+bng_cohesive_army_title: "A Cohesive Army"
+bng_cohesive_army_desc: "Coordination and discipline make our forces greater than the sum of their parts."
+
+bng_conquer_nepal_title: "Into the Hills"
+bng_conquer_nepal_desc: "Control of the Himalayan foothills secures our northern frontier."
+
+bng_all_muslims_title: "Protector of the Faithful"
+bng_all_muslims_desc: "Bengal stands as a leading Muslim power in the eastern world."
+
+bng_river_transporters_title: "River Transporters"
+bng_river_transporters_desc: "River barges move goods faster and cheaper than any road."
+
+bng_war_elephants_title: "War Elephants"
+bng_war_elephants_desc: "Towering war elephants strike fear into enemy ranks."
+
+bng_expansion_of_arty_title: "Expand the Artillery"
+bng_expansion_of_arty_desc: "More guns mean greater battlefield dominance."
+
+bng_own_all_iron_title: "Secure Iron Supplies"
+bng_own_all_iron_desc: "Reliable iron sources ensure steady production of weapons and tools."
 
 ############ EVENTS ###############

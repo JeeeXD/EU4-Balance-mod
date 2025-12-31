@@ -2,7 +2,7 @@
 
 owner = LNG
 controller = LNG
-add_core = MNG
+
 culture = zhongyuan
 religion = confucianism
 capital = "Shangqiu"

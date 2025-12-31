@@ -2,7 +2,7 @@
 
 owner = YAN
 controller = YAN
-add_core = MNG
+
 culture = chihan
 religion = confucianism
 capital = "Daming"

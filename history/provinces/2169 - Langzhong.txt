@@ -2,7 +2,7 @@
 
 owner = CXI
 controller = CXI
-add_core = MNG
+
 culture = sichuanese
 religion = confucianism
 capital = "Langzhong"

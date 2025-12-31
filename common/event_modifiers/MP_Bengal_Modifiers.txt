@@ -12,7 +12,7 @@ bng_naval_arnmanent = {
 	naval_maintenance_modifier = -0.15
 }
 bng_quality_ideas_reward = {
-	discipline = 0.025
+	discipline = 0.02
 }
 bng_defensive_ideas_reward = {
 	shock_damage_received = -0.05
@@ -21,7 +21,7 @@ bng_aristo_ideas_reward = {
 	cavalry_cost = -0.2
 }
 bng_divine_ideas_reward = {
-	land_morale_constant = 0.5
+	land_morale_constant = 0.3
 }
 bng_offensive_ideas_reward = {
 	artillery_levels_available_vs_fort = 1
@@ -36,7 +36,7 @@ bng_fort_ganges = {
 	local_defensiveness = 0.15
 }
 bng_siegeing = {
-	max_admiral_siege = 1
+	max_general_siege = 1
 }
 bng_immigrants = {
 	province_trade_power_modifier = 0.25
@@ -51,4 +51,39 @@ bng_estates_yay = {
 }
 bng_abs_nation = {
 	max_absolutism_effect = 0.1
+}
+bng_silver_coins = {
+	trade_goods_size = 1
+}
+bng_chinese_trade_modif = {
+	trade_efficiency = 0.2
+}
+bng_tax_help = {
+	global_tax_modifier = 0.15
+}
+bng_arty_building = {
+	artillery_cost = -0.5
+}
+bng_estate_freedoms = {
+	all_estate_loyalty_equilibrium = 0.1
+}
+bng_infantry_supreme = {
+	infantry_power = 0.075
+}
+bng_river_transports = {
+	land_attrition = -0.2
+	transport_power = 1
+}
+bng_horse_breeding = {
+	cavalry_power = 0.1
+	cavalry_flanking = 0.5
+}
+bng_siege_brr = {
+	siege_ability = 0.05
+}
+bng_cheap_arty = {
+	artillery_cost = -0.15
+}
+bng_silk_productions = {
+	production_efficiency = 0.1
 }

@@ -1,0 +1,19 @@
+merc_bengal_ethiopians = {
+	regiments_per_development = 0.04
+	cavalry_weight = 0
+    artillery_weight = 0
+	cavalry_cap = 0
+	home_province = 564
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = bng_ethiopian_wanderers
+	}
+	cost_modifier = 0.5
+	modifier = {
+		discipline = 0.05
+		shock_damage_received = -0.2
+	}
+	min_size = 25                          # Minimum size of the mercenary army
+    max_size = 40
+}

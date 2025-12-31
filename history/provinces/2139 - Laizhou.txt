@@ -2,7 +2,7 @@
 
 owner = QIC
 controller = QIC
-add_core = MNG
+
 culture = shandong_culture
 religion = confucianism
 capital = "Laizhou"
