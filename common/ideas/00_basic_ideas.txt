@@ -1001,6 +1001,12 @@ exploration_ideas = {
 	category = DIP
 	important = yes
 
+	trigger = {
+		NOT = {
+			is_colonial_nation = yes
+		}
+	}
+
 	bonus = {
 		cb_on_primitives = yes
 		colonists = 1

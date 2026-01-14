@@ -5771,7 +5771,6 @@ examination_system_reform = {
 	modifiers = {
 		advisor_pool = 4
 		nobles_influence_modifier = -0.1
-		development_cost = -0.05
 	}
 	ai = {
 		factor = 10

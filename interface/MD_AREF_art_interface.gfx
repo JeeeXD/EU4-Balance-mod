@@ -34,5 +34,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/age_of_revolutions.tga"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_ase_spend_additional_splendor_open_button"
+		textureFile = "gfx/interface/ase_spend_additional_splendor_open_button.dds"
+	}
 
 }

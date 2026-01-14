@@ -129,7 +129,7 @@ reign_in_estates_decision = {
 reform_civil_registration_decision = {
 	empire = celestial_empire
 	member = { global_tax_modifier = 0.1 }
-	emperor = { development_cost = -0.05 autonomy_change_time = -0.2 }
+	emperor = { autonomy_change_time = -0.2 }
 }
 
 establish_silver_standard_decision = {

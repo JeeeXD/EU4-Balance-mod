@@ -486,7 +486,7 @@ the_tenures_abolition_act = {
 	}
 
 	army_tradition = 0.5
-	cavalry_fire = 0.3
+	cavalry_fire = 0.25
 	
 	effect = {}
 	removed_effect = {}

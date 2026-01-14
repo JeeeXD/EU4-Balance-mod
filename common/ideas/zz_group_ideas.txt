@@ -79,7 +79,7 @@ trading_city_ideas = {
 
 colonial_ideas = {
 	start = {
-		development_cost = -0.1
+		colonists = 3
 		no_religion_penalty = yes
 	}
 	
@@ -101,6 +101,7 @@ colonial_ideas = {
 	}
 	continental_trade = {
 		global_prov_trade_power_modifier = 0.25
+		development_cost = -0.1
 	}
 	manufacturing_center = {
 		build_cost = -0.1

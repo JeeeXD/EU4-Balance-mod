@@ -103,6 +103,9 @@ ava_slot_1 = {
 			}
 		}
 		trigger = {
+			NOT = {
+				tag = BRM
+			}
 			shan_hill_area = {
 				type = all
 				owned_by = ROOT

@@ -6,6 +6,8 @@ country_decisions = {
 			OR = {
 				tag = QNG
 				tag = MNG
+				tag = KOR
+				tag = JAP
 				has_country_flag = can_restore_mandate
 			}
 			NOT = {

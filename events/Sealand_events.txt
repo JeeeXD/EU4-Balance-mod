@@ -524,3 +524,484 @@ country_event = {
 	immediate = { set_country_flag = get_war_declare_flag play_sound = declarewar_onus }
 	option = { }
 }
+
+# Advisors:
+namespace = sea_advisor_event
+country_event = {
+	id = sea_advisor_event.0
+	title = sea_advisor_event.0.t
+	desc = sea_advisor_event.0.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.0.a
+		country_event = { id = sea_advisor_event.1 }
+	}
+	option = {
+		name = sea_advisor_event.0.b
+		country_event = { id = sea_advisor_event.2 }
+	}
+	option = {
+		name = sea_advisor_event.0.c
+		country_event = { id = sea_advisor_event.3 }
+	}
+}
+# Adm:
+country_event = {
+	id = sea_advisor_event.1
+	title = sea_advisor_event.1.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
+	}
+	option = {
+		name = sea_advisor_event.1.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = philosopher
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = chancellor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = herald
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = loyal_friend
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.9
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = missionary
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.10
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = governor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.11
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = state_theorist
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.12
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = artist
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = magistrate
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = master_of_mint
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = treasurer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = natural_scientist
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.17
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = theologian
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.1.18
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = inquisitor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+}
+# Dip:
+country_event = {
+	id = sea_advisor_event.2
+	title = sea_advisor_event.2.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
+	}
+	option = {
+		name = sea_advisor_event.2.2
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { is_emperor = yes }
+		define_advisor = {
+			type = imperial_councilor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { is_emperor_of_china = yes }
+		define_advisor = {
+			type = imperial_bureaucrat
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = naval_tactician
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = statesman
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.6
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = diplomat
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = spymaster
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.9
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = visionary
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.11
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = trader
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.12
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_colonists = 1 }
+		define_advisor = {
+			type = colonial_governor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = {
+			num_of_colonists = 1
+			is_colonial_nation = no
+			NOT = { has_reform = trade_company_government }
+		}
+		define_advisor = {
+			type = navigator
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = reformist
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		define_advisor = {
+			type = naval_reformer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = overseer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.17
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = jester
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.18
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		define_advisor = {
+			type = harbor_master
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.2.19
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = customs_officer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+}
+# Mil:
+country_event = {
+	id = sea_advisor_event.3
+	title = sea_advisor_event.3.t
+	desc = sea_advisor_event.1.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sea_advisor_event.0.0
+		clr_country_flag = sea_get_specific_advisor_flag
+	}
+	option = {
+		name = sea_advisor_event.0.01
+		hidden_effect = { country_event = { id = sea_advisor_event.0 } }
+	}
+	option = {
+		name = sea_advisor_event.3.2
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = army_reformer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.3
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = commandant
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.4
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = landsknecht
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.5
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = dragoon
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.6
+		clr_country_flag = sea_get_specific_advisor_flag
+		trigger = { mil_tech = 7 }
+		define_advisor = {
+			type = howitzer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.77
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = tactician
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.88
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = drill_master
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.7
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = siege_engineer
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.8
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = contractor
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.13
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = quartermaster
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.14
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = recruitmaster
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.15
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = army_organiser
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.16
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = grand_captain
+			skill = 1
+		}
+		add_splendor = -100
+	}
+	option = {
+		name = sea_advisor_event.3.20
+		clr_country_flag = sea_get_specific_advisor_flag
+		define_advisor = {
+			type = fortification_expert
+			skill = 1
+		}
+		add_splendor = -100
+	}
+}

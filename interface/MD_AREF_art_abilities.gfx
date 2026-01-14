@@ -48,4 +48,8 @@ spriteTypes = {
 		name = "GFX_ab_ava_reduced_lib_desire"
 		texturefile = "gfx/interface/ages/ab_ava_reduced_lib_desire.dds"
 	}
+	spriteType = {
+		name = "GFX_ab_md_great_project_cost_reduction"
+		texturefile = "gfx/interface/ages/ab_md_great_project_cost_reduction.dds"
+	}
 }

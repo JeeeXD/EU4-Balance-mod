@@ -155,6 +155,17 @@ declarewar = {
 			FROM = { is_part_of_hre = no }
 		}
 	}
+	condition = {
+		tooltip = diplo_no_war_on_subject_with_truce
+		potential = {
+			FROM = { is_subject = yes }
+		}
+		allow = {
+			FROM = {
+				overlord = { NOT = { truce_with = ROOT } }
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 		if = {
@@ -446,6 +457,15 @@ break_marriage = {
 takeondebt = {
 	effect = {
 		change_asha_vahishta = { value = 2 }
+	}
+	condition = {
+		tooltip = sea_takeondebt_tt
+		potential = {
+			FROM = { ai = no }
+		}
+		allow = {
+			always = no
+		}
 	}
 }
 influence_nation = {
@@ -765,5 +785,17 @@ ask_for_tributary_state_action = {
 break_alliance = {
 	effect = {
 		on_alliance_broken_effect = yes
+	}
+}
+
+warsubsidy = {
+	condition = {
+		tooltip = sea_warsubsidy_tt
+		potential = {
+			FROM = { NOT = { is_subject_of = ROOT } }
+		}
+		allow = {
+			always = no
+		}
 	}
 }

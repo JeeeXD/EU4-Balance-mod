@@ -1,0 +1,15 @@
+custom_button = {
+	name = ase_spend_additional_splendor_open_button
+	potential = {
+		ai = no
+	}
+	trigger = {
+		splendor = 100
+	}
+	effect = {
+		country_event = {
+			id = sea_advisor_event.0
+		}
+	}
+	tooltip = ase_spend_additional_splendor_open_button_tt
+}

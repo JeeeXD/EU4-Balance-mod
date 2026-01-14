@@ -759,8 +759,8 @@ crown_colony = {
 
 	forcelimit_to_overlord = 0.1
 	manpower_to_overlord = 0.1
-	naval_forcelimit_to_overlord = 0.01
-	sailors_to_overlord = 0.01
+	naval_forcelimit_to_overlord = 0
+	sailors_to_overlord = 0
 
 	# Subject Interactions:
 	embargo_rivals = yes
@@ -798,8 +798,8 @@ private_enterprise = {
 
 	forcelimit_to_overlord = 0.0
 	manpower_to_overlord = 0.0
-	naval_forcelimit_to_overlord = 0.15
-	sailors_to_overlord = 0.15
+	naval_forcelimit_to_overlord = 0.1
+	sailors_to_overlord = 0.1
 
 	# Subject Interactions:
 	replace_governor = no
@@ -830,10 +830,10 @@ self_governing_colony = {
 	is_colony_subtype = yes
 	count = colony
 
-	forcelimit_to_overlord = 0.002
-	manpower_to_overlord = 0.002
-	naval_forcelimit_to_overlord = 0.002
-	sailors_to_overlord = 0.002
+	forcelimit_to_overlord = 0
+	manpower_to_overlord = 0
+	naval_forcelimit_to_overlord = 0
+	sailors_to_overlord = 0
 
 	# Subject Interactions:
 	replace_governor = no

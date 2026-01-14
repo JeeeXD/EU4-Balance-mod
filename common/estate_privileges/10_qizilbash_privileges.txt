@@ -344,61 +344,7 @@ estate_qizilbash_expand_the_qizilbash_regiments = {
 	}
 }
 
-estate_qizilbash_horse_responsibilities = {
-	icon = horse
-	land_share = 0
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.05
-	loyalty = 0.1
-	is_valid = {
-		has_estate_privilege = estate_qizilbash_expand_the_qizilbash_regiments
-	}
-	can_select = {
-	}
-	on_granted = {
-		if = {
-			limit = { NOT = { has_country_flag = bred_a_new_war_steed } }
-			unlock_decision = {
-				type = horse_breeding_decision
-				custom_tooltip = horse_breeding_decision_at
-			}
-		}
-		enable_estate_action = {
-			estate_action = GRANT_QIZILBASH_HORSES
-		}
-	}
-	on_revoked = {
-		if = {
-			limit = { NOT = { has_country_flag = bred_a_new_war_steed } }
-			lock_decision = { type = horse_breeding_decision }
-		}
-		disable_estate_action = {
-			estate_action = GRANT_QIZILBASH_HORSES
-		}
-	}
-	on_invalid = {
-		if = {
-			limit = { NOT = { has_country_flag = bred_a_new_war_steed } }
-			lock_decision = { type = horse_breeding_decision }
-		}
-		disable_estate_action = {
-			estate_action = GRANT_QIZILBASH_HORSES
-		}
-	}
-	modifier_by_land_ownership = {
-	}
-	penalties = {
-	}
-	benefits = {
-		cavalry_cost = -0.1
-	}
-	mechanics = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-}
+
 
 estate_qizilbash_protected_communities = {
 	icon = privilege_autonomy

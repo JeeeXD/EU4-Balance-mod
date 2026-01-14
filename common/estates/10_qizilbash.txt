@@ -363,7 +363,6 @@ estate_qizilbash = {
 		estate_qizilbash_loyalty_privilege
 		estate_qizilbash_establish_the_qizilbash_regiments
 		estate_qizilbash_expand_the_qizilbash_regiments
-		estate_qizilbash_horse_responsibilities
 		estate_qizilbash_protected_communities
 		estate_qizilbash_military_leadership
 		estate_qizilbash_supremacy_over_the_aristocracy

@@ -797,7 +797,7 @@ maghreb_common_2a = {
 	}
 	gra_restore_the_andalusian_caliphate = { #art
 		icon = mission_al_andalus
-		required_missions = { gra_reconquer_sevilla }
+		required_missions = {  }
 		position = 5
 		
 		provinces_to_highlight = {

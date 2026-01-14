@@ -126,7 +126,7 @@ NDiplomacy = {
 	DESIRED_NUM_OF_ELECTORS = 7,
 	MAX_FREE_CITIES = 0,
 	MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 1,		-- Limit is inclusive.
-	HRE_PRINCE_AUTHORITY_THRESHOLD = 1,			-- Threshold below which you lose IA, and above which you gain it
+	HRE_PRINCE_AUTHORITY_THRESHOLD = 5,			-- Threshold below which you lose IA, and above which you gain it
 	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.005,			-- Scales to threshold
 	HRE_FOREIGN_CONTROL_PENALTY = -0.005,			-- Each foreign-controlled province in the empire (owned or vassalised) lowers IA by this amount
 	HRE_HERETIC_PENALTY = 0,					-- Per heretic prince (halved by Peace of Westphalia)
@@ -521,7 +521,7 @@ NCountry = {
 	ABDICATE_PRESTIGE_HIT = -50,
 
 
-	DISINHERIT_PRESTIGE_HIT = -25,
+	DISINHERIT_PRESTIGE_HIT = -40,
 	DISINHERIT_PRESTIGE_THRESHOLD = 0,
 	
 	ADVISOR_MIN_DEFAULT_AGE = 18, 				--Default value used for defining new advisors in script
@@ -1379,7 +1379,7 @@ NMilitary = {
 	LOW_MORALE_THRESHOLD = 0.50,					-- Under this percentage of the morale, the army will do a shattered retreat
 	UNIT_TYPE_CHANGE_MAX_MORALE = 0.51,				-- Changing a unit type will reduce morale to min(UNIT_TYPE_CHANGE_MAX_MORALE, current morale)
 	DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.4,		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
-	WARGOAL_MAX_BONUS = 50,
+	WARGOAL_MAX_BONUS = 40,
 	DEFAULT_WARGOAL_WARSCORE_BONUS	= 6,			-- Warscore bonus
 	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 4,		-- Battle score bonus from winning battles
 	SUPERIORITY_WARGOAL_WARSCORE_THRESHOLD	= 10,	-- Needed battle score for getting ticking war score for war goal superiority
@@ -1723,7 +1723,7 @@ NAI = {
 	DEFICIT_SPENDING_MIN_MONTHS = 0, -- AI must have at least this many monthly deficits of savings to be willing to deficit spend
 	DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 0, -- Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 	BIGSHIP_FRACTION = 0.4,	-- The proportion of big ships in an AI navy of light ships and big ships (for coastal sea countries, this fraction is mostly galleys)
-	ARTILLERY_FRACTION = 0.25, 	-- Ratio of artillery to infantry AI will build (doubles after FORCE_COMPOSITION_CHANGE_TECH_LEVEL) (reduced when on tight budget)
+	ARTILLERY_FRACTION = 0.125, 	-- Ratio of artillery to infantry AI will build (doubles after FORCE_COMPOSITION_CHANGE_TECH_LEVEL) (reduced when on tight budget)
 	FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 7, -- Tech level at which AI will double its artillery fraction
 	TRANSPORT_FRACTION = 0.1, -- Max fraction of naval forcelimit that should be transports
 	INCOME_SAVINGS_FRACTION = 0, -- AI will reserve this amount of their surplus for long-term savings

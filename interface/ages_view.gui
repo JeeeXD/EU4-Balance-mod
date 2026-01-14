@@ -226,7 +226,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "golden_age"
 			quadTextureSprite ="GFX_age_golden_age_button"
-			position = { x = 686 y = 185 }
+			position = { x = 686 y = 165 }
 			buttonText = ""
 			buttonFont = "vic_18"
 			scale = .65
@@ -303,6 +303,14 @@ guiTypes = {
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 			horizontal = 0
+		}
+		###### SPLENDOR BUTTON ###########
+		guiButtonType = {
+			name = "ase_spend_additional_splendor_open_button"
+			position = { x = 685 y = 210 }
+			spriteType = "GFX_ase_spend_additional_splendor_open_button"
+			clicksound = ok_click
+			scripted = yes
 		}
 	}
 

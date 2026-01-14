@@ -766,8 +766,8 @@ age_of_reformation = {
 			allow = {
 				OR = {
 					culture_group = thai_group
-					culture_group = khmer
-					culture_group = burmese
+					culture_group = southeastasian_group
+					culture_group = burman
 				}
 			}
 			effect = {
@@ -1113,10 +1113,7 @@ age_of_absolutism = {
 		}
 		ase_malacca_spices = {
 			allow = {
-				OR = {
-					tag = MLC
-					tag = MSA
-				}
+				tag = MSA
 			}
 			effect = {
 				on_age_ability_taken = { age = age_of_absolutism }

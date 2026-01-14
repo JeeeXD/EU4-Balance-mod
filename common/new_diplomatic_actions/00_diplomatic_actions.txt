@@ -6215,6 +6215,7 @@ bav_export_beer = {
 	alert_tooltip = export_grain_alert_tooltip
 
 	is_visible = {
+		ai = no
 		tag = BAV
 	}
 	is_allowed = {

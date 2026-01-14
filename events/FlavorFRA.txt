@@ -1639,7 +1639,6 @@ country_event = {
 		OR = {
 			has_country_flag = fra_musketeers_mission
 			AND = {
-				NOT = { has_mission = emp_fra_establish_the_musketeers }
 				tag = FRA
 				government = monarchy
 				treasury = 300
