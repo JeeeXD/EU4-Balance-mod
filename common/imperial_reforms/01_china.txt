@@ -18,6 +18,7 @@ establish_gaituguiliu_decision = {
 	member = { advisor_pool = 1 }
 	emperor = {
 		meritocracy = 0.5
+		amount_of_musketeers = 8
 	}
 }
 
@@ -29,6 +30,7 @@ seaban_decision = {
 	emperor = {
 		diplomats = 1
 		trade_efficiency = 0.05
+		amount_of_musketeers = 8
 	}
 }
 
@@ -47,6 +49,7 @@ reform_land_tax_decision = {
 	member = { state_maintenance_modifier = -0.33 } 
 	emperor = {
 		global_autonomy = -0.05
+		amount_of_musketeers = 8
 	}
 	
 }
@@ -64,6 +67,7 @@ military_governors_decision = {
 	emperor = {
 		nobles_loyalty_modifier = 0.1 
 		core_creation = -0.1
+		amount_of_musketeers = 8
 	}
 	
 }
@@ -72,7 +76,7 @@ centralizing_top_government_decision = {
 	empire = celestial_empire
 	trigger = { crown_land_share = 65 } 
 	member = {  loyalty_change_on_revoked = 0.05 }
-	emperor = { monarch_admin_power = 1 }
+	emperor = { monarch_admin_power = 1 amount_of_musketeers = 8 }
 	
 }
 
@@ -82,6 +86,7 @@ vassalize_tributaries_decision = {
 	emperor = {
 		imperial_mandate = 0.05
 		liberty_desire_from_subject_development = -0.33
+		amount_of_musketeers = 8
 	}
 	on_effect = {
 		custom_tooltip = vassalize_tributaries_decision_tt
@@ -110,6 +115,7 @@ codify_single_whip_law_decision = {
 	emperor = {
 		vassal_income = 0.25 
 		global_tax_modifier = 0.1
+		amount_of_musketeers = 8
 	}
 	
 }
@@ -148,6 +154,7 @@ establish_silver_standard_decision = {
 	emperor = { 
 		monthly_gold_inflation_modifier = -0.1 
 		inflation_reduction = 0.05
+		amount_of_musketeers = 8
 	}
 }
 
@@ -165,6 +172,7 @@ kanhe_certificate_decision = {
 	emperor = { 
 		merchants = 1 
 		placed_merchant_power = 10 
+		amount_of_musketeers = 8
 	}
 }
 
@@ -184,6 +192,7 @@ new_keju_formats_decision = {
 	emperor = { 
 		reform_progress_growth = 0.1
 		imperial_mandate = 0.03
+		amount_of_musketeers = 8
 	}
 }
 
@@ -201,6 +210,7 @@ inclusive_monarchy_decision = {
 	emperor = { 
 		yearly_harmony = 0.25
 		religious_unity = 0.25
+		amount_of_musketeers = 8
 	}
 }
 
@@ -215,6 +225,16 @@ promote_bureaucratic_faction_decision = {
 	emperor = { 
 		church_loyalty_modifier = 0.1
 		tolerance_own = 1 
+		amount_of_musketeers = 8
+	}
+	on_effect = {
+		add_country_modifier = {
+			name = mandate_unit_shock_buff
+			duration = -1
+		}
+	}
+	off_effect = {
+		remove_country_modifier = mandate_unit_shock_buff
 	}
 	disabled_by = promote_military_faction_decision
 }
@@ -230,6 +250,16 @@ promote_military_faction_decision = {
 	emperor = { 
 		nobles_loyalty_modifier = 0.1 
 		army_tradition = 0.5 
+		amount_of_musketeers = 8
+	}
+	on_effect = {
+		add_country_modifier = {
+			name = mandate_unit_fire_buff
+			duration = -1
+		}
+	}
+	off_effect = {
+		remove_country_modifier = mandate_unit_fire_buff
 	}
 	disabled_by = promote_bureaucratic_faction_decision
 }
@@ -260,6 +290,7 @@ unifed_trade_market_decision = {
 	emperor = { 
 		merchants = 1 
 		global_trade_goods_size_modifier = 0.05
+		amount_of_musketeers = 8
 	}
 }
 
@@ -286,24 +317,31 @@ reform_the_military_branch_decision = {
 	emperor = { 
 		movement_speed = 0.1
 		drill_decay_modifier = -0.25 
+		amount_of_musketeers = 8
 	}
 }
 
 modernize_the_banners_decision = {
 	empire = celestial_empire 
 	trigger = { 
-		OR = {
-			num_of_banners = 25 
-			has_global_modifier_value = {
-				which = cavalry_power 
-				value = 0.15
-			}
-		}
+		num_of_musketeers = 50
+		monthly_mil = 12
 	}
 	member = {
-		cavalry_cost = -0.1
+		infantry_cost = -0.1
 	} 
-	emperor = { cav_to_inf_ratio = 0.1 cavalry_power = 0.05 }
+	emperor = { 
+		amount_of_musketeers = 8 
+	}
+	on_effect = {
+		add_country_modifier = {
+			name = mandate_unit_received_buff
+			duration = -1
+		}
+	}
+	off_effect = {
+		remove_country_modifier = mandate_unit_received_buff
+	}
 }
 
 study_foreign_ship_designs_decision = {
@@ -320,7 +358,7 @@ study_foreign_ship_designs_decision = {
 		global_ship_cost = -0.15
 	} 
 	emperor = { 
-		heavy_ship_power = 0.1
+		heavy_ship_power = 0.1 amount_of_musketeers = 8
 	}
 }
 
@@ -349,6 +387,7 @@ tributary_embassies_decision = {
 	emperor = { 
 		diplomats = 1
 		diplomatic_reputation = 1 
+		amount_of_musketeers = 8
 	}
 }
 
@@ -363,5 +402,6 @@ new_world_discovery_decision = {
 	} 
 	emperor = { 
 		colonists = 1 
+		amount_of_musketeers = 8
 	}
 }

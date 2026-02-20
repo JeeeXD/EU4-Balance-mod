@@ -2208,7 +2208,9 @@ berber_3c = {
 			
 		}
 		trigger = {
-			cavalry_fraction = 1
+			NOT = {
+				infantry_fraction = 0.01
+			}
 			army_size = 200
 			development_in_provinces = {
 				value = 300

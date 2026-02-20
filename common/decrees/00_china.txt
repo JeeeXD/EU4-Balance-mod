@@ -524,3 +524,117 @@ issue_bureaucratic_imperial_seal = {
 		factor = 10
 	}
 }
+
+issue_discplined_guards = { 
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = issue_discplined_guards_modif
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+issue_fast_reinforcements = { 
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = issue_fast_reinforcements_modif
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = issue_fast_reinforcements_modif
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+issue_anti_cavalry_mechanisms = { 
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = issue_anti_cavalry_mechanisms_modif
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = issue_anti_cavalry_mechanisms_modif
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+issue_anti_artillery_mechanisms = { 
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = issue_anti_artillery_mechanisms_modif
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = issue_anti_artillery_mechanisms_modif
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}

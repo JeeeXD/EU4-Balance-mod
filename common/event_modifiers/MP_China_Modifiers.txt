@@ -1,0 +1,37 @@
+enable_unique_units = {
+	has_musketeer  = yes 
+}
+mandate_unit_shock_buff = {
+	shock_damage = 0.1
+	is_musketeer_modifier = yes
+}
+mandate_unit_fire_buff = {
+	fire_damage = 0.1
+	is_musketeer_modifier = yes
+}
+mandate_unit_received_buff = {
+	infantry_power = 0.05
+	is_musketeer_modifier = yes
+}
+issue_anti_artillery_mechanisms_modif = {
+	fire_damage_received = -0.3
+	morale_damage_received = -0.3
+	fire_damage = -0.5
+	shock_damage = -0.5
+	is_musketeer_modifier = yes
+}
+issue_anti_cavalry_mechanisms_modif = {
+	shock_damage_received = -0.3
+	morale_damage_received = -0.3
+	fire_damage = -0.5
+	shock_damage = -0.5
+	is_musketeer_modifier = yes
+}
+issue_fast_reinforcements_modif = {
+	reinforce_speed = 0.5
+	is_musketeer_modifier = yes
+}
+issue_discplined_guards_modif = {
+	discipline = 0.05
+	is_musketeer_modifier = yes
+}

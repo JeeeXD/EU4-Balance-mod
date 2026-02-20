@@ -278,7 +278,7 @@ development = {
 	naval_forcelimit = 0.1			# special case, affected by autonomy & set to 0 by code if not port
 	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
-	local_amount_of_banners = 0.066
+	local_amount_of_banners = 0
 	local_amount_of_cawa = 0.125
 	local_amount_of_carolean = 0.1
 	local_amount_of_hussars = 0.01
@@ -2051,9 +2051,7 @@ marine_regiment = {
 }
 
 banner_regiment = {
-	discipline = 0.05
-	drill_gain_modifier = 0.33
-	morale_damage = 0.1
+	
 }
 
 streltsy_regiment = {
@@ -2066,7 +2064,7 @@ tercio_regiment = {
 }
 
 musketeer_regiment = {
-	fire_damage = 0.15
+	
 }
 
 samurai_regiment = {

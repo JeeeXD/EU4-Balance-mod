@@ -506,7 +506,15 @@ celestial_empire = {
 		enuchs
 		bureaucrats
 	}
-
+	effect = {
+		add_country_modifier = {
+			name = enable_unique_units
+			duration = -1
+		}
+	}
+	removed_effect = {
+		remove_country_modifier = enable_unique_units
+	}
 	fixed_rank = 3
 	start_territory_to_estates = 0.9
 

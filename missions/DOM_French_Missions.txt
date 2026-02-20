@@ -3391,6 +3391,10 @@ french_missions_3_normal_continued = {
 				name = fra_musketeers_modifier
 				duration = -1 
 			}
+			add_country_modifier = {
+				name = fra_musketeers_fire
+				duration = -1 
+			}
 		}
 	}
 	

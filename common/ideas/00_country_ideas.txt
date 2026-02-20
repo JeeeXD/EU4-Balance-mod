@@ -1959,7 +1959,7 @@ HAB_ideas = {
 
 CHI_ideas = {
 	start = {
-		has_banners = yes
+		harmonization_speed = 0.15
 		idea_cost = -0.10
 	}
 	
@@ -3177,7 +3177,7 @@ MJZ_ideas = {
 		improve_relation_modifier = 0.25
 	}
 	the_jurchen_banners = {
-		amount_of_banners = 0.15
+		special_unit_forcelimit = 0.15
 	}
 }
 
@@ -3201,7 +3201,7 @@ MCH_ideas = {
 		core_creation = -0.15
 	}
 	manchu_eight_banners = {
-		amount_of_banners = 0.25
+		special_unit_forcelimit = 0.25
 	}
 	the_manchu_alphabet = {
 		global_institution_spread = 0.05
@@ -3243,7 +3243,7 @@ QNG_ideas = {
 	
 	
 	expand_the_banners = {
-		amount_of_banners = 0.3
+		special_unit_forcelimit = 0.3
 	}
 	the_green_standard_army = {
 		manpower_recovery_speed = 0.2

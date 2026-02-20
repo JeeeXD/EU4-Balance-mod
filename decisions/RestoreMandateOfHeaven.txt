@@ -18,6 +18,11 @@ country_decisions = {
 			
 		}
 		allow = {
+			num_of_owned_provinces_with = {
+				value = 75
+				is_core = ROOT
+				superregion = china_superregion
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no

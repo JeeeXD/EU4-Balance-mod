@@ -1,0 +1,4 @@
+fra_musketeers_fire = {
+	fire_damage = 0.15
+	is_musketeer_modifier = yes
+}

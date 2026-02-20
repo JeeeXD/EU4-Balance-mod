@@ -10,3 +10,17 @@
 ########### DECISIONS #########
 chinese_nation_formable_title: "Reform the Chinese Administration"
 chinese_nation_formable_desc: "We have modernized the nation and only our administration remains firmly rooted in the past. It is time to end the era of factional politics and build a stronger China."
+########### MANDATE ##############
+enable_unique_units: "Unlock Unique Units"
+mandate_unit_shock_buff: "Integration of Cavalry"
+mandate_unit_fire_buff: "Modernised Army"
+mandate_unit_received_buff: "Imperial Training"
+
+issue_discplined_guards_title: "Discplined Guards"
+issue_fast_reinforcements_title: "Local Reinforcements"
+issue_anti_cavalry_mechanisms_title: "Anti-Cavalry Mechanisms"
+issue_anti_artillery_mechanisms_title: "Anti-Artillery Mechanisms"
+issue_discplined_guards_desc: "Discpline: §G+5%§!\n§YAffects only Unique Units§!"
+issue_fast_reinforcements_desc: "Reinforce Speed: §G+50%§!\n§YAffects only Unique Units§!"
+issue_anti_cavalry_mechanisms_desc: "Land Fire Damage: §R-50%§!\nShock Damage: §R-50%§!\nShock Damage Received: §G-30%§!\nMorale Damage Received: §G-30%§!\n§YAffects only Unique Units§!"
+issue_anti_artillery_mechanisms_desc: "Land Fire Damage: §R-50%§!\nShock Damage: §R-50%§!\nFire Damage Received: §G-30%§!\nMorale Damage Received: §G-30%§!\n§YAffects only Unique Units§!"

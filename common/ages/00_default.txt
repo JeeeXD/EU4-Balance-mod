@@ -634,6 +634,16 @@ age_of_reformation = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 0
+					NOT = {
+						num_of_ports = 1
+					}
+				}
+				modifier = {
+					factor = 100000
+					is_colonial_nation = yes
+				}
 			}
 		}
 
