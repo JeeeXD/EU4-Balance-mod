@@ -1,6 +1,5 @@
 namespace = mp_misc
 
-#Seven Iakh
 
 country_event = {
 	id = mp_misc.1
@@ -20,5 +19,165 @@ country_event = {
 	option = {
 		name = mp_misc.opt1
 		add_prestige = -5
+	}
+}
+
+
+# Elector for other italian slots
+country_event = {
+	id = mp_misc.2
+	title = mp_misc.2.t
+	desc = mp_misc.2.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		ai = no
+		OR = {
+			tag = VEN
+			tag = SAV
+		}
+		MLO = {
+			was_player = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = mp_misc.2.opt1
+		elector = yes
+		MLO = {
+			elector = no
+		}
+	}
+	option = {
+		name = mp_misc.2.opt2
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = mp_misc.3
+	title = mp_misc.3.t
+	desc = mp_misc.3.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		ai = no
+		OR = {
+			tag = PAP
+			tag = NAP
+		}
+		LAN = {
+			was_player = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = mp_misc.3.opt1
+		set_in_empire = yes
+		elector = yes
+		add_prestige = -15
+		LAN = {
+			elector = no
+		}
+	}
+	option = {
+		name = mp_misc.3.opt2
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = mp_misc.4
+	title = mp_misc.4.t
+	desc = mp_misc.4.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = ORM
+		OMA = {
+			exists = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = mp_misc.4.opt1
+		override_country_name = "Oman"
+		ai_chance = {
+			factor = 33
+		}
+	}
+	option = {
+		name = mp_misc.4.opt2
+		override_country_name = "Oman"
+		change_country_color = {
+			country = OMA
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+	option = {
+		name = mp_misc.4.opt3
+		change_tag = OMA
+		change_primary_culture = omani_culture
+		ai_chance = {
+			factor = 33
+		}
+	}
+	option = {
+		name = mp_misc.4.opt4
+		add_prestige = -200
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = mp_misc.5
+	title = mp_misc.5.t
+	desc = mp_misc.5.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = GEO
+		NOT = {
+			religion = coptic
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = mp_misc.5.opt1
+		change_religion = coptic
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = mp_misc.5.opt2
+		add_patriarch_authority = 15
+		ai_chance = {
+			factor = 1
+		}
 	}
 }

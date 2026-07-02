@@ -226,6 +226,9 @@ monarchy = {
 				#1.37 Hungary
 				continue_the_renaissance_reform
 				timurid_diwan_reform
+
+				hormuz_navy_reform
+				oman_navy_reform
 			}
 		}
 		state_and_religion = {
@@ -428,6 +431,8 @@ monarchy = {
 				modern_economics_reform
 				chinampa_farms_reform
 				bergordnung_reforms_reform
+
+				bavarian_beer_reform
 			}
 		}
 		legitimation_of_power = {
@@ -723,6 +728,8 @@ republic = {
 
 				berber_maghreb_reform
 				fatimid_maghreb_reform
+				hormuz_navy_reform
+				oman_navy_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -1288,6 +1295,8 @@ theocracy = {
 				egyptian_government_reform
 				blood_theocracy_reform
 				turkoman_ottoman_institutions
+
+				cologne_theocracy_reform
 			}
 		}
 		internal_vs_external_mission = {

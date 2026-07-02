@@ -2730,7 +2730,7 @@ rus_great_power_of_the_east = {	#Permanent
 }
 
 rus_ensured_regular_payment = {
-	shock_damage_received = -0.0025
+	shock_damage_received = -0.025
 	land_maintenance_modifier = 0.05
 	is_streltsy_modifier = yes
 }

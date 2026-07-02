@@ -416,6 +416,55 @@ march = {
 		expiration_message_overlord = MARCHTOOLARGE
 		expiration_message_subject = MARCHTOOLARGEUS
 	}
+	modifier_subject = {
+		modifier = subject_tax_modifier
+		trigger = {
+			overlord = {
+				has_government_attribute = subject_tax_modifier_25
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_goods_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_country_flag = subject_military_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_country_flag = subject_tax_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_country_flag = subject_movement_bonus_mp
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_country_flag = subject_development_bonus_mp
+			}
+		}
+	}
 }
 
 daimyo_vassal = {

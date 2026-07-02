@@ -172,8 +172,9 @@ penguin_democracy_reform = {
 	duration = 4
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
-	nation_designer_cost = 0
+	nation_designer_cost = 100
 	potential = {
+		is_playing_custom_nation = yes
 		tag = MDD
 	}
 	modifiers = {
@@ -202,8 +203,9 @@ penguin_communist_reform = {
 	has_term_election = no
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
-	nation_designer_cost = 0
+	nation_designer_cost = 100
 	potential = {
+		is_playing_custom_nation = yes
 		tag = MDC
 	}
 	modifiers = {
@@ -217,4 +219,163 @@ penguin_communist_reform = {
 	ai = {
 		factor = 0.5 #generic
 	}
+}
+
+bavarian_beer_reform = {
+	icon = "monastic_breweries_reform"
+	potential = {
+		OR = {
+			tag = BAV
+			was_tag = BAV
+		}
+	}
+	trigger = {
+		OR = {
+			tag = BAV
+			was_tag = BAV
+		}
+	}
+	
+	custom_attributes = {
+	
+	}
+
+
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	effect = {
+		custom_tooltip = producing_wine_and_grain_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = wine
+					}
+					add_province_modifier = { 
+						name = wine_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = grain_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = wine_bonus_prod
+						has_province_modifier = grain_bonus_prod
+					}
+				}
+				remove_province_modifier = wine_bonus_prod
+				remove_province_modifier = grain_bonus_prod
+			}
+		}
+	}
+}
+
+hormuz_navy_reform = {
+	icon = "merchant_ship"
+	potential = {
+		OR = {
+			tag = ORM
+			was_tag = ORM
+			NOT = {
+				was_tag = OMA
+			}
+			NOT = {
+				tag = OMA
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			tag = ORM
+			was_tag = ORM
+			NOT = {
+				was_tag = OMA
+			}
+		}
+	}
+	
+	custom_attributes = {
+	
+	}
+
+
+	modifiers = {
+		transport_power = 1
+		ship_trade_power_modifier = 0.33
+		ship_durability = 0.15
+	}
+
+}
+
+oman_navy_reform = {
+	icon = "pirate_ship"
+	potential = {
+		OR = {
+			tag = OMA
+			was_tag = OMA
+		}
+	}
+	trigger = {
+		OR = {
+			tag = OMA
+			was_tag = OMA
+		}
+	}
+	
+	custom_attributes = {
+	
+	}
+
+
+	modifiers = {
+		galley_power = 0.15
+		ship_trade_power_modifier = 0.33
+		trade_efficiency = 0.1
+	}
+
+}
+
+cologne_theocracy_reform = {
+	icon = "apostolic_kingdom"
+	potential = {
+		OR = {
+			tag = KOL
+			was_tag = KOL
+		}
+	}
+	trigger = {
+		OR = {
+			tag = KOL
+			was_tag = KOL
+		}
+	}
+	
+	custom_attributes = {
+		is_eligible_for_hre_emperor = yes
+		royal_marriage = yes
+	}
+
+
+	modifiers = {
+		monarch_diplomatic_power = 1
+		monarch_lifespan = 0.25
+	}
+
 }

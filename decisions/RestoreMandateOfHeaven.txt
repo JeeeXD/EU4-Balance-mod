@@ -8,6 +8,9 @@ country_decisions = {
 				tag = MNG
 				tag = KOR
 				tag = JAP
+				tag = SIA
+				tag = BRM
+				tag = LFA
 				has_country_flag = can_restore_mandate
 			}
 			NOT = {
