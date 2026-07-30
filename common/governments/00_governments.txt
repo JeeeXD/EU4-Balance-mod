@@ -685,6 +685,8 @@ republic = {
 
 				penguin_democracy_reform
 				penguin_communist_reform
+				casino_of_macau_reform
+				
 			}
 		}
 		republican_virtues = {
@@ -1483,6 +1485,7 @@ theocracy = {
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
 
+				safeguard_holy_sites_reform
 				
 			}
 		}
@@ -1514,7 +1517,6 @@ theocracy = {
 		}
 		divine_cause = {
 			reforms = {
-				safeguard_holy_sites_reform
 				combat_heresy_reform
 				expel_heathens_reform
 				guru_advisors_reform

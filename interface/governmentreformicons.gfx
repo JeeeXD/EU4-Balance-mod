@@ -1652,4 +1652,8 @@ spriteTypes = {
 		name = "government_reform_capitalist_penguins"
 		texturefile = "gfx//interface//government_reform_icons//capitalist_penguins.dds"
 	}
+	spriteType = {
+		name = "government_reform_gamba"
+		texturefile = "gfx//interface//government_reform_icons//gamba.dds"
+	}
 }

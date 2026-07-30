@@ -9,8 +9,8 @@ capital = 640
 	monarch = {
 		name = "Sepudak"
 		dynasty = "Sambas"
-		adm = 1
-		dip = 1
+		adm = 4
+		dip = 4
 		mil = 4
 	}
 }

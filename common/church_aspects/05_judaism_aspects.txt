@@ -1,7 +1,7 @@
 judaism_rosh_hashanah_aspect = {	#ADM aspect
 	cost = 100
 	modifier = {
-		global_unrest = -2
+		global_unrest = -3
 	}
 	monarch_power = adm
 	ai_will_do = {
@@ -253,7 +253,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 judaism_yom_kippur_aspect = {	#MIL aspect
 	cost = 100
 	modifier = {
-		infantry_cost = -0.05
+		land_maintenance_modifier = -0.15
 	}
 	monarch_power = mil
 	ai_will_do = {

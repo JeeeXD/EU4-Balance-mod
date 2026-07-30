@@ -1,8 +1,7 @@
 clerical_poverty_aspect = {
 	cost = 100
 	modifier = {
-		church_influence_modifier = -0.1
-		stability_cost_modifier = -0.15
+		expand_infrastructure_cost_modifier = -0.25
 	}
 	effect = {
 		hidden_effect = { 
@@ -25,8 +24,8 @@ clerical_poverty_aspect = {
 punishment_of_sins_aspect = {
 	cost = 100
 	modifier = {
-		nobles_influence_modifier = -0.1
-		yearly_corruption = -0.05
+		monthly_splendor = 2
+		advisor_cost = -0.1
 	}
 	effect = {
 		hidden_effect = { 
@@ -72,7 +71,7 @@ orphan_hetmans_aspect = {
 bread_and_wine_aspect = {
 	cost = 100
 	modifier = {
-		tolerance_own = 1
+		tolerance_own = 2
 		global_trade_goods_size_modifier = 0.05
 	}
 	effect = {
@@ -119,6 +118,7 @@ sola_scriptura_aspect = {
 adamite_services_aspect = {
 	cost = 100
 	modifier = {
+		development_cost_in_primary_culture = -0.075
 		culture_conversion_cost = -0.2
 	}
 	effect = {
@@ -142,8 +142,8 @@ adamite_services_aspect = {
 pacifism_aspect = {
 	cost = 100
 	modifier = {
-		stability_cost_to_declare_war = 1
-		improve_relation_modifier = 0.3
+		build_time = -0.15
+		build_cost = -0.05
 	}
 	ai_will_do = {
 		factor = 0
@@ -169,7 +169,7 @@ pacifism_aspect = {
 regular_defenestrations_aspect = {
 	cost = 100
 	modifier = {
-		harsh_treatment_cost = -0.33
+		infantry_power = 0.1
 	}
 	effect = {
 		hidden_effect = { 
@@ -215,8 +215,8 @@ taborite_resurgence_aspect = {
 freedom_to_preach_aspect = {
 	cost = 100
 	modifier = {
-		religious_unity = 0.1
-		tolerance_heretic = 1
+		global_own_trade_power = 0.33
+		embargo_efficiency = 0.5
 	}
 	effect = {
 		hidden_effect = { 
@@ -237,7 +237,7 @@ freedom_to_preach_aspect = {
 }
 
 rekindle_the_hussite_wars_aspect = {
-	cost = 200
+	cost = 100
 	potential = {
 		has_dlc = "Winds of Change"
 	}

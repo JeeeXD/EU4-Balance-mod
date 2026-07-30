@@ -196,7 +196,7 @@ prussian_theocratic_reform = {
 		devotion = -0.5
 		max_absolutism = 10
 		manpower_in_true_faith_provinces = 0.15
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 	
 	conditional = {
@@ -232,7 +232,7 @@ militarized_crusader_order_reform = {
 		manpower_in_true_faith_provinces = 0.33
 		cb_on_religious_enemies = yes
 		tolerance_own = 2
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 	
 	conditional = {
@@ -1450,7 +1450,8 @@ safeguard_holy_sites_reform = {
 		brahmins_hindu_loyalty_modifier = 0.1
 		brahmins_other_loyalty_modifier = 0.1
 		jains_loyalty_modifier = 0.1
-		defensiveness = 0.15
+		defensiveness = 0.25
+		garrison_size = 0.25
 	}
 }
 
@@ -1493,9 +1494,9 @@ clerical_commission_reform = {
 	fixed_rank = 0
 	allow_normal_conversion = yes
 	modifiers = {
-		global_unrest = -1
-		diplomatic_upkeep = 1	
-		envoy_travel_time = -0.5
+		vassal_forcelimit_bonus = 0.5
+		vassal_income = 0.25
+		liberty_desire = -0.25
 	}
 	
 	ai = {
@@ -1596,7 +1597,7 @@ constitional_theocracy_reform = {
 	allow_normal_conversion = yes
 	fixed_rank = 0
 	modifiers = {
-		years_of_nationalism = -2
+		global_tax_modifier = 0.33
 	}
 	
 	ai = {
@@ -1705,9 +1706,9 @@ monastic_elections_reform = {
 			}
 
 			theocrats = {
-				tolerance_own = 2
-				global_missionary_strength = 0.02
-				devotion = 0.5
+				tolerance_own = 3
+				build_cost = -0.1
+				global_trade_goods_size_modifier = 0.05
 			}
 		}
 	}
@@ -1729,6 +1730,9 @@ commander_king_reform = {
 		devotion = 0.25
 		harsh_treatment_cost = -0.2
 		leader_land_fire = 1
+		leader_siege = 1
+		leader_land_shock = 1
+		leader_land_manuever = 1
 	}
 	custom_attributes = {
 		generals_become_rulers = yes
@@ -1760,8 +1764,11 @@ admiral_king_reform = {
 	}
 	modifiers = {
 		devotion = 0.25
-		naval_morale = 0.15
+		naval_forcelimit_modifier = 0.15
 		leader_naval_fire = 1
+		leader_naval_shock = 1
+		leader_naval_manuever = 1
+		leader_siege = 1
 	}
 	custom_attributes = {
 		admirals_become_rulers = yes
@@ -1803,7 +1810,7 @@ god_and_man_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		missionaries = 1
-		tolerance_own = 2
+		tolerance_own = 4
 	}
 	ai = {
 		factor = 0
@@ -1867,8 +1874,8 @@ belief_and_unity_reform = {
 	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = yes
 	modifiers = {
-		religious_unity = 0.5
-		num_accepted_cultures = 2
+		development_cost_in_primary_culture = 0.1
+		culture_conversion_cost = -0.15
 	}
 	ai = {
 		factor = 0

@@ -1,0 +1,11 @@
+namespace = flavor_macau
+
+
+country_event = {
+	id = flavor_macau.1
+	title = flavor_macau.1.T
+	desc = flavor_macau.1.D
+	picture = 2_Brahmin_Estate_eventPicture
+	is_triggered_only = yes
+
+}

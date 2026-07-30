@@ -122,3 +122,78 @@ ME_give_claims = {
 	]
 
 }
+
+on_general_recruited_effect = {
+	if = {
+		limit = { has_country_modifier = pol_trigger_for_army_professionalism_modifier } 
+		add_army_tradition = 5
+	}
+	else = { add_army_tradition = 3 }
+	if = {
+		limit = { has_government_attribute = recruiting_generals_increases_nobles_loyalty }
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 2
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_maratha
+			}
+			add_estate_loyalty = {
+				estate = estate_maratha
+				loyalty = 2
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_rajput
+			}
+			add_estate_loyalty = {
+				estate = estate_rajput
+				loyalty = 2
+			}
+		}
+	}
+	if = {
+		limit = { has_government_attribute = recruiting_generals_increases_church_loyalty }
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 2
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_brahmins
+			}
+			add_estate_loyalty = {
+				estate = estate_brahmins
+				loyalty = 2
+			}
+		}
+	}
+	if = { 
+		limit = { has_country_modifier = fra_french_papal_military_cooperation_modifier } 
+		add_army_tradition = 5
+	}
+	if = {
+		limit = {
+			has_reform = ayyubid_high_command
+		}
+		add_army_professionalism = 0.001
+	}
+	if = {
+		limit = {
+			has_country_flag = ven_quality_reward_flag
+		}
+		add_army_professionalism = 0.001
+	}
+}

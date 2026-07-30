@@ -2459,7 +2459,8 @@ JAP_ideas = {
 	}
 	
 	trigger = {
-		tag = JAP
+		always = no
+		#tag = JAP
 	}
 	free = yes
 	
@@ -4111,11 +4112,7 @@ USA_ideas = {
 	}
 	
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -4124,14 +4121,15 @@ USA_ideas = {
 	free = yes
 	
 	freedom_of_religion = {
-		tolerance_heretic = 5
+		governing_capacity_modifier = 0.15
 	}
 	usa_bill_of_rights = {
-		global_unrest = -2
+		has_mamluks = yes
+		allowed_mamluks_fraction = 0.25
 	}
 	manifest_destiny = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+		core_creation = -0.2
+		manpower_in_culture_group_provinces = 0.33
 	}
 	lessons_of_valley_forge = {
 		land_morale = 0.10
@@ -4144,7 +4142,7 @@ USA_ideas = {
 	}
 	empire_of_liberty = {
 		min_autonomy_in_territories = -0.10
-		global_autonomy = -0.025
+		global_autonomy = -0.1
  	}
 }
 
@@ -7639,11 +7637,7 @@ CAN_ideas = {
 	}
 	
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -7659,20 +7653,23 @@ CAN_ideas = {
 		merchants = 1
 	}
     settling_the_interior = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+		manpower_recovery_speed = 0.2
+		morale_damage_received = -0.1
 	}
 	the_maritimes = {
 		navy_tradition = 1
+		naval_morale = 0.1
 	}
 	the_quebec_act = {
-		tolerance_heretic = 2
+		tolerance_own = 2
+		no_religion_penalty = yes
 	}
 	legacy_of_the_empire = {
 		trade_steering = 0.15
 	}
 	the_forests_of_canada = {
 		global_ship_cost = -0.1
+		global_regiment_cost = -0.1
 	}
 }
 
@@ -7696,29 +7693,35 @@ QUE_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}	
 	the_seigneurial_system = {
-		global_tax_modifier = 0.15
+		global_tax_modifier = 0.33
+		advisor_cost = -0.1	
 	}
 	relations_with_natives = {
-		diplomatic_upkeep = 1
+		native_assimilation = 1
+		native_uprising_chance = -1
+		colonists = 1
+		global_colonial_growth = 0.5
 	}
 	fortifications_of_quebec = {
 		defensiveness = 0.15
+		war_taxes_cost_modifier = -0.5
 	}
 	college_of_quebec = {
 		global_institution_spread = 0.1
 	}
 	commissions_for_noble_sons = {
-		yearly_corruption = -0.05 
-		reinforce_speed = 0.1
+		land_morale = 0.15
+		reinforce_speed = 0.33
 	}
 	jesuit_missions = {
-		global_missionary_strength = 0.01
+		max_absolutism_effect = 0.25
+		max_absolutism = 25
 	}
 }
 
 MEX_ideas = {
 	start = {
-		global_colonial_growth = 15
+		gold_depletion_chance_modifier = -0.25
 		inflation_reduction = 0.1
 	}
 	
@@ -7736,10 +7739,10 @@ MEX_ideas = {
 		build_cost = -0.10
 	}	
 	the_republic_of_indians = {
-		num_accepted_cultures = 1
+		land_forcelimit_modifier = 0.15
 	}
     peace_by_purchase = {
-		years_of_nationalism = -5
+		production_efficiency = 0.1
 	}
 	casa_de_las_campanas = {
 		idea_cost = -0.10
@@ -7749,6 +7752,7 @@ MEX_ideas = {
 	}
 	heroes_of_the_revolution = {
 		leader_land_shock = 1
+		leader_cost = -0.15
 	}
 	grito_de_delores = {
 		land_morale = 0.10	
@@ -7958,7 +7962,7 @@ CND_ideas = {
 BRZ_ideas = {
 	start = {
 		hostile_attrition = 1
-		envoy_travel_time = -0.25
+		fire_damage = 0.15
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -7969,7 +7973,8 @@ BRZ_ideas = {
 	free = yes
 
 	governorate_general = {
-		global_tax_modifier = 0.1
+		development_cost_in_primary_culture = 0.05
+		tolerance_own = 1
 	}
 	research_of_nassau = {
 		global_institution_spread = 0.1
@@ -7978,10 +7983,10 @@ BRZ_ideas = {
 		inflation_reduction = 0.1
 	}
 	halting_foreign_incursions = {
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 	entradas_and_bandeiras = {
-		core_creation = -0.15
+		global_own_trade_power = 0.25
 	}
 	inconfidencia_mineira = {
 		stability_cost_modifier = -0.1
@@ -8936,7 +8941,7 @@ ORL_ideas = {
 
 ORM_ideas = {
 	start = {
-		infantry_power = 0.2
+		infantry_power = 0.1
 		global_missionary_strength = 0.02
 	}
 
@@ -9985,12 +9990,12 @@ LND_ideas = {
 
 RZW_ideas = {
 	start = {  
-		land_morale = 0.1
-		infantry_cost = -0.1
+		build_cost = -0.15
+		development_cost = -0.1
 	}
   
 	bonus = {
-		shock_damage_received = -0.1
+		shock_damage_received = -0.2
 	}
   
 	trigger = {
@@ -10002,25 +10007,35 @@ RZW_ideas = {
 	free = yes
   
 	rzw_legacy_of_zimbabwe = {
-		build_cost = -0.1
+		global_tax_modifier = 0.05
+		global_trade_power = 0.15
 	}
 	rzw_strict_gold_regulations = {
-		inflation_reduction = 0.1
+		global_tax_modifier = 0.05
+		gold_depletion_chance_modifier = -0.5
+		inflation_reduction = 0.15
 	}
 	rzw_empowering_the_rozwi = {
+		global_tax_modifier = 0.05
 		infantry_power = 0.1
 	}
 	rzw_hierarchical_tax_organization = {
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.05
+		adm_advisor_cost = -0.33
+		manpower_in_accepted_culture_provinces = 0.2
 	}
 	rzw_discipline_and_traning = {
+		global_tax_modifier = 0.05
 		discipline = 0.05
 	}
 	rzw_mwari_cult = {
-		global_unrest = -1
+		global_tax_modifier = 0.05
+		stability_cost_modifier = -0.15
+		prestige = 1
 	}
 	rzw_vashambadzi = {
-		trade_efficiency = 0.1
+		global_tax_modifier = 0.05
+		global_trade_goods_size = 0.1
 	}
 }
 
@@ -11192,8 +11207,8 @@ OTM_ideas = {
 
 OUC_ideas = {
 	start = {
-		global_unrest = -1
-		global_ship_cost = -0.1
+		core_creation = -0.15
+		global_ship_cost = -0.15
 	}
 	
 	bonus = {
@@ -11206,7 +11221,7 @@ OUC_ideas = {
 	free = yes
 	
 	ouc_descendant_of_baekje = {
-		diplomatic_reputation = 1
+		infantry_power = 0.15
 	}
 	
 	ouc_korea_trade = {
@@ -11219,19 +11234,23 @@ OUC_ideas = {
 	
 	ouc_hakata_city = {
 		merchants = 1
-	}
-	
-	ouc_mercantile_diplomacy = {
 		trade_steering = 0.15
 	}
 	
+	ouc_mercantile_diplomacy = {
+		possible_policy = 1
+	}
+	
 	ouc_welcome_missionaries = {
-		tolerance_heathen = 1
-		tolerance_heretic = 1
+		navy_tradition = 1
+		ship_power_propagation = 0.25
 	}
 	
 	ouc_retainer_factions = {
 		advisor_cost = -0.1
+		republican_tradition = 0.5
+		legitimacy = 1
+		devotion = 1
 	}
 
 }
@@ -11407,11 +11426,11 @@ STK_ideas = {
 
 AKT_ideas = {
 	start = {
-		trade_efficiency = 0.1
-		transport_cost = -0.2
+		trade_efficiency = 0.15
+		transport_attrition = -0.33
 	}
 	bonus = {
-		global_colonial_growth = 15
+		global_colonial_growth = 25
 	}
 	trigger = {
 		tag = AKT
@@ -11419,16 +11438,18 @@ AKT_ideas = {
 	free = yes
 	
 	akt_march_of_akita = {
-		shock_damage_received = -0.15
+		native_assimilation = 0.5
+		native_uprising_chance = -0.5
 	}
 	akt_foothold_in_hokkaido = {
+		merchants = 1
 		global_own_trade_power = 0.2
 	}
 	akt_clan_unification = {
 		land_forcelimit_modifier = 0.2
 	}
 	akt_expansion_of_trade_posts = {
-		merchants = 1
+		colonists = 1
 	}
 	akt_ainu_campaigns = {
 		culture_conversion_cost = -0.15
@@ -11437,14 +11458,14 @@ AKT_ideas = {
 		discipline = 0.05
 	}
 	akt_adoption_system = {
-		heir_chance = 0.5
+		shock_damage_received = -0.15
 	}
 }
 
 CBA_ideas = {
 	start = {
-		global_tax_modifier = 0.1
-		prestige = 1
+		mercantilism_cost = -0.25
+		trade_efficiency = 0.2
 	}
 	
 	bonus = {
@@ -11457,7 +11478,8 @@ CBA_ideas = {
 	free = yes
 	
 	cba_lineage_of_taira = {
-		diplomatic_reputation = 1
+		liberty_desire_from_subject_development = -0.25
+		ship_trade_power_modifier = 0.15
 	}
 	
 	cba_dream_of_masakado = {
@@ -11465,11 +11487,13 @@ CBA_ideas = {
 	}
 
 	cba_coalition_with_kamakura_kubo = {
-		fabricate_claims_cost = -0.25
+		vassal_forcelimit_bonus = 0.33
+		global_tariffs = 0.25
 	}
 	
 	cba_sakura_kadan = {
-		improve_relation_modifier = 0.2
+		global_colonial_growth = 15
+		colonist_placement_chance = 0.1
 	}
 
 	cba_katori_jingu = {
@@ -11705,12 +11729,12 @@ KKC_ideas = {
 
 KNO_ideas = {
 	start = {
-		global_own_trade_power = 0.1
+		trade_efficiency = 0.1
 		navy_tradition = 1		
 	}
 	
 	bonus = {
-		trade_efficiency = 0.1
+		shock_damage_received = -0.2
 	}
 
 	trigger = {
@@ -11723,7 +11747,8 @@ KNO_ideas = {
 		sailor_maintenance_modifer = -0.05
 	}
 	kno_integration_of_cadet_branches = {
-		galley_cost = -0.2
+		allowed_marine_fraction = 0.33
+		sailors_recovery_speed = 0.33
 	}
 	kno_oyamazumi_shrine = {
 		naval_morale = 0.2
@@ -11733,6 +11758,7 @@ KNO_ideas = {
 	}
 	kno_ruler_of_inland_sea = {
 		galley_power = 0.15
+		galley_cost = -0.25
 	}
 	kno_trade_with_asian_continent = {
 		trade_range_modifier = 0.2
@@ -11823,7 +11849,7 @@ TKD_ideas = {
 
 SBA_ideas = {
 	start = {
-		build_cost = -0.1
+		build_cost = -0.2
 		global_manpower_modifier = 0.2
 	}
 	bonus = {
@@ -11835,22 +11861,24 @@ SBA_ideas = {
 	free = yes
 	
 	sba_chief_of_military_office = {
-		prestige_from_land = 0.50
+		leader_land_fire = 1
 	}
 	sba_shugo_of_three_provinces = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.15
 	}
 	sba_consolidation_of_kanrei_position = {
-		diplomats = 1
+		production_efficiency = 0.15
 	}
 	sba_atsuta_shrine = {
 		land_morale = 0.1
 	}
 	sba_access_to_northern_japan = {
-		cavalry_cost = -0.1
+		expand_infrastructure_cost_modifier = -0.25
+		state_governing_cost = -0.15
 	}
 	sba_shiba_retainers = {
-		advisor_pool = 1
+		great_project_upgrade_cost = -0.25
+		great_project_upgrade_time = -0.5
 	}
 	sba_mogami_family = {
 		infantry_power = 0.1
@@ -13542,7 +13570,7 @@ TKG_ideas = {
 		land_morale = 0.1
 	}
 	tkg_strengthen_the_sekisho_network = {
-		spy_offence = 0.2
+		advisor_cost = -0.15
 	}
 	tkg_hatamoto = {
 		discipline = 0.05
@@ -15594,7 +15622,7 @@ TEX_ideas = {
 AUS_ideas = {
 	start = {	
 		global_ship_recruit_speed = -0.2
-		global_colonial_growth = 25
+		flagship_cost = -1
 	}
 	bonus = {
 		development_cost = -0.15
@@ -15604,8 +15632,7 @@ AUS_ideas = {
 	}
 	free = yes
 	AUS_outback_stations = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+		own_coast_naval_combat_bonus = 1
 	}
 	AUS_land_down_under = {
 		land_attrition = -0.1
@@ -15616,7 +15643,7 @@ AUS_ideas = {
 	}
 	AUS_sandpaper_and_cheating = {
 		infantry_power = 0.1
-		allowed_marine_fraction = 0.5
+		max_flagships = 1 
 	}
 	AUS_royal_navy = {
 		global_ship_cost = -0.1
@@ -15632,24 +15659,19 @@ AUS_ideas = {
 
 NZL_ideas = {
 	start = {	
-		diplomatic_upkeep = 1
-		global_trade_power = 0.1
+		has_marines = yes
+		allowed_marine_fraction = 0.5
 	}
 	bonus = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+		sailors_recovery_speed = 0.2
 	}
 	trigger = {
 		tag = NZL
 	}
 	free = yes
 	NZL_maori_seats = {
-		no_religion_penalty = yes
-		legitimacy = 0.5
-		devotion = 0.5
-		republican_tradition = 0.15
-		meritocracy = 0.5
-		horde_unity = 0.5
+	    naval_attrition_in_fleet_modifier = -1
+		transport_attrition = -1
 	}
 	NZL_otago_gold = {
 		global_trade_goods_size_modifier = 0.1
@@ -15662,19 +15684,21 @@ NZL_ideas = {
 		shock_damage = 0.1
 	}
 	NZL_company = {
-		global_colonial_growth = 25
+		ship_trade_power_modifier = 0.2
+		light_ship_cost = -0.33
 	}
 	NZL_rejecting_australia = {
 		land_morale = 0.15
 	}
 	NZL_pokarekare_ana = {
-		diplomatic_reputation = 2
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.25
 	}
 }
 
 ALA_ideas = {
 	start = {	
-		light_ship_power = 0.15
+		ship_trade_power_modifier = 0.25
 		naval_morale = 0.2
 	}
 	bonus = {
@@ -15691,14 +15715,14 @@ ALA_ideas = {
 		global_colonial_growth = 25
 	}
 	ALA_secretary_icebox = {
-		core_creation = -0.2
+		hostile_attrition = 2
+		max_hostile_attrition = 2
 	}
 	ALA_bear_hunting = {
 		fire_damage = 0.15
 	}
 	ALA_diversity = {
-		tolerance_heretic = 2
-		num_accepted_cultures = 1
+		manpower_in_accepted_culture_provinces = 0.15
 	}
 	ALA_navy = {
 		naval_forcelimit_modifier = 0.25
@@ -15715,24 +15739,23 @@ CSC_ideas = {
 		build_cost = -0.1
 	}
 	bonus = {
-		global_ship_trade_power = 0.25
+		global_manpower_modifier = 0.2
 	}
 	trigger = {
 		tag = CSC
 	}
 	free = yes
 	CSC_melting_pot = {
-		num_accepted_cultures = 2
+		infantry_power = 0.1
 	}
 	CSC_chinook_jargon = {
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		possible_policy = 1
 	}
 	CSC_forts_of_hudson_bay = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -1
 	}
 	CSC_settling_boundaries = {
-		global_spy_defence = 0.33
+		global_allowed_num_of_buildings = 1
 	}
 	CSC_nookta_sound = {
 		global_own_trade_power = 0.25
@@ -15751,8 +15774,7 @@ WSI_ideas = {
 		development_cost = -0.1
 	}
 	bonus = {
-		colonists = 1
-		effect = { remove_temporary_colonist = yes }
+		max_flagships = 1
 	}
 	trigger = {
 		tag = WSI
@@ -15763,20 +15785,20 @@ WSI_ideas = {
 		build_cost = -0.10
 	}
 	WSI_Blue_Mountain_Coffee = {
-		global_institution_spread = 0.2
+		land_morale = 0.15
 	}
 	WSI_Sugar_Revolution = {
-		global_unrest = -2
+		manpower_recovery_speed = 0.25
 	}
 	WSI_American_Trade_Hub = {
-		global_trade_power = 0.05
-		trade_range_modifier = 0.1
+		global_trade_power = 0.15
+		trade_range_modifier = 0.5
 	}
 	WSI_Miskoto_Zambos = {
-		num_accepted_cultures = 2
+		technology_cost = 0.05
 	}
 	WSI_Interconnected_Relations = {
-		diplomatic_reputation = 1
+		heavy_ship_power = 0.1
 	}
 	WSI_Colonial_Legacy = {
 		naval_forcelimit_modifier = 0.25
@@ -15785,8 +15807,8 @@ WSI_ideas = {
 
 SNA_ideas = {
 	start = {
-		global_tax_modifier = 0.1
-		prestige = 1
+		global_colonial_growth = 20
+		development_cost_in_primary_culture = -0.05
 	}
 	bonus = {
 		leader_siege = 1
@@ -15800,17 +15822,18 @@ SNA_ideas = {
 		mercenary_manpower = 0.5
 	}
 	SNA_sale_of_script = {
-		core_creation = -0.1
+		production_efficiency = 0.1
 	}
 	SNA_Good_Use_Of_Gold = {
 		inflation_reduction = 0.1
+		gold_depletion_chance_modifier = -0.33
 	}
 	SNA_cowboy_country = {
 		fire_damage = 0.1
 	}
 	SNA_take_what_is_yours = {
-		light_ship_cost = -0.1
-		privateer_efficiency = 0.1
+		global_supply_limit_modifier = 0.33
+		hostile_attrition = 2
 	}
 	SNA_uniting_the_outlaws = {
 		land_forcelimit_modifier = 0.25
@@ -15823,8 +15846,7 @@ SNA_ideas = {
 
 VRM_ideas = {
 	start = {
-		no_religion_penalty = yes
-		stability_cost_modifier = -0.15
+		build_cost = -0.1
 	}
 	bonus = {
 		discipline = 0.05
@@ -15835,27 +15857,28 @@ VRM_ideas = {
 	free = yes      #will be added at load.
 	VRM_home_of_the_revolution = {
 		land_morale = 0.15
-		max_revolutionary_zeal = 10
 	}
 	VRM_tea_party = {
 		embargo_efficiency = 0.25
 		prestige = 0.5
 	}
 	VRM_American_Frontier = {
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		institution_spread_from_true_faith = 0.5
+		same_religion_advisor_cost = -0.2
 	}
 	VRM_Cheese_wheels = {
 		global_tax_modifier = 0.1
 	}
 	VRM_vermont_constitution = {
-		num_accepted_cultures = 2
+		republican_tradition = 0.5
 	}
 	VRM_Liberty_is_Life = {
-		liberty_desire_from_subject_development = -0.25
+		expand_infrastructure_cost_modifier = -0.25
+		dip_tech_cost_modifier = -0.15
 	}
 	VRM_What_we_do_best = {
-		trade_company_investment_cost = -0.1
+		drill_gain_modifier = 0.33
+		idea_cost = -0.05
 	}
 }
 
@@ -17713,10 +17736,14 @@ ZAN_ideas = {
 
 	zan_kilwa_latitude_staves = {
 		trade_range_modifier = 0.25
-		range = 0.2
+		range = 0.5
 	}
 
 	zan_shirazis_legacy = {
+		discipline = 0.05
+	}
+
+	zan_the_deal_with_almuli = {
 		legitimacy = 1
 		devotion = 1
 		republican_tradition = 0.3
@@ -17724,12 +17751,8 @@ ZAN_ideas = {
 		horde_unity = 1
 	}
 
-	zan_the_deal_with_almuli = {
-		discipline = 0.05
-	}
-
 	zan_kilwa_the_melting_pot = {
-		idea_cost = -0.05
+		idea_cost = -0.1
 	}
 
 	zan_gold_of_sofala = {
@@ -17748,8 +17771,8 @@ ZAN_ideas = {
 
 GZI_ideas = {
 	start = {
-		fort_maintenance_modifier = -0.1
-		land_morale = 0.1
+		fort_maintenance_modifier = -0.33
+		land_morale = 0.2
 	}
 
 	bonus = {
@@ -17776,10 +17799,10 @@ GZI_ideas = {
 		defensiveness = 0.25
 	}
 	gzi_lay_of_the_land = {
-		hostile_attrition = 1
+		development_cost = -0.15
 	}
 	gzi_tributary_system = {
-		vassal_income = 0.2
+		discipline = 0.05
 	}
 	gzi_zimbabwe_birds = {
 		production_efficiency = 0.1
@@ -17834,39 +17857,40 @@ AKS_ideas = {
 SOM_ideas = {
 	start = {
 		may_perform_slave_raid_on_same_religion = yes
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	bonus = {
-		galley_power = 0.15
+		galley_power = 0.25
 	}
 	trigger = {
 		tag = SOM
 	}
 	free = yes
 	SOM_land_of_punt = {
-		stability_cost_modifier = -0.1
+		development_cost_in_primary_culture = -0.15
+		culture_conversion_cost = -0.25
 	}
 	SOM_african_silk_road = {
 		caravan_power = 0.2
-		trade_steering = 0.15
+		trade_steering = 0.33
 	}
 	SOM_african_minting = {
 		inflation_reduction = 0.15
 	}
 	SOM_zeila_and_berbera = {
-		center_of_trade_upgrade_cost = -0.15
-		leader_naval_manuever = 1
+		fire_damage_received = -0.2
+		discipline = 0.025
 	}
 	SOM_blue_nile = {
 		global_supply_limit_modifier = 0.33
+		reinforce_cost_modifier = -0.15
 	}
 	SOM_indian_merchants = {
 		merchants = 1
 		naval_forcelimit_modifier = 0.25
 	}
 	SOM_faithful_to_allah = {
-		global_missionary_strength = 0.01
-		missionary_maintenance_cost = -0.15
+		manpower_in_true_faith_provinces = 0.33
 	}
 }
 
@@ -17877,7 +17901,7 @@ KIT_ideas = {
 	}
 	
 	bonus = {
-		infantry_power = 0.1
+		infantry_power = 0.2
 	}
 	
 	trigger = {
@@ -17886,30 +17910,30 @@ KIT_ideas = {
 	free = yes
 	
 	kit_legacy_of_the_gods = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
-		tolerance_own = 1
+		leader_land_fire = 2
+		tolerance_heathen = 2
+		tolerance_own = 2
 	}
 	kit_empire_of_the_light = {
-		stability_cost_modifier = -0.1
+		interest = -0.5
+		inflation_reduction = 0.15
 	}
 	kit_memory_of_aksum = {
-		embracement_cost = -0.2
+		land_forcelimit_modifier = 0.25
 	}
 	kit_lakes_dominance = {
-		unjustified_demands = -0.2
+		development_cost = -0.1
 	}
 	kit_bachwezi_earthworks = {
 		build_cost = -0.1
 	}
 	kit_nile_conquest = {
-		core_creation = -0.15
+		special_unit_forcelimit = 0.33
+		special_unit_cost_modifier = -0.15
 	}
 	kit_rich_history = {
-		culture_conversion_cost = -0.25
+		production_efficiency = 0.15
+		gold_depletion_chance_modifier = -0.33
 	}
 }
 
@@ -18002,7 +18026,7 @@ ADA_ideas = {
 	}
 
 	ada_embrace_the_cannons = {
-		artillery_power = 0.1
+		artillery_cost = -0.33
 	}
 }
 
@@ -18082,8 +18106,7 @@ ZUL_ideas = {
 		shock_damage = 0.1
 	}
 	zul_zulu_expansion = {
-		core_creation = -0.1
-		years_of_nationalism = -3
+		production_efficiency = 0.15
 	}
 	zul_warrior_culture = {
 		land_morale = 0.15
@@ -18093,7 +18116,8 @@ ZUL_ideas = {
 		governing_capacity_modifier = 0.1
 	}
 	zul_conquest_through_patronage = {
-		accept_vassalization_reasons = 10
+		all_estate_loyalty_equilibrium = 0.1
+		allow_free_estate_privilege_revocation = yes
 	}
 }
 
@@ -18486,7 +18510,8 @@ CXI_ideas = {
 	}
 	
 	trigger = {
-		tag = CXI
+		#tag = CXI
+		always = no
 	}
 	free = yes
 	
@@ -19018,5 +19043,915 @@ MDP_ideas = {
 	MDP_7 = {
 		cavalry_shock = 1
 		cav_to_inf_ratio = 0.5
+	}
+}
+
+MAC_ideas = {
+	start = {
+		inflation_reduction = -0.1
+		development_cost = -0.2
+	}
+	
+	bonus = {
+		cavalry_power = 0.2
+	}
+	
+	trigger = {
+		tag = MAC
+	}
+	free = yes
+	
+	MAC_1 = {
+		trade_efficiency = 0.1
+		light_ship_cost = -0.2
+	}
+	MAC_2 = {
+		colonists = 1
+	}
+	MAC_3 = {
+		yearly_corruption = -0.05
+	}
+	MAC_4 = {
+		diplomatic_reputation = 1
+	}
+	MAC_5 = {
+		all_estate_loyalty_equilibrium = 0.1
+		prestige = 1
+	}
+	MAC_6 = {
+		shock_damage = 0.1
+	}
+	MAC_7 = {
+		reelection_cost = -0.25
+		republican_tradition = 0.3
+	}
+}
+
+free_city_ideas = {
+	start = {
+		development_cost_modifier = -0.15
+	}
+	
+	bonus = {
+		defensiveness = 0.5
+	}
+	
+	trigger = {
+		has_reform = influenced_free_city
+		has_country_flag = free_city_ideas_unlocked
+	}
+	free = yes
+	
+	free_city_1 = {
+		leader_land_fire = 2
+		leader_land_shock = 1
+	}
+	free_city_2 = {
+		overlord_naval_forcelimit = 15
+		advisor_cost = -0.2
+	}
+	free_city_3 = {
+		global_tax_income = 72
+	}
+	free_city_4 = {
+		global_manpower = 20
+		own_territory_dice_roll_bonus = 1 
+	}
+	free_city_5 = {
+		province_trade_power_modifier = 0.25
+		global_own_trade_power = 0.33
+	}
+	free_city_6 = {
+		leader_siege = 1
+		general_cost = -0.5
+		free_land_leader_pool = 3
+	}
+	free_city_7 = {
+		monthly_gold_inflation_modifier = -1
+		gold_depletion_chance_modifier = -1
+	}
+}
+
+TMH_ideas = {
+	start = {
+		galley_power = 0.2
+		galley_cost = -0.15
+	}
+	
+	bonus = {
+		development_cost_in_primary_culture = -0.2
+	}
+	
+	trigger = {
+		tag = TMH
+	}
+	free = yes
+	
+	TMH_1 = {
+		infantry_shock = 0.25
+		global_regiment_cost = -0.1
+	}
+	TMH_2 = {
+		global_ship_trade_power = 0.33
+	}
+	TMH_3 = {
+		build_cost = -0.1
+		production_efficiency = 0.1
+	}
+	TMH_4 = {
+		global_own_trade_power = 0.25
+	}
+	TMH_5 = {
+		republican_tradition = 0.5
+		legitimacy = 1
+		devotion = 1
+		prestige = 1
+	}
+	TMH_6 = {
+		tolerance_own = 2
+		stability_cost_modifier = -0.2
+	}
+	TMH_7 = {
+		morale_damage = 0.15
+	}
+}
+
+AOD_ideas = {
+	start = {
+		global_prosperity_growth = 0.1
+		development_cost = -0.15
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.33
+	}
+	
+	trigger = {
+		tag = AOD
+	}
+	free = yes
+	
+	AOD_1 = {
+		fire_damage = 0.1
+	}
+	AOD_2 = {
+		advisor_cost = -0.15
+	}
+	AOD_3 = {
+		possible_policy = 1
+	}
+	AOD_4 = {
+		technology_cost = -0.15
+		advisor_cost = 4
+	}
+	AOD_5 = {
+		power_projection_from_insults = 1
+		expand_infrastructure_cost_modifier = -0.33
+	}
+	AOD_6 = {
+		monarch_admin_power = 1
+	}
+	AOD_7 = {
+		land_forcelimit_modifier = 0.15
+	}
+}
+
+JKB_ideas = {
+	start = {
+		gold_depletion_chance_modifier = -0.75
+		global_trade_goods_size = 0.5
+	}
+	
+	bonus = {
+		trade_efficiency = 0.2
+	}
+	
+	trigger = {
+		tag = JKB
+	}
+	free = yes
+	
+	JKB_1 = {
+		discipline = 0.05
+	}
+	JKB_2 = {
+		manpower_in_culture_group_provinces = 0.33
+	}
+	JKB_3 = {
+		harsh_treatment_cost = -0.25
+		max_absolutism = 15
+	}
+	JKB_4 = {
+		interest = -0.5
+	}
+	JKB_5 = {
+		defensiveness = 0.33
+		own_territory_dice_roll_bonus = 1
+	}
+	JKB_6 = {
+		culture_conversion_cost = -0.15
+		autonomy_change_time = -0.25
+	}
+	JKB_7 = {
+		overlord_naval_forcelimit_modifier = 0.25
+		naval_morale_damage = 0.15
+	}
+}
+
+BBL_ideas = {
+	start = {
+		trade_value_modifier = 0.33
+		trade_efficiency = 0.15
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = BBL
+	}
+	free = yes
+	
+	BBL_1 = {
+		land_forcelimit_modifier = 0.3
+	}
+	BBL_2 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	BBL_3 = {
+		infantry_fire = 0.33
+	}
+	BBL_4 = {
+		prestige_from_land = 0.5
+	}
+	BBL_5 = {
+		overlord_naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.15
+	}
+	BBL_6 = {
+		all_estate_loyalty_equilibrium = 0.1
+		monarch_lifespan = 0.33
+	}
+	BBL_7 = {
+		innovativeness_gain = 0.33
+		institution_spread_from_true_faith = 0.5
+	}
+}
+
+MFI_ideas = {
+	start = {
+		discipline = 0.05
+		global_regiment_cost = -0.15
+	}
+	
+	bonus = {
+		tolerance_own = 3
+	}
+	
+	trigger = {
+		tag = MFI
+	}
+	free = yes
+	
+	MFI_1 = {
+		production_efficiency = 0.15
+	}
+	MFI_2 = {
+		land_morale = 0.15
+	}
+	MFI_3 = {
+		manpower_in_true_faith_provinces = 0.2
+	}
+	MFI_4 = {
+		colony_development_boost = 1
+	}
+	MFI_5 = {
+		hostile_attrition = 1
+	}
+	MFI_6 = {
+		improve_relation_modifier = 0.25
+		country_diplomatic_power = 1
+	}
+	MFI_7 = {
+		global_allowed_num_of_buildings = 1
+	}
+}
+
+SOD_ideas = {
+	start = {
+		monthly_reform_progress_modifier = 0.2
+		prestige = 1
+	}
+	
+	bonus = {
+		monthly_splendor = 4
+	}
+	
+	trigger = {
+		tag = SOD
+	}
+	free = yes
+	
+	SOD_1 = {
+		reelection_cost = -0.25
+		candidate_random_bonus = 1
+	}
+	SOD_2 = {
+		shock_damage_received = -0.15
+		fire_damage_received = -0.15
+	}
+	SOD_3 = {
+		has_mamluks = yes
+		allowed_mamluks_fraction = 0.2
+	}
+	SOD_4 = {
+		enable_forced_march = yes
+		force_march_free = yes
+	}
+	SOD_5 = {
+		regiment_manpower_usage = -0.05
+		land_attrition = -0.33
+	}
+	SOD_6 = {
+		global_manpower_modifier = 0.2
+	}
+	SOD_7 = {
+		leader_land_fire = 1
+		leader_cost = -0.2
+	}
+}
+
+VIC_ideas = {
+	start = {
+	    land_forcelimit_modifier = 0.25
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = VIC
+	}
+	free = yes
+	
+	VIC_1 = {
+		prestige = 1
+		republican_tradition = 0.5
+	}
+	VIC_2 = {
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.33
+	}
+	VIC_3 = {
+		governing_capacity_modifier = 0.2
+	}
+	VIC_4 = {
+		global_allowed_num_of_buildings = 1
+	}
+	VIC_5 = {
+		build_time = -0.25
+	}
+	VIC_6 = {
+		has_marines = yes
+		allowed_marine_fraction = 0.2
+	}
+	VIC_7 = {
+		leader_land_shock = 1
+		overlord_naval_forcelimit = 0.33
+	}
+}
+
+JIZ_ideas = {
+	start = {
+		development_cost = -0.1
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	
+	bonus = {
+		advisor_cost = -0.1
+	}
+	
+	trigger = {
+		tag = JIZ
+	}
+	free = yes
+	
+	JIZ_1 = {
+		global_tax_modifier = 0.33
+	}
+	JIZ_2 = {
+		build_cost = -0.15
+	}
+	JIZ_3 = {
+		colonists = 1
+		global_prosperity_growth = 0.2
+	}
+	JIZ_4 = {
+		land_morale = 0.15
+	}
+	JIZ_5 = {
+		great_project_upgrade_cost = -0.33
+	}
+	JIZ_6 = {
+		manpower_recovery_speed = 0.125
+	}
+	JIZ_7 = {
+		defensiveness = 0.33
+		
+	}
+}
+
+NAN_ideas = {
+	start = {
+		hostile_attrition = 2
+		max_hostile_attrition = 2
+	}
+	
+	bonus = {
+		build_time = -0.1
+	}
+	
+	trigger = {
+		tag = NAN
+	}
+	free = yes
+	
+	NAN_1 = {
+		land_forcelimit_modifier = 0.2
+	}
+	NAN_2 = {
+		build_cost = -0.15
+	}
+	NAN_3 = {
+		national_focus_years = -10
+		advisor_cost = -0.15
+	}
+	NAN_4 = {
+		discipline = 0.05
+	}
+	NAN_5 = {
+		naval_morale_damage_received = -0.15
+		galley_power = 0.15
+	}
+	NAN_6 = {
+		manpower_recovery_speed = 0.125
+	}
+	NAN_7 = {
+		fort_maintenance_modifier = -0.66
+		garrison_damage = 0.5
+		
+	}
+}
+
+DEZ_ideas = {
+	start = {
+		hostile_attrition = 2
+		max_hostile_attrition = 2
+	}
+	
+	bonus = {
+		build_time = -0.1
+	}
+	
+	trigger = {
+		tag = DEZ
+	}
+	free = yes
+	
+	DEZ_1 = {
+		land_forcelimit_modifier = 0.2
+	}
+	DEZ_2 = {
+		build_cost = -0.15
+	}
+	DEZ_3 = {
+		national_focus_years = -10
+		advisor_cost = -0.15
+	}
+	DEZ_4 = {
+		discipline = 0.05
+	}
+	DEZ_5 = {
+		naval_morale_damage_received = -0.15
+		galley_power = 0.15
+	}
+	DEZ_6 = {
+		manpower_recovery_speed = 0.125
+	}
+	DEZ_7 = {
+		fort_maintenance_modifier = -0.66
+		garrison_damage = 0.5
+		
+	}
+}
+
+
+CAL_ideas = {
+	start = {
+		idea_cost = -0.1
+		development_cost = -0.1
+	}
+	
+	bonus = {
+		gold_depletion_chance_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = CAL
+	}
+	free = yes
+	
+	CAL_1 = {
+		land_morale = 0.1
+	}
+	CAL_2 = {
+		tolerance_own = 2
+		build_time = -0.33
+	}
+	CAL_3 = {
+		global_own_trade_power = 0.25
+	}
+	CAL_4 = {
+		fire_damage_received = -0.1
+	}
+	CAL_5 = {
+		sailors_recovery_speed = 0.2
+		global_ship_cost = -0.1
+	}
+	CAL_6 = {
+		innovativeness_gain = 0.5
+	}
+	CAL_7 = {
+		cavalry_cost = -0.25
+		cav_to_inf_ratio = 0.5
+	}
+}
+
+CUB_ideas = {
+	start = {
+		naval_morale_damage = 0.1
+		overlord_naval_forcelimit_modifier = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = CUB
+	}
+	free = yes
+	
+	CUB_1 = {
+		naval_forcelimit_modifier = 0.25
+		sailor_maintenance_modifer = -0.2
+	}
+	CUB_2 = {
+		ship_durability = 0.1
+	}
+	CUB_3 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	CUB_4 = {
+		shock_damage_received = -0.2
+		has_marines = yes
+		allowed_marine_fraction = 0.15
+	}
+	CUB_5 = {
+		global_ship_cost = -0.1
+	}
+	CUB_6 = {
+		prestige = 0.5
+	}
+	CUB_7 = {
+		trade_efficiency = 0.1
+	}
+}
+
+HAT_ideas = {
+	start = {
+		privateer_efficiency = 0.25
+		light_ship_cost = -0.33
+	}
+	
+	bonus = {
+		own_territory_dice_roll_bonus = 1
+	}
+	
+	trigger = {
+		tag = HAT
+	}
+	free = yes
+	
+	HAT_1 = {
+		production_efficiency = 0.2
+	}
+	HAT_2 = {
+		galley_power = 0.25
+	}
+	HAT_3 = {
+		overlord_naval_forcelimit_modifier = 0.5
+	}
+	HAT_4 = {
+		morale_damage_received = -0.2
+	}
+	HAT_5 = {
+		defensiveness = 0.25
+		garrison_size = 0.15
+	}
+	HAT_6 = {
+		max_absolutism = 15
+		max_revolutionary_zeal = 15
+		yearly_absolutism = 1
+		yearly_revolutionary_zeal = 1
+	}
+	HAT_7 = {
+		republican_tradition = 0.33
+		stability_cost_modifier = -0.15
+	}
+}
+
+COL_ideas = {
+	start = {
+		hostile_attrition = 2
+		max_hostile_attrition = 2
+	}
+	
+	bonus = {
+		leader_cost = -0.15
+	}
+	
+	trigger = {
+		tag = COL
+	}
+	free = yes
+	
+	COL_1 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	COL_2 = {
+		artillery_power = 0.15
+	}
+	COL_3 = {
+		monthly_reform_progress_modifier = 0.25
+		republican_tradition = 0.5
+	}
+	COL_4 = {
+		transport_attrition = -0.5
+		movement_speed = 0.1
+	}
+	COL_5 = {
+		allowed_num_of_manufactories = 1
+	}
+	COL_6 = {
+		tolerance_own = 2
+	}
+	COL_7 = {
+		free_policy = 1
+	}
+}
+
+VNZ_ideas = {
+	start = {
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.5
+	}
+	
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	trigger = {
+		tag = VNZ
+	}
+	free = yes
+	
+	VNZ_1 = {
+		cavalry_shock = 0.33
+		cav_to_inf_ratio = 0.15
+	}
+	VNZ_2 = {
+		development_cost_in_primary_culture = -0.1
+	}
+	VNZ_3 = {
+		manpower_in_own_culture_provinces = 0.25
+	}
+	VNZ_4 = {
+		same_culture_advisor_cost = -0.25
+	}
+	VNZ_5 = {
+		cavalry_power = 0.15
+	}
+	VNZ_6 = {
+		leader_land_shock = 1
+	}
+	VNZ_7 = {
+		global_tax_modifier = -0.15
+	}
+}
+
+FLO_ideas = {
+	start = {
+		hostile_attrition = 2
+		max_hostile_attrition = 2
+	}
+	
+	bonus = {
+		global_regiment_cost = -0.1
+	}
+	
+	trigger = {
+		tag = FLO
+	}
+	free = yes
+	
+	FLO_1 = {
+		artillery_fire = 1
+	}
+	FLO_2 = {
+		artillery_power = 0.15
+	}
+	FLO_3 = {
+		global_tax_modifier = 0.25
+	}
+	FLO_4 = {
+		defensiveness = 0.33
+	}
+	FLO_5 = {
+		leader_siege = 2
+		max_general_siege = 1
+	}
+	FLO_6 = {
+		development_cost = -0.1
+	}
+	FLO_7 = {
+		establish_order_cost = -0.2
+	}
+}
+
+
+CHL_ideas = {
+	start = {
+		naval_attrition_in_fleet_modifier = -0.33
+		development_cost_modifier = -0.05
+	}
+	
+	bonus = {
+		infantry_fire = 0.25
+	}
+	
+	trigger = {
+		tag = CHL
+	}
+	free = yes
+	
+	CHL_1 = {
+		defensiveness = 0.25
+		garrison_size = 0.2
+	}
+	CHL_2 = {
+		hostile_attrition = 1
+		max_hostile_attrition = 1
+	}
+	CHL_3 = {
+		fire_damage = 0.15
+	}
+	CHL_4 = {
+		production_efficiency = 0.2
+	}
+	CHL_5 = {
+		spy_action_cost_modifier = -0.5
+		spy_offence = 0.75
+	}
+	CHL_6 = {
+		recover_army_morale_speed = 0.15
+		reserves_organisation = 0.25
+	}
+	CHL_7 = {
+		establish_order_cost = -0.25
+	}
+}
+
+LAP_ideas = {
+	start = {
+		global_prosperity_growth = 1
+		development_cost = -0.15
+	}
+	
+	bonus = {
+		regiment_manpower_usage = -0.05
+	}
+	
+	trigger = {
+		tag = LAP
+	}
+	free = yes
+	
+	LAP_1 = {
+		land_forcelimit_modifier = 0.25
+	}
+	LAP_2 = {
+		technology_cost = -0.1
+	}
+	LAP_3 = {
+		discipline = 0.05
+		infantry_power = 0.15
+	}
+	LAP_4 = {
+		naval_attrition = -0.25
+		naval_morale_damage_received = -0.2
+	}
+	LAP_5 = {
+		global_tax_modifier = 0.25
+	}
+	LAP_6 = {
+		gold_depletion_chance_modifier = -0.25
+		monthly_gold_inflation_modifier = -0.5
+	}
+	LAP_7 = {
+		overlord_naval_forcelimit_modifier = 0.25
+	}
+}
+
+LOU_ideas = {
+	start = {
+		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.33
+	}
+	
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	
+	trigger = {
+		tag = LOU
+	}
+	free = yes
+	
+	LOU_1 = {
+		development_cost = -0.1
+	}
+	LOU_2 = {
+		global_monthly_devastation = -0.75
+		force_march_free = yes
+	}
+	LOU_3 = {
+		shock_damage_received = -0.15
+	}
+	LOU_4 = {
+		build_cost = -0.1
+	}
+	LOU_5 = {
+		morale_damage_received = -0.05
+	}
+	LOU_6 = {
+		global_own_trade_power = 0.33
+	}
+	LOU_7 = {
+		global_supply_limit_modifier = 0.5
+		global_regiment_cost = -0.15
+	}
+}
+
+PEU_ideas = {
+	start = {
+		native_assimilation = 0.5
+		native_uprising_chance = -1
+	}
+	
+	bonus = {
+		defensiveness = 0.33
+	}
+	
+	trigger = {
+		tag = PEU
+	}
+	free = yes
+	
+	PEU_1 = {
+		gold_depletion_chance_modifier = -0.25
+		monthly_gold_inflation_modifier = -0.5
+	}
+	PEU_2 = {
+		infantry_power = 0.15
+	}
+	PEU_3 = {
+		global_tax_modifier = 0.33
+	}
+	PEU_4 = {
+		may_perform_slave_raid_on_same_religion = yes
+		loot_amount = 0.5
+	}
+	PEU_5 = {
+		advisor_cost = -0.2
+	}
+	PEU_6 = {
+		manpower_recovery_speed = 0.2
+	}
+	PEU_7 = {
+		global_supply_limit_modifier = 0.5
+		global_regiment_cost = -0.15
 	}
 }

@@ -591,10 +591,20 @@ maghreb_common_2a = {
 		required_missions = { }
 		
 		trigger = {
-			naval_forcelimit = 20
-			num_of_light_ship = 5
+			OR = {
+				navy_size_percentage = 1
+				army_size_percentage = 1
+			}
+			
 		}
 		effect = {
+			maghreb_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			sicily_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -617,27 +627,6 @@ maghreb_common_2a = {
 				add_permanent_claim = ROOT
 			}
 			baleares_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			barbary_coast_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			algiers_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			hautes_plaines_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

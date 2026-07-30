@@ -459,7 +459,7 @@ shaka_regime = {
 		monarch_military_power = 2
 		global_unrest = -2
 		war_exhaustion = -0.02
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 
 	conditional = {

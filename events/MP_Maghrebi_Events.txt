@@ -40,3 +40,200 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_maghrebi.2
+	title = flavor_maghrebi.2.T
+	desc = flavor_maghrebi.2.D
+	picture = LAKE_TREASURE_eventPicture
+
+	
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		culture_group = maghrebi
+		development_in_provinces = {
+			value = 150
+		}
+		NOT = {
+			has_country_flag = triggered_berber_event_1
+		}
+	}
+
+	option = {
+		name = flavor_maghrebi.2.OPT1
+		ai_chance = { factor = 1 }
+		custom_tooltip = berber_tt_event1_1
+		tooltip = {
+			add_unrest = 4
+		}
+		custom_tooltip = ""
+		custom_tooltip = berber_tt_event1_2
+		tooltip = {
+			add_prosperity = 5
+			add_province_modifier = {
+				name = maghreb_berber_manpower
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+			limit = {
+				NOT = {
+					culture = berber
+				}
+			}
+			add_unrest = 4
+		}
+		every_owned_province = {
+			limit = {
+				culture = berber
+			}
+			add_prosperity = 5
+			add_province_modifier = {
+				name = maghreb_berber_manpower
+				duration = 1825
+			}
+		}
+		set_country_flag = triggered_berber_event_1
+		set_country_flag = accepted_berbers
+		}
+	    
+	}
+	option = {
+		name = flavor_maghrebi.2.OPT2
+		ai_chance = { factor = 1 }
+		custom_tooltip = berber_tt_event1_1
+		tooltip = {
+			add_prosperity = 5
+			add_province_modifier = {
+				name = maghreb_berber_tax
+				duration = 1825
+			}
+		}
+		custom_tooltip = ""
+		custom_tooltip = berber_tt_event1_2
+		add_dip_power = -200
+		add_stability = -1
+		tooltip = {
+			add_unrest = 4
+		}
+		hidden_effect = {
+			every_owned_province = {
+			limit = {
+				culture = berber
+			}
+			add_unrest = 4
+		}
+		every_owned_province = {
+			limit = {
+				NOT = {
+					culture = berber
+				}
+			}
+			add_prosperity = 5
+			add_province_modifier = {
+				name = maghreb_berber_tax
+				duration = 1825
+			}
+		}
+		set_country_flag = triggered_berber_event_1
+		set_country_flag = denied_berbers
+		}
+		custom_tooltip = berber_path_tt
+		
+	}
+}
+
+country_event = {
+	id = flavor_maghrebi.3
+	title = flavor_maghrebi.3.T
+	desc = flavor_maghrebi.3.D
+	picture = LAKE_TREASURE_eventPicture
+
+	
+	mean_time_to_happen = {
+		years = 5
+	}
+	trigger = {
+		has_country_flag = triggered_berber_event_1
+		NOT = {
+			has_country_flag = triggered_berber_event_2
+		}
+	}
+
+	option = {
+		name = flavor_maghrebi.3.OPT1
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_country_flag = accepted_berbers
+		}
+		custom_tooltip = berber_tt_event1_1
+		tooltip = {
+			add_base_manpower = 1
+		}
+		custom_tooltip = ""
+		custom_tooltip = berber_tt_event1_2
+		tooltip = {
+			add_devastation = 25
+		}
+		hidden_effect = {
+			every_owned_province = {
+			limit = {
+				NOT = {
+					culture = berber
+				}
+			}
+			add_devastation = 25
+		}
+		every_owned_province = {
+			limit = {
+				culture = berber
+			}
+			add_base_manpower = 1
+		}
+		}
+	    
+		change_primary_culture = berber
+		add_stability = -1
+		add_prestige = -20
+	}
+	option = {
+		name = flavor_maghrebi.3.OPT2
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_country_flag = denied_berbers
+		}
+		custom_tooltip = berber_tt_event1_1
+		tooltip = {
+			add_devastation = 25
+		}
+		custom_tooltip = ""
+		custom_tooltip = berber_tt_event1_2
+		tooltip = {
+			add_prosperity = 25
+		}
+		hidden_effect = {
+		every_owned_province = {
+			limit = {
+				culture = berber
+			}
+			add_devastation = 25
+		}
+		every_owned_province = {
+			limit = {
+				NOT = {
+					culture = berber
+				}
+			}
+			add_prosperity = 25
+		}	
+		}
+		change_government_reform_progress = 50
+	}
+	option = {
+		name = flavor_maghrebi.3.OPT3
+		add_stability = 1
+	}
+}

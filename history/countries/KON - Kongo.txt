@@ -38,10 +38,15 @@ capital = 1170	# M'banza Kongo
 	monarch = {
 		name = "Nkuwu"
 		dynasty = "Lukeni"
+		birth_date = 1400.1.1
 		adm = 2
 		dip = 3
 		mil = 3
+		
 	}
+	add_ruler_personality = well_connected_personality
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = midas_touched_personality
 }
 
 1439.1.1 = {
@@ -50,12 +55,14 @@ capital = 1170	# M'banza Kongo
 		monarch_name = "Nzinga Nkuwa"
 		dynasty = "Lukeni"
 		birth_date = 1439.1.1
-		death_Date = 1506.6.2
+		death_date = 1506.6.2
 		claim = 95
-		adm = 1
-		dip = 6
-		mil = 2
+		adm = 4
+		dip = 3
+		mil = 5
+		
 	}
+	add_ruler_personality = tolerant_personality
 }
 
 1457.1.1 = {

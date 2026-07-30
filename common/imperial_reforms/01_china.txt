@@ -58,8 +58,7 @@ military_governors_decision = {
 	empire = celestial_empire
 	trigger = {
 		OR = { 
-			monthly_mil = 10 
-			national_focus = MIL 
+			monthly_mil = 12
 			mil = 6
 		}
 	}
@@ -74,7 +73,7 @@ military_governors_decision = {
 
 centralizing_top_government_decision = {
 	empire = celestial_empire
-	trigger = { crown_land_share = 65 } 
+	trigger = { crown_land_share = 75 } 
 	member = {  loyalty_change_on_revoked = 0.05 }
 	emperor = { monarch_admin_power = 1 amount_of_musketeers = 8 }
 	
@@ -145,7 +144,6 @@ establish_silver_standard_decision = {
 		OR = { 
 			monthly_adm = 10 
 			adm = 5 
-			national_focus = ADM 
 		}
 		is_in_deficit = no 
 		empire_of_china_reform_passed = codify_single_whip_law_decision
@@ -165,7 +163,6 @@ kanhe_certificate_decision = {
 			full_idea_group = trade_ideas 
 			any_subject_country = { is_colonial_nation = yes } 
 			num_of_merchants = 4 
-			national_focus = DIP 
 		}
 	}
 	member = { trade_efficiency = 0.05 } 
@@ -184,8 +181,8 @@ new_keju_formats_decision = {
 			full_idea_group = administrative_ideas  
 		}
 		OR = { 
-			adm = 4 
-			monthly_adm = 9 
+			adm = 4
+			monthly_adm = 10
 		}
 	}
 	member = { governing_capacity_modifier = 0.05 } 
@@ -202,7 +199,7 @@ inclusive_monarchy_decision = {
 		OR = { 
 			full_idea_group = humanist_ideas 
 			harmony = 80 
-			theologian = 2 
+			theologian = 4
 		}
 		stability = 1 
 	}
@@ -218,6 +215,7 @@ promote_bureaucratic_faction_decision = {
 	empire = celestial_empire
 	trigger = {
 		not = { empire_of_china_reform_passed = promote_military_faction_decision }
+		army_size = 150
 	}
 	member = {
 		church_loyalty_modifier = 0.05
@@ -243,13 +241,13 @@ promote_military_faction_decision = {
 	empire = celestial_empire 
 	trigger = {
 		not = { empire_of_china_reform_passed = promote_bureaucratic_faction_decision }
+		army_size = 150
 	}
 	member = {
 		nobles_loyalty_modifier = 0.05 
 	} 
 	emperor = { 
 		nobles_loyalty_modifier = 0.1 
-		army_tradition = 0.5 
 		amount_of_musketeers = 8
 	}
 	on_effect = {
@@ -275,14 +273,10 @@ unifed_trade_market_decision = {
 			mercantilism = 50 
 			dip = 6
 		}
-		OR = {
-			full_idea_group = trade_ideas
-			trade_income_percentage = 0.35
-			home_trade_node = {
+		home_trade_node = {
 				highest_value_trade_node = yes
 				is_strongest_trade_power = ROOT
 			}
-		}
 	}
 	member = {
 		global_trade_power = 0.1
@@ -302,14 +296,14 @@ reform_the_military_branch_decision = {
 				has_dlc = "Cradle of Civilization"
 			}
 			OR = { 
-				army_tradition = 60 
-				army_professionalism = 0.40 
+				army_tradition = 90
+				army_professionalism = 0.75
 			}
 		}
 		else = {
-			army_tradition = 60 
+			army_tradition = 90 
 		}
-		monthly_mil = 10 
+		monthly_mil = 14
 	}
 	member = {
 		yearly_army_professionalism = 0.0025
@@ -325,7 +319,7 @@ modernize_the_banners_decision = {
 	empire = celestial_empire 
 	trigger = { 
 		num_of_musketeers = 50
-		monthly_mil = 12
+		monthly_mil = 15
 	}
 	member = {
 		infantry_cost = -0.1
@@ -349,9 +343,9 @@ study_foreign_ship_designs_decision = {
 	trigger = { 
 		navy_tradition = 50 
 		OR = { 
-			num_of_heavy_ship = 50
+			num_of_heavy_ship = 75
 			full_idea_group = naval_ideas
-			full_idea_group = quality_ideas 
+			full_idea_group = maritime_ideas
 		}
 	}
 	member = {
@@ -378,7 +372,6 @@ tributary_embassies_decision = {
 			full_idea_group = diplomatic_ideas 
 			full_idea_group = influence_ideas 
 			crown_land_share = 50 
-			dip = 5
 		}
 	}
 	member = {

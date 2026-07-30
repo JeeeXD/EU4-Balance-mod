@@ -2337,7 +2337,7 @@ prussian_monarchy = {
 		max_absolutism = 10
 		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 
 	conditional = {
@@ -2435,7 +2435,7 @@ prussian_monarchy_base = {
 		max_absolutism = 10
 		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 
 	conditional = {
@@ -3894,7 +3894,7 @@ livonian_military_monarchy = {
 		development_cost = -0.05
 		monarch_military_power = 2
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.33
 	}
 
 	conditional = {

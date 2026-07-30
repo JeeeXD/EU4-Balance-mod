@@ -79,7 +79,7 @@ trading_city_ideas = {
 
 colonial_ideas = {
 	start = {
-		colonists = 3
+		prestige = 1
 		no_religion_penalty = yes
 	}
 	

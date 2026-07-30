@@ -127,6 +127,49 @@ country_decisions = {
 			factor = 0
 		}
 	}
+
+	dev_privilige_for_africa = {
+		major = yes
+		potential = {
+			OR = {
+				OR = {
+					culture_group = kongo_group
+					culture_group = sahelian
+					culture_group = mande
+					culture_group = west_african
+					culture_group = southern_african
+					culture_group = cushitic
+					culture_group = african
+				}
+			}
+			capital_scope = {
+				continent = africa
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			dip_power = 600
+			stability = 3
+			development_in_provinces = {
+				is_core = ROOT
+				value = 400
+			}
+		}
+		effect = {
+			add_dip_power = -600
+			add_stability = -3
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_hydraulic_rights
+			}
+		}
+	}
+
+
 }
+
+
+
 
     

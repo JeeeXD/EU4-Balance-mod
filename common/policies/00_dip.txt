@@ -20,6 +20,92 @@ innovative_payment_techniques_act = {
 	}
 }
 
+unified_army_command = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = plutocracy_ideas
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = plutocracy_ideas
+		full_idea_group = influence_ideas
+	}	
+	
+	vassal_forcelimit_bonus = 0.5
+	reduced_liberty_desire = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}	
+	}
+}
+
+
+autonomous_estates = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = influence_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = influence_ideas
+		full_idea_group = aristocracy_ideas
+	}	
+	
+	all_estate_loyalty_equilibrium = 0.1
+	vassal_forcelimit_bonus = 0.5
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}	
+	}
+}
+
+
 chaplains_of_the_fleet = {
 	monarch_power = DIP
 
@@ -398,7 +484,7 @@ mandatory_service = {
 		full_idea_group = plutocracy_ideas
 	}
 	
-	reelection_cost = -0.10
+	reelection_cost = -0.33
 	global_manpower_modifier = 0.1
 	may_recruit_female_generals = yes
 	female_advisor_chance = 0.25
@@ -772,7 +858,8 @@ record_keeping_act = {
 		full_idea_group = diplomatic_ideas
 	}
 
-	land_morale = 0.10
+	land_morale = 0.05
+	years_of_nationalism = -5
 
 	effect = {}
 	removed_effect = {}

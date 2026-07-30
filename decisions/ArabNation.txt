@@ -30,7 +30,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 379			#Jerusalem
 				province_id = 384			#Medina
 				province_id = 385			#Mecca
 				province_id = 388			#Aden
@@ -55,7 +54,6 @@ country_decisions = {
 				adm_tech = 18
 			}
 			religion_group = muslim
-			owns_core_province = 379			#Jerusalem
 			owns_core_province = 384			#Medina
 			owns_core_province = 385			#Mecca
 			owns_core_province = 388			#Aden

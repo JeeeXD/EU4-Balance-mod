@@ -286,7 +286,7 @@ age_of_discovery = {
 				tag = POR
 			}
 			modifier = {
-				global_colonial_growth = 50
+				global_colonial_growth = 20
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -627,8 +627,8 @@ age_of_reformation = {
 			}
 			modifier = {
 				colonists = 1 
-				range = 0.5
-				global_colonial_growth = 25
+				range = 1
+				global_colonial_growth = 33
 				may_explore = yes
 				num_of_age_rewards = 1
 			}

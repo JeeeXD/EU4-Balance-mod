@@ -168,7 +168,7 @@ horde_gov_ideas = {
 	}
 	beyond_the_sun = {
 		ae_impact = -0.2
-		morale_damage = 0.025
+		morale_damage = 0.1
 	}
 	mandate_of_the_khan = {
 		religious_unity = 0.25
@@ -185,6 +185,7 @@ horde_gov_ideas = {
 	}
 	a_magnanimous_empire = {
 		num_accepted_cultures = 2
+		leader_land_shock = 1
 	}
 	
 	ai_will_do = {
@@ -489,13 +490,13 @@ spy_ideas = {
 	}
 	
 	claim_fabrication = {
-		can_claim_states = yes
-		can_chain_claim = yes
-		can_transfer_vassal_wargoal = yes
+		ae_impact = -0.25
 	}
 
 	state_propaganda = {
-		ae_impact = -0.25
+		can_claim_states = yes
+		can_chain_claim = yes
+		can_transfer_vassal_wargoal = yes
 	}
 
 	efficient_spies = {
@@ -521,6 +522,9 @@ spy_ideas = {
 	blackmailing = {
 		spy_action_cost_modifier = -0.5
 		claim_duration = 0.5
+		effect = {
+			custom_tooltip = new_spy_actions_tt
+		}
 	}
 
 	ai_will_do = {
@@ -564,7 +568,7 @@ diplomatic_ideas = {
 	}
 	experienced_diplomats  = {
 		global_institution_spread = 0.3
-		monthly_reform_progress_modifier = 0.3
+		monthly_reform_progress_modifier = 0.1
 	}
 	flexible_negotiation = {
 		province_warscore_cost = -0.25
@@ -601,13 +605,12 @@ offensive_ideas = {
 	}
 
 	bayonet_leaders = {
-		leader_land_shock = 1
+		leader_land_fire = 1
 	}
 	national_conscripts = {
 		global_regiment_recruit_speed = -0.1
 	}
 	superior_firepower = {
-		leader_land_fire = 1
 		artillery_power = 0.10
 	}
 	glorious_arms = {
@@ -618,7 +621,7 @@ offensive_ideas = {
 		siege_ability = 0.20
 	}
 	grand_army = {
-		land_forcelimit_modifier = 0.15
+		land_forcelimit_modifier = 0.1
 		reinforce_speed = 0.10
 	}
 	napoleonic_warfare = {
@@ -1322,15 +1325,15 @@ quality_ideas = {
 		cavalry_power = 0.1
 	}
 	escort_ships = {
-		drill_gain_modifier = 0.25
-		drill_decay_modifier = -0.25
+		drill_gain_modifier = 0.33
+		drill_decay_modifier = -0.1
 	}
 	naval_drill = {
 		special_unit_forcelimit = 0.10
 		special_unit_cost_modifier = -0.2
 	}
 	copper_bottoms = {
-		general_cost = -0.05
+		general_cost = -0.1
 	}
 	massed_battery = {
 		fire_damage = 0.05

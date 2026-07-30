@@ -1,0 +1,17 @@
+government = republic
+add_government_reform = casino_of_macau_reform
+government_rank = 1
+technology_group = chinese
+religion = confucianism
+capital = 668
+primary_culture = cantonese
+
+1431.1.1 = {
+	monarch = {
+		name = "Xiang"
+		dynasty = "Dong"
+		ADM = 3
+		DIP = 6
+		MIL = 1
+	}
+}

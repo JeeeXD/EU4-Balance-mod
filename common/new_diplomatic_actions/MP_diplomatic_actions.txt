@@ -1,0 +1,169 @@
+create_influenced_free_city = {
+	category = influence
+
+	alert_index = 17 #doesn't matter. it is forced onto the subject
+	alert_tooltip = sell_indulgence_alert_tooltip #doesn't matter. it is forced onto the subject
+
+	require_acceptance = no
+
+	is_visible = {
+		ROOT ={
+			is_part_of_hre = yes
+			NOT = {
+			any_subject_country = {
+				has_reform = influenced_free_city
+			}
+		}
+		}
+		FROM = {
+			is_subject_of = ROOT
+			is_part_of_hre = yes
+			NOT = {
+				num_of_cities = 2
+			}
+			NOT = {
+				has_reform = influenced_free_city
+			}
+		}
+	}
+	is_allowed = {
+		NOT = {
+			calc_true_if = {
+			all_country = {
+				OR = {
+					has_reform = free_city
+					has_reform = influenced_free_city
+				}
+			}
+			amount = 12
+		    }
+		}
+		
+	}
+	on_accept = {
+		FROM = {
+		if = {
+			limit = {
+				government = republic
+			}
+			remove_government_reform = oligarchy_reform
+			remove_government_reform = free_city
+			remove_government_reform = noble_elite_reform
+			remove_government_reform = plutocratic_reform
+			remove_government_reform = civic_republicanism_government
+			add_government_reform = influenced_free_city
+		}
+		else = {
+			change_government = republic
+			remove_government_reform = oligarchy_reform
+			remove_government_reform = free_city
+			remove_government_reform = noble_elite_reform
+			remove_government_reform = plutocratic_reform
+			remove_government_reform = civic_republicanism_government
+			add_government_reform = influenced_free_city
+		}
+		swap_non_generic_missions = yes
+		}
+		
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+sabotage_forts = {
+	category = covert
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_60_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 60
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			country_event = {
+				id = mp_misc.6
+			}
+			add_country_modifier = {
+				name = spy_sabotaged_forts
+				duration = 1825
+			}
+		}
+	}
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 60
+		}
+		ROOT = {
+			is_at_war = yes
+		}
+		FROM = {
+			is_at_war = yes
+		}
+	}
+}
+
+influence_court = {
+	category = covert
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_60_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 60
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			country_event = {
+				id = mp_misc.7
+			}
+			add_country_modifier = {
+				name = spy_influenced_estates
+				duration = 1825
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -0.1
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -0.1
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -0.1
+			}
+		}
+	}
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 60
+		}
+		FROM = {
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = -75
+				}
+			}
+		}
+	}
+}

@@ -225,3 +225,23 @@ flavor_maghrebi.1.D: "Rome, the ancient heart of empires and the seat of the Pap
 flavor_maghrebi.1.OPT1: "Sack the city and carry its wealth home."
 flavor_maghrebi.1.OPT2: "Rome shall be our capital."
 
+flavor_maghrebi.2.T: "The Berbers of [Root.GetName]"
+flavor_maghrebi.2.D: "The Berber tribes have long formed the backbone of our realm, yet many continue to cling to their ancient customs and local privileges. Some at court argue that granting them greater autonomy will secure their loyalty and strengthen the realm. Others insist that only firm rule and the suppression of tribal liberties can forge a truly united state. The course we choose will shape our relationship with the Berber people for generations."
+
+flavor_maghrebi.2.OPT1: "Respect their ancient liberties."
+flavor_maghrebi.2.OPT2: "The tribes must submit to the state."
+
+flavor_maghrebi.3.T: "Stability of the State"
+flavor_maghrebi.3.D: "The years of division and rival claimants have finally come to an end. The authority of our government is no longer questioned, and our rule is recognized throughout the realm. With internal disputes settled and the state firmly established, we stand as the true successor to those who came before us. It is now time to look beyond survival and toward the prosperity and greatness of our nation."
+
+flavor_maghrebi.3.OPT1: "The Berbers shall lead the nation."
+flavor_maghrebi.3.OPT2: "One nation above all."
+flavor_maghrebi.3.OPT3: "Preserve the peace."
+
+berber_tt_event1_1: "Every owned Berber province gains the following:"
+berber_tt_event1_2: "Every owned Non-Berber province gains the following:"
+
+maghreb_berber_manpower: "Increased Berber Conscription"
+maghreb_berber_tax: "Urbanized Taxation"
+
+berber_path_tt: "§YThis will put us on the bath to empower the Berbers§!"

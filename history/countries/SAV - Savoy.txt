@@ -42,7 +42,7 @@ add_accepted_culture = occitain
 		claim = 95
 		adm = 3
 		dip = 5
-		mil = 2
+		mil = 3
 	}
 	queen = {
 		country_of_origin = CYP

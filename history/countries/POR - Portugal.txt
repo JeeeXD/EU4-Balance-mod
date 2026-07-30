@@ -105,7 +105,6 @@ national_focus = DIP
 		leader = {	name = "Afonso V"	type = general	fire = 3	shock = 2	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
-	add_heir_personality = expansionist_personality
 }
 
 1443.1.1 = { leader = {	name = "Diogo Gomes"		type = explorer	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1462.12.31 } }

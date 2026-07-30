@@ -433,7 +433,7 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	artillery_shock = 0.3
+	artillery_shock = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -485,7 +485,6 @@ the_tenures_abolition_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	army_tradition = 0.5
 	cavalry_fire = 0.25
 	
 	effect = {}
@@ -552,48 +551,6 @@ zealous_captains = {
 	}
 }
 
-autonomous_estates = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = influence_ideas
-		has_idea_group = aristocracy_ideas
-	}
-	
-	allow = {
-		full_idea_group = influence_ideas
-		full_idea_group = aristocracy_ideas
-	}	
-	
-	all_estate_loyalty_equilibrium = 0.1
-	vassal_forcelimit_bonus = 0.5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}	
-	}
-}
 
 inspirational_leaders = {
 	monarch_power = MIL
@@ -727,7 +684,8 @@ guerilla_warfare = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	vassal_manpower_bonus = 0.15
+	manpower_in_culture_group_provinces = 0.15
+	morale_damage = 0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -748,7 +706,8 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.025
+	infantry_cost = -0.15
+	war_taxes_cost_modifier = -1
 	
 	effect = {}
 	removed_effect = {}
@@ -867,47 +826,6 @@ military_allotment_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 0.8
-	}
-}
-################################# MAKE DIP AND 10% GOODS FOR SUBJECTS ########################################
-unified_army_command = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = plutocracy_ideas
-		has_idea_group = influence_ideas
-	}
-	
-	allow = {
-		full_idea_group = plutocracy_ideas
-		full_idea_group = influence_ideas
-	}	
-	
-	vassal_forcelimit_bonus = 0.5
-	reduced_liberty_desire = 10
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}	
 	}
 }
 
@@ -1709,7 +1627,7 @@ appeal_to_old_powers_policy = {
 		full_idea_group = diplomatic_ideas
 	}
 	
-	discipline = 0.05
+	discipline = 0.03
 
 	effect = {}
 	removed_effect = {}

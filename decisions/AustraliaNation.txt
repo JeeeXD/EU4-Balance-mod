@@ -1,0 +1,608 @@
+country_decisions = {
+
+# ALL AUSTRALIAN FORMABLES
+
+	australia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { 
+				OR = {
+					is_colonial_nation_of = NED
+					is_colonial_nation_of = BUR
+				}
+			}
+			NOT = {
+				OR = {
+					is_colonial_nation_of = GBR
+					is_colonial_nation_of = ZAN
+					is_colonial_nation_of = ENG
+					is_colonial_nation_of = JAP
+					is_colonial_nation_of = MNG
+					is_colonial_nation_of = QNG
+					is_colonial_nation_of = KOR
+					is_colonial_nation_of = MSA
+					is_colonial_nation_of = YUE
+					is_colonial_nation_of = WUU
+				}
+			}
+			is_colonial_nation = yes
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			region = australia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = australia_region
+				is_city = yes
+			}
+			NOT = { exists = AUS }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = AUS
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			australia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AUS
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zealandia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				is_colonial_nation_of = GBR
+				is_colonial_nation_of = ENG
+				is_colonial_nation_of = SCO
+				is_colonial_nation_of = IRE
+			}
+			capital_scope = {
+				OR = {
+					region = australia_region
+					region = oceanea_region
+				}
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2737
+				province_id = 1107
+				province_id = 1109
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					region = australia_region
+					region = oceanea_region
+				}
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = te_ika_a_maui_hauauru_area
+					area = te_ika_a_maui_waho_area
+					area = te_waipounamu_area
+				}
+				is_city = yes
+			}
+			NOT = { exists = NZL }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = NZL
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			te_ika_a_maui_hauauru_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NZL
+			}
+			te_ika_a_maui_waho_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NZL
+			}
+			te_waipounamu_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NZL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	aotearoa_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = AOT }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			primary_culture = maori
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			australia_region = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2737
+				province_id = 1107
+				province_id = 1109
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = te_ika_a_maui_hauauru_area
+					area = te_ika_a_maui_waho_area
+					area = te_waipounamu_area
+				}
+				is_city = yes
+			}
+			NOT = { exists = AOT }
+		}
+		effect = {
+			change_tag = AOT
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = maori_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			te_ika_a_maui_hauauru_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			te_ika_a_maui_waho_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			te_waipounamu_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tanahemu_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			is_colonial_nation_of = MSA
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			region = australia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = australia_region
+				is_city = yes
+			}
+			NOT = { exists = TMH }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = TMH
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			australia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TMH
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	aodilya_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				is_colonial_nation_of = QNG
+				is_colonial_nation_of = MNG
+				is_colonial_nation_of = JAP
+				is_colonial_nation_of = KOR
+				is_colonial_nation_of = YUE
+			}
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = australia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = australia_region
+				is_city = yes
+			}
+			NOT = { exists = AOD }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = AOD
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			australia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOD
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jangwa_kubwa_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				is_colonial_nation_of = ZAN
+				is_colonial_nation_of = GZI
+			}
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			region = australia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = australia_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = australia_region
+				is_city = yes
+			}
+			NOT = { exists = JKB }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = JKB
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			australia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JKB
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

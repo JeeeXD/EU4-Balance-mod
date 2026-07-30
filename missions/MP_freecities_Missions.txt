@@ -1,0 +1,520 @@
+freecities_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_reform = influenced_free_city
+	}
+
+	free_city_dev = {
+		icon = develop_the_south
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				grown_by_development = 5
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+				name = fc_dev_cost
+				duration = 3650
+			    }
+			}
+		}
+	}
+
+	free_city_church = {
+		icon = mission_european_church
+		position = 3
+		required_missions = {
+			free_city_tax_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = { 
+			add_adm_power = 100
+			add_country_modifier = {
+				name = fc_church_tax
+				duration = -1
+			}
+		}
+	}
+
+	free_city_opinion = {
+		icon = mission_diplomatic_relation
+		position = 4
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			OR = {
+				has_opinion = {
+					who = overlord
+					value = 150
+				}
+				overlord = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+		}
+		effect = { 
+			overlord = {
+				add_country_modifier = {
+					name = fc_overlord_dip_rep
+					duration = 7300
+				}
+			}
+		}
+	}
+
+	free_city_liberty_desire = {
+		icon = mission_have_two_subjects
+		position = 5
+		required_missions = {
+			free_city_opinion
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			NOT = {
+				liberty_desire = 50
+			}
+		}
+		effect = { 
+			overlord = {
+				add_dip_power = 50
+				add_prestige = 20
+			}
+		}
+	}
+
+	free_city_every_building = {
+		icon = mission_rb_build_furnaces
+		position = 6
+		required_missions = {
+			free_city_liberty_desire free_city_big_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				num_of_buildings_in_province = 12
+				development = 40
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+					name = fc_metropolis
+					duration = -1
+				}
+			}
+		}
+	}
+}
+freecities_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_reform = influenced_free_city
+	}
+
+	free_city_tax_dev = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = {
+			free_city_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				base_tax = 10
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = fc_tax_income
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = fc_tax_income_overlord
+					duration = -1
+				}
+			}
+		}
+	}
+
+	free_city_many_buildings = {
+		icon = mission_early_game_buildings
+		position = 4
+		required_missions = {
+			free_city_tax_dev free_city_forcelimit
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+				name = fc_construction
+				duration = -1
+			}
+			}
+			overlord = {
+				add_years_of_income = 0.25
+			}
+		}
+	}
+
+	free_city_big_dev = {
+		icon = mission_follow_the_brahmaputra
+		position = 5
+		required_missions = {
+			free_city_many_buildings
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				development = 40
+			}
+		}
+		effect = { 
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+			overlord = {
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+		}
+	}
+
+	free_city_has_march_bonus = {
+		icon = fra_golden_march
+		position = 6
+		required_missions = {
+			free_city_fort
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			has_send_officers = yes
+			capital_scope = {
+				base_manpower = 10
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = fc_military_good
+				duration = 3650
+			}
+		}
+	}
+
+	free_city_hre_primary_religion = {
+		icon = integrate_the_three_leagues
+		position = 7
+		required_missions = {
+			free_city_dof_overlord
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			OR = {
+				hre_leagues_enabled = yes
+			    overlord = {
+					OR = {
+						in_league = protestant
+						in_league = catholic
+					}
+		        }
+				has_matching_religion = overlord
+			}
+		}
+		effect = { 
+			set_country_flag = free_city_ideas_unlocked
+		    country_event = {
+				id = ideagroups.1
+			}
+		}
+	}
+}
+freecities_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_reform = influenced_free_city
+	}
+
+	free_city_mil_dev = {
+		icon = per_sword_of_our_faith
+		position = 2
+		required_missions = {
+			free_city_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				base_manpower = 8
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_random_development = 3
+			}
+			add_manpower = 10
+		}
+	}
+
+	free_city_forcelimit = {
+		icon = ven_standing_army_mission_2
+		position = 3
+		required_missions = {
+			free_city_mil_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			land_forcelimit = 15
+		}
+		effect = { 
+			enable_development_on_buildings_built = yes
+		}
+	}
+
+	free_city_subsidizing_army = {
+		icon = mission_unite_home_region
+		position = 5
+		required_missions = {
+			free_city_forcelimit free_city_big_army_big_money
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			has_subsidize_armies = yes
+		}
+		effect = { 
+			overlord = {
+				add_manpower = 20
+			}
+			add_manpower = 5
+			add_army_professionalism = 0.05
+			add_army_tradition = 20
+		}
+	}
+}
+freecities_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_reform = influenced_free_city
+	}
+
+	free_city_trade_center = {
+		icon = mission_the_tamil_trade_guilds
+		position = 2
+		required_missions = {
+			free_city_dev
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				base_production = 10
+			}
+		}
+		effect = { 
+			if = {
+				limit = { 
+					capital_scope = {
+						NOT = {
+							OR = {
+								province_has_center_of_trade_of_level = 1
+								province_has_center_of_trade_of_level = 2
+								province_has_center_of_trade_of_level = 3
+							}
+						}
+					}
+				}
+				capital_scope = {
+					center_of_trade = 1
+				}
+			}
+		}
+	}
+
+	free_city_big_army_big_money = {
+		icon = army_reforms
+		position = 4
+		required_missions = {
+			free_city_forcelimit
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			treasury = 150
+			army_size = 10
+		}
+		effect = { 
+			add_country_modifier = {
+				name = fc_forcelimit
+				duration = 7300
+			}
+			overlord = {
+				add_country_modifier = {
+					name = fc_forcelimit_overlord
+					duration = -1
+				}
+			}
+		}
+	}
+
+	free_city_fort = {
+		icon = fortress_of_belgrade
+		position = 5
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			capital_scope = {
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+					name = fc_defense
+					duration = -1
+				}
+			}
+		}
+	}
+
+	free_city_dof_overlord = {
+		icon = mission_sword_of_the_reformation
+		position = 6
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			overlord = {
+				is_defender_of_faith = yes
+			}
+		}
+		effect = { 
+			add_adm_tech = 1
+			overlord = {
+				add_army_professionalism = 0.1
+			}
+		}
+	}
+}
+freecities_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_reform = influenced_free_city
+	}
+
+	free_city_merchant_in_subject = {
+		icon = mission_mal_riches_of_trade
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			overlord = {
+				capital_scope = {
+					has_merchant = ROOT
+				}
+			}
+		}
+		effect = { 
+			overlord = {
+				capital_scope = {
+					add_trade_node_income = 1
+				}
+			}
+		}
+	}
+
+	free_city_divert_trade = {
+		icon = mission_horde_trade
+		position = 3
+		required_missions = {
+			free_city_trade_center free_city_merchant_in_subject
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			has_divert_trade = yes
+			has_embargo_rivals = yes
+		}
+		effect = { 
+			overlord = {
+				add_years_of_trade_income = {
+					years = 1
+				}
+			}
+		}
+	}
+
+	free_city_overlord_elector = {
+		icon = mission_rb_control_electors
+		position = 6
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { 
+			overlord = {
+				is_elector = yes
+			}
+			calc_true_if = {
+				all_country = {
+					preferred_emperor = overlord
+				}
+				amount = 3
+			}
+		}
+		effect = { 
+			overlord = {
+				add_country_modifier = {
+					name = fc_overlord_emperorship
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	free_city_overlord_emperor = {
+		icon = lead_the_empire
+		position = 7
+		required_missions = {
+			free_city_overlord_elector
+		}
+		provinces_to_highlight = { }
+		trigger = { 
+			overlord = {
+				is_emperor = yes
+			}
+		}
+		effect = { 
+			overlord = {
+				add_imperial_influence = 25
+			}
+		}
+	}
+}

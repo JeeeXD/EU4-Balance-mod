@@ -25,11 +25,12 @@ change_estate_land_share = {
 	monarch = {
 		name = "Mar-Arkana"
 		dynasty = "Sonni"
-		adm = 2
-		dip = 0
-		mil = 2
+		adm = 4
+		dip = 2
+		mil = 3
 	}
 	add_piety = 0.25
+	add_ruler_personality = cruel_personality
 }
 
 1399.1.1 = {

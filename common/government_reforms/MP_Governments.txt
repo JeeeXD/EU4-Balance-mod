@@ -292,21 +292,28 @@ hormuz_navy_reform = {
 	potential = {
 		OR = {
 			tag = ORM
-			was_tag = ORM
-			NOT = {
-				was_tag = OMA
-			}
-			NOT = {
-				tag = OMA
+			AND = {
+				was_tag = ORM
+			    NOT = {
+				    was_tag = OMA
+			    }
+				NOT = {
+				    tag = OMA
+			    }
 			}
 		}
 	}
 	trigger = {
 		OR = {
 			tag = ORM
-			was_tag = ORM
-			NOT = {
-				was_tag = OMA
+			AND = {
+				was_tag = ORM
+			    NOT = {
+				    was_tag = OMA
+			    }
+				NOT = {
+				    tag = OMA
+			    }
 			}
 		}
 	}
@@ -378,4 +385,59 @@ cologne_theocracy_reform = {
 		monarch_lifespan = 0.25
 	}
 
+}
+
+casino_of_macau_reform = {
+	icon = "gamba"
+	potential = {
+		tag = MAC
+	}
+	trigger = {
+		tag = MAC
+	}
+	
+	custom_attributes = {
+	}
+
+
+	modifiers = {
+		may_not_reduce_inflation = yes 
+		range = 0.5 
+		mercantilism_cost = -0.25
+	}
+
+}
+
+influenced_free_city = {
+	icon = "free_city"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = influenced_free_city
+		NOT = {
+			num_of_cities = 2
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 40
+	nation_designer_trigger = {
+		capital_scope = { is_part_of_hre = yes }
+		NOT = { num_custom_nation_provinces = 2 }
+	}
+
+	free_city = yes
+	modifiers = {
+		trade_efficiency = 0.1
+		development_cost = -0.2
+		diplomatic_upkeep = 1
+		burghers_influence_modifier = 0.1
+	}
+	fixed_rank = 1
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	duration = 4
 }

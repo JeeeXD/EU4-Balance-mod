@@ -2559,7 +2559,7 @@ landsknecht = {
 	allow_only_male = yes
 
 	# Bonus
-	infantry_power = 0.075
+	infantry_power = 0.1
 
 	chance = {
 		factor = 1
@@ -2576,7 +2576,7 @@ dragoon = {
 	allow_only_male = yes
 
 	# Bonus
-	cavalry_power = 0.075
+	cavalry_power = 0.1
 
 	chance = {
 		factor = 1
@@ -2591,14 +2591,21 @@ howitzer = {
 	monarch_power = MIL
 
 	# Bonus
-	artillery_power = 0.075
+	artillery_power = 0.1
 
 	chance = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { mil_tech = 7 }
+			NOT = { 
+				owner = {
+					mil_tech = 7
+				}
+			}
 		}
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 

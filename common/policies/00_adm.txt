@@ -658,7 +658,8 @@ policy_of_calculate_delay = {
 		full_idea_group = diplomatic_ideas
 	}
 	
-	warscore_cost_vs_other_religion = -0.15
+	tolerance_own = 2
+	global_missionary_strength = 0.02
  
 
 	effect = {}

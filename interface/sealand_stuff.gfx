@@ -1652,6 +1652,6 @@ spriteTypes = {
 		name = "GFX_sea_diplomacy_trade_leaguing_icon"
 		texturefile = "gfx//interface//sea_diplomacy_trade_leaguing_icon.dds"
 	}
-
+}
 ##############
 #### OTHER

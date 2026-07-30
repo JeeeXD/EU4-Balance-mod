@@ -2,10 +2,7 @@ legitimize_government = {
 	is_blessing = yes
 
 	modifier = {
-		legitimacy = 0.5
-		horde_unity = 0.5
-		republican_tradition = 0.2
-		devotion = 0.5
+		global_tax_modifier = 0.15
 	}
 	ai_will_do = {
 		factor = 10

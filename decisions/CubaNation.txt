@@ -1,0 +1,296 @@
+country_decisions = {
+
+	west_indies_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			is_nomad = no
+			is_random_new_world = no
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			NOT = { 
+				OR = {
+					is_colonial_nation_of = NED
+					is_colonial_nation_of = BUR
+				}
+			}
+			NOT = {
+				OR = {
+				    is_colonial_nation_of = SPA
+				    is_colonial_nation_of = POR
+				    is_colonial_nation_of = ADU
+				    is_colonial_nation_of = CAS
+				    is_colonial_nation_of = MOR
+				    is_colonial_nation_of = TAM
+				    is_colonial_nation_of = FAT
+					is_colonial_nation_of = FRA
+			    }
+			}
+		}
+		provinces_to_highlight = {
+			region = carribeans_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = carribeans_region
+				is_city = yes
+			}
+			NOT = { exists = WSI }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = WSI
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			carribeans_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cuba_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			is_nomad = no
+			is_random_new_world = no
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			OR = {
+				is_colonial_nation_of = SPA
+				is_colonial_nation_of = POR
+				is_colonial_nation_of = ADU
+				is_colonial_nation_of = CAS
+				is_colonial_nation_of = MOR
+				is_colonial_nation_of = TAM
+				is_colonial_nation_of = FAT
+			}
+		}
+		provinces_to_highlight = {
+			region = carribeans_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = carribeans_region
+				is_city = yes
+			}
+			NOT = { exists = CUB }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = CUB
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			cuba_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CUB
+			}
+			east_cuba_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CUB
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	haiti_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			was_never_end_game_tag_trigger = yes
+			is_nomad = no
+			is_random_new_world = no
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			is_colonial_nation_of = FRA
+		}
+		provinces_to_highlight = {
+			region = carribeans_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				region = carribeans_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				region = carribeans_region
+				is_city = yes
+			}
+			NOT = { exists = HAT }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = HAT
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			carribeans_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = HAT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

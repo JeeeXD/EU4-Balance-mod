@@ -115,7 +115,7 @@ religious_school = shafii_school
 		dynasty = "Srivijaya"
 		adm = 1
 		dip = 2
-		mil = 1
+		mil = 4
 		religion = hinduism
 	}
 }
