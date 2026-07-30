@@ -124,10 +124,10 @@ NDiplomacy = {
 	RIVAL_PEACE_COST_REDUCTION = -0.33,
 	MAX_PEACE_TREATY_COST = 200,					-- in diplo power
 	DESIRED_NUM_OF_ELECTORS = 7,
-	MAX_FREE_CITIES = 0,
+	MAX_FREE_CITIES = 12,
 	MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 1,		-- Limit is inclusive.
 	HRE_PRINCE_AUTHORITY_THRESHOLD = 10,			-- Threshold below which you lose IA, and above which you gain it
-	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.005,			-- Scales to threshold
+	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.01,			-- Scales to threshold
 	HRE_FOREIGN_CONTROL_PENALTY = -0.005,			-- Each foreign-controlled province in the empire (owned or vassalised) lowers IA by this amount
 	HRE_HERETIC_PENALTY = 0,					-- Per heretic prince (halved by Peace of Westphalia)
 	LACK_OF_ELECTORS_HIT = 0,					-- Also applied to vassalized electors
@@ -600,7 +600,7 @@ NCountry = {
 	CULTURAL_UNION_MIN_RANK = 3,				-- Minimum rank to get cultural union effect with Common Sense.
 	PRIMARY_NATION_BLOCK_CONVERT_CULTURE = 0,	-- Does primary nation of a tag existing block converting culture?
 
-	MIN_DEV_FOR_FREE_CITY = 10,					-- Capital must have at least this much development to be a free city
+	MIN_DEV_FOR_FREE_CITY = 3,					-- Capital must have at least this much development to be a free city
 	MAX_PROVINCES_FOR_FREE_CITY = 1,			-- A free city cannot have more provinces than this
 
 	HRE_RANK = 3,								-- Emperor of the HRE is displayed as this rank (for ruler title only)
