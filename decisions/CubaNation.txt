@@ -64,6 +64,7 @@ country_decisions = {
 			}
 			change_tag = WSI
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -162,6 +163,7 @@ country_decisions = {
 			}
 			change_tag = CUB
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -254,6 +256,7 @@ country_decisions = {
 			}
 			change_tag = HAT
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

@@ -64,6 +64,7 @@ country_decisions = {
 			}
 			change_tag = COL
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -158,6 +159,7 @@ country_decisions = {
 			}
 			change_tag = VNZ
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

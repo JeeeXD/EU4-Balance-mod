@@ -441,3 +441,67 @@ influenced_free_city = {
 	}
 	duration = 4
 }
+
+japanese_colonists = {
+	icon = "crown_colony_government"
+	potential = {
+		OR = {
+			tag = CBA
+			tag = SBA
+			was_tag = CBA
+			was_tag = SBA
+		}
+	}
+	trigger = {
+		OR = {
+			tag = CBA
+			tag = SBA
+			was_tag = CBA
+			was_tag = SBA
+		}
+	}
+	
+	custom_attributes = {
+	}
+
+
+	modifiers = {
+		range = 0.33
+		global_colonial_growth = 15
+		vassal_forcelimit_bonus = 0.2
+		expel_minorities_cost = -1
+	}
+
+}
+
+japanese_colonists = {
+	icon = "crown_colony_government"
+	potential = {
+		OR = {
+			tag = CBA
+			tag = SBA
+			was_tag = CBA
+			was_tag = SBA
+		}
+	}
+	trigger = {
+		OR = {
+			tag = CBA
+			tag = SBA
+			was_tag = CBA
+			was_tag = SBA
+		}
+	}
+	
+	custom_attributes = {
+	}
+
+
+	modifiers = {
+		range = 0.33
+		global_colonial_growth = 15
+		vassal_forcelimit_bonus = 0.2
+		expel_minorities_cost = -1
+	}
+
+}

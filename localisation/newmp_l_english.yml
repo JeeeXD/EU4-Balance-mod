@@ -467,3 +467,6 @@ dezhou_nation_desc: ""
 create_influenced_free_city: "Establish Influenced Free City"
 sabotage_forts: "Sabotage Forts"
 influence_court: "Influence Court"
+
+sea_ages_button_tt: "Splendor Blender"
+inherit_all_subjects_tt: "Inherit All Dutch Subjects"

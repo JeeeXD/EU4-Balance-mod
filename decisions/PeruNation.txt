@@ -81,6 +81,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1

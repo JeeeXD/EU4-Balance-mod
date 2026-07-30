@@ -108,6 +108,7 @@ country_decisions = {
 				add_government_reform = feudalism_reform
 			}
 			set_country_flag = changed_from_colonial_nation
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1
@@ -152,6 +153,7 @@ country_decisions = {
 		effect = {
 			change_tag = BRZ
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			every_subject_country = {
 				limit = {
 					is_colonial_nation = yes
@@ -275,6 +277,7 @@ country_decisions = {
 			}
 			change_tag = BBL
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -375,6 +378,7 @@ country_decisions = {
 			}
 			change_tag = MFI
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -477,6 +481,7 @@ country_decisions = {
 			}
 			change_tag = SOD
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

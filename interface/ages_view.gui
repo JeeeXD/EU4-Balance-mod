@@ -224,6 +224,12 @@ guiTypes = {
 			format = right
 		}
 		guiButtonType = {
+			name = "sea_ages_button"
+			position = { x = -17 y =166 }
+			quadTextureSprite ="GFX_sea_ages_button"
+			scripted = yes
+		}
+		guiButtonType = {
 			name = "golden_age"
 			quadTextureSprite ="GFX_age_golden_age_button"
 			position = { x = 686 y = 165 }

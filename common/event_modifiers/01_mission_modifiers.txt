@@ -9645,7 +9645,7 @@ jap_commercialization_of_mineral_resources_modifier = {
 }
 
 jap_bolstered_spirits = {
-	extra_manpower_at_religious_war = yes 
+	manpower_recovery_speed = 0.33
 }	
 
 jap_eighteen_arts_modifier = {

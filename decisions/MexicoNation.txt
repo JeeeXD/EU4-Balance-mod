@@ -79,6 +79,7 @@ country_decisions = {
 			}
 			change_tag = MEX
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -199,6 +200,7 @@ country_decisions = {
 			}
 			change_tag = CAM
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -321,6 +323,7 @@ country_decisions = {
 			}
 			change_tag = TEX
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -454,6 +457,7 @@ country_decisions = {
 			}
 			change_tag = DEZ
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }

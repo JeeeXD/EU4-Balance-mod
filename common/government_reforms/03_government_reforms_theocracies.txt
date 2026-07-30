@@ -1281,8 +1281,6 @@ warrior_monks_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		discipline = 0.05
-		infantry_power = 0.05
-		mercenary_manpower = 0.1
 	}
 }
 

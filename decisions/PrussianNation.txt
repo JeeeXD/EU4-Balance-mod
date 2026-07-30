@@ -453,6 +453,7 @@ country_decisions = {
 			NOT = { tag = BRA }
 			NOT = { has_reform = celestial_empire } 
 			NOT = { tag = TEU }
+			NOT = { tag = NGR }
 		}
 		provinces_to_highlight = {
 			OR = {

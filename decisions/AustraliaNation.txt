@@ -104,6 +104,7 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1
@@ -187,6 +188,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
+			change_country_color = { country = overlord }
 			te_ika_a_maui_hauauru_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -296,6 +298,7 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			change_country_color = { country = overlord }
 			te_ika_a_maui_hauauru_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -370,6 +373,7 @@ country_decisions = {
 			}
 			change_tag = TMH
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -471,6 +475,7 @@ country_decisions = {
 			}
 			change_tag = AOD
 			on_change_tag_effect = yes
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -569,6 +574,7 @@ country_decisions = {
 				restore_old_nation_on_formation_effect = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 			}
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

@@ -127,6 +127,7 @@ country_decisions = {
 				add_government_reform = feudalism_reform
 			}
 			set_country_flag = changed_from_colonial_nation
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1
@@ -174,6 +175,7 @@ country_decisions = {
 			NOT = { exists = CSC }
 		}
 		effect = {
+			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -237,6 +239,7 @@ country_decisions = {
 				add_government_reform = feudalism_reform
 			}
 			set_country_flag = changed_from_colonial_nation
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1

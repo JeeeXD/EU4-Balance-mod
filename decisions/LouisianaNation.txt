@@ -96,6 +96,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
+			change_country_color = { country = overlord }
 		}
 		ai_will_do = {
 			factor = 1
@@ -178,6 +179,7 @@ country_decisions = {
 				restore_old_nation_on_formation_effect = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 			}
+			change_country_color = { country = overlord }
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
