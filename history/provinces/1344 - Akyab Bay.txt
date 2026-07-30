@@ -7,12 +7,11 @@
 # 1344 Arakan Coast - 7/27/2026 12:05:13 AM 
  
 
-center_of_trade = 3
-trade_goods = UNDEFINED
+center_of_trade = 1
+trade_goods = unknown
 
-culture = unknown
-religion = 
-
+culture = nguni
+religion = shamanism
 
 discovered_by = indian
 discovered_by = muslim
@@ -25,9 +24,4 @@ discovered_by = chinese
 1405.1.1 = {
 	discovered_by = MNG
 }
-1500.1.1 = {
-	discovered_by = POR
-}
-
-
 

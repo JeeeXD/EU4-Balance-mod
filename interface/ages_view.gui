@@ -343,7 +343,7 @@ guiTypes = {
 		iconType = {
 			name ="icon"
 			spriteType = "GFX_idea_unknown"
-			position = { x = 8ยง y = 3 }
+			position = { x = 8 y = 3 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.26
 		}

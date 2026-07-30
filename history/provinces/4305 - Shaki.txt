@@ -19,9 +19,6 @@ discovered_by = nomad_group
 	add_core = PER
 	revolt = { size = 1 }
 }
-1531.7.1 = { 
-	religion = Shiite
-}
 1578.9.9 = { controller = TUR }
 1590.3.21 = { add_core = TUR }
 1607.1.1 = { controller = PER }
