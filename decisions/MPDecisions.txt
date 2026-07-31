@@ -167,6 +167,36 @@ country_decisions = {
 	}
 
 
+	bavarian_war_on_austria = {
+		major = yes
+		potential = {
+			tag = BAV
+			exists = HAB
+			NOT = {
+				has_country_flag = used_bav_war_austria
+			}
+			HAB = {
+				is_subject = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			is_at_war = no
+			has_spy_network_in = {
+				who = HAB
+				value = 50
+			}
+		}
+		effect = {
+			HAB = {
+				declare_war = BAV
+			}
+			set_country_flag = used_bav_war_austria
+		}
+	}
+
 }
 
 

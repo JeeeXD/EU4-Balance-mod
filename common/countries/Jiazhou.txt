@@ -3,7 +3,7 @@
 ########################################
 
 # JIZ (Jiazhou)
-color = { 0 0 0 }
+color = { 209 70 70 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

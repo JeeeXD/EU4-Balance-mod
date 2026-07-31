@@ -257,3 +257,35 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = mp_misc.9
+	title = mp_misc.9.t
+	desc = mp_misc.9.d
+	picture = COURT_eventPicture
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = HAB
+		is_year = 1450
+	}
+
+	immediate = {
+		kill_heir = { allow_new_heir = no }
+	}
+
+	option = {
+		name = mp_misc.9.opt1
+		define_ruler = {
+			female = yes
+			name = "Kira"
+			dynasty = "von Habsburg"
+			dip = 5
+			mil = 0
+			adm = 1
+			age = 49
+			claim = 100
+		}
+	}
+}

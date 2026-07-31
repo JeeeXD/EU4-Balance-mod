@@ -3,7 +3,7 @@
 ########################################
 
 # LNN (Lunenburg)
-color = { 0 0 0 }
+color = { 55 58 68 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

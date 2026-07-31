@@ -463,6 +463,8 @@ nanmeizhou_nation_title: "Form Nanmeizhou"
 nanmeizhou_nation_desc: ""
 dezhou_nation_title: "Form Dezhou"
 dezhou_nation_desc: ""
+wic_nation_title: "Form West Indische Compagnie"
+wic_nation_desc: ""
 
 create_influenced_free_city: "Establish Influenced Free City"
 sabotage_forts: "Sabotage Forts"
@@ -470,3 +472,16 @@ influence_court: "Influence Court"
 
 sea_ages_button_tt: "Splendor Blender"
 inherit_all_subjects_tt: "Inherit All Dutch Subjects"
+
+cb_unification_of_germany: "Unification of Germany"
+cb_unification_of_germany_desc: "It is time to unify the german people together!"
+germanic_unification_goal: "Unify Germany"
+germanic_unification_goal: "It is time to unify the german people together!"
+
+bavarian_war_on_austria_title: "Instigate Border Conflict with Austria"
+bavarian_war_on_austria_desc: ""
+
+mp_misc.9.t: "Habsburg Tragedy"
+mp_misc.9.d: "Disaster has struck the House of Habsburg. While observing the heavens, Emperor Friedrich III and his heir, Ladislaus, were both killed when a blazing comet fell from the sky and struck them without warning. The loss has left the dynasty in turmoil, with no surviving heir to succeed the Emperor. Until a new course can be decided, the burden of rule now falls upon his mother, Kira, who must guide the realm through this most extraordinary crisis."
+
+mp_misc.9.opt1: "May they rest in peace."

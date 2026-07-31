@@ -4,7 +4,7 @@
 
 ### Modified 7/20/2026 3:27:54 AM ###
 # MFI (Mfinda)
-color = { 0 0 0 }
+color = { 98 85 54 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

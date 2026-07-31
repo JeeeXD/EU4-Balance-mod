@@ -3,7 +3,7 @@
 ########################################
 
 # NAN (Nanmeizhou)
-color = { 0 0 0 }
+color = { 239 239 31 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

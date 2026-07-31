@@ -1,0 +1,42 @@
+germanic_unification_goal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+
+	}
+	
+	war_name = PRIMITIVE_WAR_NAME	
+}

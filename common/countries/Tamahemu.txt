@@ -3,7 +3,7 @@
 ########################################
 
 # TMH (Tamahemu)
-color = { 0 0 0 }
+color = { 97 74 174 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

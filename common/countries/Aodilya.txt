@@ -3,7 +3,7 @@
 ########################################
 
 # AOD (Aodilya)
-color = { 0 0 0 }
+color = { 70 226 216 }
 revolutionary_colors = {   0   0   0 }
 
 historical_idea_groups = {

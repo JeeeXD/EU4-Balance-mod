@@ -1,0 +1,33 @@
+cb_unification_of_germany = {
+	valid_for_subject = yes
+	
+	prerequisites_self = {
+		culture_group = germanic
+		capital_scope = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+		}
+		is_emperor = no
+	}
+	prerequisites = {
+		FROM = {
+			any_owned_province = {
+				OR = {
+				region = north_german_region
+				region = south_german_region
+			    }
+			}
+			culture_group = germanic
+			NOT = {
+				border_distance = {
+					who = ROOT
+					distance = 2
+				}
+			}
+		}
+	}
+	
+	war_goal = germanic_unification_goal
+}

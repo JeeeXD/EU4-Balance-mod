@@ -749,9 +749,9 @@ take_capital_conquest = {
 	type = take_capital
 	
 	attacker = {
-		badboy_factor = 0.75
+		badboy_factor = 0.1
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
+		peace_cost_factor = 0.1
 		
 		allowed_provinces = {
 			is_claim = ROOT
@@ -779,9 +779,9 @@ take_core = {
 	type = take_core
 
 	attacker = {
-		badboy_factor = 0.25
+		badboy_factor = 0.1
 		prestige_factor = 1
-		peace_cost_factor = 0.75
+		peace_cost_factor = 0.1
 
 		allowed_provinces = {
 			is_core = ROOT

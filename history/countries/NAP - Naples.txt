@@ -65,7 +65,7 @@ capital = 121 # Napoli
 	}
 }
 
-1414.1.1 = {
+1409.1.16 = {
 	heir = {
 		name = "Renato"
 		monarch_name = "Renato I"

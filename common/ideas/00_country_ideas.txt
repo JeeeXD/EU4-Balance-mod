@@ -19385,6 +19385,7 @@ SOD_ideas = {
 VIC_ideas = {
 	start = {
 	    land_forcelimit_modifier = 0.25
+		colonists = 1
 	}
 	
 	bonus = {
@@ -19419,7 +19420,7 @@ VIC_ideas = {
 	}
 	VIC_7 = {
 		leader_land_shock = 1
-		overlord_naval_forcelimit = 0.33
+		overlord_naval_forcelimit_modifier = 0.33
 	}
 }
 
