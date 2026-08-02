@@ -5248,7 +5248,7 @@
  gbr_colonize_north_america_at:0 "§Y[Root.GetName]§! or their subjects own at least §Y10§! fully colonized provinces in the Colonial Eastern America colonial region."
  gbr_dominiate_new_world_title:1 "[Root.GetPreviewColorGBR]Dominate the New World[Root.GetPreviewColorGBR_end]"
  gbr_dominiate_new_world_desc:0 "This strange New World is [Root.GetAdjective] claim. All of its resources and land belong to the [Root.GetAdjective] crown. We shall ensure our dominance over the New World and expel those who dare to contest us."
- gbr_dominiate_new_world_at:1 "All §YColonial§! subjects gain §G+50.0%§! Production Efficiency and §G+50.0%§! Trade Efficiency."
+ gbr_dominiate_new_world_at:1 "All §YColonial§! subjects gain §G+10.0%§! Production Efficiency and §G+10.0%§! Trade Efficiency."
  gbr_establish_first_indian_trade_post_title:1 "[Root.GetPreviewColorGBR]East Indies Company[Root.GetPreviewColorGBR_end]"
  gbr_establish_first_indian_trade_post_desc:0 "Many exotic goods have their origin in the Indian subcontinent. The European powers have been benefiting from the trade with India for many years by now. It is time for us to get on equal footing with them and establish our own trade company in India."
  gbr_establish_first_indian_trade_post_at:0 "This event allows us to establish the @EIC §YEast India Company§! in India as our §YCommercial Enterprise§! subject."

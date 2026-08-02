@@ -2496,8 +2496,8 @@ cossacks_legacy_reform = {
 	republic = yes
 	modifiers = {
    		governing_capacity = 50
-		cavalry_power = 0.2
-		cavalry_cost = -0.2
+		cavalry_power = 0.1
+		cavalry_cost = -0.1
 		cav_to_inf_ratio = 0.2
 	}
 

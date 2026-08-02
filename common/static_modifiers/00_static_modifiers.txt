@@ -590,7 +590,7 @@ base_values = {
 	global_missionary_strength = 0.02
 	global_manpower = 10.0
 	advisor_pool = 6
-	colonist_placement_chance = 0.1
+	colonist_placement_chance = 0.05
 	free_leader_pool = 1
 	republican_tradition = 1
 	monthly_fervor_increase = 1
@@ -610,7 +610,8 @@ base_values = {
 	max_flagships = 1
 	num_of_parliament_issues = 10
 	has_marines = yes
-	privateer_efficiency = -0.4
+	privateer_efficiency = -0.5
+	assault_fort_ability = -1
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -1455,29 +1456,26 @@ large_colonial_nation = {
 }
 
 new_world_exploitation_modifier = {
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.05
 }
 
 gbr_colonial_investment = {
-	production_efficiency = 0.5
-	trade_efficiency = 0.5
+	production_efficiency = 0.1
+	trade_efficiency = 0.1
 }
 
 crown_colony_overlord = {
-	merchants = 1
 	global_trade_power = 0.05
+	global_tariffs = -0.15
 }
 
 private_enterprise_overlord = {
-	merchants = 1
 	global_trade_power = 0.05
-	global_tariffs = -0.05
+	global_tariffs = -0.25
 }
 
 self_governing_colony_overlord = {
-	merchants = 1
-	global_trade_power = 0.05
-	global_tariffs = -0.10
+	global_tariffs = -0.5
 }
 
 crown_colony_subject = {
@@ -1872,7 +1870,7 @@ lenient_taxation_modifier = {
 }
 
 train_horsemanship_modifier = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 }
 
 promote_culture_in_government_modifier = {

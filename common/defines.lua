@@ -457,7 +457,7 @@ NDiplomacy = {
 	KNOWLEDGE_SHARING_COST_PERCENT_MONTHLY = 10.0,
 	SCORNFUL_INSULT_PRESTIGE_COST = 5.0,
 	
-	CHANGE_COLONIAL_TYPE_COST = 1000,
+	CHANGE_COLONIAL_TYPE_COST = 10000,
 
 	CHARTER_COMPANY_BASE_COST = 1000,
 	CHARTER_COMPANY_MINIMUM_COST = 100,
@@ -492,7 +492,7 @@ NCountry = {
 	
 	MONTHS_FOR_MAX_MP_ALERT = 3,
 
-	CHANGE_COLONIAL_TYPE_COOLDOWN_DURATION = 10,
+	CHANGE_COLONIAL_TYPE_COOLDOWN_DURATION = 50,
 	CONCENTRATE_DEVELOPMENT_COOLDOWN_DURATION = 50,
 	SIBERIAN_FRONTIER_DAILY_BASE = 5,		-- monthly..
 	SIBERIAN_FRONTIER_DAILY_RANGE = 11,
@@ -861,7 +861,7 @@ NCountry = {
 	ANCESTOR_PERSONALITY_LEVEL_2 = 12,				-- Roof of second level of ancestor personality
 	ANCESTOR_COST = 400,							-- Cost to integrate an ancestor into the faith.
 	INITIAL_REGULAR_COLONY = 10,
-	REGULAR_COLONY_GROWTH = 25,
+	REGULAR_COLONY_GROWTH = 20,
 	COLONIAL_CLAIM_BONUS = 10,
 	COLONIAL_CLAIM_VIOLATION = 0,
 	COLONY_VIOLAION_PAPAL_INFLUENCE_COST  = 0,
@@ -892,7 +892,7 @@ NCountry = {
 	REBEL_ARTILLERY_INCREASE_LEVEL_2_TECH = 16,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE is applied
 	REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE = 0.15,	-- The increase in artillery as fraction of total troops given to rebels (does not stack with level 1)
 	MIGRATION_DEPLETION_TIME = 7300,				-- How many days a province needs to recover from migrants
-	BASE_TARIFF = 0.10,								-- Basic part of colonies income that goes to tariffs
+	BASE_TARIFF = 0.1,								-- Basic part of colonies income that goes to tariffs
 	TARIFF_INCREASE_STEP = 0.05,					-- Increase on each boost
 	TARIFF_LIBERTY_INCREASE = 1.0,					-- Liberty increase for each % tariffs
 	TARIFF_DECREASE_STEP = -0.05,					-- Decrease on each boost
@@ -1213,7 +1213,7 @@ NEconomy = {
 	TRADE_COMPANY_STRONG_LIMIT = 0.51,
 	TRADE_COMPANY_COOLDOWN = 60,
 	TRADE_COMPANY_RELIGION_RESTRICTION = 0,			-- If we limit trade companies based on religion.
-	LARGE_COLONIAL_NATION_LIMIT = 10,
+	LARGE_COLONIAL_NATION_LIMIT = 50,
 	PRIVATEER_INCOME_COLLECTION_EFF = 0.5,
 	MIN_ARMY_MAINTENANCE = 0.1,
 	MIN_NAVY_MAINTENANCE = 0.1,

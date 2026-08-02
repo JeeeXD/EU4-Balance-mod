@@ -5323,7 +5323,7 @@ cuman_lancers_reform = {
 	}
 	modifiers = {
 		cav_to_inf_ratio = 0.25
-		cavalry_cost = -0.2
+		cavalry_cost = -0.1
 	}
 	
 	ai = {

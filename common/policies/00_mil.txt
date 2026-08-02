@@ -1113,7 +1113,6 @@ psychological_warfare_policy = {
 	}
 
 	cavalry_flanking = 0.5
-	cavalry_power = 0.1
 	nomadic_tribes_loyalty_modifier = 0.1
 
 	effect = {}

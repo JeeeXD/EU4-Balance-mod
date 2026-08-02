@@ -439,15 +439,17 @@ freecities_5 = {
 		provinces_to_highlight = { }
 		trigger = { 
 			overlord = {
-				capital_scope = {
-					has_merchant = ROOT
-				}
+				trade_income_percentage = 0.3
+				num_of_merchants = 3
+			}
+			subsidised_percent_amount = {
+				value = 0.5
 			}
 		}
 		effect = { 
 			overlord = {
-				capital_scope = {
-					add_trade_node_income = 1
+				add_years_of_trade_income = {
+					years = 1
 				}
 			}
 		}
@@ -513,7 +515,7 @@ freecities_5 = {
 		}
 		effect = { 
 			overlord = {
-				add_imperial_influence = 25
+				add_imperial_influence = 15
 			}
 		}
 	}

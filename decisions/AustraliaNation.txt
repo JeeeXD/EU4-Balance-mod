@@ -27,6 +27,7 @@ country_decisions = {
 					is_colonial_nation_of = MSA
 					is_colonial_nation_of = YUE
 					is_colonial_nation_of = WUU
+					is_colonial_nation_of = GZI
 				}
 			}
 			is_colonial_nation = yes

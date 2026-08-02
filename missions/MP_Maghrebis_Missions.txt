@@ -15,6 +15,61 @@ maghreb_common_1a = {
 		}
 	}
 	has_country_shield = yes
+
+	maghrebi_fortify_cueta = {
+		icon = fortify_malta
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			province_id = 1751
+		}
+		
+		trigger = {
+			1751 = {
+				owned_by = ROOT
+				has_building = fort_15th
+				development = 10
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			1751 = {
+				add_province_modifier = {
+					name = mor_fortify_cueta
+					duration = -1
+				}
+			}
+		}
+	}	
+
+	maghrebi_fortify_tafilalt = {
+		icon = fortify_malta
+		required_missions = { maghrebi_fortify_cueta }
+		position = 2
+		
+		provinces_to_highlight = {
+			province_id = 346
+		}
+		
+		trigger = {
+			346 = {
+				owned_by = ROOT
+				has_building = fort_15th
+				development = 20
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			1751 = {
+				add_province_modifier = {
+					name = mor_fortify_cueta
+					duration = -1
+				}
+			}
+		}
+	}	
+
 	gc_tun_genoa = {
 		icon = mission_raid_on_genoa
 		required_missions = { gc_tun_med_islands }

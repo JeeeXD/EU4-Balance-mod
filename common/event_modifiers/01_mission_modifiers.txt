@@ -460,7 +460,7 @@ liv_lva_colonial_ambition = {
 
 liv_lva_american_trade_dominance = {	#Permanent
 	trade_efficiency = 0.1
-	global_tariffs = 0.15
+	global_tariffs = 0.1
 }
 
 liv_lva_random_new_world_colonialism = {
@@ -1072,7 +1072,7 @@ nor_colonial_enthusiasm = {
 }
 
 nor_new_world_administration = { #Permanent
-	global_tariffs = 0.25
+	global_tariffs = 0.1
 	liberty_desire_from_subject_development = -0.33
 	trade_steering = 0.1
 }
@@ -1094,7 +1094,7 @@ nor_holder_of_the_kalmar_union = {	#Permanent
 }
 
 nor_domination_of_the_new_world = {	#Permanent
-	global_tariffs = 0.25
+	global_tariffs = 0.1
 	treasure_fleet_income = 0.25
 	global_trade_power = 0.1
 }
@@ -1586,7 +1586,6 @@ por_brazil_colonial = {
 }
 
 por_brazil_tariffs = {
-	global_tariffs = 0.25
 	reduced_liberty_desire = 10
 }
 
@@ -1629,7 +1628,6 @@ eng_french_recovery = {
 }
 
 eng_caribbean_trade = {
-	global_tariffs = 0.25
 	native_assimilation = 0.25
 }
 
@@ -1820,7 +1818,6 @@ gbr_religious_stability = {
 }
 
 gbr_new_world_dominance = {	#Permanent
-	global_tariffs = 0.25
 	trade_efficiency = 0.1
 }
 
@@ -2051,7 +2048,6 @@ spa_rb_italian_ambition_mod = {
 }
 
 spa_rb_overseas_trade = {
-	global_tariffs = 0.25
 	global_trade_power = 0.1
 }
 
@@ -2257,7 +2253,6 @@ gen_asia_holding_mod = {
 gen_america_holding_mod = {
 	global_colonial_growth = 20
 	colonist_placement_chance = 0.02
-	global_tariffs = 0.15
 }
 
 gen_indian_holding_mod = {
@@ -2380,7 +2375,7 @@ jap_three_mountains = {
 
 # Vijayanagar missions
 vij_maratha_modifier = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 }
 
 vij_africa_trade_modifier = {
@@ -2621,7 +2616,6 @@ rus_new_world_colonization = {
 }
 
 rus_tariffs_of_the_new_world = {	#Permanent
-	global_tariffs = 0.25
 	reduced_liberty_desire = 20
 }
 
@@ -3296,7 +3290,7 @@ mughal_stronghold = {
 }
 
 heirs_of_timur = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 	legitimacy = 1
 }
 
@@ -9189,7 +9183,6 @@ fra_french_canadian_settlers_modifier = {
 }
 fra_overseas_focus_modifier = {
 	trade_company_investment_cost = -0.2
-	global_tariffs = 0.15
 	trade_efficiency = 0.05
 }
 fra_masters_of_india_modifier = {
@@ -11152,7 +11145,7 @@ ARB_support_of_local_sheikhs = {
 }
 
 ABR_train_horsemanship_modifier_upgraded = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 	cavalry_cost = -0.1 
 }
 
@@ -14718,7 +14711,7 @@ MUG_cavalry_tactics = {
 }
 
 MUG_focus_on_elephants = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 }
 
 MUG_decision_viceroyalty_of_the_deccan = {

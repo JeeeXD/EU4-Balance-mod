@@ -259,6 +259,32 @@ country_event = {
 }
 
 country_event = {
+	id = mp_misc.8
+	title = mp_misc.8.t
+	desc = mp_misc.8.d
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			ruler_has_personality = greedy_personality		
+		}
+		NOT = {
+			religion = jewish
+		}
+		ruler_religion = jewish
+	}
+
+	option = {
+		name = mp_misc.8.opt1
+		set_ruler_religion = ROOT
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
 	id = mp_misc.9
 	title = mp_misc.9.t
 	desc = mp_misc.9.d
@@ -286,6 +312,32 @@ country_event = {
 			adm = 1
 			age = 49
 			claim = 100
+		}
+	}
+}
+
+country_event = {
+	id = mp_misc.10
+	title = mp_misc.10.t
+	desc = mp_misc.10.d
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			heir_has_personality = greedy_personality		
+		}
+		NOT = {
+			religion = jewish
+		}
+		heir_religion = jewish
+	}
+
+	option = {
+		name = mp_misc.10.opt1
+		set_heir_religion = ROOT
+		ai_chance = {
+			factor = 1
 		}
 	}
 }

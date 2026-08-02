@@ -1034,7 +1034,6 @@ exploration_ideas = {
 	}
 	factories = {
 		colonists = 1
-		global_tariffs = 0.10
  		envoy_travel_time = -0.3
 		effect = { remove_temporary_colonist = yes }
 	}

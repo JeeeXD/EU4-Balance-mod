@@ -537,7 +537,7 @@ enforcing_unity = {
 }
 
 agenda_colonial_administration = {
-	global_tariffs = 0.15
+	global_tariffs = 0.05
 	global_colonial_growth = 15
 }
 
@@ -622,11 +622,11 @@ out_of_date_commerce = {
 }
 
 excellent_administration = {
-	global_tariffs = 0.2
+	global_tariffs = 0.1
 }
 
 corrupt_viceroys = {
-	global_tariffs = -0.10
+	global_tariffs = -0.33
 	yearly_corruption = 0.1
 }
 
@@ -3436,7 +3436,7 @@ colonial_policy = {
 }
 
 less_colonial_corruption = {
-	global_tariffs = 0.10
+	global_tariffs = 0.025
 }
 
 duke_of_coimbra = {
@@ -7354,7 +7354,7 @@ spanish_bible_translation = {
 }
 
 spa_new_colonial_reforms = {
-	global_tariffs = 0.1
+	global_tariffs = 0.05
 }
 
 spa_new_colonial_reforms_subject = {
@@ -11921,11 +11921,11 @@ mercs_not_allowed_to_loot_morale = {
 
 elephants_in_europe_mercs = {
 	is_mercenary_modifier = yes
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 }
 
 elephants_in_europe = {
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 }
 
 popular_mercs_prosperity = {
@@ -13519,7 +13519,7 @@ bill_of_rights_parliament = {	#Permanent
 	#No longer pretender rebel event
 }
 acts_of_taxation_parliament = {
-	global_tariffs = 0.15
+	global_tariffs = 0.05
 }
 act_of_representation_parliament = {
 	reduced_liberty_desire = 10 
@@ -13971,7 +13971,7 @@ zoroastrian_prophet_in_the_court = {
 
 #Qizilbash Estate
 qizilbash_cavalry_modifier = {
-	cavalry_power = 0.1
+	cavalry_power = 0.05
 	movement_speed = 0.1
 }
 

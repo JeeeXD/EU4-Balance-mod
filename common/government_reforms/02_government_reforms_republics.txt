@@ -1379,11 +1379,7 @@ colonial_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		global_autonomy = -0.05
-		recover_army_morale_speed = 0.02
-		embracement_cost = -0.1
 		governing_capacity = 100
-		max_absolutism = 40
 		governing_capacity_modifier = 0.1
 		global_unrest = -15
 	}
@@ -1447,10 +1443,8 @@ crown_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		recover_army_morale_speed = 0.02
-		embracement_cost = -0.1
+		min_autonomy = 33
 		governing_capacity = 200
-		max_absolutism = 40
 		governing_capacity_modifier = 0.1
 		global_unrest = -15
 		move_capital_cost_modifier = 4
@@ -1508,12 +1502,11 @@ private_enterprise_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
+		min_autonomy = 33
 		global_ship_trade_power = 0.2
-		embracement_cost = -0.1
 		merchants = 1
-		production_efficiency = 0.05
-		max_absolutism = 40
-		governing_capacity = 300
+		max_absolutism = -20
+		governing_capacity = 200
 		governing_capacity_modifier = 0.1
 		global_unrest = -15
 		move_capital_cost_modifier = 4
@@ -1571,10 +1564,7 @@ self_governing_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		development_cost = -0.05
-		embracement_cost = -0.1
-		state_maintenance_modifier = -0.25
-		max_absolutism = 40
+		min_autonomy = 40
 		governing_capacity = 500
 		governing_capacity_modifier = 0.2
 		global_unrest = -15
@@ -2000,8 +1990,8 @@ cossacks_reform = {
 	nation_designer_cost = 60
 
 	modifiers = {
-		cavalry_power = 0.2
-		cavalry_cost = -0.2
+		cavalry_power = 0.1
+		cavalry_cost = -0.1
 		cav_to_inf_ratio = 0.25
 		governing_capacity = 50
 		allowed_cossack_fraction = 0.25

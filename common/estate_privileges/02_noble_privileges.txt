@@ -2380,7 +2380,7 @@ estate_nobles_landed_army = {
 	}
 	influence_scaled_conditional_modifier = {
 		trigger = { always = yes }
-		modifier = { cavalry_power = 0.2 }
+		modifier = { cavalry_power = 0.1 }
 	}
 	mechanics = {  }
 	ai_will_do = {

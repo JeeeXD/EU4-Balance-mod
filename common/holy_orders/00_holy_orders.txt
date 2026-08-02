@@ -1124,7 +1124,7 @@ teutonic_holy_order = {
         }
     }
     modifier = {
-        defensiveness = 0.33
+        local_defensiveness = 0.33
         hostile_attrition = 1
     }
     ai_priority = {

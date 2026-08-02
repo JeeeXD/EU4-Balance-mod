@@ -1,0 +1,102 @@
+﻿l_english:
+
+free_city_dev_title: "Expand the City"
+free_city_dev_desc: "Our city must continue to grow if it is to remain prosperous and influential. Investment in its streets, workshops, and homes will secure its future."
+
+free_city_tax_dev_title: "Increase Tax Revenue"
+free_city_tax_dev_desc: "A wealthy city begins with a strong tax base. By encouraging growth and commerce, we can greatly improve our revenues."
+
+free_city_mil_dev_title: "Recruit the Citizenry"
+free_city_mil_dev_desc: "A prosperous free city must also be capable of defending itself. Expanding the city's manpower will strengthen our position."
+
+free_city_trade_center_title: "Center of Trade"
+free_city_trade_center_desc: "Our city is well placed to become a center of regional commerce. Merchants from across the Empire should look to our markets."
+
+free_city_church_title: "House of Worship"
+free_city_church_desc: "A magnificent place of worship reflects both the faith and prosperity of our people, bringing prestige and stability to the city."
+
+free_city_forcelimit_title: "Expand the Militia"
+free_city_forcelimit_desc: "A larger standing force will allow us to better defend our liberties and fulfill our obligations to our overlord."
+
+free_city_many_buildings_title: "Urban Expansion"
+free_city_many_buildings_desc: "Every new building strengthens our city. Workshops, markets, and public institutions will ensure continued prosperity."
+
+free_city_big_army_big_money_title: "Prosperity and Protection"
+free_city_big_army_big_money_desc: "Only a wealthy city can sustain a capable army. Our treasury and our forces must grow together."
+
+free_city_opinion_title: "Earn Their Trust"
+free_city_opinion_desc: "Maintaining the confidence of our overlord ensures continued protection and favorable treatment."
+
+free_city_big_dev_title: "A Great City"
+free_city_big_dev_desc: "Our capital has grown into one of the finest cities in the region. Its prosperity is the envy of neighboring realms."
+
+free_city_fort_title: "Strengthen the Walls"
+free_city_fort_desc: "Well-maintained fortifications are the first line of defense against any would-be aggressor."
+
+free_city_subsidizing_army_title: "Support the Army"
+free_city_subsidizing_army_desc: "By contributing to the military efforts of our overlord, we demonstrate our loyalty while improving our own armed forces."
+
+free_city_liberty_desire_title: "Loyal Subjects"
+free_city_liberty_desire_desc: "A content and loyal city enjoys greater trust from its overlord and reaps the benefits of stable relations."
+
+free_city_has_march_bonus_title: "Military Cooperation"
+free_city_has_march_bonus_desc: "Working closely with our overlord's military strengthens both our armies and ensures our city remains well defended."
+
+free_city_dof_overlord_title: "Defender of the Faith"
+free_city_dof_overlord_desc: "With our overlord standing as the Defender of the Faith, we too benefit from their unwavering commitment to our shared religion."
+
+free_city_merchant_in_subject_title: "Merchant Presence"
+free_city_merchant_in_subject_desc: "Our merchants should establish themselves in our overlord's capital, strengthening both our economies."
+
+free_city_divert_trade_title: "Direct the Trade"
+free_city_divert_trade_desc: "By directing trade toward our overlord's markets and discouraging our rivals, we can greatly enrich our realm."
+
+free_city_every_building_title: "True Metropolis"
+free_city_every_building_desc: "Every corner of our city has been developed. It now stands as one of the greatest urban centers in the Empire."
+
+free_city_overlord_elector_title: "Support the Elector"
+free_city_overlord_elector_desc: "The influence of our overlord within the Empire benefits us all. Their position among the Electors must be secured."
+
+free_city_overlord_emperor_title: "Imperial Patron"
+free_city_overlord_emperor_desc: "Our overlord has ascended to the Imperial throne. Their glory strengthens our own standing within the Holy Roman Empire."
+
+free_city_hre_primary_religion_title: "Faith of the Empire"
+free_city_hre_primary_religion_desc: "By standing with the dominant faith of the Empire, our city secures its place among the Imperial Estates."
+
+# MODIFIERS
+
+fc_dev_cost: "Growing City"
+fc_dev_cost_desc: "Continued investment in the city's infrastructure has made further development cheaper and more efficient."
+
+fc_church_tax: "Church Tithes"
+fc_church_tax_desc: "The influence of the Church has strengthened tax collection and increased the state's revenues."
+
+fc_overlord_dip_rep: "Trusted Vassal"
+fc_overlord_dip_rep_desc: "The loyalty and competence of this Free City has enhanced our reputation among foreign courts."
+
+fc_metropolis: "Imperial Metropolis"
+fc_metropolis_desc: "This city has grown into one of the Empire's greatest urban centers, attracting wealth, craftsmen, and settlers from across the realm."
+
+fc_tax_income: "Prosperous Treasury"
+fc_tax_income_desc: "A strong tax base provides a steady stream of income for the city."
+
+fc_tax_income_overlord: "Free City Tribute"
+fc_tax_income_overlord_desc: "The prosperity of our Free City subjects has greatly increased the revenues flowing into our treasury."
+
+fc_construction: "Building Boom"
+fc_construction_desc: "Rapid construction and experienced craftsmen have reduced the cost of new buildings."
+
+fc_military_good: "Well-Trained Militia"
+fc_military_good_desc: "Regular drills and close military cooperation have turned our militia into a disciplined fighting force."
+
+fc_forcelimit: "Expanded Militia"
+fc_forcelimit_desc: "The city's growing population and wealth allow it to field a considerably larger force."
+
+fc_forcelimit_overlord: "Imperial Auxiliary Forces"
+fc_forcelimit_overlord_desc: "Our loyal Free City provides additional troops to support the armies of the realm."
+
+fc_defense: "Strengthened Fortifications"
+fc_defense_desc: "Modern walls and improved defenses make this city far more difficult to capture."
+
+fc_overlord_emperorship: "Imperial Backing"
+fc_overlord_emperorship_desc: "The support of our loyal Free Cities has strengthened our authority within the Holy Roman Empire."

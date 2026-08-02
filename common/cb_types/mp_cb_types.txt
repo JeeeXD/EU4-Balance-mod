@@ -1,5 +1,4 @@
 cb_unification_of_germany = {
-	valid_for_subject = yes
 	
 	prerequisites_self = {
 		culture_group = germanic
@@ -30,4 +29,31 @@ cb_unification_of_germany = {
 	}
 	
 	war_goal = germanic_unification_goal
+}
+
+cb_unification_of_italy = {
+	
+	prerequisites_self = {
+		culture_group = latin
+		capital_scope = {
+			region = italy_region
+		}
+		is_emperor = no
+	}
+	prerequisites = {
+		FROM = {
+			any_owned_province = {
+				region = italy_region
+			}
+			culture_group = latin
+			NOT = {
+				border_distance = {
+					who = ROOT
+					distance = 2
+				}
+			}
+		}
+	}
+	
+	war_goal = italian_unification_goal
 }

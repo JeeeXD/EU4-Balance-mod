@@ -117,6 +117,7 @@ GRA_almeria_mercury_mine: "Almaden Mercury Mine"
 GRA_trade_center: "Trade Center"
 berber_cav_start: "Horse Breeding"
 berber_cav_finish: "Elite Cavalry"
+mor_fortify_cueta: "Fortified Town"
 ### Missions ###
 maghrebi_muslim_pope_title: "A Muslim Pope?"
 maghrebi_muslim_pope_desc: "The balance of power in the Mediterranean has shifted beyond recognition. With our influence stretching deep into Italy, even the authority of the Papacy is no longer beyond our reach. Whether through pressure, diplomacy, or force, Rome itself must reckon with Maghrebi power."
@@ -218,6 +219,11 @@ fatimid_infantry_desc: "While cavalry and mercenaries form the backbone of our f
 
 maghrebi_starter_mil_title: "Maghrebi Warfare"
 maghrebi_starter_mil_desc: "The armies of the Maghreb are shaped by harsh terrain, long distances, and diverse traditions of war. By laying strong military foundations now, we prepare our state for both regional defense and future expansion."
+
+maghrebi_fortify_cueta: "Fortify Ceuta"
+maghrebi_fortify_cueta_desc: "The city of Ceuta is a strategic gateway between the Mediterranean and the Atlantic. By strengthening its fortifications, we ensure that our trade routes remain secure and that our influence in the region is unchallenged."
+maghrebi_fortify_tafilalt: "Fortify Tafilalt"
+maghrebi_fortify_tafilalt_desc: "The oasis of Tafilalt is a vital source of water and trade in the desert. By fortifying this region, we protect our caravans and maintain control over the flow of goods and resources through the Maghreb."
 ### Event ###
 flavor_maghrebi.1.T: "The Fate of Rome"
 flavor_maghrebi.1.D: "Rome, the ancient heart of empires and the seat of the Papacy, now lies firmly in our hands. Its treasuries overflow with wealth gathered over centuries, and its streets still echo with the memory of fallen Caesars.\n\nWe must now decide the city’s fate. Shall we strip it of its riches and strengthen our true capital, or proclaim Rome itself as the new center of our empire?"

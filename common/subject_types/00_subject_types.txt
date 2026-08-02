@@ -732,7 +732,7 @@ colony = {
 	liberty_desire_development_ratio = 0.001
 	opinion_on_subject_integration = 0
 	max_government_rank = 3
-	cities_required_for_bonuses = 10
+	cities_required_for_bonuses = 50
 
 	relative_power_class = 0
 	should_quit_wars_on_activation = yes
@@ -761,8 +761,6 @@ colony = {
 	customize_subject = yes
 	replace_governor = yes
 	start_colonial_war = yes
-	increase_tariffs = yes
-	decrease_tariffs = yes
 	enforce_culture = yes
 
 	# Modifiers:
@@ -801,7 +799,6 @@ crown_colony = {
 	diplomacy_subject_sprite = GFX_icon_diplomacy_am_crown_colony
 
 	change_colonial_type = yes
-	upgrade_subject_type = yes
 	is_colony_subtype = yes
 	can_send_missionary_to_subject = yes	
 	count = colony

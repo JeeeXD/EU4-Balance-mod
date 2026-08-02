@@ -104,7 +104,10 @@ fatimid_maghreb_reform = {
 north_german_reform = {
 	icon = "reformer"
 	potential = {
-		is_or_was_tag = { tag = NGR }
+		OR = {
+			tag = NGR
+			was_tag = NGR
+		}
 	}
 	trigger = { }
 	
@@ -124,9 +127,14 @@ north_german_reform = {
 south_german_reform = {
 	icon = "holy_state_reform"
 	potential = {
-		is_or_was_tag = { tag = SGR }
+		OR = {
+			tag = SGR
+			was_tag = SGR
+		}
 	}
 	trigger = { }
+
+	lock_level_when_selected = yes
 	
 	custom_attributes = {
 	
@@ -135,6 +143,8 @@ south_german_reform = {
 	modifiers = {
 		warscore_from_battles_modifier = 0.1
 		leader_cost = -0.10
+		curia_powers_cost = -0.1
+		curia_treasury_contribution = 0.33
 	}
 	
 	effect = { custom_tooltip = south_german_holy_order_tooltip }
@@ -377,6 +387,7 @@ cologne_theocracy_reform = {
 	custom_attributes = {
 		is_eligible_for_hre_emperor = yes
 		royal_marriage = yes
+		can_see_theocratic_heir_stats = yes
 	}
 
 
@@ -417,6 +428,12 @@ influenced_free_city = {
 			num_of_cities = 2
 		}
 	}
+	trigger = {
+		has_reform = influenced_free_city
+		NOT = {
+			num_of_cities = 2
+		}
+	}
 	valid_for_nation_designer = yes
 	lock_level_when_selected = yes
 	nation_designer_cost = 40
@@ -440,38 +457,6 @@ influenced_free_city = {
 		enables_aristocratic_idea_group = no
 	}
 	duration = 4
-}
-
-japanese_colonists = {
-	icon = "crown_colony_government"
-	potential = {
-		OR = {
-			tag = CBA
-			tag = SBA
-			was_tag = CBA
-			was_tag = SBA
-		}
-	}
-	trigger = {
-		OR = {
-			tag = CBA
-			tag = SBA
-			was_tag = CBA
-			was_tag = SBA
-		}
-	}
-	
-	custom_attributes = {
-	}
-
-
-	modifiers = {
-		range = 0.33
-		global_colonial_growth = 15
-		vassal_forcelimit_bonus = 0.2
-		expel_minorities_cost = -1
-	}
-
 }
 
 japanese_colonists = {

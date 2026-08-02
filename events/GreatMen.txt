@@ -58,6 +58,14 @@ country_event = {
 		add_prestige = 50
 		set_country_flag = philosopher
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Natural Scientist
@@ -127,6 +135,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = natural_scientist
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -199,6 +215,14 @@ country_event = {
 		}
 		set_country_flag = army_reformer
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Naval reformer
@@ -268,6 +292,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = naval_reformer
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -341,6 +373,14 @@ country_event = {
 		}
 		set_country_flag = artist
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -412,6 +452,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = treasurer
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -485,6 +533,14 @@ country_event = {
 		}		
 		set_country_flag = theologian
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -556,6 +612,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = statesman
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -629,6 +693,14 @@ country_event = {
 		}
 		set_country_flag = colonial_governor
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -700,6 +772,14 @@ country_event = {
 		}
 		set_country_flag = spymaster		
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -765,6 +845,14 @@ country_event = {
 		add_dip_power = 50
 		set_country_flag = diplomat
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Trader
@@ -829,6 +917,14 @@ country_event = {
 		add_prestige = 50
 		add_dip_power = 25
 		set_country_flag = trader
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -901,6 +997,14 @@ country_event = {
 		}
 		set_country_flag = master_of_mint
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -971,6 +1075,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = navigator
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1043,6 +1155,14 @@ country_event = {
 		}
 		set_country_flag = grand_captain
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -1113,6 +1233,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = army_organiser
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1186,6 +1314,14 @@ country_event = {
 		}
 		set_country_flag = commandant
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -1256,6 +1392,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = quartermaster
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1328,6 +1472,14 @@ country_event = {
 		}
 		set_country_flag = recruitmaster
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -1398,6 +1550,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = fortification_expert
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1471,6 +1631,14 @@ country_event = {
 		}
 		set_country_flag = inquisitor
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -1529,6 +1697,14 @@ country_event = {
 		}
 		set_country_flag = loyal_friend
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Missionary
@@ -1582,6 +1758,14 @@ country_event = {
 		}
 		set_country_flag = missionary
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Governor
@@ -1619,6 +1803,7 @@ country_event = {
 		every_owned_province = {
 			add_local_autonomy = -10
 		}
+		
 	}
 		
 	option = {
@@ -1640,6 +1825,14 @@ country_event = {
 		every_owned_province = {
 			add_local_autonomy = -10
 		}
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1696,6 +1889,14 @@ country_event = {
 		set_country_flag = state_theorist
 		add_absolutism = 10
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Magistrate
@@ -1748,6 +1949,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = magistrate
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1812,6 +2021,14 @@ country_event = {
 	    add_devotion = 10
 	    add_meritocracy = 10
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Herald
@@ -1865,6 +2082,14 @@ country_event = {
 		}
 		set_country_flag = herald
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Naval Tactician
@@ -1917,6 +2142,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = naval_tactician
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -1973,6 +2206,14 @@ country_event = {
 		set_country_flag = visionary
 		add_splendor = 100
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Reformist
@@ -2025,6 +2266,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = reformist
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2091,6 +2340,14 @@ country_event = {
 						multiplier = 0.1
 					}
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 
@@ -2145,6 +2402,14 @@ country_event = {
 		}
 		set_country_flag = jester
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Harbor Master
@@ -2197,6 +2462,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = harbor_master
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2251,6 +2524,14 @@ country_event = {
 		}
 		set_country_flag = customs_officer
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Imperial Councilor
@@ -2303,6 +2584,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = imperial_councilor
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2357,6 +2646,14 @@ country_event = {
 		}
 		set_country_flag = imperial_bureaucrat
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Landsknecht
@@ -2409,6 +2706,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = landsknecht
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2463,6 +2768,14 @@ country_event = {
 		}
 		set_country_flag = dragoon
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Howitzer
@@ -2515,6 +2828,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = howitzer
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2569,6 +2890,14 @@ country_event = {
 		}
 		set_country_flag = tactician
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Drill Master
@@ -2621,6 +2950,14 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = drill_master
+	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }
 
@@ -2675,6 +3012,14 @@ country_event = {
 		}
 		set_country_flag = siege_engineer
 	}
+
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
+	}
 }
 
 # Contractor
@@ -2727,5 +3072,13 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = contractor
+	}
+	
+	option = {
+		name = "EVTOPTC4116"	# His reputation will reach further than our borders
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = delayed_advisor_tt
 	}
 }

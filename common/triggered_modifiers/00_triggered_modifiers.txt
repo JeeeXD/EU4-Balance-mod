@@ -580,7 +580,7 @@ control_of_beijing = {
 		factor = 1000
 	}
 
-	imperial_mandate = 0.05
+	imperial_mandate = 0.025
 }
 
 control_of_nanjing = {
@@ -597,7 +597,7 @@ control_of_nanjing = {
 		factor = 1000 
 	}
 
-	imperial_mandate = 0.05
+	imperial_mandate = 0.025
 }
 
 control_of_canton = {
@@ -614,7 +614,7 @@ control_of_canton = {
 		factor = 1000
 	}
 
-	imperial_mandate = 0.05
+	imperial_mandate = 0.025
 }
 
 waging_war_for_china = {

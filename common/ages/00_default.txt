@@ -198,7 +198,7 @@ age_of_discovery = {
 				on_age_ability_taken = { age = age_of_discovery }
 			}
 			modifier = {
-				colony_development_boost = 1
+				unjustified_demands = -0.2 
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -460,7 +460,7 @@ age_of_reformation = {
 						is_subject_of_type = european_colony
 					}
 				}
-				amount = 5
+				amount = 1
 			}
 		}
 		
@@ -638,6 +638,13 @@ age_of_reformation = {
 					factor = 0
 					NOT = {
 						num_of_ports = 1
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_reform = free_city
+						has_reform = influenced_ree_city
 					}
 				}
 				modifier = {

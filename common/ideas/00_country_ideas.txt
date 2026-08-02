@@ -198,7 +198,6 @@ GBR_ideas = {
 	}
 	city_upon_a_hill = {
 		global_colonial_growth = 20
-		global_tariffs = 0.15
 	}
 	the_british_parliament = {
 		global_unrest = -1
@@ -764,7 +763,6 @@ SPA_ideas = {
 	}
 	spa_casa_de_contracion = {
 		envoy_travel_time = -0.33
-		global_tariffs = 0.15
 	}
 	siglo_de_oro = {
 		prestige = 1
@@ -1669,7 +1667,7 @@ POR_ideas = {
 	}
 	
 	bonus = {
-		global_tariffs = 0.20
+		establish_order_cost = -0.15
 	}
 	
 	trigger = {
@@ -1773,7 +1771,7 @@ LIT_ideas = {
 		production_efficiency = 0.1
 	}
 	lithuanian_hussars = {
-		cavalry_power = 0.25
+		cavalry_power = 0.2
 		can_recruit_hussars = yes
 	}
 	statutes_of_lithuania = {
@@ -1977,8 +1975,8 @@ CHI_ideas = {
 		garrison_size = 0.25
 	}
 	revived_three_grand_divisions = {
-		shock_damage_received = -0.10
-		fire_damage_received = -0.10
+		prestige = 1
+		global_monthly_devastation = -0.15
 	}
 	inward_perfection = {
 		global_tax_modifier = 0.15
@@ -2002,7 +2000,7 @@ CHI_ideas = {
 PER_ideas = {
 	start = {
 		global_tax_modifier = 0.15
-		cavalry_power = 0.15 
+		cavalry_power = 0.1
 	}
 	
 	bonus = {
@@ -2326,7 +2324,7 @@ SCO_Ideas = {
 
 HUN_ideas = {
 	start = {
-		cavalry_power = 0.20
+		cavalry_power = 0.1
 		army_tradition_decay = -0.01
 	}
 	
@@ -11488,7 +11486,6 @@ CBA_ideas = {
 
 	cba_coalition_with_kamakura_kubo = {
 		vassal_forcelimit_bonus = 0.33
-		global_tariffs = 0.25
 	}
 	
 	cba_sakura_kadan = {
@@ -17772,11 +17769,11 @@ ZAN_ideas = {
 GZI_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.33
-		land_morale = 0.2
+		land_morale = 0.15
 	}
 
 	bonus = {
-		trade_efficiency = 0.2
+		trade_efficiency = 0.1
 	}
 	
 	trigger = {
@@ -17785,7 +17782,7 @@ GZI_ideas = {
 	free = yes
 	
 	gzi_stone_masonry = {
-		build_cost = -0.15
+		build_cost = -0.1
 		great_project_upgrade_cost = -0.1
 	}
 	gzi_ivory_trade = {
@@ -17799,7 +17796,7 @@ GZI_ideas = {
 		defensiveness = 0.25
 	}
 	gzi_lay_of_the_land = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	gzi_tributary_system = {
 		discipline = 0.05
@@ -18639,7 +18636,7 @@ YUE_ideas = {
 NGR_ideas = {
 	start = {
 		global_trade_goods_size_modifier = 0.1
-		development_cost = -0.1
+		naval_tradition_from_trade = 0.5
 	}
 	
 	bonus = {
@@ -19290,7 +19287,7 @@ BBL_ideas = {
 		naval_forcelimit_modifier = 0.15
 	}
 	BBL_6 = {
-		all_estate_loyalty_equilibrium = 0.1
+		allowed_marine_fraction = 0.25
 		monarch_lifespan = 0.33
 	}
 	BBL_7 = {
@@ -19942,8 +19939,7 @@ PEU_ideas = {
 		global_tax_modifier = 0.33
 	}
 	PEU_4 = {
-		may_perform_slave_raid_on_same_religion = yes
-		loot_amount = 0.5
+		hostile_attrition = 1
 	}
 	PEU_5 = {
 		advisor_cost = -0.2
@@ -19954,5 +19950,46 @@ PEU_ideas = {
 	PEU_7 = {
 		global_supply_limit_modifier = 0.5
 		global_regiment_cost = -0.15
+	}
+}
+
+VIN_ideas = {
+	start = {
+		naval_morale_damage = 0.15
+		naval_attrition_in_fleet_modifier = -0.5
+	}
+	
+	bonus = {
+		build_cost = -0.1
+	}
+	
+	trigger = {
+		tag = VIN
+	}
+	free = yes
+	
+	VIN_1 = {
+		infantry_power = 0.15
+	}
+	VIN_2 = {
+		naval_forcelimit_modifier = 0.25
+		prestige_from_naval = 0.5
+	}
+	VIN_3 = {
+		trade_efficiency = 0.15
+	}
+	VIN_4 = {
+		may_perform_slave_raid_on_same_religion = yes
+		loot_amount = 0.5
+	}
+	VIN_5 = {
+		galley_power = 0.25
+		galley_hullsize = 0.1
+	}
+	VIN_6 = {
+		manpower_in_true_faith_provinces = 0.25
+	}
+	VIN_7 = {
+		discipline = 0.05
 	}
 }

@@ -13,6 +13,9 @@ country_decisions = {
 				OR = {
 					is_colonial_nation_of = NED
 					is_colonial_nation_of = BUR
+					is_colonial_nation_of = SCA
+				is_colonial_nation_of = DAN
+				is_colonial_nation_of = SWE
 				}
 			}
 			NOT = {
@@ -128,6 +131,112 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			is_colonial_nation_of = FRA
+			capital_scope = {
+				OR = {
+					region = canada_region
+					region = hudson_bay_region
+				}
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = canada_region
+				region = hudson_bay_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					region = canada_region
+					region = hudson_bay_region
+				}
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					region = canada_region
+					region = hudson_bay_region
+				}
+				is_city = yes
+			}
+			NOT = { exists = QUE }
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
+				}
+			}
+			change_tag = QUE
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			canada_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QUE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			#can't have more than one elective monarchy in the game
+			if = {
+				limit = {
+					has_reform = elective_monarchy
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	vinland_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no			
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				is_colonial_nation_of = SCA
+				is_colonial_nation_of = DAN
+				is_colonial_nation_of = SWE
+			}
 			capital_scope = {
 				OR = {
 					region = canada_region

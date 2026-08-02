@@ -936,7 +936,7 @@ the_stamp_act = {
 	}
 	
 	global_trade_power = 0.1
-	global_tariffs = 0.15 
+	global_tariffs = 0.1
 	
 	effect = {}
 	removed_effect = {}

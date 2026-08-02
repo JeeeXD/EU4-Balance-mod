@@ -25,6 +25,15 @@ country_event = {
 		hidden_effect = {
 			set_hre_religion_locked = yes
 		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = {
+					religion = catholic
+				}
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+		}
 	}
 
 	option = {
@@ -371,6 +380,20 @@ country_event = {
 		}
 		# this should elect a new emperor
 		set_hre_religion = protestant
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = {
+					OR = {
+						religion = protestant
+						religion = reformed
+						religion = anglican
+						religion = hussite
+					}
+				}
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+		}
 	}
 
 	after = {
@@ -459,6 +482,7 @@ country_event = {
 		hidden_effect = {
 			set_hre_religion_treaty = yes
 		}
+		dismantle_hre = yes
 	}
 
 	option = {
@@ -466,6 +490,7 @@ country_event = {
 		tooltip = { 
 			set_hre_religion_treaty = yes
 		}
+		dismantle_hre = yes
 	}
 }
 
