@@ -620,7 +620,13 @@ age_of_reformation = {
 
 		ab_md_additional_colonist = {
 			allow = {
-				NOT = { has_idea_group = exploration_ideas }
+				NOT = {
+					OR = {
+						has_idea_group = exploration_ideas
+						has_reform = free_city
+						has_reform = influenced_free_city
+					}
+				}
 			}
 			effect = { 
 				on_age_ability_taken = { age = age_of_reformation }
@@ -644,7 +650,7 @@ age_of_reformation = {
 					factor = 0
 					OR = {
 						has_reform = free_city
-						has_reform = influenced_ree_city
+						has_reform = influenced_free_city
 					}
 				}
 				modifier = {

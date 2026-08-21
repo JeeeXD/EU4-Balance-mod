@@ -1083,10 +1083,16 @@ estate_dhimmi_technology_fatimids = {
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
-		tag = FAT
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_dhimmi_technology_fatimids }
+			has_reform = fatimid_maghreb_reform
+		}
 	}
 	can_select = {
-		has_reform = fatimid_maghreb_reform
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_dhimmi_technology_fatimids }
+			has_reform = fatimid_maghreb_reform
+		}
 	}
 	can_revoke = {
 	}

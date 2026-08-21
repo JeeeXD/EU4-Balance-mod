@@ -131,6 +131,8 @@ monarchy = {
 				gothic_monarchy_reform
 				# MOD
 				ilkhanate_government_reform
+				songhai_desert_empire
+				kitara_lake_federation
 
 				polynesian_kingdom
 			}

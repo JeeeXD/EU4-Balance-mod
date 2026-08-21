@@ -990,14 +990,19 @@ fervor = {
 
 # Multiplied by the amount of Karma
 karma = {
+	
 }
 
 # Multiplied by the amount of positive karma
 positive_karma = {
+	global_trade_goods_size_modifier = 0.001
+	tolerance_own = 0.04
 }
 
 # Multiplied by the amount of negative karma
 negative_karma = {
+	manpower_in_true_faith_provinces = -0.002
+	tolerance_heretic = -0.04
 }
 
 # Multiplied by Development/COUNTRY_DEVELOPMENT_SCALE
@@ -1196,7 +1201,7 @@ curia_controller = {
 }
 
 bought_indulgence = {
-	papal_influence = 1
+	papal_influence = 3
 }
 
 religious_unity = {
@@ -1217,17 +1222,17 @@ inverse_religious_unity = {
 }
 
 total_occupation = {
-	war_exhaustion = 0.005					#increases exhaustion.
+	war_exhaustion = 0.0025			#increases exhaustion.
 }
 
 total_blockaded = {
-	war_exhaustion = 0.10					#increases exhaustion.
+	war_exhaustion = 0.05					#increases exhaustion.
 	global_trade_power = -0.75
 	trade_steering = -0.75
 }
 
 uncontested_cores = {
-	prestige = -0.1
+
 }
 
 
@@ -1465,22 +1470,22 @@ gbr_colonial_investment = {
 }
 
 crown_colony_overlord = {
-	global_trade_power = 0.05
-	global_tariffs = -0.15
+	global_tariffs = -0.1
 }
 
 private_enterprise_overlord = {
 	global_trade_power = 0.05
-	global_tariffs = -0.25
+	global_tariffs = -0.05
 }
 
 self_governing_colony_overlord = {
-	global_tariffs = -0.5
+	global_tariffs = -0.15
 }
 
 crown_colony_subject = {
 	global_autonomy = -0.1
 	global_colonial_growth = 10
+	development_cost = 0.2
 }
 
 private_enterprise_subject = {
@@ -1488,12 +1493,13 @@ private_enterprise_subject = {
 	global_trade_goods_size_modifier = 0.2
 	naval_tradition_from_trade = 0.1
 	ship_power_propagation = 0.1
+	development_cost = 0.15
 }
 
 self_governing_colony_subject = {
 	colonists = 1
-	development_cost = -0.15
 	liberty_desire = 25
+	development_cost = 0.1
 }
 
 march_subject = {
@@ -1720,16 +1726,16 @@ divert_trade = {
 ########################################
 
 karma_just_right = {
-	diplomatic_reputation = 2
-	discipline = 0.05
+	build_cost = -0.075
+	discipline = 0.025
 }
 
 karma_too_high = {
-	diplomatic_reputation = 1
+	build_cost = -0.15
 }
 
 karma_too_low = {
-	discipline = 0.025
+	discipline = 0.05
 }
 
 ########################################

@@ -30,6 +30,13 @@ has_mil_advisor = {
 			advisor = recruitmaster
 			advisor = fortification_expert
 			advisor = quartermaster
+			advisor = landsknecht
+			advisor = dragoon
+			advisor = howitzer
+			advisor = tactician
+			advisor = drill_master
+			advisor = siege_engineer
+			advisor = contractor
 		}
 	}
 }
@@ -51,6 +58,13 @@ has_mil_advisor_2 = {
 			recruitmaster = 2
 			fortification_expert = 2
 			quartermaster = 2
+			landsknecht = 2
+			dragoon = 2
+			howitzer = 2
+			tactician = 2
+			drill_master = 2
+			siege_engineer = 2
+			contractor = 2
 		}
 	}
 }
@@ -66,6 +80,13 @@ has_mil_advisor_3 = {
 			recruitmaster = 3
 			fortification_expert = 3
 			quartermaster = 3
+			landsknecht = 3
+			dragoon = 3
+			howitzer = 3
+			tactician = 3
+			drill_master = 3
+			siege_engineer = 3
+			contractor = 3
 		}
 	}
 }
@@ -81,6 +102,13 @@ has_adm_advisor = {
 			advisor = master_of_mint
 			advisor = inquisitor
 			advisor = natural_scientist
+			advisor = loyal_friend
+			advisor = missionary
+			advisor = governor
+			advisor = state_theorist
+			advisor = magistrate
+			advisor = chancellor
+			advisor = herald
 		}
 	}
 }
@@ -96,6 +124,13 @@ has_adm_advisor_2 = {
 			master_of_mint = 2
 			inquisitor = 2
 			natural_scientist = 2
+			loyal_friend = 2
+			missionary = 2
+			governor = 2
+			state_theorist = 2
+			magistrate = 2
+			chancellor = 2
+			herald = 2
 		}
 	}
 }
@@ -111,6 +146,13 @@ has_adm_advisor_3 = {
 			master_of_mint = 3
 			inquisitor = 3
 			natural_scientist = 3
+			loyal_friend = 3
+			missionary = 3
+			governor = 3
+			state_theorist = 3
+			magistrate = 3
+			chancellor = 3
+			herald = 3
 		}
 	}
 }
@@ -124,6 +166,13 @@ has_adm_advisor_of_level = {
 		master_of_mint = $level$
 		inquisitor = $level$
 		natural_scientist = $level$
+		loyal_friend = $level$
+		missionary = $level$
+		governor = $level$
+		state_theorist = $level$
+		magistrate = $level$
+		chancellor = $level$
+		herald = $level$
 	}
 }
 
@@ -136,6 +185,15 @@ has_dip_advisor_of_level = {
 		colonial_governor = $level$
 		navigator = $level$
 		spymaster = $level$
+		naval_tactician = $level$
+		visionary = $level$
+		reformist = $level$
+		overseer = $level$
+		jester = $level$
+		harbor_master = $level$
+		customs_officer = $level$
+		imperial_councilor = $level$
+		imperial_bureaucrat = $level$
 	}
 }
 
@@ -148,6 +206,13 @@ has_mil_advisor_of_level = {
 		recruitmaster = $level$
 		fortification_expert = $level$
 		quartermaster = $level$
+		landsknecht = $level$
+		dragoon = $level$
+		howitzer = $level$
+		tactician = $level$
+		drill_master = $level$
+		siege_engineer = $level$
+		contractor = $level$
 	}
 }
 
@@ -167,6 +232,15 @@ has_dip_advisor = {
 			advisor = colonial_governor
 			advisor = navigator
 			advisor = spymaster
+			advisor = naval_tactician
+			advisor = visionary
+			advisor = reformist
+			advisor = overseer
+			advisor = jester
+			advisor = harbor_master
+			advisor = customs_officer
+			advisor = imperial_councilor
+			advisor = imperial_bureaucrat
 		}
 	}
 }
@@ -182,6 +256,15 @@ has_dip_advisor_2 = {
 			colonial_governor = 2
 			navigator = 2
 			spymaster = 2
+			naval_tactician = 2
+			visionary = 2
+			reformist = 2
+			overseer = 2
+			jester = 2
+			harbor_master = 2
+			customs_officer = 2
+			imperial_councilor = 2
+			imperial_bureaucrat = 2
 		}
 	}
 }
@@ -197,6 +280,15 @@ has_dip_advisor_3 = {
 			colonial_governor = 3
 			navigator = 3
 			spymaster = 3
+			naval_tactician = 3
+			visionary = 3
+			reformist = 3
+			overseer = 3
+			jester = 3
+			harbor_master = 3
+			customs_officer = 3
+			imperial_councilor = 3
+			imperial_bureaucrat = 3
 		}
 	}
 }
@@ -207,6 +299,7 @@ is_subject_other_than_tributary_trigger = { #Ie Tags that cannot conduct indepen
 		tooltip = is_subject_other_than_tributary_trigger_tooltip
 		is_subject = yes
 		NOT = { is_subject_of_type = tributary_state }
+		NOT = { is_subject_of_type = teammate }
 		NOT = { is_subject_of_type = cultural_sphere_of_influence_subject }
 	}
 }
@@ -217,6 +310,7 @@ is_free_or_tributary_trigger = { #I.e. Tags that can conduct independent diploma
 		OR = {
 			is_subject = no
 			is_subject_of_type = tributary_state
+			is_subject_of_type = teammate
 			is_subject_of_type = cultural_sphere_of_influence_subject
 		}
 	}

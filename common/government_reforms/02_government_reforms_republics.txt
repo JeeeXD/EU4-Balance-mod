@@ -1379,8 +1379,6 @@ colonial_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		governing_capacity = 100
-		governing_capacity_modifier = 0.1
 		global_unrest = -15
 	}
 
@@ -1443,9 +1441,8 @@ crown_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		min_autonomy = 33
-		governing_capacity = 200
-		governing_capacity_modifier = 0.1
+		min_autonomy = 25
+		governing_capacity = 100
 		global_unrest = -15
 		move_capital_cost_modifier = 4
 		colonists = 3
@@ -1502,12 +1499,11 @@ private_enterprise_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		min_autonomy = 33
+		min_autonomy = 25
 		global_ship_trade_power = 0.2
 		merchants = 1
 		max_absolutism = -20
-		governing_capacity = 200
-		governing_capacity_modifier = 0.1
+		governing_capacity = 100
 		global_unrest = -15
 		move_capital_cost_modifier = 4
 		colonists = 3
@@ -1564,9 +1560,8 @@ self_governing_colony_government = {
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
-		min_autonomy = 40
-		governing_capacity = 500
-		governing_capacity_modifier = 0.2
+		min_autonomy = 33
+		governing_capacity = 300
 		global_unrest = -15
 		move_capital_cost_modifier = 4
 		colonists = 3

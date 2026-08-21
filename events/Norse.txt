@@ -146,7 +146,7 @@ country_event = {
 		NOT = { has_country_flag = had_norse_discovery_event }
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 		#Owning Bergslagen should shorten it substantially
 		modifier = {
 			owns = 4
@@ -214,7 +214,7 @@ country_event = {
 		NOT = { has_country_flag = had_norce_province_conversion_event }
 	}
 	mean_time_to_happen = {
-		months = 50
+		months = 12
 		#Owning Bergslagen should shorten it substantially
 		modifier = {
 			owns = 4
@@ -298,7 +298,7 @@ country_event = {
 		NOT = { has_country_flag = had_norse_country_conversion_event }
 	}
 	mean_time_to_happen = {
-		months = 20
+		months = 12
 		#Owning Bergslagen should shorten it substantially
 		modifier = {
 			owns = 4

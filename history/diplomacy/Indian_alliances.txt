@@ -151,13 +151,6 @@ vassal = {
 
 #Vijayanagar
 
-alliance = { #Vijayanagara and the Reddys
-	first = VIJ
-	second = YOR
-	start_date = 1443.1.1
-	end_date = 1448.1.1
-}
-
 #Vassal of Vijayanagara
 vassal = {
 	first = VIJ

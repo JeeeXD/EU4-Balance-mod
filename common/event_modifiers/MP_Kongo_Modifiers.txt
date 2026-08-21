@@ -1,0 +1,5 @@
+kon_reform_special_unit = {
+	infantry_power = 0.1
+	morale_damage_received = -0.15
+	is_musketeer_modifier = yes
+}

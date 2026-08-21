@@ -177,6 +177,7 @@ country_decisions = {
 			}
 			HAB = {
 				is_subject = no
+				ai = yes
 			}
 		}
 		ai_will_do = {
@@ -196,6 +197,8 @@ country_decisions = {
 			set_country_flag = used_bav_war_austria
 		}
 	}
+
+	
 
 }
 

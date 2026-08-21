@@ -1,0 +1,13 @@
+son_dev_stuff = {
+	development_cost = -0.15
+}
+
+son_better_fort = {
+	local_fort_maintenance_modifier = -1
+	local_defensiveness = 0.5
+}
+
+son_advisor_courts = {
+	advisor_cost = -0.15
+}
+

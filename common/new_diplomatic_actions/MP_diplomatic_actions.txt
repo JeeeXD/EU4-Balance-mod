@@ -9,11 +9,6 @@ create_influenced_free_city = {
 	is_visible = {
 		ROOT ={
 			is_part_of_hre = yes
-			NOT = {
-			any_subject_country = {
-				has_reform = influenced_free_city
-			}
-		}
 		}
 		FROM = {
 			is_subject_of = ROOT
@@ -63,6 +58,54 @@ create_influenced_free_city = {
 			add_government_reform = influenced_free_city
 		}
 		swap_non_generic_missions = yes
+		}
+		
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+add_teammate = {
+	category = influence
+
+	alert_index = 17 #doesn't matter. it is forced onto the subject
+	alert_tooltip = sell_indulgence_alert_tooltip #doesn't matter. it is forced onto the subject
+
+	require_acceptance = no
+
+	is_visible = {
+		always = no
+		has_global_flag = teams_enabled
+		ROOT ={
+			NOT = {
+				is_subject_of_type = teammate
+			}
+			NOT = {
+				teammate = 2
+		    }
+			ai = no
+		}
+		FROM = {
+			NOT = {
+				is_subject_of_type = teammate
+			}
+		}
+	}
+	is_allowed = {
+		ROOT ={
+			NOT = {
+				teammate = 2
+		    }
+		}
+	}
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				subject = FROM
+				subject_type = teammate
+			}
 		}
 		
 	}

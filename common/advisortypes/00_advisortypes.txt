@@ -1946,7 +1946,7 @@ customs_officer = {
 	allow_only_male = yes
 
 	# Bonus
-	embargo_efficiency = 0.15
+	embargo_efficiency = 0.33
 
 	chance = {
 		factor = 1
@@ -1972,6 +1972,10 @@ imperial_councilor = {
 			owner = { NOT = { is_emperor = yes } }
 		}
 	}
+
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 imperial_bureaucrat = {
@@ -1988,6 +1992,10 @@ imperial_bureaucrat = {
 			factor = 0
 			owner = { NOT = { is_emperor_of_china = yes } }
 		}
+	}
+
+	ai_will_do = {
+		factor = 1
 	}
 	
 }

@@ -196,6 +196,10 @@ country_event = {
 				factor = 1.5
 				FRA = { is_rival = ROOT }
 			}
+			modifier = {
+				factor = 10000
+				has_global_flag = teams_enabled
+			}
 		}
 		trigger = {
 			FRA = { 
@@ -223,6 +227,8 @@ country_event = {
 		custom_tooltip = bur_france_may_get_mad_tt
 		custom_tooltip = lowland_privilege_tt
 		custom_tooltip = inherit_all_subjects_tt
+		add_dip_power  = -600
+		add_manpower = -6
 		hidden_effect = {
 			FRA = {
 				if = {
@@ -314,6 +320,9 @@ country_event = {
 			}
 		}
 		trigger = { 
+			NOT = {
+				has_global_flag = teams_enabled
+			}
 			FRA = { 
 				OR = {
 					exists = no
@@ -346,6 +355,9 @@ country_event = {
 		trigger = {
 			emperor = {
 				exists = yes
+			}
+			NOT = {
+				has_global_flag = teams_enabled
 			}
 		}
 		ai_chance = {
@@ -443,6 +455,9 @@ country_event = {
 	option = { #strong ally
 		name = "incidents_bur_inheritance.1.d"
 		trigger = {
+			NOT = {
+				has_global_flag = teams_enabled
+			}
 			has_saved_event_target = bur_strongest_ally
 			any_country = {
 				is_free_or_tributary_trigger = yes
@@ -559,6 +574,9 @@ country_event = {
 	option = { #side with the French
 		name = "incidents_bur_inheritance.1.e"
 		trigger = {
+			NOT = {
+				has_global_flag = teams_enabled
+			}
 			FRA = {
 				exists = yes
 				government = monarchy

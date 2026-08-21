@@ -1,4 +1,4 @@
-# INSTRUCTIONS:
+ing # INSTRUCTIONS:
 #
 # condition				A diplomatic action can have any number of condition blocks, each with its own
 #						tooltip, potential and allow section
@@ -184,6 +184,22 @@ declarewar = {
 		}
 		if = {
 			limit = { 
+				is_subject_of_type = teammate
+			}
+			overlord = {
+				join_all_offensive_wars_of = ROOT
+			}
+		}
+		if = {
+			limit = { 
+				FROM = { is_subject_of_type = teammate }
+			}
+			overlord = {
+				join_all_defensive_wars_of = ROOT
+			}
+		}
+		if = {
+			limit = { 
 				has_country_flag = nor_norwegian_independence_modifier
 				FROM = { tag = DAN }
 			}
@@ -353,6 +369,18 @@ allianceaction = {
 		}
 		allow = {
 			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
+		}
+	}
+	condition = {
+		tooltip = ai_daimyo_cant_ally_independent
+		potential = {
+			has_reform = daimyo
+			FROM = {
+				is_subject = no
+			}
+		}
+		allow = {
+			ai = no
 		}
 	}
 	effect = {
@@ -792,7 +820,36 @@ warsubsidy = {
 	condition = {
 		tooltip = sea_warsubsidy_tt
 		potential = {
-			FROM = { NOT = { is_subject_of = ROOT } }
+			FROM = { NOT = { 
+				OR = {
+					is_subject_of = ROOT
+					AND = {
+						has_global_flag = teams_enabled
+						alliance_with = ROOT
+					}
+				}
+			 } }
+		}
+		allow = {
+			always = no
+		}
+	}
+	
+}
+
+transfer_trade_power = {
+	condition = {
+		tooltip = sea_warsubsidy_tt
+		potential = {
+			FROM = { NOT = { 
+				OR = {
+					is_subject_of = ROOT
+					AND = {
+						has_global_flag = teams_enabled
+						alliance_with = ROOT
+					}
+				}
+			 } }
 		}
 		allow = {
 			always = no

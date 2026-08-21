@@ -53,7 +53,7 @@ country_decisions = {
 			owns_core_province = 1869
 			is_free_or_tributary_trigger = yes
 			num_of_owned_provinces_with = {
-				value = 50
+				value = 40
 				region = south_german_region
 			}
 			is_at_war = no

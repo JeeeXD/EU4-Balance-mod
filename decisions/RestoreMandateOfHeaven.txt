@@ -11,6 +11,7 @@ country_decisions = {
 				tag = SIA
 				tag = BRM
 				tag = LFA
+				tag = YUA
 				has_country_flag = can_restore_mandate
 			}
 			NOT = {

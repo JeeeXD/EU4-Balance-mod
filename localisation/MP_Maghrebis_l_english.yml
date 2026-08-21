@@ -220,9 +220,9 @@ fatimid_infantry_desc: "While cavalry and mercenaries form the backbone of our f
 maghrebi_starter_mil_title: "Maghrebi Warfare"
 maghrebi_starter_mil_desc: "The armies of the Maghreb are shaped by harsh terrain, long distances, and diverse traditions of war. By laying strong military foundations now, we prepare our state for both regional defense and future expansion."
 
-maghrebi_fortify_cueta: "Fortify Ceuta"
+maghrebi_fortify_cueta_title: "Fortify Ceuta"
 maghrebi_fortify_cueta_desc: "The city of Ceuta is a strategic gateway between the Mediterranean and the Atlantic. By strengthening its fortifications, we ensure that our trade routes remain secure and that our influence in the region is unchallenged."
-maghrebi_fortify_tafilalt: "Fortify Tafilalt"
+maghrebi_fortify_tafilalt_title: "Fortify Tafilalt"
 maghrebi_fortify_tafilalt_desc: "The oasis of Tafilalt is a vital source of water and trade in the desert. By fortifying this region, we protect our caravans and maintain control over the flow of goods and resources through the Maghreb."
 ### Event ###
 flavor_maghrebi.1.T: "The Fate of Rome"

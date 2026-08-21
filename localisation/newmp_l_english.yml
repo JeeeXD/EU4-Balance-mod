@@ -501,3 +501,26 @@ EVTOPTC4116: "His skills are not needed at this time, but we can always call upo
 control_of_canton: "Control of Canton"
 control_of_beijing: "Control of Beijing"
 control_of_nanjing: "Control of Nanjing"
+
+teammate: "Teammate"
+add_teammate_title: "Add Teammate"
+teammate_long_desc: "This is our best buddy."
+teammate_is_our: "$NAME|Y$ is our teammate."
+teammate_title: "Teammate"
+teammate_title_plural: "Teammates"
+is_teammate: "Is Teammate"
+
+reform_korea_title: "Reform Korean Administration"
+enable_teams_mode_title: "Enable Teams Mode"
+
+estate_burghers_court_privilige: "Burghers Development Rights"
+estate_burghers_court_privilige_desc: ""
+estate_church_court_privilige: "Administrative Clergy"
+estate_church_court_privilige_desc: ""
+estate_tribes_court_privilige: "Horse Breeding"
+estate_tribes_court_privilige_Desc: ""
+estate_nobles_court_privilige: "Organized Defensive Positions"
+estate_nobles_court_privilige_desc: ""
+
+court_ideas_new_priv_tt: "Unlocks new estate privilges for the §YNobles§!, §YClergy§!, §YBurghers§!, and §YNomadic Tribes§!."
+court_ideas_disaster_prevention_tt: "§YBlocks all Estate Disasters.§!"

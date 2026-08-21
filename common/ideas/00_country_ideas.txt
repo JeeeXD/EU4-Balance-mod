@@ -311,9 +311,9 @@ EIC_ideas = {
 
 SWE_ideas = {
 	start = {
-		infantry_power = 0.2
+		infantry_power = 0.15
 		merc_maintenance_modifier = -0.15
-	}
+	}   
 
 	bonus = {
 		leader_land_shock = 1
@@ -601,7 +601,7 @@ GOT_ideas = {
 SCA_ideas = {
 	start = {
 		discipline = 0.05
-		global_trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier = 0.1
 	}
 	
 	bonus = {
@@ -662,7 +662,7 @@ MOS_ideas = {
 		army_tradition = 0.5
 	}
 	seat_of_metropolitan_bishop  = {
-		tolerance_own = 1
+		tolerance_own = 4
 		global_missionary_strength = 0.01
 	}
 	pomestnoe_voisko = {
@@ -1705,7 +1705,7 @@ POR_ideas = {
 POL_ideas = {
 	start = {
 		cavalry_cost = -0.1
-		num_accepted_cultures = 1
+		infantry_power = 0.1
 	}
 	
 	bonus = {
@@ -1725,7 +1725,7 @@ POL_ideas = {
 		war_exhaustion = -0.02
 	}
 	peichota_wybraniecka = {
-		infantry_power = 0.1
+		cav_to_inf_ratio = 0.15
 	}
 	winged_hussars = {
 		cavalry_power = 0.1
@@ -1855,6 +1855,7 @@ PLC_ideas = {
 	}
 	plc_refine_our_golden_liberty = { #Same for all of them
 		country_admin_power = 1 
+		cav_to_inf_ratio = 0.15
 	}
 	pol_royal_guards = {
 		land_morale = 0.1
@@ -2324,7 +2325,7 @@ SCO_Ideas = {
 
 HUN_ideas = {
 	start = {
-		cavalry_power = 0.1
+		cavalry_power = 0.2
 		army_tradition_decay = -0.01
 	}
 	
@@ -2779,11 +2780,11 @@ MLO_ideas = {
 BYZ_ideas = {
 	start = {
 		advisor_cost = -0.10
-		improve_relation_modifier = 0.2
+		core_creation = -0.25
 	}
 	
 	bonus = {
-		tolerance_own = 3
+		tolerance_own = 6
 	}
 	
 	trigger = {
@@ -2796,7 +2797,7 @@ BYZ_ideas = {
 	}
 	
 	byz_roman_empire = {
-		core_creation = -0.25
+		land_forcelimit_modifier = 0.25
 	}
 	
 	ecumenical_patriarch = {
@@ -2809,15 +2810,16 @@ BYZ_ideas = {
 	}
 	
 	byz_protect_the_frontiers = {
-		defensiveness = 0.15
+		defensiveness = 0.33
 	}
 	
 	byz_strategikon = {
 		discipline = 0.05
+		backrow_artillery_damage = 0.15
 	}
 
 	new_imperial_army = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.25
 	}
 }
 
@@ -4967,7 +4969,7 @@ TRE_ideas = {
 GEO_ideas = {
 	start = {
 		defensiveness = 0.33
-		infantry_power = 0.2
+		infantry_power = 0.1
 	}
 	
 	bonus = {
@@ -17122,7 +17124,7 @@ BLI_ideas = {
 
 SUN_ideas = {
 	start = {
-		tolerance_heretic = 1
+		naval_morale = 0.2
 		manpower_recovery_speed = 0.2
 	}
 	bonus = {
@@ -17927,6 +17929,7 @@ KIT_ideas = {
 	kit_nile_conquest = {
 		special_unit_forcelimit = 0.33
 		special_unit_cost_modifier = -0.15
+		has_musketeer = yes
 	}
 	kit_rich_history = {
 		production_efficiency = 0.15
@@ -18676,8 +18679,8 @@ NGR_ideas = {
 
 SGR_ideas = {
 	start = {
-		development_cost = -0.1
 		production_efficiency = 0.2
+		global_religious_conversion_resistance = 1
 	}
 	
 	bonus = {
@@ -18695,6 +18698,7 @@ SGR_ideas = {
 	}
 	SGR_2 = {
 		land_morale = 0.15
+		development_cost = -0.1
 	}
 	SGR_3 = {
 		papal_influence = 4
@@ -18708,8 +18712,10 @@ SGR_ideas = {
 		interest = -0.5
 	}
 	SGR_6 = {
-		diplomatic_annexation_cost = -0.2
-		chance_to_inherit = 0.5
+		tolerance_own = 3
+		establish_order_cost = -0.15
+		max_hostile_attrition = 2
+		hostile_attrition = 1
 	}
 	SGR_7 = {
 		discipline = 0.05
@@ -19984,7 +19990,7 @@ VIN_ideas = {
 	}
 	VIN_5 = {
 		galley_power = 0.25
-		galley_hullsize = 0.1
+		galley_cost = -0.15
 	}
 	VIN_6 = {
 		manpower_in_true_faith_provinces = 0.25

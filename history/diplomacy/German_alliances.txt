@@ -1106,3 +1106,12 @@ royal_marriage = {
 	start_date = 1573.10.14
 	end_date = 1608.1.1
 }
+
+
+
+vassal = {
+	first = LBV
+	second = SLZ
+	start_date = 1444.1.1
+	end_date = 1526.1.1
+}

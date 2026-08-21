@@ -27,11 +27,11 @@ kiel_canal = {
 		FROM = {
 			owns_or_vassal_of = 1775
 			owns_or_vassal_of = 4141		
-			OR = { 
-				mission_completed = emp_brapru_kiel_canal
-				mission_completed = GER_german_industry
-				adm_tech = 22
-			}
+			#OR = { 
+			#	mission_completed = emp_brapru_kiel_canal
+			#	mission_completed = GER_german_industry
+			#	adm_tech = 22
+			#}
 		}
 	}
 	
@@ -217,13 +217,13 @@ suez_canal = {
 		FROM = {
 			owns_or_vassal_of = 4316
 			owns_or_vassal_of = 2315
-			OR = {
-				adm_tech = 22
-				mission_completed = mam_highway_empire
-				mission_completed = hsn_suez_canal
-				mission_completed = ITA_explore_eastern_markets
-				mission_completed = ven_mamluk_suez
-			}
+			#OR = {
+			#	adm_tech = 22
+			#	mission_completed = mam_highway_empire
+			#	mission_completed = hsn_suez_canal
+			#	mission_completed = ITA_explore_eastern_markets
+			#	mission_completed = ven_mamluk_suez
+			#}
 		}
 	}
 
@@ -453,13 +453,13 @@ panama_canal = {
 	build_trigger = {
 		FROM = {
 			owns_or_vassal_of = 835
-			if = {
-				limit = {
-					NOT = { mission_completed = SUN_panama_canal }
-					NOT = { mission_completed = SUNm_panama_canal }
-				}
-				adm_tech = 22
-			}
+			#if = {
+			#	limit = {
+			#		NOT = { mission_completed = SUN_panama_canal }
+			#		NOT = { mission_completed = SUNm_panama_canal }
+			#	}
+			#	adm_tech = 22
+			#}
 		}
 	}
 

@@ -31,7 +31,7 @@ aristocracy_ideas = {
 		development_cost = -0.05
 	}
 	noble_resilience = {
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.2
 		cavalry_cost = -0.10
 	}
 	noble_officers = {
@@ -1775,6 +1775,9 @@ court_ideas = {
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1
 		loyalty_change_on_revoked = 0.05
+		effect = {
+			custom_tooltip = court_ideas_disaster_prevention_tt
+		}
 	}
 	welcoming_ceremonies = {
 		prestige = 1 
@@ -1795,6 +1798,9 @@ court_ideas = {
 		possible_policy = 1
 		monarch_diplomatic_power = 1 
 		monarch_admin_power = 1
+		effect = {
+			custom_tooltip = court_ideas_new_priv_tt
+		}
 	}
 
 	ai_will_do = {

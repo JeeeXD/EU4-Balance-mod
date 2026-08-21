@@ -15,6 +15,11 @@ add_accepted_culture = khalkha
 		dip = 4
 		mil = 4
 	}
+
+	add_country_modifier = {
+		name = cant_dec_war_nerf
+		duration = -1
+	}
 }
 
 1408.1.1 = {

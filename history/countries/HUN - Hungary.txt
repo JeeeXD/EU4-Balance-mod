@@ -13,14 +13,14 @@ change_estate_land_share = {
 	share = -5
 }
 
-1387.3.31 = {
+1420.3.31 = {
 	monarch = {
 		name = "Sigismund I"
 		dynasty = "von Luxemburg"
-		birth_date = 1368.2.14	
-		adm = 4
+		birth_date = 1400.2.14	
+		adm = 5
 		dip = 3
-		mil = 3
+		mil = 4
 	}
 }
 
@@ -30,14 +30,7 @@ change_estate_land_share = {
 # Personal union with Habsburg under Albrecht II 1437-39
 # Personal union with Poland under Wladyslaw III 1439-44
 
-1444.11.10 = {
-	monarch = {
-		adm = 0
-		mil = 0
-		dip = 0
-		regent = yes
-	}
-}
+
 
 # Personal union with Habsburg under Ladislaus the Posthumous 1452-1457
 1452.1.1 = {

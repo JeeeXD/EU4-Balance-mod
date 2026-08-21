@@ -825,6 +825,7 @@ swe_diplomacy_mission_slot = {
 			}
 			else = {
 				is_subject = no
+				has_dip_advisor_2 = yes
 			}
 		}
 		effect = {
@@ -837,7 +838,7 @@ swe_diplomacy_mission_slot = {
 				}
 			}
 			else = {
-				add_dip_power = 100
+				add_prestige = 20
 			}
 		}
 	}
@@ -2113,20 +2114,8 @@ swe_internal_slot = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						has_country_modifier = swe_vasa_leads_the_rebellion
-						is_subject = no
-					}
-				}
-				add_adm_power = 100
-				add_mil_power = 100
-			}
-			else = {
-				country_event = {
-					id = flavor_swe.104
-				}
+			country_event = {
+				id = flavor_swe.104
 			}
 		}
 	}
@@ -2546,6 +2535,7 @@ swe_swedish_military_mission_slot = {
 		required_missions = {}
 		provinces_to_highlight = {}
 		trigger = {
+			monthly_adm = 12
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = swe_gain_support_from_estates_ct
@@ -2589,9 +2579,11 @@ swe_swedish_military_mission_slot = {
 				limit = {
 					is_free_or_tributary_trigger = yes
 				}
-				add_adm_power = 50
-				add_dip_power = 50
-				add_mil_power = 50
+				define_advisor = {
+					type = treasurer
+					cost_multiplier = 0.8
+					skill = 3
+				}
 			}
 			else = {
 				if = {

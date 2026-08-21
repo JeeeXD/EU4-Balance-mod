@@ -1,0 +1,54 @@
+country_decisions = {
+
+	reform_korea = {
+		major = yes
+		potential = {
+			tag = KOR
+			has_global_flag = teams_enabled
+			NOT = {
+				has_country_flag = reformed_korea
+			}
+		}
+		provinces_to_highlight = {
+			
+		}
+		allow = {
+			korea_region = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		effect = {
+			grant_independence = yes
+			add_government_reform = korean_monarchy
+			set_country_flag = reformed_korea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	enable_teams_mode = {
+		potential = {
+			NOT = {
+				has_global_flag = teams_enabled
+			}
+			NOT = {
+				is_year = 1446
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			ai = no
+			NOT = {
+				has_global_flag = teams_enabled
+			}
+		}
+		effect = {
+			set_global_flag = teams_enabled
+		}
+	}
+}
