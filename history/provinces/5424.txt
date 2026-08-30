@@ -1,0 +1,14 @@
+base_tax = 3
+base_manpower = 3
+base_production = 3
+religion = shamanism
+
+trade_goods = unknown
+culture = bantu
+discovered_by = east_african
+discovered_by = central_african
+
+native_size = 2
+native_hostileness = 8
+native_ferocity = 9
+

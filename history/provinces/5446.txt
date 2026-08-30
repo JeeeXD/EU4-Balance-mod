@@ -1,0 +1,12 @@
+base_tax = 1
+base_manpower = 1
+base_production = 3
+add_core = TYO
+owner = TYO
+religion = shamanism
+controller = TYO
+is_city = yes
+culture = kongolese
+discovered_by = sub_saharan
+discovered_by = central_african
+trade_goods = sugar

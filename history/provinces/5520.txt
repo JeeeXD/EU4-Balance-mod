@@ -1,0 +1,12 @@
+base_tax = 2
+base_manpower = 2
+base_production = 3
+add_core = ZIM
+owner = ZIM
+religion = shamanism
+controller = ZIM
+is_city = yes
+trade_goods = naval_supplies
+culture = shona
+discovered_by = east_african
+discovered_by = central_african

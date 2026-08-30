@@ -1,0 +1,13 @@
+base_tax = 2
+base_manpower = 2
+base_production = 2
+add_core = SOS
+owner = SOS
+religion = sunni
+controller = SOS
+is_city = yes
+trade_goods = fish
+culture = berber
+discovered_by = ottoman
+discovered_by = western
+discovered_by = muslim

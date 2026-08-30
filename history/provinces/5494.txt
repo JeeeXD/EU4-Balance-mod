@@ -1,0 +1,14 @@
+base_tax = 1
+base_manpower = 1
+base_production = 1
+religion = shamanism
+
+trade_goods = unknown
+culture = mbundu
+discovered_by = central_african
+discovered_by = sub_saharan
+
+native_size = 38
+native_hostileness = 9
+native_ferocity = 7
+

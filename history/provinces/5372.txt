@@ -1,0 +1,14 @@
+base_tax = 3
+base_manpower = 3
+base_production = 3
+religion = shamanism
+trade_goods = unknown
+culture = pahuin
+
+discovered_by = central_african
+discovered_by = sub_saharan
+
+native_size = 12
+native_hostileness = 8
+native_ferocity = 3
+

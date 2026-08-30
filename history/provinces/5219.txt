@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 2
+base_production = 1
+add_core = AIR
+owner = AIR
+religion = sunni
+controller = AIR
+is_city = yes
+trade_goods = wool
+culture = tuareg
+discovered_by = sub_saharan

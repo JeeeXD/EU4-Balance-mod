@@ -1,0 +1,14 @@
+add_core = MOR
+discovered_by = western
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = muslim
+owner = MOR
+base_tax = 4
+base_manpower = 2
+base_production = 3
+culture = moroccan
+trade_goods = salt
+religion = sunni
+controller = MOR
+is_city = yes

@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 3
+base_production = 3
+add_core = OYO
+owner = OYO
+religion = shamanism
+controller = OYO
+is_city = yes
+trade_goods = tropical_wood
+culture = dagomba
+discovered_by = sub_saharan

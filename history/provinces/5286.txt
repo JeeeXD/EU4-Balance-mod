@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 3
+base_production = 3
+add_core = NUP
+owner = NUP
+religion = shamanism
+controller = NUP
+is_city = yes
+trade_goods = ivory
+culture = nupe
+discovered_by = sub_saharan

@@ -1,0 +1,14 @@
+base_tax = 3
+base_manpower = 3
+base_production = 3
+add_core = SFA
+owner = SFA
+religion = sunni
+controller = SFA
+is_city = yes
+trade_goods = fish
+culture = shona
+discovered_by = ottoman
+discovered_by = muslim
+discovered_by = east_african
+discovered_by = central_african

@@ -1,0 +1,11 @@
+base_tax = 3
+base_manpower = 4
+base_production = 2
+add_core = TBK
+owner = TBK
+religion = shamanism
+controller = TBK
+is_city = yes
+trade_goods = grain
+culture = nyasa
+discovered_by = central_african

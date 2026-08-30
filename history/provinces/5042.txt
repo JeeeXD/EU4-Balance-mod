@@ -1,0 +1,13 @@
+add_core = TUN
+discovered_by = western
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = muslim
+owner = TUN
+base_tax = 3
+base_manpower = 2
+base_production = 2
+culture = tunisian
+religion = sunni
+controller = TUN
+is_city = yes

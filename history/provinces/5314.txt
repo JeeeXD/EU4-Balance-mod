@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 1
+base_production = 3
+add_core = YAO
+owner = YAO
+religion = shamanism
+controller = YAO
+is_city = yes
+trade_goods = slaves
+culture = bilala
+discovered_by = sub_saharan

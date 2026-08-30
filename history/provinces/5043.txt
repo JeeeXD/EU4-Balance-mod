@@ -1,0 +1,15 @@
+add_core = ZAN
+discovered_by = east_african
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = central_african
+owner = ZAN
+base_tax = 2
+base_manpower = 3
+base_production = 2
+culture = swahili
+trade_goods = cloth
+religion = sunni
+controller = ZAN
+is_city = yes

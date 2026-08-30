@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 2
+base_production = 1
+add_core = DAM
+owner = DAM
+religion = coptic
+controller = DAM
+is_city = yes
+trade_goods = livestock
+culture = sidamo
+discovered_by = east_african

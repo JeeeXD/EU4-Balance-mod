@@ -1,0 +1,13 @@
+base_tax = 5
+base_manpower = 3
+base_production = 4
+center_of_trade = 1
+extra_cost = 8
+add_core = NKO
+owner = NKO
+religion = shamanism
+controller = NKO
+is_city = yes
+trade_goods = fish
+culture = ganda
+discovered_by = central_african

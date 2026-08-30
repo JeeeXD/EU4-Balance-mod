@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 2
+base_production = 3
+add_core = KRW
+owner = KRW
+religion = shamanism
+controller = KRW
+is_city = yes
+trade_goods = naval_supplies
+culture = rwandan
+discovered_by = central_african

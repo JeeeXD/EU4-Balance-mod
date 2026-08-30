@@ -1,0 +1,11 @@
+add_core = MAL
+owner = MAL
+base_tax = 3
+base_manpower = 3
+base_production = 3
+culture = mali
+trade_goods = naval_supplies
+religion = shamanism
+controller = MAL
+is_city = yes
+discovered_by = sub_saharan

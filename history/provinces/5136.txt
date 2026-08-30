@@ -1,0 +1,14 @@
+add_core = ADA
+discovered_by = east_african
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+owner = ADA
+base_tax = 3
+base_manpower = 3
+base_production = 3
+culture = harari
+trade_goods = cloth
+religion = sunni
+controller = ADA
+is_city = yes

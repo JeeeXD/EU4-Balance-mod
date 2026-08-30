@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 1
+base_production = 1
+add_core = BNY
+owner = BNY
+religion = shamanism
+controller = BNY
+is_city = yes
+culture = acholi
+discovered_by = central_african
+trade_goods = tropical_wood

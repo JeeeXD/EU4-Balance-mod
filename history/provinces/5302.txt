@@ -1,0 +1,16 @@
+base_tax = 2
+base_manpower = 1
+base_production = 1
+religion = shamanism
+trade_goods = unknown
+culture = sawabantu
+
+discovered_by = sub_saharan
+discovered_by = KON
+discovered_by = LOA
+
+
+native_size = 96
+native_hostileness = 9
+native_ferocity = 3
+

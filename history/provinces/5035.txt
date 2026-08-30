@@ -1,0 +1,7 @@
+discovered_by = central_african
+base_tax = 2
+base_manpower = 3
+base_production = 4
+culture = masaba
+trade_goods = unknown
+religion = shamanism

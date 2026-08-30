@@ -1,0 +1,14 @@
+base_tax = 2
+base_manpower = 2
+base_production = 3
+religion = shamanism
+
+trade_goods = unknown
+culture = makua
+discovered_by = east_african
+discovered_by = central_african
+
+native_size = 70
+native_hostileness = 5
+native_ferocity = 7
+

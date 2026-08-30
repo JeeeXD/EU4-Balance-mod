@@ -1,0 +1,12 @@
+base_tax = 1
+base_manpower = 3
+base_production = 3
+religion = shamanism
+
+trade_goods = unknown
+culture = sotho
+
+native_size = 63
+native_hostileness = 3
+native_ferocity = 8
+

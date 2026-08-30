@@ -1,0 +1,11 @@
+base_tax = 1
+base_manpower = 1
+base_production = 1
+religion = shamanism
+trade_goods = unknown
+culture = nubian
+
+native_size = 6
+native_hostileness = 6
+native_ferocity = 3
+

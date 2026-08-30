@@ -1,0 +1,14 @@
+base_tax = 1
+base_manpower = 2
+base_production = 3
+religion = shamanism
+trade_goods = unknown
+culture = gbaya
+
+discovered_by = central_african
+discovered_by = sub_saharan
+
+native_size = 93
+native_hostileness = 7
+native_ferocity = 4
+

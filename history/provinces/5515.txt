@@ -1,0 +1,11 @@
+base_tax = 4
+base_manpower = 2
+base_production = 3
+add_core = MRA
+owner = MRA
+religion = shamanism
+controller = MRA
+is_city = yes
+trade_goods = fish
+culture = nyasa
+discovered_by = central_african

@@ -1,0 +1,11 @@
+base_tax = 3
+base_manpower = 2
+base_production = 1
+add_core = KZB
+owner = KZB
+religion = shamanism
+controller = KZB
+is_city = yes
+trade_goods = fish
+culture = luba
+discovered_by = central_african

@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 3
+base_production = 1
+add_core = WAD
+owner = WAD
+religion = shamanism
+controller = WAD
+is_city = yes
+trade_goods = wool
+culture = tunjur
+discovered_by = sub_saharan

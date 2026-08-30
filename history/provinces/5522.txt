@@ -1,0 +1,12 @@
+base_tax = 3
+base_manpower = 3
+base_production = 3
+add_core = SFA
+owner = SFA
+religion = sunni
+controller = SFA
+is_city = yes
+trade_goods = copper
+culture = nguni
+discovered_by = central_african
+discovered_by = east_african

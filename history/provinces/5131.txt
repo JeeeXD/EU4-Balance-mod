@@ -1,0 +1,14 @@
+base_tax = 3
+base_manpower = 1
+base_production = 1
+add_core = MED
+owner = MED
+religion = coptic
+controller = MED
+is_city = yes
+culture = beja
+discovered_by = ottoman
+discovered_by = muslim
+discovered_by = east_african
+discovered_by = indian
+trade_goods = slaves

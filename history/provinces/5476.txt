@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 2
+base_production = 2
+add_core = KIK
+owner = KIK
+religion = shamanism
+controller = KIK
+is_city = yes
+trade_goods = ivory
+culture = luba
+discovered_by = central_african

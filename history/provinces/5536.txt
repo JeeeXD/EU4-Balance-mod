@@ -1,0 +1,13 @@
+base_tax = 3
+base_manpower = 2
+base_production = 4
+religion = shamanism
+
+trade_goods = unknown
+culture = zambezi_culture
+discovered_by = central_african
+
+native_size = 19
+native_hostileness = 8
+native_ferocity = 8
+

@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 1
+base_production = 3
+add_core = MAL
+owner = MAL
+religion = shamanism
+controller = MAL
+is_city = yes
+trade_goods = grain
+culture = soninke
+discovered_by = sub_saharan

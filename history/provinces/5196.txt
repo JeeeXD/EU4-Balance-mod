@@ -1,0 +1,11 @@
+base_tax = 3
+base_manpower = 2
+base_production = 1
+add_core = BNY
+owner = BNY
+religion = shamanism
+controller = BNY
+is_city = yes
+trade_goods = naval_supplies
+culture = ganda
+discovered_by = central_african

@@ -1,0 +1,11 @@
+base_tax = 2
+base_manpower = 3
+base_production = 1
+add_core = DAH
+owner = DAH
+religion = shamanism
+controller = DAH
+is_city = yes
+trade_goods = ivory
+culture = aka
+discovered_by = sub_saharan

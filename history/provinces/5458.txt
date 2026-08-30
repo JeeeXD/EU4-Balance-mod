@@ -1,0 +1,11 @@
+base_tax = 3
+base_manpower = 3
+base_production = 3
+add_core = LND
+owner = LND
+religion = shamanism
+controller = LND
+is_city = yes
+trade_goods = livestock
+culture = lunda
+discovered_by = central_african

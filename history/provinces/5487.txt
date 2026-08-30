@@ -1,0 +1,14 @@
+base_tax = 3
+base_manpower = 2
+base_production = 3
+religion = shamanism
+trade_goods = unknown
+culture = chokwe
+discovered_by = central_african
+center_of_trade = 1
+extra_cost = 8
+
+native_size = 57
+native_hostileness = 6
+native_ferocity = 5
+

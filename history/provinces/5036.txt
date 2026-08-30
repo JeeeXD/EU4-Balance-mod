@@ -1,0 +1,7 @@
+discovered_by = sub_saharan
+base_tax = 2
+base_manpower = 3
+base_production = 2
+culture = sara
+trade_goods = unknown
+religion = shamanism
