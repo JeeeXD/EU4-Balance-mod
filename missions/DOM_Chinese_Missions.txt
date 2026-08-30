@@ -577,6 +577,7 @@ chinese_kingdoms_1 = {
 					value = 90
 				}
 				is_emperor_of_china = yes
+				owns_core_province = 1816
 			}
 			custom_trigger_tooltip = {
 				tooltip = chi_strongest_warlord_tt

@@ -420,7 +420,6 @@ nepal_3 = {
 		}
 		trigger = {
 			2128 = {
-				has_production_building_trigger = yes
 				base_production = 10
 				num_free_building_slots = 0
 			}
