@@ -2398,6 +2398,8 @@ plantations = {
 		tobacco
 		tea
 		cocoa
+		pizza
+		beer
 	}
 	onmap = yes
 	on_built = {
@@ -2440,6 +2442,7 @@ tradecompany = {
 		cloves
 		fur
 		incense
+		kangaroos
 	}
 	onmap = yes
 	on_built = {
@@ -2479,6 +2482,9 @@ farm_estate = {
 		grain
 		livestock
 		wine
+		camel
+		potato
+		tomato
 	}
 	onmap = yes
 	on_built = {
@@ -2536,6 +2542,8 @@ mills = {
 		tropical_wood
 		glass
 		chinaware
+		cheese
+		noodles
 	}
 	onmap = yes
 	on_built = {
@@ -2701,6 +2709,9 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		camel
+		potato
+		tomato
 	}
 
 	modifier = {

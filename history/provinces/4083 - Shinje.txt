@@ -2,7 +2,7 @@ owner = KSJ
 controller = KSJ
 add_core = KSJ
 culture = lunda
-religion = shamanism #Fetishism
+religion = shamanism#Fetishism
 capital = "Shinje"
 trade_goods = slaves
 base_tax = 2
@@ -11,3 +11,5 @@ base_manpower = 3
 is_city = yes
 discovered_by = central_african
 1700.1.1 = { controller = LND add_core = LND }
+discovered_by = east_african
+discovered_by = sub_saharan

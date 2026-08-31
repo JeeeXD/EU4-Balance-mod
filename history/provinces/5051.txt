@@ -9,3 +9,5 @@ religion = shamanism
 controller = MAL
 is_city = yes
 discovered_by = sub_saharan
+discovered_by = central_african
+discovered_by = east_african

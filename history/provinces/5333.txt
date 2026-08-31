@@ -8,3 +8,4 @@ native_size = 47
 native_hostileness = 9
 native_ferocity = 6
 is_city = no
+discovered_by = east_african

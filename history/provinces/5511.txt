@@ -10,3 +10,4 @@ trade_goods = naval_supplies
 culture = makua
 discovered_by = central_african
 discovered_by = east_african
+discovered_by = sub_saharan

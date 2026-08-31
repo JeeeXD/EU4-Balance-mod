@@ -22,6 +22,8 @@ categories = {
 			
 		}
 
+		movement_cost = 1.0
+
 	}
 	inland_ocean = {
 		color = { 0 0 200 }
@@ -35,14 +37,15 @@ categories = {
 			4358 
 		}
 
+		movement_cost = 1.0
 	}
 	glacier = {
 		color = { 235 235 235 }
 		sound_type = desert
 		defence = 1
 		movement_cost = 1.25
-		local_regiment_cost = 2
-		allowed_num_of_buildings = 0.5
+		supply_limit = 2
+		local_development_cost = 0.5
 		nation_designer_cost_multiplier = 0.75
 		terrain_override = {
 			1034 1034 1035 1035 1104 1104 1105 1105 2025 2025 2074 2128 2129 2440 2440 2574 2574 
@@ -54,9 +57,9 @@ categories = {
 		sound_type = plains
 		type = plains
 		movement_cost = 1.10
-		allowed_num_of_buildings = -0.05
-		local_regiment_cost = 10
-		local_tax_modifier = 1
+		local_development_cost = -0.05
+		supply_limit = 10
+		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
 		terrain_override = {
 			   6    6   12   12   14   14   43   43   44   44   45   45   64   64   65   65   67   67   68   68   70   70   77   77   78   78 
@@ -86,8 +89,8 @@ categories = {
 		type = forest
 		defence = 1
 		movement_cost = 1.25
-		local_regiment_cost = 4
-		allowed_num_of_buildings = 0.2
+		supply_limit = 4
+		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.90
 		terrain_override = {
 			   2    4    4    8    8    9    9   10   10   11   11   18   18   29   29   30   30   31   31  309  309  312  312  315  315  960 
@@ -103,8 +106,8 @@ categories = {
 		defence = 1
 		movement_cost = 1.40
 		fort_level = 0.1
-		allowed_num_of_buildings = 0.25
-		local_regiment_cost = 5
+		local_development_cost = 0.25
+		supply_limit = 5
 		nation_designer_cost_multiplier = 0.85
 		terrain_override = {
 			  63  101  101  102  102  105  105  106  106  107  107  111  111  116  116  119  119  123  123  137  137  140  140  156  156  176 
@@ -138,8 +141,8 @@ categories = {
 		type = forest
 		defence = 1
 		movement_cost = 1.10
-		allowed_num_of_buildings = 0.15
-		local_regiment_cost = 6
+		local_development_cost = 0.15
+		supply_limit = 6
 		nation_designer_cost_multiplier = 0.90
 		terrain_override = {
 			   2    2    3    3   34   34   37   37   38   38   40   40   41   41   46   46   47   47   48   48   49   49   50   50   51   51 
@@ -176,8 +179,8 @@ categories = {
 		defence = 2
 		movement_cost = 1.50
 		fort_level = 0.25
-		allowed_num_of_buildings = 0.35
-		local_regiment_cost = 4
+		local_development_cost = 0.35
+		supply_limit = 4
 		nation_designer_cost_multiplier = 0.75
 		terrain_override = {
 			  20   20   22   22  120  120  124  124  138  138  139  139  143  143  144  144  158  158  199  199  204  204  210  210  222  222 
@@ -202,8 +205,8 @@ categories = {
 		color = { 90 235 27 }
 		sound_type = plains
 		type = plains
-		local_regiment_cost = 8
-		local_tax_modifier = 1
+		supply_limit = 8
+		allowed_num_of_buildings = 1
 		terrain_override = {
 			  42   42   71   71   79   79   96  114  114  131  131  136  136  149  149  155  155  213  213  218  218  219  219  229  229  318 
 			 318  328  328  373  373  417  417  457  457  458  458  516  516  517  517  526  526  539  539  543  543  549  549  552  552  562 
@@ -223,8 +226,8 @@ categories = {
 		type = jungle
 		defence = 1
 		movement_cost = 1.50
-		allowed_num_of_buildings = 0.35
-		local_regiment_cost = 5
+		local_development_cost = 0.35
+		supply_limit = 5
 		nation_designer_cost_multiplier = 0.80
 		terrain_override = {
 			 486  486  490  490  534  534  535  535  537  537  546  546  547  547  551  551  553  553  560  560  564  564  566  566  567  567 
@@ -249,8 +252,8 @@ categories = {
 		type = marsh
 		defence = 1
 		movement_cost = 1.30
-		allowed_num_of_buildings = 0.25
-		local_regiment_cost = 5
+		local_development_cost = 0.25
+		supply_limit = 5
 		nation_designer_cost_multiplier = 0.85
 		terrain_override = {
 			  96   96  277  277  362  362  408  408  462  462  749  749  758  758  775  775  777  777  893  893  927  927  928  928  950  950 
@@ -265,8 +268,8 @@ categories = {
 		sound_type = desert
 		type = desert
 		movement_cost = 1.05
-		local_regiment_cost = 4
-		allowed_num_of_buildings = 0.50
+		supply_limit = 4
+		local_development_cost = 0.50
 		nation_designer_cost_multiplier = 0.80
 		terrain_override = {
 			 350  350  355  355  503  503  512  512  513  513  514  514  698  698  701  701  706  706  707  707  708  708  709  709  710  710 
@@ -279,8 +282,8 @@ categories = {
 	coastline = {
 		color = { 49 175 191 }
 		sound_type = sea
-		allowed_num_of_buildings = 0.15
-		local_regiment_cost = 6
+		local_development_cost = 0.15
+		supply_limit = 6
 		nation_designer_cost_multiplier = 0.85
 		terrain_override = {
 			 112  112  233  233  253  253  333  333  368  368  387  387  487  487  491  491  492  492  497  497  498  498  499  499  500  500 
@@ -298,9 +301,9 @@ categories = {
 		color = { 232 172 102 }
 		sound_type = plains
 		type = plains
-		allowed_num_of_buildings = 0.05
-		local_regiment_cost = 7
-		local_tax_modifier = 1
+		local_development_cost = 0.05
+		supply_limit = 7
+		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 0.95
 		terrain_override = {
 			 214  214  220  220  221  221  224  224  225  225  322  322  327  327  334  334  337  337  338  338  341  341  342  342  343  343 
@@ -329,9 +332,9 @@ categories = {
 		type = hills
 		defence = 1
 		movement_cost = 1.40
-		local_regiment_cost = 6
+		supply_limit = 6
 		fort_level = 0.1
-		allowed_num_of_buildings = 0.2
+		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.90
 		terrain_override = {
 			  23   23   24   24  127  127  145  145  154  154  162  162  163  163  216  216  228  228  252  252  263  263  319  319  321  321 
@@ -357,8 +360,8 @@ categories = {
 		color = { 248 199 23 }
 		sound_type = plains
 		type = plains
-		local_regiment_cost = 6
-		allowed_num_of_buildings = 0.15
+		supply_limit = 6
+		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.95
 		terrain_override = {
 			 484  484  485  485  603  603  605  605  606  606  607  607  612  612  614  614  768  768  776  776  870  870  883  883  884  884 
@@ -395,8 +398,8 @@ categories = {
 		color = { 147 200 83 }
 		sound_type = plains
 		type = plains
-		allowed_num_of_buildings = 0.20
-		local_regiment_cost = 6
+		local_development_cost = 0.20
+		supply_limit = 6
 		nation_designer_cost_multiplier = 0.90
 		terrain_override = {
 			 282  282  283  283  284  284  285  285  286  286  287  287  288  288  291  291  299  299  300  300  301  301  302  302  303  303 
@@ -425,7 +428,7 @@ categories = {
 		sound_type = desert
 		defence = 6
 		movement_cost = 8.00
-		allowed_num_of_buildings = 10
+		local_development_cost = 10
 		terrain_override = {
 			5037 5038 5039 5060 5061 5345 5351 5354 5356 5359 5361 5373 5374 5375 5376 5378 
 		}
@@ -435,8 +438,8 @@ categories = {
 		color = { 255 211 110 }
 		sound_type = desert
 		type = desert
-		allowed_num_of_buildings = 0.35
-		local_regiment_cost = 4
+		local_development_cost = 0.35
+		supply_limit = 4
 		nation_designer_cost_multiplier = 0.90
 		terrain_override = {
 			 389  389  394  394  395  395  396  396  397  397  398  398  399  399  400  400  401  401  402  402  782  782  792  792  793  793 
@@ -456,33 +459,41 @@ categories = {
 ###
 
 terrain = {
-	grasslands			 = { type = grasslands 			color = {  0}}
-	hills			 = { type = hills 			color = {  1}}
-	desert_mountain			 = { type = mountain 			color = {  2}}
-	desert			 = { type = desert 			color = {  3}}
-	plains			 = { type = grasslands 			color = {  4}}
-	terrain_5			 = { type = grasslands 			color = {  5}}
-	mountain			 = { type = mountain 			color = {  6}}
-	desert_mountain_low			 = { type = desert 			color = {  7}}
-	terrain_8			 = { type = hills 			color = {  8}}
-	marsh			 = { type = marsh 			color = {  9}}
-	terrain_10			 = { type = farmlands 			color = { 10}}
-	terrain_11			 = { type = farmlands 			color = { 11}}
-	forest_12			 = { type = forest 			color = { 12}}
-	forest_13			 = { type = forest 			color = { 13}}
-	forest_14			 = { type = forest 			color = { 14}}
-	ocean			 = { type = ocean 			color = { 15}}
-	snow			 = { type = mountain 			color = { 16}}
-	inland_ocean_17			 = { type = inland_ocean 			color = { 17}}
-	coastal_desert_18			 = { type = coastal_desert 			color = { 19}}
-	coastline			 = { type = coastline 			color = { 35}}
-	savannah			 = { type = savannah 			color = { 20}}
-	drylands			 = { type = drylands 			color = { 22}}
-	highlands			 = { type = highlands 			color = { 23}}
-	dry_highlands			 = { type = highlands 			color = { 24}}
-	woods			 = { type = woods 			color = {255}}
-	jungle			 = { type = jungle 			color = {254}}
-	terrain_21			 = { type = farmlands 			color = { 21}}
+	grasslands			= { type = grasslands		color = { 	0	 } }
+	hills				= { type = hills			color = { 	1	 } }
+	desert_mountain		= { type = mountain			color = { 	2	 } }
+	desert				= { type = desert			color = { 	3	 } }
+
+	plains				= { type = grasslands		color = { 	4	 } }
+	terrain_5			= { type = grasslands		color = { 	5	 } }
+	mountain			= { type = mountain			color = { 	6	 } }
+	desert_mountain_low	= { type = desert			color = { 	7	 } }
+
+	terrain_8			= { type = hills			color = { 	8	 } }
+	marsh				= { type = marsh			color = { 	9	 } }
+	terrain_10			= { type = farmlands		color = { 	10	 } }
+	terrain_11			= { type = farmlands		color = { 	11	 } }
+
+	forest_12			= { type = forest			color = { 	12	 } }
+	forest_13			= { type = forest			color = { 	13	 } }
+	forest_14			= { type = forest			color = { 	14	 } }
+	ocean				= { type = ocean			color = { 	15	 } }
+
+	snow				= { type = mountain 		color = { 	16	 } } # (SPECIAL CASE) Used to identify permanent snow
+	inland_ocean_17 	= { type = inland_ocean		color = {	17	 } }
+
+	coastal_desert_18	= { type = coastal_desert	color = { 	19	 } }
+	coastline			= { type = coastline		color = { 	35	 } }
+	
+	savannah			= { type = savannah 		color = {	20	 } }
+	drylands			= { type = drylands			color = {	22	 } }
+	highlands			= { type = highlands		color = {	23	 } }
+	dry_highlands		= { type = highlands		color = {	24	 } }
+	
+	woods				= { type = woods			color = { 	255	 } }
+	jungle				= { type = jungle			color = { 	254	 } }
+	
+	terrain_21			= { type = farmlands		color = { 	21	 } }	
 }
 
 ##################################################################
@@ -492,9 +503,9 @@ terrain = {
 ###
 
 tree = {
-	forest			 = { type = forest 			color = {  3  4  6  7 19 20}}
-	woods			 = { type = woods 			color = {  2  5  8 18}}
-	jungle			 = { type = jungle 			color = { 13 14 15}}
-	palms			 = { type = desert 			color = { 12}}
-	savana			 = { type = grasslands 			color = { 27 28 29 30}}
+	forest				= { terrain = forest 			color = { 	3 4 6 7 19 20	} }
+	woods				= { terrain = woods 			color = { 	2 5 8 18	} }
+	jungle				= { terrain = jungle 			color = { 	13 14 15	} }
+	palms				= { terrain = desert 			color = { 	12	} }
+	savana				= { terrain = grasslands 		color = { 	27 28 29 30	} }
 }

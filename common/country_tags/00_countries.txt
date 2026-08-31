@@ -1134,3 +1134,47 @@ TMH = "countries/Tamahemu.txt"
 VIC = "countries/West Indische Compagnie.txt"
 BBL = "countries/Better Portuguese.txt"
 MFI = "countries/Mfinda.txt"
+
+# Africa
+KMR = "countries/Kamara.txt"#
+NGU = "countries/Nguma.txt"
+MBO = "countries/Mbolo.txt"
+ZGN = "countries/Zanga.txt"#
+LOM = "countries/Lombe.txt"
+MBL = "countries/Mbala.txt"###
+
+TAZ = "countries/Tazir.txt"
+KAD = "countries/Kadara.txt"
+ZUR = "countries/Zurama.txt"
+TUM = "countries/Tumara.txt"
+GAD = "countries/Gadira.txt"
+MZR = "countries/Maraza.txt"#
+SIR = "countries/Siraka.txt"
+NAR = "countries/Narawa.txt"
+
+KMR = "countries/Koruma.txt"###
+BAK = "countries/Bakira.txt"
+LUG = "countries/Lugara.txt"
+TTR = "countries/Toroko.txt"#
+NZA = "countries/Nzara.txt"
+RUK = "countries/Rukoma.txt"
+BUN = "countries/Bunara.txt"
+
+LRN = "countries/Lunara.txt"#
+KGL = "countries/Kalonga.txt"#
+SKN = "countries/Senkala.txt"#
+RON = "countries/Rongwe.txt"
+KAB = "countries/Kabira.txt"
+MWB = "countries/Mwamba.txt"
+NKR = "countries/Nkora.txt"#
+#CHK = "countries/Chikara.txt"#
+KWE = "countries/Kwena.txt"
+
+TSH = "countries/Tshara.txt"
+NDE = "countries/Ndeka.txt"
+MOK = "countries/Mokala.txt"
+VEL = "countries/Veluka.txt"
+MZT = "countries/Matara.txt"#
+NTA = "countries/Ntala.txt"
+KWA = "countries/Kwara.txt"
+ZEN = "countries/Zenda.txt"

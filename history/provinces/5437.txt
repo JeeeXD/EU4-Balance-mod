@@ -11,3 +11,5 @@ is_city = yes
 trade_goods = fish
 culture = ganda
 discovered_by = central_african
+discovered_by = east_african
+discovered_by = sub_saharan

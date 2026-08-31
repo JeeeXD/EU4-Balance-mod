@@ -12,3 +12,5 @@ trade_goods = cloth
 religion = sunni
 controller = ADA
 is_city = yes
+discovered_by = central_african
+discovered_by = sub_saharan

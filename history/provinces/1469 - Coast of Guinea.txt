@@ -1,9 +1,8 @@
 discovered_by = MAL
 discovered_by = JOL
-
-
 1445.1.1 = { discovered_by = POR }
-1529.6.1 = { discovered_by = FRA } # Parmentier Brothers
+1529.6.1 = { discovered_by = FRA }
 1600.1.1 = { discovered_by = MOR }
-
-
+discovered_by = sub_saharan
+discovered_by = central_african
+discovered_by = east_african

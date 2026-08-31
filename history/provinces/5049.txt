@@ -10,3 +10,4 @@ trade_goods = cloth
 religion = shamanism
 controller = KON
 is_city = yes
+discovered_by = east_african

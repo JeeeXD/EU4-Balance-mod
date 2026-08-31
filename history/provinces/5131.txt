@@ -12,3 +12,5 @@ discovered_by = muslim
 discovered_by = east_african
 discovered_by = indian
 trade_goods = slaves
+discovered_by = central_african
+discovered_by = sub_saharan

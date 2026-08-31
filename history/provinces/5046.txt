@@ -10,3 +10,4 @@ trade_goods = cloth
 religion = shamanism
 controller = ZIM
 is_city = yes
+discovered_by = sub_saharan

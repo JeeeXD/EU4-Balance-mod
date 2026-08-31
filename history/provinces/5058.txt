@@ -12,3 +12,5 @@ trade_goods = incense
 religion = sunni
 controller = ETH
 is_city = yes
+discovered_by = central_african
+discovered_by = sub_saharan

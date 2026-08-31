@@ -1,2 +1,5 @@
 # Bagoe - Wasteland province
 discovered_by = sub_saharan
+discovered_by = central_african
+discovered_by = east_african
+is_city = no

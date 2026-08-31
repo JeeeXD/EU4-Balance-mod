@@ -6,9 +6,7 @@ trade_goods = unknown
 culture = al_misr_arabic
 discovered_by = ottoman
 discovered_by = muslim
-discovered_by = east_african
-
 native_size = 60
 native_hostileness = 6
 native_ferocity = 7
-
+is_city = no

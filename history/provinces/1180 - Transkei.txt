@@ -1,6 +1,6 @@
 #1180 - Transkei
 culture = xhosa
-religion = shamanism #Fetishism
+religion = shamanism#Fetishism
 capital = "Thembu"
 native_size = 70
 trade_goods = unknown
@@ -10,4 +10,7 @@ base_manpower = 1
 native_ferocity = 4
 native_hostileness = 9
 1497.12.17 = { discovered_by = POR }
-
+discovered_by = central_african
+discovered_by = east_african
+discovered_by = sub_saharan
+is_city = no

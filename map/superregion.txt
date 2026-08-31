@@ -23,10 +23,10 @@ far_east_superregion = {
 	korea_region japan_region manchuria_region 
 }
 africa_superregion = { 
-	niger_region guinea_region sahel_region horn_of_africa_region maghreb_region 
+	niger_region sahel_region maghreb_region horn_of_africa_region guinea_region central_africa_region 
 }
 southern_africa_superregion = { 
-	east_africa_region central_africa_region 
+	east_africa_region kongo_region south_africa_region 
 }
 south_america_superregion = { 
 	brazil_region colombia_region 

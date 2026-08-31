@@ -9,3 +9,5 @@ is_city = yes
 trade_goods = slaves
 culture = tuareg
 discovered_by = sub_saharan
+discovered_by = central_african
+discovered_by = east_african

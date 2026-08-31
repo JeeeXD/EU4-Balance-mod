@@ -13,3 +13,4 @@ trade_goods = cloth
 religion = sunni
 controller = ZAN
 is_city = yes
+discovered_by = sub_saharan

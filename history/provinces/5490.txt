@@ -9,3 +9,5 @@ is_city = yes
 culture = lunda
 discovered_by = central_african
 trade_goods = slaves
+discovered_by = east_african
+discovered_by = sub_saharan
