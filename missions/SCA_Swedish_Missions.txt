@@ -825,7 +825,7 @@ swe_diplomacy_mission_slot = {
 			}
 			else = {
 				is_subject = no
-				has_dip_advisor_2 = yes
+				has_dip_advisor = yes
 			}
 		}
 		effect = {
