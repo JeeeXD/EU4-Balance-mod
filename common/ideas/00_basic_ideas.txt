@@ -293,7 +293,7 @@ indigenous_ideas = {
 		movement_speed = 0.15
 	}
 	indigenous_constitution = {
-		monthly_reform_progress_modifier = 0.25
+		monthly_reform_progress_modifier = 0.15
 		stability_cost_modifier = -0.15
 	}
 	indigenous_braves = {
@@ -304,11 +304,10 @@ indigenous_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	indigenous_trade_with_foreigners = {
-		idea_cost = -0.1
-		technology_cost = -0.1
+		idea_cost = -0.075
+		technology_cost = -0.075
 	}
 	indigenous_treaties = {
-		province_warscore_cost = -0.2
 		years_of_nationalism = -5
 	}
 
@@ -414,7 +413,7 @@ religious_ideas = {
 	}
 	devoutness = {
 		tolerance_own = 2
-		warscore_cost_vs_other_religion = -0.15
+		warscore_cost_vs_other_religion = -0.1
 	}
 	inquisition = {
 		papal_influence = 2
@@ -571,7 +570,7 @@ diplomatic_ideas = {
 		monthly_reform_progress_modifier = 0.1
 	}
 	flexible_negotiation = {
-		province_warscore_cost = -0.25
+		province_warscore_cost = -0.15
 	}
 	diplomatic_corps = {
 		dip_tech_cost_modifier = -0.15
