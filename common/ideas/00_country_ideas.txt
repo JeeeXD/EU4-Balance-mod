@@ -1847,7 +1847,7 @@ PLC_ideas = {
 	}
 	plc_the_obrona_potoczna = { #Same for all of them
 		drill_gain_modifier = 0.25
-		army_tradition = 1
+		army_tradition = 0.5
 	}
 	winged_hussars = { 
 		cavalry_power = 0.2
@@ -17833,7 +17833,7 @@ AKS_ideas = {
 	}
 	
 	aks_persian_revenge = {
-		warscore_cost_vs_other_religion = -0.15
+		warscore_cost_vs_other_religion = -0.1
 	}
 	
 	aks_christianity_stronghold = {

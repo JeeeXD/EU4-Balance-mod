@@ -943,6 +943,30 @@ empower_buddhist_temples_reform = {
 			#seizing_land_takes_karma = yes	#Reduces Karma by 10
 			buffed_monastic_temples = yes
 			enable_karma_decision = yes	#Allows decision every 20 years to add or remove 10 Karma
+			temples_modifier = yes
+		}
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
 		}
 	}
 	ai = {
@@ -1220,6 +1244,13 @@ secure_clergy_power_reform = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+			   religion = buddhism
+			   religion = vajrayana
+			   religion = mahayana
+		    }
 		}
 	}
 	modifiers = {

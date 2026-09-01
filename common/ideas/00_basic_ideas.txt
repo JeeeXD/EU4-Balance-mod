@@ -154,7 +154,7 @@ horde_gov_ideas = {
 	category = MIL
 	
 	bonus = {
-		cavalry_power = 0.25
+		cavalry_power = 0.15
 		nomadic_tribes_loyalty_modifier = 0.1
 	}
 	
@@ -163,7 +163,7 @@ horde_gov_ideas = {
 	}
 	
 	horse_lords = {
-		cavalry_cost = -0.33
+		cavalry_cost = -0.2
 		cav_to_inf_ratio = 0.25
 	}
 	beyond_the_sun = {
