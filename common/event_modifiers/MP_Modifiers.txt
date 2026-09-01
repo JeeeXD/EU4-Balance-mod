@@ -207,3 +207,10 @@ cant_dec_war_nerf = {
 	can_not_declare_war = yes 
 }
 
+buddhist_temple_manpower_church = {
+	local_manpower = 0.25
+}
+
+buddhist_temple_manpower_cathedral = {
+	local_manpower = 0.5
+}

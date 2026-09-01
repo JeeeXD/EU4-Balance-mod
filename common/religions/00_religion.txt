@@ -1471,8 +1471,8 @@ eastern = {
 			mahayana
 		}
 		country = {
-			tolerance_heretic = 2
-			advisor_cost = -0.1
+			production_efficiency = 0.15
+			advisor_cost = -0.2
 		}
 		country_as_secondary = {
 			development_cost = -0.1
@@ -1502,8 +1502,8 @@ eastern = {
 			buddhism #Theravada
 		}
 		country = {
-			tolerance_heretic = 2
-			land_morale = 0.05
+			tolerance_heretic = 4
+			land_morale = 0.1
 		}
 		country_as_secondary = {
 			horde_unity = 1
@@ -1533,8 +1533,8 @@ eastern = {
 			buddhism #Theravada
 		}
 		country = {
-			tolerance_heretic = 2
-			idea_cost = -0.05
+			tolerance_own = 4
+			idea_cost = -0.1
 		}
 		country_as_secondary = {
 			global_tax_modifier = 0.1

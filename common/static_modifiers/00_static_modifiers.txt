@@ -1726,8 +1726,8 @@ divert_trade = {
 ########################################
 
 karma_just_right = {
-	build_cost = -0.075
-	discipline = 0.025
+	build_cost = -0.15
+	discipline = 0.05
 }
 
 karma_too_high = {
