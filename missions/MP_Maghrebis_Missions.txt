@@ -1801,6 +1801,17 @@ maghreb_common_3a = {
 		effect = {
 			if = {
 				limit = {
+					5124 = {
+						is_empty = yes
+					}
+				}
+				5124 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			if = {
+				limit = {
 					2474 = {
 						is_empty = yes
 					}
@@ -1812,11 +1823,11 @@ maghreb_common_3a = {
 			}
 			if = {
 				limit = {
-					2475 = {
+					5125 = {
 						is_empty = yes
 					}
 				}
-				2475 = {
+				5125 = {
 					add_core = ROOT
 					cede_province = ROOT
 				}

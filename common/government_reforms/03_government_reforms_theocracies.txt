@@ -578,26 +578,26 @@ tibetan_dual_government_reform = {
 		yearly_karma_decay = 0.03
 		church_privilege_slots = 1
 	}
-	conditional = {
-		allow = { has_dlc = "Common Sense" }
-		custom_attributes = {
-			buffed_monastic_temples = yes
-			enable_karma_decision = yes	#Allows decision every 20 years to add or remove 10 Karma
-		}
-	}
+	#conditional = {
+	#	allow = { has_dlc = "Common Sense" }
+	#	custom_attributes = {
+	#		buffed_monastic_temples = yes
+	#		enable_karma_decision = yes	#Allows decision every 20 years to add or remove 10 Karma
+	#	}
+	#}
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
 		}
 		states_general_mechanic = {
 			theocrats_statists = {
-				tolerance_own = 2
-				global_missionary_strength = 0.02
+				tolerance_own = 8
+				global_missionary_strength = 0.04
 				devotion = 1
 			}
 
 			monarchists = {
-				global_tax_modifier = 0.2
+				global_tax_modifier = 0.33
 				hostile_attrition = 1
 				legitimacy = 1
 			}

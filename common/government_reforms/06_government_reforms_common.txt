@@ -945,7 +945,6 @@ empower_buddhist_temples_reform = {
 			enable_karma_decision = yes	#Allows decision every 20 years to add or remove 10 Karma
 		}
 	}
-	
 	ai = {
 		factor = 1
 	}

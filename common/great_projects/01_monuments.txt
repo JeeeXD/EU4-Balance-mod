@@ -4016,6 +4016,10 @@ shwedagon_pagoda = {
 		area_modifier = {
 		}
 
+		region_modifier = {
+			local_development_cost = -0.05
+		}
+
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			church_loyalty_modifier = 0.05
@@ -4045,6 +4049,10 @@ shwedagon_pagoda = {
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {			
+		}
+
+		region_modifier = {
+			local_development_cost = -0.1
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
@@ -4077,6 +4085,10 @@ shwedagon_pagoda = {
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
 			local_unrest = -2
+		}
+
+		region_modifier = {
+			local_development_cost = -0.2
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier

@@ -601,3 +601,8 @@ KWA: "Kwara"
 KWA_ADJ: "Kwaran"
 ZEN: "Zenda"
 ZEN_ADJ: "Zendan"
+
+buddhist_temple_manpower_church: "Warrior Monks"
+buddhist_temple_manpower_cathedral: "Enlisted Warrior Monks"
+
+mechanic_churches_give_static_manpower_yes: "Churches grant the following:\n§YLocal Manpower§!: §G+250§!\nCathedrals grant the following:\n§YLocal Manpower§!: §G+500§!"

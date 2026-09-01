@@ -1,0 +1,517 @@
+gme_chittor_fort = {
+	start = 518
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_garrison_size = 0.15
+		}
+		area_modifier = {
+			local_build_cost = -0.10
+			local_build_time = -0.10
+			local_development_cost = -0.10
+		}
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_garrison_size = 0.25
+		}
+		area_modifier = {
+			local_build_cost = -0.20
+			local_build_time = -0.20
+			local_development_cost = -0.20
+		}
+		region_modifier = { }
+		country_modifiers = {
+			nobles_loyalty_modifier = 0.05
+			maratha_loyalty_modifier = 0.05
+			rajput_loyalty_modifier = 0.05
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					capital_scope = {
+						superregion = india_superregion
+					}
+					religion_group = dharmic
+				}
+				has_owner_religion = yes
+				has_owner_accepted_culture = yes
+			}
+			modifier = {
+				morale_damage_received = -0.05
+			}
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_defensiveness = 0.33
+			local_garrison_size = 0.33
+		}
+		area_modifier = {
+			local_build_cost = -0.30
+			local_build_time = -0.30
+			local_development_cost = -0.30
+		}
+		region_modifier = { }
+		country_modifiers = {
+			nobles_loyalty_modifier = 0.10
+			maratha_loyalty_modifier = 0.10
+			rajput_loyalty_modifier = 0.10
+			nobles_privilege_slots = 1
+			maratha_privilege_slots = 1
+			rajput_privilege_slots = 1
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					capital_scope = {
+						superregion = india_superregion
+					}
+					religion_group = dharmic
+				}
+				has_owner_religion = yes
+				has_owner_accepted_culture = yes
+			}
+			modifier = {
+				morale_damage_received = -0.075
+				army_tradition_decay = -0.005
+			}
+		}
+		conditional_modifier = {
+			tooltip_potential = {
+				has_global_flag = flavour_and_events_expanded_mod_active
+				has_global_flag = fee_mer_chittor_fort_unrest	
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = GME_CHITTOR_FORT_ERECTED_VIJAY_STAMBAH_UNREST_TT
+				}
+			}
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		conditional_modifier = {
+			tooltip_potential = {
+				has_global_flag = flavour_and_events_expanded_mod_active
+				has_global_flag = fee_mer_chittor_fort_morale	
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = GME_CHITTOR_FORT_ERECTED_VIJAY_STAMBAH_MORALE_TT
+				}
+			}
+			modifier = {
+				land_morale = 0.05
+			}
+		}
+		on_upgraded = { }
+	}
+}
+gme_dwarkadhish_temple = {
+	start = 2052
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		religion_group = dharmic
+		has_owner_religion = yes
+	}
+	can_upgrade_trigger = {
+		religion_group = dharmic
+		has_owner_religion = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			improve_relation_modifier = 0.10
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			diplomatic_reputation = 1
+			diplomatic_upkeep = 1
+			improve_relation_modifier = 0.10
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			diplomatic_reputation = 2
+			diplomatic_upkeep = 2
+			improve_relation_modifier = 0.20
+		}
+		on_upgraded = { }
+	}
+}
+gme_makli_necropolis = {
+	start = 504
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		has_owner_culture = yes
+		owner = {
+			OR = {
+				dynasty = "Timurid"
+				dynasty = "Samma"
+				dynasty = "Arghun"
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		has_owner_culture = yes
+		owner = {
+			OR = {
+				dynasty = "Timurid"
+				dynasty = "Samma"
+				dynasty = "Arghun"
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			local_great_project_upgrade_cost = -0.15
+			local_great_project_upgrade_time = -0.15
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			legitimacy = 0.5
+			monarch_lifespan = 0.10
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_great_project_upgrade_cost = -0.25
+			local_great_project_upgrade_time = -0.25
+		}
+		area_modifier = {
+			local_build_cost = -0.15
+			local_build_time = -0.15
+			local_development_cost = -0.15
+		}
+		region_modifier = { }
+		country_modifiers = {
+			legitimacy = 0.5
+			monarch_lifespan = 0.15
+			prestige_decay = -0.01
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_build_cost = -0.25
+			local_build_time = -0.25
+			local_development_cost = -0.25
+			local_great_project_upgrade_cost = -0.25
+			local_great_project_upgrade_time = -0.25
+		}
+		region_modifier = { }
+		country_modifiers = {
+			legitimacy = 1
+			monarch_lifespan = 0.15
+			prestige_decay = -0.01
+			no_stability_loss_on_monarch_death = yes
+			monthly_splendor = 1
+		}
+		on_upgraded = { }
+	}
+}
+gme_rani_ki_vav = {
+	start = 2053
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_build_cost = -0.25
+			local_build_time = -0.25
+			local_development_cost = -0.25
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_build_cost = -0.33
+			local_build_time = -0.33
+			local_development_cost = -0.33
+			local_monthly_devastation = -0.5
+			local_prosperity_growth = 0.5
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_build_cost = -0.50
+			local_build_time = -0.50
+			local_development_cost = -0.50
+			local_monthly_devastation = -1
+			local_prosperity_growth = 1
+		}
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+gme_shrine_lal_shahbaz_qalandar = {
+	start = 505
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		religion_group = muslim
+		has_owner_religion = yes
+	}
+	can_upgrade_trigger = {
+		religion_group = muslim
+		has_owner_religion = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_tax_modifier = 0.25
+			local_unrest = -1
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			same_religion_advisor_cost = -0.10
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_tax_modifier = 0.33
+			local_unrest = -2
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			same_religion_advisor_cost = -0.10
+			monthly_piety_accelerator = 0.0005
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_tax_modifier = 0.33
+			local_unrest = -3
+		}
+		region_modifier = { }
+		country_modifiers = {
+			idea_cost = -0.05
+			same_religion_advisor_cost = -0.20
+			monthly_piety_accelerator = 0.001
+		}
+		on_upgraded = { }
+	}
+}
+gme_taranga_jain_temple = {
+	start = 2053
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_institution_spread = 0.25
+			local_tax_modifier = 0.25
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_institution_spread = 0.33
+			local_tax_modifier = 0.33
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			interest = -0.25
+			jains_loyalty_modifier = 0.05
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_institution_spread = 0.50
+			local_tax_modifier = 0.50
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			interest = -0.50
+			jains_loyalty_modifier = 0.10
+			jains_privilege_slots = 1
+		}
+		on_upgraded = { }
+	}
+}

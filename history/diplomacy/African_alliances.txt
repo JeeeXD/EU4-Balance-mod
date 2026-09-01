@@ -247,3 +247,11 @@ vassal = {
 	start_date = 1540.1.1
 	end_date = 1811.1.1
 }
+
+
+union = {
+	first = KBO
+	second = YAO
+	start_date = 1414.1.1
+	end_date = 1663.1.1
+}

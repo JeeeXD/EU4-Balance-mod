@@ -2226,6 +2226,7 @@ BUR_Ideas = {
 	}
 	reform_of_feudal_army = {
 		discipline = 0.05
+		cavalry_cost = -0.1
 	}
 	integrated_towns = {
 		trade_efficiency = 0.10
