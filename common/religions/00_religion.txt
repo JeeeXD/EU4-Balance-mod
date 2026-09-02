@@ -1473,14 +1473,15 @@ eastern = {
 		country = {
 			production_efficiency = 0.15
 			advisor_cost = -0.2
+			no_religion_penalty = yes 
 		}
 		country_as_secondary = {
 			development_cost = -0.1
 			diplomats = 1
 		}
 		on_convert = {
-			add_prestige = -100
-			add_stability = -1
+			add_prestige = -25
+			#add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650
@@ -1504,14 +1505,15 @@ eastern = {
 		country = {
 			tolerance_heretic = 4
 			land_morale = 0.1
+			no_religion_penalty = yes 
 		}
 		country_as_secondary = {
 			horde_unity = 1
 			tolerance_own = 1
 		}
 		on_convert = {
-			add_prestige = -100
-			add_stability = -1
+			add_prestige = -25
+			#add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650
@@ -1535,14 +1537,15 @@ eastern = {
 		country = {
 			tolerance_own = 4
 			idea_cost = -0.1
+			no_religion_penalty = yes 
 		}
 		country_as_secondary = {
 			global_tax_modifier = 0.1
 			tolerance_heathen = 2
 		}
 		on_convert = {
-			add_prestige = -100
-			add_stability = -1
+			add_prestige = -25
+			#add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650

@@ -18831,6 +18831,7 @@ BRM_ideas = {
 	}
 	BRM_rajadhiraja = {
 		land_forcelimit_modifier = 0.2
+		cavalry_cost = -0.1
 	}
 	BRM_manu_kye_dhammathat = {
 		stability_cost_modifier = -0.10
