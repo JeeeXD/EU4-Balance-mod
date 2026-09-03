@@ -608,27 +608,6 @@ chinese_kingdoms_1 = {
 				type = mil
 				amount = 3
 			}
-			custom_tooltip = chi_warscore_reward_tt
-			tooltip = {
-				if = {
-					limit = { has_dlc = "Mandate of Heaven" } 
-					set_emperor_of_china = ROOT 
-					add_mandate = 50 
-				}
-				else = {
-					add_prestige_or_monarch_power = { amount = 100 }
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_dlc = "Mandate of Heaven" } 
-					set_emperor_of_china = ROOT 
-					add_mandate = 50 
-				}
-				else = {
-					add_prestige_or_monarch_power = { amount = 100 }
-				}
-			}
 		}
 	}
 }

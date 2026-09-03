@@ -606,3 +606,5 @@ buddhist_temple_manpower_church: "Warrior Monks"
 buddhist_temple_manpower_cathedral: "Enlisted Warrior Monks"
 
 mechanic_churches_give_static_manpower_yes: "Churches grant the following:\n§YLocal Manpower§!: §G+250§!\nCathedrals grant the following:\n§YLocal Manpower§!: §G+500§!"
+dali_confucion_switch_title: "Embrace Confucianism"
+dali_confucion_switch_desc: ""

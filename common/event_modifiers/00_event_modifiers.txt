@@ -4386,7 +4386,7 @@ eth_mount_geshen = {
 }
 
 eth_negusa_nagast_issues = {
-	global_autonomy = 0.2
+	global_autonomy = 0.1
 }
 
 #Bahmanis

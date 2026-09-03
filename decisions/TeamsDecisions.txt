@@ -37,6 +37,7 @@ country_decisions = {
 			NOT = {
 				is_year = 1446
 			}
+			always = no
 		}
 		ai_will_do = {
 			factor = 0

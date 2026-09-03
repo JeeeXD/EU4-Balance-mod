@@ -146,6 +146,16 @@ temple = {
 		}
 		if = {
 			limit = {
+				FROM = { has_government_attribute = churches_give_static_manpower }
+				owned_by = FROM 
+			}
+			add_province_modifier = {
+				name = buddhist_temple_manpower_church
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
 				FROM = {
 					has_country_flag = mosque_local_unrest_flag
 				}
@@ -195,6 +205,13 @@ temple = {
 			building = temple
 			type = tax
 			value = 1
+		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = churches_give_static_manpower }
+				owned_by = FROM 
+			}
+			remove_province_modifier = buddhist_temple_manpower_church
 		}
 		if = {
 			limit = {
@@ -1169,6 +1186,16 @@ cathedral = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = churches_give_static_manpower }
+				owned_by = FROM 
+			}
+			add_province_modifier = {
+				name = buddhist_temple_manpower_cathedral
+				duration = -1
+			}
+		}
 		add_province_modifier = {
 			name = azt_religious_classes
 			duration = -1
@@ -1181,6 +1208,13 @@ cathedral = {
 			building = cathedral
 			type = tax
 			value = 2
+		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = churches_give_static_manpower }
+				owned_by = FROM 
+			}
+			remove_province_modifier = buddhist_temple_manpower_cathedral
 		}
 		if = {
 			limit = {
@@ -2398,6 +2432,8 @@ plantations = {
 		tobacco
 		tea
 		cocoa
+		pizza
+		beer
 	}
 	onmap = yes
 	on_built = {
@@ -2440,6 +2476,7 @@ tradecompany = {
 		cloves
 		fur
 		incense
+		kangaroos
 	}
 	onmap = yes
 	on_built = {
@@ -2479,6 +2516,9 @@ farm_estate = {
 		grain
 		livestock
 		wine
+		camel
+		potato
+		tomato
 	}
 	onmap = yes
 	on_built = {
@@ -2536,6 +2576,8 @@ mills = {
 		tropical_wood
 		glass
 		chinaware
+		cheese
+		noodles
 	}
 	onmap = yes
 	on_built = {
@@ -2701,6 +2743,9 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		camel
+		potato
+		tomato
 	}
 
 	modifier = {
