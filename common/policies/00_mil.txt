@@ -1112,7 +1112,8 @@ psychological_warfare_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_flanking = 0.5
+	reinforce_speed = 0.25
+	reinforce_cost_modifier = -0.25
 	nomadic_tribes_loyalty_modifier = 0.1
 
 	effect = {}
