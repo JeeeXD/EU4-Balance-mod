@@ -79,6 +79,9 @@ ava_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			2041 ={
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 500	#Reasonable conquest
@@ -435,14 +438,12 @@ ava_slot_2 = {
 		}
 		trigger = {
 			stability = 3
-			adm_power = 200
 			legitimacy = 90
 		}
 		effect = {
 			inherit = KAL
 			inherit = SST
 			inherit = TAU
-			add_adm_power = -200
 			northern_thai_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
