@@ -373,6 +373,9 @@ ava_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			2041 = {
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 500	#Reasonable conquest
@@ -600,17 +603,6 @@ ava_slot_3 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					586 = {
-						province_has_center_of_trade_of_level = 1
-						NOT = { province_has_center_of_trade_of_level = 3 }
-					}
-				}
-				586 = {
-					add_center_of_trade_level = 1
-				}
-			}
 			arakan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -664,7 +656,6 @@ ava_slot_3 = {
 			KAL = {
 				inherit = MYA
 				inherit = MKA
-				inherit = HSI
 			}
 			vassalize = KAL
 			add_army_tradition = 20
@@ -690,19 +681,19 @@ ava_slot_3 = {
 	
 	ava_build_palace = {
 		icon = mission_kanbawzathadi_palace
-		required_missions = { ava_conquer_pegu }
+		required_missions = { ava_conquer_kachin }
 		provinces_to_highlight = {
 			province_id = 586
 		}
 		trigger = {
 			586 = {
-				is_capital = yes
+				#is_capital = yes
 				development = 20
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			586 = {
+			lower_burma_area = {
 				change_culture = ROOT
 				add_province_modifier = {
 					name = "tau_new_capital"
@@ -711,6 +702,9 @@ ava_slot_3 = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
+			}
+			586 = {
+				add_center_of_trade_level = 1
 			}
 		}
 		ai_weight = {
@@ -830,7 +824,7 @@ ava_slot_4 = {
 		effect = {
 			add_country_modifier = {
 				name = "tau_arakan_trade"
-				duration = 7300
+				duration = -1
 			}
 			tripura_area = {
 				limit = {
@@ -939,6 +933,8 @@ ava_slot_4 = {
 				estate = estate_church
 				loyalty = 20
 			}
+			add_stability = 1
+			add_prestige = 50
 			if = {
 				limit = {
 					has_dlc = "Common Sense"

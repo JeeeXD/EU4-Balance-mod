@@ -213,10 +213,10 @@ theocracy_gov_ideas = {
 	servants_of_god = {
 		devotion = 1
 		legitimacy = 0.5
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	by_the_grace_of_god = {
-		fire_damage_received = -0.1
+		fire_damage_received = -0.15
 	}
 	friends_in_high_places = {
 		leader_cost = -0.1
@@ -225,6 +225,7 @@ theocracy_gov_ideas = {
 	}
 	flesh_is_weak = {
 		morale_damage_received = -0.15
+		shock_damage_received = -0.075
 	}
 	alpha_and_omega = {
 		enforce_religion_cost = -0.3
@@ -236,7 +237,7 @@ theocracy_gov_ideas = {
 		global_religious_conversion_resistance = 0.5
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.25
+		manpower_in_true_faith_provinces = 0.33
 		prestige_from_land = 0.5
 	}
 	ai_will_do = {
