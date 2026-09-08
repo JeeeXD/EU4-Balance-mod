@@ -80,12 +80,18 @@ gme_tomb_askia = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
-		culture_group = mande
-		has_owner_culture = yes
+		OR = {
+			culture_group = mande
+		    has_owner_culture = yes
+			mission_completed = KBO_head_west
+		}
 	}
 	can_upgrade_trigger = {
-		culture_group = mande
-		has_owner_culture = yes
+		OR = {
+			culture_group = mande
+		    has_owner_culture = yes
+			mission_completed = KBO_head_west
+		}
 	}
 	keep_trigger = { }
 	tier_0 = {

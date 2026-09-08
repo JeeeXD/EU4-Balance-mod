@@ -9,7 +9,7 @@ controller = ZUL
 base_tax = 1
 base_production = 1
 base_manpower = 1
-trade_goods = unknown
+trade_goods = fish
 culture = nguni
 religion = shamanism
 capital = "Mtetwa"
@@ -24,7 +24,6 @@ discovered_by = east_african
 }
 1816.1.1 = { 
 	capital = "Bulawayo"
-	add_core = ZUL
 	controller = ZUL
 }
 add_core = ZUL

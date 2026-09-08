@@ -9,7 +9,7 @@ controller = NGU
 base_tax = 1
 base_production = 1
 base_manpower = 1
-trade_goods = unknown
+trade_goods = grain
 culture = jukun
 religion = shamanism
 capital = "Bauchi"
@@ -22,7 +22,6 @@ discovered_by = east_african
 1807.1.1 = { 
 	controller = SOK
 	add_core = SOK
-	city = yes
 }
 add_core = NGU
 is_city = no

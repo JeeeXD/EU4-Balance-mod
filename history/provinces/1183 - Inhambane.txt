@@ -10,7 +10,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 1
 center_of_trade = 1
-trade_goods = unknown
+trade_goods = naval_supplies
 extra_cost = 8
 culture = nguni
 religion = shamanism
@@ -37,7 +37,6 @@ discovered_by = sub_saharan
 1727.1.1 = { 
 	controller = POR
 	add_core = POR
-	city = yes
 	base_manpower = 1
 	trade_goods = Ivory
 }

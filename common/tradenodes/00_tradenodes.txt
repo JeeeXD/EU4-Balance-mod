@@ -3,7 +3,6 @@ cameroon={
 	color={
 		234 151 23 
 	}
-	inland=yes
 	outgoing={
 		name="kongo"
 		path={

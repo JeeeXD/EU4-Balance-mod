@@ -2290,7 +2290,7 @@ camel = {
 		global_supply_limit_modifier = 0.25
 	}
 	province = {
-		local_hostile_movement_speed = 0.15
+		local_hostile_movement_speed = -0.15
 	}
 	chance = {
 		factor = 20

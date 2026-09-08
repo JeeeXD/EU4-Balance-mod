@@ -10,5 +10,5 @@ religion = shamanism
 technology_group = central_african
 unit_type = central_african
 # Specific Effects #
-capital = 1167
+capital = 1182
 government_rank = 1
