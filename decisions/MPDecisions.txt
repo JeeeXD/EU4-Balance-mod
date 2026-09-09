@@ -198,7 +198,29 @@ country_decisions = {
 		}
 	}
 
-	
+	dali_confucion_switch = {
+		major = yes
+		potential = {
+			tag = CDL
+			NOT = {
+				has_country_flag = dali_swithched_to_confucionism
+			} 
+			NOT = {
+				religion = confucianism
+			} 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			change_religion = confucianism
+			set_country_flag = dali_swithched_to_confucionism
+		}
+	}
+
 
 }
 
