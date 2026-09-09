@@ -1,0 +1,950 @@
+#First Slot
+new_mission_tree_0_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { }
+
+	#Inland Rivalries
+	zan_rivalries = {
+		icon = mission_the_battle_for_raichur
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Crush Mutapa
+	zan_mutapa = {
+		icon = mission_zim_amongst_the_great_powers
+		position = 3
+		required_missions = {
+			zan_rivalries
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Zimbabwe Gold
+	zan_gold = {
+		icon = mission_zambezi_gold
+		position = 4
+		required_missions = {
+			zan_mutapa
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Secure Iron
+	zan_secure_iron = {
+		icon = mission_iron_and_copper
+		position = 5
+		required_missions = {
+			zan_west_conq_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#End the Kongo
+	zan_kongo_rival = {
+		icon = mission_kon_greatest_power_kongo
+		position = 7
+		required_missions = {
+			zan_fortify_west
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Bridging Zanzibar
+	zan_madagascar_0 = {
+		icon = mission_cromandel_coast
+		position = 8
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Malay Question
+	zan_madagascar_2 = {
+		icon = hungarian_union
+		position = 10
+		required_missions = {
+			zan_madagascar_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	#Persian Origins
+	zan_hormuz_alliance = {
+		icon = mam_hormuz_straits
+		position = 12
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_hormuz_gov = {
+		icon = mission_friends_or_enemies
+		position = 13
+		required_missions = {
+			zan_hormuz_alliance
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_hormuz_bonuses = {
+		icon = the_crown_of_lothair
+		position = 14
+		required_missions = {
+			zan_hormuz_gov
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_hormuz_final = {
+		icon = personal_diplomacy
+		position = 15
+		required_missions = {
+			zan_hormuz_bonuses
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_into_oman = {
+		icon = polish_diplomacy
+		position = 16
+		required_missions = {
+			zan_hormuz_final
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_amirs = {
+		icon = mission_restore_faith_in_the_throne
+		position = 18
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_amirs_1 = {
+		icon = mission_war_for_the_crown
+		position = 20
+		required_missions = {
+			zan_estates
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_navy_focus_0 = {
+		icon = mission_danish_navy
+		position = 22
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_navy_focus_1 = {
+		icon = mission_russian_navy
+		position = 23
+		required_missions = {
+			zan_navy_focus_0 zan_shipyards_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_hegemony = {
+		icon = ven_navy_mission_2
+		position = 24
+		required_missions = {
+			zan_navy_focus_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_renaissance = {
+		icon = mission_islamic_golden_age
+		position = 25
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+new_mission_tree_0_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { }
+
+	zan_war_prep = {
+		icon = mission_mnd_dai_control_the_army
+		position = 2
+		required_missions = {
+			zan_coasts_of_zanz zan_rivalries
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_west_conq_0 = {
+		icon = mission_ne_great_lakes_conquest
+		position = 4
+		required_missions = {
+			zan_consolidate
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_kongo = {
+		icon = ned_in_flanders_fields
+		position = 5
+		required_missions = {
+			zan_west_conq_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_fortify_west = {
+		icon = mission_red_fort
+		position = 6
+		required_missions = {
+			zan_kongo zan_secure_iron
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_madagascar_1 = {
+		icon = mission_market_place_with_asian_traders
+		position = 9
+		required_missions = {
+			zan_maritime_presence zan_madagascar_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_madagascar_3 = {
+		icon = mission_vedic_education
+		position = 10
+		required_missions = {
+			zan_madagascar_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_madagascar_integration = {
+		icon = mission_zanzibari_trade
+		position = 11
+		required_missions = {
+			zan_madagascar_2 zan_madagascar_3 zan_madagascar_4
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_west_india = {
+		icon = mission_conquer_gujarat_dlh
+		position = 13
+		required_missions = {
+			zan_maldives
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_eic_buffs = {
+		icon = purely_for_commerce
+		position = 15
+		required_missions = {
+			zan_eic
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_merchants = {
+		icon = mission_the_tamil_trade_guilds
+		position = 18
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_estates = {
+		icon = balance_the_estates
+		position = 19
+		required_missions = {
+			zan_ulema zan_merchants zan_amirs
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_merchants_1 = {
+		icon = toulon_dockyards
+		position = 20
+		required_missions = {
+			zan_estates
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_absolutism = {
+		icon = enlightened_absolutism
+		position = 21
+		required_missions = {
+			zan_amirs_1 zan_merchants_1 zan_ulema_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_shipyards_0 = {
+		icon = mission_shipyards_of_gujarat
+		position = 22
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_shipyards_1 = {
+		icon = mission_grand_bengali_shipyards
+		position = 23
+		required_missions = {
+			zan_shipyards_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_coastal_battery = {
+		icon = Burn_Wooden_Wall
+		position = 24
+		required_missions = {
+			zan_shipyards_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_education = {
+		icon = mission_mnd_dai_universities
+		position = 25
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_scholars = {
+		icon = mission_early_modern_university
+		position = 26
+		required_missions = {
+			zan_renaissance zan_education zan_institutions
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_industrial = {
+		icon = industrialized_rhineland
+		position = 27
+		required_missions = {
+			zan_scholars
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+new_mission_tree_0_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { }
+
+	zan_coasts_of_zanz = {
+		icon = mission_seize_the_bengal_coast
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_consolidate = {
+		icon = unite_the_realm
+		position = 3
+		required_missions = {
+			zan_war_prep zan_vassals_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_great_kilwa = {
+		icon = mission_empire
+		position = 7
+		required_missions = {
+			zan_fortify_west zan_horn
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_maritime_presence = {
+		icon = mission_omani_marines
+		position = 8
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_madagascar_4 = {
+		icon = mission_mnd_maj_gaja_madas_oath
+		position = 10
+		required_missions = {
+			zan_madagascar_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_maldives = {
+		icon = mission_indian_stateman
+		position = 12
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_south_india = {
+		icon = mission_rb_take_indian_coast
+		position = 13
+		required_missions = {
+			zan_maldives
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_eic = {
+		icon = mission_indian_trade_company
+		position = 14
+		required_missions = {
+			zan_west_india zan_south_india zan_east_india
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_half_india = {
+		icon = mission_entrepot_of_india
+		position = 15
+		required_missions = {
+			zan_eic
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_unified_india = {
+		icon = mission_explore_the_world
+		position = 16
+		required_missions = {
+			zan_half_india zan_eic_buffs
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_ulema = {
+		icon = mission_hands_praying
+		position = 18
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_ulema_1 = {
+		icon = mission_the_caliph
+		position = 20
+		required_missions = {
+			zan_estates
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_mosques_0 = {
+		icon = mission_mosque
+		position = 22
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_defensive_forts = {
+		icon = fortify_malta
+		position = 24
+		required_missions = {
+			zan_buildings_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_institutions = {
+		icon = patronize_the_scuole_grandi
+		position = 25
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+new_mission_tree_0_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { }
+
+	zan_vassals_0 = {
+		icon = integrate_the_three_leagues
+		position = 2
+		required_missions = {
+			zan_coasts_of_zanz zan_sofala
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_mogadishu = {
+		icon = mission_son_fetishist_alliances
+		position = 4
+		required_missions = {
+			zan_consolidate
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_ajuraan = {
+		icon = mission_retake_ceuta
+		position = 5
+		required_missions = {
+			zan_mogadishu
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_horn = {
+		icon = mission_rb_monopolize_the_channel
+		position = 6
+		required_missions = {
+			zan_ajuraan zan_aden
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_spice_islands = {
+		icon = mission_rb_colonise_spice_islands
+		position = 11
+		required_missions = {
+			zan_madagascar_4
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_moluccas = {
+		icon = mission_mnd_maj_cloves
+		position = 12
+		required_missions = {
+			zan_spice_islands
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_east_india = {
+		icon = mission_conquer_bengal_tau
+		position = 13
+		required_missions = {
+			zan_maldives
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_burma = {
+		icon = mission_conquer_burma
+		position = 14
+		required_missions = {
+			zan_east_india
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_indochina = {
+		icon = mission_a_million_elephants
+		position = 15
+		required_missions = {
+			zan_burma
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_indochina_1 = {
+		icon = mission_rule_indochina
+		position = 16
+		required_missions = {
+			zan_indochina
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_coins = {
+		icon = mission_african_gold
+		position = 17
+		required_missions = {
+			zan_china_1 zan_indochina_1 zan_unified_india
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_bonus_0 = {
+		icon = mission_unknown_mission
+		position = 19
+		required_missions = {
+			zan_idea_bonuses
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_marketplaces_0 = {
+		icon = mission_the_grand_bazaar
+		position = 22
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_buildings_0 = {
+		icon = mission_early_game_buildings
+		position = 23
+		required_missions = {
+			zan_workshops_0 zan_marketplaces_0 zan_mosques_0 zan_shipyards_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_qual_army = {
+		icon = mission_assemble_an_army
+		position = 24
+		required_missions = {
+			zan_buildings_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_buildings_1 = {
+		icon = mission_royal_roads
+		position = 25
+		required_missions = {
+			zan_defensive_forts zan_qual_army zan_courthouses
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
+new_mission_tree_0_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { }
+
+	zan_sofala = {
+		icon = mission_reclaim_lost_territory
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_into_cape = {
+		icon = colonize_the_cape
+		position = 3
+		required_missions = {
+			zan_sofala
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_gateway = {
+		icon = mission_southern_frontier_lotn
+		position = 4
+		required_missions = {
+			zan_into_cape
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_aden = {
+		icon = mission_control_the_red_sea
+		position = 5
+		required_missions = {
+			zan_mogadishu
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_somalia = {
+		icon = mission_pirate_flag
+		position = 7
+		required_missions = {
+			zan_horn
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_colonial_0 = {
+		icon = mission_exploration
+		position = 8
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_colonial_1 = {
+		icon = mission_sail_to_the_east_indies
+		position = 9
+		required_missions = {
+			zan_colonial_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_australia_0 = {
+		icon = colonize_australia
+		position = 10
+		required_missions = {
+			zan_colonial_1
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_australia_1 = {
+		icon = settle_austrialasia
+		position = 11
+		required_missions = {
+			zan_australia_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_indonesia = {
+		icon = mission_portuguese_malacca
+		position = 12
+		required_missions = {
+			zan_spice_islands
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_east_sultan = {
+		icon = conquer_malacca
+		position = 13
+		required_missions = {
+			zan_indonesia
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_china_0 = {
+		icon = jap_fate_mandate
+		position = 15
+		required_missions = {
+			zan_burma
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_china_1 = {
+		icon = qng_conquer_south_china
+		position = 16
+		required_missions = {
+			zan_china_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_idea_bonuses = {
+		icon = mission_zim_strong_rulership
+		position = 18
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_bonus_1 = {
+		icon = mission_unknown_mission
+		position = 19
+		required_missions = {
+			zan_idea_bonuses
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_bonus_2 = {
+		icon = mission_unknown_mission
+		position = 20
+		required_missions = {
+			zan_bonus_1 zan_bonus_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_workshops_0 = {
+		icon = mission_into_africa
+		position = 22
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+
+	zan_courthouses = {
+		icon = mission_muslim_administrators
+		position = 24
+		required_missions = {
+			zan_buildings_0
+		}
+		provinces_to_highlight = { }
+		trigger = { }
+		effect = { }
+	}
+}
