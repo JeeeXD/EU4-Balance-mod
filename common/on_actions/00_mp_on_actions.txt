@@ -95,6 +95,20 @@ on_startup = {
 				value = 0
 			}
 		}
+		if = {
+			limit = {
+				check_variable = {
+					which = auto_dev_sum_clicks					
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = auto_dev_sum_clicks
+				value = 0
+			}
+		}
 	}
 }
 

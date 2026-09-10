@@ -1,0 +1,37 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_development_button"
+		texturefile = "gfx//interface//development_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cap_development_button"
+		texturefile = "gfx//interface//cap_development_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_parliament_seats_button"
+		texturefile = "gfx//interface//parliament_seats_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_demolish_buildings_button"
+		texturefile = "gfx//interface//demolish_buildings_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_critical_events_button"
+		texturefile = "gfx//interface//critical_events_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_set_edicts_button"
+		texturefile = "gfx//interface//set_edicts_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_construct_buildings_button"
+		texturefile = "gfx//interface//construct_buildings_button.dds"
+		loadType = "INGAME"
+	}
+}

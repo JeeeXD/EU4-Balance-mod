@@ -17,3 +17,15 @@ can_colonize_province = {
 		}
 	}
 }
+
+can_increase_autonomy = {
+	condition = {
+		tooltip = "If you're reading this, you should reconsider your life choices."
+		potential = {
+			always = yes
+		}
+		allow = {
+			ai = no
+		}
+	}
+}
