@@ -1,0 +1,25 @@
+KBO_10y_cooldown = {
+	
+}
+KBO_katsina_crumbled = {
+	core_creation = -0.2
+}
+KBO_air_fortress = {
+	local_defensiveness = 0.25
+	fort_level = 1
+}
+KBO_katsina_prov_dev = {
+	local_development_cost = -0.1
+}
+KBO_tax_haven = {
+	local_tax_modifier = 1.5
+	local_great_project_upgrade_cost = -0.5
+}
+KBO_hegemon_of_west_africa = {
+	governing_capacity_modifier = 0.2
+	min_autonomy_in_territories = -0.1
+	administrative_efficiency = 0.05
+}
+KBO_integrate_the_volta = {
+	land_morale = 0.15
+}

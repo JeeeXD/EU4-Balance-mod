@@ -1,0 +1,6 @@
+government = tribal
+add_government_reform = tribal_kingdom
+religion = shamanism
+technology_group = central_african
+primary_culture = ganda
+government_rank = 1

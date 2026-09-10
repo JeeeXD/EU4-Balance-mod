@@ -7,8 +7,8 @@ discovered_by = KBO
 discovered_by = OYO
 discovered_by = BEN
 discovered_by = JOL
-
-
-1462.1.1 = { discovered_by = POR } 
-1529.6.1 = { discovered_by = FRA } # Parmentier Brothers
-
+1462.1.1 = { discovered_by = POR }
+1529.6.1 = { discovered_by = FRA }
+discovered_by = sub_saharan
+discovered_by = central_african
+discovered_by = east_african
