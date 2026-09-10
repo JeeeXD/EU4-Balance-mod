@@ -1861,56 +1861,56 @@ estate_burghers_control_over_the_mint = {
 	icon = privilege_gold_mint
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.1
-	loyalty = 0
+	influence = 0.05
+	loyalty = 0.05
 	is_valid = {
 		has_unlocked_estate_privilege = { estate_privilege = estate_burghers_control_over_the_mint }
 		gold = 1
 	}
 	can_select = {
 	}
-	#on_granted = {
-	#	custom_tooltip = estate_burghers_control_over_the_mint_gt
-	#}
-	#on_granted_province = {
-	#	if = {
-	#		limit = {
-	#			trade_goods = gold
-	#		}
-	#		add_province_modifier = {
-	#			name = estate_burghers_control_over_gold_mine
-	#			duration = -1
-	#		}
-	#	}
-	#	else_if = {
-	#		limit = {
-	#			has_province_modifier = estate_burghers_control_over_gold_mine
-	#		}
-	#		remove_province_modifier = estate_burghers_control_over_gold_mine
-	#	}
-	#}
-	#on_revoked = {
-	#	custom_tooltip = estate_burghers_control_over_the_mint_rt
-	#}
-	#on_revoked_province = {
-	#	if = {
-	#		limit = {
-	#			has_province_modifier = estate_burghers_control_over_gold_mine
-	#		}
-	#		remove_province_modifier = estate_burghers_control_over_gold_mine
-	#	}
-	#}
-	#on_invalid = {
-	#	custom_tooltip = estate_burghers_control_over_the_mint_rt
-	#}
-	#on_invalid_province = {
-	#	if = {
-	#		limit = {
-	#			has_province_modifier = estate_burghers_control_over_gold_mine
-	#		}
-	#		remove_province_modifier = estate_burghers_control_over_gold_mine
-	#	}
-	#}
+	on_granted = {
+		custom_tooltip = estate_burghers_control_over_the_mint_gt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = gold
+			}
+			add_province_modifier = {
+				name = estate_burghers_control_over_gold_mine
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_control_over_the_mint_rt
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_control_over_the_mint_rt
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
 	penalties = {
 	}
 	benefits = {

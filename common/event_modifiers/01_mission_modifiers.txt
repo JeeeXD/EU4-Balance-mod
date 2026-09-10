@@ -3241,6 +3241,7 @@ exaggerated_military_statistics = {
 
 million_rice_fields = {
 	land_attrition = -0.2
+	development_cost = -0.1
 }
 
 chakravarti = {
@@ -3263,6 +3264,7 @@ tau_expansionism = {
 
 tau_buddhist_defender = {
 	global_missionary_strength = 0.02
+	global_manpower_modifier = 0.2
 }
 
 tau_mandala = {
