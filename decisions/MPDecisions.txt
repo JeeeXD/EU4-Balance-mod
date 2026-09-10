@@ -2,7 +2,7 @@ country_decisions = {
 	dev_sum_clicks_decision = {
 		major = yes
 		potential = {
-			always = yes
+			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -20,7 +20,8 @@ country_decisions = {
 	PR_critical_events = {
 		major = yes
 		potential = {
-			ai = no
+			#ai = no
+			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -53,6 +54,7 @@ country_decisions = {
 		potential = {
 			ai = no
 			has_parliament = yes 
+			always = no
 		}
 		allow = {
 			any_owned_province = {
@@ -85,6 +87,7 @@ country_decisions = {
 		potential = {
 			ai = no
 			NOT = { has_country_flag = sea_clear_specific_building_flag }
+			always = no
 		}
 		allow = {
 			always = yes
@@ -105,6 +108,7 @@ country_decisions = {
 
 		}
 		potential = {
+			always = no
 			ai = no
 			NOT = { has_country_flag = sea_state_edicts_flag }
 			OR = {

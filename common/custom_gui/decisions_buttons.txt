@@ -1,0 +1,145 @@
+custom_button = {
+	name = development_button
+    tooltip = dev_sum_clicks_decision_tooltip
+	potential = {
+        always = yes
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = cap_development_button
+    tooltip = dst_cap_development_tooltip
+	potential = {
+        always = yes
+	}
+	trigger = {
+	}
+	effect = {
+        FROM = {
+            if = {
+                limit = {
+                    has_country_flag = dev_click
+                }
+                custom_tooltip = dst_cap_development_disable_tt
+                clr_country_flag = dev_click
+            }
+            else = {
+                custom_tooltip = dst_cap_development_enable_tt
+                set_country_flag = dev_click
+            }
+        }
+	}
+}
+
+custom_button = {
+	name = parliament_seats_button
+    tooltip = PR_parliament_seats_tooltip
+	potential = {
+        always = yes
+	}
+	trigger = {
+		has_parliament = yes
+        any_owned_province = {
+			AND = {
+				has_seat_in_parliament = no
+				is_state = yes
+			}		
+		}
+	}
+	effect = {
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_seat_in_parliament = no
+						is_state = yes
+					}
+					set_seat_in_parliament = yes
+				}
+			}
+	}
+}
+
+custom_button = {
+	name = critical_events_button
+    tooltip = PR_critical_events_title
+	potential = {
+        always = yes
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+				tooltip = PR_radical_reform_decision
+				NOT = { has_country_flag = radical_mercantilist_reforms }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_military_reform_decision
+				NOT = { has_country_flag = military_reform }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_commandant_decision
+				NOT = { has_country_flag = commandant }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PR_grand_captain_decision
+				NOT = { has_country_flag = grand_captain }
+			}
+			always = no
+	}
+	effect = {
+
+	}
+}
+
+custom_button = {
+	name = set_edicts_button
+    tooltip = sea_state_edicts_decision_title
+	potential = {
+        ai = no
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = is_not_on_cooldown_tt
+			NOT = { has_country_flag = sea_state_edicts_flag }
+			OR = {
+			NOT = { has_country_flag = sea_state_edicts_clear_flag }
+			had_country_flag = {
+				flag = sea_state_edicts_clear_flag
+				days = 33
+			}
+		    }
+		}
+		
+	}
+	effect = {
+		set_country_flag = sea_state_edicts_flag
+		country_event = { id = sealand_events.28 }
+		custom_tooltip = sea_state_edicts_decision_tt
+	}
+}
+
+custom_button = {
+	name = demolish_buildings_button
+    tooltip = sea_clear_specific_building_decision_title
+	potential = {
+        ai = no
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = is_not_on_cooldown_tt
+			NOT = { has_country_flag = sea_clear_specific_building_flag }
+		}
+		
+	}
+	effect = {
+		set_country_flag = sea_clear_specific_building_flag
+		country_event = { id = sealand_events.29 }
+		custom_tooltip = sea_clear_specific_building_decision_tt
+	}
+}
+
+
+
+
