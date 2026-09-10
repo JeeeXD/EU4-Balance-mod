@@ -333,7 +333,7 @@ guiTypes = {
 
 		iconType =
 		{
-			name ="trade_icon"  # 底下第二蓝行 贸易箱子图标
+			name ="trade_icon"  # 底下第二蓝行 贸易箱孝图标
 			spriteType = "GFX_diplomacy_traderights"
 			position = { x= 30 y = 400} # Y= 471
 			hint_tag = "hint_trade"
@@ -347,7 +347,7 @@ guiTypes = {
 		}
 
 		OverlappingElementsBoxType = {
-			name = "modifiers" # 修正图标的位置（一排
+			name = "modifiers" # 修正图标的佝置（一排
 			position = { x = 176 y = 258 } # X= 176 Y =331
 			size = { x = 252 y = 30 }
 			Orientation = "UPPER_LEFT"
@@ -365,14 +365,14 @@ guiTypes = {
 
 		iconType =
 		{
-			name ="province_terrain" # 省份地形图片
+			name ="province_terrain" # 眝份地形图片
 			spriteType = "GFX_combat_terrain_hills"
 			position = { x = 59 y = -97 } 
 		}
 
 
 		windowType = {
-			name = "top_section_window" # 不知道是什么?
+			name = "top_section_window" # 丝知靓是什么?
 			backGround=""
 			position = { x = 42 y = 21 }
 			size = { x=475 y=480 }
@@ -384,7 +384,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 
 			guiButtonType = {
-				name ="province_tab_button" # 最上端 省份名称 点击界面
+				name ="province_tab_button" # 最上端 眝份坝称 点击界面
 				quadTextureSprite = "GFX_province_tab_button"
 				buttonFont = "vic_18"
 				position = { x = 9 y = -125 }
@@ -392,7 +392,7 @@ guiTypes = {
 			}
 
 			guiButtonType = {
-				name ="states_tab_button" # 最上端 area名称 点击界面
+				name ="states_tab_button" # 最上端 area坝称 点击界面
 				quadTextureSprite = "GFX_province_tab_button"
 				buttonFont = "vic_18"
 				position = { x = 212 y = -125 }
@@ -400,13 +400,13 @@ guiTypes = {
 			}
 
 			iconType ={
-				name ="province_banner_foreign" # 外国省份名字后面的红色旗子横条
+				name ="province_banner_foreign" # 外国眝份坝字坎面的红色旗孝横条
 				spriteType = "GFX_province_banner_foreign"
 				position = { x= -42 y = -97}
 			}
 
 			iconType ={
-				name ="province_banner" # 省份名字后面的绿色旗子横条
+				name ="province_banner" # 眝份坝字坎面的绿色旗孝横条
 				spriteType = "GFX_province_banner"
 				position = { x= -42 y = -97}
 			}
@@ -427,42 +427,42 @@ guiTypes = {
 
 			guiButtonType =
 			{
-				name = "add_parliament" # 增加议会席位按钮
+				name = "add_parliament" # 增加议会席佝按钮
 				quadTextureSprite = "GFX_add_parliament_icon"
 				position = { x = 108 y = -81 }
 			}
 
 			guiButtonType =
 			{
-				name = "remove_parliament" # 同上
+				name = "remove_parliament" # 坌上
 				quadTextureSprite = "GFX_remove_parliament_icon"
 				position = { x = 108 y = -81 }
 			}
 
 			iconType =
 			{
-				name = "have_capital" # 同上
+				name = "have_capital" # 坌上
 				spriteType = "GFX_have_capital"
 				position = { x = 36 y = -81 }
 			}
 
 			iconType =
 			{
-				name = "have_trade_port" # 同上
+				name = "have_trade_port" # 坌上
 				spriteType = "GFX_have_trade_port"
 				position = { x = 72 y = -81 }
 			}
 
 			iconType =
 			{
-				name = "have_parliament" # 同上
+				name = "have_parliament" # 坌上
 				spriteType = "GFX_have_parliament_icon"
 				position = { x = 108 y = -81 }
 			}
 
 
 			guiButtonType = {
-				name ="history" # 省份历史按钮
+				name ="history" # 眝份历坲按钮
 				quadTextureSprite = "GFX_button_history"
 				position = { x = -27 y = 52 }
 			}
@@ -471,7 +471,7 @@ guiTypes = {
 
 
 			editBoxType = { 
-				name = "provincename" # 省份名称
+				name = "provincename" # 眝份坝称
 				position = { x = 137 y = -89 }
 				textureFile = ""
 				font = "vic_22s"
@@ -482,7 +482,7 @@ guiTypes = {
 			}
 
 			editBoxType = {
-				name = "capitalname" # 首都名称
+				name = "capitalname" # 首都坝称
 				position = { x = 138 y = -72}
 				textureFile = ""
 				font = "vic_18"
@@ -2834,7 +2834,7 @@ guiTypes = {
 				borderSize = {x = 0 y = 0}
 			}
 
-			smoothListboxType = {  # 省份能力的界面（帕夏 西班牙的+1发展度 俄罗斯的主教区
+			smoothListboxType = {  # 眝份能力的界面（帕夝 西睭牙的+1坑展度 俄罗斯的主教区
 				name = "stateviews_listbox"
 				backGround = ""
 				position = { x = 15 y = 324 }
@@ -2866,12 +2866,12 @@ guiTypes = {
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 
-			#### GREAT PROJECTS WINDOW 借用一个修改奇观MOD的设置以及图片
+			#### GREAT PROJECTS WINDOW ####
 			windowType = {
 				name = "great_projects_window"
 				backGround=""
-				position = { x=328 y= 0}
-				size = { x=475 y=210 }
+				position = { x=15 y=-105 }
+				size = { x=475 y=250 }
 				dontRender = ""
 				horizontalBorder= ""
 				verticalBorder= ""
@@ -2883,12 +2883,12 @@ guiTypes = {
 				{
 					name ="great_projects_window_bg"
 					spriteType = "GFX_provinceview_great_projects_bg"
-					position = { x= -14 y = 210 }
+					position = { x= -14 y = 0 }
 				}
 
 				instantTextBoxType = {
 					name = "header_label"
-					position = { x = 25 y = 240 }
+					position = { x = 16 y = 29 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2900,9 +2900,9 @@ guiTypes = {
 				
 				smoothListboxType = {
 					name = "great_projects_list"
-					position = { x = 7 y = 270 }
+					position = { x = 7 y = 55 }
 					backGround=""
-					size = { x = 300 y = 395 }
+					size = { x = 300 y = 220 }
 					spacing = 2
 					scrollbartype = "standardlistbox_slider"
 					borderSize = { x = 0 y = 0 }
@@ -2912,7 +2912,7 @@ guiTypes = {
 			windowType = {
 				name = "general_buildings_window"
 				backGround=""
-				position = { x=1 y=115 }
+				position = { x=1 y=180 }
 				size = { x=475 y=480 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -2957,7 +2957,7 @@ guiTypes = {
 			windowType = {
 				name = "province_values_window"
 				backGround=""
-				position = { x=4 y=354 }
+				position = { x=4 y=420 }
 				size = { x=475 y=480 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -3782,7 +3782,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "building_close_button"
-				position = { x = 304 y = 120 }
+				position = { x = 304 y = 200 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
 			}
@@ -6875,7 +6875,7 @@ guiTypes = {
 	}
 
 
-	## State Window # 省份法令弹出窗口
+	## State Window # 眝份法令弹出窗坣
 	windowType = {
 		name = "edicts_window" 
 		backGround=""
