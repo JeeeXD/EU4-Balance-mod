@@ -572,7 +572,12 @@ country_event = {
 			type = philosopher
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.4
@@ -581,7 +586,12 @@ country_event = {
 			type = chancellor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.5
@@ -590,7 +600,12 @@ country_event = {
 			type = herald
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.8
@@ -599,7 +614,12 @@ country_event = {
 			type = loyal_friend
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.9
@@ -608,7 +628,12 @@ country_event = {
 			type = missionary
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.10
@@ -617,7 +642,12 @@ country_event = {
 			type = governor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.11
@@ -626,7 +656,12 @@ country_event = {
 			type = state_theorist
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.12
@@ -635,7 +670,12 @@ country_event = {
 			type = artist
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.13
@@ -644,7 +684,12 @@ country_event = {
 			type = magistrate
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.14
@@ -653,7 +698,12 @@ country_event = {
 			type = master_of_mint
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.15
@@ -662,7 +712,12 @@ country_event = {
 			type = treasurer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.16
@@ -671,7 +726,12 @@ country_event = {
 			type = natural_scientist
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.17
@@ -680,7 +740,12 @@ country_event = {
 			type = theologian
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.1.18
@@ -689,7 +754,12 @@ country_event = {
 			type = inquisitor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 }
 # Dip:
@@ -715,7 +785,12 @@ country_event = {
 			type = imperial_councilor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.3
@@ -725,7 +800,12 @@ country_event = {
 			type = imperial_bureaucrat
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.4
@@ -734,7 +814,12 @@ country_event = {
 			type = naval_tactician
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.5
@@ -743,7 +828,12 @@ country_event = {
 			type = statesman
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.6
@@ -752,7 +842,12 @@ country_event = {
 			type = diplomat
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.8
@@ -761,7 +856,12 @@ country_event = {
 			type = spymaster
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.9
@@ -770,7 +870,12 @@ country_event = {
 			type = visionary
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.11
@@ -779,7 +884,12 @@ country_event = {
 			type = trader
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.12
@@ -789,7 +899,12 @@ country_event = {
 			type = colonial_governor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.13
@@ -803,7 +918,12 @@ country_event = {
 			type = navigator
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.14
@@ -812,7 +932,12 @@ country_event = {
 			type = reformist
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.15
@@ -822,7 +947,12 @@ country_event = {
 			type = naval_reformer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.16
@@ -831,7 +961,12 @@ country_event = {
 			type = overseer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.17
@@ -840,7 +975,12 @@ country_event = {
 			type = jester
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.18
@@ -850,7 +990,12 @@ country_event = {
 			type = harbor_master
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.2.19
@@ -859,7 +1004,12 @@ country_event = {
 			type = customs_officer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 }
 # Mil:
@@ -884,7 +1034,12 @@ country_event = {
 			type = army_reformer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.3
@@ -893,7 +1048,12 @@ country_event = {
 			type = commandant
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.4
@@ -902,7 +1062,12 @@ country_event = {
 			type = landsknecht
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.5
@@ -911,7 +1076,12 @@ country_event = {
 			type = dragoon
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.6
@@ -921,7 +1091,12 @@ country_event = {
 			type = howitzer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.77
@@ -930,7 +1105,12 @@ country_event = {
 			type = tactician
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.88
@@ -939,7 +1119,12 @@ country_event = {
 			type = drill_master
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.7
@@ -948,7 +1133,12 @@ country_event = {
 			type = siege_engineer
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.8
@@ -957,7 +1147,12 @@ country_event = {
 			type = contractor
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.13
@@ -966,7 +1161,12 @@ country_event = {
 			type = quartermaster
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.14
@@ -975,7 +1175,12 @@ country_event = {
 			type = recruitmaster
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.15
@@ -984,7 +1189,12 @@ country_event = {
 			type = army_organiser
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.16
@@ -993,7 +1203,12 @@ country_event = {
 			type = grand_captain
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 	option = {
 		name = sea_advisor_event.3.20
@@ -1002,6 +1217,11 @@ country_event = {
 			type = fortification_expert
 			skill = 1
 		}
-		add_splendor = -100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			add_splendor = -100
+		}
 	}
 }

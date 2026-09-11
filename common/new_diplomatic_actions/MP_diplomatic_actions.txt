@@ -123,6 +123,11 @@ sabotage_forts = {
 		full_idea_group = spy_ideas
 	}
 	is_allowed = {
+		NOT = {
+			FROM = {
+				has_country_modifier = spy_sabotaged_forts
+			}
+		}
 		custom_trigger_tooltip = {
 			tooltip = REQUIRES_60_SPY_NETWORK_TT
 			has_spy_network_in = {

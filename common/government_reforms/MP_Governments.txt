@@ -536,3 +536,36 @@ kitara_lake_federation = {
 	}
 
 }
+
+enable_aristo_reform = {
+	icon = "protectorate_parliament_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		army_tradition = 0.05
+	}
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+	}
+}
+
+enable_pluto_reform = {
+	icon = "merchant_representation_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		placed_merchant_power = 5
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+	}
+}
+
+enable_divine_reform = {
+	icon = "clergyman"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+	}
+	custom_attributes = {
+		enables_divine_idea_group = yes
+	}
+}

@@ -194,6 +194,7 @@ monarchy = {
 
 				berber_maghreb_reform
 				fatimid_maghreb_reform
+				enable_pluto_reform
 			}
 		}
 		bureaucracy = {
@@ -276,6 +277,7 @@ monarchy = {
 				#MOD
 				north_german_reform
 				south_german_reform
+				enable_divine_reform
 			}
 		}
 		military_doctrines = {
@@ -734,6 +736,7 @@ republic = {
 				fatimid_maghreb_reform
 				hormuz_navy_reform
 				oman_navy_reform
+				enable_aristo_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -799,7 +802,8 @@ republic = {
 
 				#MOD
 				north_german_reform
-				south_german_reform				
+				south_german_reform	
+				enable_divine_reform			
 			}
 		}
 		military_doctrines = {
@@ -1326,6 +1330,9 @@ theocracy = {
 				german_swiss_reform
 				german_swabian_reform
 				german_other_reform
+
+				# MOD
+				enable_aristo_reform
 			}
 		}
 		education_of_the_state = {
@@ -1471,6 +1478,7 @@ theocracy = {
 				enforced_autocracy_reform
 
 				influence_subject_reform
+				enable_pluto_reform
 			}
 		}
 		clergy_in_administration = {

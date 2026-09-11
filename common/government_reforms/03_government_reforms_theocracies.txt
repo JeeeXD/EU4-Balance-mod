@@ -1306,7 +1306,8 @@ maintain_religious_head_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		yearly_absolutism = 1
-		max_absolutism = 10
+		max_absolutism = 20
+		max_absolutism_effect = 0.15
 	}
 }
 
@@ -1314,8 +1315,10 @@ partial_secularisation_reform = {
 	icon = "partial_secularisation_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		tolerance_of_heathens_capacity = 1
-		tolerance_of_heretics_capacity = 1
+		missionaries = 1
+		global_missionary_strength = 0.02
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 2
 	}
 }
 

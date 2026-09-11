@@ -1,0 +1,31 @@
+custom_button = {
+	name = military_golden_age
+	potential = {
+		always = yes
+	}
+	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = hasnt_had_golden_era
+			NOT = {
+				has_country_flag = had_mil_golden_era
+			}
+		}
+		army_size_percentage = 1
+		has_mil_advisor_3 = yes
+		num_of_generals = 2
+		splendor = 400
+		OR = {
+			army_tradition = 50
+			army_professionalism = 0.25
+		}
+	}
+	effect = {
+		add_splendor = -400
+		add_country_modifier = {
+			name = military_golden_era
+			duration = 18250
+		}
+		set_country_flag = had_mil_golden_era
+	}
+	tooltip = "Military Golden Era"
+}
