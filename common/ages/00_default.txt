@@ -77,6 +77,7 @@ age_of_discovery = {
 		
 		obj_two_unions = {
 			allow = {
+				always = no
 				religion_group = christian
 			}
 			calc_true_if = {
@@ -91,9 +92,9 @@ age_of_discovery = {
 		} 
 		
 		obj_many_vassals = {
-			allow = {
-				NOT = { religion_group = christian }
-			}
+			#allow = {
+			#	NOT = { religion_group = christian }
+			#}
 			vassal = 5
 		}		
 	
@@ -109,18 +110,9 @@ age_of_discovery = {
 		}
 
 		obj_competent_court = {
-			employed_advisor = {
-	            category = ADM
-				skill = 3
-            }
-			employed_advisor = {
-	            category = DIP
-				skill = 3
-            }
-			employed_advisor = {
-	            category = MIL
-				skill = 3
-            }
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
 		} 
 	}		
 	
@@ -186,7 +178,7 @@ age_of_discovery = {
 				on_age_ability_taken = { age = age_of_discovery }
 			}
 			modifier = {
-				cav_to_inf_ratio = 0.35
+				cav_to_inf_ratio = 0.2
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -254,7 +246,7 @@ age_of_discovery = {
 				on_age_ability_taken = { age = age_of_discovery }
 			}
 			modifier = {
-				diplomatic_reputation = 1
+				diplomatic_reputation = 2
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {

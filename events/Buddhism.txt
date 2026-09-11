@@ -2560,10 +2560,10 @@ country_event = {
 	
 	option = {
 		name = buddhism_events.44.a #Positive Karma
-		add_karma = 25
+		add_karma = 50
 	}
 	option = {
 		name = buddhism_events.44.b #Negative Karma
-		add_karma = -25
+		add_karma = -50
 	}
 }

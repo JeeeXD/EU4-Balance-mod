@@ -1,8 +1,25 @@
 custom_button = {
 	name = sea_ages_button
-	trigger = { splendor = 800 }
+	potential = {
+		always = yes
+	}
+	trigger = { 
+		if = {
+			limit = { NOT = { has_idea = tranquil_coordination } }
+			splendor = 800
+		}
+		else = {
+			splendor = 400
+		}
+	}
 	effect = {
-		add_splendor = -800
+		if = {
+			limit = { NOT = { has_idea = tranquil_coordination } }
+			add_splendor = -800
+		}
+		else = {
+			add_splendor = -400
+		}
 		change_government_reform_progress = 50
 	}
 	tooltip = sea_ages_button_tt

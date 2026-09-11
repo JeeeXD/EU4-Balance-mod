@@ -235,17 +235,26 @@ guiTypes = {
 		}
 		guiButtonType = {
 			name = "sea_ages_button"
-			position = { x = 326 y =194 }
+			position = { x = 326 y = 188 }
 			quadTextureSprite ="GFX_sea_ages_button"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "golden_age"
 			quadTextureSprite ="GFX_age_golden_age_button"
-			position = { x = 230 y = 190 }
-			buttonText = ""
+			position = { x = 480 y = 170 }
+			buttonText = "Start Economic Golden Era"
 			buttonFont = "vic_18"
-			scale = .65
+			scale = 1
+		}
+		guiButtonType = {
+			name = "military_golden_age"
+			quadTextureSprite ="GFX_age_golden_age_button"
+			position = { x = 480 y = 210 }
+			buttonText = "Start Military Golden Era"
+			buttonFont = "vic_18"
+			#scale = 1
+			scripted = yes
 		}
 		iconType = {
 			name = "in_golden_age_banner"

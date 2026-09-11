@@ -1069,16 +1069,7 @@ ava_slot_5 = {
 		required_missions = { ava_universal_ruler }
 		position = 4
 		trigger = {
-			num_of_subjects = 3
-			custom_trigger_tooltip = {
-				tooltip = tau_great_mandala.tooltip
-				any_subject_country = {
-					total_development = 150
-					NOT = {
-						liberty_desire = 50
-					}
-				}
-			}
+			total_development = 1250
 		}
 		effect = {
 			add_country_modifier = {

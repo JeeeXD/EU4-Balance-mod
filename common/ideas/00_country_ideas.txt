@@ -816,7 +816,7 @@ CAS_ideas = {
 
 NED_ideas = {
 	start = {
-		global_sailors_modifier = 0.25
+		global_sailors_modifier = 0.5
 		naval_forcelimit_modifier = 0.50
 	}
 	
@@ -838,7 +838,7 @@ NED_ideas = {
 	}
 	dutch_trading_spirit = {
 		merchants = 1
-		trade_range_modifier = 0.1
+		trade_steering = 0.33
 	}
 	polders = {
 		development_cost = -0.1
@@ -848,7 +848,7 @@ NED_ideas = {
 		allowed_marine_fraction = 0.25
 	}
 	embrace_humanism = {
-		tolerance_heretic = 3
+		discipline = 0.05
 	}
 	army_sappers = {
 		siege_ability = 0.10
@@ -1847,7 +1847,7 @@ PLC_ideas = {
 	}
 	plc_the_obrona_potoczna = { #Same for all of them
 		drill_gain_modifier = 0.25
-		army_tradition = 0.5
+		army_tradition = 1
 	}
 	winged_hussars = { 
 		cavalry_power = 0.2
@@ -2781,7 +2781,7 @@ MLO_ideas = {
 BYZ_ideas = {
 	start = {
 		advisor_cost = -0.10
-		core_creation = -0.25
+		core_creation = -0.2
 	}
 	
 	bonus = {
@@ -2798,7 +2798,7 @@ BYZ_ideas = {
 	}
 	
 	byz_roman_empire = {
-		land_forcelimit_modifier = 0.25
+		land_forcelimit_modifier = 0.2
 	}
 	
 	ecumenical_patriarch = {
@@ -2816,11 +2816,11 @@ BYZ_ideas = {
 	
 	byz_strategikon = {
 		discipline = 0.05
-		backrow_artillery_damage = 0.15
+		backrow_artillery_damage = 0.1
 	}
 
 	new_imperial_army = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.2
 	}
 }
 
@@ -3785,7 +3785,7 @@ GRA_ideas = {
 PAP_ideas = {
 	start = {
 		diplomatic_reputation = 1
-		religious_unity = 0.25
+		land_forcelimit_modifier = 0.25
 	}
 
 	bonus = {
@@ -3798,25 +3798,25 @@ PAP_ideas = {
 	free = yes		#will be added at load.
 	
 	ecclesiastical_primacy = {
-		tolerance_own = 2
+		ae_impact = -0.10
 	}
 	papal_investiture_and_tithes = {
-		global_tax_modifier = 0.2
+		global_tax_modifier = 0.33
 	}
 	glory_of_rome = {
 		prestige_decay = -0.01
 	}
 	donation_of_constantine = {
-		fabricate_claims_cost = -0.25
+		build_cost = -0.1
 	}
 	centralize_the_states = {
 		production_efficiency = 0.1
 	}
 	the_vatican_museums = {
-		free_dip_policy = 1
+		free_policy = 1
 	}
 	holy_father = {
-		ae_impact = -0.10
+		tolerance_own = 4
 	}
 }
 
@@ -12639,10 +12639,10 @@ KOL_ideas = {
 		ae_impact = -0.1
 	}
 	kol_archchancellor_of_italy = {
-		prestige_decay = -0.01
+		development_cost = -0.1
 	}
 	kol_hanseatic_city = {
-		development_cost = -0.1
+		discipline = 0.05
 	}
 	kol_prime_minister = {
 		legitimacy = 0.5
@@ -12659,7 +12659,7 @@ KOL_ideas = {
 		diplomatic_upkeep = 1
 	}
 	kol_order_of_saint_michael = {
-		discipline = 0.05
+		prestige_decay = -0.01
 	}
 }
 
@@ -15505,11 +15505,11 @@ SYN_ideas = {
 
 MOR_ideas = {
 	start = {
-		naval_attrition = -0.25
-		naval_forcelimit_modifier = 0.25
+		hostile_attrition = 2
+		defensiveness = 0.25
 	}
 	bonus = {
-		hostile_attrition = 1
+		naval_forcelimit_modifier = 0.25
 	}
 	trigger = {
 		tag = MOR
@@ -15545,7 +15545,7 @@ MOR_ideas = {
 
 TUN_ideas = {
 	start = {
-		naval_attrition = -0.25
+		infantry_power = 0.1
 		galley_power = 0.2		
 	}
 	bonus = {
@@ -15557,7 +15557,6 @@ TUN_ideas = {
 	free = yes
 	tun_catalan_guard = {
 		mercenary_discipline = 0.05
-		infantry_power = 0.1
 	}
 	dual_diplomacy = {
 		diplomatic_upkeep = 1
@@ -15568,6 +15567,7 @@ TUN_ideas = {
 	}
 	tun_attract_foreign_pirates = {
 		global_sailors_modifier = 0.25
+		naval_attrition = -0.25
 	}
 	tun_board_of_captains = {
 		leader_naval_fire = 1
@@ -16373,11 +16373,10 @@ LOT_ideas = {
 		idea_cost = -0.1
 	}
 	lot_court_of_europe = {
-		prestige = 0.5
-		advisor_pool = 1
+		global_trade_goods_size = 0.15
 	}
 	lot_land_of_abbeys = {
-		missionaries = 1
+		discipline = 0.05
 	}
 	lot_european_empire = {
 		core_creation = -0.2

@@ -4,7 +4,12 @@ custom_button = {
 		ai = no
 	}
 	trigger = {
-		splendor = 100
+		if = {
+			limit = {
+				NOT = { has_idea = ecumenism }
+			}
+			splendor = 200
+		}
 	}
 	effect = {
 		country_event = {

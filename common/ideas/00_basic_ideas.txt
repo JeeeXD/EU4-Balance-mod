@@ -328,7 +328,7 @@ innovativeness_ideas = {
 		prestige_decay = -0.02
 	}
 	empiricism = {
-		yearly_innovativeness = 0.05
+		yearly_innovativeness = 0.25
 	}
 	scientific_revolution = {
 		technology_cost = -0.1
@@ -1571,6 +1571,9 @@ humanist_ideas = {
 	ecumenism = {
 		advisor_pool = 4
 		num_accepted_cultures = 4
+		effect = {
+			custom_tooltip = humanist_free_advisors_tt
+		}
 	}
 	cultural_ties = {
 		global_prosperity_growth = 0.2
@@ -1786,6 +1789,9 @@ court_ideas = {
 	}
 	tranquil_coordination = {
 		monthly_reform_progress_modifier = 0.2
+		effect = {
+			custom_tooltip = court_better_splendor_blender_tt
+		}
 	}
 	respected_authority = {
 		all_estate_possible_privileges = 1
