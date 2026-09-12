@@ -1,19 +1,16 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = ganda
-religion = shamanism #Fetishism
+religion = shamanism#Fetishism
 technology_group = central_african
 unlock_cult = mwari_cult
 unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
-
 unit_type = sub_saharan
-capital = 4062 # Basoga
-
-
+capital = 4054# Basoga
 # Fictional
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Ntale"
 		dynasty = "Zibondo"
 		adm = 3
@@ -21,10 +18,9 @@ capital = 4062 # Basoga
 		mil = 3
 	}
 }
-
 #Ruled by council of Basoga Chiefs
-1488.1.1 = {
-	monarch = {
+1488.1.1 = { 
+	monarch = { 
 		name = "Council of Chiefs"
 		regent = yes
 		adm = 3
@@ -32,3 +28,4 @@ capital = 4062 # Basoga
 		mil = 4
 	}
 }
+government_rank = 1

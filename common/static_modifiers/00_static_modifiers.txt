@@ -1001,7 +1001,7 @@ positive_karma = {
 
 # Multiplied by the amount of negative karma
 negative_karma = {
-	global_manpower_modifier = -0.002
+	manpower_in_true_faith_provinces = -0.002
 	tolerance_heretic = -0.04
 }
 

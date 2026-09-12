@@ -1,7 +1,6 @@
 #4323 - Farafreh
-
 owner = MAM
-controller = MAM #Local Badawin in control
+controller = MAM#Local Badawin in control
 add_core = MAM
 culture = al_misr_arabic
 religion = sunni
@@ -9,8 +8,7 @@ capital = "Farafreh"
 is_city = yes
 base_manpower = 1
 trade_goods = livestock
-hre = no
-base_tax = 1 
+base_tax = 1
 base_production = 1
 discovered_by = MAM
 add_local_autonomy = 50
@@ -19,11 +17,7 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = nomad_group
 discovered_by = indian
-discovered_by = east_african
-
-1517.1.1 = {
-	owner = TUR
+1517.1.1 = { 
 	controller = TUR
 	add_core = TUR
-	remove_core = MAM
-} # Invaded by the Ottomans
+}
