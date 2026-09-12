@@ -17832,7 +17832,7 @@ AKS_ideas = {
 	}
 	
 	aks_persian_revenge = {
-		warscore_cost_vs_other_religion = -0.15
+		warscore_cost_vs_other_religion = -0.1
 	}
 	
 	aks_christianity_stronghold = {
@@ -18830,6 +18830,7 @@ BRM_ideas = {
 	}
 	BRM_rajadhiraja = {
 		land_forcelimit_modifier = 0.2
+		cavalry_cost = -0.1
 	}
 	BRM_manu_kye_dhammathat = {
 		stability_cost_modifier = -0.10

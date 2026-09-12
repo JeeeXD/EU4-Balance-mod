@@ -2234,7 +2234,7 @@
  subutais_strategies_reform_desc:0 "Subutai was a general and military strategist of the great Genghis Khan himself. His teachings and lessons regarding the usage of siege weaponry are legendary and are now part of our own military doctrines."
  ahmudan_system_reform:0 "Ahmudan System"
  ahmudan_system_reform_desc:0 "The ahmudan system ("crown service") is a form of conscription where local governors provide the army with a supply of predetermined quota of men. The affected governors and their provinces are exempt from most of the taxes in exchange for their military servitude."
- mechanic_ahmudan_system_yes:0 "Gain §G-10.0%§! Global Regiment Cost and §G+20.0%§! Manpower Recovery Speed during war.\nGain additional §G+7.5%§! Morale of Armies, §G+15.0%§! Fort Defense and §G+10.0%§! Manpower Recovery Speed during a defensive war."
+ mechanic_ahmudan_system_yes:0 "Gain §G+10%§! Morale of Armies, §G+15.0%§! Fort Defense and §G+20.0%§! Manpower Recovery Speed during a defensive war."
  ability_ahmudan_mechanic:0 "Ahmudan System Interactions"
  ahmudan_system_attacker:0 "Ahmudan System: Attacker"
  ahmudan_system_defender:0 "Ahmudan System: Defender"

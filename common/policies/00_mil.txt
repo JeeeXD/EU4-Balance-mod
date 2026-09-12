@@ -1045,8 +1045,6 @@ psychological_warfare_policy = {
 	reinforce_speed = 0.25
 	reinforce_cost_modifier = -0.25
 	all_estate_loyalty_equilibrium = 0.1
-	cavalry_flanking = 0.5
-	nomadic_tribes_loyalty_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1911,3 +1909,4 @@ harbour_administration = {
 		}	
 	}
 }
+

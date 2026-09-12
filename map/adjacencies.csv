@@ -115,6 +115,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 321;2302;sea;1317;-1;-1;-1;-1;Cyprus-Icel MEDITERRANEAN
 321;2313;sea;1317;-1;-1;-1;-1;Cyprus-Antakiya MEDITERRANEAN
 320;319;sea;1319;-1;-1;-1;-1;Rhodes-Mentesha MEDITERRANEAN
+1247;115;sea;1298;-1;-1;-1;-1;Corsica-Pisa MEDITERRANEAN
 2536;4622;sea;1505;-1;-1;-1;-1;Mayaimi-Canimar CARIBBEANS
 4624;2652;sea;1512;-1;-1;-1;-1;Guane-Ecab CARIBBEANS
 493;1881;sea;1523;-1;-1;-1;-1;St. Martin-St. Thomas CARIBBEANS
@@ -142,6 +143,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 2348;164;sea;1319;-1;-1;-1;-1;Scio-Nasso AEGAN
 145;163;sea;1319;-1;-1;-1;-1;Morea-Crete AEGAN
 1777;4257;sea;1652;-1;-1;-1;-1;Kola-Mezen NOVGOROD
+28;36;sea;1254;-1;-1;-1;-1;Nyland-Reval BALTIC
 1983;1775;sea;1258;-1;-1;-1;-1;Lolland-Holstein LUBECK
 235;87;sea;1271;-1;-1;-1;-1;Kent-Calais CHANNEL
 979;2611;sea;1680;-1;-1;-1;-1;Unangan-Kodiak ALASKA

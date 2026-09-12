@@ -116,7 +116,7 @@ north_german_reform = {
 	}
 
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.15
+		warscore_cost_vs_other_religion = -0.1
 		enforce_religion_cost = -0.33
 	}
 	
