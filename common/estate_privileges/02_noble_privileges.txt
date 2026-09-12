@@ -5049,7 +5049,7 @@ estate_nobles_court_privilige = {
 	loyalty_scaled_conditional_modifier = {
 		trigger = { always = yes }
 		modifier = { 
-			leader_cost = -0.33
+			leader_cost = -0.20
 			defensiveness = 0.25
 		}
 	}

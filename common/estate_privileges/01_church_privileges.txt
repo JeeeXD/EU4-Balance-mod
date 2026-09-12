@@ -3516,8 +3516,6 @@ estate_church_court_privilige = {
 	loyalty_scaled_conditional_modifier = {
 		trigger = { always = yes }
 		modifier = { 
-			curia_powers_cost = -0.15
-			papal_influence = 4
 			build_cost = -0.05
 			tolerance_own = 4
 		}

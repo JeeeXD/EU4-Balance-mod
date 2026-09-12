@@ -701,45 +701,6 @@ enlightened_aristocracy = {
 	}
 }
 
-the_liberation_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = offensive_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = offensive_ideas
-	}	
-	
-	
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
-	}
-}
-
 visionary_thinkers = {
 	monarch_power = ADM
 	
@@ -1883,7 +1844,7 @@ colonial_administration_act = {
 		full_idea_group = exploration_ideas
 	}
 	
-	min_autonomy_in_territories = -10
+	min_autonomy_in_territories = -0.1
 	trade_company_investment_cost = -0.2
 	
 	effect = {}
