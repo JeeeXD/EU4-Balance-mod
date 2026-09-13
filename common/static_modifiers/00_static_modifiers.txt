@@ -611,7 +611,7 @@ base_values = {
 	num_of_parliament_issues = 10
 	has_marines = yes
 	privateer_efficiency = -0.5
-	assault_fort_ability = -1
+	assault_fort_ability = -0.5
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
