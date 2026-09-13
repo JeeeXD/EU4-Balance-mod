@@ -1,0 +1,10 @@
+zan_mutapa_rivals = {
+    embargo_efficiency = 0.5
+    prestige = 0.5
+    power_projection_from_insults = 0.1
+}
+zan_vassal_bonuses = {
+    vassal_income = 0.2
+    vassal_forcelimit_bonus = 0.25
+    diplomatic_reputation = 1
+}

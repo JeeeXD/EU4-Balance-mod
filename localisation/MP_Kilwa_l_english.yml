@@ -1,5 +1,9 @@
 ﻿l_english:
+############## MODIFIERS ##############
+ zan_mutapa_rivals: "Cripple Economies"
+ zan_vassal_bonuses: "Subjects Solidarity"
 
+############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
  zan_rivalries_desc: "Kilwa's advanced technology in this region shall play a pivotal role in its expansion deeper into the mainland."
 

@@ -5,15 +5,78 @@ kilwa_1 = {
 	has_country_shield = yes
 	potential = { tag = ZAN }
 
+	# Inland Rivalries
 	zan_rivalries = {
 		icon = mission_the_battle_for_raichur
 		position = 1
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_capital_of = ZIM
+		}
+		trigger = {
+			OR = {
+				AND = {
+					is_rival = ZIM
+					trade_embargoing = ZIM
+				}
+				has_eclipsed = ZIM
+				NOT = { exists = ZIM }
+			}
+		 }
+		effect = { 
+			add_country_modifier = {
+				name = "zan_mutapa_rivals"
+				duration = 3650
+			}
+
+			shire_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_zambezi_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			butua_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			zimbabwe_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
+	# Crush Mutapa
 	zan_mutapa = {
 		icon = mission_zim_amongst_the_great_powers
 		position = 3
@@ -25,6 +88,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Zimbabwe Gold
 	zan_gold = {
 		icon = mission_zambezi_gold
 		position = 4
@@ -36,6 +100,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Secure Iron
 	zan_secure_iron = {
 		icon = mission_iron_and_copper
 		position = 5
@@ -47,6 +112,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# End the Kongo
 	zan_kongo_rival = {
 		icon = mission_kon_greatest_power_kongo
 		position = 7
@@ -58,6 +124,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Bridging Zanzibar
 	zan_madagascar_0 = {
 		icon = mission_cromandel_coast
 		position = 8
@@ -67,6 +134,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Malay Question
 	zan_madagascar_2 = {
 		icon = hungarian_union
 		position = 10
@@ -78,6 +146,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Persian Origins
 	zan_hormuz_alliance = {
 		icon = mam_hormuz_straits
 		position = 12
@@ -87,6 +156,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Proof of Pact
 	zan_hormuz_gov = {
 		icon = mission_friends_or_enemies
 		position = 13
@@ -98,6 +168,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Tale of Two Plutocracies
 	zan_hormuz_bonuses = {
 		icon = the_crown_of_lothair
 		position = 14
@@ -109,6 +180,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Shirazi Accord
 	zan_hormuz_final = {
 		icon = personal_diplomacy
 		position = 15
@@ -120,6 +192,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# One and the Same
 	zan_into_oman = {
 		icon = polish_diplomacy
 		position = 16
@@ -131,6 +204,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Curtailing the Amirs
 	zan_amirs = {
 		icon = mission_restore_faith_in_the_throne
 		position = 18
@@ -140,6 +214,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Kingmaker No More
 	zan_amirs_1 = {
 		icon = mission_war_for_the_crown
 		position = 20
@@ -151,6 +226,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Kilwa Rules the Waves
 	zan_navy_focus_0 = {
 		icon = mission_danish_navy
 		position = 22
@@ -160,6 +236,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Warships of the Future
 	zan_navy_focus_1 = {
 		icon = mission_russian_navy
 		position = 23
@@ -171,6 +248,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Naval Hegemon
 	zan_hegemony = {
 		icon = ven_navy_mission_2
 		position = 24
@@ -182,6 +260,7 @@ kilwa_1 = {
 		effect = { }
 	}
 
+	# Islamic Golden Age
 	zan_renaissance = {
 		icon = mission_islamic_golden_age
 		position = 25
@@ -198,6 +277,7 @@ kilwa_2 = {
 	has_country_shield = yes
 	potential = { tag = ZAN }
 
+	# Prepare for War
 	zan_war_prep = {
 		icon = mission_mnd_dai_control_the_army
 		position = 2
@@ -205,10 +285,18 @@ kilwa_2 = {
 			zan_coasts_of_zanz zan_rivalries
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			AND = {
+				army_size_percentage = 0.8
+				employed_advisor = {
+					category = MIL
+				}
+			}
+		}
 		effect = { }
 	}
 
+	# Into the Lakes
 	zan_west_conq_0 = {
 		icon = mission_ne_great_lakes_conquest
 		position = 4
@@ -220,6 +308,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Sunlit Fields
 	zan_kongo = {
 		icon = ned_in_flanders_fields
 		position = 5
@@ -231,6 +320,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Fortify Western Borders
 	zan_fortify_west = {
 		icon = mission_red_fort
 		position = 6
@@ -242,6 +332,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Markets of Madagascar
 	zan_madagascar_1 = {
 		icon = mission_market_place_with_asian_traders
 		position = 9
@@ -253,6 +344,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Civilized Islanders
 	zan_madagascar_3 = {
 		icon = mission_vedic_education
 		position = 10
@@ -264,6 +356,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# United Zanzibar
 	zan_madagascar_integration = {
 		icon = mission_zanzibari_trade
 		position = 11
@@ -275,6 +368,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Trading in Spice
 	zan_west_india = {
 		icon = mission_conquer_gujarat_dlh
 		position = 13
@@ -286,6 +380,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Enrich Our Frontlines
 	zan_eic_buffs = {
 		icon = purely_for_commerce
 		position = 15
@@ -297,6 +392,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Empowering the Guilds
 	zan_merchants = {
 		icon = mission_the_tamil_trade_guilds
 		position = 18
@@ -306,6 +402,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Internal Stability
 	zan_estates = {
 		icon = balance_the_estates
 		position = 19
@@ -317,6 +414,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Global Enterprise
 	zan_merchants_1 = {
 		icon = toulon_dockyards
 		position = 20
@@ -328,6 +426,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Absolutist Kilwa
 	zan_absolutism = {
 		icon = enlightened_absolutism
 		position = 21
@@ -339,6 +438,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Bustling Coastal Cities
 	zan_shipyards_0 = {
 		icon = mission_shipyards_of_gujarat
 		position = 22
@@ -348,6 +448,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Navy with a Country
 	zan_shipyards_1 = {
 		icon = mission_grand_bengali_shipyards
 		position = 23
@@ -359,6 +460,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Coastal Walls
 	zan_coastal_battery = {
 		icon = Burn_Wooden_Wall
 		position = 24
@@ -370,6 +472,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# Educated Masses
 	zan_education = {
 		icon = mission_mnd_dai_universities
 		position = 25
@@ -379,6 +482,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# University of Kilwa
 	zan_scholars = {
 		icon = mission_early_modern_university
 		position = 26
@@ -390,6 +494,7 @@ kilwa_2 = {
 		effect = { }
 	}
 
+	# An Industrial Power
 	zan_industrial = {
 		icon = industrialized_rhineland
 		position = 27
@@ -408,15 +513,70 @@ kilwa_3 = {
 	has_country_shield = yes
 	potential = { tag = ZAN }
 
+	# Coasts of Zanzibar
 	zan_coasts_of_zanz = {
 		icon = mission_seize_the_bengal_coast
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				AND = {
+					alliance_with = MBA
+					MBA = { 
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				AND = {
+					alliance_with = MLI
+					MLI = { 
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					alliance_with = MBA
+				}
+				vassalize = MBA
+				MBA = {
+					inherit = MLI
+					add_liberty_desire = -25
+				}
+			}
+			else_if = {
+				limit = {
+					alliance_with = MLI
+				}
+				vassalize = MLI
+				MLI = {
+					inherit = MBA
+					add_liberty_desire = -25
+				}
+			}
+			northern_swahili_coast_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
+	# Realm of Kilwa
 	zan_consolidate = {
 		icon = unite_the_realm
 		position = 3
@@ -424,10 +584,13 @@ kilwa_3 = {
 			zan_war_prep zan_vassals_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			
+		}
 		effect = { }
 	}
 
+	# Great Kilwa
 	zan_great_kilwa = {
 		icon = mission_empire
 		position = 7
@@ -439,6 +602,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Maritime Presence
 	zan_maritime_presence = {
 		icon = mission_omani_marines
 		position = 8
@@ -448,6 +612,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# South Eastern Trade
 	zan_madagascar_4 = {
 		icon = mission_mnd_maj_gaja_madas_oath
 		position = 10
@@ -459,6 +624,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Indian Security
 	zan_maldives = {
 		icon = mission_indian_stateman
 		position = 12
@@ -468,6 +634,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Battle for Southern Coasts
 	zan_south_india = {
 		icon = mission_rb_take_indian_coast
 		position = 13
@@ -479,6 +646,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Eastern India Company
 	zan_eic = {
 		icon = mission_indian_trade_company
 		position = 14
@@ -490,6 +658,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Bara Hindi
 	zan_half_india = {
 		icon = mission_entrepot_of_india
 		position = 15
@@ -501,6 +670,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Sun Never Sets on Kilwa
 	zan_unified_india = {
 		icon = mission_explore_the_world
 		position = 16
@@ -512,6 +682,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Demonstration of our Piety
 	zan_ulema = {
 		icon = mission_hands_praying
 		position = 18
@@ -521,6 +692,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Pillar of Islam 
 	zan_ulema_1 = {
 		icon = mission_the_caliph
 		position = 20
@@ -532,6 +704,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Safety of Worship
 	zan_mosques_0 = {
 		icon = mission_mosque
 		position = 22
@@ -541,6 +714,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Unshrinking Borders
 	zan_defensive_forts = {
 		icon = fortify_malta
 		position = 24
@@ -552,6 +726,7 @@ kilwa_3 = {
 		effect = { }
 	}
 
+	# Prestigious Institutions
 	zan_institutions = {
 		icon = patronize_the_scuole_grandi
 		position = 25
@@ -574,9 +749,25 @@ kilwa_4 = {
 		required_missions = {
 			zan_coasts_of_zanz zan_sofala
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			is_capital_of = SFA
+		}
+		trigger = { 
+			if = {
+				limit = { num_of_subjects = 1 }
+				NOT = { 
+					any_subject_country = {
+						liberty_desire = 15
+					}
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "zan_vassal_bonuses"
+				duration = 7300
+			}
+		}
 	}
 
 	zan_mogadishu = {
@@ -754,8 +945,72 @@ kilwa_5 = {
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				AND = {
+					SFA = { 
+						AND = {
+							has_divert_trade = yes 
+							has_embargo_rivals = yes
+							NOT = { liberty_desire = 50 }
+						}
+					}
+				}
+				NOT = { exists = SFA }
+			}
+		}
+		effect = {
+			SFA = {
+				every_owned_province = {
+					add_core = ROOT
+				}
+				add_historical_friend = ROOT
+			}
+			quelimane_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kwazulu_Natal_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			limpopo_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			transvaal_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	zan_into_cape = {
