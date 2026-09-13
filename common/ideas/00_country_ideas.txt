@@ -16373,7 +16373,7 @@ LOT_ideas = {
 		idea_cost = -0.1
 	}
 	lot_court_of_europe = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	lot_land_of_abbeys = {
 		discipline = 0.05
