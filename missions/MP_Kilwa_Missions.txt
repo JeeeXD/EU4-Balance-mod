@@ -84,7 +84,12 @@ kilwa_1 = {
 			zan_rivalries
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			has_won_war_against = {
+				who = ZIM
+				max_years_since = 5
+			}
+		}
 		effect = { }
 	}
 
@@ -130,8 +135,14 @@ kilwa_1 = {
 		position = 8
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			treasury = 200
+		}
+		effect = { 
+			create_colony_mission_reward = {
+				province = 4020
+			}
+		}
 	}
 
 	# Malay Question
@@ -585,7 +596,9 @@ kilwa_3 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { 
-			
+			AND = {
+				stability = 1
+			}
 		}
 		effect = { }
 	}
@@ -608,7 +621,9 @@ kilwa_3 = {
 		position = 8
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			num_ships_protecting_trade = 15
+		}
 		effect = { }
 	}
 
@@ -743,6 +758,7 @@ kilwa_4 = {
 	has_country_shield = yes
 	potential = { tag = ZAN }
 
+	# Unified Territories
 	zan_vassals_0 = {
 		icon = integrate_the_three_leagues
 		position = 2
@@ -770,6 +786,7 @@ kilwa_4 = {
 		}
 	}
 
+	# Unlikely Alliances
 	zan_mogadishu = {
 		icon = mission_son_fetishist_alliances
 		position = 4
@@ -781,6 +798,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Hostile Takeover
 	zan_ajuraan = {
 		icon = mission_retake_ceuta
 		position = 5
@@ -792,6 +810,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Monopolize the Horn
 	zan_horn = {
 		icon = mission_rb_monopolize_the_channel
 		position = 6
@@ -803,6 +822,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Spice Must Flow
 	zan_spice_islands = {
 		icon = mission_rb_colonise_spice_islands
 		position = 11
@@ -814,6 +834,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Kilwanting Some Cloves
 	zan_moluccas = {
 		icon = mission_mnd_maj_cloves
 		position = 12
@@ -825,6 +846,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Tame the Tigers
 	zan_east_india = {
 		icon = mission_conquer_bengal_tau
 		position = 13
@@ -836,6 +858,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Pegging Pegu
 	zan_burma = {
 		icon = mission_conquer_burma
 		position = 14
@@ -847,6 +870,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Topple The Elephant
 	zan_indochina = {
 		icon = mission_a_million_elephants
 		position = 15
@@ -858,6 +882,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# End of Historical Feuds
 	zan_indochina_1 = {
 		icon = mission_rule_indochina
 		position = 16
@@ -869,6 +894,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Coin of Kilwa
 	zan_coins = {
 		icon = mission_african_gold
 		position = 17
@@ -880,6 +906,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Bonus 1
 	zan_bonus_0 = {
 		icon = mission_unknown_mission
 		position = 19
@@ -891,6 +918,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Grand Bazaar of Kilwa
 	zan_marketplaces_0 = {
 		icon = mission_the_grand_bazaar
 		position = 22
@@ -900,6 +928,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Coral Construction
 	zan_buildings_0 = {
 		icon = mission_early_game_buildings
 		position = 23
@@ -911,6 +940,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Disciplined Conscription
 	zan_qual_army = {
 		icon = mission_assemble_an_army
 		position = 24
@@ -922,6 +952,7 @@ kilwa_4 = {
 		effect = { }
 	}
 
+	# Control Over our Lands
 	zan_buildings_1 = {
 		icon = mission_royal_roads
 		position = 25
@@ -940,6 +971,7 @@ kilwa_5 = {
 	has_country_shield = yes
 	potential = { tag = ZAN }
 
+	# Southern Autonomy
 	zan_sofala = {
 		icon = mission_reclaim_lost_territory
 		position = 1
@@ -1013,6 +1045,7 @@ kilwa_5 = {
 		}
 	}
 
+	# Race for the Cape
 	zan_into_cape = {
 		icon = colonize_the_cape
 		position = 3
@@ -1024,6 +1057,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Mlango wa Bahari
 	zan_gateway = {
 		icon = mission_southern_frontier_lotn
 		position = 4
@@ -1035,6 +1069,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Blood Red Sea
 	zan_aden = {
 		icon = mission_control_the_red_sea
 		position = 5
@@ -1046,6 +1081,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Lessons from Somalia
 	zan_somalia = {
 		icon = mission_pirate_flag
 		position = 7
@@ -1057,6 +1093,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Yearning for High Seas
 	zan_colonial_0 = {
 		icon = mission_exploration
 		position = 8
@@ -1066,6 +1103,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Chartered East
 	zan_colonial_1 = {
 		icon = mission_sail_to_the_east_indies
 		position = 9
@@ -1077,6 +1115,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Lands Down Under
 	zan_australia_0 = {
 		icon = colonize_australia
 		position = 10
@@ -1088,6 +1127,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Kutub Kusini
 	zan_australia_1 = {
 		icon = settle_austrialasia
 		position = 11
@@ -1099,6 +1139,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Bandar Viungo
 	zan_indonesia = {
 		icon = mission_portuguese_malacca
 		position = 12
@@ -1110,6 +1151,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Sultanat Al-Zabag
 	zan_east_sultan = {
 		icon = conquer_malacca
 		position = 13
@@ -1121,6 +1163,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Mandate of Medina
 	zan_china_0 = {
 		icon = jap_fate_mandate
 		position = 15
@@ -1132,6 +1175,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# The Great Unifier
 	zan_china_1 = {
 		icon = qng_conquer_south_china
 		position = 16
@@ -1143,6 +1187,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# National Focus
 	zan_idea_bonuses = {
 		icon = mission_zim_strong_rulership
 		position = 18
@@ -1152,6 +1197,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Bonus 2
 	zan_bonus_1 = {
 		icon = mission_unknown_mission
 		position = 19
@@ -1163,6 +1209,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Final Bonus
 	zan_bonus_2 = {
 		icon = mission_unknown_mission
 		position = 20
@@ -1174,6 +1221,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Increase Ivory Production
 	zan_workshops_0 = {
 		icon = mission_into_africa
 		position = 22
@@ -1183,6 +1231,7 @@ kilwa_5 = {
 		effect = { }
 	}
 
+	# Efficient Government
 	zan_courthouses = {
 		icon = mission_muslim_administrators
 		position = 24
