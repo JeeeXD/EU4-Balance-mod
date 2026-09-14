@@ -3909,10 +3909,10 @@ ming_missions_3_b = {
 				owned_by = ROOT 
 				base_production = 12 
 			}
-			if = { 
-				limit = { tag = MNG }
-				has_idea = single_whip_law
-			}
+			#if = { 
+			#	limit = { tag = MNG }
+			#	has_idea = single_whip_law
+			#}
 			NOT = { inflation = 1 }
 			NOT = { num_of_loans = 1 } 
 			current_income_balance = 35
