@@ -18,7 +18,7 @@ MDP_ADJ2: "Penguin"
 is_madagascar_province_tooltip: "Is a province on Madagascar Island"
 mdg_gain_tooltip: "Every owned province on Madagascar Island will gain the following modifer:"
 mdg_slave_trade: "Madagascar Slave Trade"
-madagascar_nation_title: "Form Madagascar"
+madagascar_nation_title: "Form @MDG Madagascar"
 
 penguin_democracy_reform: "Democratic Penguin Republic"
 penguin_communist_reform: "Communion of Penguins"

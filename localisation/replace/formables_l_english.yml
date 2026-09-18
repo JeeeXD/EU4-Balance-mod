@@ -1,0 +1,123 @@
+﻿l_english:
+ moroccan_nation_title:0 "Form @MOR Moroccan Kingdom" #MOD
+ algiers_nation_title:0 "Form @ALG Algerian Nation" #MOD
+ tunisian_nation_title:0 "Form @TUN Tunisian Nation" #MOD
+ tripoli_nation_title:0 "Form @TRI Tripolitania" #MOD
+ pol_commonwealth_title:0 "Form @PLC Polish-Lithuanian Commonwealth" #MOD
+ lit_commonwealth_title:1 "Form @PLC Lithuanian-Polish Commonwealth" #MOD
+ commonwealth_enforced_title:1 "Enforce a @PLC Commonwealth" #MOD
+ shan_nation_title:0 "Confederate the @SST Shan States" #MOD
+ croatian_nation_title:0 "Form @CRO Croatia" #MOD
+ polish_nation_title:0 "Form @POL Polish Nation" #MOD
+ australia_nation_title:0 "Form @AUS Australian Nation" #MOD
+ andalusian_nation_title:0 "Restore @ADU Al-Andalus" #MOD
+ tuscan_nation_title:0 "Form @TUS Tuscany" #MOD
+ icelandic_nation_title:0 "Embrace @ICE Icelandic Identity" #MOD
+ tatar_nation_title:0 "Re-form the @GLH Golden Horde" ##MOD
+ form_great_yuan_title:0 "Reform @YUA Great Yuan" #MOD
+ yemen_nation_title:0 "Unite @YEM Yemen" #MOD
+ georgia_nation_title:0 "Unite @GEO Georgia" #MOD
+ turkish_nation_title:0 "Restore the Sultanate of @RUM Rûm" #MOD
+ armenia_nation_title:0 "Kingdom of @ARM Armenia" #MOD
+ timurid_nation_title:0 "Claim @TIM Timur's Legacy" #MOD
+ scottish_nation_title:0 "Form @SCO Scottish Nation" ##MOD
+ sultan_of_delhi_title:0 "Sultan of @DLH Delhi" #MOD
+ nepal_nation_title:0 "Unification of @NPL Nepal" #MOD
+ rajput_nation_title:0 "Unite the @RJP Rajputs" #MOD
+ deccan_nation_title:0 "Sultan of the @DEC Deccan" #MOD
+ maratha_nation_title:0 "@MAR Maratha Confederation" #MOD
+ punjab_nation_title:0 "Kingdom of @PUN Punjab" #MOD
+ orissa_nation_title:0 "Unite @ORI Orissa" #MOD
+ cossack_nation_title:0 "Call of the @ZAZ Steppes" #MOD
+ restore_mongol_empire_title:0 "Restore the @MGE Mongol Empire" #MOD
+ restore_ilkhanate_decision_march_title:0 "Restore the @ILK Ilkhanate" #MOD
+ restore_ilkhanate_decision_title:0 "Re-form the @ILK Ilkhanate" #MOD
+ california_nation_title:0 "Form @CAL Californian Nation" #MOD
+ texas_nation_title:0 "Form @TEX Texan Nation" #MOD
+ siamese_nation_title:0 "Form @SIA Siamese Nation" #MOD
+ malayan_nation_title:0 "Form @MSA Malaya" #MOD
+ hindustan_nation_dravidian_title:0 "Form @HIN Hindustan" #MOD
+ hindustan_nation_western_aryan_title:0 "Form @HIN Hindustan" #MOD
+ hindustan_nation_hindusthani_title:0 "Form @HIN Hindustan" #MOD
+ hindustan_nation_eastern_aryan_title:0 "Form @HIN Hindustan" #MOD
+ hindustan_nation_central_indic_title:0 "Form @HIN Hindustan" #MOD
+ bharat_nation_dravidian_title:0 "Form @BHA Bharat" #MOD
+ bharat_nation_western_aryan_title:0 "Form @BHA Bharat" #MOD
+ bharat_nation_hindusthani_title:0 "Form @BHA Bharat" #MOD
+ bharat_nation_eastern_aryan_title:0 "Form @BHA Bharat" #MOD
+ bharat_nation_central_indic_title:0 "Form @BHA Bharat" #MOD
+ sardinia_piedmont_nation_title:0 "Form @SPI Sardinia-Piedmont" #MOD
+ sardinia_piedmont_nation_inherit_title:1 "Form @SPI Sardinia-Piedmont Diplomatically" #MOD
+ romanian_nation_title:0 "Form @RMN Romanian Nation" #MOD
+ russian_nation_title:0 "Form @RUS Russian Nation" #MOD
+ netherlands_nation_title:0 "Form @NED Dutch Nation" #MOD
+ spanish_nation_title:0 "Form @SPA Spanish Nation Militarily" #MOD
+ english_nation_title:0 "Form @ENG English Nation" #MOD
+ french_nation_title:0 "Form @FRA French Nation" #MOD
+ italian_nation_title:0 "Form @ITA Italian Nation" #MOD
+ german_nation_title:0 "Form @GER German Nation" #MOD
+ persian_nation_title:0 "Form @PER Persian Nation" #MOD
+ mughal_nation_title:0 "Form @MUG Mughal Empire" #MOD
+ irish_nation_title:0 "Form @IRE Irish Nation" #MOD
+ british_nation_title:0 "Form @GBR British Nation" #MOD
+ scandinavian_nation_title:0 "Form @SCA Scandinavian Nation" #MOD
+ two_sicilies_nation_title:0 "Unite the @TTS Two Sicilies" #MOD
+ switzerland_nation_title:0 "Restore the @SWI Swiss Confederacy" #MOD
+ silesia_nation_title:0 "Form @SIL Silesian Nation" #MOD
+ bavaria_nation_title:0 "Form @BAV Bavaria" #MOD
+ pomerania_nation_title:0 "Form @POM Pomerania" #MOD
+ franconia_nation_title:0 "Form @FKN Franconia" #MOD
+ swabia_nation_title:0 "Form @SWA Swabia" #MOD
+ saxony_nation_title:0 "Form @SAX Saxony" #MOD
+ dalmatian_nation_title:0 "Reunite the Kingdom of @DAL Dalmatia" #MOD
+ hannoverian_nation_title:0 "Form @HAN Hanover" #MOD
+ westfalian_nation_title:0 "Form @WES Westphalia" #MOD
+ greek_nation_title:0 "Form @GRE Greece" #MOD
+ spanish_nation_diplomatically_title:0 "Form @SPA Spanish Nation Diplomatically" #MOD
+ spanish_nation_diplomatically_tutorial_title:0 "Form @SPA Spanish Nation Diplomatically" #MOD
+ forest_desc:0 "Forest terrain represents areas of mixed forest with varying density of trees and underbrush." #MOD
+ SUPPORT_HEIR:0 "§OSupport Heir§!" #MOD
+ SUPPORT_HEIRTITLE:0 "§OSupport Heir§!" #MOD
+ CANCEL_SUPPORT_HEIR:0 "§OCancel Support Heir§!" #MOD
+ CANCEL_SUPPORT_HEIRTITLE:0 "§OCancel Support Heir§!" #MOD
+ CURRYFAVORS:0 "§MCurry Favors§!" #MOD
+ CURRYFAVORSTITLE:0 "§MCurry Favors§!" #MOD
+ CANCEL_CURRYFAVORS:0 "§MCancel Curry Favors§!" #MOD
+ CANCEL_CURRYFAVORSTITLE:0 "§MCancel Curry Favors§!" #MOD
+ la_plata_nation_title:0 "Form @LAP La Platan Nation" #MOD
+ haiti_nation_title:0 "Form @HAT Haitian Nation" #MOD
+ colombia_nation_title:0 "Form @COL Colombian Nation" #MOD
+ chile_nation_title:0 "Form @CHL Chilean Nation" #MOD
+ canada_nation_title:0 "Form @CAN Canadian Nation" #MOD
+ venezuela_nation_title:0 "Form @VEN Venezuelan Nation" #MOD
+ usa_nation_title:0 "Form @USA American Nation" #MOD
+ upca_nation_title:0 "Form @CAM Central American Nation" #MOD
+ quebec_nation_title:0 "Form @QUE Quebecian Nation" #MOD
+ peru_nation_title:0 "Form @PEU Peruvian Nation" #MOD
+ paraguay_nation_title:0 "Form @PRG Paraguayan Nation" #MOD
+ mexico_nation_title:0 "Form @MEX Mexican Nation" #MOD
+ louisiana_nation_title:0 "Form @LOU Louisianan Nation" #MOD
+ brazil_nation_title:0 "Form @BRZ Brazilian Nation" #MOD
+ bulgaria_nation_title:0 "Restore @BUL Bulgaria" #MOD
+ kongo_nation_title:0 "Restore the @KON Kongo Kingdom" #MOD
+ ethiopia_nation_title:0 "Restore @ETH Solomonid's Legacy" #MOD
+ zulu_nation_title:0 "Militarize the @ZUL Nguni" #MOD
+ aksumite_nation_title:0 "Restore @AKS Aksum" #MOD
+ great_zimbabwe_nation_title:0 "Restore @ZIM Zimbabwe" #MOD
+ israel_nation_title:0 "Re-Establish @ISR Israel" #MOD
+ kitara_nation_title:0 "Claim the Empire of @KIT Kitara Title" #MOD
+ macina_nation_title:0 "Form @ZAF Macina" #MOD
+ mali_nation_title:0 "Take the Mantle of @MAL Mali" #MOD
+ mossi_nation_title:0 "Unite the @MSI Mossi Kingdoms" #MOD
+ nubian_nation_title:0 "Unite the @NBI Nubians" #MOD
+ rozwi_nation_title:0 "Establish @RZI Rozwi" #MOD
+ somalia_nation_title:0 "Unite the @SOM Somalian Clans" #MOD
+ ruthenian_nation_title:0 "Reclaim @UKR Ruthenian Legacy" #MOD
+ incan_nation_title:0 "Tawantinsuyu, the Empire of the @INC Incas" #MOD
+ sokoto_nation_title:0 "Create the @SOK Sokoto Caliphate" #MOD
+ aotearoa_nation_title:0 "Form @AOT Aotearoa" #MOD
+ unite_hawaii_title:0 "Unite @HAW Hawaii" #MOD
+ unite_fiji_title:0 "Unite @FIJ Fiji" #MOD
+ habsburg_nation_title:1 "Reclaim the Archduchy of @HAB Austria" #MOD
+ maya_nation_title:0 "Reunite the League of @MAY Mayapan" #MOD
+form_austria_hungary_title: "Form the @AUH Austro-Hungarian Empire" #MOD
