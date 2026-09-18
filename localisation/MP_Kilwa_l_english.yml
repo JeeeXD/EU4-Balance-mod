@@ -1,105 +1,272 @@
 ﻿l_english:
+
 ############## MODIFIERS ##############
  zan_mutapa_rivals: "Cripple Economies"
  zan_vassal_bonuses: "Subjects Solidarity"
+ zan_supportive_estates: "Supportive Estates"
+ zan_expansive_kilwa: "African Jihad"
 
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
- zan_rivalries_desc: "Kilwa's advanced technology in this region shall play a pivotal role in its expansion deeper into the mainland."
+ zan_rivalries_desc: "While we have overwhelming maritime presence, trade would flow more efficiently if we can directly control the inland roads. Business is business, even if it means war."
 
  zan_coasts_of_zanz_title: "Coasts of Zanzibar"
- zan_coasts_of_zanz_desc: "The Sunni nations to our north shall find it difficult to hold their grounds against the neighboring heathens. Let us offer support."
+ zan_coasts_of_zanz_desc: "The Sunni nations to our north shall find it difficult to hold their grounds against the neighboring heathens. Let us offer our support in return for a small favor."
 
  zan_sofala_title: "Southern Autonomy"
- zan_sofala_desc: "Merchants of Sofala value their autonomy, but no longer shall they maintain influence. Make them kneel to the crown."
+ zan_sofala_desc: "Merchants of Sofala value their autonomy, but no longer shall they maintain influence. We shall test their loyalty and make sure they kneel to the crown."
 
  zan_war_prep_title: "Prepare for War"
+ zan_war_prep_desc: "Practicing our militaristic might requires the approval of our people and their willingness to expend their resources. Let it be known they will be paid back tenfold."
 
  zan_vassals_0_title: "Unified Territories"
- zan_vassals_0_desc: "Blood need not be shed within Kilwa's realm, as the nation shall benefit more from mutual prosperity and shared religion."
+ zan_vassals_0_desc: "Blood need not be shed within Kilwa's realm, as the nation and its subjects shall benefit more from mutual prosperity and shared religion."
 
  zan_mutapa_title: "Crush Mutapa"
- zan_consolidate_title: "Realm of Kilwa"
- zan_into_cape_title: "Race for the Cape"
- zan_gold_title: "Zimbabwe Gold"
- zan_west_conq_0_title: "Into the Lakes"
- zan_mogadishu_title: "Unlikely Alliances"
- zan_gateway_title: "Mlango wa Bahari"
- zan_secure_iron_title: "Secure Iron"
- zan_kongo_title: "Sunlit Fields"
- zan_fortify_west_title: "Fortify Western Borders"
- zan_ajuraan_title: "Hostile Takeover"
- zan_horn_title: "Monopolize the Horn"
- zan_aden_title: "Blood Red Sea"
- zan_kongo_rival_title: "End the Kongo"
- zan_great_kilwa_title: "Great Kilwa"
- zan_somalia_title: "Lessons from Somalia"
- zan_madagascar_0_title: "Bridging Zanzibar"
- zan_maritime_presence_title: "Maritime Presence"
- zan_colonial_0_title: "Yearning for High Seas"
- zan_madagascar_1_title: "Markets of Madagascar"
- zan_colonial_1_title: "Chartered East"
- zan_madagascar_2_title: "Malay Question"
- zan_madagascar_3_title: "CIvilized Islanders"
- zan_madagascar_4_title: "South Eastern Trade"
- zan_madagascar_integration_title: "United Zanzibar"
- zan_spice_islands_title: "Spice Must Flow"
- zan_australia_0_title: "Lands Down Under"
- zan_australia_1_title: "Kutub Kusini"
- zan_hormuz_alliance_title: "Persian Origins"
- zan_maldives_title: "Indian Security"
- zan_moluccas_title: "Kilwanting Some Cloves"
- zan_indonesia_title: "Bandar Viungo"
- zan_hormuz_gov_title: "Proof of Pact"
- zan_west_india_title: "Trading in Spice"
- zan_south_india_title: "Battle for Southern Coasts"
- zan_east_india_title: "Tame the Tigers"
- zan_east_sultan_title: "Sultanat Al-Zabag"
- zan_hormuz_bonuses_title: "Tale of Two Plutocracies"
- zan_eic_title: "Eastern India Company"
- zan_burma_title: "Pegging Pegu"
- zan_hormuz_final_title: "Shirazi Accord"
- zan_half_india_title: "Bara Hindi"
- zan_indochina_title: "Topple The Elephant"
- zan_china_0_title: "Mandate of Medina"
- zan_into_oman_title: "One and the Same"
- zan_china_1_title: "The Great Unifier"
- zan_amirs_title: "Curtailing the Amis"
- zan_merchants_title: "Empowering the Guilds"
- zan_ulema_title: "Demonstration of our Piety"
- zan_estates_title: "Internal Stability"
- zan_amirs_1_title: "Kingmaker No More"
- zan_merchants_1_title: "Global Enterprise"
- zan_ulema_1_title: "Pillar of Islam"
- zan_idea_bonuses_title: "National Focus"
- zan_bonus_1_title: "Bonus 2"
- zan_bonus_0_title: "Bonus 1"
- zan_bonus_2_title: "Final Bonus"
- zan_navy_focus_0_title: "Kilwa Rules the Waves"
- zan_shipyards_0_title: "Bustling Coastal Cities"
- zan_mosques_0_title: "Safety of Worship"
- zan_marketplaces_0_title: "Grand Bazaar of Kilwa"
- zan_workshops_0_title: "Increase Ivory Production"
- zan_navy_focus_1_title: "Warships of the Future"
- zan_shipyards_1_title: "Navy with a Country"
- zan_buildings_0_title: "Coral Construction"
- zan_hegemony_title: "Naval Hegemon"
- zan_coastal_battery_title: "Coastal Walls"
- zan_defensive_forts_title: "Unshrinking Borders"
- zan_qual_army_title: "Disciplined Conscription"
- zan_courthouses_title: "Efficient Government"
- zan_renaissance_title: "Islamic Golden Age"
- zan_education_title: "Educated Masses"
- zan_scholars_title: "University of Kilwa"
- zan_industrial_title: "An Industrial Power"
- zan_indochina_1_title: "End of Historical Feuds"
- zan_eic_buffs_title: "Enrich Our Frontlines"
- zan_coins_title: "Coin of Kilwa"
- zan_unified_india_title: "Sun Never Sets on Kilwa"
- zan_buildings_1_title: "Control Over our Lands"
- zan_institutions_title: "Prestigious Institutions"
- zan_absolutism_title: "Absolutist Kilwa"
+ zan_mutapa_desc: "We have stomped down on our biggest threat, and have proven ourselves powerful enough to punish infidels and raiders. Now the region shall fear our might."
 
+ zan_consolidate_title: "Realm of Kilwa"
+ zan_consolidate_desc: "Realm of Kilwa"
+
+ zan_into_cape_title: "Race for the Cape"
+ zan_into_cape_desc: "Race for the Cape"
+
+ zan_gold_title: "Zimbabwe Gold"
+ zan_gold_desc: "Zimbabwe Gold"
+
+ zan_west_conq_0_title: "Into the Lakes"
+ zan_west_conq_0_desc: "Into the Lakes"
+
+ zan_mogadishu_title: "Unlikely Alliances"
+ zan_mogadishu_desc: "Unlikely Alliances"
+
+ zan_gateway_title: "Mlango wa Bahari"
+ zan_gateway_desc: "Mlango wa Bahari"
+
+ zan_secure_iron_title: "Secure Iron"
+ zan_secure_iron_desc: "Secure Iron"
+
+ zan_kongo_title: "Sunlit Fields"
+ zan_kongo_desc: "Sunlit Fields"
+
+ zan_fortify_west_title: "Fortify The West"
+ zan_fortify_west_desc: "Fortify The West"
+
+ zan_ajuraan_title: "Hostile Takeover"
+ zan_ajuraan_desc: "Hostile Takeover"
+
+ zan_horn_title: "Monopolize the Horn"
+ zan_horn_desc: "Monopolize the Horn"
+
+ zan_aden_title: "Blood Red Sea"
+ zan_aden_desc: "Blood Red Sea"
+
+ zan_kongo_rival_title: "End the Kongo"
+ zan_kongo_rival_desc: "End the Kongo"
+
+ zan_great_kilwa_title: "Great Kilwa"
+ zan_great_kilwa_desc: "Great Kilwa"
+
+ zan_somalia_title: "Lessons from Somalia"
+ zan_somalia_desc: "Lessons from Somalia"
+
+ zan_madagascar_0_title: "Bridging Zanzibar"
+ zan_madagascar_0_desc: "Bridging Zanzibar"
+
+ zan_maritime_presence_title: "Maritime Presence"
+ zan_maritime_presence_desc: "Maritime Presence"
+
+ zan_colonial_0_title: "Yearning for High Seas"
+ zan_colonial_0_desc: "Yearning for High Seas"
+
+ zan_madagascar_1_title: "Markets of Madagascar"
+ zan_madagascar_1_desc: "Markets of Madagascar"
+
+ zan_colonial_1_title: "Chartered East"
+ zan_colonial_1_desc: "Chartered East"
+
+ zan_madagascar_2_title: "Malay Question"
+ zan_madagascar_2_desc: "Malay Question"
+
+ zan_madagascar_3_title: "CIvilized Islanders"
+ zan_madagascar_3_desc: "CIvilized Islanders"
+
+ zan_madagascar_4_title: "South Eastern Trade"
+ zan_madagascar_4_desc: "South Eastern Trade"
+
+ zan_madagascar_integration_title: "United Zanzibar"
+ zan_madagascar_integration_desc: "United Zanzibar"
+
+ zan_spice_islands_title: "Spice Must Flow"
+ zan_spice_islands_desc: "Spice Must Flow"
+
+ zan_australia_0_title: "Lands Down Under"
+ zan_australia_0_desc: "Lands Down Under"
+
+ zan_australia_1_title: "Kutub Kusini"
+ zan_australia_1_desc: "Kutub Kusini"
+
+ zan_hormuz_alliance_title: "Persian Origins"
+ zan_hormuz_alliance_desc: "Persian Origins"
+
+ zan_maldives_title: "Indian Security"
+ zan_maldives_desc: "Indian Security"
+
+ zan_moluccas_title: "Kilwanting Some Cloves"
+ zan_moluccas_desc: "Kilwanting Some Cloves"
+
+ zan_indonesia_title: "Bandar Viungo"
+ zan_indonesia_desc: "Bandar Viungo"
+
+ zan_hormuz_gov_title: "Proof of Pact"
+ zan_hormuz_gov_desc: "Proof of Pact"
+
+ zan_west_india_title: "Trading in Spice"
+ zan_west_india_desc: "Trading in Spice"
+
+ zan_south_india_title: "Battle for Southern Coasts"
+ zan_south_india_desc: "Battle for Southern Coasts"
+
+ zan_east_india_title: "Tame the Tigers"
+ zan_east_india_desc: "Tame the Tigers"
+
+ zan_east_sultan_title: "Sultanat Al-Zabag"
+ zan_east_sultan_desc: "Sultanat Al-Zabag"
+
+ zan_hormuz_bonuses_title: "Tale of Two Plutocracies"
+ zan_hormuz_bonuses_desc: "Tale of Two Plutocracies"
+
+ zan_eic_title: "Eastern India Company"
+ zan_eic_desc: "Eastern India Company"
+
+ zan_burma_title: "Pegging Pegu"
+ zan_burma_desc: "Pegging Pegu"
+
+ zan_hormuz_final_title: "Shirazi Accord"
+ zan_hormuz_final_desc: "Shirazi Accord"
+
+ zan_half_india_title: "Bara Hindi"
+ zan_half_india_desc: "Bara Hindi"
+
+ zan_indochina_title: "Topple The Elephant"
+ zan_indochina_desc: "Topple The Elephant"
+
+ zan_china_0_title: "Mandate of Medina"
+ zan_china_0_desc: "Mandate of Medina"
+
+ zan_into_oman_title: "One and the Same"
+ zan_into_oman_desc: "One and the Same"
+
+ zan_china_1_title: "The Great Unifier"
+ zan_china_1_desc: "The Great Unifier"
+
+ zan_amirs_title: "Curtailing the Amis"
+ zan_amirs_desc: "Curtailing the Amis"
+
+ zan_merchants_title: "Empowering the Guilds"
+ zan_merchants_desc: "Empowering the Guilds"
+
+ zan_ulema_title: "Demonstration of our Piety"
+ zan_ulema_desc: "Demonstration of our Piety"
+
+ zan_estates_title: "Internal Stability"
+ zan_estates_desc: "Internal Stability"
+
+ zan_amirs_1_title: "Kingmaker No More"
+ zan_amirs_1_desc: "Kingmaker No More"
+
+ zan_merchants_1_title: "Global Enterprise"
+ zan_merchants_1_desc: "Global Enterprise"
+
+ zan_ulema_1_title: "Pillar of Islam"
+ zan_ulema_1_desc: "Pillar of Islam"
+
+ zan_idea_bonuses_title: "National Focus"
+ zan_idea_bonuses_desc: "National Focus"
+
+ zan_bonus_1_title: "Bonus 2"
+ zan_bonus_1_desc: "Bonus 2"
+
+ zan_bonus_0_title: "Bonus 1"
+ zan_bonus_0_desc: "Bonus 1"
+
+ zan_bonus_2_title: "Final Bonus"
+ zan_bonus_2_desc: "Final Bonus"
+
+ zan_navy_focus_0_title: "Kilwa Rules the Waves"
+ zan_navy_focus_0_desc: "Kilwa Rules the Waves"
+
+ zan_shipyards_0_title: "Bustling Coastal Cities"
+ zan_shipyards_0_desc: "Bustling Coastal Cities"
+
+ zan_mosques_0_title: "Safety of Worship"
+ zan_mosques_0_desc: "Safety of Worship"
+
+ zan_marketplaces_0_title: "Grand Bazaar of Kilwa"
+ zan_marketplaces_0_desc: "Grand Bazaar of Kilwa"
+
+ zan_workshops_0_title: "Increase Ivory Production"
+ zan_workshops_0_desc: "Increase Ivory Production"
+
+ zan_navy_focus_1_title: "Warships of the Future"
+ zan_navy_focus_1_desc: "Warships of the Future"
+
+ zan_shipyards_1_title: "Navy with a Country"
+ zan_shipyards_1_desc: "Navy with a Country"
+
+ zan_buildings_0_title: "Coral Construction"
+ zan_buildings_0_desc: "Coral Construction"
+
+ zan_hegemony_title: "Naval Hegemon"
+ zan_hegemony_desc: "Naval Hegemon"
+
+ zan_coastal_battery_title: "Coastal Walls"
+ zan_coastal_battery_desc: "Coastal Walls"
+
+ zan_defensive_forts_title: "Unshrinking Borders"
+ zan_defensive_forts_desc: "Unshrinking Borders"
+
+ zan_qual_army_title: "Disciplined Conscription"
+ zan_qual_army_desc: "Disciplined Conscription"
+
+ zan_courthouses_title: "Efficient Government"
+ zan_courthouses_desc: "Efficient Government"
+
+ zan_renaissance_title: "Islamic Golden Age"
+ zan_renaissance_desc: "Islamic Golden Age"
+
+ zan_education_title: "Educated Masses"
+ zan_education_desc: "Educated Masses"
+
+ zan_scholars_title: "University of Kilwa"
+ zan_scholars_desc: "University of Kilwa"
+
+ zan_industrial_title: "An Industrial Power"
+ zan_industrial_desc: "An Industrial Power"
+
+ zan_indochina_1_title: "End of Historical Feuds"
+ zan_indochina_1_desc: "End of Historical Feuds"
+
+ zan_eic_buffs_title: "Enrich Our Frontlines"
+ zan_eic_buffs_desc: "Enrich Our Frontlines"
+
+ zan_coins_title: "Coin of Kilwa"
+ zan_coins_desc: "Coin of Kilwa"
+
+ zan_unified_india_title: "Sun Never Sets on Kilwa"
+ zan_unified_india_desc: "Sun Never Sets on Kilwa"
+
+ zan_buildings_1_title: "Control Over our Lands"
+ zan_buildings_1_desc: "Control Over our Lands"
+
+ zan_institutions_title: "Prestigious Institutions"
+ zan_institutions_desc: "Prestigious Institutions"
+
+ zan_absolutism_title: "Absolutist Kilwa"
+ zan_absolutism_desc: "Absolutist Kilwa"
+
+# Tooltips
+ sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by Sofala and will be considered our historical friends."
 
 
 

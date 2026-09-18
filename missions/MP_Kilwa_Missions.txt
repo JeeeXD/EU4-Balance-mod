@@ -83,14 +83,28 @@ kilwa_1 = {
 		required_missions = {
 			zan_rivalries
 		}
-		provinces_to_highlight = { }
+		provinces_to_highlight = { 
+			province_id = 1184
+		}
 		trigger = { 
-			has_won_war_against = {
-				who = ZIM
-				max_years_since = 5
+			AND = {
+				OR = {
+					has_won_war_against = {
+					who = ZIM
+					max_years_since = 5
+					}
+					NOT = { exists = ZIM }
+				}
+				
+				owns = 1184
+			}
+			
+		}
+		effect = { 
+			country_event = {
+				id = mp_zan.1
 			}
 		}
-		effect = { }
 	}
 
 	# Zimbabwe Gold
@@ -101,8 +115,43 @@ kilwa_1 = {
 			zan_mutapa
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				AND = {
+					OR = {
+						area = zimbabwe_area
+						area = butua_area
+						area = lower_zambezi_area
+					}
+					trade_goods = gold
+					base_production = 5
+				}
+				value = 3
+			}
+		}
+		effect = { 
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_control_over_the_mint
+			}
+			zimbabwe_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_local_autonomy = -25
+			}
+			butua_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_local_autonomy = -25
+			}
+			lower_zambezi_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_local_autonomy = -25
+			}
+		}
 	}
 
 	# Secure Iron
@@ -211,7 +260,9 @@ kilwa_1 = {
 			zan_hormuz_final
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+
+		}
 		effect = { }
 	}
 
@@ -304,7 +355,13 @@ kilwa_2 = {
 				}
 			}
 		}
-		effect = { }
+		effect = { 
+			add_country_modifier = {
+				name = "zan_supportive_estates"
+				duration = 3650
+			}
+			add_piety = -0.25
+		}
 	}
 
 	# Into the Lakes
@@ -314,8 +371,18 @@ kilwa_2 = {
 		required_missions = {
 			zan_consolidate
 		}
-		provinces_to_highlight = { }
-		trigger = { }
+		provinces_to_highlight = { 
+			mombasa_area = {
+				type = all
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			mombasa_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
 		effect = { }
 	}
 
@@ -327,7 +394,13 @@ kilwa_2 = {
 			zan_west_conq_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				region = central_africa_region
+				has_terrain = savannah
+			}
+		}
 		effect = { }
 	}
 
@@ -537,7 +610,7 @@ kilwa_3 = {
 					MBA = { 
 						has_opinion = {
 							who = ROOT
-							value = 150
+							value = 200
 						}
 					}
 				}
@@ -546,9 +619,13 @@ kilwa_3 = {
 					MLI = { 
 						has_opinion = {
 							who = ROOT
-							value = 150
+							value = 200
 						}
 					}
+				}
+				AND = {
+					owns = 1202
+					owns = 1203
 				}
 			}
 		}
@@ -572,6 +649,9 @@ kilwa_3 = {
 					inherit = MBA
 					add_liberty_desire = -25
 				}
+			}
+			else = {
+				add_army_tradition = 15
 			}
 			northern_swahili_coast_area = {
 				limit = {
@@ -598,9 +678,37 @@ kilwa_3 = {
 		trigger = { 
 			AND = {
 				stability = 1
+				NOT = {average_autonomy = 5}
 			}
 		}
-		effect = { }
+		effect = { 
+			add_country_modifier = {
+				name = "zan_expansive_kilwa"
+				duration = 3650
+			}
+			custom_tooltip = perma_claim_neighbor_area
+			hidden_effect = {
+				every_owned_province = {
+					every_neighbor_province = {
+						area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+								NOT = { is_permanent_claim = ROOT    }
+								NOT = { is_core = ROOT    }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+				}
+			}
+		}
+		central_africa_region = {
+			limit = {
+				NOT = { is_core = root }
+				NOT = { is_permanent_claim = root }
+			}
+			add_permanent_claim = root
+		}
 	}
 
 	# Great Kilwa
@@ -773,7 +881,7 @@ kilwa_4 = {
 				limit = { num_of_subjects = 1 }
 				NOT = { 
 					any_subject_country = {
-						liberty_desire = 15
+						liberty_desire = 20
 					}
 				}
 			}
@@ -794,8 +902,56 @@ kilwa_4 = {
 			zan_consolidate
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				AND = {
+					MDI = { 
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+					}
+					has_spy_network_in = {
+						who = AJU
+						value = 50
+					}
+				}
+				MDI = {
+					is_subject_of = ZAN
+				}
+				1205 = { country_or_non_sovereign_subject_holds = ZAN }
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					exists = MDI
+					MDI = { 
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+					}
+					NOT = { MDI = {is_subject_of = ZAN }}
+				}
+				vassalize = MDI
+				MDI = {
+					mogadishu_area = {
+						limit = {
+							NOT = { 
+								is_core = ROOT
+							}
+						}
+					}
+					add_core = MDI
+				}
+			}
+			else = {
+				country_event = {
+					id = flavor_zan.20
+				}
+			}
+		}
 	}
 
 	# Hostile Takeover
@@ -806,8 +962,17 @@ kilwa_4 = {
 			zan_mogadishu
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = {
+			AND = {
+				1210 = {
+					has_merchant = ROOT
+				}
+				owns = 1210
+			} 
+		}
+		effect = { 
+			add_mercantilism = 5
+		}
 	}
 
 	# Monopolize the Horn
@@ -992,12 +1157,15 @@ kilwa_5 = {
 			}
 		}
 		effect = {
-			SFA = {
-				every_owned_province = {
-					add_core = ROOT
+			custom_tooltip = sofala_cores
+			hidden_effect = {
+				SFA = {
+					every_owned_province = {
+						add_core = ROOT
+					}
+					add_historical_friend = ROOT
 				}
-				add_historical_friend = ROOT
-			}
+			}	
 			quelimane_area = {
 				limit = {
 					NOT = {
@@ -1052,9 +1220,25 @@ kilwa_5 = {
 		required_missions = {
 			zan_sofala
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			province_id = 1181
+		}
+		trigger = { 
+			AND = {
+				owns = 1181
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_expansion_into_the_cape
+				duration = 18250
+			}
+			create_colony_mission_reward = {
+				province = 1177
+			}
+			create_explorer = { tradition = 60 }
+		}
 	}
 
 	# Mlango wa Bahari
@@ -1065,8 +1249,44 @@ kilwa_5 = {
 			zan_into_cape
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1177 = {
+				is_in_capital_area = yes
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					1177 = { province_has_center_of_trade_of_level = 3 }
+				}
+				1177 = { add_trade_node_income = 5 }
+			}
+			else = {
+				1177 = {
+					add_center_of_trade_level = 1
+				}
+				add_building_construction = {
+					building = trade_depot
+					speed = 0.5
+					cost = 0
+				}
+			}
+			if = {
+				limit = { 
+					1177 = { has_building = marketplace } 
+				}
+				1177 = { add_building = trade_depot }
+			}
+			else_if = {
+				limit = {
+					1177 = { has_building = trade_depot }
+				}
+				1177 = { add_building = stock_exchange }
+			}
+			else = {
+				1177 = { add_building = marketplace }
+			}
+		}
 	}
 
 	# Blood Red Sea
