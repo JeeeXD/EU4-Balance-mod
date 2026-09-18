@@ -1,0 +1,23 @@
+bookmark =
+{
+	name = "§YFar East§!"
+	desc = "GC_ASIA_BOOKMARK_DESC"
+	date = 1444.11.11
+
+	center = 1816
+	
+	country = ODA
+	country = TKG
+	country = SMZ
+	country = CBA
+	country = SBA
+	country = KOR
+	country = MJZ
+	country = CDL
+	country = CSH
+	country = WUU
+	country = YUE
+
+	
+	
+}

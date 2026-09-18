@@ -1,0 +1,11 @@
+#EE- used for the missions button
+missions_yes = {
+	reason = {
+		tooltip_desc = "missions_yes_desc"
+		tooltip_reason = ""
+		weight = 100
+		trigger = {
+			country_has_jeee_missions = yes
+		}
+	}
+}

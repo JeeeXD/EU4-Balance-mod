@@ -1,0 +1,26 @@
+namespace = mp_cosmetic
+
+
+country_event = {
+	id = mp_cosmetic.1
+	title = mp_cosmetic.1.t
+	desc = mp_cosmetic.1.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mp_cosmetic.1.opt1
+	}
+
+	option = {
+		name = mp_cosmetic.1.opt2
+		override_country_name = SASSANID_EMPIRE
+	}
+
+	option = {
+		name = mp_cosmetic.1.opt3
+		override_country_name = ACHAEMENID_EMPIRE
+	}
+}
+

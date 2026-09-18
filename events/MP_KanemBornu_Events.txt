@@ -24,3 +24,264 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_kanem_bornu.2
+	title = flavor_kanem_bornu.2.T
+	desc = flavor_kanem_bornu.2.D
+	picture = AFRICAN_CHIEFTAIN_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KBO
+		NOT = {
+			has_country_flag = KBO_had_starting_event
+		}
+	}
+
+	immediate = {
+		hidden_effect = { set_country_flag = KBO_had_starting_event }
+	}
+
+	option = {
+		name = flavor_kanem_bornu.2.OPT1
+		ai_chance = { factor = 1 }
+		tooltip = {
+			add_historical_rival = YAO
+			YAO = {
+				add_liberty_desire = 50
+				add_historical_rival = KBO
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = flavor_kanem_bornu.3
+	title = flavor_kanem_bornu.3.T
+	desc = flavor_kanem_bornu.3.D
+	picture = SONGHAI_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_kanem_bornu.3.OPT1
+		ai_chance = { factor = 0 }
+		add_country_modifier = {
+			name = KBO_annex_subjects
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = flavor_kanem_bornu.3.OPT1
+		ai_chance = { factor = 1 }
+		custom_tooltip = KBO_inherit_yao_tt
+		hidden_effect = {
+			set_country_flag = KBO_chose_yao_integration
+		}
+	}
+	
+}
+
+country_event = {
+	id = flavor_kanem_bornu.4
+	title = flavor_kanem_bornu.4.T
+	desc = flavor_kanem_bornu.4.D
+	picture = NEGUSA_NAGAST_eventPicture
+
+	trigger = {
+		tag = KBO
+		YAO = {
+			is_subject_of = KBO
+		}
+		NOT = {
+			has_country_flag = KBO_yao_event_1
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 7
+	}
+
+	option = {
+		name = flavor_kanem_bornu.4.OPT1
+		ai_chance = { factor = 0 }
+		YAO = {
+			add_liberty_desire = -25
+		}
+		add_years_of_income = 0.25
+		custom_tooltip = empty_tt
+		custom_tooltip = KBO_yao_reliance
+		
+		hidden_effect = {
+			change_variable = {
+			    which = KBO_reliance_on_yao
+			    value = 1
+		    }
+		}
+		set_country_flag = KBO_yao_event_1
+	}
+
+	option = {
+		name = flavor_kanem_bornu.4.OPT1
+		ai_chance = { factor = 1 }
+		YAO = {
+			add_liberty_desire = 15
+		}
+		add_country_modifier = {
+			name = KBO_denied_yao_priv
+			duration = 3650
+		}
+		set_country_flag = KBO_yao_event_1
+	}
+	
+}
+
+country_event = {
+	id = flavor_kanem_bornu.5
+	title = flavor_kanem_bornu.5.T
+	desc = flavor_kanem_bornu.5.D
+	picture = AFRICAN_BATTLE_eventPicture
+
+	trigger = {
+		tag = KBO
+		YAO = {
+			is_subject_of = KBO
+		}
+		has_country_flag = KBO_yao_event_1
+		NOT = {
+			has_country_flag = KBO_yao_event_2
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 7
+	}
+
+	option = {
+		name = flavor_kanem_bornu.5.OPT1
+		ai_chance = { factor = 0 }
+		YAO = {
+			add_liberty_desire = -50
+		}
+		add_country_modifier = {
+			name = KBO_yao_recruits
+			duration = 3650
+		}
+		custom_tooltip = KBO_yao_reliance
+		change_variable = {
+			which = KBO_reliance_on_yao
+			value = 1
+		}
+		set_country_flag = KBO_yao_event_2
+	}
+
+	option = {
+		name = flavor_kanem_bornu.5.OPT1
+		ai_chance = { factor = 1 }
+		YAO = {
+			add_liberty_desire = 25
+		}
+		add_country_modifier = {
+			name = KBO_yao_recruits_fled
+			duration = 3650
+		}
+		set_country_flag = KBO_yao_event_2
+	}
+	
+}
+
+country_event = {
+	id = flavor_kanem_bornu.6
+	title = flavor_kanem_bornu.6.T
+	desc = flavor_kanem_bornu.6.D
+	picture = AFRICAN_BATTLE_eventPicture
+
+	trigger = {
+		tag = KBO
+		YAO = {
+			is_subject_of = KBO
+		}
+		has_country_flag = KBO_yao_event_1
+		has_country_flag = KBO_yao_event_2
+		NOT = {
+			has_country_flag = KBO_yao_event_3
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = flavor_kanem_bornu.6.OPT1
+		ai_chance = { factor = 1 }
+		set_country_flag = KBO_yao_event_3
+
+		2288 = {
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+			}
+		}
+		
+		if ={
+			limit = {
+				check_variable = {
+					which = KBO_reliance_on_yao
+					value = 1
+				}
+			}
+			add_manpower = -5
+		}
+		if ={
+			limit = {
+				check_variable = {
+					which = KBO_reliance_on_yao
+					value = 2
+				}
+			}
+			add_stability = -1
+		}
+		if ={
+			limit = {
+				check_variable = {
+					which = KBO_reliance_on_yao
+					value = 3
+				}
+			}
+			2288 = {
+				spawn_rebels = {
+					size = 1
+					type = pretender_rebels
+				}
+			}
+		}
+		if ={
+			limit = {
+				check_variable = {
+					which = KBO_reliance_on_yao
+					value = 4
+				}
+			}
+			kill_heir = {
+				
+			}
+			1157 = {
+				spawn_rebels = {
+					size = 1
+					type = pretender_rebels
+				}
+			}
+		}
+
+		custom_tooltip = empty_tt
+		custom_tooltip = KBO_yao_outcome
+	}
+
+	
+	
+} 

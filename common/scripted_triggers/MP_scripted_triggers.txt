@@ -235,3 +235,26 @@ has_better_tech_than = {
 	}
 }
 
+country_has_jeee_missions = {
+	OR = {
+		tag = TUN
+		tag = MOR
+		tag = KBO
+		tag = MAL
+		tag = SON
+		tag = BUG
+		tag = ZAN
+		tag = ZIM
+		tag = KON
+		tag = PLB
+		tag = KHM
+		tag = AVA
+		tag = MER
+		tag = VIJ
+		tag = BNG
+		tag = DLH
+		#tag = SRH
+		primary_culture = nepali
+		primary_culture = madagasque
+	}
+}

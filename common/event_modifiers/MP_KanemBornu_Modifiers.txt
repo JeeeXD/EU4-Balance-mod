@@ -23,3 +23,76 @@ KBO_hegemon_of_west_africa = {
 KBO_integrate_the_volta = {
 	land_morale = 0.15
 }
+KBO_annex_subjects = {
+	diplomatic_annexation_cost = -0.2
+}
+KBO_missionary_desert = {
+	missionaries = 1
+	missionary_maintenance_cost = -0.33
+}
+KBO_yao_dev = {
+	development_cost = -0.1
+}
+KBO_supplied_armies = {
+	global_supply_limit_modifier = 0.33
+	land_attrition = -0.1
+}
+KBO_denied_yao_priv = {
+	global_unrest = 1
+	infantry_cost = 0.1
+}
+KBO_yao_recruits = {
+	manpower_recovery_speed = 0.15
+	infantry_cost = -0.15
+}
+KBO_yao_recruits_fled = {
+	manpower_recovery_speed = -0.1
+	global_regiment_recruit_speed = 0.25
+}
+KBO_new_locals = {
+	religious_unity = 0.25
+	advisor_cost = -0.1
+}
+KBO_trade_in_cameroon = {
+	trade_efficiency = 0.15
+	trade_steering = 0.25
+}
+KBO_kongo_conquest = {
+	development_cost = -0.1
+	state_governing_cost = -0.15
+}
+KBO_oyo_focus = {
+	trade_goods_size_modifier = 0.33
+	build_cost = -0.2
+	development_cost = -0.2
+	allowed_num_of_buildings = 2
+	allowed_num_of_manufactories = 2
+}
+KBO_confiscated_oyo = {
+	local_manpower_modifier = 1
+	local_tax_modifier = 1
+	local_development_cost_modifier = -0.1
+}
+KBO_eastern_defense = {
+	local_defensiveness = 0.33
+	local_fort_maintenance_modifier = -0.5
+	local_build_cost = -0.1
+	allowed_num_of_buildings = 1
+}
+KBO_maghreb_seized = {
+	technology_cost = -0.1
+	idea_cost = -0.1
+}
+KBO_horn_seized = {
+	production_efficiency = 0.15
+	missionaries = 1
+	global_missionary_strength = 0.04
+	tolerance_own = 3
+}
+KBO_african_super_power = {
+	discipline = 0.05
+}
+KBO_camerooooon = {
+	years_of_nationalism = -10
+	global_autonomy = -0.05
+}

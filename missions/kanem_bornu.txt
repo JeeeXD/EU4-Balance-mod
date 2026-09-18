@@ -32,8 +32,7 @@ kanem_bornu_1 = {
 				amount = 1
 			}
 
-			custom_tooltip = ""
-			custom_tooltip = ""
+			custom_tooltip = empty_tt
 
 			if = {
 				custom_tooltip = KBO_air_dev_fort_yes_tt
@@ -189,8 +188,26 @@ kanem_bornu_1 = {
 			KBO_hegemon_of_west_africa KBO_empire_of_cameroon
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			army_size = 150
+			army_size_percentage = 1
+			monthly_income = 150
+		}
+		effect = { 
+			kongo_region = {
+				add_permanent_claim = ROOT
+			}
+			horn_of_africa_region = {
+				add_permanent_claim = ROOT
+			}
+			maghreb_region = {
+				add_permanent_claim = ROOT
+			}
+			change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+		}
 	}
 
 	KBO_conquer_magherb = {
@@ -199,9 +216,24 @@ kanem_bornu_1 = {
 		required_missions = {
 			KBO_ready_for_more
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			region = maghreb_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 80
+				region = maghreb_region
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_maghreb_seized
+				duration = -1
+			}
+		}
 	}
 
 	KBO_second_capital = {
@@ -360,7 +392,7 @@ kanem_bornu_2 = {
 				age = age_of_discovery
 			}
 
-			custom_tooltip = ""
+			custom_tooltip = empty_tt
 
 			change_ruler_stat = {
 				type = adm
@@ -406,7 +438,7 @@ kanem_bornu_2 = {
 					key = ""
 				}
 			}
-			custom_tooltip = ""
+			custom_tooltip = empty_tt
 
 			custom_tooltip = KBO_katsina_prov_dev_tt
 			tooltip = {
@@ -416,7 +448,7 @@ kanem_bornu_2 = {
 				}
 			}
 
-			custom_tooltip = ""
+			custom_tooltip = empty_tt
 
 			sahel_region = {
 				add_permanent_claim = ROOT
@@ -509,9 +541,40 @@ kanem_bornu_2 = {
 		required_missions = {
 			KBO_tumara
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			area = Bangui_area
+			owned_by = ROOT
+			has_fort_building_trigger = no
+		}
+		trigger = { 
+			fortification_expert = 3
+			num_of_owned_provinces_with = {
+				OR = {
+				    area = Inner_Cameroon_area
+				    area = gulf_of_guinea_area
+			 	    area = Mambila_area
+			    }
+				has_fort_building_trigger = yes
+				value = 2
+			}
+		}
+		effect = { 
+			5355 = {
+				if = {
+					limit = { 
+						is_empty = yes
+					}
+					add_siberian_construction = 400
+				}
+				
+			}
+			Bangui_area = {
+					add_province_modifier = {
+						name = KBO_eastern_defense
+						duration = -1
+					}
+				}
+		}
 	}
 
 	KBO_capital_of_kanem = {
@@ -635,7 +698,9 @@ kanem_bornu_2 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { }
-		effect = { }
+		effect = {
+			
+		}
 	}
 }
 kanem_bornu_3 = {
@@ -730,8 +795,15 @@ kanem_bornu_3 = {
 			KBO_zurama
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			Bangui_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_army_professionalism = 0.05
+		}
 	}
 
 	KBO_empire_of_cameroon = {
@@ -741,8 +813,27 @@ kanem_bornu_3 = {
 			KBO_tumara KBO_south_cameroon KBO_oyo
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1164 = {
+				trade_share = {
+					country = ROOT
+					share = 70
+				}
+			}
+			num_ships_protecting_trade = 25
+			navy_size_percentage = 0.5
+			NOT = {
+				average_autonomy_above_min = 10
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_camerooooon
+				duration = -1
+			}
+			custom_tooltip = empty_tt
+			custom_tooltip = KBO_chancellor_tt
+		}
 	}
 
 	KBO_conquer_horn = {
@@ -751,9 +842,24 @@ kanem_bornu_3 = {
 		required_missions = {
 			KBO_ready_for_more
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			region = horn_of_africa_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 80
+				region = horn_of_africa_region
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_horn_seized
+				duration = -1
+			}
+		}
 	}
 
 	KBO_african_superpower = {
@@ -763,8 +869,32 @@ kanem_bornu_3 = {
 			KBO_conquer_horn KBO_conquer_magherb KBO_conquer_kongo
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = KBO_biggest_african_tt
+				NOT = {
+					any_country = {
+						capital_scope = {
+							continent = africa
+						}
+						army_size = KBO
+						monthly_income = KBO
+					}
+				}
+			}
+			OR = {
+				NOT = {
+					great_power_rank = 2
+				}
+				is_hegemon = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_african_super_power
+				duration = -1
+			}
+		}
 	}
 
 	KBO_kanem_dev = {
@@ -866,8 +996,52 @@ kanem_bornu_4 = {
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				diplomat = 1
+				statesman = 1
+				has_dip_advisor_2 = yes
+			}
+			YAO = {
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+			}
+		}
+		effect = { 
+			remove_historical_rival = YAO
+			YAO = {
+				remove_historical_rival = KBO
+			}
+			custom_tooltip = empty_tt
+			change_ruler_stat = {
+				type = dip
+				amount = 2
+			}
+
+			custom_tooltip = empty_tt
+
+			if = {
+				custom_tooltip = KBO_yao_friend_yes_tt
+				limit = {
+					monthly_dip = 6
+				}
+				add_historical_friend = YAO
+				YAO = {
+					add_historical_friend = KBO
+				}
+			}
+			else = {
+				custom_tooltip = KBO_yao_friend_no_tt
+				tooltip = {
+					add_historical_friend = YAO
+				YAO = {
+					add_historical_friend = KBO
+				}
+				}
+			}
+		}
 	}
 
 	KBO_develop_yaoi = {
@@ -876,9 +1050,29 @@ kanem_bornu_4 = {
 		required_missions = {
 			KBO_yaoi_loves_me
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			owned_by = YAO
+			has_tax_building_trigger = no
+			NOT = {
+				num_of_times_improved = 4
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				owned_by = YAO
+				num_of_times_improved = 4
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = { 
+			define_advisor = {
+				type = statesman
+				discount = yes
+				cost_multiplier = 0.25
+				skill = 2
+			}
+		}
 	}
 
 	KBO_integrate_yaoi = {
@@ -888,8 +1082,25 @@ kanem_bornu_4 = {
 			KBO_kadara_tazir KBO_develop_yaoi
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			YAO = {
+				NOT = { num_of_cities = 26 }
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+				trust = {
+					who = ROOT
+					value = 80
+				}
+			}
+		}
+		effect = { 
+			country_event = {
+				id = flavor_kanem_bornu.3
+			}
+			custom_tooltip = KBO_event_insight_3_tt
+		}
 	}
 
 	KBO_zurama = {
@@ -898,9 +1109,23 @@ kanem_bornu_4 = {
 		required_missions = {
 			KBO_southern_jungles
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			area = Logone_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			Logone_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			Bangui_area = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	KBO_nupe = {
@@ -909,9 +1134,24 @@ kanem_bornu_4 = {
 		required_missions = {
 			KBO_nguma
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			area = lower_niger_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			lower_niger_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_power_projection = {
+				type = sca_lion_of_the_north
+				amount = 10
+			}
+		}
 	}
 
 	KBO_oyo = {
@@ -921,8 +1161,112 @@ kanem_bornu_4 = {
 			KBO_nupe
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OYO = {
+				exists = no
+			}
+			1144 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					AND = {
+						development = 10
+						num_free_building_slots = 0
+						num_of_buildings_in_province = 4
+					}
+					AND = {
+						NOT = {
+							development = 10
+						}
+						devastation = 5
+					}
+				}
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					1144 = {
+						development = 10
+						num_of_buildings_in_province = 4
+						num_free_building_slots = 0
+					}
+				}
+				custom_tooltip = KBO_oyo_dev_yes_tt
+			}
+			custom_tooltip = KBO_oyo_dev_no_tt
+			tooltip = {
+				1144 = {
+						add_province_modifier = {
+							name = KBO_oyo_focus
+							duration = -1
+						}
+						create_or_add_center_of_trade_level = { level = 2 }
+					}
+			}
+			custom_tooltip = empty_tt
+			if = {
+				limit = {
+					1144 = {
+						AND = {
+						NOT = {
+							development = 10
+						}
+						devastation = 5
+					    }
+					}
+				}
+				custom_tooltip = KBO_oyo_destroy_yes_tt
+			}
+			custom_tooltip = KBO_oyo_destroy_no_tt
+			tooltip = {
+				1144 = {
+						add_base_manpower = -2
+						add_base_production = -2
+						add_base_tax = -2
+					}
+					capital_scope = {
+						add_base_manpower = 4
+						add_base_production = 4
+						add_province_modifier = {
+							name = KBO_confiscated_oyo
+							duration = 36500
+						}
+					}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						1144 = {
+							development = 10
+							num_of_buildings_in_province = 4
+							num_free_building_slots = 0
+						}
+					}
+					1144 = {
+						add_province_modifier = {
+							name = KBO_oyo_focus
+							duration = -1
+						}
+						create_or_add_center_of_trade_level = { level = 2 }
+					}
+				}
+				else = {
+					1144 = {
+						add_base_manpower = -2
+						add_base_production = -2
+						add_base_tax = -2
+					}
+					capital_scope = {
+						add_base_manpower = 4
+						add_base_production = 4
+						add_province_modifier = {
+							name = KBO_confiscated_oyo
+							duration = 36500
+						}
+					}
+				}
+			}
+		}
 	}
 
 	KBO_trade_in_chad = {
@@ -1019,9 +1363,92 @@ kanem_bornu_5 = {
 		required_missions = {
 			KBO_yaoi_loves_me
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = Salamat_Wadi_Area
+				province_id = 5171
+				province_id = 2932
+				province_id = 774
+			}
+		}
+		trigger = { 
+			Salamat_Wadi_Area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5171 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2932 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			774 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_prestige = 10
+			add_country_modifier = {
+				name = KBO_missionary_desert
+				duration = 9125
+			}
+
+			if = {
+				custom_tooltip = KBO_yao_owns_wadai_yes_tt
+				limit = {
+					Salamat_Wadi_Area = {
+				type = all
+				country_or_non_sovereign_subject_holds = YAO
+			}
+			5171 = {
+				country_or_non_sovereign_subject_holds = YAO
+			}
+			2932 = {
+				country_or_non_sovereign_subject_holds = YAO
+			}
+			774 = {
+				country_or_non_sovereign_subject_holds = YAO
+			}
+				}
+
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+				
+				YAO = {
+					add_country_modifier = {
+						name = KBO_yao_dev
+						duration = -1
+					}
+				}
+
+				hidden_effect = {
+				change_variable = {
+					which = KBO_reliance_on_yao
+					value = 1
+				}
+				}
+				
+			}
+			else = {
+				custom_tooltip = KBO_yao_owns_wadai_no_tt
+				tooltip = {
+				   change_ruler_stat = {
+					type = adm
+					amount = 1
+				    }
+				
+				    YAO = {
+					add_country_modifier = {
+						name = KBO_yao_dev
+						duration = -1
+					}
+				    }
+				}
+				custom_tooltip = KBO_yao_reliance
+			}
+		}
 	}
 
 	KBO_kadara_tazir = {
@@ -1031,8 +1458,62 @@ kanem_bornu_5 = {
 			KBO_wadai_conquer
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			darfur_central_sahara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_azbin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_supplied_armies
+				duration = -1
+			}
+
+			custom_tooltip = empty_tt
+			if = {
+				custom_tooltip = KBO_yao_owns_wadai_yes_tt
+				limit = {
+					east_azbin_area = {
+						type = all
+						owned_by = YAO
+					}
+					darfur_central_sahara_area = {
+						type = all
+						owned_by = YAO
+					}
+				}
+
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+				
+				hidden_effect = {
+					change_variable = {
+					which = KBO_reliance_on_yao
+					value = 1
+				}
+				}
+				
+			}
+			else = {
+				custom_tooltip = KBO_yao_owns_wadai_no_tt
+				tooltip = {
+				   change_ruler_stat = {
+					type = mil
+					amount = 1
+				    }
+			
+				}
+				custom_tooltip = empty_tt
+				custom_tooltip = KBO_yao_reliance
+			}
+		}
 	}
 
 	KBO_southern_jungles = {
@@ -1040,8 +1521,20 @@ kanem_bornu_5 = {
 		position = 5
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			army_size = 25	
+			has_mil_advisor = yes
+		}
+		effect = { 
+
+
+			adamawa_plateau_area = {
+				add_permanent_claim = ROOT
+			}
+			Logone_area = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	KBO_nguma = {
@@ -1050,9 +1543,36 @@ kanem_bornu_5 = {
 		required_missions = {
 			KBO_southern_jungles
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			area = adamawa_plateau_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			adamawa_plateau_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_new_locals
+				duration = 7300
+			}
+			Mambila_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_niger_area = {
+				add_permanent_claim = ROOT
+			}
+			Inner_Cameroon_area = {
+				add_permanent_claim = ROOT
+			}
+			gulf_of_guinea_area = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	KBO_south_cameroon = {
@@ -1061,9 +1581,53 @@ kanem_bornu_5 = {
 		required_missions = {
 			KBO_nguma
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = Mambila_area
+				area = Inner_Cameroon_area
+				area = gulf_of_guinea_area
+			}
+			NOT = {
+				province_id = 5320
+			}
+			NOT = {
+				province_id = 5363 
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			Mambila_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Inner_Cameroon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gulf_of_guinea_area = {
+				type = all
+				OR = {
+					province_id = 5320
+					province_id = 5363 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				
+			}
+			1164 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier_for_age = {
+				name = KBO_trade_in_cameroon
+				age = age_of_reformation
+			}
+		}
 	}
 
 	KBO_cameroon_forts = {
@@ -1072,9 +1636,31 @@ kanem_bornu_5 = {
 		required_missions = {
 			KBO_south_cameroon
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = Inner_Cameroon_area
+				area = gulf_of_guinea_area
+				area = Mambila_area
+			}
+			owned_by = ROOT
+			has_fort_building_trigger = no
+		}
+		trigger = { 
+			fortification_expert = 3
+			num_of_owned_provinces_with = {
+				OR = {
+				    area = Inner_Cameroon_area
+				    area = gulf_of_guinea_area
+			 	    area = Mambila_area
+			    }
+				has_fort_building_trigger = yes
+				value = 4
+			}
+		}
+		effect = { 
+			add_army_tradition = 10
+			unlock_estate_privilege = { estate_privilege = estate_nobles_defensive_policy modifier_tooltip = estate_privilege_defensive_policy_tooltip }
+		}
 	}
 
 	KBO_conquer_kongo = {
@@ -1083,9 +1669,24 @@ kanem_bornu_5 = {
 		required_missions = {
 			KBO_ready_for_more
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			region = kongo_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 60
+				region = kongo_region
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = KBO_kongo_conquest
+				duration = -1
+			}
+		}
 	}
 
 	KBO_bedoiun_mercenaries = {

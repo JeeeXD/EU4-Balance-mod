@@ -645,3 +645,22 @@ mp_misc.7.d: "One of our rivals has sent in spies to influence our Estates, it h
 mp_misc.7.opt1: "Damn it!"
 sabotage_forts_tooltip: ""
 influence_court_tooltip: ""
+toggle_subject_coloration_textbox: "Toggle Colorization"
+toggle_subject_coloration_button_text: "[Root.toggle_subject_coloration_button_text_loc]"
+ME_toggle_full_coring: "§YToggle Full Coring§!\n\nWith this toggle, you may choose to only core uncored provinces. When toggled, coring States will be excluded."
+ME_making_state_cores_is_toggled_off: "§YState Coring§! provinces is currently toggled §Roff§!. Toggle it on the §YStability Actions§! menu."
+DLC_missions_yes_TOOLTIP_INSTANT: "§YJeee Mod Mission Tree§!"
+missions_yes_desc: "This country has a Jeee Mod mission tree"
+
+
+
+# COSMETIC NAMES
+mp_cosmetic.1.t: "Choose Your Name"
+mp_cosmetic.1.d: "We have the option to change our country name to something we can larp as, which one do we want."
+mp_cosmetic.1.opt1: "I hate larping!!!!!!!"
+mp_cosmetic.1.opt2: "Sassanids"
+mp_cosmetic.1.opt3: "Achaeminds"
+SASSANID_EMPIRE: "Sassanids"
+SASSANID_EMPIRE_ADJ: "Sassanid"
+ACHAEMENID_EMPIRE: "Achaemenids"
+ACHAEMENID_EMPIRE_ADJ: "Achaemenid"

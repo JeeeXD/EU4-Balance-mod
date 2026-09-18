@@ -1,0 +1,19 @@
+bookmark =
+{
+	name = "§YMiddle East§!"
+	desc = ""
+	date = 1444.11.11
+	
+	center = 361
+	
+	country = MAM
+	country = TUR
+	country = GEO
+	country = ORM
+	country = RAS
+	country = QOM
+	country = AFG
+	country = SHY
+
+	
+}

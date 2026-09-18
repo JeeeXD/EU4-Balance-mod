@@ -1,0 +1,23 @@
+bookmark =
+{
+	name = "§YWestern Europe§!"
+	desc = "RISE_OF_THE_OTTOMANS_DESC"
+	date = 1444.11.11
+	
+	center = 183
+	default = yes
+	
+	country = FRA
+	country = CAS
+	country = POR	
+	country = BUR
+	country = ENG
+	country = MLO
+	country = SAV	
+	country = LAN
+	country = VEN
+	country = PAP
+	country = NAP
+	
+
+}

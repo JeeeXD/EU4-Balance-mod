@@ -1102,14 +1102,30 @@ chancellor = {
 	allow_only_male = yes
 
 	# Bonus
-	legitimacy = 0.5
-	republican_tradition = 0.15
-	horde_unity = 0.5
-	devotion = 0.5
-	meritocracy = 0.5
+	legitimacy = 1
+	republican_tradition = 0.33
+	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
 
 	chance = {
 		factor = 1
+	}
+
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				mission_completed = KBO_empire_of_cameroon
+			}
+		}
+		modifier = {
+			core_creation = -0.05
+		}
+	}
+
+	
+	ai_will_do = {
+		factor = 0
 	}
 }
 
@@ -1123,6 +1139,10 @@ herald = {
 
 	chance = {
 		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 0
 	}
 }
 

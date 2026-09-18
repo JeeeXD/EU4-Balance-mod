@@ -14,4 +14,9 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Loaf_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_dlc_button_missions_PDX"
+		texturefile = "gfx/interface/modded_dlc/dlc_button_missions_PDX.dds"
+		legacy_lazy_load = no
+	}
 }

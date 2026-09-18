@@ -327,7 +327,7 @@ christian = {
 			catholic
 		}
 		country = {
-			development_cost = -0.1
+			development_cost = -0.05
 			technology_cost = -0.05
 		}
 		
@@ -740,8 +740,8 @@ christian = {
 			}
 
 			icon_pancreator = {
-				development_cost = -0.10
-				build_cost = -0.1
+				development_cost = -0.05
+				build_cost = -0.05
 				
 				allow = {
 					always = yes
@@ -1083,7 +1083,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_maliki"
 
-			development_cost = -0.1
+			development_cost = -0.05
 		}
 		shafii_school = {
 			potential_invite_scholar = {
@@ -1375,7 +1375,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_zaidi"
 
-			shock_damage_received = -0.1
+			shock_damage_received = -0.05
 		}
 		
 	}
@@ -1638,8 +1638,8 @@ dharmic = {
 		icon = 15
 		allowed_conversion = {
 			hinduism
-			sunni
-			shiite
+			#sunni
+			#shiite
 		}
 		country = {
 			mil_tech_cost_modifier = -0.1

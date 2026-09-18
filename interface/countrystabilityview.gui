@@ -792,6 +792,14 @@ guiTypes = {
 				buttonText = "CORE_ALL"
 				buttonFont = "vic_18"
 			}
+
+			guiButtonType = {
+				name = "core_all_full_toggle"
+				scripted = yes
+				Orientation = "LOWER_RIGHT"
+				position = { x= 185 y = 110 }
+				quadTextureSprite ="GFX_checkbox_gold_24"
+			}
 		}
 
 		################################################################################################

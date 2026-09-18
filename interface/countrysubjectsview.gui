@@ -477,6 +477,84 @@ guiTypes = {
 			buttonFont = "vic_18"
 		}
 
+		# COLORING
+
+		iconType = {
+			name ="toggle_subject_coloration_bg_tile"
+			spriteType = "GFX_subject_bg_tile"
+			
+			if_resolution = {
+				max_height = 867
+				position = { x= 18 y = 377 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				position = { x= 18 y = 527 }
+			}
+			if_resolution = {
+				min_height = 1048
+				position = { x= 18 y = 707 }
+			}
+			frame = 1
+		}
+		
+		#guiButtonType =
+		#{
+		#	name ="toggle_subject_coloration_button_off"
+		#	scripted = yes
+		#	quadTextureSprite= "GFX_checkbox_gold_24"
+		#	position = { x = 31 y = 710 }
+		#	Orientation = "UPPER_LEFT"
+		#	frame = 2
+		#}
+		guiButtonType =
+		{
+			name ="toggle_subject_coloration_button_on"
+			scripted = yes
+			quadTextureSprite= "GFX_checkbox_gold_24"
+			
+			if_resolution = {
+				max_height = 867
+				position = { x = 31 y = 380 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				position = { x = 31 y = 530 }
+			}
+			if_resolution = {
+				min_height = 1048
+				position = { x = 31 y = 710 }
+			}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "toggle_subject_coloration_textbox"
+			scripted = yes
+			
+			if_resolution = {
+				max_height = 867
+				position = { x = 73 y = 382 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				position = { x = 73 y = 532 }
+			}
+			if_resolution = {
+				min_height = 1048
+				position = { x = 73 y = 712 }
+			}
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 2 y = 2}
+			maxWidth = 300
+			maxHeight = 60
+			format = left
+		}
+
 		##### Bottom part of the view
 		windowType = {
 			name = "country_subjects_info"

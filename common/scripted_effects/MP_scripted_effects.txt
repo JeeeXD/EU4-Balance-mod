@@ -197,3 +197,138 @@ on_general_recruited_effect = {
 		add_army_professionalism = 0.001
 	}
 }
+
+ME_change_all_subject_colors = {
+	save_event_target_as = overlord_scope
+	every_subject_country = {
+		limit = {
+			NOT = { is_playing_custom_nation = yes }
+			NOT = { is_colonial_nation = yes }
+			NOT = { is_colonial_nation_of = event_target:overlord_scope }
+		}
+		save_event_target_as = subject_scope
+		if = {
+			limit = {
+				NOT = { is_colonial_nation_of = event_target:overlord_scope }
+				NOT = { has_country_flag = has_overriden_color_flag }
+			}
+			clr_country_flag = color_toggled_from_ui
+			restore_country_color = yes
+		}
+		if = {
+			limit = {
+				event_target:overlord_scope = { has_country_flag = overlord_color_toggled_from_ui }
+				is_subject_other_than_tributary_trigger = yes
+				NOT = { is_colonial_nation_of = event_target:overlord_scope }
+			}
+			change_country_color = { country = event_target:overlord_scope }
+			set_country_flag = color_toggled_from_ui
+		}
+		if = {
+			limit = {
+				always = no
+				#any_subject_country = {
+				#	is_colonial_nation = yes
+				#}
+			}
+			every_subject_country = {
+				limit = { is_colonial_nation = yes }
+				save_event_target_as = subject_subject_scope
+				if = {
+					limit = {
+						is_subject_of_type = crown_colony
+					}
+					event_target:overlord_scope = {
+						create_subject = {
+							subject_type = crown_colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+					event_target:subject_scope = {
+						create_subject = {
+							subject_type = crown_colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject_of_type = self_governing_colony
+					}
+					event_target:overlord_scope = {
+						create_subject = {
+							subject_type = self_governing_colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+					event_target:subject_scope = {
+						create_subject = {
+							subject_type = self_governing_colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject_of_type = private_enterprise
+					}
+					event_target:overlord_scope = {
+						create_subject = {
+							subject_type = private_enterprise
+							subject = event_target:subject_subject_scope
+						}
+					}
+					event_target:subject_scope = {
+						create_subject = {
+							subject_type = private_enterprise
+							subject = event_target:subject_subject_scope
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject_of_type = commercial_enterprise
+					}
+					event_target:overlord_scope = {
+						create_subject = {
+							subject_type = commercial_enterprise
+							subject = event_target:subject_subject_scope
+						}
+					}
+					event_target:subject_scope = {
+						create_subject = {
+							subject_type = commercial_enterprise
+							subject = event_target:subject_subject_scope
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject_of_type = colony
+					}
+					event_target:overlord_scope = {
+						create_subject = {
+							subject_type = colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+					event_target:subject_scope = {
+						create_subject = {
+							subject_type = colony
+							subject = event_target:subject_subject_scope
+						}
+					}
+				}
+			}
+		}
+		#if = {
+		#	limit = {
+		#		any_subject_country = {
+		#			is_subject_other_than_tributary_trigger = yes
+		#			NOT = { is_colonial_nation = yes }
+		#		}
+		#	}
+		#	
+		#}
+	}
+}

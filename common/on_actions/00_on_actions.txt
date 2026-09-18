@@ -29,6 +29,8 @@ on_startup = {
 		flavor_fra.206 # Setup the general for missions
 		flavor_geo.1 # Disaster info
 		flavor_mam.111 # Mamluks-Syria relations
+
+		flavor_kanem_bornu.2 # Yao situation for KBO
 	}
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
@@ -1203,6 +1205,27 @@ on_monarch_death = {
 		flavor_mal.47 # Pilgrimage ends prematurely
 		government_events.3	# Election of a new Ruler
 		flavor_inc.27 # Mummification of the Dead
+	}
+	if = {
+		limit = {
+			KBO = {
+			    has_country_flag = KBO_chose_yao_integration
+			    NOT = {
+				    has_country_flag = KBO_inherited_yao
+			    }
+		    }
+		    YAO = {
+			    exists = yes
+			    is_subject_of = KBO
+		    }
+		}
+		random = {
+			chance = 25
+			KBO = {
+				inherit = YAO
+			    set_country_flag = KBO_inherited_yao
+			}
+		}
 	}
 }
 

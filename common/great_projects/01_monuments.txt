@@ -10551,15 +10551,7 @@ great_mosque_djenne = {
 		country_modifiers = {
 		}
 
-		conditional_modifier = {
-			trigger = { 
-				mission_completed = KBO_mosque_of_djenne
-			}
-			modifier = { 
-				global_tax_modifier = 0.1
-				vassal_income = 0.15
-			}
-		}
+		
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -10597,10 +10589,11 @@ great_mosque_djenne = {
 				mission_completed = KBO_mosque_of_djenne
 			}
 			modifier = { 
-				global_tax_modifier = 0.25
-				vassal_income = 0.33
+				global_tax_modifier = 0.1
+				vassal_income = 0.15
 			}
 		}
+		
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -10638,10 +10631,12 @@ great_mosque_djenne = {
 				mission_completed = KBO_mosque_of_djenne
 			}
 			modifier = { 
-				global_tax_modifier = 0.33
-				vassal_income = 0.5
+				global_tax_modifier = 0.25
+				vassal_income = 0.33
 			}
 		}
+
+		
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -10672,6 +10667,16 @@ great_mosque_djenne = {
 			monthly_piety_accelerator = 0.003
 			global_heathen_missionary_strength = 0.03
 			missionaries = 1
+		}
+
+		conditional_modifier = {
+			trigger = { 
+				mission_completed = KBO_mosque_of_djenne
+			}
+			modifier = { 
+				global_tax_modifier = 0.33
+				vassal_income = 0.5
+			}
 		}
 
 		#what effects happen when this tier is achieved

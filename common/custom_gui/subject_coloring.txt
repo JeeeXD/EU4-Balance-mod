@@ -1,0 +1,122 @@
+custom_text_box = {
+    name = toggle_subject_coloration_textbox
+    potential = {
+		ai = no
+	}
+}
+
+custom_button = {
+	name = toggle_subject_coloration_button_on
+	potential = {
+		ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+		#NOT = { has_country_flag = overlord_color_toggled_from_ui }
+	}
+	trigger = {
+		#custom_trigger_tooltip = {
+		#	tooltip = "Has any eligible subjects"
+		#	hidden_trigger = {
+		#		any_subject_country = { 
+		#			NOT = { has_country_flag = has_overriden_color_flag }
+		#			is_subject_other_than_tributary_trigger = yes
+		#			NOT = { is_subject_of_type = EE_granadan_tributary }
+		#			NOT = { is_subject_of_type = ME_TIM_trib_state }
+		#			NOT = { is_subject_of_type = timar }
+		#		}
+		#	}
+		#}
+	}
+	frame = {
+        number = 1
+        trigger = { 
+			NOT = { has_country_flag = overlord_color_toggled_from_ui }
+		}
+    }
+	frame = {
+        number = 2
+        trigger = { 
+			has_country_flag = overlord_color_toggled_from_ui
+		}
+    }
+	effect = { 
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = overlord_color_toggled_from_ui
+				}
+				clr_country_flag = overlord_color_toggled_from_ui
+			}
+			else = {
+				set_country_flag = overlord_color_toggled_from_ui
+			}
+			ME_change_all_subject_colors = yes
+		}
+	}
+	tooltip = toggle_subject_coloration_button_text
+}
+
+custom_button = {
+	name = toggle_subject_coloration_button_off
+	potential = {
+		ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+		has_country_flag = overlord_color_toggled_from_ui
+	}
+	trigger = {
+		#custom_trigger_tooltip = {
+		#	tooltip = "Has any eligible subjects"
+		#	hidden_trigger = {
+		#		any_subject_country = { 
+		#			NOT = { has_country_flag = has_overriden_color_flag }
+		#			is_subject_other_than_tributary_trigger = yes
+		#			NOT = { is_subject_of_type = EE_granadan_tributary }
+		#			NOT = { is_subject_of_type = ME_TIM_trib_state }
+		#			NOT = { is_subject_of_type = timar }
+		#		}
+		#	}
+		#}
+	}
+	effect = { 
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = overlord_color_toggled_from_ui
+				}
+				clr_country_flag = overlord_color_toggled_from_ui
+			}
+			else = {
+				set_country_flag = overlord_color_toggled_from_ui
+			}
+			every_subject_country = {
+				if = {
+					limit = {
+						NOT = { 
+							OR = {
+								has_country_flag = has_overriden_color_flag
+								has_country_flag = color_toggled_from_ui 
+							}
+						}
+						NOT = { is_colonial_nation_of = ROOT }
+					}
+					restore_country_color = yes
+				}
+				if = {
+					limit = {
+						has_country_flag = color_toggled_from_ui
+						NOT = { is_colonial_nation_of = ROOT }
+					}
+					clr_country_flag = color_toggled_from_ui
+					restore_country_color = yes
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = color_toggled_from_ui }
+						is_subject_other_than_tributary_trigger = yes
+						NOT = { is_colonial_nation_of = ROOT }
+					}
+					change_country_color = { country = ROOT }
+					set_country_flag = color_toggled_from_ui
+				}
+			}
+		}
+	}
+	tooltip = toggle_subject_coloration_button_text
+}

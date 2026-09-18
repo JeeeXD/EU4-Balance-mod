@@ -1,0 +1,23 @@
+bookmark =
+{
+	name = "§YEastern Asia§!"
+	desc = ""
+	date = 1444.11.11
+	
+	center = 522
+	
+	country = SRH
+	country = BNG
+	country = VIJ
+	country = MER
+	country = AYU
+	country = AVA
+	country = MLC
+	country = PLB
+	country = BEI
+	country = SUN
+	country = SMB
+	country = MAJ
+
+	
+}

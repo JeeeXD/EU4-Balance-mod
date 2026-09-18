@@ -1,0 +1,19 @@
+bookmark =
+{
+	name = "§YEastern Europe§!"
+	desc = ""
+	date = 1444.11.11
+	
+	center = 50
+	
+	country = KOL
+	country = BRA
+	country = SWI
+	country = LBV
+	country = SWE
+	country = POL
+	country = HUN
+	country = MOS
+
+	
+}

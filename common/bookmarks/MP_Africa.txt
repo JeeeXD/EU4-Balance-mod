@@ -1,0 +1,21 @@
+bookmark =
+{
+	name = "§YAfrica§!"
+	desc = "GC_AFRICA_BOOKMARK_DESC"
+	date = 1444.11.11
+	
+	center = 1170
+	
+	country = KON
+	country = ETH
+	country = MOR
+	country = SON
+	country = MAL
+	country = KBO
+	country = TUN
+	country = ZAN
+	country = BUG
+	country = ZIM
+
+	
+}

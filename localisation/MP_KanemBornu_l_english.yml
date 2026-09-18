@@ -172,16 +172,39 @@ KBO_yaoi_loves_me_title:0 "yaoi"
 
 ############ EVENTS ###############
 
+flavor_kanem_bornu.2.T: "The Bulala Rebellion"
+flavor_kanem_bornu.2.D: "The Bulala people have once again grown restless in Yao. Their chiefs have refused to accept the authority of our vassal and have begun calling on their people to resist the government. If left alone, this rebellion may spread and weaken our hold over the region. We must decide whether to intervene or allow our vassal to deal with the matter themselves."
+flavor_kanem_bornu.2.OPT1: "They will submit to us!"
+
+flavor_kanem_bornu.3.T: "Relationship with Yao"
+
 ########### DECISIONS #########
 
 ########### TOOLTIPS ##############
-empty_tt: ""
+empty_tt: "§b.§!"
 KBO_air_dev_fort_yes_tt: "£yes£ If §YAir§! has §G15§! §YDevelopment§! and any §YFort§! building, it will gain the following:"
 KBO_air_dev_fort_no_tt: "£no£ If §YAir§! has §G15§! §YDevelopment§! and any §YFort§! building, it will gain the following:"
 KBO_katsina_prov_dev_tt: "Every province in the §YKatsina§! trade node will gain the following:"
 KBO_katsina_control_tooltip: "All provinces in the §YKatsina§! trade node are owned by §YKanem Bornu§! or its §YSubjects§!."
 KBO_allows_great_project_askia_tt: "Unlocks the §YGreat Project§!: §YTomb of Askia§!."
 KBO_better_mosque_jenne_tt: "Unlocks a conditional modifier for the §YGreat Mosque of Djenne§!."
-KBO_event_insight_1_tt: "\n§GEvent Insight§!\nThis event will grant us the option to either accept §YSonghai§! as one of our cultures or convert them to our culture."
+
 KBO_unlock_colonise_decision_tt: "Unlocks a decision to colonise the §YGold Coast§! gradually."
 KBO_colonize_cooldown_tt: "Has been 10 years since the last colonization attempt."
+KBO_yao_friend_yes_tt: "£yes£ If we gain §Y6§! Monthly Diplomatic Power, we will gain the following:"
+KBO_yao_friend_no_tt: "£no£ If we gain §Y6§! Monthly Diplomatic Power, we will gain the following:"
+KBO_inherit_yao_tt: "We will gain a §G25%§! chance of inheriting §YYao§! on every ruler death."
+KBO_yao_owns_wadai_yes_tt: "£yes£ If §Y@YAO Yao§! owns the required provinces, we will gain the following:"
+KBO_yao_owns_wadai_no_tt: "£no£ If §Y@YAO Yao§! owns the required provinces, we will gain the following:"
+KBO_yao_reliance: "§RThis will increase our reliance on §Y@YAO Yao§! to manage our territories, if this is happens multiple times then it may have adverse effects.§!"
+KBO_yao_outcome: "§RThese outcomes depend on how much influence we granted to §Y@YAO Yao§!§!"
+KBO_oyo_dev_yes_tt: "£yes£ If we completed this mission by developing §YOyo§!, we will gain the following:"
+KBO_oyo_dev_no_tt: "£no£ If we completed this mission by developing §YOyo§!, we will gain the following:"
+KBO_oyo_destroy_yes_tt: "£yes£ If we completed this mission by developing §YOyo§!, we will gain the following:"
+KBO_oyo_destroy_no_tt: "£no£ If we completed this mission by destroying §YOyo§!, we will gain the following:"
+KBO_biggest_african_tt: "No country in africa has a larger army or larger economy than us"
+KBO_chancellor_tt: "§YChancellor§! advisor will grant §G-5%§! §YCore Creation Cost§! per level."
+
+# EVENT INSIGHTS
+KBO_event_insight_1_tt: "\n§GEvent Insight§!\nThis event will grant us the option to either accept §YSonghai§! as one of our cultures or convert them to our culture."
+KBO_event_insight_3_tt: "\n§GEvent Insight§!\nThis event will grant us the option to either get cheaper integration costs for our vassals or gain a §G25%§! chance of inheriting §Y@YAO Yao§! on every ruler death."
