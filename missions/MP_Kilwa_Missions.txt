@@ -495,7 +495,9 @@ kilwa_2 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { }
-		effect = { }
+		effect = { 
+			
+		}
 	}
 
 	# Global Enterprise
