@@ -23,18 +23,23 @@ country_event = {
                     type = khami_ruins
                     tier = -1
                 }
-                add_prestige = 50
-                add_years_of_income = 1
-                add_adm_power = 100
-                add_dip_power = 100
-                add_mil_power = 100
+                ROOT = {
+                    add_prestige = 50
+                    add_years_of_income = 1
+                    add_adm_power = 100
+                    add_dip_power = 100
+                    add_mil_power = 100
+                }
+                
             }
             else = {
-                add_prestige = 25
-                add_years_of_income = 0.5
-                add_adm_power = 50
-                add_dip_power = 50
-                add_mil_power = 50
+                ROOT = {
+                    add_prestige = 25
+                    add_years_of_income = 0.5
+                    add_adm_power = 50
+                    add_dip_power = 50
+                    add_mil_power = 50
+                }
             }
         }
 		ai_chance = {
@@ -51,13 +56,13 @@ country_event = {
                         tier = 1
                     }
                 }
-                add_treasury = -500
+                
                 add_great_project_tier = {
                     type = khami_ruins
                     tier = 1
                 }
             }
-            
+        ROOT = { add_treasury = -500 }
         }
     }
 }

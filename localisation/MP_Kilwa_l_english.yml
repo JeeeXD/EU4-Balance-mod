@@ -6,6 +6,11 @@
  zan_supportive_estates: "Supportive Estates"
  zan_expansive_kilwa: "African Jihad"
 
+############## EVENTS ##############
+ mp_zan.1.t: "Claiming Khami"
+ mp_zan.1.a: "We shall claim it as ours."
+ mp_zan.1.b: "No mercy for the barbarians."
+
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
  zan_rivalries_desc: "While we have overwhelming maritime presence, trade would flow more efficiently if we can directly control the inland roads. Business is business, even if it means war."
@@ -266,7 +271,9 @@
  zan_absolutism_desc: "Absolutist Kilwa"
 
 # Tooltips
+ zan_mogadishu_vassal:0 "If Mogadishu still exists, we can offer them a better overlord to serve."
+ zan_mogadishu_conquest:0 "Should we conquer Mogadishu, we shall use their lands to benefit ours."
  sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by Sofala and will be considered our historical friends."
-
+ zan_coasts:0 "."
 
 

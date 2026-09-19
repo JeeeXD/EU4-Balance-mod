@@ -114,7 +114,11 @@ kilwa_1 = {
 		required_missions = {
 			zan_mutapa
 		}
-		provinces_to_highlight = { }
+		provinces_to_highlight = { 
+			province_id = 1184
+			province_id = 1185
+			province_id = 1188
+		}
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				AND = {
@@ -212,7 +216,15 @@ kilwa_1 = {
 		position = 12
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			OR = {
+				alliance_with = ORM
+				has_opinion_modifier = {
+					who = ORM
+					modifier = scornfully_insulted
+				}
+			}
+		}
 		effect = { }
 	}
 
@@ -328,8 +340,24 @@ kilwa_1 = {
 		position = 25
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			AND = {
+				splendor = 800
+				1196 = { development = 30 }
+			}
+		}
+		effect = { 
+			1196 = {
+				add_institution_embracement = {
+				which = renaissance
+				value = 67
+				}
+			}
+			add_country_modifier = {
+				name = zan_islamic_golden_age
+				duration = 3650
+			}
+		}
 	}
 }
 kilwa_2 = {
@@ -372,15 +400,11 @@ kilwa_2 = {
 			zan_consolidate
 		}
 		provinces_to_highlight = { 
-			mombasa_area = {
-				type = all
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			
 		}
 		trigger = { 
 			mombasa_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				type = all
+				
 			}
 		}
 		effect = { }
@@ -701,14 +725,14 @@ kilwa_3 = {
 					}
 				}
 			}
-		}
-		central_africa_region = {
-			limit = {
-				NOT = { is_core = root }
-				NOT = { is_permanent_claim = root }
+			central_africa_region = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
 			}
-			add_permanent_claim = root
-		}
+		}	
 	}
 
 	# Great Kilwa
@@ -730,9 +754,40 @@ kilwa_3 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
-			num_ships_protecting_trade = 15
+			AND = {
+				num_ships_protecting_trade = 15
+				1196 = {
+					trade_share = {
+						country = ZAN
+						share = 50
+					}
+				}
+			}
 		}
-		effect = { }
+		effect = { 
+			sakalava_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			betsimasaraka_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	# South Eastern Trade
@@ -753,7 +808,9 @@ kilwa_3 = {
 		position = 12
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+
+		}
 		effect = { }
 	}
 
@@ -923,35 +980,38 @@ kilwa_4 = {
 			}
 		}
 		effect = { 
-			if = {
-				limit = {
-					exists = MDI
-					MDI = { 
-						has_opinion = {
-							who = ROOT
-							value = 200
-						}
-					}
-					NOT = { MDI = {is_subject_of = ZAN }}
-				}
-				vassalize = MDI
-				MDI = {
-					mogadishu_area = {
-						limit = {
-							NOT = { 
-								is_core = ROOT
-							}
-						}
-					}
-					add_core = MDI
-				}
-			}
-			else = {
+			custom_tooltip = zan_mogadishu_vassal
+            tooltip = {
+                vassalize = MDI
+            }
+			custom_tooltip = zan_mogadishu_conquest
+			tooltip = {
 				country_event = {
 					id = flavor_zan.20
 				}
 			}
-		}
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = MDI
+						MDI = { 
+							has_opinion = {
+								who = ROOT
+								value = 200
+							}
+						}
+						NOT = { MDI = { is_subject_of = ZAN }}
+					}
+					vassalize = MDI
+				}
+				else = {
+					country_event = {
+						id = flavor_zan.20
+					}
+				}
+			}
+				
+		}	
 	}
 
 	# Hostile Takeover
@@ -1226,7 +1286,7 @@ kilwa_5 = {
 		trigger = { 
 			AND = {
 				owns = 1181
-				province_has_center_of_trade_of_level = 2
+				1181 = { province_has_center_of_trade_of_level = 2 }
 			}
 		}
 		effect = { 
@@ -1264,11 +1324,11 @@ kilwa_5 = {
 			else = {
 				1177 = {
 					add_center_of_trade_level = 1
-				}
-				add_building_construction = {
+					add_building_construction = {
 					building = trade_depot
 					speed = 0.5
 					cost = 0
+					}
 				}
 			}
 			if = {

@@ -19,3 +19,8 @@ zan_expansive_kilwa = {
     ae_impact = -0.1
     war_taxes_cost_modifier = -0.5
 }
+
+zan_islamic_golden_age = {
+    technology_cost = -0.05
+
+}
