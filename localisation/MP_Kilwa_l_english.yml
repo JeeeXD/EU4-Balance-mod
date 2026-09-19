@@ -276,4 +276,8 @@
  sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by Sofala and will be considered our historical friends."
  zan_coasts:0 "."
 
+### REFORMS ####
+kilwan_merchants: "Merchants"
+kilwan_amirs: "Amirs"
+honns_great_kilwan_reform: "Swahili Plutocracy"
 
