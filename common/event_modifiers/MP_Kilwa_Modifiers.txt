@@ -9,7 +9,6 @@ zan_vassal_bonuses = {
     diplomatic_reputation = 2
 }
 zan_supportive_estates = {
-    land_maintenance_modifier = -0.15
     manpower_recovery_speed = 0.10
     morale_damage_received = -0.1
 }
@@ -22,5 +21,44 @@ zan_expansive_kilwa = {
 
 zan_islamic_golden_age = {
     technology_cost = -0.05
+    global_institution_spread = 0.1
+}
 
+zan_guerilla_warfare = {
+    may_build_supply_depot = yes
+    movement_speed = 0.35
+}
+
+zan_somalian_raiders = {
+    may_perform_slave_raid_on_same_religion = yes
+    coast_raid_range = 1
+}
+
+zan_iron_for_army = {
+    artillery_cost = -0.10
+    artillery_barrage_cost = -0.25
+    global_regiment_cost = -0.10
+}
+
+zan_iron_for_navy = {
+    ship_durability = 0.1
+    heavy_ship_number_of_cannons_modifier = 0.1
+    hull_size_modifier = 0.1
+}
+
+zan_west_forts = {
+    rival_border_fort_maintenance = -0.5
+    fort_maintenance_modifier = -0.1
+    garrison_size = 0.2
+}
+
+zan_savannah_development = {
+    local_development_cost_modifier = -0.15
+    local_governing_cost = -0.15
+}
+
+zan_horn_domination = {
+    merchants = 1
+    placed_merchant_power = 5
+    
 }

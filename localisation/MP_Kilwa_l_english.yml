@@ -5,11 +5,21 @@
  zan_vassal_bonuses: "Subjects Solidarity"
  zan_supportive_estates: "Supportive Estates"
  zan_expansive_kilwa: "African Jihad"
+ zan_guerilla_warfare: "Guerilla Warfare"
+ zan_somalian_raiders: "Horny Piracy"
+ zan_west_forts: "Defensive Frontiers"
 
 ############## EVENTS ##############
  mp_zan.1.t: "Claiming Khami"
+ mp_zan.1.d: "Deep within the granite plateau of the interior, our expeditionary forces stand atop the terraced dry-stone platforms of Khami. Once the thriving ceremonial heart and treasury of the Torwa dynasty, the citadel’s intricate chevron masonry and layered retaining walls look out over the gold-bearing rivers that for centuries supplied our coastal dhows. Now that the inland kingdom has yielded to our rule, the council at Kilwa Kisiwani is divided over the monument’s future. The merchant Amirs and treasurers argue that maintaining a pagan inland stronghold is an unnecessary expense—its massive granaries and palaces should be stripped of their gold ornaments, the stone repurposed for our own trade fortresses along the Zambezi, and the city’s wealth liquidated immediately. Our architects and local governors, however, urge a more ambitious vision: rather than dismantling Khami, we could fuse its monumental stone foundations with our own coastal coral-and-lime architecture, erecting minarets and customs houses directly atop the dry-stone platforms to create a permanent inland provincial capital."
  mp_zan.1.a: "We shall claim it as ours."
  mp_zan.1.b: "No mercy for the barbarians."
+ mp_zan.2.t: "Excess Metals"
+ mp_zan.2.a: "Use the iron for the army"
+ mp_zan.2.b: "Strengthen our rule over the waves"
+ mp_zan.3.t: "A Better Plutocracy?"
+ mp_zan.3.a: "Adopt the Arabic Plutocracy"
+ mp_zan.3.b: "Bah! We'd rather be Eastern than an Arab!"
 
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
@@ -93,8 +103,8 @@
  zan_madagascar_2_title: "Malay Question"
  zan_madagascar_2_desc: "Malay Question"
 
- zan_madagascar_3_title: "CIvilized Islanders"
- zan_madagascar_3_desc: "CIvilized Islanders"
+ zan_madagascar_3_title: "Civilized Islanders"
+ zan_madagascar_3_desc: "Civilized Islanders"
 
  zan_madagascar_4_title: "South Eastern Trade"
  zan_madagascar_4_desc: "South Eastern Trade"
@@ -270,14 +280,18 @@
  zan_absolutism_title: "Absolutist Kilwa"
  zan_absolutism_desc: "Absolutist Kilwa"
 
-# Tooltips
+############## TOOLTIPS ##############
  zan_mogadishu_vassal:0 "If Mogadishu still exists, we can offer them a better overlord to serve."
  zan_mogadishu_conquest:0 "Should we conquer Mogadishu, we shall use their lands to benefit ours."
  sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by Sofala and will be considered our historical friends."
- zan_coasts:0 "."
+ zan_coffee_takeover:0 "§Y[Root.GetName]§! gets a claim on every provinces producing coffee within the  §YEthiopia§! trade node."
+ zan_mombasa_vassal:0 "If we choose to ally Mombasa, they will become our vassal."
+ zan_malindi_vassal:0 "If we choose to ally Malindi instead, they will become our vassal."
+ zan_coastal_conquest:0 "If we choose instead to conquer them ourselves, we will earn army tradition."
 
-### REFORMS ####
-kilwan_merchants: "Merchants"
-kilwan_amirs: "Amirs"
-honns_great_kilwan_reform: "Swahili Plutocracy"
+
+############## REFORMS ##############
+ kilwan_merchants: "Merchants"
+ kilwan_amirs: "Amirs"
+ honns_great_kilwan_reform: "Swahili Plutocracy"
 

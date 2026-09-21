@@ -115,9 +115,12 @@ kilwa_1 = {
 			zan_mutapa
 		}
 		provinces_to_highlight = { 
-			province_id = 1184
-			province_id = 1185
-			province_id = 1188
+			OR = {
+				province_id = 1184
+				province_id = 1185
+				province_id = 1188
+			}
+			
 		}
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -166,8 +169,20 @@ kilwa_1 = {
 			zan_west_conq_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				AND = {
+					trade_goods = iron
+					base_production = 5
+				}
+				value = 5
+			}
+		}
+		effect = { 
+			country_event = {
+				id = mp_zan.2
+			}
+		}
 	}
 
 	# End the Kongo
@@ -195,6 +210,7 @@ kilwa_1 = {
 			create_colony_mission_reward = {
 				province = 4020
 			}
+			add_treasury = -200
 		}
 	}
 
@@ -206,7 +222,26 @@ kilwa_1 = {
 			zan_madagascar_1
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			AND = {
+				sakalava_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				betsimasaraka_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				madagascar_highlands_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				southern_madagascar = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
 		effect = { }
 	}
 
@@ -219,13 +254,28 @@ kilwa_1 = {
 		trigger = { 
 			OR = {
 				alliance_with = ORM
-				has_opinion_modifier = {
-					who = ORM
-					modifier = scornfully_insulted
+				ORM = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
 				}
 			}
 		}
-		effect = { }
+		effect = { 
+			country_event = {
+				id = mp_zan.3
+			}
+			if = {
+				limit = { alliance_with = ORM }
+				add_historical_friend = ORM
+				ORM = { add_historical_friend = ZAN }
+			}
+			else = {
+				add_historical_rival = ORM
+				ORM = { add_historical_rival = ZAN }
+			}
+		}
 	}
 
 	# Proof of Pact
@@ -236,7 +286,15 @@ kilwa_1 = {
 			zan_hormuz_alliance
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			OR = {
+				ORM = { trust = { who = ROOT value = 50 }}
+				AND = {
+					trade_embargoing = ORM
+					1334 = { has_merchant = ROOT }
+				}
+			}
+		}
 		effect = { }
 	}
 
@@ -341,12 +399,12 @@ kilwa_1 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
-			AND = {
-				splendor = 800
-				1196 = { development = 30 }
-			}
+			splendor = 800
+			1196 = { development = 30 }
+			is_institution_enabled = renaissance
 		}
-		effect = { 
+		effect = {
+			add_splendor = -800 
 			1196 = {
 				add_institution_embracement = {
 				which = renaissance
@@ -404,10 +462,16 @@ kilwa_2 = {
 		}
 		trigger = { 
 			mombasa_area = {
-				
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		effect = { }
+		effect = { 
+			add_country_modifier = {
+				name = "zan_guerilla_warfare"
+				duration = 3650
+			}
+		}
 	}
 
 	# Sunlit Fields
@@ -425,10 +489,25 @@ kilwa_2 = {
 				has_terrain = savannah
 			}
 		}
-		effect = { }
+		effect = { 
+			every_owned_province = {
+				limit = { 
+					AND = {
+						region = central_africa_region
+						has_terrain = savannah
+					}
+				}
+				add_province_modifier = {
+					name = zan_savannah_development
+					duration = -1
+			}
+			
+			}
+
+		}
 	}
 
-	# Fortify Western Borders
+	# Fortify The West
 	zan_fortify_west = {
 		icon = mission_red_fort
 		position = 6
@@ -436,8 +515,19 @@ kilwa_2 = {
 			zan_kongo zan_secure_iron
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 3
+				region = kongo_region
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_west_forts
+				duration = 18250
+			}
+		}
 	}
 
 	# Markets of Madagascar
@@ -448,7 +538,10 @@ kilwa_2 = {
 			zan_maritime_presence zan_madagascar_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			owns = 1193
+			owns = 4025
+		}
 		effect = { }
 	}
 
@@ -588,7 +681,10 @@ kilwa_2 = {
 		position = 25
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			1196 = { is_prosperous = yes}
+			4039 = { is_prosperous = yes }
+		}
 		effect = { }
 	}
 
@@ -655,25 +751,40 @@ kilwa_3 = {
 				}
 			}
 		}
-		effect = { 
+		effect = {
+			custom_tooltip = zan_mombasa_vassal
+			tooltip = {
+				vassalize = MBA
+			}
+			custom_tooltip = zan_malindi_vassal
+			tooltip = {
+				vassalize = MLI
+			}
+			custom_tooltip = zan_coastal_conquest
 			if = {
 				limit = {
 					alliance_with = MBA
 				}
-				vassalize = MBA
-				MBA = {
-					inherit = MLI
-					add_liberty_desire = -25
+				
+				hidden_effect = {
+					vassalize = MBA
+					MBA = {
+						inherit = MLI
+						add_liberty_desire = -25
+					}
 				}
 			}
 			else_if = {
 				limit = {
 					alliance_with = MLI
 				}
-				vassalize = MLI
-				MLI = {
-					inherit = MBA
-					add_liberty_desire = -25
+				
+				hidden_effect = {
+					vassalize = MLI
+					MLI = {
+						inherit = MBA
+						add_liberty_desire = -25
+					}
 				}
 			}
 			else = {
@@ -745,8 +856,19 @@ kilwa_3 = {
 			zan_fortify_west zan_horn
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			grown_by_development = 800
+			monthly_income = 100
+			has_unified_culture_group = yes
+		}
+		effect = { 
+			1196 = {
+				add_province_modifier = {
+					name = zan_great_kilwa
+					duration = -1
+				}
+			}
+		}
 	}
 
 	# Maritime Presence
@@ -892,7 +1014,14 @@ kilwa_3 = {
 		position = 22
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			religious_unity = 0.9
+			num_of_owned_provinces_with = {
+				religion = sunni
+				has_tax_building_trigger = yes
+				value = 5
+			}
+		}
 		effect = { }
 	}
 
@@ -914,7 +1043,12 @@ kilwa_3 = {
 		position = 25
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			any_neighbor_country = {
+				tech_difference = 1
+			} 
+			prestige = 80
+		}
 		effect = { }
 	}
 }
@@ -1034,6 +1168,18 @@ kilwa_4 = {
 		}
 		effect = { 
 			add_mercantilism = 5
+			add_navy_tradition = 15
+			custom_tooltip = zan_coffee_takeover
+			hidden_effect = {
+				add_claim = 1218
+				add_claim = 1223
+				add_claim = 2756
+				add_claim = 2761
+				add_claim = 5133
+				add_claim = 5139
+				add_claim = 5143
+				add_claim = 5151
+			}
 		}
 	}
 
@@ -1045,8 +1191,21 @@ kilwa_4 = {
 			zan_ajuraan zan_aden
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			owns_all_provinces = {
+				AND = {
+					region = horn_of_africa_region
+					province_has_center_of_trade_of_level = 1
+				}
+				
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_horn_domination
+				duration = -1
+			}
+		}
 	}
 
 	# Spice Must Flow
@@ -1151,7 +1310,13 @@ kilwa_4 = {
 		position = 22
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = {
+			num_of_owned_provinces_with = {
+				province_has_center_of_trade_of_level = 1
+				has_trade_building_trigger = yes
+				value = 5
+			}
+		}
 		effect = { }
 	}
 
@@ -1163,7 +1328,9 @@ kilwa_4 = {
 			zan_workshops_0 zan_marketplaces_0 zan_mosques_0 zan_shipyards_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			1196 = { num_free_building_slots = 0 }
+		}
 		effect = { }
 	}
 
@@ -1211,7 +1378,7 @@ kilwa_5 = {
 						AND = {
 							has_divert_trade = yes 
 							has_embargo_rivals = yes
-							NOT = { liberty_desire = 50 }
+							NOT = { liberty_desire = 25 }
 						}
 					}
 				}
@@ -1228,50 +1395,6 @@ kilwa_5 = {
 					add_historical_friend = ROOT
 				}
 			}	
-			quelimane_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			kwazulu_Natal_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			limpopo_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			transvaal_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -1326,11 +1449,6 @@ kilwa_5 = {
 			else = {
 				1177 = {
 					add_center_of_trade_level = 1
-					add_building_construction = {
-					building = trade_depot
-					speed = 0.5
-					cost = 0
-					}
 				}
 			}
 			if = {
@@ -1359,8 +1477,50 @@ kilwa_5 = {
 			zan_mogadishu
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			4346 = {
+				OR = {
+					is_strongest_trade_power = ROOT
+					trade_share = {
+						country = ROOT
+						share = 15
+					}
+				}
+			}
+		}
+		effect = {
+			4346 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 10
+					key = ZAN_DOMINATION
+				}
+			}
+			add_country_modifier = {
+				name = zan_kilwan_trade_dominance
+				duration = 9125
+			}
+			custom_tooltip = zan_dominate_gulf_of_aden_ct
+			hidden_effect = {
+				add_claim = 504
+				add_claim = 4457
+				add_claim = 517
+				add_claim = 529
+				add_claim = 2089
+				add_claim = 2030
+				add_claim = 531
+				add_claim = 4413
+				add_claim = 534
+				add_claim = 536
+				add_claim = 2026
+				add_claim = 4409
+				add_claim = 572
+			}
+		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	# Lessons from Somalia
@@ -1372,7 +1532,15 @@ kilwa_5 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { }
-		effect = { }
+		effect = { 
+			add_country_modifier = {
+				name = zan_somalian_raiders
+				duration = 3650
+			}
+			add_accepted_culture_or_dip_power = { culture = somali value = 100 }
+			add_accepted_culture_or_dip_power = { culture = harari value = 100 }
+
+		}
 	}
 
 	# Yearning for High Seas
@@ -1509,8 +1677,22 @@ kilwa_5 = {
 		position = 22
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = {
+			num_of_owned_provinces_with = {
+				trade_goods = ivory
+				has_production_building_trigger = yes
+				value = 5
+			}
+		}
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 4
+				trigger = {
+					trade_goods = ivory
+				}
+				custom_tooltip = MONOPOLY_INCOME_IVORY_DESC
+			}
+		}
 	}
 
 	# Efficient Government

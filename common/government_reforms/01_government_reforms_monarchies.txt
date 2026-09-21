@@ -3667,12 +3667,14 @@ arabic_plutocracy_reform = {
 		OR = {
 			primary_culture = omani_culture
 			primary_culture = gulf_arabic
+			mission_completed = zan_hormuz_alliance
 		}
 	}
 	trigger = {
 		OR = {
 			primary_culture = omani_culture
 			primary_culture = gulf_arabic
+			mission_completed = zan_hormuz_alliance
 		}
 	}
 	nation_designer_trigger = {
