@@ -241,3 +241,391 @@ country_event = {
         }
 	}
 }
+
+# Shirika la Uhindi (East India Company)
+country_event = {
+	id = mp_zan.6
+	title = mp_zan.6.t
+	desc = mp_zan.6.d
+	picture = MERCHANTS_ARGUING_eventPicture
+	is_triggered_only = yes
+	
+	#Establish this East India Company
+	option = {
+		name = mp_zan.6.a
+		custom_tooltip = mp_zan.6.a.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					superregion = india_superregion
+				}
+				add_core = EIC
+				if = {
+					limit = { is_core = ROOT }
+					remove_core = ROOT
+				}
+			}
+			release = EIC
+			create_subject = {
+				subject_type = commercial_enterprise
+				who = EIC
+			}
+			EIC = {
+				change_government = republic
+				add_government_reform = trade_company_government
+				change_religion = ROOT
+				change_primary_culture = ROOT
+				define_ruler = {
+					name = "Bakari"
+					dynasty = "Al-Shirazi"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 3
+					max_age = 50
+					min_age = 30
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_treasury = 200
+				set_prestige_to_zero = yes
+				add_republican_tradition = 100
+			}
+		}
+		coromandel_region = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		malabar_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		kanara_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		mysore_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		rayalaseema_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		raichur_doab_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		konkan_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		orissa_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		west_bengal_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		east_bengal_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		tapti_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		ahmedabad_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		saurashtra_area = {
+			limit = {
+				NOT = { is_core = EIC }
+				NOT = { is_permanent_claim = EIC }
+			}
+			add_permanent_claim = EIC
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	#We do not need such enterprise on foreign ground
+	option = {
+		name = mp_zan.6.b
+		coromandel_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		malabar_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		kanara_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		mysore_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		rayalaseema_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		raichur_doab_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		konkan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		orissa_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		west_bengal_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		east_bengal_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		tapti_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		ahmedabad_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		saurashtra_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	#Play as the East India Company
+	option = {
+		name = mp_zan.6.c
+		trigger = {
+			ai = no
+		}
+		custom_tooltip = mp_zan.6.a.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					superregion = india_superregion
+				}
+				add_core = EIC
+				if = {
+					limit = { is_core = ROOT }
+					remove_core = ROOT
+				}
+			}
+			release = EIC
+			create_subject = {
+				subject_type = commercial_enterprise
+				who = EIC
+			}
+			EIC = {
+				change_government = republic
+				add_government_reform = trade_company_government
+				change_religion = ROOT
+				change_primary_culture = ROOT
+				define_ruler = {
+					name = "Thomas"
+					dynasty = "Smythe"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 3
+					max_age = 50
+					min_age = 30
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_treasury = 200
+				set_prestige_to_zero = yes
+				add_republican_tradition = 100
+			}
+			coromandel_region = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			malabar_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			kanara_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			mysore_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			rayalaseema_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			raichur_doab_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			konkan_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			orissa_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			west_bengal_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			east_bengal_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			tapti_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			ahmedabad_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+			saurashtra_area = {
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = EIC
+			}
+		}
+		switch_tag = EIC
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

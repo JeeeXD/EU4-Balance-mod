@@ -975,10 +975,122 @@ kilwa_3 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
+			OR = {
+				# Maldives Route
+				AND = {
+					has_guaranteed = DGL
+					DGL = {
+						has_opinion = {
+							who = ROOT
+							value = 75
+						}
+					}
+				}
+				alliance_with = DGL
 
+				# Direct Conquest
+				owns = 1248
+				
+				# Alliance Route
+				any_ally = {
+					religion = sunni
+					capital_scope = {
+						superregion = india_superregion
+					}
+				}
+			}
 		}
-		effect = { }
+		effect = { 
+			if = {
+				limit = { has_guaranteed = DGL }
+				create_alliance = DGL
+				DGL = {
+					lanka_area = {
+						limit = {
+							NOT = {
+								is_permanent_claim = DGL
+							}
+							NOT = {
+								is_core = DGL
+							}
+						}
+						add_permanent_claim = DGL
+					}
+					south_lanka_area = {
+						limit = {
+							NOT = {
+								is_permanent_claim = DGL
+							}
+							NOT = {
+								is_core = DGL
+							}
+						}
+						add_permanent_claim = DGL
+					}
+				}
+			}
+
+			else_if = {
+				limit = { alliance_with = DGL }
+				vassalize = DGL
+				DGL = {
+					add_trust = {
+						who = ROOT
+						value = 25
+					}
+					lanka_area = {
+						limit = {
+							NOT = {
+								is_permanent_claim = ROOT
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+					south_lanka_area = {
+						limit = {
+							NOT = {
+								is_permanent_claim = ROOT
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+
+			else_if = {
+				limit = { owns = 1248 }
+				lanka_area = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				south_lanka_area = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
 	}
+
 
 	# Battle for Southern Coasts
 	zan_south_india = {
