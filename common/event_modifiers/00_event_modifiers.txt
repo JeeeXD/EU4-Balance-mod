@@ -1837,7 +1837,7 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 	trade_goods_size = 3.0
 }
 
-skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
+skanemarket = { #Skï¿½nemarknaden - Biggest Herring Market in Europe
 	trade_goods_size = 2
 }
 
@@ -4099,18 +4099,24 @@ merchants_gaps_blockade = {
 	war_exhaustion = -0.05
 }
 birth_of_a_new_city_adm = {
-	local_development_cost = -0.05
-	local_tax_modifier = 0.25
+	local_development_cost = -0.25
+	local_tax_modifier = 1
 	local_governing_cost = -0.25
+	allowed_num_of_buildings = 1 
+	allowed_num_of_manufactories = 1 
+	institution_growth = 1 
 }
 birth_of_a_new_city_dip = {
 	province_trade_power_value = 25
-	local_development_cost = -0.05
+	local_development_cost = -0.25
+	trade_goods_size_modifier = 0.25 
 }
 birth_of_a_new_city_mil = {
-	local_development_cost = -0.05
+	local_development_cost = -0.25
 	local_defensiveness = 1
 	local_manpower_modifier = 0.25
+	local_defender_dice_roll_bonus = 1 
+	fort_level = 2
 }
 
 # Colonial events

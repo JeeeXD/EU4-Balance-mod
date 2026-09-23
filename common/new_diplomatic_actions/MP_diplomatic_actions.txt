@@ -188,15 +188,15 @@ influence_court = {
 			}
 			add_estate_loyalty = {
 				estate = estate_burghers
-				loyalty = -0.1
+				loyalty = -10
 			}
 			add_estate_loyalty = {
 				estate = estate_church
-				loyalty = -0.1
+				loyalty = -10
 			}
 			add_estate_loyalty = {
 				estate = estate_nobles
-				loyalty = -0.1
+				loyalty = -10
 			}
 		}
 	}

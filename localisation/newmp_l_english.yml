@@ -643,5 +643,10 @@ mp_misc.6.opt1: "Damn it!"
 mp_misc.7.t: "Our Estates Have Been Influenced"
 mp_misc.7.d: "One of our rivals has sent in spies to influence our Estates, it has negatively affected the alliegance of our highest ranking estate leaders. We must be careful in these coming times as this might mean someone is planning something against us.\n\n§YA country with Espionage Ideas has influenced our estates.§!"
 mp_misc.7.opt1: "Damn it!"
-sabotage_forts_tooltip: ""
-influence_court_tooltip: ""
+
+sabotage_forts_tooltip: "Lowers enemy §YDefensiveness.§! by §G20%§!"
+sabotage_forts_desc: "Lowers enemy §YDefensiveness.§! by §G20%§!"
+influence_court_tooltip: "The enemy's estates lose §G10%§! §YLoyalty§! and §G10%§! §YLoyalty Equilibrium§!."
+influence_court_desc: "The enemy's estates lose §G10%§! §YLoyalty§! and §G10%§! §YLoyalty Equilibrium§!."
+
+INC_AUTONOMY_AI_NO: "This should only be visible to AI"
