@@ -8,6 +8,10 @@
  zan_guerilla_warfare: "Guerilla Warfare"
  zan_somalian_raiders: "Horny Piracy"
  zan_west_forts: "Defensive Frontiers"
+ zan_horn_domination: "Coffee Trader"
+ zan_east_exploration: "Eastern Exploration"
+ zan_ambitious_colonists: "Ambitious Colonists"
+ zan_colonizer: "Colonial Power"
 
 ############## EVENTS ##############
  mp_zan.1.t: "Claiming Khami"
@@ -20,6 +24,10 @@
  mp_zan.3.t: "A Better Plutocracy?"
  mp_zan.3.a: "Adopt the Arabic Plutocracy"
  mp_zan.3.b: "Bah! We'd rather be Eastern than an Arab!"
+ mp_zan.4.t: "Kilwan Slave Trade"
+ mp_zan.4.d: "The expansive interior and coastal harbors of Madagascar have yielded immense returns for our merchant houses. By preserving the established slave marts, our dhows continue to transport bound laborers to the spice estates of Zanzibar and the stone quarries of the mainland, generating unmatched profits for the Coral Throne. \nHowever, human quarry does not submit lightly to the yoke. Across the red hills and dense scrublands of the island, the local Sakalava and highland clans have begun to coordinate armed resistance against our coastal garrisons. Caravans have been ambushed, holding pens breached, and the smoke of burning customs outposts now rises along the Mozambique Channel. \nOur overseers and governors warn that while our coffers swell and our building projects surge ahead with unpaid toil, the island's slave provinces will remain a tinderbox of rebellion for decades to come."
+ mp_zan.4.a: "Utilize them as laborers and resources"
+ mp_zan.4.b: "Promote them as citizens of Kilwa"
 
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
@@ -61,8 +69,8 @@
  zan_secure_iron_title: "Secure Iron"
  zan_secure_iron_desc: "Secure Iron"
 
- zan_kongo_title: "Sunlit Fields"
- zan_kongo_desc: "Sunlit Fields"
+ zan_central_africa_title: "Sunlit Fields"
+ zan_central_africa_desc: "Sunlit Fields"
 
  zan_fortify_west_title: "Fortify The West"
  zan_fortify_west_desc: "Fortify The West"
@@ -72,6 +80,9 @@
 
  zan_horn_title: "Monopolize the Horn"
  zan_horn_desc: "Monopolize the Horn"
+
+ zan_mascarenes_title: "Island Hopping"
+ zan_mascarenes_desc: "Perhaps we can colonize these islands for our noble elite"
 
  zan_aden_title: "Blood Red Sea"
  zan_aden_desc: "Blood Red Sea"
@@ -283,12 +294,14 @@
 ############## TOOLTIPS ##############
  zan_mogadishu_vassal:0 "If Mogadishu still exists, we can offer them a better overlord to serve."
  zan_mogadishu_conquest:0 "Should we conquer Mogadishu, we shall use their lands to benefit ours."
- sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by Sofala and will be considered our historical friends."
- zan_coffee_takeover:0 "§Y[Root.GetName]§! gets a claim on every provinces producing coffee within the  §YEthiopia§! trade node."
- zan_mombasa_vassal:0 "If we choose to ally Mombasa, they will become our vassal."
- zan_malindi_vassal:0 "If we choose to ally Malindi instead, they will become our vassal."
+ sofala_cores:0 "§Y[Root.GetName]§! gains a core on every province owned by §YSofala§! and will be considered our historical friends."
+ zan_coffee_takeover:0 "§Y[Root.GetName]§! gets a claim on every provinces producing coffee within the §YEthiopia§! trade node."
+ zan_mombasa_vassal:0 "If we choose to ally §YMombasa§!, they will become our vassal."
+ zan_malindi_vassal:0 "If we choose to ally §YMalindi§! instead, they will become our vassal."
  zan_coastal_conquest:0 "If we choose instead to conquer them ourselves, we will earn army tradition."
-
+ zan_promote_laborers:0 "Every province producing §Yslaves§! in Madagascar will be replaced by either §Ycloth§!, §Ysugar§!, §Yincense§!, §Ynaval supplies§!, §Ylivestock§!, §Yfish§!, or §Ytropical wood§!"
+ zan_keeping_slaves:0 "Every province producing §Yslaves§! in Madagascar will suffer devastating consequences for §Y50 years§!"
+ zan_sunlit_fields:0 "Every owned §YSavannah§! province in Central Africa will get §YSavannah Development§!"
 
 ############## REFORMS ##############
  kilwan_merchants: "Merchants"

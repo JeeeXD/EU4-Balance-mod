@@ -120,3 +120,124 @@ country_event = {
 		}
 	}
 }
+
+# Kilwan Slave Trade event
+country_event = {
+	id = mp_zan.4
+	title = mp_zan.4.t
+	desc = mp_zan.4.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mp_zan.4.a
+        add_country_modifier = {
+            name = zan_slave_trade
+            duration = -1
+        }
+        custom_tooltip = zan_keeping_slaves
+        tooltip = {
+            add_unrest = 5
+            add_nationalism = 5
+            add_local_autonomy = 10
+        }
+        hidden_effect = {
+            every_owned_or_non_tributary_subject_province = {
+                limit = {
+                    trade_goods = slaves
+                    OR = {
+                        area = sakalava_area
+                        area = madagascar_highlands_area
+                        area = southern_madagascar
+                    }
+                }
+                add_province_modifier = {
+                    name = zan_slave_rebellion
+                    duration = 9125
+                }
+            }
+        }
+        
+		ai_chance = {
+			factor = 1
+		}
+	}
+    option = {
+		name = mp_zan.4.b
+        custom_tooltip = zan_promote_laborers
+        hidden_effect = {
+            every_owned_or_non_tributary_subject_province = {
+                limit = {
+                    OR = {
+                        sakalava_area = {
+                            type = all
+                        }
+                        betsimasaraka_area = {
+                            type = all
+                        }
+                        madagascar_highlands_area = {
+                            type = all
+                        }
+                        southern_madagascar = {
+                            type = all
+                        }
+                    }
+                    trade_goods = slaves
+                }
+                random_list = {
+                    5 = {
+                        change_trade_goods = cloth
+                    }
+                    5 = {
+                        change_trade_goods = sugar
+                    }
+                    10 = {
+                        change_trade_goods = incense
+                    }
+                    20 = {
+                        change_trade_goods = naval_supplies
+                    }
+                    20 = {
+                        change_trade_goods = livestock
+                    }
+                    20 = {
+                        change_trade_goods = fish
+                    }
+                    20 = {
+                        change_trade_goods = tropical_wood
+                    }
+                }
+            }
+        }
+        change_innovativeness = 3
+        ai_chance = {
+            factor = 5
+        }
+	}
+}
+
+# Event for Australian Colonization
+country_event = {
+	id = mp_zan.5
+	title = mp_zan.5.t
+	desc = mp_zan.5.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mp_zan.5.a
+        add_country_modifier = {
+            name = zan_rampant_colonization
+            duration = 3650
+        }
+	}
+    option = {
+		name = mp_zan.5.b
+        add_country_modifier = {
+            name = zan_controlled_colonization
+            duration = 3650
+        }
+	}
+}

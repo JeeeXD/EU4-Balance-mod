@@ -1,3 +1,5 @@
+##Made by Honn 'The Stego'
+#The first and only attempt of a mission tree
 kilwa_1 = {
 	slot = 1
 	generic = no
@@ -193,8 +195,37 @@ kilwa_1 = {
 			zan_fortify_west
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = {
+			NOT = { exists = KON }
+			num_of_owned_provinces_with = {
+				value = 25
+				region = kongo_region
+				religion = sunni
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = kon_south_african_hegemony
+				duration = -1
+			}
+			custom_tooltip = kon_greatest_power_kongo_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture_group = southern_african
+							culture_group = kongo_group
+							culture_group = great_lakes_group
+						}
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = kon_south_african_hegemony_province
+						duration = -1
+					}
+				}
+			}
+		}
 	}
 
 	# Bridging Zanzibar
@@ -288,7 +319,7 @@ kilwa_1 = {
 		provinces_to_highlight = { }
 		trigger = { 
 			OR = {
-				ORM = { trust = { who = ROOT value = 50 }}
+				ORM = { trust = { who = ROOT value = 80 }}
 				AND = {
 					trade_embargoing = ORM
 					1334 = { has_merchant = ROOT }
@@ -475,7 +506,7 @@ kilwa_2 = {
 	}
 
 	# Sunlit Fields
-	zan_kongo = {
+	zan_central_africa = {
 		icon = ned_in_flanders_fields
 		position = 5
 		required_missions = {
@@ -490,20 +521,21 @@ kilwa_2 = {
 			}
 		}
 		effect = { 
-			every_owned_province = {
-				limit = { 
-					AND = {
+			custom_tooltip = zan_sunlit_fields
+			hidden_effect = {
+				every_owned_province = {
+					limit = { 
 						region = central_africa_region
 						has_terrain = savannah
 					}
+					add_province_modifier = {
+						name = zan_savannah_development
+						duration = -1
+					}
 				}
-				add_province_modifier = {
-					name = zan_savannah_development
-					duration = -1
-			}
-			
 			}
 
+			
 		}
 	}
 
@@ -512,7 +544,7 @@ kilwa_2 = {
 		icon = mission_red_fort
 		position = 6
 		required_missions = {
-			zan_kongo zan_secure_iron
+			zan_central_africa zan_secure_iron
 		}
 		provinces_to_highlight = { }
 		trigger = { 
@@ -542,7 +574,9 @@ kilwa_2 = {
 			owns = 1193
 			owns = 4025
 		}
-		effect = { }
+		effect = { 
+			
+		}
 	}
 
 	# Civilized Islanders
@@ -553,8 +587,14 @@ kilwa_2 = {
 			zan_madagascar_1
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			
+		}
+		effect = { 
+			country_event = {
+				id = mp_zan.4
+			}
+		}
 	}
 
 	# United Zanzibar
@@ -685,7 +725,9 @@ kilwa_2 = {
 			1196 = { is_prosperous = yes}
 			4039 = { is_prosperous = yes }
 		}
-		effect = { }
+		effect = { 
+			remove_comet_sighted_events = yes
+		}
 	}
 
 	# University of Kilwa
@@ -1044,9 +1086,9 @@ kilwa_3 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
-			any_neighbor_country = {
-				tech_difference = 1
-			} 
+			NOT = { 
+				any_neighbor_country = { tech_difference = 1 } 
+			}
 			prestige = 80
 		}
 		effect = { }
@@ -1205,6 +1247,28 @@ kilwa_4 = {
 				name = zan_horn_domination
 				duration = -1
 			}
+		}
+	}
+
+	zan_mascarenes = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = {
+			zan_colonial_0
+		}
+		provinces_to_highlight = {
+			province_id = 1100
+			province_id = 1102
+			province_id = 1103
+		}
+		trigger = {
+			mascarenes_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			
 		}
 	}
 
@@ -1549,8 +1613,18 @@ kilwa_5 = {
 		position = 8
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			1196 = {
+				light_ships_in_province = 5
+			}
+			num_of_explorers = 1
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_east_exploration
+				duration = 3650
+			}
+		}
 	}
 
 	# Chartered East
@@ -1561,8 +1635,15 @@ kilwa_5 = {
 			zan_colonial_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			has_discovered = 1084
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_ambitious_colonists
+				duration = 9125
+			}
+		}
 	}
 
 	# Lands Down Under
@@ -1573,8 +1654,17 @@ kilwa_5 = {
 			zan_colonial_1
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				region = australia_region
+			}
+		}
+		effect = { 
+			country_event = {
+				id = mp_zan.5
+			}
+		}
 	}
 
 	# Kutub Kusini
@@ -1585,8 +1675,18 @@ kilwa_5 = {
 			zan_australia_0
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 15
+				region = australia_region
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_colonizer
+				duration = -1
+			}
+		}
 	}
 
 	# Bandar Viungo
