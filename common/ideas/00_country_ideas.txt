@@ -20001,3 +20001,48 @@ VIN_ideas = {
 		discipline = 0.05
 	}
 }
+
+SLU_ideas = {
+	start = {
+		
+		global_missionary_strength = 0.03
+	}
+	
+	bonus = {
+		can_bypass_forts = yes
+	}	
+
+	trigger = {
+		tag = SLU
+	}
+	free = yes
+	
+	slu_new_management = {
+		global_unrest = -2
+		governing_capacity_modifier = 0.1
+	}
+	slu_elephant_army = {
+		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.5
+	}
+	slu_indian_trade = {
+		global_trade_goods_size = -0.15
+		trade_efficiency = -0.15
+	}
+	slu_mtepe_ships = {
+		caravan_power = 0.2
+		blockade_efficiency = 0.1
+	}
+	slu_secure_routes = {
+		build_cost = -0.15
+		center_of_trade_upgrade_cost = -0.5
+	}
+	slu_centralized_capital = {
+		free_concentrate_development = yes
+		institution_spread_from_true_faith = 0.25
+	}
+	slu_international_army = {
+		mercenary_discipline = 0.1
+		mercenary_manpower = 0.5
+	}
+}

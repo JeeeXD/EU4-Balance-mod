@@ -12,6 +12,7 @@
  zan_east_exploration: "Eastern Exploration"
  zan_ambitious_colonists: "Ambitious Colonists"
  zan_colonizer: "Colonial Power"
+ zan_caliph: "Defender of Islam"
 
 ############## EVENTS ##############
  mp_zan.1.t: "Claiming Khami"
@@ -28,6 +29,15 @@
  mp_zan.4.d: "The expansive interior and coastal harbors of Madagascar have yielded immense returns for our merchant houses. By preserving the established slave marts, our dhows continue to transport bound laborers to the spice estates of Zanzibar and the stone quarries of the mainland, generating unmatched profits for the Coral Throne. \nHowever, human quarry does not submit lightly to the yoke. Across the red hills and dense scrublands of the island, the local Sakalava and highland clans have begun to coordinate armed resistance against our coastal garrisons. Caravans have been ambushed, holding pens breached, and the smoke of burning customs outposts now rises along the Mozambique Channel. \nOur overseers and governors warn that while our coffers swell and our building projects surge ahead with unpaid toil, the island's slave provinces will remain a tinderbox of rebellion for decades to come."
  mp_zan.4.a: "Utilize them as laborers and resources"
  mp_zan.4.b: "Promote them as citizens of Kilwa"
+ mp_zan.7.t: "Crown of Madagascar"
+ mp_zan.7.a: "Use the iron for the army"
+ mp_zan.7.b: "Strengthen our rule over the waves"
+ mp_zan.8.t: "The Capital of Africa shall be..."
+ mp_zan.8.a: "Our Achievement against Non-Believers"
+ mp_zan.8.b: "GAAAAAAOOOOO~! RAWWWWRRRRRR!"
+ mp_zan.8.c: "The Fertile City of the River Basin"
+ mp_zan.8.d: "The Trans-Saharan trade capital"
+ mp_zan.8.e: "Kilwa. The Grandest of all."
 
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
@@ -75,14 +85,23 @@
  zan_fortify_west_title: "Fortify The West"
  zan_fortify_west_desc: "Fortify The West"
 
+ zan_african_ambition_title: "African Ambition"
+ zan_african_ambition_desc: "For a greater Africa"
+
  zan_ajuraan_title: "Hostile Takeover"
  zan_ajuraan_desc: "Hostile Takeover"
 
  zan_horn_title: "Monopolize the Horn"
  zan_horn_desc: "Monopolize the Horn"
 
+ zan_holy_cities_title: "Rightful Caliph"
+ zan_holy_cities_desc: "The Caliph of peace and prosperity."
+
  zan_mascarenes_title: "Island Hopping"
  zan_mascarenes_desc: "Perhaps we can colonize these islands for our noble elite"
+
+ zan_indian_islands_title: "Ruler of High Seas"
+ zan_indian_islands_desc: "You get a trade center, you get a trade center, EVERYONE gets a trade center!"
 
  zan_aden_title: "Blood Red Sea"
  zan_aden_desc: "Blood Red Sea"
@@ -150,7 +169,7 @@
  zan_west_india_title: "Trading in Spice"
  zan_west_india_desc: "Trading in Spice"
 
- zan_south_india_title: "Battle for Southern Coasts"
+ zan_south_india_title: "South Indian Coasts"
  zan_south_india_desc: "Battle for Southern Coasts"
 
  zan_east_india_title: "Tame the Tigers"
@@ -270,8 +289,8 @@
  zan_industrial_title: "An Industrial Power"
  zan_industrial_desc: "An Industrial Power"
 
- zan_indochina_1_title: "End of Historical Feuds"
- zan_indochina_1_desc: "End of Historical Feuds"
+ zan_indochina_1_title: "End Blood Feuds"
+ zan_indochina_1_desc: "End Blood Feuds"
 
  zan_eic_buffs_title: "Enrich Our Frontlines"
  zan_eic_buffs_desc: "Enrich Our Frontlines"
@@ -301,10 +320,11 @@
  zan_coastal_conquest:0 "If we choose instead to conquer them ourselves, we will earn army tradition."
  zan_promote_laborers:0 "Every province producing §Yslaves§! in Madagascar will be replaced by either §Ycloth§!, §Ysugar§!, §Yincense§!, §Ynaval supplies§!, §Ylivestock§!, §Yfish§!, or §Ytropical wood§!"
  zan_keeping_slaves:0 "Every province producing §Yslaves§! in Madagascar will suffer devastating consequences for §Y50 years§!"
- zan_sunlit_fields:0 "Every owned §YSavannah§! province in Central Africa will get §YSavannah Development§!"
+ zan_sunlit_fields:0 "Every owned §YSavannah§! province in Central Africa will get §YSavannah Development§! until the end of the game, giving the following effects:\nLocal Development Cost: §G-5.0%§!\nLocal Governing Cost: §G-15.0%§!"
 
 ############## REFORMS ##############
  kilwan_merchants: "Merchants"
  kilwan_amirs: "Amirs"
  honns_great_kilwan_reform: "Swahili Plutocracy"
+ zan_completed_mutapa_mission:0 "Has completed the mission §YCrush Mutapa§!"
 

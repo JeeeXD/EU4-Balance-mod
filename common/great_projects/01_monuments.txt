@@ -7531,6 +7531,21 @@ khami_ruins = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
 		}
+
+		conditional_modifier = {
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip =zan_completed_mutapa_mission
+					owner = {
+						has_country_flag = zan_khami_restoration
+					}
+				}
+			}
+			modifier = {
+				prestige_decay = -0.05
+				innovativeness_gain = 0.5
+			}
+		}
 	}
 }
 

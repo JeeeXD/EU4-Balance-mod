@@ -259,18 +259,18 @@ country_event = {
 				limit = {
 					superregion = india_superregion
 				}
-				add_core = EIC
+				add_core = SLU
 				if = {
 					limit = { is_core = ROOT }
 					remove_core = ROOT
 				}
 			}
-			release = EIC
+			release = SLU
 			create_subject = {
 				subject_type = commercial_enterprise
-				who = EIC
+				who = SLU
 			}
-			EIC = {
+			SLU = {
 				change_government = republic
 				add_government_reform = trade_company_government
 				change_religion = ROOT
@@ -290,98 +290,104 @@ country_event = {
 				add_treasury = 200
 				set_prestige_to_zero = yes
 				add_republican_tradition = 100
+				add_manpower = 10
+				add_sailors = 1000
+				
+			}
+			india_superregion = {
+				discover_country = SLU
 			}
 		}
 		coromandel_region = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		malabar_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		kanara_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		mysore_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		rayalaseema_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		raichur_doab_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		konkan_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		orissa_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		west_bengal_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		east_bengal_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		tapti_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		ahmedabad_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		saurashtra_area = {
 			limit = {
-				NOT = { is_core = EIC }
-				NOT = { is_permanent_claim = EIC }
+				NOT = { is_core = SLU }
+				NOT = { is_permanent_claim = SLU }
 			}
-			add_permanent_claim = EIC
+			add_permanent_claim = SLU
 		}
 		ai_chance = {
 			factor = 1
@@ -499,18 +505,18 @@ country_event = {
 				limit = {
 					superregion = india_superregion
 				}
-				add_core = EIC
+				add_core = SLU
 				if = {
 					limit = { is_core = ROOT }
 					remove_core = ROOT
 				}
 			}
-			release = EIC
+			release = SLU
 			create_subject = {
 				subject_type = commercial_enterprise
-				who = EIC
+				who = SLU
 			}
-			EIC = {
+			SLU = {
 				change_government = republic
 				add_government_reform = trade_company_government
 				change_religion = ROOT
@@ -533,99 +539,330 @@ country_event = {
 			}
 			coromandel_region = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			malabar_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			kanara_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			mysore_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			rayalaseema_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			raichur_doab_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			konkan_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			orissa_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			west_bengal_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			east_bengal_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			tapti_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			ahmedabad_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 			saurashtra_area = {
 				limit = {
-					NOT = { is_core = EIC }
-					NOT = { is_permanent_claim = EIC }
+					NOT = { is_core = SLU }
+					NOT = { is_permanent_claim = SLU }
 				}
-				add_permanent_claim = EIC
+				add_permanent_claim = SLU
 			}
 		}
-		switch_tag = EIC
+		switch_tag = SLU
 		ai_chance = {
 			factor = 0
 		}
+	}
+}
+
+country_event = {
+	id = mp_zan.7
+	title = mp_zan.7.t
+	desc = mp_zan.7.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mp_zan.7.a
+        sakalava_area = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			if = {
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = ROOT
+			}
+			add_core = MDG
+			if = {
+				limit = { is_core = ROOT }
+				remove_core = ROOT
+			}
+		}
+		madagascar_highlands_area = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			if = {
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = ROOT
+			}
+			add_core = MDG
+			if = {
+				limit = { is_core = ROOT }
+				remove_core = ROOT
+			}
+		}
+		betsimasaraka_area = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			if = {
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = ROOT
+			}
+			add_core = MDG
+			if = {
+				limit = { is_core = ROOT }
+				remove_core = ROOT
+			}
+		}
+		southern_madagascar = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			if = {
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = ROOT
+			}
+			add_core = MDG
+			if = {
+				limit = { is_core = ROOT }
+				remove_core = ROOT
+			}
+		}
+		release = MDG
+		hidden_effect = {
+			MDG = {
+				change_religion = ROOT
+				change_government = republic
+				add_republican_tradition = 50
+				add_government_reform = pirate_republic_reform
+				add_adm_power = 167
+				add_dip_power = 167
+				add_mil_power = 167
+				add_treasury = 167
+				add_manpower = 8
+				add_sailors = 3000
+				add_navy_tradition = 15
+
+				# Adding cores to rest of Madagascar
+				sakalava_area = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT }}
+					add_core = MDG
+				}
+				madagascar_highlands_area = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT }}
+					add_core = MDG
+				}
+				betsimasaraka_area = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT }}
+					add_core = MDG
+				}
+				southern_madagascar = {
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT }}
+					add_core = MDG
+				}
+			}
+		}	
+		create_subject = {
+			subject_type = vassal
+			who = MDG
+		}
+	}
+    option = {
+		name = mp_zan.7.b
+		add_adm_power = 200
+        add_accepted_culture_or_dip_power = {
+			culture = malagasy
+			value = 200
+		}
+	}
+}
+
+# Capital of Africa
+country_event = {
+	id = mp_zan.8
+	title = mp_zan.8.t
+	desc = mp_zan.8.d
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes
+
+	# Kongo Capital
+	option = {
+		name = mp_zan.8.a
+		trigger = {
+			owns_core_province = 1170
+		}
+		set_capital = 1170
+		1170 = {
+			add_province_modifier = {
+				name = capital_of_africa
+				duration = -1
+			}
+			add_base_manpower = 3
+			add_base_tax = 3
+			add_base_production = 3
+		}
+	}
+
+	# Gao Capital
+	option = {
+		name = mp_zan.8.b
+		trigger = {
+			owns_core_province = 1133
+		}
+		set_capital = 1133
+		1133 = {
+			add_province_modifier = {
+				name = capital_of_africa
+				duration = -1
+			}
+			add_base_manpower = 3
+			add_base_tax = 3
+			add_base_production = 3
+		}
+	}
+
+	# Jeanne Capital
+	option = {
+		name = mp_zan.8.c
+		trigger = {
+			owns_core_province = 1134
+		}
+		set_capital = 1134
+		1134 = {
+			add_province_modifier = {
+				name = capital_of_africa
+				duration = -1
+			}
+			add_base_manpower = 3
+			add_base_tax = 3
+			add_base_production = 3
+		}
+	}
+
+	# Timbuktu Capital
+	option = {
+		name = mp_zan.8.d
+		trigger = {
+			owns_core_province = 1132
+		}
+		set_capital = 1132
+		1132 = {
+			add_province_modifier = {
+				name = capital_of_africa
+				duration = -1
+			}
+			add_base_manpower = 3
+			add_base_tax = 3
+			add_base_production = 3
+		}
+	}
+
+	# Keep Kilwa
+	option = {
+		name = mp_zan.8.e
+		trigger = {
+			owns_core_province = 1196
+		}
+		add_prestige = 20
+		1196 = {
+			add_province_modifier = {
+				name = capital_of_africa
+				duration = -1
+			}
+			add_base_manpower = 3
+			add_base_tax = 3
+			add_base_production = 3
+		}
+	}
+}
+
+# Naval Doctrine
+country_event = {
+	id = mp_zan.9
+	title = mp_zan.9.t
+	desc = mp_zan.9.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mp_zan.9.a
+        add_country_modifier = {
+            name = zan_rampant_colonization
+            duration = 3650
+        }
+	}
+    option = {
+		name = mp_zan.9.b
+        add_country_modifier = {
+            name = zan_controlled_colonization
+            duration = 3650
+        }
 	}
 }

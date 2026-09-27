@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = trade_company_government
+mercantilism = 25
+technology_group = eastern
+unit_type = sub_saharan
+primary_culture = swahili
+religion = sunni
+capital = 4476 #Nadia (Kolkata, Fort William)
+add_piety = -0.25
+religious_school = shafii_school

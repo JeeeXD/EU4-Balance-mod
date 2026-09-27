@@ -714,3 +714,45 @@ pacific_voyaging_doctrine = {
 	
 	button_gfx = 30
 }
+
+zan_heavyship_doctrine = {
+	can_select = {
+		has_country_flag = zan_heavyship_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		
+	}
+	effect = {}
+	removed_effect = {}
+	button_gfx = 30
+}
+
+zan_tradeships_doctrine = {
+	can_select = {
+		has_country_flag = zan_tradeships_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		
+	}
+	effect = {}
+	removed_effect = {}
+	button_gfx = 30
+}
+
+zan_marines_doctrine = {
+	can_select = {
+		has_country_flag = zan_marines_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		
+	}
+	effect = {}
+	removed_effect = {}
+	button_gfx = 30
+}
