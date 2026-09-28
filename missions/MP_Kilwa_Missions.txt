@@ -732,7 +732,77 @@ kilwa_2 = {
 				is_prosperous = yes
 			}
 		}
-		effect = { }
+		effect = { 
+			country_event_with_option_insight = {
+				id = mp_zan.11
+				option_1 = "
+					if = {
+						limit = { MDG = { vassal_of = ZAN } }
+						MDG = {
+							add_country_modifier = {
+								name = zan_pirate_haven
+								duration = -1
+							}
+						}
+						add_country_modifier = {
+							name = zan_sharing_spoils
+							duration = -1
+						}
+					}
+					else = {
+						add_countr_modifier = {
+							name = zan_maritime_army
+							duration = -1
+						}
+						add_years_of_owned_provinces_sailors = {
+							years = 5
+							trigger = {
+								culture_group = malagasy
+							}
+						}
+						change_dip = 1
+					}
+					
+					
+				"
+				option_2 = "
+					if = {
+						limit = { MDG = { vassal_of = ZAN } }
+						MDG = {
+							add_country_modifier = {
+								name = zan_island_powerhouse
+								duration = -1
+							}
+							add_army_professionalism = 0.5
+							add_army_tradition = 45
+						}
+						add_country_modifier = {
+							name = zan_mdg_army
+							duration = -1
+						}
+					}
+					else = {
+						add_country_modifier = {
+							zan_mdg_recruitment
+							duration = -1
+						}
+						add_owned_provinces_development_manpower = {
+							multiplier = 2
+							age_multiplier = 1
+							trigger = { culture = malagasy }
+						}
+						change_mil = 1
+					}	
+				"
+			}
+			if = {
+				limit = { MDG = { vassal_of = ZAN } }
+				MDG = {
+					add_liberty_desire = -100
+				}
+			}
+			add_authority = 10
+		}
 	}
 
 	# Trading in Spice
@@ -927,44 +997,6 @@ kilwa_3 = {
 			}
 		}
 		effect = {
-			custom_tooltip = zan_mombasa_vassal
-			tooltip = {
-				vassalize = MBA
-			}
-			custom_tooltip = zan_malindi_vassal
-			tooltip = {
-				vassalize = MLI
-			}
-			custom_tooltip = zan_coastal_conquest
-			if = {
-				limit = {
-					alliance_with = MBA
-				}
-				
-				hidden_effect = {
-					vassalize = MBA
-					MBA = {
-						inherit = MLI
-						add_liberty_desire = -25
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					alliance_with = MLI
-				}
-				
-				hidden_effect = {
-					vassalize = MLI
-					MLI = {
-						inherit = MBA
-						add_liberty_desire = -25
-					}
-				}
-			}
-			else = {
-				add_army_tradition = 15
-			}
 			northern_swahili_coast_area = {
 				limit = {
 					NOT = {
@@ -975,6 +1007,43 @@ kilwa_3 = {
 					}
 				}
 				add_permanent_claim = ROOT
+			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			complex_dynamic_effect = {
+				first_custom_tooltip = zan_mombasa_vassal
+				first_limit = "
+					alliance_with = MBA
+				"
+				first_effect = "
+					vassalize = MBA
+					MBA = {
+						inherit = MLI
+						add_liberty_desire = -25
+						add_claim = 2796
+					}
+				"
+	
+				second_custom_tooltip = zan_malindi_vassal
+				second_limit = "
+					alliance_with = MLI
+				"
+				second_effect = "
+					vassalize = MLI
+					MLI = {
+						inherit = MBA
+						add_liberty_desire = -25
+					}
+				"
+				third_custom_tooltip = zan_coastal_conquest
+				third_limit = "
+					owns = 1202
+					owns = 1203
+				"
+				third_effect = "
+					add_army_tradition = 15
+				"
 			}
 		}
 	}
@@ -1626,7 +1695,7 @@ kilwa_4 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { 
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				OR = {
 					region = malaya_region
@@ -1651,8 +1720,47 @@ kilwa_4 = {
 			zan_spice_islands
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				trade_goods = cloves
+				OR = {
+					area = spice_islands_area
+					area = molluca_area
+					province_id = 1196
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = zan_spice_must_flow
+				duration = 18250
+			}
+
+			if = {
+				limit = {
+					TER = {
+						vassal_of = ZAN
+					}
+				}
+				TER = {
+					change_religion = ROOT
+					add_liberty_desire = -25
+				}
+				
+			}
+			else_if = {
+				limit = {
+					TID = {
+						vassal_of = ZAN
+					}
+				}
+				TID = {
+					change_religion = sunni
+					add_liberty_desire = -25
+				}
+			}
+		}
 	}
 
 	# Tame the Tigers
@@ -2015,7 +2123,7 @@ kilwa_5 = {
 		}
 		provinces_to_highlight = { }
 		trigger = { 
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				region = australia_region
 			}
@@ -2103,8 +2211,37 @@ kilwa_5 = {
 		position = 18
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				full_idea_group = plutocracy_ideas
+				full_idea_group = maritime_ideas
+				full_idea_group = quality_ideas
+			}
+		}
+		effect = { 
+			country_event_with_option_insight = {
+				id = mp_zan.10
+				option_1 = "
+					add_country_modifier = {
+						name = zan_plutocratic
+						duration = -1
+					}
+				"
+
+				option_2 = "
+					add_country_modifier = {
+						name = zan_maritime
+						duration = -1
+					}
+				"
+				option_3 = "
+					add_country_modifier = {
+						name = zan_quality
+						duration = -1
+					}
+				"
+			}
+		}
 	}
 
 	# Bonus 2

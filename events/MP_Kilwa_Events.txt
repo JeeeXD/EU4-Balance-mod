@@ -4,7 +4,7 @@ namespace = mp_zan
 country_event = {
 	id = mp_zan.1
 	title = mp_zan.1.t
-	desc = mp_zan.1.d
+	desc = mp_zan.1.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -70,7 +70,7 @@ country_event = {
 country_event = {
 	id = mp_zan.2
 	title = mp_zan.2.t
-	desc = mp_zan.2.d
+	desc = mp_zan.2.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -100,7 +100,7 @@ country_event = {
 country_event = {
 	id = mp_zan.3
 	title = mp_zan.3.t
-	desc = mp_zan.3.d
+	desc = mp_zan.3.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -125,7 +125,7 @@ country_event = {
 country_event = {
 	id = mp_zan.4
 	title = mp_zan.4.t
-	desc = mp_zan.4.d
+	desc = mp_zan.4.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -145,12 +145,21 @@ country_event = {
         hidden_effect = {
             every_owned_or_non_tributary_subject_province = {
                 limit = {
-                    trade_goods = slaves
                     OR = {
-                        area = sakalava_area
-                        area = madagascar_highlands_area
-                        area = southern_madagascar
+                        sakalava_area = {
+                            type = all
+                        }
+                        betsimasaraka_area = {
+                            type = all
+                        }
+                        madagascar_highlands_area = {
+                            type = all
+                        }
+                        southern_madagascar = {
+                            type = all
+                        }
                     }
+                    trade_goods = slaves
                 }
                 add_province_modifier = {
                     name = zan_slave_rebellion
@@ -221,7 +230,7 @@ country_event = {
 country_event = {
 	id = mp_zan.5
 	title = mp_zan.5.t
-	desc = mp_zan.5.d
+	desc = mp_zan.5.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -246,14 +255,13 @@ country_event = {
 country_event = {
 	id = mp_zan.6
 	title = mp_zan.6.t
-	desc = mp_zan.6.d
+	desc = mp_zan.6.dd
 	picture = MERCHANTS_ARGUING_eventPicture
 	is_triggered_only = yes
 	
 	#Establish this East India Company
 	option = {
 		name = mp_zan.6.a
-		custom_tooltip = mp_zan.6.a.tt
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -295,6 +303,19 @@ country_event = {
 				
 			}
 			india_superregion = {
+				discover_country = SLU
+			}
+			arabian_sea_region = {
+				discover_country = SLU
+			}
+			west_india_region = {
+				discover_country = SLU
+			}
+			# Gotta see the overlord
+			southern_africa_superregion = {
+				discover_country = SLU
+			}
+			arabia_region = {
 				discover_country = SLU
 			}
 		}
@@ -388,6 +409,10 @@ country_event = {
 				NOT = { is_permanent_claim = SLU }
 			}
 			add_permanent_claim = SLU
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
 		}
 		ai_chance = {
 			factor = 1
@@ -499,7 +524,6 @@ country_event = {
 		trigger = {
 			ai = no
 		}
-		custom_tooltip = mp_zan.6.a.tt
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -522,8 +546,8 @@ country_event = {
 				change_religion = ROOT
 				change_primary_culture = ROOT
 				define_ruler = {
-					name = "Thomas"
-					dynasty = "Smythe"
+					name = "Bakari"
+					dynasty = "Al-Shirazi"
 					change_adm = 3
 					change_dip = 3
 					change_mil = 3
@@ -536,6 +560,9 @@ country_event = {
 				add_treasury = 200
 				set_prestige_to_zero = yes
 				add_republican_tradition = 100
+				add_manpower = 10
+				add_sailors = 1000
+				
 			}
 			coromandel_region = {
 				limit = {
@@ -639,7 +666,7 @@ country_event = {
 country_event = {
 	id = mp_zan.7
 	title = mp_zan.7.t
-	desc = mp_zan.7.d
+	desc = mp_zan.7.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
@@ -747,7 +774,7 @@ country_event = {
 country_event = {
 	id = mp_zan.8
 	title = mp_zan.8.t
-	desc = mp_zan.8.d
+	desc = mp_zan.8.dd
 	picture = CONQUEST_eventPicture
 	is_triggered_only = yes
 
@@ -846,23 +873,96 @@ country_event = {
 country_event = {
 	id = mp_zan.9
 	title = mp_zan.9.t
-	desc = mp_zan.9.d
+	desc = mp_zan.9.dd
 	picture = CONQUEST_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = mp_zan.9.a
-        add_country_modifier = {
-            name = zan_rampant_colonization
-            duration = 3650
-        }
+
 	}
     option = {
 		name = mp_zan.9.b
-        add_country_modifier = {
-            name = zan_controlled_colonization
-            duration = 3650
-        }
+        
+	}
+}
+
+# Emu War
+country_event = {
+	id = mp_zan.10
+	title = mp_zan.10.t
+	desc = mp_zan.10.dd
+	picture = CONQUEST_eventPicture
+	
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			continent = oceania
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3650
+		modifier = {
+			factor = 0.8
+			NOT = { stability = 1 }
+		}
+	}
+
+	option = {
+		name = mp_zan.10.a
+		random_province = {
+			limit = { region = australia_region }
+			spawn_rebels = {
+				size = 20
+			}
+		}
+		add_stability = -1
+	}
+}
+
+# Madagascar BUFFS
+country_event = {
+	id = mp_zan.11
+	title = mp_zan.11.t
+	desc = mp_zan.11.dd
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = { MDG = { vassal_of = ZAN } }
+			MDG = {
+				add_country_modifier = {
+					name = zan_pirate_haven
+					duration = -1
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = zan_sharing_spoils
+			duration = -1
+		}
+	}
+				
+	option = {
+		if = {
+			limit = { MDG = { vassal_of = ZAN } }
+			MDG = {
+				add_country_modifier = {
+					name = zan_island_powerhouse
+					duration = -1
+				}
+				add_army_professionalism = 0.5
+				add_army_tradition = 45
+			}
+		}
+		add_country_modifier = {
+			name = zan_mdg_army
+			duration = -1
+		}
 	}
 }
