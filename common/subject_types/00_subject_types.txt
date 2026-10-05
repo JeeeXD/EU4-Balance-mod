@@ -206,46 +206,6 @@ default = {
 	}
 	modifier_overlord = clear
 
-	modifier_subject = {
-		modifier = subject_goods_bonus_mp_15
-		trigger = {
-			overlord = {
-				has_country_flag = subject_goods_bonus_mp
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = subject_military_bonus_mp_5
-		trigger = {
-			overlord = {
-				has_country_flag = subject_military_bonus_mp
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = subject_tax_bonus_mp_25
-		trigger = {
-			overlord = {
-				has_country_flag = subject_tax_bonus_mp
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = subject_movement_bonus_mp_15
-		trigger = {
-			overlord = {
-				has_country_flag = subject_movement_bonus_mp
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = subject_development_bonus_mp_10
-		trigger = {
-			overlord = {
-				has_country_flag = subject_development_bonus_mp
-			}
-		}
-	}
 
 	overlord_opinion_modifier = null # If not "null" it will look for a modifier with that name in 00_opinion_modifiers.txt and other files in that directory.
 	subject_opinion_modifier = null
@@ -332,7 +292,8 @@ vassal = {
 		modifier = subject_goods_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_goods_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
 			}
 		}
 	}
@@ -340,7 +301,8 @@ vassal = {
 		modifier = subject_military_bonus_mp_5
 		trigger = {
 			overlord = {
-				has_country_flag = subject_military_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
 			}
 		}
 	}
@@ -348,7 +310,8 @@ vassal = {
 		modifier = subject_tax_bonus_mp_25
 		trigger = {
 			overlord = {
-				has_country_flag = subject_tax_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
 			}
 		}
 	}
@@ -356,7 +319,8 @@ vassal = {
 		modifier = subject_movement_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_movement_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
 			}
 		}
 	}
@@ -364,7 +328,8 @@ vassal = {
 		modifier = subject_development_bonus_mp_10
 		trigger = {
 			overlord = {
-				has_country_flag = subject_development_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
 			}
 		}
 	}
@@ -429,7 +394,8 @@ march = {
 		modifier = subject_goods_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_goods_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
 			}
 		}
 	}
@@ -437,7 +403,8 @@ march = {
 		modifier = subject_military_bonus_mp_5
 		trigger = {
 			overlord = {
-				has_country_flag = subject_military_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
 			}
 		}
 	}
@@ -445,7 +412,8 @@ march = {
 		modifier = subject_tax_bonus_mp_25
 		trigger = {
 			overlord = {
-				has_country_flag = subject_tax_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
 			}
 		}
 	}
@@ -453,7 +421,8 @@ march = {
 		modifier = subject_movement_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_movement_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
 			}
 		}
 	}
@@ -461,7 +430,8 @@ march = {
 		modifier = subject_development_bonus_mp_10
 		trigger = {
 			overlord = {
-				has_country_flag = subject_development_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
 			}
 		}
 	}
@@ -533,6 +503,52 @@ daimyo_vassal = {
 	modifier_overlord = {
 		modifier = daimyo_subject
 	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
+			}
+		}
+	}
 }
 
 appanage = {
@@ -598,6 +614,52 @@ appanage = {
 	modifier_overlord = {
 		modifier = appanage_overlord
 	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
+			}
+		}
+	}
 }
 
 personal_union = {
@@ -659,6 +721,52 @@ personal_union = {
 			overlord = { has_government_attribute = personal_union_war_contribution }
 		}
 		modifier = pu_subject_bonus
+	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
+			}
+		}
 	}
 
 	overlord_opinion_modifier = in_union
@@ -783,6 +891,52 @@ colony = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_trades_to_come_flag_tt
 				overlord = { has_country_flag = ITA_trades_to_come_flag }
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
 			}
 		}
 	}
@@ -1123,7 +1277,8 @@ eyalet = {
 		modifier = subject_goods_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_goods_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
 			}
 		}
 	}
@@ -1131,7 +1286,8 @@ eyalet = {
 		modifier = subject_military_bonus_mp_5
 		trigger = {
 			overlord = {
-				has_country_flag = subject_military_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
 			}
 		}
 	}
@@ -1139,7 +1295,8 @@ eyalet = {
 		modifier = subject_tax_bonus_mp_25
 		trigger = {
 			overlord = {
-				has_country_flag = subject_tax_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
 			}
 		}
 	}
@@ -1147,7 +1304,8 @@ eyalet = {
 		modifier = subject_movement_bonus_mp_15
 		trigger = {
 			overlord = {
-				has_country_flag = subject_movement_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
 			}
 		}
 	}
@@ -1155,7 +1313,8 @@ eyalet = {
 		modifier = subject_development_bonus_mp_10
 		trigger = {
 			overlord = {
-				has_country_flag = subject_development_bonus_mp
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
 			}
 		}
 	}
@@ -1327,6 +1486,52 @@ commercial_enterprise = {
 		trigger = {
 			overlord = {
 				has_country_modifier = gbr_emperor_of_india
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = subject_goods_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_military_bonus_mp_5
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_tax_bonus_mp_25
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = theocracy_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_movement_bonus_mp_15
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = horde_gov_ideas
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = subject_development_bonus_mp_10
+		trigger = {
+			overlord = {
+				has_government_attribute = enables_subject_buffs
+				has_idea_group = indigenous_ideas
 			}
 		}
 	}

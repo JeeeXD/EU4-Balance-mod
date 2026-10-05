@@ -20,12 +20,14 @@ can_colonize_province = {
 
 can_increase_autonomy = {
 	condition = {
-		tooltip = "If you're reading this, you should reconsider your life choices."
+		tooltip = INC_AUTONOMY_AI_NO
 		potential = {
-			always = yes
+			ROOT = {
+				ai = yes
+			}
 		}
 		allow = {
-			ai = no
+			always = no
 		}
 	}
 }

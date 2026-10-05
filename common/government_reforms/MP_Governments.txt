@@ -17,47 +17,11 @@ influence_subject_reform = {
 	modifiers = {
 		reduced_liberty_desire = 15
 	}
-	
-	effect = {
-		if = {
-			limit = {
-				full_idea_group = plutocracy_ideas
-			}
-			set_country_flag = subject_goods_bonus_mp
-		}
-		if = {
-			limit = {
-				full_idea_group = aristocracy_ideas
-			}
-			set_country_flag = subject_military_bonus_mp
-		}
-		if = {
-			limit = {
-				full_idea_group = theocracy_gov_ideas
-			}
-			set_country_flag = subject_tax_bonus_mp
-		}
-		if = {
-			limit = {
-				full_idea_group = horde_gov_ideas
-			}
-			set_country_flag = subject_movement_bonus_mp
-		}
-		if = {
-			limit = {
-				full_idea_group = indigenous_ideas
-			}
-			set_country_flag = subject_development_bonus_mp
-		}
+
+	custom_attributes = {
+	    enables_subject_buffs = yes
 	}
 	
-	removed_effect = {
-		clr_country_flag = subject_goods_bonus
-		clr_country_flag = subject_military_bonus_mp
-		clr_country_flag = subject_tax_bonus_mp
-		clr_country_flag = subject_development_bonus_mp
-		clr_country_flag = subject_movement_bonus_mp
-	}
 }
 
 berber_maghreb_reform = {
@@ -541,10 +505,10 @@ enable_aristo_reform = {
 	icon = "protectorate_parliament_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		army_tradition = 0.05
+		army_tradition_from_battle = 0.15
 	}
 	custom_attributes = {
-		enables_aristocratic_idea_group = yes
+		enables_aristocrati_c_idea_group = yes
 	}
 }
 

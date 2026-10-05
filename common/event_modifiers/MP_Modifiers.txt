@@ -1,5 +1,5 @@
 defensive_hostile_movespeed = {
-	local_hostile_movement_speed = 0.1
+	local_hostile_movement_speed = -0.1
 }
 maritime_ideas_shock_disc = {
 	discipline = 0.05
@@ -230,6 +230,7 @@ humanist_maritime_policy_modifier = {
 fuck_nathan = {
 	army_tradition_decay = -0.05
 }
+
 dont_fuck_nathan = {
 	army_tradition = 0.05
 }
@@ -237,4 +238,41 @@ dont_fuck_nathan = {
 maritime_spy_policy = {
 	regiment_manpower_usage = -0.05
 	is_marine_modifier = yes
+}
+
+granted_6_colonists = {
+	colonists = 6
+}
+remove_6_colonists = {
+	colonists = -6
+}
+granted_5_colonists = {
+	colonists = 5
+}
+remove_5_colonists = {
+	colonists = -5
+}
+granted_4_colonists = {
+	colonists = 4
+}
+remove_4_colonists = {
+	colonists = -4
+}
+granted_3_colonists = {
+	colonists = 3
+}
+remove_3_colonists = {
+	colonists = -3
+}
+granted_2_colonists = {
+	colonists = 2
+}
+remove_2_colonists = {
+	colonists = -2
+}
+granted_1_colonists = {
+	colonists = 1
+}
+remove_1_colonists = {
+	colonists = -1
 }

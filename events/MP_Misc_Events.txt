@@ -341,3 +341,44 @@ country_event = {
 		}
 	}
 }
+# Colonial check for excess colonists
+country_event = {
+	id = mp_misc.11
+	title = mp_misc.11.t
+	desc = mp_misc.11.d
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			has_idea_group = exploration_ideas
+		}
+		any_subject_country = {
+			has_country_modifier = granted_3_colonists
+		}
+	}
+
+	option = {
+		name = mp_misc.11.opt1
+		ROOT = {
+			clr_country_flag = granted_colonists
+			remove_country_modifier = remove_1_colonists
+			remove_country_modifier = remove_2_colonists
+			remove_country_modifier = remove_3_colonists
+			remove_country_modifier = remove_4_colonists
+			remove_country_modifier = remove_5_colonists
+			remove_country_modifier = remove_6_colonists
+		}
+		every_subject_country = {
+			remove_country_modifier = granted_1_colonists
+			remove_country_modifier = granted_2_colonists
+			remove_country_modifier = granted_3_colonists
+			remove_country_modifier = granted_4_colonists
+			remove_country_modifier = granted_5_colonists
+			remove_country_modifier = granted_6_colonists
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

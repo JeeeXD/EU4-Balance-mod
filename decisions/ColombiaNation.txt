@@ -53,6 +53,10 @@ country_decisions = {
 			NOT = { exists = COL }
 		}
 		effect = {
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -148,6 +152,10 @@ country_decisions = {
 			NOT = { exists = VNZ }
 		}
 		effect = {
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			hidden_effect = {
 				if = {
 					limit = {

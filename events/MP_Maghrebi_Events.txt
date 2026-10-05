@@ -201,6 +201,7 @@ country_event = {
 			}
 			add_base_manpower = 1
 		}
+		set_country_flag = triggered_berber_event_2
 		}
 	    
 		change_primary_culture = berber
@@ -213,6 +214,7 @@ country_event = {
 		trigger = {
 			has_country_flag = denied_berbers
 		}
+		change_government_reform_progress = 50
 		custom_tooltip = berber_tt_event1_1
 		tooltip = {
 			add_devastation = 25
@@ -223,6 +225,7 @@ country_event = {
 			add_prosperity = 25
 		}
 		hidden_effect = {
+			set_country_flag = triggered_berber_event_2
 		every_owned_province = {
 			limit = {
 				culture = berber
@@ -235,13 +238,14 @@ country_event = {
 					culture = berber
 				}
 			}
-			add_prosperity = 25
+			add_local_autonomy = -25
 		}	
 		}
-		change_government_reform_progress = 50
+		
 	}
 	option = {
 		name = flavor_maghrebi.3.OPT3
 		add_stability = 1
+		set_country_flag = triggered_berber_event_2
 	}
 }
