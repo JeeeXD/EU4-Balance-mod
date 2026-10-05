@@ -3827,6 +3827,25 @@ new_world_exploitation_reform = {
 	custom_attributes = {
 		extra_trade_goods_for_colonial_subjects = yes
 	}
+	removed_effect = {
+		ROOT = {
+			clr_country_flag = granted_colonists
+			remove_country_modifier = remove_1_colonists
+			remove_country_modifier = remove_2_colonists
+			remove_country_modifier = remove_3_colonists
+			remove_country_modifier = remove_4_colonists
+			remove_country_modifier = remove_5_colonists
+			remove_country_modifier = remove_6_colonists
+		}
+		every_subject_country = {
+			remove_country_modifier = granted_1_colonists
+			remove_country_modifier = granted_2_colonists
+			remove_country_modifier = granted_3_colonists
+			remove_country_modifier = granted_4_colonists
+			remove_country_modifier = granted_5_colonists
+			remove_country_modifier = granted_6_colonists
+		}
+	}
 	ai = {
 		factor = 1
 	}

@@ -542,3 +542,173 @@ bav_export_beer = {
 		}
 	}
 }
+
+grant_colonists = {
+	category = subject
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			overlord = {
+				num_of_colonists = 1
+			}
+			is_colonial_nation_of = ROOT
+		}
+		ROOT = {
+			NOT = {
+				has_country_flag = granted_colonists
+			}
+		}
+	}
+	is_allowed = {
+		
+	}
+	on_accept = {
+		ROOT = {
+			set_country_flag = granted_colonists
+		}
+		FROM = {
+			if = {
+				limit = {
+					overlord = {
+					    num_of_colonists = 6
+				    }
+				}
+				add_country_modifier = {
+					name = granted_6_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_6_colonists
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					overlord = {
+					    num_of_colonists = 5
+				    }
+				}
+				add_country_modifier = {
+					name = granted_5_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_5_colonists
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					overlord = {
+						num_of_colonists = 4
+					}
+				}
+				add_country_modifier = {
+					name = granted_4_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_4_colonists
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					overlord = {
+						num_of_colonists = 3
+					}
+				}
+				add_country_modifier = {
+					name = granted_3_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_3_colonists
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					overlord = {
+						num_of_colonists = 2
+					}
+				}
+				add_country_modifier = {
+					name = granted_2_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_2_colonists
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					overlord = {
+						num_of_colonists = 1
+					}
+				}
+				add_country_modifier = {
+					name = granted_1_colonists
+					duration = -1
+				}
+				overlord = {
+					add_country_modifier = {
+						name = remove_1_colonists
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = { # this is a trigger
+		always = no
+	}
+}
+
+recall_colonists = {
+	category = subject
+	require_acceptance = no
+
+	is_visible = {
+		ROOT = {
+			has_country_flag = granted_colonists
+		}
+	}
+	is_allowed = {
+		
+	}
+	on_accept = {
+		ROOT = {
+			clr_country_flag = granted_colonists
+			remove_country_modifier = remove_1_colonists
+			remove_country_modifier = remove_2_colonists
+			remove_country_modifier = remove_3_colonists
+			remove_country_modifier = remove_4_colonists
+			remove_country_modifier = remove_5_colonists
+			remove_country_modifier = remove_6_colonists
+		}
+		FROM = {
+			remove_country_modifier = granted_1_colonists
+			remove_country_modifier = granted_2_colonists
+			remove_country_modifier = granted_3_colonists
+			remove_country_modifier = granted_4_colonists
+			remove_country_modifier = granted_5_colonists
+			remove_country_modifier = granted_6_colonists
+		}
+	}
+	ai_will_do = { # this is a trigger
+		always = no
+	}
+}

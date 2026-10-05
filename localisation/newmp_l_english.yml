@@ -142,7 +142,7 @@ ase_spend_additional_splendor_open_button_tt: "§YInvest Excessive Splendor§! \
 #### REFORMS ####
 
 influence_subject_reform: "Vassal Investments"
-influence_subject_reform_desc: "If we have §YAristocratic Ideas§! our subjects will gain:\n§G+5%§! Discipline\nIf we have §YPlutocratic Ideas§! our subjects will gain:\n§G+15%§! Goods Produced\nIf we have §YDivine Ideas§! our subjects will gain:\n§G+25%§! National Tax Modifier\nIf we have §YHorde Ideas§! our subjects will gain:\n§G+15%§! Movement Speed\nIf we have §YIndigenous Ideas§! our subjects will gain:\n§G-10%§! Development Cost"
+influence_subject_reform_desc: "By investing in the development of our vassals, we can strengthen their economies and military capabilities. This not only increases their loyalty to us but also enhances our own strategic position, as prosperous vassals are better able to contribute to our collective security and prosperity."
 ilkhanate_government_reform: "Diwan of the Ilkhans"
 ilkhanate_government_reform_desc: "Born from the thunder of Mongol conquest, the Ilkhanate forged a new style of governance — a fusion of steppe authority and Persian bureaucracy. The Khans ruled not merely as conquerors, but as heirs to ancient kings, commanding both the loyalty of the riders of the plains and the scribes of the cities. In this union of sword and pen, the Ilkhanate found its strength and legitimacy."
 enable_pluto_reform: "Plutocratic Influence"
@@ -650,3 +650,35 @@ influence_court_tooltip: "The enemy's estates lose §G10%§! §YLoyalty§! and �
 influence_court_desc: "The enemy's estates lose §G10%§! §YLoyalty§! and §G10%§! §YLoyalty Equilibrium§!."
 
 INC_AUTONOMY_AI_NO: "This should only be visible to AI"
+
+mechanic_enables_subject_buffs_yes: "If we have §YAristocratic Ideas§! our subjects will gain:\n§G+5%§! Discipline\nIf we have §YPlutocratic Ideas§! our subjects will gain:\n§G+15%§! Goods Produced\nIf we have §YDivine Ideas§! our subjects will gain:\n§G+25%§! National Tax Modifier\nIf we have §YHorde Ideas§! our subjects will gain:\n§G+15%§! Movement Speed\nIf we have §YIndigenous Ideas§! our subjects will gain:\n§G-10%§! Development Cost"
+subject_goods_bonus_mp_15: "Vassal Economic Investments"
+subject_military_bonus_mp_5: "Vassal Military Investments"
+subject_tax_bonus_mp_25: "Vassal Religious Investments"
+subject_movement_bonus_mp_15: "Vassal Logistics Investments"
+subject_development_bonus_mp_10: "Vassal Development Investments"
+
+grant_colonists: "Grant Colonists"
+grant_colonists_title: "Grant Colonists"
+grant_colonists_desc: "Grants all our colonists to our subject to handle."
+grant_colonists_tooltip: "Grants all our colonists to our subject to handle."
+recall_colonists: "Recall Colonists"
+recall_colonists_title: "Recall Colonists"
+recall_colonists_desc: "Recalls all our colonists from our subjects."
+recall_colonists_tooltip: "Recalls all our colonists from our subjects."
+DIPLOMACYACTION_CATEGORY_subject: "Subject Actions"
+
+remove_1_colonists: "Shipped 1 Colonist"
+remove_2_colonists: "Shipped 2 Colonists"
+remove_3_colonists: "Shipped 3 Colonists"
+remove_4_colonists: "Shipped 4 Colonists"
+remove_5_colonists: "Shipped 5 Colonists"
+remove_6_colonists: "Shipped 6 Colonists"
+
+granted_1_colonists: "Granted 1 Colonist"
+granted_2_colonists: "Granted 2 Colonists"
+granted_3_colonists: "Granted 3 Colonists"
+granted_4_colonists: "Granted 4 Colonists"
+granted_5_colonists: "Granted 5 Colonists"
+granted_6_colonists: "Granted 6 Colonists"
+
