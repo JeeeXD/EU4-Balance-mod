@@ -387,8 +387,78 @@ kilwa_1 = {
 		position = 18
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			OR = {
+				# Curtail the Amirs
+				AND = {
+					crown_land_share = 40
+					NOT = {
+						estate_territory = {
+							estate = estate_nobles
+							territory = 10
+						}
+					}	
+				}
+				# Strengthen Them
+				AND = {
+					estate_territory = {
+						estate = estate_nobles
+						territory = 20
+					}
+					estate_influence = {
+						estate = estate_nobles
+						influence = 80
+					}
+				}
+			}
+
+		}
+		effect = { 
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+			
+			complex_dynamic_effect = {
+				first_custom_tooltip = zan_curtailed_amirs
+				first_limit = "
+					AND = {
+						crown_land_share = 40
+						NOT = {
+							estate_territory = {
+								estate = estate_nobles
+								territory = 10
+							}
+						}	
+					}
+				"
+				first_effect = "
+					change_estate_land_share = {
+						estate = estate_special
+						share = 5
+					}
+					add_country_modifier = {
+						name = zan_weak_amirs
+						duration = -1
+					}
+				"
+				
+				second_custom_tooltip = zan_strengthen_amirs
+				second_limit = "
+					AND = {
+						estate_territory = {
+							estate = estate_nobles
+							territory = 20
+						}
+						estate_influence = {
+							estate = estate_nobles
+							influence = 80
+						}
+					}
+				"
+				second_effect = "
+					
+				"
+			}
+		}
 	}
 
 	# Kingmaker No More
@@ -1386,7 +1456,17 @@ kilwa_3 = {
 		position = 18
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			religious_unity = 1
+			any_active_trade_node = {
+				ROOT = {
+					trading_policy_in_node = {
+						node = PREV
+						policy = propagate_religion
+					}
+				}
+			}
+		}
 		effect = { }
 	}
 

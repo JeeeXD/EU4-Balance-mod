@@ -544,13 +544,52 @@ honns_great_kilwan_reform = {
 		mission_completed = zan_estates
 	}
 	trigger = {
-		
+		mission_completed = zan_estates
 	}
 
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		has_dutch_election = yes
+	}
+
+	conditional = {
+        allow = {
+            has_dlc = "Winds of Change"
+        }
+        government_abilities = {
+            arabic_trade_influence
+        }
+    }
+		conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		allow_draft_transport_ships = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
 	}
 
 	lock_level_when_selected = yes
@@ -561,6 +600,8 @@ honns_great_kilwan_reform = {
 		republican_tradition = 0.33
 		devotion = 0.5
 		years_of_nationalism = -5
+		merchants = 2
+		placed_merchant_power = 10
 	}
 
 	queen = no

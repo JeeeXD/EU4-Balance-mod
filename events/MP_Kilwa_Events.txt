@@ -67,6 +67,7 @@ country_event = {
     }
 }
 
+# Iron Buffs
 country_event = {
 	id = mp_zan.2
 	title = mp_zan.2.t
@@ -97,6 +98,7 @@ country_event = {
 	}
 }
 
+# Arabic Plutocracy
 country_event = {
 	id = mp_zan.3
 	title = mp_zan.3.t
@@ -663,6 +665,7 @@ country_event = {
 	}
 }
 
+# Madagascar gets released
 country_event = {
 	id = mp_zan.7
 	title = mp_zan.7.t
