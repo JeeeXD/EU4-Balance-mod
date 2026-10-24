@@ -20,6 +20,12 @@
  zan_mdg_army: "Conscription En Massegascar"
  zan_mdg_recruitment: "Cannon Fodder"
  zan_shallow_wars: "Coastal Cannons"
+ zan_islamic_golden_age: "Center of Learning"
+ zan_powerful_centers: "Zanzibazaar"
+ zan_tax_meta: "Great Mosque of Kilwa"
+ zan_great_mosque: "Msikiti Mkuu"
+ zan_great_palace: "Husuni Kubwa"
+ zan_great_fort: "Husuni Ndogo"
  
 
 ############## EVENTS ##############
@@ -60,6 +66,14 @@
  mp_zan.9.c: "Our interests lie inland."
  mp_zan.10.t: "The Great Emu Death War"
  mp_zan.10.a: "Uh oh."
+ mp_zan.11.t: "The Beasts of Madagascar"
+ mp_zan.11.a: "State-backed Piracy"
+ mp_zan.11.b: "Isolated Training"
+ mp_zan.12.t: "The Industrial Revolution!"
+ mp_zan.12.dd: "Oh yeah. Big Money."
+ mp_zan.12.a: "Bigger money!"
+ mp_zan.12.b: "Bigger army!"
+ mp_zan.12.c: "Industrial Counterrevolution!"
 
 ############## MISSIONS ##############
  zan_rivalries_title: "Inland Rivalries"
@@ -305,8 +319,8 @@
  zan_education_title: "Educated Masses"
  zan_education_desc: "Educated Masses"
 
- zan_scholars_title: "University of Kilwa"
- zan_scholars_desc: "University of Kilwa"
+ zan_megalopolis_title: "Peerless Megalopolis"
+ zan_megalopolis_desc: "University of Kilwa"
 
  zan_industrial_title: "An Industrial Power"
  zan_industrial_desc: "An Industrial Power"
@@ -345,10 +359,13 @@
  zan_sunlit_fields:0 "Every owned §YSavannah§! province in Central Africa will get §YSavannah Development§! until the end of the game, giving the following effects:\nLocal Development Cost: §G-5.0%§!\nLocal Governing Cost: §G-15.0%§!"
  zan_curtailed_amirs: "By dealing with our Amirs early, they won't have a chance to meddle in our court, unless we choose to change our government."
  zan_strengthen_amirs: "If we choose their side, they will eventually take full control over the conutry in return for a more militaristic Kilwa."
+ zan_minimize_autonomy: "§GReduce§! the local autonomy of all owned provinces in the §YEast Africa region§! and §YCentral Africa§! region to their minimum."
+ zan_city_sprawl: "Every owned province in the Central Swahili Coast area gets §YCity Sprawl§! until the end of the game, giving the following effects: \nLocal Development Cost: §G-10%§! \nSailor Increase: §G+500§! \nManpower Increase: §G+1000§!"
+ 
 
 ############## REFORMS ##############
  kilwan_merchants: "Merchants"
  kilwan_amirs: "Amirs"
  honns_great_kilwan_reform: "Swahili Plutocracy"
- zan_completed_mutapa_mission:0 "Has completed the mission §YCrush Mutapa§!"
+ zan_completed_mutapa_mission: "Has completed the mission §YCrush Mutapa§!"
 

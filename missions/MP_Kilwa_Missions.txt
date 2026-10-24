@@ -995,24 +995,96 @@ kilwa_2 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { 
-			1196 = { is_prosperous = yes}
+			1196 = { is_prosperous = yes }
 			4039 = { is_prosperous = yes }
 		}
 		effect = { 
 			remove_comet_sighted_events = yes
+			custom_tooltip = zan_minimize_autonomy
+			hidden_effect = {
+				east_africa_region = {
+					limit = {
+						is_state = yes
+						owned_by = ROOT
+					}
+					add_local_autonomy = -100
+				}
+				central_africa_region = {
+					limit = {
+						is_state = yes
+						owned_by = ROOT
+					}
+					add_local_autonomy = -100
+				}
+			}
+			add_stability_or_adm_power = yes
 		}
 	}
 
-	# University of Kilwa
-	zan_scholars = {
+	# Peerless Megalopolis
+	zan_megalopolis = {
 		icon = mission_early_modern_university
 		position = 26
 		required_missions = {
 			zan_renaissance zan_education zan_institutions
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			AND = {
+				development_in_provinces = {
+					value = 100
+					area = central_swahili_coast_area
+				}
+				1196 = {
+					is_capital_of = ROOT
+					is_core = ROOT
+					province_has_current_tech_fort_trigger = yes
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manpower_building_trigger = yes
+					development = 45
+					is_prosperous = yes
+				}
+				stability = 3
+			}
+			
+		}
+		effect = { 
+			1196 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = zan_great_mosque
+					duration = -1
+				}
+				add_province_modifier = {
+					name = zan_great_palace
+					duration = -1
+				}
+				add_province_modifier = {
+					name = zan_great_fort
+					duration = -1
+				}
+			}
+			custom_tooltip = zan_city_sprawl
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = { 
+							province_id = 1196 
+						}
+						area = central_swahili_coast_area
+					}
+					add_province_modifier = {
+						name = zan_sprawling_area
+						duration = -1
+					}
+				}
+			}
+			
+		}
 	}
 
 	# An Industrial Power
@@ -1020,11 +1092,23 @@ kilwa_2 = {
 		icon = industrialized_rhineland
 		position = 27
 		required_missions = {
-			zan_scholars
+			zan_megalopolis
 		}
 		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
+				base_production = 15
+			}
+			production_income_percentage = 0.45
+		}
+		effect = { 
+			country_event = {
+				id = mp_zan.12
+			}
+		}
 	}
 }
 kilwa_3 = {
@@ -1458,14 +1542,7 @@ kilwa_3 = {
 		provinces_to_highlight = { }
 		trigger = { 
 			religious_unity = 1
-			any_active_trade_node = {
-				ROOT = {
-					trading_policy_in_node = {
-						node = PREV
-						policy = propagate_religion
-					}
-				}
-			}
+			# TO-DO: Must require propagate religion outside of Zanzibar
 		}
 		effect = { }
 	}
@@ -1528,7 +1605,15 @@ kilwa_3 = {
 			}
 			prestige = 80
 		}
-		effect = { }
+		effect = { 
+			1196 = {
+				add_building = university
+			}
+			add_country_modifier = {
+				name = zan_prestige
+				duration = -1
+			}
+		}
 	}
 }
 kilwa_4 = {

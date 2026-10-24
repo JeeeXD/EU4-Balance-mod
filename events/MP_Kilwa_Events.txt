@@ -935,6 +935,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = mp_zan.11.a
 		if = {
 			limit = { MDG = { vassal_of = ZAN } }
 			MDG = {
@@ -952,6 +953,7 @@ country_event = {
 	}
 				
 	option = {
+		name = mp_zan.11.b
 		if = {
 			limit = { MDG = { vassal_of = ZAN } }
 			MDG = {
@@ -965,6 +967,66 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = zan_mdg_army
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = mp_zan.12
+	title = mp_zan.12.t
+	desc = mp_zan.12.dd
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mp_zan.12.a
+		every_owned_province = {
+			limit = {
+				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				base_production = 20
+			}
+			add_base_tax = -3
+			add_base_manpower = -3
+			add_base_production = 5
+			add_province_modifier = {
+				name = zan_industrial_zones
+				duration = 18250
+			}
+		}
+	}
+
+	option = {
+		name = mp_zan.12.b
+		every_owned_province = {
+			limit = {
+				has_manufactory_trigger = yes
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+				base_production = 20
+			}
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = 5
+			add_province_modifier = {
+				name = zan_war_industry
+				duration = 18250
+			}
+			add_country_modifier = {
+				name = zan_industrial_army
+				duration = 18250
+			}
+		}
+	}
+				
+	option = {
+		name = mp_zan.12.c
+		add_years_of_owned_provinces_production_income = 1
+		add_country_modifier = {
+			name = zan_balanced_manufacturing
 			duration = -1
 		}
 	}
