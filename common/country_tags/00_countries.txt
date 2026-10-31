@@ -1134,14 +1134,16 @@ TMH = "countries/Tamahemu.txt"
 VIC = "countries/West Indische Compagnie.txt"
 BBL = "countries/Better Portuguese.txt"
 MFI = "countries/Mfinda.txt"
+VIN = "countries/Vinland.txt"
+
 
 # Africa
-KMR = "countries/Kamara.txt"#
+#KMR = "countries/Kamara.txt"#
 NGU = "countries/Nguma.txt"
 MBO = "countries/Mbolo.txt"
 ZGN = "countries/Zanga.txt"#
 LOM = "countries/Lombe.txt"
-MBL = "countries/Mbala.txt"###
+#MBL = "countries/Mbala.txt"###
 
 TAZ = "countries/Tazir.txt"
 KAD = "countries/Kadara.txt"

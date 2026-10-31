@@ -99,6 +99,7 @@ technology = { #Basic Financial Instruments
 	
 	coastal_defence = yes
 	may_sow_discontent = yes
+	fountains = yes
 }
 
 technology = { #Shipyards
@@ -139,6 +140,7 @@ technology  = { #Docks
 	
 	num_accepted_cultures = 1
 	shipyard = yes
+	mineshaft = yes
 
 	trade_range				=	10
 	naval_morale			=	0.2
@@ -159,6 +161,8 @@ technology = { #Carracks & Caravel
 	
 	enable = carrack
 	enable = caravel
+
+	lighthouse = yes
 	
 	
 }
@@ -192,6 +196,7 @@ technology = { #Wharf
 	range					= 	100
 
 	wharf = yes
+	bathhouse = yes
 
 }
 
@@ -209,6 +214,7 @@ technology = { #Man of War
 
 	naval_battery = yes
 	naval_engagement_width = 15
+	theatre = yes
 	
 }
 
@@ -225,6 +231,8 @@ technology = { #Chartered Companies
 	trade_efficiency 		= 	0.02
 	enable = brig
 	may_corrupt_officials = yes
+	trade_depot = yes 
+	smeltery = yes
 
 }
 
@@ -279,6 +287,7 @@ technology = { #Development of Maritime Law
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
 
+	drydock = yes 
 }
 
 technology = { #Merchantman
@@ -296,7 +305,7 @@ technology = { #Merchantman
 	range					=	50
 	
 	
-	trade_depot = yes 
+	opera_house = yes
 
 
 	enable = merchantman
@@ -337,8 +346,8 @@ technology = { #The War Galleon
 	naval_maintenance		= 	0.1	
 	range					=	50
 	
-	drydock = yes 
 	
+	foundry = yes
 	
 	enable = wargalleon
 	enable = frigate

@@ -231,14 +231,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_macro_buildings_category_strip"
-		texturefile = "gfx//interface//macro_buildings_category_strip.dds"
-		noOfFrames = 11
+		name = "GFX_estate_entry_new"
+		texturefile = "gfx/interface/estate_interface/estate_entry_new.dds"
 	}
 
 	spriteType = {
-		name = "GFX_estate_entry_new"
-		texturefile = "gfx/interface/estate_interface/estate_entry_new.dds"
+		name = "GFX_macro_buildings_category_strip"
+		texturefile = "gfx//interface//macro_buildings_category_strip.dds"
+		noOfFrames = 16 #MOD
 	}
 
 	spriteType = {
@@ -335,6 +335,7 @@ spriteTypes = {
 	textSpriteType = {
 		name = "GFX_open_build_interface"
 		texturefile = "gfx//interface//open_build_interface.dds"
+#		effectFile = "gfx/FX/buttonstate.lua" (removed in vanilla 1.30)
 	}
 
 	spriteType = {
@@ -342,26 +343,38 @@ spriteTypes = {
 		texturefile = "gfx//interface//macrobuildbackground.dds"
 		noOfFrames = 1
 	}
+	spriteType = {
+		name = "GFX_macro_build_interface_1024"
+		texturefile = "gfx//interface//macrobuildbackground_1024.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_macro_build_interface_1080"
+		texturefile = "gfx//interface//macrobuildbackground_1080.dds"
+		noOfFrames = 1
+	}
 
 	textSpriteType = {
 		name = "GFX_great_power_button"
 		texturefile = "gfx//interface//great_power_button.dds"
+#		effectFile = "gfx/FX/buttonstate.lua" (removed in vanilla 1.30)
 	}
 
-	spriteType = {
+	SpriteType = {
 		name = "GFX_government_reforms_button"
 		texturefile = "gfx//interface//government_reforms_button_base_white.dds"
 		effectFile = "gfx/FX/button_overlay.lua"
 	}
 
-	spriteType = {
+	SpriteType = {
 		name = "GFX_government_reforms_button_disabled"
 		texturefile = "gfx//interface//government_reforms_button_base_red.dds"
 	}
 
-	spriteType = {
+	SpriteType = {
 		name = "GFX_government_reforms_button_base"
 		texturefile = "gfx//interface//government_reforms_button_base.dds"
+#		effectFile = "gfx/FX/buttonstate.lua" (removed in vanilla 1.30)
 	}
 
 	progressbartype = {
@@ -586,6 +599,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_macro_diplomacy_overlay2_1024"
+		texturefile = "gfx//interface//macro_diplomacy_overlay2_1024.dds"
+	}
+
+	spriteType = {
+		name = "GFX_macro_diplomacy_overlay2_1080"
+		texturefile = "gfx//interface//macro_diplomacy_overlay2_1080.dds"
+	}
+
+	spriteType = {
 		name = "GFX_macro_diplomacy_line"
 		texturefile = "gfx//interface//macro_diplomacy_line.dds"
 	}
@@ -609,7 +632,7 @@ spriteTypes = {
 		name = "GFX_macro_diplomacy_slot"
 		texturefile = "gfx//interface//macro_diplomacy_slot.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_macro_diplomacy_slot_small"
 		texturefile = "gfx//interface//macro_diplomacy_slot_small.dds"

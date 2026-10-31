@@ -65,6 +65,7 @@ technology = { #Medieval Administration
 
 	production_efficiency	=	0.02
 	may_support_rebels = yes
+	roads_1 = yes
 }
  
 technology = { #Temples
@@ -89,6 +90,7 @@ technology = { #National Ideas
 
 	allowed_idea_groups = 1
 	production_efficiency	 =	0.02
+	roads_2 = yes
 }
 
 technology = { #Workshop
@@ -101,8 +103,8 @@ technology = { #Workshop
 
 	#Workshop
 	farm_estate = yes
-	workshop = yes
-	ramparts = yes
+	forge = yes
+	moat = yes
 }
 
 technology = { #Renaissance Thought
@@ -115,6 +117,7 @@ technology = { #Renaissance Thought
 	
 	#Noble Republic
 	allowed_idea_groups = 2	
+	inn = yes
 }
 
 technology = { #Courthouse
@@ -126,6 +129,7 @@ technology = { #Courthouse
 	}
 
 	courthouse = yes
+	roads_3 = yes
 	governing_capacity = 100
 
 }
@@ -156,6 +160,8 @@ technology = { #Modern Theocracy
 	
 	allowed_idea_groups = 3
 	theocratic_government = yes
+	roads_4 = yes
+	draw_bridge = yes
 }
 
 technology = { #Textile Manufactory
@@ -199,6 +205,9 @@ technology = { #Improved Drainage
 	
 	#Improved Drainage
 	production_efficiency 	=	0.02
+	library = yes
+	brothel = yes
+	roads_5 = yes
 }
 
 technology = { #Scientific Experimentation
@@ -212,6 +221,7 @@ technology = { #Scientific Experimentation
 	}
 	
 	plantations = yes
+	ramparts = yes
 	allowed_idea_groups	= 4
 }
 
@@ -241,6 +251,8 @@ technology = { #Metallurgy
 	
 	mills = yes
 	production_efficiency 	=	0.02
+	workshop = yes
+	roads_6 = yes
 
 
 }
@@ -256,7 +268,7 @@ technology = { #University
 		global_trade = 0.15
 	}
 	
-	university = yes	
+	
 	governing_capacity = 250
 	
 	administrative_efficiency = 0.1
@@ -290,6 +302,8 @@ technology = { #Cathedral
 	
 	#Cathedral
 	cathedral = yes
+	university = yes	
+	roads_7 = yes
 }
 
 technology = { #Absolute Rulership
@@ -357,6 +371,7 @@ technology = { #Measuring the World
 	
 	administrative_efficiency = 0.1
 	development_cost_modifier = -0.1
+	roads_8 = yes
 }
 
 technology = { #Bonds and Tontines
@@ -391,6 +406,7 @@ technology = { #Improved Production
 	
 	#Improved Farm Animals
 	production_efficiency 	=	0.02
+	basilica = yes
 }
 
 technology = { #Separation of Powers
