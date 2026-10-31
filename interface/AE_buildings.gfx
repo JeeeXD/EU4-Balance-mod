@@ -1,0 +1,213 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_embassy"
+		texturefile = "gfx//interface//buildings//latin_embassy.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_bank"
+		texturefile = "gfx//interface//buildings//latin_customs_house.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_palace"
+		texturefile = "gfx//interface//buildings//.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_charter_hall"
+		texturefile = "gfx//interface//buildings//latin_treasury.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_feudal_court"
+		texturefile = "gfx//interface//buildings//.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_war_college"
+		texturefile = "gfx//interface//buildings//latin_spy_agency.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_royal_academy"
+		texturefile = "gfx//interface//buildings//latin_war_college.tga"
+		loadType = "INGAME"
+	}
+
+
+	spriteType = {
+		name = "GFX_basilica"
+		texturefile = "gfx//interface//buildings//basilica.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_forge"
+		texturefile = "gfx//interface//buildings//forge.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_military_academy"
+		texturefile = "gfx//interface//buildings//military_academy.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_banner_hall"
+		texturefile = "gfx//interface//buildings//banner_hall.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_lighthouse"
+		texturefile = "gfx//interface//buildings//lighthouse.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_library"
+		texturefile = "gfx//interface//buildings//library.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_fountains"
+		texturefile = "gfx//interface//buildings//fountains.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_bathhouse"
+		texturefile = "gfx//interface//buildings//bathhouse.dds"
+		loadType = "INGAME"
+	}
+
+
+	spriteType = {
+		name = "GFX_theatre"
+		texturefile = "gfx//interface//buildings//theatre.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_opera_house"
+		texturefile = "gfx//interface//buildings//opera.dds"
+		loadType = "INGAME"
+	}
+
+
+	spriteType = {
+		name = "GFX_inn"
+		texturefile = "gfx//interface//buildings//inn.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_brothel"
+		texturefile = "gfx//interface//buildings//brothel.dds"
+		loadType = "INGAME"
+	}
+
+
+	spriteType = {
+		name = "GFX_mineshaft"
+		texturefile = "gfx//interface//buildings//mineshaft.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_smeltery"
+		texturefile = "gfx//interface//buildings//smeltery.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_foundry"
+		texturefile = "gfx//interface//buildings//foundry.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_moat"
+		texturefile = "gfx//interface//buildings//moat.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_draw_bridge"
+		texturefile = "gfx//interface//buildings//draw_bridge.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_scouting_tower"
+		texturefile = "gfx//interface//buildings//scouting_tower.dds"
+		loadType = "INGAME"
+	}
+
+
+
+
+	# ROADS
+
+	spriteType = {
+        name = "GFX_roads_1"
+        texturefile = "gfx//interface//buildings//roads_1.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_2"
+        texturefile = "gfx//interface//buildings//roads_2.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_3"
+        texturefile = "gfx//interface//buildings//roads_3.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_4"
+        texturefile = "gfx//interface//buildings//roads_4.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_5"
+        texturefile = "gfx//interface//buildings//roads_5.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_6"
+        texturefile = "gfx//interface//buildings//roads_6.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_7"
+        texturefile = "gfx//interface//buildings//roads_7.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_8"
+        texturefile = "gfx//interface//buildings//roads_8.dds"
+        loadType = "INGAME"
+    }
+	
+    spriteType = {
+        name = "GFX_roads_9"
+        texturefile = "gfx//interface//buildings//roads_9.dds"
+        loadType = "INGAME"
+    }
+
+
+
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_banner_right_4"
+		texturefile = "gfx//interface//banner_right_4.dds"
+		loadType = "INGAME"
+	}
+}
+
+

@@ -271,7 +271,7 @@ province_razed = {
 }
 
 development = {
-	allowed_num_of_buildings = 0.1
+	allowed_num_of_buildings = 0.125
 	supply_limit_modifier = 0.03
 	local_missionary_strength = -0.001
 	land_forcelimit	= 0.1			# special case, affected by autonomy
@@ -2180,7 +2180,9 @@ expand_administation_modifier = {
 over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.0
 	global_autonomy = 0.2
-	global_tax_modifier = -0.25
+	min_autonomy = 0.5
+	global_tax_modifier = -0.5
+	global_trade_goods_size_modifier = -0.33
 	ae_impact = 0.5
 	improve_relation_modifier = -0.5
 	advisor_cost = 1.0

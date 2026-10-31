@@ -97,6 +97,7 @@ technology = {
 	
 	land_morale = 	0.5
 	may_drill = yes
+	scouting_tower = yes
 }
 
 technology = {
@@ -250,6 +251,7 @@ technology = {
 	enable = ha_xiuhtecuhtli_soldier
 	military_tactics 	= 	0.25
 	combat_width = 1	
+	fort3 = yes
 }
 
 technology = {
@@ -373,6 +375,8 @@ technology = {
 	#Star Bastions
 	fort_16th = yes
 	infantry_fire		=	0.3
+
+	training_fields = yes
 	
 	enable = african_hussar
 	enable = french_caracolle 
@@ -446,7 +450,7 @@ technology = {
 	artillery_fire 		= 	1.0	
 
 
-	training_fields = yes
+	
 	
 	combat_width = 1
 	
@@ -471,6 +475,7 @@ technology = {
 	enable = maharathan_cavalry		
 	enable = manchu_banner		
 	enable = african_swarm
+	fort5 = yes
 }
 
 technology = {
@@ -486,6 +491,7 @@ technology = {
 	
 	#Carbine
 	maneuver_value 		= 	0.25
+	conscription_center = yes
 
 		
 	enable = swedish_gallop	
@@ -580,6 +586,9 @@ technology = {
 	military_tactics 	= 	0.25
 	
 	infantry_shock 		=	0.5
+
+
+	military_academy = yes
 }
 
 technology = {
@@ -600,8 +609,10 @@ technology = {
 	artillery_fire		=	2.0
 	
 	combat_width = 2
+
+	fort7 = yes
 	
-	conscription_center = yes
+	
 
 	
 	enable = polish_winged_hussar	
@@ -674,6 +685,7 @@ technology = {
 	#Covered Way
 	fort_18th	= yes	
 	military_tactics 	= 	0.25
+	banner_hall = yes
 
 	combat_width = 2
 }
