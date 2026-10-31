@@ -227,14 +227,11 @@ humanist_maritime_policy_modifier = {
 	is_marine_modifier = yes
 }
 
-fuck_nathan = {
-	army_tradition_decay = -0.05
-}
-dont_fuck_nathan = {
-	army_tradition = 0.05
-}
-
 maritime_spy_policy = {
 	regiment_manpower_usage = -0.05
 	is_marine_modifier = yes
+}
+
+papal_dev_cost = {
+	development_cost = -0.05
 }

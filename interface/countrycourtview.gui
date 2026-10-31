@@ -185,12 +185,12 @@ guiTypes = {
 		listboxType = 
 		{
 			name ="monarch_ruler_personality_list"
-			position = { x=170 y =138}
+			position = { x=160 y =138}	#changed x from 170 to 160
 			backGround=""
-			size = { x=250 y =300}
+			size = { x=290 y =300}		#changed in mod originally to 400x and 300y
 			Orientation = "UPPER_LEFT"
 			horizontal = 1
-			spacing = 2
+			spacing = 1.5			#changed to decreased spacing
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
@@ -670,7 +670,7 @@ guiTypes = {
 		name = "countrycourtview_personalityitem"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=60 y=40 }
+		size = { x=55 y=40 }	#changed from 60x 40y to 55x 40y
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""

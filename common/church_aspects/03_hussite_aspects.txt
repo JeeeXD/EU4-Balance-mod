@@ -265,3 +265,29 @@ rekindle_the_hussite_wars_aspect = {
 		}
 	}
 }
+
+followes_of_hus_aspect = {
+	cost = 100
+	potential = {
+		has_idea = inquisition
+	}
+	modifier = {
+		discipline = 0.05
+	}
+	effect = {
+		hidden_effect = { 
+			if = {
+				limit = {
+					has_country_flag = boh_aspect_refund_chance
+				}
+				random_list = { 
+					20 = { 
+						add_church_power = 25
+					}
+					80 = { 
+					}
+				}
+			}
+		}
+	}
+}

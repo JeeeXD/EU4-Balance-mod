@@ -179,6 +179,15 @@ christian = {
 						name = "papal_indulgence"
 						duration = 7300
 					}
+					if = {
+						limit = {
+							has_idea = inquisition
+						}
+						add_country_modifier = {
+							name = "papal_dev_cost"
+							duration = 7300
+						}
+					}
 				}
 				ai_will_do = {
 					factor = 1
@@ -265,6 +274,14 @@ christian = {
 					add_country_modifier = {
 						name = "papal_legate"
 						duration = 7300
+					}
+					if = {
+						limit = {
+							has_idea = inquisition
+						}
+						add_rebel_progress = {
+							value = -20
+						}
 					}
 				}
 				ai_will_do = {
@@ -431,6 +448,7 @@ christian = {
 			war_preaches_aspect
 			head_of_the_church_aspect
 			anglican_aspect
+			religious_noblemen_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -809,6 +827,31 @@ christian = {
 					}
 				}
 			}
+
+			icon_theodore = {
+				global_regiment_cost = -0.1
+				land_forcelimit_modifier = 0.2
+
+				visible = {
+					OR = {
+						has_idea = inquisition
+						tag = FEO
+						was_tag = FEO
+					}
+				}
+
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					modifier = {
+						factor = 1
+						has_idea_group = religious_ideas
+					}
+					factor = 1
+				}
+			}
+
 		}
 	}
 	
@@ -849,6 +892,7 @@ christian = {
 			send_monks_to_establish_monasteries
 			promote_territorial_rights
 			will_of_the_martyrs
+			prester_john_blessing
 		}
 	}
 	
@@ -870,11 +914,7 @@ muslim = {
 	religious_schools = {
 		hanafi_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_hanafi_school
-					has_country_flag = privilege_can_always_invite_hanafi_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -891,19 +931,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_hanafi_school }
-						NOT = { has_country_flag = privilege_can_always_invite_hanafi_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -943,11 +970,7 @@ muslim = {
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_hanbali_school
-					has_country_flag = privilege_can_always_invite_hanbali_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -964,19 +987,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_hanbali_school }
-						NOT = { has_country_flag = privilege_can_always_invite_hanbali_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1015,11 +1025,7 @@ muslim = {
 		}
 		maliki_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_maliki_school
-					has_country_flag = privilege_can_always_invite_maliki_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -1036,19 +1042,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_maliki_school }
-						NOT = { has_country_flag = privilege_can_always_invite_maliki_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1087,11 +1080,7 @@ muslim = {
 		}
 		shafii_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_shafii_school
-					has_country_flag = privilege_can_always_invite_shafii_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -1108,19 +1097,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_shafii_school }
-						NOT = { has_country_flag = privilege_can_always_invite_shafii_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1160,11 +1136,7 @@ muslim = {
 		#Shias
 		ismaili_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_ismaili_school
-					has_country_flag = privilege_can_always_invite_ismaili_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -1181,19 +1153,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_ismaili_school }
-						NOT = { has_country_flag = privilege_can_always_invite_ismaili_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1228,18 +1187,11 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_ismaili"
 
-			horde_unity = 1
-			legitimacy = 1
-			republican_tradition = 0.2
-			devotion = 1
+			reform_progress_growth = 0.2
 		}
 		jafari_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_jafari_school
-					has_country_flag = privilege_can_always_invite_jafari_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -1256,19 +1208,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_jafari_school }
-						NOT = { has_country_flag = privilege_can_always_invite_jafari_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1305,13 +1244,10 @@ muslim = {
 
 			shock_damage = 0.1
 		}
+
 		zaidi_school = {
 			potential_invite_scholar = {
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_zaidi_school
-					has_country_flag = privilege_can_always_invite_zaidi_school
-				}
+				always = yes
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -1328,19 +1264,6 @@ muslim = {
 						NOT = { religion = ibadi }
 					}
 					NOT = { piety = -0.5 }
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_zaidi_school }
-						NOT = { has_country_flag = privilege_can_always_invite_zaidi_school }
-					}
-					reverse_has_opinion = { who = FROM value = 150 }
-					OR = {
-						alliance_with = FROM
-						is_subject_of = FROM
-						overlord_of = FROM
-					}
-					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
 				if = {
 					limit = {
@@ -1378,6 +1301,7 @@ muslim = {
 			shock_damage_received = -0.05
 		}
 		
+
 	}
 	
 	sunni = {
@@ -2595,6 +2519,7 @@ zoroastrian_group = {
 			blessing_navjote
 			blessing_manthras
 			blessing_dakhma
+			blessing_daman
 		}
 		
 		heretic = { MAZDAKI MANICHEAN }	

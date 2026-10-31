@@ -1,0 +1,15 @@
+# Dynamic Flags Mechanism - Refreshes new flag check
+#
+# A file with the SAME name as another mod's would replace
+# that mod's file instead so keep a prefix that is yours.
+#
+# "dfm_dynamic_flags_evaluate" can be renamed to anything else,
+# as long as it's equivalently referenced in scripted effects.
+
+on_startup = {
+	dfm_dynamic_flags_evaluate = yes
+}
+
+on_monthly_pulse = {
+	dfm_dynamic_flags_evaluate = yes
+}

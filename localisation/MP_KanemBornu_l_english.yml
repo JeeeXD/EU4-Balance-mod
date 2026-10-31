@@ -204,7 +204,12 @@ KBO_oyo_destroy_yes_tt: "£yes£ If we completed this mission by developing §YO
 KBO_oyo_destroy_no_tt: "£no£ If we completed this mission by destroying §YOyo§!, we will gain the following:"
 KBO_biggest_african_tt: "No country in africa has a larger army or larger economy than us"
 KBO_chancellor_tt: "§YChancellor§! advisor will grant §G-5%§! §YCore Creation Cost§! per level."
+KBO_unlock_hashashin_order: "Unlock §YHashashin§! holy order."
 
 # EVENT INSIGHTS
 KBO_event_insight_1_tt: "\n§GEvent Insight§!\nThis event will grant us the option to either accept §YSonghai§! as one of our cultures or convert them to our culture."
 KBO_event_insight_3_tt: "\n§GEvent Insight§!\nThis event will grant us the option to either get cheaper integration costs for our vassals or gain a §G25%§! chance of inheriting §Y@YAO Yao§! on every ruler death."
+
+# HOLY ORDER
+hashashin_holy_order: "Hashashin"
+hashashin_holy_order_desc: ""

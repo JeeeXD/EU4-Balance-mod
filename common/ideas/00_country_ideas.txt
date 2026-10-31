@@ -19999,3 +19999,44 @@ VIN_ideas = {
 		discipline = 0.05
 	}
 }
+
+WSR_ideas = {
+	start = {
+		discipline = 0.05
+		land_forcelimit_modifier = 0.25
+	}
+	
+	bonus = {
+		build_cost = -0.1
+	}
+	
+	trigger = {
+		tag = WSR
+	}
+	free = yes
+	
+	WSR_1 = {
+		infantry_power = 0.15
+	}
+	WSR_2 = {
+		naval_forcelimit_modifier = 0.25
+		prestige_from_naval = 0.5
+	}
+	WSR_3 = {
+		trade_efficiency = 0.15
+	}
+	WSR_4 = {
+		may_perform_slave_raid_on_same_religion = yes
+		loot_amount = 0.5
+	}
+	WSR_5 = {
+		galley_power = 0.25
+		galley_cost = -0.15
+	}
+	WSR_6 = {
+		manpower_in_true_faith_proWSRces = 0.25
+	}
+	WSR_7 = {
+		discipline = 0.05
+	}
+}

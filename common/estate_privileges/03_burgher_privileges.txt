@@ -1295,6 +1295,7 @@ estate_burghers_exclusive_trade_rights = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.05
 	loyalty = 0.05
+	
 	is_valid = {
 		has_dlc = "Emperor"
 		any_active_trade_node = {
@@ -1364,6 +1365,7 @@ estate_burghers_exclusive_trade_rights = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.03 }
 	}
+	cooldown_years = 10
 	ai_will_do = {
 		factor = 0
 	}

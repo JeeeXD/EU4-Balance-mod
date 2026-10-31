@@ -581,9 +581,28 @@ kanem_bornu_2 = {
 		icon = develop_konigsberg
 		position = 13
 		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			province_id = 1157
+		}
+		trigger = { 
+			1157 = {
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				NOT = {
+					num_free_building_slots = 1
+				}
+			}
+		}
+		effect = { 
+			1157 = {
+				add_base_manpower = 3
+				add_base_production = 2
+				add_province_modifier = {
+					name = KBO_capital_nice
+					duration = -1
+				}
+			}
+		}
 	}
 
 	KBO_increase_trade_goods = {
@@ -592,9 +611,51 @@ kanem_bornu_2 = {
 		required_missions = {
 			KBO_capital_of_kanem
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = kanem_area
+				area = bornu_area
+			}
+			NOT = {
+				has_manufactory_trigger = yes
+			}
+		}
+		trigger = { 
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 5
+					has_manufactory_trigger = yes
+					OR = {
+						area = kanem_area
+						area = bornu_area
+					}
+				}
+				AND = {
+					trade_goods_produced_amount = {
+						trade_goods = slaves
+						amount = 3
+					}
+					trade_goods_produced_amount = {
+						trade_goods = grain
+						amount = 3
+					}
+				}
+			}
+		}
+		effect = { 
+			kanem_area = {
+				add_province_modifier = {
+					name = KBO_heartlands
+					duration = -1
+				}
+			}
+			bornu_area = {
+				add_province_modifier = {
+					name = KBO_heartlands
+					duration = -1
+				}
+			}
+		}
 	}
 
 	KBO_kanem_bornu_areas = {
@@ -603,9 +664,37 @@ kanem_bornu_2 = {
 		required_missions = {
 			KBO_kanem_dev KBO_second_capital KBO_increase_trade_goods
 		}
-		provinces_to_highlight = { }
-		trigger = { }
-		effect = { }
+		provinces_to_highlight = { 
+			OR = {
+				area = kanem_area
+				area = bornu_area
+			}
+			NOT = {
+				num_of_buildings_in_province = 4
+			}
+			has_manufactory_trigger = no
+			NOT = {
+				num_of_times_improved_by_owner = 10
+			}
+		}
+		trigger = { 
+			kanem_area = {
+				type = all
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 4
+				has_manufactory_trigger = yes
+			}
+			bornu_area = {
+				type = all
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 4
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = { 
+			custom_tooltip = KBO_unlock_hashashin_order
+			set_country_flag = unlock_hashashin
+		}
 	}
 
 	KBO_the_chima = {
@@ -614,7 +703,24 @@ kanem_bornu_2 = {
 		required_missions = { }
 		provinces_to_highlight = { }
 		trigger = { }
-		effect = { }
+		effect = { 
+			arakan_area = {
+				change_religion = sikhism
+			}
+			tripura_area = {
+				change_religion = sikhism
+			}
+			north_bengal_area = {
+				change_religion = sikhism
+			}
+			east_bengal_area = {
+				change_religion = sikhism
+			}
+			assam_area = {
+				change_religion = sikhism
+			}
+			set_capital = 4477
+		}
 	}
 
 	KBO_chima_loyalty = {

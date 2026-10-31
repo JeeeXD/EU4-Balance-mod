@@ -94,3 +94,17 @@ will_of_the_martyrs = {
 		factor = 15
 	}
 }
+
+prester_john_blessing = {
+	is_blessing = yes
+
+	potential = {
+		has_idea = inquisition
+	}
+	modifier = {
+		land_forcelimit_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}

@@ -428,6 +428,9 @@ religious_ideas = {
 		yearly_patriarch_authority = 0.01
 		prestige_per_development_from_conversion = 0.25
 		harmonization_speed = 0.35
+		effect = {
+			custom_tooltip = unlocks_new_religious_options_tt
+		}
 	}
 	religious_tradition = {
 		global_tax_modifier = 0.15
@@ -490,7 +493,10 @@ spy_ideas = {
 	}
 	
 	claim_fabrication = {
-		ae_impact = -0.25
+		ae_impact = -0.2
+		effect = {
+			custom_tooltip = add_claim_on_occupation_tt
+		}
 	}
 
 	state_propaganda = {
@@ -561,6 +567,9 @@ diplomatic_ideas = {
 	cabinet = {
 		unjustified_demands = -1
 		diplomatic_upkeep = 2
+		effect = {
+			custom_tooltip = disable_all_negative_personalities_tt
+		}
 	}
 	benign_diplomats = {
 		improve_relation_modifier = 0.5

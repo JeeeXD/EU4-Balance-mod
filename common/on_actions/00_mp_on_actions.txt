@@ -183,3 +183,21 @@ on_province_owner_change = {
 		set_province_flag = mjl_new_conquest_fort_delay
 	}
 }
+
+on_siege_won_province = {
+	if = {
+		limit = {
+			ROOT = {
+				has_idea = claim_fabrication
+			}
+			THIS = {
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		ROOT = {
+			add_claim = THIS
+		}
+	}
+}

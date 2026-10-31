@@ -2241,7 +2241,9 @@ babbling_buffoon_personality = {
 	}
 
 	allow = {
-		
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	diplomatic_reputation = -1
 	nation_designer_cost = -2
@@ -2335,9 +2337,13 @@ embezzler_personality = {
 
 	allow = {
 		NOT = { has_country_flag = ned_remove_embezzler_rulers }
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
+		
 	}
 	
 	wants_debase = yes
@@ -2447,7 +2453,9 @@ infertile_personality = {
 	}
 	
 	chance = {
-		
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	royal_marriage_acceptance = -20
@@ -2541,7 +2549,9 @@ drunkard_personality = {
 	}
 
 	allow = {
-		
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
@@ -2636,8 +2646,12 @@ sinner_personality = {
 			religion_group = jewish_group
 		}
 		NOT = { has_country_flag = MUG_disable_sinner_flag }
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	chance = {
+		
 	}
 
 	different_religion_war_multiplier = 0.8
@@ -2728,9 +2742,16 @@ greedy_personality = {
 	}
 	
 	allow = {
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
+		modifier = {
+			factor = 5
+			ruler_religion = jewish
+		}
 	}
 	
 	wants_gold = yes
@@ -2856,7 +2877,11 @@ cruel_personality = {
 			}
 		}
 	}
-	
+	allow = {
+		NOT = {
+			has_idea = cabinet
+		}
+	}
 	wants_betray_allies = yes
 
 	razing = yes
@@ -2962,7 +2987,9 @@ naive_personality = {
 	}
 
 	allow = {
-		
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
@@ -3069,6 +3096,9 @@ craven_personality = {
 	}
 	
 	allow = {
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
@@ -3161,7 +3191,10 @@ loose_lips_personality = {
 		}
 	}
 
-	allow = {		
+	allow = {
+		NOT = {
+			has_idea = cabinet
+		}		
 	}
 	
 	chance = {
@@ -3255,6 +3288,9 @@ obsessive_perfectionist_personality = {
 	}
 	
 	allow = {
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
@@ -3348,7 +3384,9 @@ malevolent_personality = {
 	}
 	
 	allow = {
-		
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 	
 	chance = {
@@ -3576,6 +3614,9 @@ petty_personality = {
 	allow = {
 		has_dlc = "Mandate of Heaven"
 		has_reform = celestial_empire
+		NOT = {
+			has_idea = cabinet
+		}
 	}
 
 	chance = {

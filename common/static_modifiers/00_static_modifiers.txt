@@ -1962,7 +1962,7 @@ hanafi_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	adm_tech_cost_modifier = -0.05
+	adm_tech_cost_modifier = -0.1
 }
 
 hanbali_scholar_modifier = {
@@ -1978,7 +1978,7 @@ maliki_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	development_cost = -0.1
+	development_cost = -0.05
 }
 
 shafii_scholar_modifier = {
@@ -1994,10 +1994,7 @@ ismaili_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	horde_unity = 1
-	legitimacy = 1
-	republican_tradition = 0.5
-	devotion = 1
+	reform_progress_growth = 0.2
 }
 
 jafari_scholar_modifier = {
@@ -2013,7 +2010,7 @@ zaidi_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	shock_damage_received = -0.1
+	shock_damage_received = -0.05
 }
 
 ########################################

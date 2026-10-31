@@ -1,0 +1,72 @@
+# Dynamic Flags Mechanism - the rules for what flag is picked.
+#
+# One scripted effect, run in every country's scope at startup and every month
+# (see common/on_actions/dfm_dynamic_flags_on_actions.txt).
+#
+# WHAT A RULE CAN DO
+#   flag    log = "dynamic_country_flag <TAG> <flagname>"    show gfx/flags/<flagname>.tga as TAG's flag
+#           log = "dynamic_country_flag <TAG> -"             give TAG its own flag back
+#   name    override_country_name = <key>         needs <key> and <key>_ADJ in localisation
+#           restore_country_name = yes
+#   colour  change_country_color = { color = { R G B } }
+#           restore_country_color = yes
+#
+# Names and colours are plain EU4. Only the flag needs the DLL: EU4 writes the
+# log line into logs/game.log, and the DLL reads it from there. The DLL does not
+# care which mod wrote the line, so any number of mods can use this at once.
+#
+# RULES OF THUMB
+# - Always pair "if", then "else_if", then "else" with a "-" log, so the flag can revert to original.
+# - If two rules match one country in the same month, the last line logged wins.
+#   That includes another mod's "-", so only send "-" for tags your mod owns.
+# - If you want to be sure your flags cannot collide with another mod's art,
+#   you can give your flags additional suffixes i.e. "FRA_white_mymod" 31 characters at most.
+#
+# The examples below are taken from some entries in Challenger's Flavour Bonanza Mod (CPBM).
+# The first branch that matches wins, so consider your order carefully.
+
+dfm_dynamic_flags_evaluate = { #if you want to change this name here, ensure you also do so in "on_actions"
+
+	# ================= playing as FRA =================
+	if = {
+		limit = { tag = FRA }
+		if = {
+			limit = {
+				OR = {
+					dynasty = "Bonaparte"
+					dynasty = "di Buonaparte"
+				}
+			}
+			log = "dynamic_country_flag FRA FRA_bonaparte"
+			override_country_name = FRA_empire
+			change_country_color = { color = { 40 40 175 } }
+		}
+		else_if = {
+			limit = {
+				is_year = 1620
+				OR = {
+					has_reform = letat_cest_moi_reform
+					has_reform = political_absolutism_reform
+				}
+			}
+			log = "dynamic_country_flag FRA FRA_absolute_monarchy"
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+		else_if = {
+			limit = {
+				is_year = 1620
+			}
+			log = "dynamic_country_flag FRA FRA_white"
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+		else = {
+			log = "dynamic_country_flag FRA -"
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+	}
+
+	# ================= Keep adding countries below =================
+}

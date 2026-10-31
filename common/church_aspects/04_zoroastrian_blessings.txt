@@ -84,3 +84,19 @@ blessing_dakhma = {
 		factor = 10
 	}
 }
+
+
+blessing_daman = {
+	is_blessing = yes
+	potential = {
+		has_idea = inquisition
+	}
+
+	modifier = {
+		fire_damage = 0.1
+		monthly_asha_vahishta = 0.5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

@@ -1,0 +1,42 @@
+femboy_personality = {
+	ruler_allow = {
+		chance = {
+			modifier = {
+				factor = 0.2
+				DIP = 6
+			}
+		}
+	}
+
+	heir_allow = {
+		chance = {
+			modifier = {
+				factor = 0.2
+				heir_dip = 6
+			}
+		}
+	}
+	
+	consort_allow = {
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+	
+	allow = {
+		OR = {
+			tag = POL
+			has_country_flag = enable_femboys
+		}
+	}
+	
+	
+	diplomatic_annexation_cost = -0.15
+	stability_cost_to_declare_war = -1
+
+	nation_designer_cost = 2
+} 
+
