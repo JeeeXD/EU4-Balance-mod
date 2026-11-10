@@ -510,6 +510,7 @@ enable_aristo_reform = {
 	custom_attributes = {
 		enables_aristocratic_idea_group = yes
 	}
+	lock_level_when_selected = yes
 }
 
 enable_pluto_reform = {
@@ -521,15 +522,17 @@ enable_pluto_reform = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 	}
+	lock_level_when_selected = yes
 }
 
 enable_divine_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		tolerance_own = 1
+		church_loyalty_modifier = 0.05
 	}
 	custom_attributes = {
 		enables_divine_idea_group = yes
 	}
+	lock_level_when_selected = yes
 }

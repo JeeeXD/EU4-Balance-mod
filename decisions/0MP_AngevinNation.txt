@@ -1,0 +1,87 @@
+country_decisions = {
+
+	form_angevin = {
+		major = yes
+		potential = {
+			tag = FRA
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_angevin_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_reform = celestial_empire } 
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = wales_area
+				area = wessex_area
+				area = east_anglia_area
+				area = home_counties_area
+				area = yorkshire_area
+				area = scottish_marches_area
+				region = france_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ENG }
+			is_free_or_tributary_trigger = yes
+			num_of_owned_provinces_with = {
+				value = 30
+				OR = {
+					area = east_midlands_area
+				area = west_midlands_area
+				area = wales_area
+				area = wessex_area
+				area = east_anglia_area
+				area = home_counties_area
+				area = yorkshire_area
+				area = scottish_marches_area
+				}
+			}
+			france_region = {
+				type = all
+				owned_by = ROOT
+				is_state_core = ROOT
+			}
+			is_at_war = no
+		}
+		effect = {
+			change_tag = AVE
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 5
+			set_country_flag = formed_angevin_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		ai_importance = 1000
+	}
+
+}
