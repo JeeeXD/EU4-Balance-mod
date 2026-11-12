@@ -2331,6 +2331,7 @@ negative_imperial_authority_member = {
 slackening_modifier = {
     yearly_army_professionalism = -0.05
     manpower_recovery_speed = 2
+	recover_army_morale_speed = -0.33
 }
 
 royal_council_meeting_mod = {

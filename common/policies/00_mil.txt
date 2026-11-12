@@ -1178,7 +1178,7 @@ bolstered_defence_act = {
 	}
 	
 	hostile_attrition = 2 
-	max_attrition = 2
+	max_hostile_attrition = 2
 	garrison_size = 0.33
 
 	effect = {}

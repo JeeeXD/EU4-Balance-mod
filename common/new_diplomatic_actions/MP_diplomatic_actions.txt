@@ -137,6 +137,10 @@ sabotage_forts = {
 		}
 	}
 	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -60
+		}
 		FROM = {
 			country_event = {
 				id = mp_misc.6
@@ -176,8 +180,17 @@ influence_court = {
 				value = 60
 			}
 		}
+		NOT = {
+			FROM = {
+				has_country_modifier = spy_influenced_estates
+			}
+		}
 	}
 	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -60
+		}
 		FROM = {
 			country_event = {
 				id = mp_misc.7
@@ -201,18 +214,7 @@ influence_court = {
 		}
 	}
 	ai_will_do = { # this is a trigger
-		has_spy_network_in = {
-			who = FROM
-			value = 60
-		}
-		FROM = {
-			NOT = {
-				has_opinion = {
-					who = ROOT
-					value = -75
-				}
-			}
-		}
+		always = no
 	}
 }
 
