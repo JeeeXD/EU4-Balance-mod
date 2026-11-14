@@ -694,6 +694,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { was_tag = RZI }
 				NOT = { was_tag = SCA }
 				NOT = { was_tag = BRM }
+				NOT = { was_tag = ESR }
+				NOT = { was_tag = WSR }
 				NOT = { tag = FRA }
 				NOT = { tag = MUG }
 				NOT = { tag = PER }
@@ -733,6 +735,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = RZI }
 				NOT = { tag = SCA }
 				NOT = { tag = BRM }
+				NOT = { tag = ESR }
+				NOT = { tag = WSR }
 			}
 		}
 	}

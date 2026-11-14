@@ -9218,6 +9218,12 @@ central_african = { # ?? New added
 			Titilayo Yejide Yewande
 		}
 	}
+	jukun = {
+	
+	}
+	sawabantu = {
+	
+	}
 }
 west_african = {
 	graphical_culture = africangfx
@@ -9565,12 +9571,7 @@ kongo_group = {
 	mbangala = {
 		primary = KSJ
 	}
-	jukun = {
 	
-	}
-	sawabantu = {
-	
-	}
 	dynasty_names = { 
 		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
 	}

@@ -576,7 +576,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -590,7 +590,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -604,7 +604,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -618,7 +618,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -632,7 +632,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -646,7 +646,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -660,7 +660,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -674,7 +674,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -688,7 +688,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -702,7 +702,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -716,7 +716,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -730,7 +730,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -744,7 +744,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -758,7 +758,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 }
@@ -789,7 +789,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -804,7 +804,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -818,7 +818,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -832,7 +832,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -846,7 +846,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -860,7 +860,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -874,7 +874,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -888,7 +888,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -903,7 +903,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -922,7 +922,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -936,7 +936,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -951,7 +951,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -965,7 +965,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -979,7 +979,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -994,7 +994,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1008,7 +1008,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 }
@@ -1038,7 +1038,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1052,7 +1052,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1066,7 +1066,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1080,7 +1080,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1095,7 +1095,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1109,7 +1109,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1123,7 +1123,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1137,7 +1137,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1151,7 +1151,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1165,7 +1165,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1179,7 +1179,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1193,7 +1193,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1207,7 +1207,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 	option = {
@@ -1221,7 +1221,7 @@ country_event = {
 			limit = {
 				NOT = { has_idea = ecumenism }
 			}
-			add_splendor = -100
+			add_splendor = -200
 		}
 	}
 }

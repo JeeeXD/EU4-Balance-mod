@@ -1180,3 +1180,6 @@ MZT = "countries/Matara.txt"#
 NTA = "countries/Ntala.txt"
 KWA = "countries/Kwara.txt"
 ZEN = "countries/Zenda.txt"
+
+WSR = "countries/West Rome.txt"
+ESR = "countries/East Rome.txt"

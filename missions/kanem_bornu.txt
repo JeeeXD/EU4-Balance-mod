@@ -702,24 +702,12 @@ kanem_bornu_2 = {
 		position = 16
 		required_missions = { }
 		provinces_to_highlight = { }
-		trigger = { }
+		trigger = { 
+			diplomatic_reputation = 3
+			num_of_subjects = 2
+		}
 		effect = { 
-			arakan_area = {
-				change_religion = sikhism
-			}
-			tripura_area = {
-				change_religion = sikhism
-			}
-			north_bengal_area = {
-				change_religion = sikhism
-			}
-			east_bengal_area = {
-				change_religion = sikhism
-			}
-			assam_area = {
-				change_religion = sikhism
-			}
-			set_capital = 4477
+			
 		}
 	}
 

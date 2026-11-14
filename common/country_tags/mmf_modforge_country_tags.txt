@@ -3,6 +3,4 @@
 ########################################
 
 ### Modified 9/26/2026 1:42:50 PM ###
-WSR = "countries/West Rome.txt"
-ESR = "countries/East Rome.txt"
 

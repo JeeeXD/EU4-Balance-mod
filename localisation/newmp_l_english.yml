@@ -736,3 +736,8 @@ building_moat: "Moat"
 building_draw_bridge: "Draw Bridge"
 building_scouting_tower: "Scouting Tower"
 building_brothel: "Brothel"
+
+claim_west_rome_title: "Declare the @WSR Western Roman Empire"
+claim_west_rome_desc: "The Western Roman Empire ceased to exist centuries ago, and its territories have been fragmented among various kingdoms. However, the idea of restoring the glory of Rome still resonates with many. By declaring the Western Roman Empire, we can unite these lands under a single banner, reviving the legacy of one of history's greatest empires."
+claim_east_rome_title: "Declare the @ESR Eastern Roman Empire"
+claim_east_rome_desc: "The Eastern Roman Empire, has a rich history and cultural heritage. By declaring the Eastern Roman Empire, we can assert our claim to this legacy, uniting the eastern territories and reaffirming our position as the rightful heirs of Rome's enduring influence."

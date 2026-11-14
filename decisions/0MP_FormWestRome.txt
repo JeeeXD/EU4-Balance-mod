@@ -154,11 +154,11 @@ country_decisions = {
 		}
 	}
 	
-		claim_east_rome = {
+	claim_east_rome = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			NOT = { has_country_flag = formed_west_rome_flag }
+			NOT = { has_country_flag = formed_east_rome_flag }
 			#owns = 118
 			OR = {
 				ai = no
